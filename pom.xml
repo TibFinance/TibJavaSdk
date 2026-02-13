@@ -11,6 +11,29 @@
     <description>Java SDK for the TIB Finance payment processing API</description>
     <url>https://github.com/TibFinance/TibJavaSdk</url>
 
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>TIB Finance</name>
+            <email>support@tib.finance</email>
+            <organization>TIB Finance</organization>
+            <organizationUrl>https://tib.finance</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/TibFinance/TibJavaSdk.git</connection>
+        <developerConnection>scm:git:ssh://github.com/TibFinance/TibJavaSdk.git</developerConnection>
+        <url>https://github.com/TibFinance/TibJavaSdk</url>
+    </scm>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
