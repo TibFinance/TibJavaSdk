@@ -1,0 +1,24 @@
+package com.tib.api;
+
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+/**
+ * This is the Main class to initialize the SDK.
+ * 
+ * @author mayur
+ */
+public class TibInvoker {
+
+    public static Portal portal = null;
+
+    /**
+     * It will initialize the portal with given URL.
+     *
+     * @param url the url
+     */
+    public static void init(String url) {
+        portal = new Portal(new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false),
+                url);
+    }
+}
