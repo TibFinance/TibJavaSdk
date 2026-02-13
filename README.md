@@ -16,8 +16,8 @@ Then add to your `pom.xml`:
 
 ```xml
 <dependency>
-    <groupId>com.tib</groupId>
-    <artifactId>tib-api</artifactId>
+    <groupId>finance.tib</groupId>
+    <artifactId>tib-finance-sdk</artifactId>
     <version>2.0.0</version>
 </dependency>
 ```

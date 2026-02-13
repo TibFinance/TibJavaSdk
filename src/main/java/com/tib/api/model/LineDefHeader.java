@@ -3,7 +3,6 @@ package com.tib.api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.enums.LineType;
-import com.tib.api.model.enums.LineType;
 
 
 import java.time.Instant;
@@ -27,7 +26,7 @@ public class LineDefHeader  extends BaseLineHeader  {
     private LineType lineType;
 
     /**
- * Ce numÃ©ro sert Ã vÃ©rifier quâ€™il ne manque pas dâ€™enregistrements dans le fichier. Le type dâ€™enregistrement logique A doit avoir une valeur de Â« 000000001 Â», sinon le fichier est rejetÃ©. Tous les enregistrements subsÃ©quents doivent Ãªtre numÃ©riques et avoir une valeur supÃ©rieure dâ€™une unitÃ© au nombre dâ€™enregistrements logiques indiquÃ© sur lâ€™enregistrement logique prÃ©cÃ©dent, sinon le fichier est rejetÃ©.
+ * This number is used to verify that no records are missing from the file. Logical record type A must have a value of '000000001', otherwise the file is rejected. All subsequent records must be numeric and have a value one unit greater than the logical record count indicated on the previous logical record, otherwise the file is rejected.
  */
     @JsonProperty("RowNumber")
     private Integer rowNumber;
@@ -39,7 +38,7 @@ public class LineDefHeader  extends BaseLineHeader  {
     private String organizationNumber;
 
     /**
- * Cet Ã©lÃ©ment de donnÃ©e sert Ã vÃ©rifier que tous les fichiers crÃ©Ã©s par le centre de traitement informatique de lâ€™organisme sont reÃ§us par la banque(et quâ€™il nâ€™en manque aucun ou quâ€™aucun nâ€™est traitÃ© deux fois). Cet Ã©lÃ©ment de donnÃ©e doit Ãªtre majorÃ© dâ€™une unitÃ© chaque fois quâ€™un fichier est crÃ©Ã©.
+ * This data element is used to verify that all files created by the organization's data processing center are received by the bank (and that none are missing or processed twice). This data element must be incremented by one each time a file is created.
  */
     @JsonProperty("FileNumber")
     private Integer fileNumber;

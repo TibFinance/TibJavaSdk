@@ -3,7 +3,6 @@ package com.tib.api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.enums.PadDirection;
-import com.tib.api.model.enums.PadDirection;
 
 
 import java.time.Instant;

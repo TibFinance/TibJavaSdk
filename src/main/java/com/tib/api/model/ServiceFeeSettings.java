@@ -3,9 +3,6 @@ package com.tib.api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.enums.FeeMode;
-import com.tib.api.model.enums.FeeMode;
-import com.tib.api.model.enums.FeeMode;
-import com.tib.api.model.enums.ConvenientFeeMode;
 import com.tib.api.model.enums.ConvenientFeeMode;
 
 

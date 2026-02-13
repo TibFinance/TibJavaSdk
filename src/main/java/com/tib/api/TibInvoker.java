@@ -5,8 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * This is the Main class to initialize the SDK.
- * 
- * @author mayur
+ *
+ * @author TIB Finance
  */
 public class TibInvoker {
 

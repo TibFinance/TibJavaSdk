@@ -40,7 +40,7 @@ public class Portal {
         this.objectMapper = objectMapper;
         client = new APIClient(objectMapper, baseURL);
     }
-    
+
     /**
 * The CreateSession function is purposed to establish a fresh session, thereby ensuring a secure and distinct environment for user activities.
 *
@@ -111,7 +111,7 @@ public GetServiceResponse getService(GetServiceArgs args)
     APIResponse apiResponse = client.call("GetService", args);
     return new GetServiceResponse(apiResponse, objectMapper);
 }/**
-* Gets the service.
+* Gets the wallet information for a service.
 *
 * @param args the args
 * @return  GetWalletInformationsByServiceResponse.
@@ -781,7 +781,7 @@ public ListTransfersResponse listTransfers(ListTransfersArgs args)
 * Lists the transfers.
 *
 * @param args the args
-* @return  
+* @return
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception
@@ -804,7 +804,7 @@ public ListTransfersFastResponse listTransfersFast(ListTransfersFastArgs args)
 * Lists the transfers of a bill.
 *
 * @param args the args
-* @return  
+* @return
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception
@@ -1238,10 +1238,10 @@ public RelaunchMerchantFailedTransferResponse relaunchMerchantFailedTransfer(Rel
     APIResponse apiResponse = client.call("RelaunchMerchantFailedTransfer", args);
     return new RelaunchMerchantFailedTransferResponse(apiResponse);
 }/**
-* 
+*
 *
 * @param args the args
-* @return  
+* @return
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception
@@ -1261,10 +1261,10 @@ public CreateSupplierTransferResponse createSupplierTransfer(CreateSupplierTrans
     APIResponse apiResponse = client.call("CreateSupplierTransfer", args);
     return new CreateSupplierTransferResponse(apiResponse);
 }/**
-* 
+*
 *
 * @param args the args
-* @return  
+* @return
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception
@@ -1284,10 +1284,10 @@ public GetSuppliersResponse getSuppliers(GetSuppliersArgs args)
     APIResponse apiResponse = client.call("GetSuppliers", args);
     return new GetSuppliersResponse(apiResponse);
 }/**
-* 
+*
 *
 * @param args the args
-* @return  
+* @return
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception
@@ -1307,10 +1307,10 @@ public CreateSupplierResponse createSupplier(CreateSupplierArgs args)
     APIResponse apiResponse = client.call("CreateSupplier", args);
     return new CreateSupplierResponse(apiResponse);
 }/**
-* 
+*
 *
 * @param args the args
-* @return  
+* @return
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception

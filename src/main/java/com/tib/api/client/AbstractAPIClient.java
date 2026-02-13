@@ -17,8 +17,8 @@ import java.security.spec.InvalidKeySpecException;
 
 /**
  * This is the Abstract class for the APIClient.
- * 
- * @author mayur
+ *
+ * @author TIB Finance
  */
 public abstract class AbstractAPIClient {
 
@@ -39,7 +39,7 @@ public abstract class AbstractAPIClient {
      * @throws BadPaddingException                the bad padding exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws InvalidKeySpecException            the invalid key spec exception
-     * 
+     *
      * @throws SAXException                       the sax exception
      */
     public APIResponse call(String url, IBaseCryptedServiceArgs args) throws NoSuchAlgorithmException,
@@ -65,7 +65,7 @@ public abstract class AbstractAPIClient {
      * @throws IOException                        the io exception
      * @throws InvalidAlgorithmParameterException the invalid algorithm parameter
      *                                            exception
-     * 
+     *
      */
     protected abstract APIResponse performCall(String url, IBaseCryptedServiceArgs args,
             SymmetricKeyResponse symmetricKeyResponse)

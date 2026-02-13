@@ -3,7 +3,6 @@ package com.tib.api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.enums.AcpOperationType;
-import com.tib.api.model.enums.AcpOperationType;
 import com.tib.api.model.ContactInfo;
 import com.tib.api.model.enums.TransferFrequency;
 

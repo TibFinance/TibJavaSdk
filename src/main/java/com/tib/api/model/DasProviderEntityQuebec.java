@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.enums.DasProviderType;
 import com.tib.api.model.enums.DasProviderQuebecFileType;
 import com.tib.api.model.enums.DasProviderQuebecDeclarationFrequency;
-import com.tib.api.model.enums.DasProviderType;
 
 
 import java.time.Instant;

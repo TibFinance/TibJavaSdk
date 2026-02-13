@@ -3,7 +3,6 @@ package com.tib.api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.enums.LineType;
-import com.tib.api.model.enums.LineType;
 
 
 import java.time.Instant;

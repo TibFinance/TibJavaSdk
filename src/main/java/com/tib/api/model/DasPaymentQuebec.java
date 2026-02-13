@@ -4,7 +4,6 @@ package com.tib.api.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.enums.DasPaymentProcessStatus;
 import com.tib.api.model.DasDateField;
-import com.tib.api.model.DasDateField;
 
 
 import java.time.Instant;
