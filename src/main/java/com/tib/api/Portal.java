@@ -22,7 +22,7 @@ import java.security.spec.InvalidKeySpecException;
  * This is the Portal class. It contains all the APIs (methods),
  * which is used to make to encrypted API calls.
  *
- * @author mayur
+ * @author TIB Finance
  */
 public class Portal {
 
@@ -40,7 +40,7 @@ public class Portal {
         this.objectMapper = objectMapper;
         client = new APIClient(objectMapper, baseURL);
     }
-
+    
     /**
 * The CreateSession function is purposed to establish a fresh session, thereby ensuring a secure and distinct environment for user activities.
 *
@@ -64,7 +64,8 @@ public CreateSessionResponse createSession(CreateSessionArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateSession", args);
     return new CreateSessionResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves the full list of services that are available to the authenticated client.
 *
 * @param args the args
@@ -87,7 +88,8 @@ public ListServicesResponse listServices(ListServicesArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ListServices", args);
     return new ListServicesResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves the details of a specified service within the TIB Finance API. This function is essential for accessing service-related information, which is crucial for managing contracts and determining applicable limits and fees.
 *
 * @param args the args
@@ -110,8 +112,9 @@ public GetServiceResponse getService(GetServiceArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetService", args);
     return new GetServiceResponse(apiResponse, objectMapper);
-}/**
-* Gets the wallet information for a service.
+}
+/**
+* Retrieves wallet information for a specific service.
 *
 * @param args the args
 * @return  GetWalletInformationsByServiceResponse.
@@ -133,7 +136,8 @@ public GetWalletInformationsResponse getWalletInformationsByService(GetWalletInf
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetWalletInformationsByService", args);
     return new GetWalletInformationsResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves a list of all merchants associated with the client's account. This function is essential for managing and accessing merchant-specific data within the API.
 *
 * @param args the args
@@ -156,7 +160,8 @@ public ListMerchantsResponse listMerchants(ListMerchantsArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ListMerchants", args);
     return new ListMerchantsResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves a list of merchants who have completed the boarding process. This function is essential for monitoring and managing merchant onboarding statuses within the system.
 *
 * @param args the args
@@ -179,7 +184,8 @@ public GetServiceBoardingStatusResponse getServiceBoardingStatus(GetServiceBoard
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetServiceBoardingStatus", args);
     return new GetServiceBoardingStatusResponse(apiResponse);
-}/**
+}
+/**
 * Initiates the creation of a new merchant account within the TIB Finance system. This function is essential for setting up a merchant's basic and account information, which is a prerequisite for conducting transactions.
 *
 * @param args the args
@@ -202,7 +208,8 @@ public CreateMerchantResponse createMerchant(CreateMerchantArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateMerchant", args);
     return new CreateMerchantResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves detailed information about a specific merchant using the provided merchant ID. This function is essential for accessing the merchant's basic and account information necessary for transaction processing.
 *
 * @param args the args
@@ -225,7 +232,8 @@ public GetMerchantResponse getMerchant(GetMerchantArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetMerchant", args);
     return new GetMerchantResponse(apiResponse, objectMapper);
-}/**
+}
+/**
 * Persists a merchant entity to the TIB Finance system.
 *
 * @param args the args
@@ -248,7 +256,8 @@ public SaveMerchantResponse saveMerchant(SaveMerchantArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("SaveMerchant", args);
     return new SaveMerchantResponse(apiResponse);
-}/**
+}
+/**
 * This function saves the basic information of a merchant. It is used to update or create the initial details associated with a merchant account within the TIB Finance API system.
 *
 * @param args the args
@@ -271,7 +280,8 @@ public SaveMerchantResponse saveMerchantBasicInfo(SaveMerchantBasicInfoArgs args
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("SaveMerchantBasicInfo", args);
     return new SaveMerchantResponse(apiResponse);
-}/**
+}
+/**
 * Stores the merchant's account details securely in the system.
 *
 * @param args the args
@@ -294,7 +304,8 @@ public SaveMerchantResponse saveMerchantAccountInfo(SaveMerchantAccountInfoArgs 
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("SaveMerchantAccountInfo", args);
     return new SaveMerchantResponse(apiResponse);
-}/**
+}
+/**
 * Removes a specified merchant from the system. This operation is irreversible and will permanently delete the merchant's data, including all associated accounts and transactions.
 *
 * @param args the args
@@ -317,7 +328,8 @@ public DeleteMerchantResponse deleteMerchant(DeleteMerchantArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("DeleteMerchant", args);
     return new DeleteMerchantResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves merchant information using an external identifier. This function is essential for accessing merchant details that are linked to a specific external ID, facilitating seamless integration with external systems.
 *
 * @param args the args
@@ -340,11 +352,12 @@ public GetMerchantsByExternalIdResponse getMerchantsByExternalId(GetMerchantsByE
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetMerchantsByExternalId", args);
     return new GetMerchantsByExternalIdResponse(apiResponse);
-}/**
-* Retrieves a list of customers associated with a merchant account.
+}
+/**
+* Adjusts the balance of a wallet by adding or removing funds.
 *
 * @param args the args
-* @return  Returns a ListCustomersResponse object containing customer details and associated metadata.
+* @return  Returns an AdjustWalletResponse object containing the transfer identifier and any error information.
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception
@@ -363,7 +376,8 @@ public AdjustWalletResponse adjustWallet(AdjustWalletArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("AdjustWallet", args);
     return new AdjustWalletResponse(apiResponse);
-}/**
+}
+/**
 * Generates a comprehensive list of all customers based on specified criteria, providing a complete overview of the customer base.
 *
 * @param args the args
@@ -386,7 +400,8 @@ public ListCustomersResponse listCustomers(ListCustomersArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ListCustomers", args);
     return new ListCustomersResponse(apiResponse);
-}/**
+}
+/**
 * Creates a new customer entity within the system. This function initializes a customer object, which serves as a container for identifying the individual and associating payment methods.
 *
 * @param args the args
@@ -409,7 +424,8 @@ public CreateCustomerResponse createCustomer(CreateCustomerArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateCustomer", args);
     return new CreateCustomerResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves detailed information about a specific customer based on the provided customer identifier. This function is essential for accessing customer data necessary for transaction processing and account management.
 *
 * @param args the args
@@ -432,7 +448,8 @@ public GetCustomerResponse getCustomer(GetCustomerArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetCustomer", args);
     return new GetCustomerResponse(apiResponse, objectMapper);
-}/**
+}
+/**
 * Persists the customer data to the database, ensuring that all necessary customer information is stored for future transactions.
 *
 * @param args the args
@@ -455,7 +472,8 @@ public SaveCustomerResponse saveCustomer(SaveCustomerArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("SaveCustomer", args);
     return new SaveCustomerResponse(apiResponse);
-}/**
+}
+/**
 * Removes a customer from the system based on the provided customer ID. This operation is irreversible and ensures that all associated data with the customer is permanently deleted.
 *
 * @param args the args
@@ -478,7 +496,8 @@ public DeleteCustomerResponse deleteCustomer(DeleteCustomerArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("DeleteCustomer", args);
     return new DeleteCustomerResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves customer information using an external identifier. This function is essential for accessing customer data linked to a specific external ID, which is useful for integration with external systems.
 *
 * @param args the args
@@ -501,7 +520,8 @@ public GetCustomersByExternalIdResponse getCustomersByExternalId(GetCustomersByE
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetCustomersByExternalId", args);
     return new GetCustomersByExternalIdResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves a list of available payment methods associated with a customer. This function is essential for accessing and managing the various financial accounts linked to a customer, such as credit cards, bank accounts, and Interac. It is particularly useful for applications that need to display or process customer payment options.
 *
 * @param args the args
@@ -524,7 +544,8 @@ public ListPaymentMethodsResponse listPaymentMethods(ListPaymentMethodsArgs args
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ListPaymentMethods", args);
     return new ListPaymentMethodsResponse(apiResponse);
-}/**
+}
+/**
 * Initializes a new credit card payment method for a customer. This function is essential for enabling transactions using a customer's credit card within the TIB Finance API. It securely stores the credit card details and associates them with the customer's account.
 *
 * @param args the args
@@ -547,7 +568,8 @@ public CreateCreditCardPaymentMethodResponse createCreditCardPaymentMethod(Creat
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateCreditCardPaymentMethod", args);
     return new CreateCreditCardPaymentMethodResponse(apiResponse);
-}/**
+}
+/**
 * Initializes a new direct account payment method for a customer. This function facilitates the creation of a payment method linked directly to a customer's bank account, allowing for seamless transactions.
 *
 * @param args the args
@@ -570,7 +592,8 @@ public CreateDirectAccountPaymentMethodResponse createDirectAccountPaymentMethod
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateDirectAccountPaymentMethod", args);
     return new CreateDirectAccountPaymentMethodResponse(apiResponse);
-}/**
+}
+/**
 * This function initializes and creates a new Interac payment method for a customer. It allows the merchant to facilitate transactions using the Interac network, which is a popular method for electronic funds transfers in Canada.
 *
 * @param args the args
@@ -593,7 +616,8 @@ public CreateInteracPaymentMethodResponse createInteracPaymentMethod(CreateInter
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateInteracPaymentMethod", args);
     return new CreateInteracPaymentMethodResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves the details of a specific payment method associated with a customer. This function is essential for accessing payment method information, which can include credit cards, bank accounts, or Interac details.
 *
 * @param args the args
@@ -616,7 +640,8 @@ public GetPaymentMethodResponse getPaymentMethod(GetPaymentMethodArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetPaymentMethod", args);
     return new GetPaymentMethodResponse(apiResponse, objectMapper);
-}/**
+}
+/**
 * Removes a specified payment method from the system. This function is typically used to delete a customer's payment method that is no longer needed or valid.
 *
 * @param args the args
@@ -639,7 +664,8 @@ public DeletePaymentMethodResponse deletePaymentMethod(DeletePaymentMethodArgs a
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("DeletePaymentMethod", args);
     return new DeletePaymentMethodResponse(apiResponse);
-}/**
+}
+/**
 * Sets the default payment method for a customer. This function assigns a specified payment method as the primary option for transactions, ensuring that it is used by default unless another method is specified.
 *
 * @param args the args
@@ -662,7 +688,8 @@ public SetDefaultPaymentMethodResponse setDefaultPaymentMethod(SetDefaultPayment
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("SetDefaultPaymentMethod", args);
     return new SetDefaultPaymentMethodResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves a list of all bills associated with the client's account. This function is essential for managing and reviewing billing information within the system.
 *
 * @param args the args
@@ -685,7 +712,8 @@ public ListBillsResponse listBills(ListBillsArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ListBills", args);
     return new ListBillsResponse(apiResponse);
-}/**
+}
+/**
 * Initiates the creation of a bill within the system. This function generates a unique Bill ID, which can be used for subsequent operations related to the bill.
 *
 * @param args the args
@@ -708,7 +736,8 @@ public CreateBillResponse createBill(CreateBillArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateBill", args);
     return new CreateBillResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves a bill based on the provided criteria. This function is essential for accessing detailed billing information within the API, facilitating further operations such as payment processing or bill management.
 *
 * @param args the args
@@ -731,7 +760,8 @@ public GetBillResponse getBill(GetBillArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetBill", args);
     return new GetBillResponse(apiResponse, objectMapper);
-}/**
+}
+/**
 * Removes a specified bill from the system. This operation is typically used when a bill is no longer needed or was created in error. Ensure that the bill ID is valid and corresponds to an existing bill before attempting to delete.
 *
 * @param args the args
@@ -754,7 +784,8 @@ public DeleteBillResponse deleteBill(DeleteBillArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("DeleteBill", args);
     return new DeleteBillResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves a list of all transfer operations available within the system. This function provides details about each transfer, including status and associated metadata.
 *
 * @param args the args
@@ -777,11 +808,12 @@ public ListTransfersResponse listTransfers(ListTransfersArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ListTransfers", args);
     return new ListTransfersResponse(apiResponse);
-}/**
+}
+/**
 * Lists the transfers.
 *
 * @param args the args
-* @return
+* @return  
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception
@@ -800,11 +832,12 @@ public ListTransfersFastResponse listTransfersFast(ListTransfersFastArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ListTransfersFast", args);
     return new ListTransfersFastResponse(apiResponse);
-}/**
+}
+/**
 * Lists the transfers of a bill.
 *
 * @param args the args
-* @return
+* @return  
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception
@@ -823,7 +856,8 @@ public ListTransfersFastResponse listTransfersForBillFast(ListTransfersForBillFa
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ListTransfersForBillFast", args);
     return new ListTransfersFastResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves a list of recurring transfer operations associated with the client's account. This function is essential for clients who need to manage or review their scheduled transfers.
 *
 * @param args the args
@@ -846,7 +880,8 @@ public GetRecuringTransfersResponse getRecuringTransfers(GetRecuringTransfersArg
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetRecuringTransfers", args);
     return new GetRecuringTransfersResponse(apiResponse);
-}/**
+}
+/**
 * Deletes a recurring transfer from the system.
 *
 * @param args the args
@@ -869,7 +904,8 @@ public DeleteRecuringTransferResponse deleteRecuringTransfer(DeleteRecuringTrans
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("DeleteRecuringTransfer", args);
     return new DeleteRecuringTransferResponse(apiResponse);
-}/**
+}
+/**
 * Initiates a new payment transaction within the system. This function processes the payment details provided and returns a response indicating the success or failure of the operation.
 *
 * @param args the args
@@ -892,7 +928,8 @@ public CreatePaymentResponse createPayment(CreatePaymentArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreatePayment", args);
     return new CreatePaymentResponse(apiResponse, objectMapper);
-}/**
+}
+/**
 * Retrieves the details of a specific payment using the provided payment identifier.
 *
 * @param args the args
@@ -915,7 +952,8 @@ public GetPaymentResponse getPayment(GetPaymentArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetPayment", args);
     return new GetPaymentResponse(apiResponse, objectMapper);
-}/**
+}
+/**
 * Removes a specified payment from the system. This function is essential for managing and rectifying payment records, ensuring that erroneous or obsolete payments are efficiently deleted.
 *
 * @param args the args
@@ -938,7 +976,8 @@ public DeletePaymentResponse deletePayment(DeletePaymentArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("DeletePayment", args);
     return new DeletePaymentResponse(apiResponse);
-}/**
+}
+/**
 * Initiates a direct Interac transaction, enabling the transfer of funds using a recipient's email or mobile phone number. This method facilitates seamless money transfers without requiring detailed customer account information.
 *
 * @param args the args
@@ -961,7 +1000,8 @@ public CreateDirectInteracTransactionResponse createDirectInteracTransaction(Cre
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateDirectInteracTransaction", args);
     return new CreateDirectInteracTransactionResponse(apiResponse);
-}/**
+}
+/**
 * Initiates a transaction using raw data input. This function processes the raw transaction details to create a valid transaction entry within the system.
 *
 * @param args the args
@@ -984,7 +1024,8 @@ public CreateTransactionFromRawResponse createTransactionFromRaw(CreateTransacti
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateTransactionFromRaw", args);
     return new CreateTransactionFromRawResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves a list of operations that have been executed within the system. This function provides detailed information about each operation, allowing users to track and analyze completed transactions.
 *
 * @param args the args
@@ -1007,7 +1048,8 @@ public ListExecutedOperationsResponse listExecutedOperations(ListExecutedOperati
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ListExecutedOperations", args);
     return new ListExecutedOperationsResponse(apiResponse);
-}/**
+}
+/**
 * Triggers the payment processing workflow for a specific payment, overriding the default automatic selection mechanism.
 *
 * @param args the args
@@ -1030,7 +1072,8 @@ public ForcePaymentProcessResponse forcePaymentProcess(ForcePaymentProcessArgs a
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ForcePaymentProcess", args);
     return new ForcePaymentProcessResponse(apiResponse);
-}/**
+}
+/**
 * Retrieves the public token necessary for initiating a drop-in session. This token is used to authenticate and authorize the session within the API framework.
 *
 * @param args the args
@@ -1053,7 +1096,8 @@ public GetDropInPublicTokenResponse getDropInPublicToken(GetDropInPublicTokenArg
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetDropInPublicToken", args);
     return new GetDropInPublicTokenResponse(apiResponse);
-}/**
+}
+/**
 * Initiates a free operation within the TIB Finance API, allowing for transactions not directly linked to a specific bill. This function is typically used to either collect payments from a customer's payment method or deposit funds into it, with the exception of credit card deposits.
 *
 * @param args the args
@@ -1076,7 +1120,8 @@ public CreateFreeOperationResponse createFreeOperation(CreateFreeOperationArgs a
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateFreeOperation", args);
     return new CreateFreeOperationResponse(apiResponse);
-}/**
+}
+/**
 * Initiates a batch of free operations, allowing for transactions not tied to a specific bill. This function is essential for handling payments or deposits directly linked to customer payment methods.
 *
 * @param args the args
@@ -1099,7 +1144,8 @@ public CreateFreeOperationBatchResponse createFreeOperationBatch(CreateFreeOpera
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateFreeOperationBatch", args);
     return new CreateFreeOperationBatchResponse(apiResponse);
-}/**
+}
+/**
 * Reverts a previously executed transfer operation, restoring the original state of the involved accounts.
 *
 * @param args the args
@@ -1122,7 +1168,8 @@ public RevertTransferResponse revertTransfer(RevertTransferArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("RevertTransfer", args);
     return new RevertTransferResponse(apiResponse);
-}/**
+}
+/**
 * Modifies the security question and answer for an Interac payment method associated with a customer account.
 *
 * @param args the args
@@ -1145,7 +1192,8 @@ public ChangeInteracPaymentMethodQuestionAndAnswerResponse changeInteracPaymentM
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ChangeInteracPaymentMethodQuestionAndAnswer", args);
     return new ChangeInteracPaymentMethodQuestionAndAnswerResponse(apiResponse);
-}/**
+}
+/**
 * Initializes the boarding process for a new client within the TIB Finance API.
 *
 * @param args the args
@@ -1168,7 +1216,8 @@ public InitBoardingResponse initBoarding(InitBoardingArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("InitBoarding", args);
     return new InitBoardingResponse(apiResponse);
-}/**
+}
+/**
 * Creates a new sub-client within the TIB Finance system.
 *
 * @param args the args
@@ -1191,7 +1240,8 @@ public CreateSubClientResponse createSubClient(CreateSubClientArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateSubClient", args);
     return new CreateSubClientResponse(apiResponse);
-}/**
+}
+/**
 * Resends the payment notification email to the specified recipient.
 *
 * @param args the args
@@ -1214,7 +1264,8 @@ public ResendPaymentEmailResponse resendPaymentEmail(ResendPaymentEmailArgs args
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("ResendPaymentEmail", args);
     return new ResendPaymentEmailResponse(apiResponse);
-}/**
+}
+/**
 * Initiates a retry process for a merchant's failed transfer operation.
 *
 * @param args the args
@@ -1237,11 +1288,12 @@ public RelaunchMerchantFailedTransferResponse relaunchMerchantFailedTransfer(Rel
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("RelaunchMerchantFailedTransfer", args);
     return new RelaunchMerchantFailedTransferResponse(apiResponse);
-}/**
-*
+}
+/**
+* Creates a transfer to a supplier.
 *
 * @param args the args
-* @return
+* @return  CreateSupplierTransferResponse.
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception
@@ -1260,11 +1312,12 @@ public CreateSupplierTransferResponse createSupplierTransfer(CreateSupplierTrans
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateSupplierTransfer", args);
     return new CreateSupplierTransferResponse(apiResponse);
-}/**
-*
+}
+/**
+* Retrieves the list of suppliers associated with a merchant.
 *
 * @param args the args
-* @return
+* @return  GetSuppliersResponse.
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception
@@ -1283,11 +1336,12 @@ public GetSuppliersResponse getSuppliers(GetSuppliersArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("GetSuppliers", args);
     return new GetSuppliersResponse(apiResponse);
-}/**
-*
+}
+/**
+* Creates a new supplier associated with a merchant.
 *
 * @param args the args
-* @return
+* @return  CreateSupplierResponse.
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception
@@ -1306,11 +1360,12 @@ public CreateSupplierResponse createSupplier(CreateSupplierArgs args)
             IllegalBlockSizeException {
     APIResponse apiResponse = client.call("CreateSupplier", args);
     return new CreateSupplierResponse(apiResponse);
-}/**
-*
+}
+/**
+* Retrieves wallet operations and transaction history for a specified service within a date range.
 *
 * @param args the args
-* @return
+* @return  GetWalletOperationsResponse.
 * @throws NoSuchAlgorithmException           the no such algorithm exception
 * @throws InvalidKeyException                the invalid key exception
 * @throws IOException                        the io exception

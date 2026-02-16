@@ -2,6 +2,7 @@ package com.tib.api;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 /**
  * This is the Main class to initialize the SDK.
@@ -18,7 +19,7 @@ public class TibInvoker {
      * @param url the url
      */
     public static void init(String url) {
-        portal = new Portal(new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false),
+        portal = new Portal(new ObjectMapper().registerModule(new JavaTimeModule()).configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false),
                 url);
     }
 }

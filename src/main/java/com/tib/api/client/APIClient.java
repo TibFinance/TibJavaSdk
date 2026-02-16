@@ -119,7 +119,6 @@ public class APIClient extends AbstractAPIClient {
         Cipher cipherMock = Cipher.getInstance("RSA/ECB/PKCS1Padding");
         cipherMock.init(Cipher.DECRYPT_MODE, privateKey);
 
-        // cipherMock.update(Base64.getDecoder().decode(keyExchangeResponse.getSymetricHostHalfKey()));
         // Base64 decoding with error handling
         byte[] symmetricHostHalfKeyBytes;
         try {
