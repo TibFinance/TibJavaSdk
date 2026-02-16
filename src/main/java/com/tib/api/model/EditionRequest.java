@@ -20,20 +20,20 @@ public class EditionRequest   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Content")
     private String content;
 
     /**
- * Represents the current state of a transaction within the system.
- */
+     * Represents the current state of a transaction within the system.
+     */
     @JsonProperty("Status")
     private ContractRequestStatus status;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CreationDate")
     private String creationDate;
 
@@ -45,9 +45,8 @@ public class EditionRequest   {
     
     public EditionRequest(String content, ContractRequestStatus status, String creationDate) {
         this.content = content;
-this.status = status;
-this.creationDate = creationDate;
-
+        this.status = status;
+        this.creationDate = creationDate;
     }
     
     
@@ -97,9 +96,9 @@ this.creationDate = creationDate;
     @Override
     public String toString() {
         return "EditionRequest{" +
-                 "content='" + content + '\'' +
- ", status='" + status + '\'' +
- ", creationDate='" + creationDate + '\'' +
+                "content='" + content + '\'' +
+                ", status='" + status + '\'' +
+                ", creationDate='" + creationDate + '\'' +
 
                 '}';
     }

@@ -22,116 +22,116 @@ public class PaymentBase   {
 
     
     /**
- * Retrieves or assigns the unique identifier for a bill.
- */
+     * Retrieves or assigns the unique identifier for a bill.
+     */
     @JsonProperty("BillId")
     private String billId;
 
     /**
- * Identifier utilized by an external system for bill tracking.
- */
+     * Identifier utilized by an external system for bill tracking.
+     */
     @JsonProperty("BillExternalSystemNumber1")
     private String billExternalSystemNumber1;
 
     /**
- * Represents the identifier used by an external system for billing purposes.
- */
+     * Represents the identifier used by an external system for billing purposes.
+     */
     @JsonProperty("BillExternalSystemNumber2")
     private String billExternalSystemNumber2;
 
     /**
- * Identifier utilized by an external system for bill tracking.
- */
+     * Identifier utilized by an external system for bill tracking.
+     */
     @JsonProperty("BillExternalSystemNumber3")
     private String billExternalSystemNumber3;
 
     /**
- * Represents the title of a bill associated with a payment.
- */
+     * Represents the title of a bill associated with a payment.
+     */
     @JsonProperty("BillTitle")
     private String billTitle;
 
     /**
- * Identifies the customer linked to this payment, when a customer relationship exists.
- */
+     * Identifies the customer linked to this payment, when a customer relationship exists.
+     */
     @JsonProperty("RelatedCustomerId")
     private String relatedCustomerId;
 
     /**
- * Identifies the external customer associated with the payment, when applicable.
- */
+     * Identifies the external customer associated with the payment, when applicable.
+     */
     @JsonProperty("RelatedCustomerExternalId")
     private String relatedCustomerExternalId;
 
     /**
- * Provides a textual description of the bill associated with a payment.
- */
+     * Provides a textual description of the bill associated with a payment.
+     */
     @JsonProperty("BillDescription")
     private String billDescription;
 
     /**
- * Retrieves or assigns the unique identifier for a payment.
- */
+     * Retrieves or assigns the unique identifier for a payment.
+     */
     @JsonProperty("PaymentId")
     private String paymentId;
 
     /**
- * Indicates whether the payment is processed automatically without user intervention.
- */
+     * Indicates whether the payment is processed automatically without user intervention.
+     */
     @JsonProperty("IsAutomaticPayment")
     private boolean isAutomaticPayment;
 
     /**
- * Contains metadata for a payment operation.
- */
+     * Contains metadata for a payment operation.
+     */
     @JsonProperty("PaymentInfo")
     private PaymentEntity paymentInfo;
 
     /**
- * Flag used to indicate that the payment is resolved in the third‑party system. It is employed solely for filtering payment lists.
- */
+     * Flag used to indicate that the payment is resolved in the third‑party system. It is employed solely for filtering payment lists.
+     */
     @JsonProperty("IsMarkResolved")
     private boolean isMarkResolved;
 
     /**
- * Current processing state of a transaction or operation.
- */
+     * Current processing state of a transaction or operation.
+     */
     @JsonProperty("CurrentStatus")
     private ProcessStatus currentStatus;
 
     /**
- * Gets or sets the fee applied to credit‑card transactions when the convenient fee option is used.
- */
+     * Gets or sets the fee applied to credit‑card transactions when the convenient fee option is used.
+     */
     @JsonProperty("ConvenientFeeCreditCard")
     private Double convenientFeeCreditCard;
 
     /**
- * Gets or sets the fee amount that is directly applied to the merchant's account for convenience services.
- */
+     * Gets or sets the fee amount that is directly applied to the merchant's account for convenience services.
+     */
     @JsonProperty("ConvenientFeeDirectAccount")
     private Double convenientFeeDirectAccount;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
     /**
- * Provides a detailed description of the payment method for easy identification.
- */
+     * Provides a detailed description of the payment method for easy identification.
+     */
     @JsonProperty("PaymentMethodDescription")
     private String paymentMethodDescription;
 
     /**
- * Provides a read‑only preview of the merchant’s bank account information.
- */
+     * Provides a read‑only preview of the merchant’s bank account information.
+     */
     @JsonProperty("AccountInformationPreview")
     private String accountInformationPreview;
 
     /**
- * Identifies the type of payment method linked to a specific account.
- */
+     * Identifies the type of payment method linked to a specific account.
+     */
     @JsonProperty("PaymentMethodType")
     private PaymentMethodType paymentMethodType;
 
@@ -143,25 +143,24 @@ public class PaymentBase   {
     
     public PaymentBase(String billId, String billExternalSystemNumber1, String billExternalSystemNumber2, String billExternalSystemNumber3, String billTitle, String relatedCustomerId, String relatedCustomerExternalId, String billDescription, String paymentId, boolean isAutomaticPayment, PaymentEntity paymentInfo, boolean isMarkResolved, ProcessStatus currentStatus, Double convenientFeeCreditCard, Double convenientFeeDirectAccount, LocalDateTime createdDate, String paymentMethodDescription, String accountInformationPreview, PaymentMethodType paymentMethodType) {
         this.billId = billId;
-this.billExternalSystemNumber1 = billExternalSystemNumber1;
-this.billExternalSystemNumber2 = billExternalSystemNumber2;
-this.billExternalSystemNumber3 = billExternalSystemNumber3;
-this.billTitle = billTitle;
-this.relatedCustomerId = relatedCustomerId;
-this.relatedCustomerExternalId = relatedCustomerExternalId;
-this.billDescription = billDescription;
-this.paymentId = paymentId;
-this.isAutomaticPayment = isAutomaticPayment;
-this.paymentInfo = paymentInfo;
-this.isMarkResolved = isMarkResolved;
-this.currentStatus = currentStatus;
-this.convenientFeeCreditCard = convenientFeeCreditCard;
-this.convenientFeeDirectAccount = convenientFeeDirectAccount;
-this.createdDate = createdDate;
-this.paymentMethodDescription = paymentMethodDescription;
-this.accountInformationPreview = accountInformationPreview;
-this.paymentMethodType = paymentMethodType;
-
+        this.billExternalSystemNumber1 = billExternalSystemNumber1;
+        this.billExternalSystemNumber2 = billExternalSystemNumber2;
+        this.billExternalSystemNumber3 = billExternalSystemNumber3;
+        this.billTitle = billTitle;
+        this.relatedCustomerId = relatedCustomerId;
+        this.relatedCustomerExternalId = relatedCustomerExternalId;
+        this.billDescription = billDescription;
+        this.paymentId = paymentId;
+        this.isAutomaticPayment = isAutomaticPayment;
+        this.paymentInfo = paymentInfo;
+        this.isMarkResolved = isMarkResolved;
+        this.currentStatus = currentStatus;
+        this.convenientFeeCreditCard = convenientFeeCreditCard;
+        this.convenientFeeDirectAccount = convenientFeeDirectAccount;
+        this.createdDate = createdDate;
+        this.paymentMethodDescription = paymentMethodDescription;
+        this.accountInformationPreview = accountInformationPreview;
+        this.paymentMethodType = paymentMethodType;
     }
     
     
@@ -339,25 +338,25 @@ this.paymentMethodType = paymentMethodType;
     @Override
     public String toString() {
         return "PaymentBase{" +
-                 "billId='" + billId + '\'' +
- ", billExternalSystemNumber1='" + billExternalSystemNumber1 + '\'' +
- ", billExternalSystemNumber2='" + billExternalSystemNumber2 + '\'' +
- ", billExternalSystemNumber3='" + billExternalSystemNumber3 + '\'' +
- ", billTitle='" + billTitle + '\'' +
- ", relatedCustomerId='" + relatedCustomerId + '\'' +
- ", relatedCustomerExternalId='" + relatedCustomerExternalId + '\'' +
- ", billDescription='" + billDescription + '\'' +
- ", paymentId='" + paymentId + '\'' +
- ", isAutomaticPayment='" + isAutomaticPayment + '\'' +
- ", paymentInfo='" + paymentInfo + '\'' +
- ", isMarkResolved='" + isMarkResolved + '\'' +
- ", currentStatus='" + currentStatus + '\'' +
- ", convenientFeeCreditCard='" + convenientFeeCreditCard + '\'' +
- ", convenientFeeDirectAccount='" + convenientFeeDirectAccount + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
- ", accountInformationPreview='" + accountInformationPreview + '\'' +
- ", paymentMethodType='" + paymentMethodType + '\'' +
+                "billId='" + billId + '\'' +
+                ", billExternalSystemNumber1='" + billExternalSystemNumber1 + '\'' +
+                ", billExternalSystemNumber2='" + billExternalSystemNumber2 + '\'' +
+                ", billExternalSystemNumber3='" + billExternalSystemNumber3 + '\'' +
+                ", billTitle='" + billTitle + '\'' +
+                ", relatedCustomerId='" + relatedCustomerId + '\'' +
+                ", relatedCustomerExternalId='" + relatedCustomerExternalId + '\'' +
+                ", billDescription='" + billDescription + '\'' +
+                ", paymentId='" + paymentId + '\'' +
+                ", isAutomaticPayment='" + isAutomaticPayment + '\'' +
+                ", paymentInfo='" + paymentInfo + '\'' +
+                ", isMarkResolved='" + isMarkResolved + '\'' +
+                ", currentStatus='" + currentStatus + '\'' +
+                ", convenientFeeCreditCard='" + convenientFeeCreditCard + '\'' +
+                ", convenientFeeDirectAccount='" + convenientFeeDirectAccount + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
+                ", accountInformationPreview='" + accountInformationPreview + '\'' +
+                ", paymentMethodType='" + paymentMethodType + '\'' +
 
                 '}';
     }

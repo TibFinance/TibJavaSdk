@@ -20,14 +20,14 @@ public class CreateTransactionFromRawArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
- * Retrieves or assigns the content of the raw ACP file.
- */
+     * Retrieves or assigns the content of the raw ACP file.
+     */
     @JsonProperty("RawAcpFileContent")
     private String rawAcpFileContent;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -39,16 +39,14 @@ public class CreateTransactionFromRawArgs  extends BaseAuthenticatedCryptedArgs 
     
     public CreateTransactionFromRawArgs(String rawAcpFileContent, String merchantId) {
         this.rawAcpFileContent = rawAcpFileContent;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
     
     
     public CreateTransactionFromRawArgs(String sessionToken, String rawAcpFileContent, String merchantId) {
         super(sessionToken);
         this.rawAcpFileContent = rawAcpFileContent;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     
@@ -88,8 +86,8 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "CreateTransactionFromRawArgs{" +
-                 "rawAcpFileContent='" + rawAcpFileContent + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "rawAcpFileContent='" + rawAcpFileContent + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

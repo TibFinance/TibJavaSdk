@@ -25,13 +25,11 @@ public class SetManuallyStatusCheckResultResponse extends CustomAPIResponse {
 
     public SetManuallyStatusCheckResultResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SetManuallyStatusCheckResultResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

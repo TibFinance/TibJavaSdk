@@ -19,8 +19,8 @@ public class GetBoardingMerchantStatusEntity   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderMerchantId")
     private String providerMerchantId;
 
@@ -32,7 +32,6 @@ public class GetBoardingMerchantStatusEntity   {
     
     public GetBoardingMerchantStatusEntity(String providerMerchantId) {
         this.providerMerchantId = providerMerchantId;
-
     }
     
     
@@ -66,7 +65,7 @@ public class GetBoardingMerchantStatusEntity   {
     @Override
     public String toString() {
         return "GetBoardingMerchantStatusEntity{" +
-                 "providerMerchantId='" + providerMerchantId + '\'' +
+                "providerMerchantId='" + providerMerchantId + '\'' +
 
                 '}';
     }

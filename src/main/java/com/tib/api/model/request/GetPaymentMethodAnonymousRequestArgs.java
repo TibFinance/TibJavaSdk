@@ -29,7 +29,6 @@ public class GetPaymentMethodAnonymousRequestArgs  extends BaseAuthenticatePubli
     
     public GetPaymentMethodAnonymousRequestArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

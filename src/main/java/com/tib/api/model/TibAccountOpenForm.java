@@ -19,602 +19,602 @@ public class TibAccountOpenForm   {
 
     
     /**
- * Gets or sets the name of the enterprise.
- */
+     * Gets or sets the name of the enterprise.
+     */
     @JsonProperty("EnterpriseName")
     private String enterpriseName;
 
     /**
- * Gets or sets the enterprise address.
- */
+     * Gets or sets the enterprise address.
+     */
     @JsonProperty("EnterpriseAddress")
     private String enterpriseAddress;
 
     /**
- * Gets or sets the enterprise city.
- */
+     * Gets or sets the enterprise city.
+     */
     @JsonProperty("EnterpriseCity")
     private String enterpriseCity;
 
     /**
- * Gets or sets the enterprise province.
- */
+     * Gets or sets the enterprise province.
+     */
     @JsonProperty("EnterpriseProvince")
     private String enterpriseProvince;
 
     /**
- * Gets or sets the enterprise postal code.
- */
+     * Gets or sets the enterprise postal code.
+     */
     @JsonProperty("EnterprisePostalCode")
     private String enterprisePostalCode;
 
     /**
- * Gets or sets the enterprise phone.
- */
+     * Gets or sets the enterprise phone.
+     */
     @JsonProperty("EnterprisePhone")
     private String enterprisePhone;
 
     /**
- * Gets or sets the enterprise phone2.
- */
+     * Gets or sets the enterprise phone2.
+     */
     @JsonProperty("EnterprisePhone2")
     private String enterprisePhone2;
 
     /**
- * Gets or sets the enterprise email.
- */
+     * Gets or sets the enterprise email.
+     */
     @JsonProperty("EnterpriseEmail")
     private String enterpriseEmail;
 
     /**
- * Gets or sets the enterprise account responsible.
- */
+     * Gets or sets the enterprise account responsible.
+     */
     @JsonProperty("EnterpriseAccountResponsible")
     private String enterpriseAccountResponsible;
 
     /**
- * Gets or sets the type of the enterprise.
- */
+     * Gets or sets the type of the enterprise.
+     */
     @JsonProperty("EnterpriseType")
     private String enterpriseType;
 
     /**
- * Gets or sets the enterprise established since.
- */
+     * Gets or sets the enterprise established since.
+     */
     @JsonProperty("EnterpriseEstablishedSince")
     private String enterpriseEstablishedSince;
 
     /**
- * Gets or sets the enterprise taxe number.
- */
+     * Gets or sets the enterprise taxe number.
+     */
     @JsonProperty("EnterpriseTaxeNumber")
     private String enterpriseTaxeNumber;
 
     /**
- * Gets or sets the enterprise neq.
- */
+     * Gets or sets the enterprise neq.
+     */
     @JsonProperty("EnterpriseNeq")
     private String enterpriseNeq;
 
     /**
- * Gets or sets the enterprise name appear.
- */
+     * Gets or sets the enterprise name appear.
+     */
     @JsonProperty("EnterpriseNameAppear")
     private String enterpriseNameAppear;
 
     /**
- * Gets or sets the name of the billing.
- */
+     * Gets or sets the name of the billing.
+     */
     @JsonProperty("BillingName")
     private String billingName;
 
     /**
- * Gets or sets the billing address.
- */
+     * Gets or sets the billing address.
+     */
     @JsonProperty("BillingAddress")
     private String billingAddress;
 
     /**
- * Gets or sets the billing city.
- */
+     * Gets or sets the billing city.
+     */
     @JsonProperty("BillingCity")
     private String billingCity;
 
     /**
- * Gets or sets the billing province.
- */
+     * Gets or sets the billing province.
+     */
     @JsonProperty("BillingProvince")
     private String billingProvince;
 
     /**
- * Gets or sets the billing postal code.
- */
+     * Gets or sets the billing postal code.
+     */
     @JsonProperty("BillingPostalCode")
     private String billingPostalCode;
 
     /**
- * Gets or sets the billing phone.
- */
+     * Gets or sets the billing phone.
+     */
     @JsonProperty("BillingPhone")
     private String billingPhone;
 
     /**
- * Gets or sets the billing phone2.
- */
+     * Gets or sets the billing phone2.
+     */
     @JsonProperty("BillingPhone2")
     private String billingPhone2;
 
     /**
- * Gets or sets the billing email.
- */
+     * Gets or sets the billing email.
+     */
     @JsonProperty("BillingEmail")
     private String billingEmail;
 
     /**
- * Gets or sets the business type choice.
- */
+     * Gets or sets the business type choice.
+     */
     @JsonProperty("BusinessTypeChoice")
     private String businessTypeChoice;
 
     /**
- * Gets or sets the first name of the leader.
- */
+     * Gets or sets the first name of the leader.
+     */
     @JsonProperty("FirstLeaderName")
     private String firstLeaderName;
 
     /**
- * Gets or sets the first leader initiales.
- */
+     * Gets or sets the first leader initiales.
+     */
     @JsonProperty("FirstLeaderInitiales")
     private String firstLeaderInitiales;
 
     /**
- * Gets or sets the first leader nas.
- */
+     * Gets or sets the first leader nas.
+     */
     @JsonProperty("FirstLeaderNas")
     private String firstLeaderNas;
 
     /**
- * Gets or sets the first leader phone.
- */
+     * Gets or sets the first leader phone.
+     */
     @JsonProperty("FirstLeaderPhone")
     private String firstLeaderPhone;
 
     /**
- * Gets or sets the first leader cell phone.
- */
+     * Gets or sets the first leader cell phone.
+     */
     @JsonProperty("FirstLeaderCellPhone")
     private String firstLeaderCellPhone;
 
     /**
- * Gets or sets the first leader address.
- */
+     * Gets or sets the first leader address.
+     */
     @JsonProperty("FirstLeaderAddress")
     private String firstLeaderAddress;
 
     /**
- * Gets or sets the first leader province.
- */
+     * Gets or sets the first leader province.
+     */
     @JsonProperty("FirstLeaderProvince")
     private String firstLeaderProvince;
 
     /**
- * Gets or sets the first leader postal code.
- */
+     * Gets or sets the first leader postal code.
+     */
     @JsonProperty("FirstLeaderPostalCode")
     private String firstLeaderPostalCode;
 
     /**
- * Gets or sets the first leader licence number.
- */
+     * Gets or sets the first leader licence number.
+     */
     @JsonProperty("FirstLeaderLicenceNumber")
     private String firstLeaderLicenceNumber;
 
     /**
- * Gets or sets the first leader birth date.
- */
+     * Gets or sets the first leader birth date.
+     */
     @JsonProperty("FirstLeaderBirthDate")
     private String firstLeaderBirthDate;
 
     /**
- * Gets or sets the first leader share part.
- */
+     * Gets or sets the first leader share part.
+     */
     @JsonProperty("FirstLeaderSharePart")
     private String firstLeaderSharePart;
 
     /**
- * Gets or sets the first leader title.
- */
+     * Gets or sets the first leader title.
+     */
     @JsonProperty("FirstLeaderTitle")
     private String firstLeaderTitle;
 
     /**
- * Gets or sets the name of the second leader.
- */
+     * Gets or sets the name of the second leader.
+     */
     @JsonProperty("SecondLeaderName")
     private String secondLeaderName;
 
     /**
- * Gets or sets the second leader initiales.
- */
+     * Gets or sets the second leader initiales.
+     */
     @JsonProperty("SecondLeaderInitiales")
     private String secondLeaderInitiales;
 
     /**
- * Gets or sets the second leader nas.
- */
+     * Gets or sets the second leader nas.
+     */
     @JsonProperty("SecondLeaderNas")
     private String secondLeaderNas;
 
     /**
- * Gets or sets the second leader phone.
- */
+     * Gets or sets the second leader phone.
+     */
     @JsonProperty("SecondLeaderPhone")
     private String secondLeaderPhone;
 
     /**
- * Gets or sets the second leader cell phone.
- */
+     * Gets or sets the second leader cell phone.
+     */
     @JsonProperty("SecondLeaderCellPhone")
     private String secondLeaderCellPhone;
 
     /**
- * Gets or sets the second leader address.
- */
+     * Gets or sets the second leader address.
+     */
     @JsonProperty("SecondLeaderAddress")
     private String secondLeaderAddress;
 
     /**
- * Gets or sets the second leader province.
- */
+     * Gets or sets the second leader province.
+     */
     @JsonProperty("SecondLeaderProvince")
     private String secondLeaderProvince;
 
     /**
- * Gets or sets the second leader postal code.
- */
+     * Gets or sets the second leader postal code.
+     */
     @JsonProperty("SecondLeaderPostalCode")
     private String secondLeaderPostalCode;
 
     /**
- * Gets or sets the second leader licence number.
- */
+     * Gets or sets the second leader licence number.
+     */
     @JsonProperty("SecondLeaderLicenceNumber")
     private String secondLeaderLicenceNumber;
 
     /**
- * Gets or sets the second leader birth date.
- */
+     * Gets or sets the second leader birth date.
+     */
     @JsonProperty("SecondLeaderBirthDate")
     private String secondLeaderBirthDate;
 
     /**
- * Gets or sets the second leader share part.
- */
+     * Gets or sets the second leader share part.
+     */
     @JsonProperty("SecondLeaderSharePart")
     private String secondLeaderSharePart;
 
     /**
- * Gets or sets the second leader title.
- */
+     * Gets or sets the second leader title.
+     */
     @JsonProperty("SecondLeaderTitle")
     private String secondLeaderTitle;
 
     /**
- * Gets or sets the had resiliation.
- */
+     * Gets or sets the had resiliation.
+     */
     @JsonProperty("HadResiliation")
     private String hadResiliation;
 
     /**
- * Gets or sets the resiliation reason.
- */
+     * Gets or sets the resiliation reason.
+     */
     @JsonProperty("ResiliationReason")
     private String resiliationReason;
 
     /**
- * Gets or sets the had bankrupted.
- */
+     * Gets or sets the had bankrupted.
+     */
     @JsonProperty("HadBankrupted")
     private String hadBankrupted;
 
     /**
- * Gets or sets the bankrupted reason.
- */
+     * Gets or sets the bankrupted reason.
+     */
     @JsonProperty("BankruptedReason")
     private String bankruptedReason;
 
     /**
- * Gets or sets the been in visa risk.
- */
+     * Gets or sets the been in visa risk.
+     */
     @JsonProperty("BeenInVisaRisk")
     private String beenInVisaRisk;
 
     /**
- * Gets or sets the visa risk reason.
- */
+     * Gets or sets the visa risk reason.
+     */
     @JsonProperty("VisaRiskReason")
     private String visaRiskReason;
 
     /**
- * Gets or sets the visa risk date.
- */
+     * Gets or sets the visa risk date.
+     */
     @JsonProperty("VisaRiskDate")
     private String visaRiskDate;
 
     /**
- * Gets or sets the name of the bank.
- */
+     * Gets or sets the name of the bank.
+     */
     @JsonProperty("BankName")
     private String bankName;
 
     /**
- * Gets or sets the bank address.
- */
+     * Gets or sets the bank address.
+     */
     @JsonProperty("BankAddress")
     private String bankAddress;
 
     /**
- * Gets or sets the bank city.
- */
+     * Gets or sets the bank city.
+     */
     @JsonProperty("BankCity")
     private String bankCity;
 
     /**
- * Gets or sets the bank province.
- */
+     * Gets or sets the bank province.
+     */
     @JsonProperty("BankProvince")
     private String bankProvince;
 
     /**
- * Gets or sets the bank postal code.
- */
+     * Gets or sets the bank postal code.
+     */
     @JsonProperty("BankPostalCode")
     private String bankPostalCode;
 
     /**
- * Gets or sets the bank phone.
- */
+     * Gets or sets the bank phone.
+     */
     @JsonProperty("BankPhone")
     private String bankPhone;
 
     /**
- * Gets or sets the bank phone2.
- */
+     * Gets or sets the bank phone2.
+     */
     @JsonProperty("BankPhone2")
     private String bankPhone2;
 
     /**
- * Gets or sets the bank email.
- */
+     * Gets or sets the bank email.
+     */
     @JsonProperty("BankEmail")
     private String bankEmail;
 
     /**
- * Gets or sets the specimen file.
- */
+     * Gets or sets the specimen file.
+     */
     @JsonProperty("SpecimenFile")
     private String specimenFile;
 
     /**
- * Gets or sets the account type option.
- */
+     * Gets or sets the account type option.
+     */
     @JsonProperty("AccountTypeOption")
     private String accountTypeOption;
 
     /**
- * Identifies the bank associated with the account using its numeric identifier.
- */
+     * Identifies the bank associated with the account using its numeric identifier.
+     */
     @JsonProperty("BankNumber")
     private String bankNumber;
 
     /**
- * Gets or sets the transit number.
- */
+     * Gets or sets the transit number.
+     */
     @JsonProperty("TransitNumber")
     private String transitNumber;
 
     /**
- * Specifies the bank account number associated with the payment method.
- */
+     * Specifies the bank account number associated with the payment method.
+     */
     @JsonProperty("AccountNumber")
     private String accountNumber;
 
     /**
- * Gets or sets the been compromised.
- */
+     * Gets or sets the been compromised.
+     */
     @JsonProperty("BeenCompromised")
     private String beenCompromised;
 
     /**
- * Gets or sets the pci conformity level.
- */
+     * Gets or sets the pci conformity level.
+     */
     @JsonProperty("PciConformityLevel")
     private String pciConformityLevel;
 
     /**
- * Gets or sets the been compromised year.
- */
+     * Gets or sets the been compromised year.
+     */
     @JsonProperty("BeenCompromisedYear")
     private String beenCompromisedYear;
 
     /**
- * Gets or sets the use third party application.
- */
+     * Gets or sets the use third party application.
+     */
     @JsonProperty("UseThirdPartyApplication")
     private String useThirdPartyApplication;
 
     /**
- * Gets or sets the third party applications.
- */
+     * Gets or sets the third party applications.
+     */
     @JsonProperty("ThirdPartyApplications")
     private String thirdPartyApplications;
 
     /**
- * Gets or sets the manual collection mode card ratio.
- */
+     * Gets or sets the manual collection mode card ratio.
+     */
     @JsonProperty("ManualCollectionModeCardRatio")
     private String manualCollectionModeCardRatio;
 
     /**
- * Gets or sets the manual collection mode internet ratio.
- */
+     * Gets or sets the manual collection mode internet ratio.
+     */
     @JsonProperty("ManualCollectionModeInternetRatio")
     private String manualCollectionModeInternetRatio;
 
     /**
- * Gets or sets the manual collection mode postal phone ratio.
- */
+     * Gets or sets the manual collection mode postal phone ratio.
+     */
     @JsonProperty("ManualCollectionModePostalPhoneRatio")
     private String manualCollectionModePostalPhoneRatio;
 
     /**
- * Gets or sets the volume card.
- */
+     * Gets or sets the volume card.
+     */
     @JsonProperty("VolumeCard")
     private String volumeCard;
 
     /**
- * Gets or sets the volume average transaction.
- */
+     * Gets or sets the volume average transaction.
+     */
     @JsonProperty("VolumeAverageTransaction")
     private String volumeAverageTransaction;
 
     /**
- * Gets or sets the highest transaction.
- */
+     * Gets or sets the highest transaction.
+     */
     @JsonProperty("HighestTransaction")
     private String highestTransaction;
 
     /**
- * Gets or sets the already accept card.
- */
+     * Gets or sets the already accept card.
+     */
     @JsonProperty("AlreadyAcceptCard")
     private String alreadyAcceptCard;
 
     /**
- * Gets or sets the keep account.
- */
+     * Gets or sets the keep account.
+     */
     @JsonProperty("KeepAccount")
     private String keepAccount;
 
     /**
- * Gets or sets the has recuring billing.
- */
+     * Gets or sets the has recuring billing.
+     */
     @JsonProperty("HasRecuringBilling")
     private String hasRecuringBilling;
 
     /**
- * Gets or sets the reason to change.
- */
+     * Gets or sets the reason to change.
+     */
     @JsonProperty("ReasonToChange")
     private String reasonToChange;
 
     /**
- * Gets or sets the services and products description.
- */
+     * Gets or sets the services and products description.
+     */
     @JsonProperty("ServicesAndProductsDescription")
     private String servicesAndProductsDescription;
 
     /**
- * Gets or sets the want withdraw deposit service.
- */
+     * Gets or sets the want withdraw deposit service.
+     */
     @JsonProperty("WantWithdrawDepositService")
     private String wantWithdrawDepositService;
 
     /**
- * Gets or sets the number of transaction per month withdraw.
- */
+     * Gets or sets the number of transaction per month withdraw.
+     */
     @JsonProperty("NumberOfTransactionPerMonthWithdraw")
     private String numberOfTransactionPerMonthWithdraw;
 
     /**
- * Gets or sets the number of transaction per month deposit.
- */
+     * Gets or sets the number of transaction per month deposit.
+     */
     @JsonProperty("NumberOfTransactionPerMonthDeposit")
     private String numberOfTransactionPerMonthDeposit;
 
     /**
- * Gets or sets the number of transaction per month NSF.
- */
+     * Gets or sets the number of transaction per month NSF.
+     */
     @JsonProperty("NumberOfTransactionPerMonthNsf")
     private String numberOfTransactionPerMonthNsf;
 
     /**
- * Gets or sets the desired limit per month withdraw.
- */
+     * Gets or sets the desired limit per month withdraw.
+     */
     @JsonProperty("DesiredLimitPerMonthWithdraw")
     private String desiredLimitPerMonthWithdraw;
 
     /**
- * Gets or sets the desired limit per month deposit.
- */
+     * Gets or sets the desired limit per month deposit.
+     */
     @JsonProperty("DesiredLimitPerMonthDeposit")
     private String desiredLimitPerMonthDeposit;
 
     /**
- * Gets or sets the desired limit per month NSF.
- */
+     * Gets or sets the desired limit per month NSF.
+     */
     @JsonProperty("DesiredLimitPerMonthNsf")
     private String desiredLimitPerMonthNsf;
 
     /**
- * Gets or sets the desire double authentication withdraw.
- */
+     * Gets or sets the desire double authentication withdraw.
+     */
     @JsonProperty("DesireDoubleAuthenticationWithdraw")
     private String desireDoubleAuthenticationWithdraw;
 
     /**
- * Gets or sets the desire double authentication deposit.
- */
+     * Gets or sets the desire double authentication deposit.
+     */
     @JsonProperty("DesireDoubleAuthenticationDeposit")
     private String desireDoubleAuthenticationDeposit;
 
     /**
- * Gets or sets the desire double authentication NSF.
- */
+     * Gets or sets the desire double authentication NSF.
+     */
     @JsonProperty("DesireDoubleAuthenticationNsf")
     private String desireDoubleAuthenticationNsf;
 
     /**
- * Gets or sets the want credit card service.
- */
+     * Gets or sets the want credit card service.
+     */
     @JsonProperty("WantCreditCardService")
     private String wantCreditCardService;
 
     /**
- * Gets or sets the credit card volumne mastercard.
- */
+     * Gets or sets the credit card volumne mastercard.
+     */
     @JsonProperty("CreditCardVolumneMastercard")
     private String creditCardVolumneMastercard;
 
     /**
- * Gets or sets the credit card volumne mastercard visa.
- */
+     * Gets or sets the credit card volumne mastercard visa.
+     */
     @JsonProperty("CreditCardVolumneMastercardVisa")
     private String creditCardVolumneMastercardVisa;
 
     /**
- * Gets or sets the credit card volumne visa debit.
- */
+     * Gets or sets the credit card volumne visa debit.
+     */
     @JsonProperty("CreditCardVolumneVisaDebit")
     private String creditCardVolumneVisaDebit;
 
     /**
- * Gets or sets the accept visa debit.
- */
+     * Gets or sets the accept visa debit.
+     */
     @JsonProperty("AcceptVisaDebit")
     private String acceptVisaDebit;
 
     /**
- * Gets or sets the accept online payment.
- */
+     * Gets or sets the accept online payment.
+     */
     @JsonProperty("AcceptOnlinePayment")
     private String acceptOnlinePayment;
 
     /**
- * Gets or sets the accept terme check.
- */
+     * Gets or sets the accept terme check.
+     */
     @JsonProperty("AcceptTermeCheck")
     private String acceptTermeCheck;
 
@@ -626,106 +626,105 @@ public class TibAccountOpenForm   {
     
     public TibAccountOpenForm(String enterpriseName, String enterpriseAddress, String enterpriseCity, String enterpriseProvince, String enterprisePostalCode, String enterprisePhone, String enterprisePhone2, String enterpriseEmail, String enterpriseAccountResponsible, String enterpriseType, String enterpriseEstablishedSince, String enterpriseTaxeNumber, String enterpriseNeq, String enterpriseNameAppear, String billingName, String billingAddress, String billingCity, String billingProvince, String billingPostalCode, String billingPhone, String billingPhone2, String billingEmail, String businessTypeChoice, String firstLeaderName, String firstLeaderInitiales, String firstLeaderNas, String firstLeaderPhone, String firstLeaderCellPhone, String firstLeaderAddress, String firstLeaderProvince, String firstLeaderPostalCode, String firstLeaderLicenceNumber, String firstLeaderBirthDate, String firstLeaderSharePart, String firstLeaderTitle, String secondLeaderName, String secondLeaderInitiales, String secondLeaderNas, String secondLeaderPhone, String secondLeaderCellPhone, String secondLeaderAddress, String secondLeaderProvince, String secondLeaderPostalCode, String secondLeaderLicenceNumber, String secondLeaderBirthDate, String secondLeaderSharePart, String secondLeaderTitle, String hadResiliation, String resiliationReason, String hadBankrupted, String bankruptedReason, String beenInVisaRisk, String visaRiskReason, String visaRiskDate, String bankName, String bankAddress, String bankCity, String bankProvince, String bankPostalCode, String bankPhone, String bankPhone2, String bankEmail, String specimenFile, String accountTypeOption, String bankNumber, String transitNumber, String accountNumber, String beenCompromised, String pciConformityLevel, String beenCompromisedYear, String useThirdPartyApplication, String thirdPartyApplications, String manualCollectionModeCardRatio, String manualCollectionModeInternetRatio, String manualCollectionModePostalPhoneRatio, String volumeCard, String volumeAverageTransaction, String highestTransaction, String alreadyAcceptCard, String keepAccount, String hasRecuringBilling, String reasonToChange, String servicesAndProductsDescription, String wantWithdrawDepositService, String numberOfTransactionPerMonthWithdraw, String numberOfTransactionPerMonthDeposit, String numberOfTransactionPerMonthNsf, String desiredLimitPerMonthWithdraw, String desiredLimitPerMonthDeposit, String desiredLimitPerMonthNsf, String desireDoubleAuthenticationWithdraw, String desireDoubleAuthenticationDeposit, String desireDoubleAuthenticationNsf, String wantCreditCardService, String creditCardVolumneMastercard, String creditCardVolumneMastercardVisa, String creditCardVolumneVisaDebit, String acceptVisaDebit, String acceptOnlinePayment, String acceptTermeCheck) {
         this.enterpriseName = enterpriseName;
-this.enterpriseAddress = enterpriseAddress;
-this.enterpriseCity = enterpriseCity;
-this.enterpriseProvince = enterpriseProvince;
-this.enterprisePostalCode = enterprisePostalCode;
-this.enterprisePhone = enterprisePhone;
-this.enterprisePhone2 = enterprisePhone2;
-this.enterpriseEmail = enterpriseEmail;
-this.enterpriseAccountResponsible = enterpriseAccountResponsible;
-this.enterpriseType = enterpriseType;
-this.enterpriseEstablishedSince = enterpriseEstablishedSince;
-this.enterpriseTaxeNumber = enterpriseTaxeNumber;
-this.enterpriseNeq = enterpriseNeq;
-this.enterpriseNameAppear = enterpriseNameAppear;
-this.billingName = billingName;
-this.billingAddress = billingAddress;
-this.billingCity = billingCity;
-this.billingProvince = billingProvince;
-this.billingPostalCode = billingPostalCode;
-this.billingPhone = billingPhone;
-this.billingPhone2 = billingPhone2;
-this.billingEmail = billingEmail;
-this.businessTypeChoice = businessTypeChoice;
-this.firstLeaderName = firstLeaderName;
-this.firstLeaderInitiales = firstLeaderInitiales;
-this.firstLeaderNas = firstLeaderNas;
-this.firstLeaderPhone = firstLeaderPhone;
-this.firstLeaderCellPhone = firstLeaderCellPhone;
-this.firstLeaderAddress = firstLeaderAddress;
-this.firstLeaderProvince = firstLeaderProvince;
-this.firstLeaderPostalCode = firstLeaderPostalCode;
-this.firstLeaderLicenceNumber = firstLeaderLicenceNumber;
-this.firstLeaderBirthDate = firstLeaderBirthDate;
-this.firstLeaderSharePart = firstLeaderSharePart;
-this.firstLeaderTitle = firstLeaderTitle;
-this.secondLeaderName = secondLeaderName;
-this.secondLeaderInitiales = secondLeaderInitiales;
-this.secondLeaderNas = secondLeaderNas;
-this.secondLeaderPhone = secondLeaderPhone;
-this.secondLeaderCellPhone = secondLeaderCellPhone;
-this.secondLeaderAddress = secondLeaderAddress;
-this.secondLeaderProvince = secondLeaderProvince;
-this.secondLeaderPostalCode = secondLeaderPostalCode;
-this.secondLeaderLicenceNumber = secondLeaderLicenceNumber;
-this.secondLeaderBirthDate = secondLeaderBirthDate;
-this.secondLeaderSharePart = secondLeaderSharePart;
-this.secondLeaderTitle = secondLeaderTitle;
-this.hadResiliation = hadResiliation;
-this.resiliationReason = resiliationReason;
-this.hadBankrupted = hadBankrupted;
-this.bankruptedReason = bankruptedReason;
-this.beenInVisaRisk = beenInVisaRisk;
-this.visaRiskReason = visaRiskReason;
-this.visaRiskDate = visaRiskDate;
-this.bankName = bankName;
-this.bankAddress = bankAddress;
-this.bankCity = bankCity;
-this.bankProvince = bankProvince;
-this.bankPostalCode = bankPostalCode;
-this.bankPhone = bankPhone;
-this.bankPhone2 = bankPhone2;
-this.bankEmail = bankEmail;
-this.specimenFile = specimenFile;
-this.accountTypeOption = accountTypeOption;
-this.bankNumber = bankNumber;
-this.transitNumber = transitNumber;
-this.accountNumber = accountNumber;
-this.beenCompromised = beenCompromised;
-this.pciConformityLevel = pciConformityLevel;
-this.beenCompromisedYear = beenCompromisedYear;
-this.useThirdPartyApplication = useThirdPartyApplication;
-this.thirdPartyApplications = thirdPartyApplications;
-this.manualCollectionModeCardRatio = manualCollectionModeCardRatio;
-this.manualCollectionModeInternetRatio = manualCollectionModeInternetRatio;
-this.manualCollectionModePostalPhoneRatio = manualCollectionModePostalPhoneRatio;
-this.volumeCard = volumeCard;
-this.volumeAverageTransaction = volumeAverageTransaction;
-this.highestTransaction = highestTransaction;
-this.alreadyAcceptCard = alreadyAcceptCard;
-this.keepAccount = keepAccount;
-this.hasRecuringBilling = hasRecuringBilling;
-this.reasonToChange = reasonToChange;
-this.servicesAndProductsDescription = servicesAndProductsDescription;
-this.wantWithdrawDepositService = wantWithdrawDepositService;
-this.numberOfTransactionPerMonthWithdraw = numberOfTransactionPerMonthWithdraw;
-this.numberOfTransactionPerMonthDeposit = numberOfTransactionPerMonthDeposit;
-this.numberOfTransactionPerMonthNsf = numberOfTransactionPerMonthNsf;
-this.desiredLimitPerMonthWithdraw = desiredLimitPerMonthWithdraw;
-this.desiredLimitPerMonthDeposit = desiredLimitPerMonthDeposit;
-this.desiredLimitPerMonthNsf = desiredLimitPerMonthNsf;
-this.desireDoubleAuthenticationWithdraw = desireDoubleAuthenticationWithdraw;
-this.desireDoubleAuthenticationDeposit = desireDoubleAuthenticationDeposit;
-this.desireDoubleAuthenticationNsf = desireDoubleAuthenticationNsf;
-this.wantCreditCardService = wantCreditCardService;
-this.creditCardVolumneMastercard = creditCardVolumneMastercard;
-this.creditCardVolumneMastercardVisa = creditCardVolumneMastercardVisa;
-this.creditCardVolumneVisaDebit = creditCardVolumneVisaDebit;
-this.acceptVisaDebit = acceptVisaDebit;
-this.acceptOnlinePayment = acceptOnlinePayment;
-this.acceptTermeCheck = acceptTermeCheck;
-
+        this.enterpriseAddress = enterpriseAddress;
+        this.enterpriseCity = enterpriseCity;
+        this.enterpriseProvince = enterpriseProvince;
+        this.enterprisePostalCode = enterprisePostalCode;
+        this.enterprisePhone = enterprisePhone;
+        this.enterprisePhone2 = enterprisePhone2;
+        this.enterpriseEmail = enterpriseEmail;
+        this.enterpriseAccountResponsible = enterpriseAccountResponsible;
+        this.enterpriseType = enterpriseType;
+        this.enterpriseEstablishedSince = enterpriseEstablishedSince;
+        this.enterpriseTaxeNumber = enterpriseTaxeNumber;
+        this.enterpriseNeq = enterpriseNeq;
+        this.enterpriseNameAppear = enterpriseNameAppear;
+        this.billingName = billingName;
+        this.billingAddress = billingAddress;
+        this.billingCity = billingCity;
+        this.billingProvince = billingProvince;
+        this.billingPostalCode = billingPostalCode;
+        this.billingPhone = billingPhone;
+        this.billingPhone2 = billingPhone2;
+        this.billingEmail = billingEmail;
+        this.businessTypeChoice = businessTypeChoice;
+        this.firstLeaderName = firstLeaderName;
+        this.firstLeaderInitiales = firstLeaderInitiales;
+        this.firstLeaderNas = firstLeaderNas;
+        this.firstLeaderPhone = firstLeaderPhone;
+        this.firstLeaderCellPhone = firstLeaderCellPhone;
+        this.firstLeaderAddress = firstLeaderAddress;
+        this.firstLeaderProvince = firstLeaderProvince;
+        this.firstLeaderPostalCode = firstLeaderPostalCode;
+        this.firstLeaderLicenceNumber = firstLeaderLicenceNumber;
+        this.firstLeaderBirthDate = firstLeaderBirthDate;
+        this.firstLeaderSharePart = firstLeaderSharePart;
+        this.firstLeaderTitle = firstLeaderTitle;
+        this.secondLeaderName = secondLeaderName;
+        this.secondLeaderInitiales = secondLeaderInitiales;
+        this.secondLeaderNas = secondLeaderNas;
+        this.secondLeaderPhone = secondLeaderPhone;
+        this.secondLeaderCellPhone = secondLeaderCellPhone;
+        this.secondLeaderAddress = secondLeaderAddress;
+        this.secondLeaderProvince = secondLeaderProvince;
+        this.secondLeaderPostalCode = secondLeaderPostalCode;
+        this.secondLeaderLicenceNumber = secondLeaderLicenceNumber;
+        this.secondLeaderBirthDate = secondLeaderBirthDate;
+        this.secondLeaderSharePart = secondLeaderSharePart;
+        this.secondLeaderTitle = secondLeaderTitle;
+        this.hadResiliation = hadResiliation;
+        this.resiliationReason = resiliationReason;
+        this.hadBankrupted = hadBankrupted;
+        this.bankruptedReason = bankruptedReason;
+        this.beenInVisaRisk = beenInVisaRisk;
+        this.visaRiskReason = visaRiskReason;
+        this.visaRiskDate = visaRiskDate;
+        this.bankName = bankName;
+        this.bankAddress = bankAddress;
+        this.bankCity = bankCity;
+        this.bankProvince = bankProvince;
+        this.bankPostalCode = bankPostalCode;
+        this.bankPhone = bankPhone;
+        this.bankPhone2 = bankPhone2;
+        this.bankEmail = bankEmail;
+        this.specimenFile = specimenFile;
+        this.accountTypeOption = accountTypeOption;
+        this.bankNumber = bankNumber;
+        this.transitNumber = transitNumber;
+        this.accountNumber = accountNumber;
+        this.beenCompromised = beenCompromised;
+        this.pciConformityLevel = pciConformityLevel;
+        this.beenCompromisedYear = beenCompromisedYear;
+        this.useThirdPartyApplication = useThirdPartyApplication;
+        this.thirdPartyApplications = thirdPartyApplications;
+        this.manualCollectionModeCardRatio = manualCollectionModeCardRatio;
+        this.manualCollectionModeInternetRatio = manualCollectionModeInternetRatio;
+        this.manualCollectionModePostalPhoneRatio = manualCollectionModePostalPhoneRatio;
+        this.volumeCard = volumeCard;
+        this.volumeAverageTransaction = volumeAverageTransaction;
+        this.highestTransaction = highestTransaction;
+        this.alreadyAcceptCard = alreadyAcceptCard;
+        this.keepAccount = keepAccount;
+        this.hasRecuringBilling = hasRecuringBilling;
+        this.reasonToChange = reasonToChange;
+        this.servicesAndProductsDescription = servicesAndProductsDescription;
+        this.wantWithdrawDepositService = wantWithdrawDepositService;
+        this.numberOfTransactionPerMonthWithdraw = numberOfTransactionPerMonthWithdraw;
+        this.numberOfTransactionPerMonthDeposit = numberOfTransactionPerMonthDeposit;
+        this.numberOfTransactionPerMonthNsf = numberOfTransactionPerMonthNsf;
+        this.desiredLimitPerMonthWithdraw = desiredLimitPerMonthWithdraw;
+        this.desiredLimitPerMonthDeposit = desiredLimitPerMonthDeposit;
+        this.desiredLimitPerMonthNsf = desiredLimitPerMonthNsf;
+        this.desireDoubleAuthenticationWithdraw = desireDoubleAuthenticationWithdraw;
+        this.desireDoubleAuthenticationDeposit = desireDoubleAuthenticationDeposit;
+        this.desireDoubleAuthenticationNsf = desireDoubleAuthenticationNsf;
+        this.wantCreditCardService = wantCreditCardService;
+        this.creditCardVolumneMastercard = creditCardVolumneMastercard;
+        this.creditCardVolumneMastercardVisa = creditCardVolumneMastercardVisa;
+        this.creditCardVolumneVisaDebit = creditCardVolumneVisaDebit;
+        this.acceptVisaDebit = acceptVisaDebit;
+        this.acceptOnlinePayment = acceptOnlinePayment;
+        this.acceptTermeCheck = acceptTermeCheck;
     }
     
     
@@ -1551,106 +1550,106 @@ this.acceptTermeCheck = acceptTermeCheck;
     @Override
     public String toString() {
         return "TibAccountOpenForm{" +
-                 "enterpriseName='" + enterpriseName + '\'' +
- ", enterpriseAddress='" + enterpriseAddress + '\'' +
- ", enterpriseCity='" + enterpriseCity + '\'' +
- ", enterpriseProvince='" + enterpriseProvince + '\'' +
- ", enterprisePostalCode='" + enterprisePostalCode + '\'' +
- ", enterprisePhone='" + enterprisePhone + '\'' +
- ", enterprisePhone2='" + enterprisePhone2 + '\'' +
- ", enterpriseEmail='" + enterpriseEmail + '\'' +
- ", enterpriseAccountResponsible='" + enterpriseAccountResponsible + '\'' +
- ", enterpriseType='" + enterpriseType + '\'' +
- ", enterpriseEstablishedSince='" + enterpriseEstablishedSince + '\'' +
- ", enterpriseTaxeNumber='" + enterpriseTaxeNumber + '\'' +
- ", enterpriseNeq='" + enterpriseNeq + '\'' +
- ", enterpriseNameAppear='" + enterpriseNameAppear + '\'' +
- ", billingName='" + billingName + '\'' +
- ", billingAddress='" + billingAddress + '\'' +
- ", billingCity='" + billingCity + '\'' +
- ", billingProvince='" + billingProvince + '\'' +
- ", billingPostalCode='" + billingPostalCode + '\'' +
- ", billingPhone='" + billingPhone + '\'' +
- ", billingPhone2='" + billingPhone2 + '\'' +
- ", billingEmail='" + billingEmail + '\'' +
- ", businessTypeChoice='" + businessTypeChoice + '\'' +
- ", firstLeaderName='" + firstLeaderName + '\'' +
- ", firstLeaderInitiales='" + firstLeaderInitiales + '\'' +
- ", firstLeaderNas='" + firstLeaderNas + '\'' +
- ", firstLeaderPhone='" + firstLeaderPhone + '\'' +
- ", firstLeaderCellPhone='" + firstLeaderCellPhone + '\'' +
- ", firstLeaderAddress='" + firstLeaderAddress + '\'' +
- ", firstLeaderProvince='" + firstLeaderProvince + '\'' +
- ", firstLeaderPostalCode='" + firstLeaderPostalCode + '\'' +
- ", firstLeaderLicenceNumber='" + firstLeaderLicenceNumber + '\'' +
- ", firstLeaderBirthDate='" + firstLeaderBirthDate + '\'' +
- ", firstLeaderSharePart='" + firstLeaderSharePart + '\'' +
- ", firstLeaderTitle='" + firstLeaderTitle + '\'' +
- ", secondLeaderName='" + secondLeaderName + '\'' +
- ", secondLeaderInitiales='" + secondLeaderInitiales + '\'' +
- ", secondLeaderNas='" + secondLeaderNas + '\'' +
- ", secondLeaderPhone='" + secondLeaderPhone + '\'' +
- ", secondLeaderCellPhone='" + secondLeaderCellPhone + '\'' +
- ", secondLeaderAddress='" + secondLeaderAddress + '\'' +
- ", secondLeaderProvince='" + secondLeaderProvince + '\'' +
- ", secondLeaderPostalCode='" + secondLeaderPostalCode + '\'' +
- ", secondLeaderLicenceNumber='" + secondLeaderLicenceNumber + '\'' +
- ", secondLeaderBirthDate='" + secondLeaderBirthDate + '\'' +
- ", secondLeaderSharePart='" + secondLeaderSharePart + '\'' +
- ", secondLeaderTitle='" + secondLeaderTitle + '\'' +
- ", hadResiliation='" + hadResiliation + '\'' +
- ", resiliationReason='" + resiliationReason + '\'' +
- ", hadBankrupted='" + hadBankrupted + '\'' +
- ", bankruptedReason='" + bankruptedReason + '\'' +
- ", beenInVisaRisk='" + beenInVisaRisk + '\'' +
- ", visaRiskReason='" + visaRiskReason + '\'' +
- ", visaRiskDate='" + visaRiskDate + '\'' +
- ", bankName='" + bankName + '\'' +
- ", bankAddress='" + bankAddress + '\'' +
- ", bankCity='" + bankCity + '\'' +
- ", bankProvince='" + bankProvince + '\'' +
- ", bankPostalCode='" + bankPostalCode + '\'' +
- ", bankPhone='" + bankPhone + '\'' +
- ", bankPhone2='" + bankPhone2 + '\'' +
- ", bankEmail='" + bankEmail + '\'' +
- ", specimenFile='" + specimenFile + '\'' +
- ", accountTypeOption='" + accountTypeOption + '\'' +
- ", bankNumber='" + bankNumber + '\'' +
- ", transitNumber='" + transitNumber + '\'' +
- ", accountNumber='" + accountNumber + '\'' +
- ", beenCompromised='" + beenCompromised + '\'' +
- ", pciConformityLevel='" + pciConformityLevel + '\'' +
- ", beenCompromisedYear='" + beenCompromisedYear + '\'' +
- ", useThirdPartyApplication='" + useThirdPartyApplication + '\'' +
- ", thirdPartyApplications='" + thirdPartyApplications + '\'' +
- ", manualCollectionModeCardRatio='" + manualCollectionModeCardRatio + '\'' +
- ", manualCollectionModeInternetRatio='" + manualCollectionModeInternetRatio + '\'' +
- ", manualCollectionModePostalPhoneRatio='" + manualCollectionModePostalPhoneRatio + '\'' +
- ", volumeCard='" + volumeCard + '\'' +
- ", volumeAverageTransaction='" + volumeAverageTransaction + '\'' +
- ", highestTransaction='" + highestTransaction + '\'' +
- ", alreadyAcceptCard='" + alreadyAcceptCard + '\'' +
- ", keepAccount='" + keepAccount + '\'' +
- ", hasRecuringBilling='" + hasRecuringBilling + '\'' +
- ", reasonToChange='" + reasonToChange + '\'' +
- ", servicesAndProductsDescription='" + servicesAndProductsDescription + '\'' +
- ", wantWithdrawDepositService='" + wantWithdrawDepositService + '\'' +
- ", numberOfTransactionPerMonthWithdraw='" + numberOfTransactionPerMonthWithdraw + '\'' +
- ", numberOfTransactionPerMonthDeposit='" + numberOfTransactionPerMonthDeposit + '\'' +
- ", numberOfTransactionPerMonthNsf='" + numberOfTransactionPerMonthNsf + '\'' +
- ", desiredLimitPerMonthWithdraw='" + desiredLimitPerMonthWithdraw + '\'' +
- ", desiredLimitPerMonthDeposit='" + desiredLimitPerMonthDeposit + '\'' +
- ", desiredLimitPerMonthNsf='" + desiredLimitPerMonthNsf + '\'' +
- ", desireDoubleAuthenticationWithdraw='" + desireDoubleAuthenticationWithdraw + '\'' +
- ", desireDoubleAuthenticationDeposit='" + desireDoubleAuthenticationDeposit + '\'' +
- ", desireDoubleAuthenticationNsf='" + desireDoubleAuthenticationNsf + '\'' +
- ", wantCreditCardService='" + wantCreditCardService + '\'' +
- ", creditCardVolumneMastercard='" + creditCardVolumneMastercard + '\'' +
- ", creditCardVolumneMastercardVisa='" + creditCardVolumneMastercardVisa + '\'' +
- ", creditCardVolumneVisaDebit='" + creditCardVolumneVisaDebit + '\'' +
- ", acceptVisaDebit='" + acceptVisaDebit + '\'' +
- ", acceptOnlinePayment='" + acceptOnlinePayment + '\'' +
- ", acceptTermeCheck='" + acceptTermeCheck + '\'' +
+                "enterpriseName='" + enterpriseName + '\'' +
+                ", enterpriseAddress='" + enterpriseAddress + '\'' +
+                ", enterpriseCity='" + enterpriseCity + '\'' +
+                ", enterpriseProvince='" + enterpriseProvince + '\'' +
+                ", enterprisePostalCode='" + enterprisePostalCode + '\'' +
+                ", enterprisePhone='" + enterprisePhone + '\'' +
+                ", enterprisePhone2='" + enterprisePhone2 + '\'' +
+                ", enterpriseEmail='" + enterpriseEmail + '\'' +
+                ", enterpriseAccountResponsible='" + enterpriseAccountResponsible + '\'' +
+                ", enterpriseType='" + enterpriseType + '\'' +
+                ", enterpriseEstablishedSince='" + enterpriseEstablishedSince + '\'' +
+                ", enterpriseTaxeNumber='" + enterpriseTaxeNumber + '\'' +
+                ", enterpriseNeq='" + enterpriseNeq + '\'' +
+                ", enterpriseNameAppear='" + enterpriseNameAppear + '\'' +
+                ", billingName='" + billingName + '\'' +
+                ", billingAddress='" + billingAddress + '\'' +
+                ", billingCity='" + billingCity + '\'' +
+                ", billingProvince='" + billingProvince + '\'' +
+                ", billingPostalCode='" + billingPostalCode + '\'' +
+                ", billingPhone='" + billingPhone + '\'' +
+                ", billingPhone2='" + billingPhone2 + '\'' +
+                ", billingEmail='" + billingEmail + '\'' +
+                ", businessTypeChoice='" + businessTypeChoice + '\'' +
+                ", firstLeaderName='" + firstLeaderName + '\'' +
+                ", firstLeaderInitiales='" + firstLeaderInitiales + '\'' +
+                ", firstLeaderNas='" + firstLeaderNas + '\'' +
+                ", firstLeaderPhone='" + firstLeaderPhone + '\'' +
+                ", firstLeaderCellPhone='" + firstLeaderCellPhone + '\'' +
+                ", firstLeaderAddress='" + firstLeaderAddress + '\'' +
+                ", firstLeaderProvince='" + firstLeaderProvince + '\'' +
+                ", firstLeaderPostalCode='" + firstLeaderPostalCode + '\'' +
+                ", firstLeaderLicenceNumber='" + firstLeaderLicenceNumber + '\'' +
+                ", firstLeaderBirthDate='" + firstLeaderBirthDate + '\'' +
+                ", firstLeaderSharePart='" + firstLeaderSharePart + '\'' +
+                ", firstLeaderTitle='" + firstLeaderTitle + '\'' +
+                ", secondLeaderName='" + secondLeaderName + '\'' +
+                ", secondLeaderInitiales='" + secondLeaderInitiales + '\'' +
+                ", secondLeaderNas='" + secondLeaderNas + '\'' +
+                ", secondLeaderPhone='" + secondLeaderPhone + '\'' +
+                ", secondLeaderCellPhone='" + secondLeaderCellPhone + '\'' +
+                ", secondLeaderAddress='" + secondLeaderAddress + '\'' +
+                ", secondLeaderProvince='" + secondLeaderProvince + '\'' +
+                ", secondLeaderPostalCode='" + secondLeaderPostalCode + '\'' +
+                ", secondLeaderLicenceNumber='" + secondLeaderLicenceNumber + '\'' +
+                ", secondLeaderBirthDate='" + secondLeaderBirthDate + '\'' +
+                ", secondLeaderSharePart='" + secondLeaderSharePart + '\'' +
+                ", secondLeaderTitle='" + secondLeaderTitle + '\'' +
+                ", hadResiliation='" + hadResiliation + '\'' +
+                ", resiliationReason='" + resiliationReason + '\'' +
+                ", hadBankrupted='" + hadBankrupted + '\'' +
+                ", bankruptedReason='" + bankruptedReason + '\'' +
+                ", beenInVisaRisk='" + beenInVisaRisk + '\'' +
+                ", visaRiskReason='" + visaRiskReason + '\'' +
+                ", visaRiskDate='" + visaRiskDate + '\'' +
+                ", bankName='" + bankName + '\'' +
+                ", bankAddress='" + bankAddress + '\'' +
+                ", bankCity='" + bankCity + '\'' +
+                ", bankProvince='" + bankProvince + '\'' +
+                ", bankPostalCode='" + bankPostalCode + '\'' +
+                ", bankPhone='" + bankPhone + '\'' +
+                ", bankPhone2='" + bankPhone2 + '\'' +
+                ", bankEmail='" + bankEmail + '\'' +
+                ", specimenFile='" + specimenFile + '\'' +
+                ", accountTypeOption='" + accountTypeOption + '\'' +
+                ", bankNumber='" + bankNumber + '\'' +
+                ", transitNumber='" + transitNumber + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", beenCompromised='" + beenCompromised + '\'' +
+                ", pciConformityLevel='" + pciConformityLevel + '\'' +
+                ", beenCompromisedYear='" + beenCompromisedYear + '\'' +
+                ", useThirdPartyApplication='" + useThirdPartyApplication + '\'' +
+                ", thirdPartyApplications='" + thirdPartyApplications + '\'' +
+                ", manualCollectionModeCardRatio='" + manualCollectionModeCardRatio + '\'' +
+                ", manualCollectionModeInternetRatio='" + manualCollectionModeInternetRatio + '\'' +
+                ", manualCollectionModePostalPhoneRatio='" + manualCollectionModePostalPhoneRatio + '\'' +
+                ", volumeCard='" + volumeCard + '\'' +
+                ", volumeAverageTransaction='" + volumeAverageTransaction + '\'' +
+                ", highestTransaction='" + highestTransaction + '\'' +
+                ", alreadyAcceptCard='" + alreadyAcceptCard + '\'' +
+                ", keepAccount='" + keepAccount + '\'' +
+                ", hasRecuringBilling='" + hasRecuringBilling + '\'' +
+                ", reasonToChange='" + reasonToChange + '\'' +
+                ", servicesAndProductsDescription='" + servicesAndProductsDescription + '\'' +
+                ", wantWithdrawDepositService='" + wantWithdrawDepositService + '\'' +
+                ", numberOfTransactionPerMonthWithdraw='" + numberOfTransactionPerMonthWithdraw + '\'' +
+                ", numberOfTransactionPerMonthDeposit='" + numberOfTransactionPerMonthDeposit + '\'' +
+                ", numberOfTransactionPerMonthNsf='" + numberOfTransactionPerMonthNsf + '\'' +
+                ", desiredLimitPerMonthWithdraw='" + desiredLimitPerMonthWithdraw + '\'' +
+                ", desiredLimitPerMonthDeposit='" + desiredLimitPerMonthDeposit + '\'' +
+                ", desiredLimitPerMonthNsf='" + desiredLimitPerMonthNsf + '\'' +
+                ", desireDoubleAuthenticationWithdraw='" + desireDoubleAuthenticationWithdraw + '\'' +
+                ", desireDoubleAuthenticationDeposit='" + desireDoubleAuthenticationDeposit + '\'' +
+                ", desireDoubleAuthenticationNsf='" + desireDoubleAuthenticationNsf + '\'' +
+                ", wantCreditCardService='" + wantCreditCardService + '\'' +
+                ", creditCardVolumneMastercard='" + creditCardVolumneMastercard + '\'' +
+                ", creditCardVolumneMastercardVisa='" + creditCardVolumneMastercardVisa + '\'' +
+                ", creditCardVolumneVisaDebit='" + creditCardVolumneVisaDebit + '\'' +
+                ", acceptVisaDebit='" + acceptVisaDebit + '\'' +
+                ", acceptOnlinePayment='" + acceptOnlinePayment + '\'' +
+                ", acceptTermeCheck='" + acceptTermeCheck + '\'' +
 
                 '}';
     }

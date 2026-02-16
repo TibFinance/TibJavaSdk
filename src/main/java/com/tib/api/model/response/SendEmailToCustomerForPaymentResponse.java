@@ -25,13 +25,11 @@ public class SendEmailToCustomerForPaymentResponse extends CustomAPIResponse {
 
     public SendEmailToCustomerForPaymentResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SendEmailToCustomerForPaymentResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

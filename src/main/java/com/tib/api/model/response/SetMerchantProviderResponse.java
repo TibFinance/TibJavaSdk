@@ -25,13 +25,11 @@ public class SetMerchantProviderResponse extends CustomAPIResponse {
 
     public SetMerchantProviderResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SetMerchantProviderResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

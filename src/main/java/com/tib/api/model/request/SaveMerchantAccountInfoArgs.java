@@ -21,14 +21,14 @@ public class SaveMerchantAccountInfoArgs  extends BaseAuthenticatedCryptedArgs  
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Contains the necessary details for replacing a merchant's account information within the system.
- */
+     * Contains the necessary details for replacing a merchant's account information within the system.
+     */
     @JsonProperty("Account")
     private Account account;
 
@@ -40,16 +40,14 @@ public class SaveMerchantAccountInfoArgs  extends BaseAuthenticatedCryptedArgs  
     
     public SaveMerchantAccountInfoArgs(String merchantId, Account account) {
         this.merchantId = merchantId;
-this.account = account;
-
+        this.account = account;
     }
     
     
     public SaveMerchantAccountInfoArgs(String sessionToken, String merchantId, Account account) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.account = account;
-
+        this.account = account;
     }
 
     
@@ -89,8 +87,8 @@ this.account = account;
     @Override
     public String toString() {
         return "SaveMerchantAccountInfoArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", account='" + account + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", account='" + account + '\'' +
 
                 '}';
     }

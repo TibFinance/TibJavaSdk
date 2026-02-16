@@ -25,13 +25,11 @@ public class GetProviderMerchantCredentialsResponse extends CustomAPIResponse {
 
     public GetProviderMerchantCredentialsResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public GetProviderMerchantCredentialsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

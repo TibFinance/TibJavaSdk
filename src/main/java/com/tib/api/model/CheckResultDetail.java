@@ -19,14 +19,14 @@ public class CheckResultDetail   {
 
     
     /**
- * Gets or sets the event date.
- */
+     * Gets or sets the event date.
+     */
     @JsonProperty("EventDate")
     private LocalDateTime eventDate;
 
     /**
- * Gets or sets the transaciton amount.
- */
+     * Gets or sets the transaciton amount.
+     */
     @JsonProperty("TransacitonAmount")
     private Double transacitonAmount;
 
@@ -38,8 +38,7 @@ public class CheckResultDetail   {
     
     public CheckResultDetail(LocalDateTime eventDate, Double transacitonAmount) {
         this.eventDate = eventDate;
-this.transacitonAmount = transacitonAmount;
-
+        this.transacitonAmount = transacitonAmount;
     }
     
     
@@ -81,8 +80,8 @@ this.transacitonAmount = transacitonAmount;
     @Override
     public String toString() {
         return "CheckResultDetail{" +
-                 "eventDate='" + eventDate + '\'' +
- ", transacitonAmount='" + transacitonAmount + '\'' +
+                "eventDate='" + eventDate + '\'' +
+                ", transacitonAmount='" + transacitonAmount + '\'' +
 
                 '}';
     }

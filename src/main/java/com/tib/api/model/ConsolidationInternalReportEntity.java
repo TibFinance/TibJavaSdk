@@ -20,50 +20,50 @@ public class ConsolidationInternalReportEntity   {
 
     
     /**
- * Gets or sets the execution date and time of the transaction.
- */
+     * Gets or sets the execution date and time of the transaction.
+     */
     @JsonProperty("ExecutedDate")
     private LocalDateTime executedDate;
 
     /**
- * Represents the unique identifier for a group within the TIB Finance API.
- */
+     * Represents the unique identifier for a group within the TIB Finance API.
+     */
     @JsonProperty("GroupId")
     private String groupId;
 
     /**
- * Specifies the category of a financial operation.
- */
+     * Specifies the category of a financial operation.
+     */
     @JsonProperty("OperationKind")
     private OperationKind operationKind;
 
     /**
- * Gets or sets the deposit amount.
- */
+     * Gets or sets the deposit amount.
+     */
     @JsonProperty("DepositAmount")
     private Double depositAmount;
 
     /**
- * Gets or sets the collection amount.
- */
+     * Gets or sets the collection amount.
+     */
     @JsonProperty("CollectionAmount")
     private Double collectionAmount;
 
     /**
- * Gets or sets the returned deposit amount.
- */
+     * Gets or sets the returned deposit amount.
+     */
     @JsonProperty("ReturnedDepositAmount")
     private Double returnedDepositAmount;
 
     /**
- * Gets or sets the returned collection amount.
- */
+     * Gets or sets the returned collection amount.
+     */
     @JsonProperty("ReturnedCollectionAmount")
     private Double returnedCollectionAmount;
 
     /**
- * Gets or sets the transaction count.
- */
+     * Gets or sets the transaction count.
+     */
     @JsonProperty("TransactionCount")
     private Integer transactionCount;
 
@@ -75,14 +75,13 @@ public class ConsolidationInternalReportEntity   {
     
     public ConsolidationInternalReportEntity(LocalDateTime executedDate, String groupId, OperationKind operationKind, Double depositAmount, Double collectionAmount, Double returnedDepositAmount, Double returnedCollectionAmount, Integer transactionCount) {
         this.executedDate = executedDate;
-this.groupId = groupId;
-this.operationKind = operationKind;
-this.depositAmount = depositAmount;
-this.collectionAmount = collectionAmount;
-this.returnedDepositAmount = returnedDepositAmount;
-this.returnedCollectionAmount = returnedCollectionAmount;
-this.transactionCount = transactionCount;
-
+        this.groupId = groupId;
+        this.operationKind = operationKind;
+        this.depositAmount = depositAmount;
+        this.collectionAmount = collectionAmount;
+        this.returnedDepositAmount = returnedDepositAmount;
+        this.returnedCollectionAmount = returnedCollectionAmount;
+        this.transactionCount = transactionCount;
     }
     
     
@@ -172,14 +171,14 @@ this.transactionCount = transactionCount;
     @Override
     public String toString() {
         return "ConsolidationInternalReportEntity{" +
-                 "executedDate='" + executedDate + '\'' +
- ", groupId='" + groupId + '\'' +
- ", operationKind='" + operationKind + '\'' +
- ", depositAmount='" + depositAmount + '\'' +
- ", collectionAmount='" + collectionAmount + '\'' +
- ", returnedDepositAmount='" + returnedDepositAmount + '\'' +
- ", returnedCollectionAmount='" + returnedCollectionAmount + '\'' +
- ", transactionCount='" + transactionCount + '\'' +
+                "executedDate='" + executedDate + '\'' +
+                ", groupId='" + groupId + '\'' +
+                ", operationKind='" + operationKind + '\'' +
+                ", depositAmount='" + depositAmount + '\'' +
+                ", collectionAmount='" + collectionAmount + '\'' +
+                ", returnedDepositAmount='" + returnedDepositAmount + '\'' +
+                ", returnedCollectionAmount='" + returnedCollectionAmount + '\'' +
+                ", transactionCount='" + transactionCount + '\'' +
 
                 '}';
     }

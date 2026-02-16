@@ -25,13 +25,11 @@ public class SendAdminAuthenticationCodeResponse extends CustomAPIResponse {
 
     public SendAdminAuthenticationCodeResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SendAdminAuthenticationCodeResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

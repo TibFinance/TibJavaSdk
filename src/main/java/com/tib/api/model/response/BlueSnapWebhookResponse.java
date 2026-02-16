@@ -25,13 +25,11 @@ public class BlueSnapWebhookResponse extends CustomAPIResponse {
 
     public BlueSnapWebhookResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public BlueSnapWebhookResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

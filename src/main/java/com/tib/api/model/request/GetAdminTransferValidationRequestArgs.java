@@ -20,8 +20,8 @@ public class GetAdminTransferValidationRequestArgs  extends BaseAdminOnlyCrypted
 
     
     /**
- * Gets or sets the identifier of the public token required to initiate a drop‑in session.
- */
+     * Gets or sets the identifier of the public token required to initiate a drop‑in session.
+     */
     @JsonProperty("PublicTokenId")
     private String publicTokenId;
 
@@ -33,14 +33,12 @@ public class GetAdminTransferValidationRequestArgs  extends BaseAdminOnlyCrypted
     
     public GetAdminTransferValidationRequestArgs(String publicTokenId) {
         this.publicTokenId = publicTokenId;
-
     }
     
     
     public GetAdminTransferValidationRequestArgs(String adminSessionToken, String publicTokenId) {
         super(adminSessionToken);
         this.publicTokenId = publicTokenId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetAdminTransferValidationRequestArgs  extends BaseAdminOnlyCrypted
     @Override
     public String toString() {
         return "GetAdminTransferValidationRequestArgs{" +
-                 "publicTokenId='" + publicTokenId + '\'' +
+                "publicTokenId='" + publicTokenId + '\'' +
 
                 '}';
     }

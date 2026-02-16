@@ -21,14 +21,14 @@ public class CheckOppositionArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Contains the necessary details for replacing a merchant's account information within the system.
- */
+     * Contains the necessary details for replacing a merchant's account information within the system.
+     */
     @JsonProperty("Account")
     private Account account;
 
@@ -40,16 +40,14 @@ public class CheckOppositionArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CheckOppositionArgs(String serviceId, Account account) {
         this.serviceId = serviceId;
-this.account = account;
-
+        this.account = account;
     }
     
     
     public CheckOppositionArgs(String sessionToken, String serviceId, Account account) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.account = account;
-
+        this.account = account;
     }
 
     
@@ -89,8 +87,8 @@ this.account = account;
     @Override
     public String toString() {
         return "CheckOppositionArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", account='" + account + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", account='" + account + '\'' +
 
                 '}';
     }

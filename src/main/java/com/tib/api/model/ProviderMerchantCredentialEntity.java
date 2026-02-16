@@ -19,26 +19,26 @@ public class ProviderMerchantCredentialEntity   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("UserName")
     private String userName;
 
     /**
- * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
- */
+     * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
+     */
     @JsonProperty("Password")
     private String password;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DataProtectionKey")
     private String dataProtectionKey;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -50,10 +50,9 @@ public class ProviderMerchantCredentialEntity   {
     
     public ProviderMerchantCredentialEntity(String userName, String password, String dataProtectionKey, String merchantId) {
         this.userName = userName;
-this.password = password;
-this.dataProtectionKey = dataProtectionKey;
-this.merchantId = merchantId;
-
+        this.password = password;
+        this.dataProtectionKey = dataProtectionKey;
+        this.merchantId = merchantId;
     }
     
     
@@ -111,10 +110,10 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "ProviderMerchantCredentialEntity{" +
-                 "userName='" + userName + '\'' +
- ", password='" + password + '\'' +
- ", dataProtectionKey='" + dataProtectionKey + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", dataProtectionKey='" + dataProtectionKey + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

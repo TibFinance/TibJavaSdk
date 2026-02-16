@@ -20,50 +20,50 @@ public class UpdateAcpTypesArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Source")
     private String source;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SourceId")
     private String sourceId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CollectMerchantCode")
     private Integer collectMerchantCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DepositClientCode")
     private Integer depositClientCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CollectClientCode")
     private Integer collectClientCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DepositMerchantCode")
     private Integer depositMerchantCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FeesmerchantCode")
     private Integer feesmerchantCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TibFeesCode")
     private Integer tibFeesCode;
 
@@ -75,28 +75,26 @@ public class UpdateAcpTypesArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public UpdateAcpTypesArgs(String source, String sourceId, Integer collectMerchantCode, Integer depositClientCode, Integer collectClientCode, Integer depositMerchantCode, Integer feesmerchantCode, Integer tibFeesCode) {
         this.source = source;
-this.sourceId = sourceId;
-this.collectMerchantCode = collectMerchantCode;
-this.depositClientCode = depositClientCode;
-this.collectClientCode = collectClientCode;
-this.depositMerchantCode = depositMerchantCode;
-this.feesmerchantCode = feesmerchantCode;
-this.tibFeesCode = tibFeesCode;
-
+        this.sourceId = sourceId;
+        this.collectMerchantCode = collectMerchantCode;
+        this.depositClientCode = depositClientCode;
+        this.collectClientCode = collectClientCode;
+        this.depositMerchantCode = depositMerchantCode;
+        this.feesmerchantCode = feesmerchantCode;
+        this.tibFeesCode = tibFeesCode;
     }
     
     
     public UpdateAcpTypesArgs(String adminSessionToken, String source, String sourceId, Integer collectMerchantCode, Integer depositClientCode, Integer collectClientCode, Integer depositMerchantCode, Integer feesmerchantCode, Integer tibFeesCode) {
         super(adminSessionToken);
         this.source = source;
-this.sourceId = sourceId;
-this.collectMerchantCode = collectMerchantCode;
-this.depositClientCode = depositClientCode;
-this.collectClientCode = collectClientCode;
-this.depositMerchantCode = depositMerchantCode;
-this.feesmerchantCode = feesmerchantCode;
-this.tibFeesCode = tibFeesCode;
-
+        this.sourceId = sourceId;
+        this.collectMerchantCode = collectMerchantCode;
+        this.depositClientCode = depositClientCode;
+        this.collectClientCode = collectClientCode;
+        this.depositMerchantCode = depositMerchantCode;
+        this.feesmerchantCode = feesmerchantCode;
+        this.tibFeesCode = tibFeesCode;
     }
 
     
@@ -184,14 +182,14 @@ this.tibFeesCode = tibFeesCode;
     @Override
     public String toString() {
         return "UpdateAcpTypesArgs{" +
-                 "source='" + source + '\'' +
- ", sourceId='" + sourceId + '\'' +
- ", collectMerchantCode='" + collectMerchantCode + '\'' +
- ", depositClientCode='" + depositClientCode + '\'' +
- ", collectClientCode='" + collectClientCode + '\'' +
- ", depositMerchantCode='" + depositMerchantCode + '\'' +
- ", feesmerchantCode='" + feesmerchantCode + '\'' +
- ", tibFeesCode='" + tibFeesCode + '\'' +
+                "source='" + source + '\'' +
+                ", sourceId='" + sourceId + '\'' +
+                ", collectMerchantCode='" + collectMerchantCode + '\'' +
+                ", depositClientCode='" + depositClientCode + '\'' +
+                ", collectClientCode='" + collectClientCode + '\'' +
+                ", depositMerchantCode='" + depositMerchantCode + '\'' +
+                ", feesmerchantCode='" + feesmerchantCode + '\'' +
+                ", tibFeesCode='" + tibFeesCode + '\'' +
 
                 '}';
     }

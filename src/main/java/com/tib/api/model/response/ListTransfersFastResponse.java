@@ -30,14 +30,12 @@ public class ListTransfersFastResponse<T> extends CustomAPIResponse {
     public ListTransfersFastResponse(Error[] errors, boolean hasError, String messages, List<TransferBaseInformationEntity> transfers) {
         super(errors, hasError, messages);
         this.transfers = transfers;
-
     }
 
     public ListTransfersFastResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transfers = (List<TransferBaseInformationEntity>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class ListTransfersFastResponse<T> extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ListTransfersFastResponse{" +
-                 "transfers='" + transfers + '\'' +
+                "transfers='" + transfers + '\'' +
 
                 '}';
     }

@@ -29,14 +29,12 @@ public class GetFeesOverloadMerchantResponse extends CustomAPIResponse {
     public GetFeesOverloadMerchantResponse(Error[] errors, boolean hasError, String messages, String feesOverLoadMerchantId) {
         super(errors, hasError, messages);
         this.feesOverLoadMerchantId = feesOverLoadMerchantId;
-
     }
 
     public GetFeesOverloadMerchantResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.feesOverLoadMerchantId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class GetFeesOverloadMerchantResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetFeesOverloadMerchantResponse{" +
-                 "feesOverLoadMerchantId='" + feesOverLoadMerchantId + '\'' +
+                "feesOverLoadMerchantId='" + feesOverLoadMerchantId + '\'' +
 
                 '}';
     }

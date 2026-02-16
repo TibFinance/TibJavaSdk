@@ -25,13 +25,11 @@ public class SendCreditCardPaymentResponse extends CustomAPIResponse {
 
     public SendCreditCardPaymentResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SendCreditCardPaymentResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

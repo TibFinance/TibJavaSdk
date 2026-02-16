@@ -20,14 +20,14 @@ public class GetCustomersByExternalIdArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
- * Retrieves or assigns the identifier used for external customer identification. This property is crucial for linking customer data with external systems.
- */
+     * Retrieves or assigns the identifier used for external customer identification. This property is crucial for linking customer data with external systems.
+     */
     @JsonProperty("ExternalCustomerId")
     private String externalCustomerId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -39,16 +39,14 @@ public class GetCustomersByExternalIdArgs  extends BaseAuthenticatedCryptedArgs 
     
     public GetCustomersByExternalIdArgs(String externalCustomerId, String merchantId) {
         this.externalCustomerId = externalCustomerId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
     
     
     public GetCustomersByExternalIdArgs(String sessionToken, String externalCustomerId, String merchantId) {
         super(sessionToken);
         this.externalCustomerId = externalCustomerId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     
@@ -88,8 +86,8 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "GetCustomersByExternalIdArgs{" +
-                 "externalCustomerId='" + externalCustomerId + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "externalCustomerId='" + externalCustomerId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

@@ -29,14 +29,12 @@ public class PublicTokenValidationResponse extends CustomAPIResponse {
     public PublicTokenValidationResponse(Error[] errors, boolean hasError, String messages, boolean isValid) {
         super(errors, hasError, messages);
         this.isValid = isValid;
-
     }
 
     public PublicTokenValidationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.isValid = Boolean.parseBoolean(apiResponse.getResponse().toString());
-
         }
     }
 
@@ -69,7 +67,7 @@ public class PublicTokenValidationResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "PublicTokenValidationResponse{" +
-                 "isValid='" + isValid + '\'' +
+                "isValid='" + isValid + '\'' +
 
                 '}';
     }

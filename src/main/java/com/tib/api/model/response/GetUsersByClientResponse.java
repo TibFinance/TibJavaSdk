@@ -30,14 +30,12 @@ public class GetUsersByClientResponse extends CustomAPIResponse {
     public GetUsersByClientResponse(Error[] errors, boolean hasError, String messages, List<ClientLogin> users) {
         super(errors, hasError, messages);
         this.users = users;
-
     }
 
     public GetUsersByClientResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.users = (List<ClientLogin>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetUsersByClientResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetUsersByClientResponse{" +
-                 "users='" + users + '\'' +
+                "users='" + users + '\'' +
 
                 '}';
     }

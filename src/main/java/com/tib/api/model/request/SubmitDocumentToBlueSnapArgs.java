@@ -20,38 +20,38 @@ public class SubmitDocumentToBlueSnapArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderRequestId")
     private String providerRequestId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocType")
     private String docType;
 
     /**
- * Gets or sets the title that identifies the object in a human‑readable way.
- */
+     * Gets or sets the title that identifies the object in a human‑readable way.
+     */
     @JsonProperty("Title")
     private String title;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FileType")
     private String fileType;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Content")
     private String content;
 
@@ -63,24 +63,22 @@ public class SubmitDocumentToBlueSnapArgs  extends BaseAuthenticatedCryptedArgs 
     
     public SubmitDocumentToBlueSnapArgs(String providerRequestId, String docType, String title, String fileType, String description, String content) {
         this.providerRequestId = providerRequestId;
-this.docType = docType;
-this.title = title;
-this.fileType = fileType;
-this.description = description;
-this.content = content;
-
+        this.docType = docType;
+        this.title = title;
+        this.fileType = fileType;
+        this.description = description;
+        this.content = content;
     }
     
     
     public SubmitDocumentToBlueSnapArgs(String sessionToken, String providerRequestId, String docType, String title, String fileType, String description, String content) {
         super(sessionToken);
         this.providerRequestId = providerRequestId;
-this.docType = docType;
-this.title = title;
-this.fileType = fileType;
-this.description = description;
-this.content = content;
-
+        this.docType = docType;
+        this.title = title;
+        this.fileType = fileType;
+        this.description = description;
+        this.content = content;
     }
 
     
@@ -152,12 +150,12 @@ this.content = content;
     @Override
     public String toString() {
         return "SubmitDocumentToBlueSnapArgs{" +
-                 "providerRequestId='" + providerRequestId + '\'' +
- ", docType='" + docType + '\'' +
- ", title='" + title + '\'' +
- ", fileType='" + fileType + '\'' +
- ", description='" + description + '\'' +
- ", content='" + content + '\'' +
+                "providerRequestId='" + providerRequestId + '\'' +
+                ", docType='" + docType + '\'' +
+                ", title='" + title + '\'' +
+                ", fileType='" + fileType + '\'' +
+                ", description='" + description + '\'' +
+                ", content='" + content + '\'' +
 
                 '}';
     }

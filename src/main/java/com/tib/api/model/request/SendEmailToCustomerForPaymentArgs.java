@@ -21,26 +21,26 @@ public class SendEmailToCustomerForPaymentArgs  extends BaseAuthenticatedCrypted
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Defines and manages the type of transfer operation within the system.
- */
+     * Defines and manages the type of transfer operation within the system.
+     */
     @JsonProperty("TransferType")
     private TransferType transferType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DropInPublicTokenId")
     private String dropInPublicTokenId;
 
     /**
- * Specifies the email address associated with the merchant.
- */
+     * Specifies the email address associated with the merchant.
+     */
     @JsonProperty("Email")
     private String email;
 
@@ -52,20 +52,18 @@ public class SendEmailToCustomerForPaymentArgs  extends BaseAuthenticatedCrypted
     
     public SendEmailToCustomerForPaymentArgs(String merchantId, TransferType transferType, String dropInPublicTokenId, String email) {
         this.merchantId = merchantId;
-this.transferType = transferType;
-this.dropInPublicTokenId = dropInPublicTokenId;
-this.email = email;
-
+        this.transferType = transferType;
+        this.dropInPublicTokenId = dropInPublicTokenId;
+        this.email = email;
     }
     
     
     public SendEmailToCustomerForPaymentArgs(String sessionToken, String merchantId, TransferType transferType, String dropInPublicTokenId, String email) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.transferType = transferType;
-this.dropInPublicTokenId = dropInPublicTokenId;
-this.email = email;
-
+        this.transferType = transferType;
+        this.dropInPublicTokenId = dropInPublicTokenId;
+        this.email = email;
     }
 
     
@@ -121,10 +119,10 @@ this.email = email;
     @Override
     public String toString() {
         return "SendEmailToCustomerForPaymentArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", transferType='" + transferType + '\'' +
- ", dropInPublicTokenId='" + dropInPublicTokenId + '\'' +
- ", email='" + email + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", transferType='" + transferType + '\'' +
+                ", dropInPublicTokenId='" + dropInPublicTokenId + '\'' +
+                ", email='" + email + '\'' +
 
                 '}';
     }

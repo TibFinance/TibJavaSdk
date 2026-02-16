@@ -20,8 +20,8 @@ public class UpdateContractEditionRequestArgs  extends BaseAdminOnlyCryptedArgs 
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ContractEditionRequestId")
     private Integer contractEditionRequestId;
 
@@ -33,14 +33,12 @@ public class UpdateContractEditionRequestArgs  extends BaseAdminOnlyCryptedArgs 
     
     public UpdateContractEditionRequestArgs(Integer contractEditionRequestId) {
         this.contractEditionRequestId = contractEditionRequestId;
-
     }
     
     
     public UpdateContractEditionRequestArgs(String adminSessionToken, Integer contractEditionRequestId) {
         super(adminSessionToken);
         this.contractEditionRequestId = contractEditionRequestId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class UpdateContractEditionRequestArgs  extends BaseAdminOnlyCryptedArgs 
     @Override
     public String toString() {
         return "UpdateContractEditionRequestArgs{" +
-                 "contractEditionRequestId='" + contractEditionRequestId + '\'' +
+                "contractEditionRequestId='" + contractEditionRequestId + '\'' +
 
                 '}';
     }

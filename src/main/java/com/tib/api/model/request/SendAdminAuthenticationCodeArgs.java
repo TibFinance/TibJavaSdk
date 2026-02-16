@@ -19,8 +19,8 @@ public class SendAdminAuthenticationCodeArgs  implements IBaseCryptedServiceArgs
 
     
     /**
- * Administrator code (login code)
- */
+     * Administrator code (login code)
+     */
     @JsonProperty("AdminCode")
     private String adminCode;
 
@@ -32,7 +32,6 @@ public class SendAdminAuthenticationCodeArgs  implements IBaseCryptedServiceArgs
     
     public SendAdminAuthenticationCodeArgs(String adminCode) {
         this.adminCode = adminCode;
-
     }
     
     
@@ -66,7 +65,7 @@ public class SendAdminAuthenticationCodeArgs  implements IBaseCryptedServiceArgs
     @Override
     public String toString() {
         return "SendAdminAuthenticationCodeArgs{" +
-                 "adminCode='" + adminCode + '\'' +
+                "adminCode='" + adminCode + '\'' +
 
                 '}';
     }

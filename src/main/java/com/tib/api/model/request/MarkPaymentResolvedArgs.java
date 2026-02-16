@@ -20,8 +20,8 @@ public class MarkPaymentResolvedArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * List of payment to mark resolved
- */
+     * List of payment to mark resolved
+     */
     @JsonProperty("ListOfPayment")
     private List<String> listOfPayment;
 
@@ -33,14 +33,12 @@ public class MarkPaymentResolvedArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public MarkPaymentResolvedArgs(List<String> listOfPayment) {
         this.listOfPayment = listOfPayment;
-
     }
     
     
     public MarkPaymentResolvedArgs(String sessionToken, List<String> listOfPayment) {
         super(sessionToken);
         this.listOfPayment = listOfPayment;
-
     }
 
     
@@ -72,7 +70,7 @@ public class MarkPaymentResolvedArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "MarkPaymentResolvedArgs{" +
-                 "listOfPayment='" + listOfPayment + '\'' +
+                "listOfPayment='" + listOfPayment + '\'' +
 
                 '}';
     }

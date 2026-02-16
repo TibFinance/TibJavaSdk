@@ -20,74 +20,74 @@ public class PayoutPayload   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PayoutId")
     private String payoutId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ExternalId")
     private String externalId;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private String currency;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PayoutDate")
     private String payoutDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransferCount")
     private Integer transferCount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("GrossAmount")
     private Double grossAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProcessingFeesAmount")
     private Double processingFeesAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ConvenientFeesAmount")
     private Double convenientFeesAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("NonProcessingFeesAmount")
     private Double nonProcessingFeesAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TotalPaidAmount")
     private Double totalPaidAmount;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private String createdDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Transferts")
     private List<TransferPayload> transferts;
 
@@ -99,18 +99,17 @@ public class PayoutPayload   {
     
     public PayoutPayload(String payoutId, String externalId, String currency, String payoutDate, Integer transferCount, Double grossAmount, Double processingFeesAmount, Double convenientFeesAmount, Double nonProcessingFeesAmount, Double totalPaidAmount, String createdDate, List<TransferPayload> transferts) {
         this.payoutId = payoutId;
-this.externalId = externalId;
-this.currency = currency;
-this.payoutDate = payoutDate;
-this.transferCount = transferCount;
-this.grossAmount = grossAmount;
-this.processingFeesAmount = processingFeesAmount;
-this.convenientFeesAmount = convenientFeesAmount;
-this.nonProcessingFeesAmount = nonProcessingFeesAmount;
-this.totalPaidAmount = totalPaidAmount;
-this.createdDate = createdDate;
-this.transferts = transferts;
-
+        this.externalId = externalId;
+        this.currency = currency;
+        this.payoutDate = payoutDate;
+        this.transferCount = transferCount;
+        this.grossAmount = grossAmount;
+        this.processingFeesAmount = processingFeesAmount;
+        this.convenientFeesAmount = convenientFeesAmount;
+        this.nonProcessingFeesAmount = nonProcessingFeesAmount;
+        this.totalPaidAmount = totalPaidAmount;
+        this.createdDate = createdDate;
+        this.transferts = transferts;
     }
     
     
@@ -232,18 +231,18 @@ this.transferts = transferts;
     @Override
     public String toString() {
         return "PayoutPayload{" +
-                 "payoutId='" + payoutId + '\'' +
- ", externalId='" + externalId + '\'' +
- ", currency='" + currency + '\'' +
- ", payoutDate='" + payoutDate + '\'' +
- ", transferCount='" + transferCount + '\'' +
- ", grossAmount='" + grossAmount + '\'' +
- ", processingFeesAmount='" + processingFeesAmount + '\'' +
- ", convenientFeesAmount='" + convenientFeesAmount + '\'' +
- ", nonProcessingFeesAmount='" + nonProcessingFeesAmount + '\'' +
- ", totalPaidAmount='" + totalPaidAmount + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", transferts='" + transferts + '\'' +
+                "payoutId='" + payoutId + '\'' +
+                ", externalId='" + externalId + '\'' +
+                ", currency='" + currency + '\'' +
+                ", payoutDate='" + payoutDate + '\'' +
+                ", transferCount='" + transferCount + '\'' +
+                ", grossAmount='" + grossAmount + '\'' +
+                ", processingFeesAmount='" + processingFeesAmount + '\'' +
+                ", convenientFeesAmount='" + convenientFeesAmount + '\'' +
+                ", nonProcessingFeesAmount='" + nonProcessingFeesAmount + '\'' +
+                ", totalPaidAmount='" + totalPaidAmount + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", transferts='" + transferts + '\'' +
 
                 '}';
     }

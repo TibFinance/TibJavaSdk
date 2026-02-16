@@ -22,44 +22,44 @@ public class GetFeesReportArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Gets or sets the start date for the report period.
- */
+     * Gets or sets the start date for the report period.
+     */
     @JsonProperty("DateFrom")
     private LocalDateTime dateFrom;
 
     /**
- * Gets or sets the end date for the report period.
- */
+     * Gets or sets the end date for the report period.
+     */
     @JsonProperty("DateTo")
     private LocalDateTime dateTo;
 
     /**
- * Identifies the type of payment method linked to a specific account.
- */
+     * Identifies the type of payment method linked to a specific account.
+     */
     @JsonProperty("PaymentMethodType")
     private PaymentMethodType paymentMethodType;
 
     /**
- * Gets or sets the fee type filter (optional).
- */
+     * Gets or sets the fee type filter (optional).
+     */
     @JsonProperty("FeeType")
     private OperationKind feeType;
 
     /**
- * Gets or sets whether to include individual fee records in the response.
- */
+     * Gets or sets whether to include individual fee records in the response.
+     */
     @JsonProperty("IncludeDetails")
     private boolean includeDetails;
 
@@ -71,26 +71,24 @@ public class GetFeesReportArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetFeesReportArgs(String merchantId, String serviceId, LocalDateTime dateFrom, LocalDateTime dateTo, PaymentMethodType paymentMethodType, OperationKind feeType, boolean includeDetails) {
         this.merchantId = merchantId;
-this.serviceId = serviceId;
-this.dateFrom = dateFrom;
-this.dateTo = dateTo;
-this.paymentMethodType = paymentMethodType;
-this.feeType = feeType;
-this.includeDetails = includeDetails;
-
+        this.serviceId = serviceId;
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
+        this.paymentMethodType = paymentMethodType;
+        this.feeType = feeType;
+        this.includeDetails = includeDetails;
     }
     
     
     public GetFeesReportArgs(String sessionToken, String merchantId, String serviceId, LocalDateTime dateFrom, LocalDateTime dateTo, PaymentMethodType paymentMethodType, OperationKind feeType, boolean includeDetails) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.serviceId = serviceId;
-this.dateFrom = dateFrom;
-this.dateTo = dateTo;
-this.paymentMethodType = paymentMethodType;
-this.feeType = feeType;
-this.includeDetails = includeDetails;
-
+        this.serviceId = serviceId;
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
+        this.paymentMethodType = paymentMethodType;
+        this.feeType = feeType;
+        this.includeDetails = includeDetails;
     }
 
     
@@ -170,13 +168,13 @@ this.includeDetails = includeDetails;
     @Override
     public String toString() {
         return "GetFeesReportArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", serviceId='" + serviceId + '\'' +
- ", dateFrom='" + dateFrom + '\'' +
- ", dateTo='" + dateTo + '\'' +
- ", paymentMethodType='" + paymentMethodType + '\'' +
- ", feeType='" + feeType + '\'' +
- ", includeDetails='" + includeDetails + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                ", dateFrom='" + dateFrom + '\'' +
+                ", dateTo='" + dateTo + '\'' +
+                ", paymentMethodType='" + paymentMethodType + '\'' +
+                ", feeType='" + feeType + '\'' +
+                ", includeDetails='" + includeDetails + '\'' +
 
                 '}';
     }

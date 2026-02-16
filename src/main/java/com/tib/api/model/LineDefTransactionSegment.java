@@ -22,86 +22,86 @@ public class LineDefTransactionSegment  extends BaseTransaction  {
 
     
     /**
- * Gets the start position.
- */
+     * Gets the start position.
+     */
     @JsonProperty("StartPosition")
     private Integer startPosition;
 
     /**
- * Specifies the operation category used throughout the API.
- */
+     * Specifies the operation category used throughout the API.
+     */
     @JsonProperty("OperationType")
     private AcpOperationType operationType;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Gets or sets the date funds available.
- */
+     * Gets or sets the date funds available.
+     */
     @JsonProperty("DateFundsAvailable")
     private LocalDateTime dateFundsAvailable;
 
     /**
- * Gets or sets the target institution number.
- */
+     * Gets or sets the target institution number.
+     */
     @JsonProperty("TargetInstitutionNumber")
     private String targetInstitutionNumber;
 
     /**
- * Gets or sets the target full account number.
- */
+     * Gets or sets the target full account number.
+     */
     @JsonProperty("TargetFullAccountNumber")
     private String targetFullAccountNumber;
 
     /**
- * Gets or sets the short name of the organization.
- */
+     * Gets or sets the short name of the organization.
+     */
     @JsonProperty("ShortOrganizationName")
     private String shortOrganizationName;
 
     /**
- * Gets or sets the name of the target.
- */
+     * Gets or sets the name of the target.
+     */
     @JsonProperty("TargetName")
     private String targetName;
 
     /**
- * Gets or sets the name of the organization.
- */
+     * Gets or sets the name of the organization.
+     */
     @JsonProperty("OrganizationName")
     private String organizationName;
 
     /**
- * Gets or sets the organization number.
- */
+     * Gets or sets the organization number.
+     */
     @JsonProperty("OrganizationNumber")
     private String organizationNumber;
 
     /**
- * Gets or sets the reference number.
- */
+     * Gets or sets the reference number.
+     */
     @JsonProperty("RefNumber")
     private String refNumber;
 
     /**
- * Gets or sets the return institution.
- */
+     * Gets or sets the return institution.
+     */
     @JsonProperty("ReturnInstitution")
     private String returnInstitution;
 
     /**
- * Gets or sets the return account.
- */
+     * Gets or sets the return account.
+     */
     @JsonProperty("ReturnAccount")
     private String returnAccount;
 
     /**
- * Gets or sets the free organization field.
- */
+     * Gets or sets the free organization field.
+     */
     @JsonProperty("FreeOrganizationField")
     private String freeOrganizationField;
 
@@ -113,40 +113,38 @@ public class LineDefTransactionSegment  extends BaseTransaction  {
     
     public LineDefTransactionSegment(Integer startPosition, AcpOperationType operationType, Double amount, LocalDateTime dateFundsAvailable, String targetInstitutionNumber, String targetFullAccountNumber, String shortOrganizationName, String targetName, String organizationName, String organizationNumber, String refNumber, String returnInstitution, String returnAccount, String freeOrganizationField) {
         this.startPosition = startPosition;
-this.operationType = operationType;
-this.amount = amount;
-this.dateFundsAvailable = dateFundsAvailable;
-this.targetInstitutionNumber = targetInstitutionNumber;
-this.targetFullAccountNumber = targetFullAccountNumber;
-this.shortOrganizationName = shortOrganizationName;
-this.targetName = targetName;
-this.organizationName = organizationName;
-this.organizationNumber = organizationNumber;
-this.refNumber = refNumber;
-this.returnInstitution = returnInstitution;
-this.returnAccount = returnAccount;
-this.freeOrganizationField = freeOrganizationField;
-
+        this.operationType = operationType;
+        this.amount = amount;
+        this.dateFundsAvailable = dateFundsAvailable;
+        this.targetInstitutionNumber = targetInstitutionNumber;
+        this.targetFullAccountNumber = targetFullAccountNumber;
+        this.shortOrganizationName = shortOrganizationName;
+        this.targetName = targetName;
+        this.organizationName = organizationName;
+        this.organizationNumber = organizationNumber;
+        this.refNumber = refNumber;
+        this.returnInstitution = returnInstitution;
+        this.returnAccount = returnAccount;
+        this.freeOrganizationField = freeOrganizationField;
     }
     
     
     public LineDefTransactionSegment(ContactInfo targetContactInfo, TransferFrequency transferFrequency, Integer startPosition, AcpOperationType operationType, Double amount, LocalDateTime dateFundsAvailable, String targetInstitutionNumber, String targetFullAccountNumber, String shortOrganizationName, String targetName, String organizationName, String organizationNumber, String refNumber, String returnInstitution, String returnAccount, String freeOrganizationField) {
         super(amount, dateFundsAvailable, targetInstitutionNumber, targetFullAccountNumber, targetName, refNumber, operationType, targetContactInfo, transferFrequency);
         this.startPosition = startPosition;
-this.operationType = operationType;
-this.amount = amount;
-this.dateFundsAvailable = dateFundsAvailable;
-this.targetInstitutionNumber = targetInstitutionNumber;
-this.targetFullAccountNumber = targetFullAccountNumber;
-this.shortOrganizationName = shortOrganizationName;
-this.targetName = targetName;
-this.organizationName = organizationName;
-this.organizationNumber = organizationNumber;
-this.refNumber = refNumber;
-this.returnInstitution = returnInstitution;
-this.returnAccount = returnAccount;
-this.freeOrganizationField = freeOrganizationField;
-
+        this.operationType = operationType;
+        this.amount = amount;
+        this.dateFundsAvailable = dateFundsAvailable;
+        this.targetInstitutionNumber = targetInstitutionNumber;
+        this.targetFullAccountNumber = targetFullAccountNumber;
+        this.shortOrganizationName = shortOrganizationName;
+        this.targetName = targetName;
+        this.organizationName = organizationName;
+        this.organizationNumber = organizationNumber;
+        this.refNumber = refNumber;
+        this.returnInstitution = returnInstitution;
+        this.returnAccount = returnAccount;
+        this.freeOrganizationField = freeOrganizationField;
     }
 
     
@@ -282,20 +280,20 @@ this.freeOrganizationField = freeOrganizationField;
     @Override
     public String toString() {
         return "LineDefTransactionSegment{" +
-                 "startPosition='" + startPosition + '\'' +
- ", operationType='" + operationType + '\'' +
- ", amount='" + amount + '\'' +
- ", dateFundsAvailable='" + dateFundsAvailable + '\'' +
- ", targetInstitutionNumber='" + targetInstitutionNumber + '\'' +
- ", targetFullAccountNumber='" + targetFullAccountNumber + '\'' +
- ", shortOrganizationName='" + shortOrganizationName + '\'' +
- ", targetName='" + targetName + '\'' +
- ", organizationName='" + organizationName + '\'' +
- ", organizationNumber='" + organizationNumber + '\'' +
- ", refNumber='" + refNumber + '\'' +
- ", returnInstitution='" + returnInstitution + '\'' +
- ", returnAccount='" + returnAccount + '\'' +
- ", freeOrganizationField='" + freeOrganizationField + '\'' +
+                "startPosition='" + startPosition + '\'' +
+                ", operationType='" + operationType + '\'' +
+                ", amount='" + amount + '\'' +
+                ", dateFundsAvailable='" + dateFundsAvailable + '\'' +
+                ", targetInstitutionNumber='" + targetInstitutionNumber + '\'' +
+                ", targetFullAccountNumber='" + targetFullAccountNumber + '\'' +
+                ", shortOrganizationName='" + shortOrganizationName + '\'' +
+                ", targetName='" + targetName + '\'' +
+                ", organizationName='" + organizationName + '\'' +
+                ", organizationNumber='" + organizationNumber + '\'' +
+                ", refNumber='" + refNumber + '\'' +
+                ", returnInstitution='" + returnInstitution + '\'' +
+                ", returnAccount='" + returnAccount + '\'' +
+                ", freeOrganizationField='" + freeOrganizationField + '\'' +
 
                 '}';
     }

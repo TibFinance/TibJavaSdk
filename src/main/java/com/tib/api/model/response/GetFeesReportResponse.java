@@ -34,17 +34,15 @@ public class GetFeesReportResponse extends CustomAPIResponse {
     public GetFeesReportResponse(Error[] errors, boolean hasError, String messages, List<FeeReportLineItem> feeItems, FeeSummary summary) {
         super(errors, hasError, messages);
         this.feeItems = feeItems;
-this.summary = summary;
-
+        this.summary = summary;
     }
 
     public GetFeesReportResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.feeItems = (List<FeeReportLineItem>) apiResponse.getResponse();
-this.summary = objectMapper.readValue(json, FeeSummary.class);
-
+            this.feeItems = (List<FeeReportLineItem>) apiResponse.getResponse();
+            this.summary = objectMapper.readValue(json, FeeSummary.class);
         }
     }
 
@@ -85,8 +83,8 @@ this.summary = objectMapper.readValue(json, FeeSummary.class);
     @Override
     public String toString() {
         return "GetFeesReportResponse{" +
-                 "feeItems='" + feeItems + '\'' +
- ", summary='" + summary + '\'' +
+                "feeItems='" + feeItems + '\'' +
+                ", summary='" + summary + '\'' +
 
                 '}';
     }

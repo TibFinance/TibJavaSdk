@@ -29,14 +29,12 @@ public class ProcessDropInResponse extends CustomAPIResponse {
     public ProcessDropInResponse(Error[] errors, boolean hasError, String messages, String paymentId) {
         super(errors, hasError, messages);
         this.paymentId = paymentId;
-
     }
 
     public ProcessDropInResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.paymentId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class ProcessDropInResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ProcessDropInResponse{" +
-                 "paymentId='" + paymentId + '\'' +
+                "paymentId='" + paymentId + '\'' +
 
                 '}';
     }

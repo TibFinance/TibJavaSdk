@@ -20,8 +20,8 @@ public class GetSubClientArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Retrieves or assigns the unique identifier for a sub-client.
- */
+     * Retrieves or assigns the unique identifier for a sub-client.
+     */
     @JsonProperty("SubClientId")
     private String subClientId;
 
@@ -33,14 +33,12 @@ public class GetSubClientArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetSubClientArgs(String subClientId) {
         this.subClientId = subClientId;
-
     }
     
     
     public GetSubClientArgs(String sessionToken, String subClientId) {
         super(sessionToken);
         this.subClientId = subClientId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetSubClientArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "GetSubClientArgs{" +
-                 "subClientId='" + subClientId + '\'' +
+                "subClientId='" + subClientId + '\'' +
 
                 '}';
     }

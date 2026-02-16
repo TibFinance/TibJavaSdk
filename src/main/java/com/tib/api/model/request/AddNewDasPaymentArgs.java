@@ -23,32 +23,32 @@ public class AddNewDasPaymentArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * The provider Id on which perform the payment.
- */
+     * The provider Id on which perform the payment.
+     */
     @JsonProperty("DasProviderId")
     private String dasProviderId;
 
     /**
- * Dertermine which payment object passed will be processed
- */
+     * Dertermine which payment object passed will be processed
+     */
     @JsonProperty("DasPaymentProviderType")
     private DasProviderType dasPaymentProviderType;
 
     /**
- * Payment for canada provider
- */
+     * Payment for canada provider
+     */
     @JsonProperty("DasPaymentCanada")
     private DasPaymentCanadaEntity dasPaymentCanada;
 
     /**
- * Payment for Quebec provider
- */
+     * Payment for Quebec provider
+     */
     @JsonProperty("DasPaymentQuebec")
     private DasPaymentQuebecEntity dasPaymentQuebec;
 
@@ -60,22 +60,20 @@ public class AddNewDasPaymentArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public AddNewDasPaymentArgs(String merchantId, String dasProviderId, DasProviderType dasPaymentProviderType, DasPaymentCanadaEntity dasPaymentCanada, DasPaymentQuebecEntity dasPaymentQuebec) {
         this.merchantId = merchantId;
-this.dasProviderId = dasProviderId;
-this.dasPaymentProviderType = dasPaymentProviderType;
-this.dasPaymentCanada = dasPaymentCanada;
-this.dasPaymentQuebec = dasPaymentQuebec;
-
+        this.dasProviderId = dasProviderId;
+        this.dasPaymentProviderType = dasPaymentProviderType;
+        this.dasPaymentCanada = dasPaymentCanada;
+        this.dasPaymentQuebec = dasPaymentQuebec;
     }
     
     
     public AddNewDasPaymentArgs(String sessionToken, String merchantId, String dasProviderId, DasProviderType dasPaymentProviderType, DasPaymentCanadaEntity dasPaymentCanada, DasPaymentQuebecEntity dasPaymentQuebec) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.dasProviderId = dasProviderId;
-this.dasPaymentProviderType = dasPaymentProviderType;
-this.dasPaymentCanada = dasPaymentCanada;
-this.dasPaymentQuebec = dasPaymentQuebec;
-
+        this.dasProviderId = dasProviderId;
+        this.dasPaymentProviderType = dasPaymentProviderType;
+        this.dasPaymentCanada = dasPaymentCanada;
+        this.dasPaymentQuebec = dasPaymentQuebec;
     }
 
     
@@ -139,11 +137,11 @@ this.dasPaymentQuebec = dasPaymentQuebec;
     @Override
     public String toString() {
         return "AddNewDasPaymentArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", dasProviderId='" + dasProviderId + '\'' +
- ", dasPaymentProviderType='" + dasPaymentProviderType + '\'' +
- ", dasPaymentCanada='" + dasPaymentCanada + '\'' +
- ", dasPaymentQuebec='" + dasPaymentQuebec + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", dasProviderId='" + dasProviderId + '\'' +
+                ", dasPaymentProviderType='" + dasPaymentProviderType + '\'' +
+                ", dasPaymentCanada='" + dasPaymentCanada + '\'' +
+                ", dasPaymentQuebec='" + dasPaymentQuebec + '\'' +
 
                 '}';
     }

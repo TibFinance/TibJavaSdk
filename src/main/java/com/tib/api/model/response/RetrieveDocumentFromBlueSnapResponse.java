@@ -25,13 +25,11 @@ public class RetrieveDocumentFromBlueSnapResponse extends CustomAPIResponse {
 
     public RetrieveDocumentFromBlueSnapResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public RetrieveDocumentFromBlueSnapResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

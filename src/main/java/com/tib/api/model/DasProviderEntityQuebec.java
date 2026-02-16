@@ -22,38 +22,38 @@ public class DasProviderEntityQuebec  extends DasProviderBase  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DasProviderType")
     private DasProviderType dasProviderType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IdentificationNumber")
     private String identificationNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FileType")
     private DasProviderQuebecFileType fileType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FileNumber")
     private String fileNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DeclarationFrequency")
     private DasProviderQuebecDeclarationFrequency declarationFrequency;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
@@ -65,12 +65,11 @@ public class DasProviderEntityQuebec  extends DasProviderBase  {
     
     public DasProviderEntityQuebec(DasProviderType dasProviderType, String identificationNumber, DasProviderQuebecFileType fileType, String fileNumber, DasProviderQuebecDeclarationFrequency declarationFrequency, String description) {
         this.dasProviderType = dasProviderType;
-this.identificationNumber = identificationNumber;
-this.fileType = fileType;
-this.fileNumber = fileNumber;
-this.declarationFrequency = declarationFrequency;
-this.description = description;
-
+        this.identificationNumber = identificationNumber;
+        this.fileType = fileType;
+        this.fileNumber = fileNumber;
+        this.declarationFrequency = declarationFrequency;
+        this.description = description;
     }
     
     
@@ -144,12 +143,12 @@ this.description = description;
     @Override
     public String toString() {
         return "DasProviderEntityQuebec{" +
-                 "dasProviderType='" + dasProviderType + '\'' +
- ", identificationNumber='" + identificationNumber + '\'' +
- ", fileType='" + fileType + '\'' +
- ", fileNumber='" + fileNumber + '\'' +
- ", declarationFrequency='" + declarationFrequency + '\'' +
- ", description='" + description + '\'' +
+                "dasProviderType='" + dasProviderType + '\'' +
+                ", identificationNumber='" + identificationNumber + '\'' +
+                ", fileType='" + fileType + '\'' +
+                ", fileNumber='" + fileNumber + '\'' +
+                ", declarationFrequency='" + declarationFrequency + '\'' +
+                ", description='" + description + '\'' +
 
                 '}';
     }

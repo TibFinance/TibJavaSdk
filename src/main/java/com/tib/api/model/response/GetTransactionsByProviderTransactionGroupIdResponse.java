@@ -30,14 +30,12 @@ public class GetTransactionsByProviderTransactionGroupIdResponse<T> extends Cust
     public GetTransactionsByProviderTransactionGroupIdResponse(Error[] errors, boolean hasError, String messages, List<TransactionCommonWithMeta> transactions) {
         super(errors, hasError, messages);
         this.transactions = transactions;
-
     }
 
     public GetTransactionsByProviderTransactionGroupIdResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transactions = (List<TransactionCommonWithMeta>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetTransactionsByProviderTransactionGroupIdResponse<T> extends Cust
     @Override
     public String toString() {
         return "GetTransactionsByProviderTransactionGroupIdResponse{" +
-                 "transactions='" + transactions + '\'' +
+                "transactions='" + transactions + '\'' +
 
                 '}';
     }

@@ -19,20 +19,20 @@ public class FeatureToggleExpression   {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ServiceIds")
     private List<String> serviceIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantIds")
     private List<String> merchantIds;
 
@@ -44,9 +44,8 @@ public class FeatureToggleExpression   {
     
     public FeatureToggleExpression(String clientId, List<String> serviceIds, List<String> merchantIds) {
         this.clientId = clientId;
-this.serviceIds = serviceIds;
-this.merchantIds = merchantIds;
-
+        this.serviceIds = serviceIds;
+        this.merchantIds = merchantIds;
     }
     
     
@@ -96,9 +95,9 @@ this.merchantIds = merchantIds;
     @Override
     public String toString() {
         return "FeatureToggleExpression{" +
-                 "clientId='" + clientId + '\'' +
- ", serviceIds='" + serviceIds + '\'' +
- ", merchantIds='" + merchantIds + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", serviceIds='" + serviceIds + '\'' +
+                ", merchantIds='" + merchantIds + '\'' +
 
                 '}';
     }

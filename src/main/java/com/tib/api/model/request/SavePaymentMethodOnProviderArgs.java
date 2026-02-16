@@ -21,44 +21,44 @@ public class SavePaymentMethodOnProviderArgs  implements IBaseCryptedServiceArgs
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("HostedPaymentToken")
     private String hostedPaymentToken;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderCredentials")
     private List<ProviderAccount> providerCredentials;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CustomerFirstName")
     private String customerFirstName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CustomerLastName")
     private String customerLastName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ZipCode")
     private String zipCode;
 
@@ -70,13 +70,12 @@ public class SavePaymentMethodOnProviderArgs  implements IBaseCryptedServiceArgs
     
     public SavePaymentMethodOnProviderArgs(String hostedPaymentToken, List<ProviderAccount> providerCredentials, Currency currency, String merchantId, String customerFirstName, String customerLastName, String zipCode) {
         this.hostedPaymentToken = hostedPaymentToken;
-this.providerCredentials = providerCredentials;
-this.currency = currency;
-this.merchantId = merchantId;
-this.customerFirstName = customerFirstName;
-this.customerLastName = customerLastName;
-this.zipCode = zipCode;
-
+        this.providerCredentials = providerCredentials;
+        this.currency = currency;
+        this.merchantId = merchantId;
+        this.customerFirstName = customerFirstName;
+        this.customerLastName = customerLastName;
+        this.zipCode = zipCode;
     }
     
     
@@ -158,13 +157,13 @@ this.zipCode = zipCode;
     @Override
     public String toString() {
         return "SavePaymentMethodOnProviderArgs{" +
-                 "hostedPaymentToken='" + hostedPaymentToken + '\'' +
- ", providerCredentials='" + providerCredentials + '\'' +
- ", currency='" + currency + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", customerFirstName='" + customerFirstName + '\'' +
- ", customerLastName='" + customerLastName + '\'' +
- ", zipCode='" + zipCode + '\'' +
+                "hostedPaymentToken='" + hostedPaymentToken + '\'' +
+                ", providerCredentials='" + providerCredentials + '\'' +
+                ", currency='" + currency + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", customerFirstName='" + customerFirstName + '\'' +
+                ", customerLastName='" + customerLastName + '\'' +
+                ", zipCode='" + zipCode + '\'' +
 
                 '}';
     }

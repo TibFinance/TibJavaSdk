@@ -34,16 +34,14 @@ public class ListDasProvidersResponse extends CustomAPIResponse {
     public ListDasProvidersResponse(Error[] errors, boolean hasError, String messages, List<DasProviderCanada> canadaDasProvider, List<DasProviderQuebec> quebecDasProvider) {
         super(errors, hasError, messages);
         this.canadaDasProvider = canadaDasProvider;
-this.quebecDasProvider = quebecDasProvider;
-
+        this.quebecDasProvider = quebecDasProvider;
     }
 
     public ListDasProvidersResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.canadaDasProvider = (List<DasProviderCanada>) apiResponse.getResponse();
-this.quebecDasProvider = (List<DasProviderQuebec>) apiResponse.getResponse();
-
+            this.quebecDasProvider = (List<DasProviderQuebec>) apiResponse.getResponse();
         }
     }
 
@@ -84,8 +82,8 @@ this.quebecDasProvider = (List<DasProviderQuebec>) apiResponse.getResponse();
     @Override
     public String toString() {
         return "ListDasProvidersResponse{" +
-                 "canadaDasProvider='" + canadaDasProvider + '\'' +
- ", quebecDasProvider='" + quebecDasProvider + '\'' +
+                "canadaDasProvider='" + canadaDasProvider + '\'' +
+                ", quebecDasProvider='" + quebecDasProvider + '\'' +
 
                 '}';
     }

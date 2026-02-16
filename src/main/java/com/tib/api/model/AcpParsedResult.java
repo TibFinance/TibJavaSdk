@@ -23,20 +23,20 @@ public class AcpParsedResult   {
 
     
     /**
- * Gets or sets the first line.
- */
+     * Gets or sets the first line.
+     */
     @JsonProperty("FirstLine")
     private LineBaseWithHeader firstLine;
 
     /**
- * Gets or sets all transactions.
- */
+     * Gets or sets all transactions.
+     */
     @JsonProperty("AllTransactions")
     private Map<AcpTransactionType, List<BaseTransaction>> allTransactions;
 
     /**
- * Gets or sets the last line.
- */
+     * Gets or sets the last line.
+     */
     @JsonProperty("LastLine")
     private BaseLastLine lastLine;
 
@@ -48,9 +48,8 @@ public class AcpParsedResult   {
     
     public AcpParsedResult(LineBaseWithHeader firstLine, Map<AcpTransactionType, List<BaseTransaction>> allTransactions, BaseLastLine lastLine) {
         this.firstLine = firstLine;
-this.allTransactions = allTransactions;
-this.lastLine = lastLine;
-
+        this.allTransactions = allTransactions;
+        this.lastLine = lastLine;
     }
     
     
@@ -100,9 +99,9 @@ this.lastLine = lastLine;
     @Override
     public String toString() {
         return "AcpParsedResult{" +
-                 "firstLine='" + firstLine + '\'' +
- ", allTransactions='" + allTransactions + '\'' +
- ", lastLine='" + lastLine + '\'' +
+                "firstLine='" + firstLine + '\'' +
+                ", allTransactions='" + allTransactions + '\'' +
+                ", lastLine='" + lastLine + '\'' +
 
                 '}';
     }

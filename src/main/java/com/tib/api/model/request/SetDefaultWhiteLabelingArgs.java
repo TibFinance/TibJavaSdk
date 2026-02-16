@@ -21,8 +21,8 @@ public class SetDefaultWhiteLabelingArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * WhiteLabeling Data.
- */
+     * WhiteLabeling Data.
+     */
     @JsonProperty("WhiteLabelingData")
     private List<WhiteLabelingData> whiteLabelingData;
 
@@ -34,14 +34,12 @@ public class SetDefaultWhiteLabelingArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public SetDefaultWhiteLabelingArgs(List<WhiteLabelingData> whiteLabelingData) {
         this.whiteLabelingData = whiteLabelingData;
-
     }
     
     
     public SetDefaultWhiteLabelingArgs(String adminSessionToken, List<WhiteLabelingData> whiteLabelingData) {
         super(adminSessionToken);
         this.whiteLabelingData = whiteLabelingData;
-
     }
 
     
@@ -73,7 +71,7 @@ public class SetDefaultWhiteLabelingArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "SetDefaultWhiteLabelingArgs{" +
-                 "whiteLabelingData='" + whiteLabelingData + '\'' +
+                "whiteLabelingData='" + whiteLabelingData + '\'' +
 
                 '}';
     }

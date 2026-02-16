@@ -20,56 +20,56 @@ public class LoggedUserInformation  extends BaseLoggedSession  {
 
     
     /**
- * Gets or sets the internal reference identifier.
- */
+     * Gets or sets the internal reference identifier.
+     */
     @JsonProperty("InternalReferenceId")
     private String internalReferenceId;
 
     /**
- * Gets or sets the login identifier.
- */
+     * Gets or sets the login identifier.
+     */
     @JsonProperty("LoginId")
     private String loginId;
 
     /**
- * Gets or sets the user client identifier.
- */
+     * Gets or sets the user client identifier.
+     */
     @JsonProperty("UserClientId")
     private String userClientId;
 
     /**
- * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
- */
+     * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
+     */
     @JsonProperty("Username")
     private String username;
 
     /**
- * Gets or sets the first name of the user.
- */
+     * Gets or sets the first name of the user.
+     */
     @JsonProperty("UserFirstName")
     private String userFirstName;
 
     /**
- * Gets or sets the last name of the user.
- */
+     * Gets or sets the last name of the user.
+     */
     @JsonProperty("UserLastName")
     private String userLastName;
 
     /**
- * Gets or sets a value indicating whether this instance is manager account.
- */
+     * Gets or sets a value indicating whether this instance is manager account.
+     */
     @JsonProperty("IsManagerAccount")
     private boolean isManagerAccount;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * Use for Pay Collect Access
- */
+     * Use for Pay Collect Access
+     */
     @JsonProperty("IsReadOnly")
     private boolean isReadOnly;
 
@@ -81,30 +81,28 @@ public class LoggedUserInformation  extends BaseLoggedSession  {
     
     public LoggedUserInformation(String internalReferenceId, String loginId, String userClientId, String username, String userFirstName, String userLastName, boolean isManagerAccount, String description, boolean isReadOnly) {
         this.internalReferenceId = internalReferenceId;
-this.loginId = loginId;
-this.userClientId = userClientId;
-this.username = username;
-this.userFirstName = userFirstName;
-this.userLastName = userLastName;
-this.isManagerAccount = isManagerAccount;
-this.description = description;
-this.isReadOnly = isReadOnly;
-
+        this.loginId = loginId;
+        this.userClientId = userClientId;
+        this.username = username;
+        this.userFirstName = userFirstName;
+        this.userLastName = userLastName;
+        this.isManagerAccount = isManagerAccount;
+        this.description = description;
+        this.isReadOnly = isReadOnly;
     }
     
     
     public LoggedUserInformation(LocalDateTime lastActivityDate, LocalDateTime creationDate, String loginsUserRelationsId, LoginType permissionType, String internalReferenceId, String loginId, String userClientId, String username, String userFirstName, String userLastName, boolean isManagerAccount, String description, boolean isReadOnly) {
         super(lastActivityDate, creationDate, loginsUserRelationsId, permissionType);
         this.internalReferenceId = internalReferenceId;
-this.loginId = loginId;
-this.userClientId = userClientId;
-this.username = username;
-this.userFirstName = userFirstName;
-this.userLastName = userLastName;
-this.isManagerAccount = isManagerAccount;
-this.description = description;
-this.isReadOnly = isReadOnly;
-
+        this.loginId = loginId;
+        this.userClientId = userClientId;
+        this.username = username;
+        this.userFirstName = userFirstName;
+        this.userLastName = userLastName;
+        this.isManagerAccount = isManagerAccount;
+        this.description = description;
+        this.isReadOnly = isReadOnly;
     }
 
     
@@ -200,15 +198,15 @@ this.isReadOnly = isReadOnly;
     @Override
     public String toString() {
         return "LoggedUserInformation{" +
-                 "internalReferenceId='" + internalReferenceId + '\'' +
- ", loginId='" + loginId + '\'' +
- ", userClientId='" + userClientId + '\'' +
- ", username='" + username + '\'' +
- ", userFirstName='" + userFirstName + '\'' +
- ", userLastName='" + userLastName + '\'' +
- ", isManagerAccount='" + isManagerAccount + '\'' +
- ", description='" + description + '\'' +
- ", isReadOnly='" + isReadOnly + '\'' +
+                "internalReferenceId='" + internalReferenceId + '\'' +
+                ", loginId='" + loginId + '\'' +
+                ", userClientId='" + userClientId + '\'' +
+                ", username='" + username + '\'' +
+                ", userFirstName='" + userFirstName + '\'' +
+                ", userLastName='" + userLastName + '\'' +
+                ", isManagerAccount='" + isManagerAccount + '\'' +
+                ", description='" + description + '\'' +
+                ", isReadOnly='" + isReadOnly + '\'' +
 
                 '}';
     }

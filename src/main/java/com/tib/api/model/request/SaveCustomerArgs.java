@@ -21,14 +21,14 @@ public class SaveCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Provides access to detailed customer information necessary for transaction processing and account management.
- */
+     * Provides access to detailed customer information necessary for transaction processing and account management.
+     */
     @JsonProperty("Customer")
     private Customer customer;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -40,16 +40,14 @@ public class SaveCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public SaveCustomerArgs(Customer customer, String merchantId) {
         this.customer = customer;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
     
     
     public SaveCustomerArgs(String sessionToken, Customer customer, String merchantId) {
         super(sessionToken);
         this.customer = customer;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     
@@ -89,8 +87,8 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "SaveCustomerArgs{" +
-                 "customer='" + customer + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "customer='" + customer + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

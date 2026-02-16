@@ -29,14 +29,12 @@ public class CreateAdminSessionResponse extends CustomAPIResponse {
     public CreateAdminSessionResponse(Error[] errors, boolean hasError, String messages, String sessionId) {
         super(errors, hasError, messages);
         this.sessionId = sessionId;
-
     }
 
     public CreateAdminSessionResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.sessionId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class CreateAdminSessionResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateAdminSessionResponse{" +
-                 "sessionId='" + sessionId + '\'' +
+                "sessionId='" + sessionId + '\'' +
 
                 '}';
     }

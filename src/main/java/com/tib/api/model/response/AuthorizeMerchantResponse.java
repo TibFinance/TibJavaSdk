@@ -25,13 +25,11 @@ public class AuthorizeMerchantResponse extends CustomAPIResponse {
 
     public AuthorizeMerchantResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public AuthorizeMerchantResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

@@ -30,15 +30,13 @@ public class SavePaymentMethodOnProviderResponse extends CustomAPIResponse {
     public SavePaymentMethodOnProviderResponse(Error[] errors, boolean hasError, String messages, SavePaymentMethodResultEntity savePaymentMethodResultEntity) {
         super(errors, hasError, messages);
         this.savePaymentMethodResultEntity = savePaymentMethodResultEntity;
-
     }
 
     public SavePaymentMethodOnProviderResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.savePaymentMethodResultEntity = objectMapper.readValue(json, SavePaymentMethodResultEntity.class);
-
+            this.savePaymentMethodResultEntity = objectMapper.readValue(json, SavePaymentMethodResultEntity.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.savePaymentMethodResultEntity = objectMapper.readValue(json, SavePaymentMet
     @Override
     public String toString() {
         return "SavePaymentMethodOnProviderResponse{" +
-                 "savePaymentMethodResultEntity='" + savePaymentMethodResultEntity + '\'' +
+                "savePaymentMethodResultEntity='" + savePaymentMethodResultEntity + '\'' +
 
                 '}';
     }

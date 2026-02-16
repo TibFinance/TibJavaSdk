@@ -21,14 +21,14 @@ public class AddProviderTransactionsArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Gets or sets the provider.
- */
+     * Gets or sets the provider.
+     */
     @JsonProperty("Provider")
     private Provider provider;
 
     /**
- * Gets or sets the content of the file.
- */
+     * Gets or sets the content of the file.
+     */
     @JsonProperty("FileContent")
     private String fileContent;
 
@@ -40,16 +40,14 @@ public class AddProviderTransactionsArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public AddProviderTransactionsArgs(Provider provider, String fileContent) {
         this.provider = provider;
-this.fileContent = fileContent;
-
+        this.fileContent = fileContent;
     }
     
     
     public AddProviderTransactionsArgs(String adminSessionToken, Provider provider, String fileContent) {
         super(adminSessionToken);
         this.provider = provider;
-this.fileContent = fileContent;
-
+        this.fileContent = fileContent;
     }
 
     
@@ -89,8 +87,8 @@ this.fileContent = fileContent;
     @Override
     public String toString() {
         return "AddProviderTransactionsArgs{" +
-                 "provider='" + provider + '\'' +
- ", fileContent='" + fileContent + '\'' +
+                "provider='" + provider + '\'' +
+                ", fileContent='" + fileContent + '\'' +
 
                 '}';
     }

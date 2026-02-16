@@ -22,20 +22,20 @@ public class GetBoardingMerchantCredentialArgs  implements IBaseCryptedServiceAr
 
     
     /**
- * Gets or sets the BoardingEntity.
- */
+     * Gets or sets the BoardingEntity.
+     */
     @JsonProperty("GetBoardingMerchantCredentialEntity")
     private GetBoardingMerchantCredentialEntity getBoardingMerchantCredentialEntity;
 
     /**
- * Gets or sets the mailing information.
- */
+     * Gets or sets the mailing information.
+     */
     @JsonProperty("MailingInfo")
     private TransactionMailingInfo mailingInfo;
 
     /**
- * Gets or sets the provider credentials.
- */
+     * Gets or sets the provider credentials.
+     */
     @JsonProperty("ProviderCredentials")
     private List<ProviderAccount> providerCredentials;
 
@@ -47,9 +47,8 @@ public class GetBoardingMerchantCredentialArgs  implements IBaseCryptedServiceAr
     
     public GetBoardingMerchantCredentialArgs(GetBoardingMerchantCredentialEntity getBoardingMerchantCredentialEntity, TransactionMailingInfo mailingInfo, List<ProviderAccount> providerCredentials) {
         this.getBoardingMerchantCredentialEntity = getBoardingMerchantCredentialEntity;
-this.mailingInfo = mailingInfo;
-this.providerCredentials = providerCredentials;
-
+        this.mailingInfo = mailingInfo;
+        this.providerCredentials = providerCredentials;
     }
     
     
@@ -99,9 +98,9 @@ this.providerCredentials = providerCredentials;
     @Override
     public String toString() {
         return "GetBoardingMerchantCredentialArgs{" +
-                 "getBoardingMerchantCredentialEntity='" + getBoardingMerchantCredentialEntity + '\'' +
- ", mailingInfo='" + mailingInfo + '\'' +
- ", providerCredentials='" + providerCredentials + '\'' +
+                "getBoardingMerchantCredentialEntity='" + getBoardingMerchantCredentialEntity + '\'' +
+                ", mailingInfo='" + mailingInfo + '\'' +
+                ", providerCredentials='" + providerCredentials + '\'' +
 
                 '}';
     }

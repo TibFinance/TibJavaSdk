@@ -19,14 +19,14 @@ public class ValidateCompanyInfoArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientName")
     private String clientName;
 
@@ -38,8 +38,7 @@ public class ValidateCompanyInfoArgs  implements IBaseCryptedServiceArgs  {
     
     public ValidateCompanyInfoArgs(String clientId, String clientName) {
         this.clientId = clientId;
-this.clientName = clientName;
-
+        this.clientName = clientName;
     }
     
     
@@ -81,8 +80,8 @@ this.clientName = clientName;
     @Override
     public String toString() {
         return "ValidateCompanyInfoArgs{" +
-                 "clientId='" + clientId + '\'' +
- ", clientName='" + clientName + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", clientName='" + clientName + '\'' +
 
                 '}';
     }

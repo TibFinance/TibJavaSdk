@@ -61,26 +61,24 @@ public class LoadBoardingInfoResponse<T> extends CustomAPIResponse {
     public LoadBoardingInfoResponse(Error[] errors, boolean hasError, String messages, BoardingStep step, String companyName, String companyAddress, String adminFirstName, String adminLastName, String adminAddress, CompanyType companyType, boolean didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService, boolean didOwnersAlreadyAskedForBankrupcy, boolean haveYouBeenSubjectOfVisaRiskProgram, String drivingLicenceNumber) {
         super(errors, hasError, messages);
         this.step = step;
-this.companyName = companyName;
-this.companyAddress = companyAddress;
-this.adminFirstName = adminFirstName;
-this.adminLastName = adminLastName;
-this.adminAddress = adminAddress;
-this.companyType = companyType;
-this.didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService = didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService;
-this.didOwnersAlreadyAskedForBankrupcy = didOwnersAlreadyAskedForBankrupcy;
-this.haveYouBeenSubjectOfVisaRiskProgram = haveYouBeenSubjectOfVisaRiskProgram;
-this.drivingLicenceNumber = drivingLicenceNumber;
-
+        this.companyName = companyName;
+        this.companyAddress = companyAddress;
+        this.adminFirstName = adminFirstName;
+        this.adminLastName = adminLastName;
+        this.adminAddress = adminAddress;
+        this.companyType = companyType;
+        this.didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService = didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService;
+        this.didOwnersAlreadyAskedForBankrupcy = didOwnersAlreadyAskedForBankrupcy;
+        this.haveYouBeenSubjectOfVisaRiskProgram = haveYouBeenSubjectOfVisaRiskProgram;
+        this.drivingLicenceNumber = drivingLicenceNumber;
     }
 
     public LoadBoardingInfoResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.step = objectMapper.readValue(json, BoardingStep.class);
-this.companyType = objectMapper.readValue(json, CompanyType.class);
-
+            this.step = objectMapper.readValue(json, BoardingStep.class);
+            this.companyType = objectMapper.readValue(json, CompanyType.class);
         }
     }
 
@@ -193,17 +191,17 @@ this.companyType = objectMapper.readValue(json, CompanyType.class);
     @Override
     public String toString() {
         return "LoadBoardingInfoResponse{" +
-                 "step='" + step + '\'' +
- ", companyName='" + companyName + '\'' +
- ", companyAddress='" + companyAddress + '\'' +
- ", adminFirstName='" + adminFirstName + '\'' +
- ", adminLastName='" + adminLastName + '\'' +
- ", adminAddress='" + adminAddress + '\'' +
- ", companyType='" + companyType + '\'' +
- ", didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService='" + didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService + '\'' +
- ", didOwnersAlreadyAskedForBankrupcy='" + didOwnersAlreadyAskedForBankrupcy + '\'' +
- ", haveYouBeenSubjectOfVisaRiskProgram='" + haveYouBeenSubjectOfVisaRiskProgram + '\'' +
- ", drivingLicenceNumber='" + drivingLicenceNumber + '\'' +
+                "step='" + step + '\'' +
+                ", companyName='" + companyName + '\'' +
+                ", companyAddress='" + companyAddress + '\'' +
+                ", adminFirstName='" + adminFirstName + '\'' +
+                ", adminLastName='" + adminLastName + '\'' +
+                ", adminAddress='" + adminAddress + '\'' +
+                ", companyType='" + companyType + '\'' +
+                ", didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService='" + didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService + '\'' +
+                ", didOwnersAlreadyAskedForBankrupcy='" + didOwnersAlreadyAskedForBankrupcy + '\'' +
+                ", haveYouBeenSubjectOfVisaRiskProgram='" + haveYouBeenSubjectOfVisaRiskProgram + '\'' +
+                ", drivingLicenceNumber='" + drivingLicenceNumber + '\'' +
 
                 '}';
     }

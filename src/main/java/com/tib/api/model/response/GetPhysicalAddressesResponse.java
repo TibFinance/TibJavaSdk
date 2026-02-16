@@ -32,16 +32,14 @@ public class GetPhysicalAddressesResponse extends CustomAPIResponse {
     public GetPhysicalAddressesResponse(Error[] errors, boolean hasError, String messages, Map<Integer, String> countries, Map<Integer, String> provinces) {
         super(errors, hasError, messages);
         this.countries = countries;
-this.provinces = provinces;
-
+        this.provinces = provinces;
     }
 
     public GetPhysicalAddressesResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.countries = (Map<Integer, String>) apiResponse.getResponse();
-this.provinces = (Map<Integer, String>) apiResponse.getResponse();
-
+            this.provinces = (Map<Integer, String>) apiResponse.getResponse();
         }
     }
 
@@ -82,8 +80,8 @@ this.provinces = (Map<Integer, String>) apiResponse.getResponse();
     @Override
     public String toString() {
         return "GetPhysicalAddressesResponse{" +
-                 "countries='" + countries + '\'' +
- ", provinces='" + provinces + '\'' +
+                "countries='" + countries + '\'' +
+                ", provinces='" + provinces + '\'' +
 
                 '}';
     }

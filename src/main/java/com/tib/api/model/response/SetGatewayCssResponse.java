@@ -25,13 +25,11 @@ public class SetGatewayCssResponse extends CustomAPIResponse {
 
     public SetGatewayCssResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SetGatewayCssResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

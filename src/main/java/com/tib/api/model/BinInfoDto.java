@@ -19,44 +19,44 @@ public class BinInfoDto   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Bin")
     private String bin;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Brand")
     private String brand;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CardType")
     private String cardType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Category")
     private String category;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CountryCode")
     private String countryCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CountryName")
     private String countryName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PricingGroup")
     private String pricingGroup;
 
@@ -68,13 +68,12 @@ public class BinInfoDto   {
     
     public BinInfoDto(String bin, String brand, String cardType, String category, String countryCode, String countryName, String pricingGroup) {
         this.bin = bin;
-this.brand = brand;
-this.cardType = cardType;
-this.category = category;
-this.countryCode = countryCode;
-this.countryName = countryName;
-this.pricingGroup = pricingGroup;
-
+        this.brand = brand;
+        this.cardType = cardType;
+        this.category = category;
+        this.countryCode = countryCode;
+        this.countryName = countryName;
+        this.pricingGroup = pricingGroup;
     }
     
     
@@ -156,13 +155,13 @@ this.pricingGroup = pricingGroup;
     @Override
     public String toString() {
         return "BinInfoDto{" +
-                 "bin='" + bin + '\'' +
- ", brand='" + brand + '\'' +
- ", cardType='" + cardType + '\'' +
- ", category='" + category + '\'' +
- ", countryCode='" + countryCode + '\'' +
- ", countryName='" + countryName + '\'' +
- ", pricingGroup='" + pricingGroup + '\'' +
+                "bin='" + bin + '\'' +
+                ", brand='" + brand + '\'' +
+                ", cardType='" + cardType + '\'' +
+                ", category='" + category + '\'' +
+                ", countryCode='" + countryCode + '\'' +
+                ", countryName='" + countryName + '\'' +
+                ", pricingGroup='" + pricingGroup + '\'' +
 
                 '}';
     }

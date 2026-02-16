@@ -29,7 +29,6 @@ public class GetPhysicalAddressesArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetPhysicalAddressesArgs(String sessionToken) {
         super(sessionToken);
-        
     }
 
     

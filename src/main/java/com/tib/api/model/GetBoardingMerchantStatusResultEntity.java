@@ -20,44 +20,44 @@ public class GetBoardingMerchantStatusResultEntity  extends BoardingBaseResult  
 
     
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantEmail")
     private String merchantEmail;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderMerchantId")
     private String providerMerchantId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SandboxId")
     private String sandboxId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Processing")
     private String processing;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Payout")
     private String payout;
 
@@ -69,26 +69,24 @@ public class GetBoardingMerchantStatusResultEntity  extends BoardingBaseResult  
     
     public GetBoardingMerchantStatusResultEntity(String merchantName, String merchantEmail, String providerMerchantId, String merchantId, String sandboxId, String processing, String payout) {
         this.merchantName = merchantName;
-this.merchantEmail = merchantEmail;
-this.providerMerchantId = providerMerchantId;
-this.merchantId = merchantId;
-this.sandboxId = sandboxId;
-this.processing = processing;
-this.payout = payout;
-
+        this.merchantEmail = merchantEmail;
+        this.providerMerchantId = providerMerchantId;
+        this.merchantId = merchantId;
+        this.sandboxId = sandboxId;
+        this.processing = processing;
+        this.payout = payout;
     }
     
     
     public GetBoardingMerchantStatusResultEntity(boolean isSuccess, Integer httpStatusCode, String message, List<BoardingBaseError> errorList, String merchantName, String merchantEmail, String providerMerchantId, String merchantId, String sandboxId, String processing, String payout) {
         super(isSuccess, httpStatusCode, message, errorList);
         this.merchantName = merchantName;
-this.merchantEmail = merchantEmail;
-this.providerMerchantId = providerMerchantId;
-this.merchantId = merchantId;
-this.sandboxId = sandboxId;
-this.processing = processing;
-this.payout = payout;
-
+        this.merchantEmail = merchantEmail;
+        this.providerMerchantId = providerMerchantId;
+        this.merchantId = merchantId;
+        this.sandboxId = sandboxId;
+        this.processing = processing;
+        this.payout = payout;
     }
 
     
@@ -168,13 +166,13 @@ this.payout = payout;
     @Override
     public String toString() {
         return "GetBoardingMerchantStatusResultEntity{" +
-                 "merchantName='" + merchantName + '\'' +
- ", merchantEmail='" + merchantEmail + '\'' +
- ", providerMerchantId='" + providerMerchantId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", sandboxId='" + sandboxId + '\'' +
- ", processing='" + processing + '\'' +
- ", payout='" + payout + '\'' +
+                "merchantName='" + merchantName + '\'' +
+                ", merchantEmail='" + merchantEmail + '\'' +
+                ", providerMerchantId='" + providerMerchantId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", sandboxId='" + sandboxId + '\'' +
+                ", processing='" + processing + '\'' +
+                ", payout='" + payout + '\'' +
 
                 '}';
     }

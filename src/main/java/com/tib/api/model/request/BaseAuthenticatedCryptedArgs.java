@@ -19,8 +19,8 @@ public class BaseAuthenticatedCryptedArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Handles the acquisition or assignment of a unique session token, acting as a distinct identifier for the user's session.
- */
+     * Handles the acquisition or assignment of a unique session token, acting as a distinct identifier for the user's session.
+     */
     @JsonProperty("SessionToken")
     private String sessionToken;
 
@@ -32,7 +32,6 @@ public class BaseAuthenticatedCryptedArgs  implements IBaseCryptedServiceArgs  {
     
     public BaseAuthenticatedCryptedArgs(String sessionToken) {
         this.sessionToken = sessionToken;
-
     }
     
     
@@ -66,7 +65,7 @@ public class BaseAuthenticatedCryptedArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "BaseAuthenticatedCryptedArgs{" +
-                 "sessionToken='" + sessionToken + '\'' +
+                "sessionToken='" + sessionToken + '\'' +
 
                 '}';
     }

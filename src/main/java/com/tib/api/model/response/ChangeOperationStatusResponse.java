@@ -32,16 +32,14 @@ public class ChangeOperationStatusResponse extends CustomAPIResponse {
     public ChangeOperationStatusResponse(Error[] errors, boolean hasError, String messages, String operationId, Integer operationStatus) {
         super(errors, hasError, messages);
         this.operationId = operationId;
-this.operationStatus = operationStatus;
-
+        this.operationStatus = operationStatus;
     }
 
     public ChangeOperationStatusResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.operationId = apiResponse.getResponse().toString();
-this.operationStatus = Integer.parseInt(apiResponse.getResponse().toString());
-
+            this.operationStatus = Integer.parseInt(apiResponse.getResponse().toString());
         }
     }
 
@@ -82,8 +80,8 @@ this.operationStatus = Integer.parseInt(apiResponse.getResponse().toString());
     @Override
     public String toString() {
         return "ChangeOperationStatusResponse{" +
-                 "operationId='" + operationId + '\'' +
- ", operationStatus='" + operationStatus + '\'' +
+                "operationId='" + operationId + '\'' +
+                ", operationStatus='" + operationStatus + '\'' +
 
                 '}';
     }

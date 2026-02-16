@@ -20,56 +20,56 @@ public class ConvenientFeeSettings   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ConvenientFeeSettingId")
     private String convenientFeeSettingId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Percentage")
     private Double percentage;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MinAmount")
     private Double minAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MaxAmount")
     private Double maxAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FixedAmount")
     private Double fixedAmount;
 
     /**
- * Identifies the type of payment method linked to a specific account.
- */
+     * Identifies the type of payment method linked to a specific account.
+     */
     @JsonProperty("PaymentMethodType")
     private Integer paymentMethodType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TargetMerchantId")
     private String targetMerchantId;
 
     /**
- * Represents the current state of a transaction within the system.
- */
+     * Represents the current state of a transaction within the system.
+     */
     @JsonProperty("Status")
     private ConvenientFeeSettingStatus status;
 
@@ -81,15 +81,14 @@ public class ConvenientFeeSettings   {
     
     public ConvenientFeeSettings(String convenientFeeSettingId, String merchantId, Double percentage, Double minAmount, Double maxAmount, Double fixedAmount, Integer paymentMethodType, String targetMerchantId, ConvenientFeeSettingStatus status) {
         this.convenientFeeSettingId = convenientFeeSettingId;
-this.merchantId = merchantId;
-this.percentage = percentage;
-this.minAmount = minAmount;
-this.maxAmount = maxAmount;
-this.fixedAmount = fixedAmount;
-this.paymentMethodType = paymentMethodType;
-this.targetMerchantId = targetMerchantId;
-this.status = status;
-
+        this.merchantId = merchantId;
+        this.percentage = percentage;
+        this.minAmount = minAmount;
+        this.maxAmount = maxAmount;
+        this.fixedAmount = fixedAmount;
+        this.paymentMethodType = paymentMethodType;
+        this.targetMerchantId = targetMerchantId;
+        this.status = status;
     }
     
     
@@ -187,15 +186,15 @@ this.status = status;
     @Override
     public String toString() {
         return "ConvenientFeeSettings{" +
-                 "convenientFeeSettingId='" + convenientFeeSettingId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", percentage='" + percentage + '\'' +
- ", minAmount='" + minAmount + '\'' +
- ", maxAmount='" + maxAmount + '\'' +
- ", fixedAmount='" + fixedAmount + '\'' +
- ", paymentMethodType='" + paymentMethodType + '\'' +
- ", targetMerchantId='" + targetMerchantId + '\'' +
- ", status='" + status + '\'' +
+                "convenientFeeSettingId='" + convenientFeeSettingId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", percentage='" + percentage + '\'' +
+                ", minAmount='" + minAmount + '\'' +
+                ", maxAmount='" + maxAmount + '\'' +
+                ", fixedAmount='" + fixedAmount + '\'' +
+                ", paymentMethodType='" + paymentMethodType + '\'' +
+                ", targetMerchantId='" + targetMerchantId + '\'' +
+                ", status='" + status + '\'' +
 
                 '}';
     }

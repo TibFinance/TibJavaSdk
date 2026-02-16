@@ -20,8 +20,8 @@ public class GetWalletInformationsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
@@ -33,14 +33,12 @@ public class GetWalletInformationsArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetWalletInformationsArgs(String serviceId) {
         this.serviceId = serviceId;
-
     }
     
     
     public GetWalletInformationsArgs(String sessionToken, String serviceId) {
         super(sessionToken);
         this.serviceId = serviceId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetWalletInformationsArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "GetWalletInformationsArgs{" +
-                 "serviceId='" + serviceId + '\'' +
+                "serviceId='" + serviceId + '\'' +
 
                 '}';
     }

@@ -25,80 +25,80 @@ public class TransactionCommon   {
 
     
     /**
- * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
- */
+     * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
+     */
     @JsonProperty("OperationTarget")
     private OperationTarget operationTarget;
 
     /**
- * Specifies the operation category used throughout the API.
- */
+     * Specifies the operation category used throughout the API.
+     */
     @JsonProperty("OperationType")
     private OperationType operationType;
 
     /**
- * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
- */
+     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
- * Represents the current state of a transaction within the system.
- */
+     * Represents the current state of a transaction within the system.
+     */
     @JsonProperty("Status")
     private OperationStatus status;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * Gets or sets the result of a banking operation as defined by the BankingOperationResultEnum.
- */
+     * Gets or sets the result of a banking operation as defined by the BankingOperationResultEnum.
+     */
     @JsonProperty("BankingOperationResult")
     private BankingOperationResult bankingOperationResult;
 
     /**
- * Gets or sets the textual description of the bank associated with the transaction.
- */
+     * Gets or sets the textual description of the bank associated with the transaction.
+     */
     @JsonProperty("BankDescription")
     private String bankDescription;
 
     /**
- * Represents the name associated with the merchant's account.
- */
+     * Represents the name associated with the merchant's account.
+     */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
- * Gets or sets the preview text for a merchant account.
- */
+     * Gets or sets the preview text for a merchant account.
+     */
     @JsonProperty("AccoutPreview")
     private String accoutPreview;
 
     /**
- * Specifies the payment method type associated with the account.
- */
+     * Specifies the payment method type associated with the account.
+     */
     @JsonProperty("AccountType")
     private PaymentMethodType accountType;
 
     /**
- * Gets or sets the description associated with a transaction.
- */
+     * Gets or sets the description associated with a transaction.
+     */
     @JsonProperty("TransactionDescription")
     private String transactionDescription;
 
     /**
- * Retrieves or assigns the due date for a transaction.
- */
+     * Retrieves or assigns the due date for a transaction.
+     */
     @JsonProperty("TransactionDueDate")
     private LocalDateTime transactionDueDate;
 
     /**
- * Gets or sets the timestamp indicating when the entity was last modified.
- */
+     * Gets or sets the timestamp indicating when the entity was last modified.
+     */
     @JsonProperty("LastModifiedDate")
     private LocalDateTime lastModifiedDate;
 
@@ -110,19 +110,18 @@ public class TransactionCommon   {
     
     public TransactionCommon(OperationTarget operationTarget, OperationType operationType, TransferDirection operationDirection, OperationStatus status, String description, BankingOperationResult bankingOperationResult, String bankDescription, String accountName, String accoutPreview, PaymentMethodType accountType, String transactionDescription, LocalDateTime transactionDueDate, LocalDateTime lastModifiedDate) {
         this.operationTarget = operationTarget;
-this.operationType = operationType;
-this.operationDirection = operationDirection;
-this.status = status;
-this.description = description;
-this.bankingOperationResult = bankingOperationResult;
-this.bankDescription = bankDescription;
-this.accountName = accountName;
-this.accoutPreview = accoutPreview;
-this.accountType = accountType;
-this.transactionDescription = transactionDescription;
-this.transactionDueDate = transactionDueDate;
-this.lastModifiedDate = lastModifiedDate;
-
+        this.operationType = operationType;
+        this.operationDirection = operationDirection;
+        this.status = status;
+        this.description = description;
+        this.bankingOperationResult = bankingOperationResult;
+        this.bankDescription = bankDescription;
+        this.accountName = accountName;
+        this.accoutPreview = accoutPreview;
+        this.accountType = accountType;
+        this.transactionDescription = transactionDescription;
+        this.transactionDueDate = transactionDueDate;
+        this.lastModifiedDate = lastModifiedDate;
     }
     
     
@@ -252,19 +251,19 @@ this.lastModifiedDate = lastModifiedDate;
     @Override
     public String toString() {
         return "TransactionCommon{" +
-                 "operationTarget='" + operationTarget + '\'' +
- ", operationType='" + operationType + '\'' +
- ", operationDirection='" + operationDirection + '\'' +
- ", status='" + status + '\'' +
- ", description='" + description + '\'' +
- ", bankingOperationResult='" + bankingOperationResult + '\'' +
- ", bankDescription='" + bankDescription + '\'' +
- ", accountName='" + accountName + '\'' +
- ", accoutPreview='" + accoutPreview + '\'' +
- ", accountType='" + accountType + '\'' +
- ", transactionDescription='" + transactionDescription + '\'' +
- ", transactionDueDate='" + transactionDueDate + '\'' +
- ", lastModifiedDate='" + lastModifiedDate + '\'' +
+                "operationTarget='" + operationTarget + '\'' +
+                ", operationType='" + operationType + '\'' +
+                ", operationDirection='" + operationDirection + '\'' +
+                ", status='" + status + '\'' +
+                ", description='" + description + '\'' +
+                ", bankingOperationResult='" + bankingOperationResult + '\'' +
+                ", bankDescription='" + bankDescription + '\'' +
+                ", accountName='" + accountName + '\'' +
+                ", accoutPreview='" + accoutPreview + '\'' +
+                ", accountType='" + accountType + '\'' +
+                ", transactionDescription='" + transactionDescription + '\'' +
+                ", transactionDueDate='" + transactionDueDate + '\'' +
+                ", lastModifiedDate='" + lastModifiedDate + '\'' +
 
                 '}';
     }

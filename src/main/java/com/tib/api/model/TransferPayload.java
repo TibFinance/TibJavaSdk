@@ -20,158 +20,158 @@ public class TransferPayload   {
 
     
     /**
- * Identifies the specific transfer operation that needs to be reverted.
- */
+     * Identifies the specific transfer operation that needs to be reverted.
+     */
     @JsonProperty("TransferId")
     private String transferId;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Specifies the category of a financial operation.
- */
+     * Specifies the category of a financial operation.
+     */
     @JsonProperty("OperationKind")
     private Integer operationKind;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OriginalAmount")
     private Double originalAmount;
 
     /**
- * Gets or sets the external reference identifier used to correlate this entity with an external system.
- */
+     * Gets or sets the external reference identifier used to correlate this entity with an external system.
+     */
     @JsonProperty("ExternalReferenceId")
     private String externalReferenceId;
 
     /**
- * Specifies the due date for the payment. If the value is null, the system treats the due date as the current date and time.
- */
+     * Specifies the due date for the payment. If the value is null, the system treats the due date as the current date and time.
+     */
     @JsonProperty("DueDate")
     private String dueDate;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private String createdDate;
 
     /**
- * Acts as a unique identifier for a distinct payment method.
- */
+     * Acts as a unique identifier for a distinct payment method.
+     */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
     /**
- * Provides a detailed description of the payment method for easy identification.
- */
+     * Provides a detailed description of the payment method for easy identification.
+     */
     @JsonProperty("PaymentMethodDescription")
     private String paymentMethodDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PaymentMethodPreview")
     private String paymentMethodPreview;
 
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * This property represents the full name of the customer in the system.
- */
+     * This property represents the full name of the customer in the system.
+     */
     @JsonProperty("CustomerName")
     private String customerName;
 
     /**
- * Serves as a unique identifier for customers within an external system, enabling efficient data mapping and integration across various platforms.
- */
+     * Serves as a unique identifier for customers within an external system, enabling efficient data mapping and integration across various platforms.
+     */
     @JsonProperty("CustomerExternalId")
     private String customerExternalId;
 
     /**
- * Specifies the monetary amount of a bill to be created.
- */
+     * Specifies the monetary amount of a bill to be created.
+     */
     @JsonProperty("BillAmount")
     private String billAmount;
 
     /**
- * Specifies the currency of the bill. If null, the merchant’s default currency is applied.
- */
+     * Specifies the currency of the bill. If null, the merchant’s default currency is applied.
+     */
     @JsonProperty("BillCurrency")
     private String billCurrency;
 
     /**
- * Provides a textual description of the bill associated with a payment.
- */
+     * Provides a textual description of the bill associated with a payment.
+     */
     @JsonProperty("BillDescription")
     private String billDescription;
 
     /**
- * Retrieves or assigns the unique identifier for a bill.
- */
+     * Retrieves or assigns the unique identifier for a bill.
+     */
     @JsonProperty("BillId")
     private String billId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BillLanguage")
     private String billLanguage;
 
     /**
- * Represents the title of a bill associated with a payment.
- */
+     * Represents the title of a bill associated with a payment.
+     */
     @JsonProperty("BillTitle")
     private String billTitle;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BillCreatedDate")
     private String billCreatedDate;
 
     /**
- * Represents the first external system bill reference associated with the TIB bill.
- */
+     * Represents the first external system bill reference associated with the TIB bill.
+     */
     @JsonProperty("ExternalSystemBillNumber1")
     private String externalSystemBillNumber1;
 
     /**
- * Reference number provided by an external system for the bill (field 2).
- */
+     * Reference number provided by an external system for the bill (field 2).
+     */
     @JsonProperty("ExternalSystemBillNumber2")
     private String externalSystemBillNumber2;
 
     /**
- * Identifies the bill number provided by an external system. This field allows TIB to map its internal bill to the originating system's reference.
- */
+     * Identifies the bill number provided by an external system. This field allows TIB to map its internal bill to the originating system's reference.
+     */
     @JsonProperty("ExternalSystemBillNumber3")
     private String externalSystemBillNumber3;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BillMerchantId")
     private String billMerchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BillCustomerId")
     private String billCustomerId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Payout")
     private PayoutPayload payout;
 
@@ -183,32 +183,31 @@ public class TransferPayload   {
     
     public TransferPayload(String transferId, Double amount, Integer operationKind, Double originalAmount, String externalReferenceId, String dueDate, String createdDate, String paymentMethodId, String paymentMethodDescription, String paymentMethodPreview, String customerId, String customerName, String customerExternalId, String billAmount, String billCurrency, String billDescription, String billId, String billLanguage, String billTitle, String billCreatedDate, String externalSystemBillNumber1, String externalSystemBillNumber2, String externalSystemBillNumber3, String billMerchantId, String billCustomerId, PayoutPayload payout) {
         this.transferId = transferId;
-this.amount = amount;
-this.operationKind = operationKind;
-this.originalAmount = originalAmount;
-this.externalReferenceId = externalReferenceId;
-this.dueDate = dueDate;
-this.createdDate = createdDate;
-this.paymentMethodId = paymentMethodId;
-this.paymentMethodDescription = paymentMethodDescription;
-this.paymentMethodPreview = paymentMethodPreview;
-this.customerId = customerId;
-this.customerName = customerName;
-this.customerExternalId = customerExternalId;
-this.billAmount = billAmount;
-this.billCurrency = billCurrency;
-this.billDescription = billDescription;
-this.billId = billId;
-this.billLanguage = billLanguage;
-this.billTitle = billTitle;
-this.billCreatedDate = billCreatedDate;
-this.externalSystemBillNumber1 = externalSystemBillNumber1;
-this.externalSystemBillNumber2 = externalSystemBillNumber2;
-this.externalSystemBillNumber3 = externalSystemBillNumber3;
-this.billMerchantId = billMerchantId;
-this.billCustomerId = billCustomerId;
-this.payout = payout;
-
+        this.amount = amount;
+        this.operationKind = operationKind;
+        this.originalAmount = originalAmount;
+        this.externalReferenceId = externalReferenceId;
+        this.dueDate = dueDate;
+        this.createdDate = createdDate;
+        this.paymentMethodId = paymentMethodId;
+        this.paymentMethodDescription = paymentMethodDescription;
+        this.paymentMethodPreview = paymentMethodPreview;
+        this.customerId = customerId;
+        this.customerName = customerName;
+        this.customerExternalId = customerExternalId;
+        this.billAmount = billAmount;
+        this.billCurrency = billCurrency;
+        this.billDescription = billDescription;
+        this.billId = billId;
+        this.billLanguage = billLanguage;
+        this.billTitle = billTitle;
+        this.billCreatedDate = billCreatedDate;
+        this.externalSystemBillNumber1 = externalSystemBillNumber1;
+        this.externalSystemBillNumber2 = externalSystemBillNumber2;
+        this.externalSystemBillNumber3 = externalSystemBillNumber3;
+        this.billMerchantId = billMerchantId;
+        this.billCustomerId = billCustomerId;
+        this.payout = payout;
     }
     
     
@@ -442,32 +441,32 @@ this.payout = payout;
     @Override
     public String toString() {
         return "TransferPayload{" +
-                 "transferId='" + transferId + '\'' +
- ", amount='" + amount + '\'' +
- ", operationKind='" + operationKind + '\'' +
- ", originalAmount='" + originalAmount + '\'' +
- ", externalReferenceId='" + externalReferenceId + '\'' +
- ", dueDate='" + dueDate + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", paymentMethodId='" + paymentMethodId + '\'' +
- ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
- ", paymentMethodPreview='" + paymentMethodPreview + '\'' +
- ", customerId='" + customerId + '\'' +
- ", customerName='" + customerName + '\'' +
- ", customerExternalId='" + customerExternalId + '\'' +
- ", billAmount='" + billAmount + '\'' +
- ", billCurrency='" + billCurrency + '\'' +
- ", billDescription='" + billDescription + '\'' +
- ", billId='" + billId + '\'' +
- ", billLanguage='" + billLanguage + '\'' +
- ", billTitle='" + billTitle + '\'' +
- ", billCreatedDate='" + billCreatedDate + '\'' +
- ", externalSystemBillNumber1='" + externalSystemBillNumber1 + '\'' +
- ", externalSystemBillNumber2='" + externalSystemBillNumber2 + '\'' +
- ", externalSystemBillNumber3='" + externalSystemBillNumber3 + '\'' +
- ", billMerchantId='" + billMerchantId + '\'' +
- ", billCustomerId='" + billCustomerId + '\'' +
- ", payout='" + payout + '\'' +
+                "transferId='" + transferId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", operationKind='" + operationKind + '\'' +
+                ", originalAmount='" + originalAmount + '\'' +
+                ", externalReferenceId='" + externalReferenceId + '\'' +
+                ", dueDate='" + dueDate + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", paymentMethodId='" + paymentMethodId + '\'' +
+                ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
+                ", paymentMethodPreview='" + paymentMethodPreview + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", customerName='" + customerName + '\'' +
+                ", customerExternalId='" + customerExternalId + '\'' +
+                ", billAmount='" + billAmount + '\'' +
+                ", billCurrency='" + billCurrency + '\'' +
+                ", billDescription='" + billDescription + '\'' +
+                ", billId='" + billId + '\'' +
+                ", billLanguage='" + billLanguage + '\'' +
+                ", billTitle='" + billTitle + '\'' +
+                ", billCreatedDate='" + billCreatedDate + '\'' +
+                ", externalSystemBillNumber1='" + externalSystemBillNumber1 + '\'' +
+                ", externalSystemBillNumber2='" + externalSystemBillNumber2 + '\'' +
+                ", externalSystemBillNumber3='" + externalSystemBillNumber3 + '\'' +
+                ", billMerchantId='" + billMerchantId + '\'' +
+                ", billCustomerId='" + billCustomerId + '\'' +
+                ", payout='" + payout + '\'' +
 
                 '}';
     }

@@ -29,14 +29,12 @@ public class AddNewDasProviderResponse extends CustomAPIResponse {
     public AddNewDasProviderResponse(Error[] errors, boolean hasError, String messages, String dasProviderId) {
         super(errors, hasError, messages);
         this.dasProviderId = dasProviderId;
-
     }
 
     public AddNewDasProviderResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.dasProviderId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class AddNewDasProviderResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "AddNewDasProviderResponse{" +
-                 "dasProviderId='" + dasProviderId + '\'' +
+                "dasProviderId='" + dasProviderId + '\'' +
 
                 '}';
     }

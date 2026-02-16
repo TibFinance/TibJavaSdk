@@ -21,14 +21,14 @@ public class SetManuallyStatusCheckResultArgs  extends BaseAdminOnlyCryptedArgs 
 
     
     /**
- * Gets or sets the transaction identifier.
- */
+     * Gets or sets the transaction identifier.
+     */
     @JsonProperty("TransactionId")
     private String transactionId;
 
     /**
- * Retrieves the numeric status code of an operation.
- */
+     * Retrieves the numeric status code of an operation.
+     */
     @JsonProperty("OperationStatus")
     private OperationStatus operationStatus;
 
@@ -40,16 +40,14 @@ public class SetManuallyStatusCheckResultArgs  extends BaseAdminOnlyCryptedArgs 
     
     public SetManuallyStatusCheckResultArgs(String transactionId, OperationStatus operationStatus) {
         this.transactionId = transactionId;
-this.operationStatus = operationStatus;
-
+        this.operationStatus = operationStatus;
     }
     
     
     public SetManuallyStatusCheckResultArgs(String adminSessionToken, String transactionId, OperationStatus operationStatus) {
         super(adminSessionToken);
         this.transactionId = transactionId;
-this.operationStatus = operationStatus;
-
+        this.operationStatus = operationStatus;
     }
 
     
@@ -89,8 +87,8 @@ this.operationStatus = operationStatus;
     @Override
     public String toString() {
         return "SetManuallyStatusCheckResultArgs{" +
-                 "transactionId='" + transactionId + '\'' +
- ", operationStatus='" + operationStatus + '\'' +
+                "transactionId='" + transactionId + '\'' +
+                ", operationStatus='" + operationStatus + '\'' +
 
                 '}';
     }

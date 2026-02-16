@@ -22,74 +22,74 @@ public class CreatePaymentArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Retrieves or assigns the unique identifier for a bill.
- */
+     * Retrieves or assigns the unique identifier for a bill.
+     */
     @JsonProperty("BillId")
     private String billId;
 
     /**
- * Automatically assigns the customer linked to a payment from the customer associated with the specified bill. The method takes no action if the bill has no customer or if the payment already has a customer assigned.
- */
+     * Automatically assigns the customer linked to a payment from the customer associated with the specified bill. The method takes no action if the bill has no customer or if the payment already has a customer assigned.
+     */
     @JsonProperty("SetPaymentCustomerFromBill")
     private boolean setPaymentCustomerFromBill;
 
     /**
- * Handles the acquisition and assignment of a customer's email address.
- */
+     * Handles the acquisition and assignment of a customer's email address.
+     */
     @JsonProperty("CustomerEmail")
     private String customerEmail;
 
     /**
- * Contains metadata for a payment operation.
- */
+     * Contains metadata for a payment operation.
+     */
     @JsonProperty("PaymentInfo")
     private PaymentEntity paymentInfo;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Gets or sets the external reference identifier used to correlate this entity with an external system.
- */
+     * Gets or sets the external reference identifier used to correlate this entity with an external system.
+     */
     @JsonProperty("ExternalReferenceId")
     private String externalReferenceId;
 
     /**
- * Indicates whether the system aborts a payment when the amount exceeds the remaining bill balance.
- */
+     * Indicates whether the system aborts a payment when the amount exceeds the remaining bill balance.
+     */
     @JsonProperty("SafetyToBreakIfOverRemainingBillAmount")
     private boolean safetyToBreakIfOverRemainingBillAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AutorizedPaymentMethod")
     private AutorizedPaymentMethodFlags autorizedPaymentMethod;
 
     /**
- * Indicates if the system must request the customer's consent prior to executing the payment.
- */
+     * Indicates if the system must request the customer's consent prior to executing the payment.
+     */
     @JsonProperty("AskForCustomerConsent")
     private boolean askForCustomerConsent;
 
     /**
- * Specifies whether the payment creation request should omit sending the confirmation email.
- */
+     * Specifies whether the payment creation request should omit sending the confirmation email.
+     */
     @JsonProperty("DoNotSendEmail")
     private boolean doNotSendEmail;
 
     /**
- * Indicates whether the transfer should be executed immediately within the TIB Finance API.
- */
+     * Indicates whether the transfer should be executed immediately within the TIB Finance API.
+     */
     @JsonProperty("ImmediateTransfer")
     private boolean immediateTransfer;
 
     /**
- * Represents a brief description used in statements to identify or clarify the transaction.
- */
+     * Represents a brief description used in statements to identify or clarify the transaction.
+     */
     @JsonProperty("StatementDescription")
     private String statementDescription;
 
@@ -101,36 +101,34 @@ public class CreatePaymentArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CreatePaymentArgs(String billId, boolean setPaymentCustomerFromBill, String customerEmail, PaymentEntity paymentInfo, String merchantId, String externalReferenceId, boolean safetyToBreakIfOverRemainingBillAmount, AutorizedPaymentMethodFlags autorizedPaymentMethod, boolean askForCustomerConsent, boolean doNotSendEmail, boolean immediateTransfer, String statementDescription) {
         this.billId = billId;
-this.setPaymentCustomerFromBill = setPaymentCustomerFromBill;
-this.customerEmail = customerEmail;
-this.paymentInfo = paymentInfo;
-this.merchantId = merchantId;
-this.externalReferenceId = externalReferenceId;
-this.safetyToBreakIfOverRemainingBillAmount = safetyToBreakIfOverRemainingBillAmount;
-this.autorizedPaymentMethod = autorizedPaymentMethod;
-this.askForCustomerConsent = askForCustomerConsent;
-this.doNotSendEmail = doNotSendEmail;
-this.immediateTransfer = immediateTransfer;
-this.statementDescription = statementDescription;
-
+        this.setPaymentCustomerFromBill = setPaymentCustomerFromBill;
+        this.customerEmail = customerEmail;
+        this.paymentInfo = paymentInfo;
+        this.merchantId = merchantId;
+        this.externalReferenceId = externalReferenceId;
+        this.safetyToBreakIfOverRemainingBillAmount = safetyToBreakIfOverRemainingBillAmount;
+        this.autorizedPaymentMethod = autorizedPaymentMethod;
+        this.askForCustomerConsent = askForCustomerConsent;
+        this.doNotSendEmail = doNotSendEmail;
+        this.immediateTransfer = immediateTransfer;
+        this.statementDescription = statementDescription;
     }
     
     
     public CreatePaymentArgs(String sessionToken, String billId, boolean setPaymentCustomerFromBill, String customerEmail, PaymentEntity paymentInfo, String merchantId, String externalReferenceId, boolean safetyToBreakIfOverRemainingBillAmount, AutorizedPaymentMethodFlags autorizedPaymentMethod, boolean askForCustomerConsent, boolean doNotSendEmail, boolean immediateTransfer, String statementDescription) {
         super(sessionToken);
         this.billId = billId;
-this.setPaymentCustomerFromBill = setPaymentCustomerFromBill;
-this.customerEmail = customerEmail;
-this.paymentInfo = paymentInfo;
-this.merchantId = merchantId;
-this.externalReferenceId = externalReferenceId;
-this.safetyToBreakIfOverRemainingBillAmount = safetyToBreakIfOverRemainingBillAmount;
-this.autorizedPaymentMethod = autorizedPaymentMethod;
-this.askForCustomerConsent = askForCustomerConsent;
-this.doNotSendEmail = doNotSendEmail;
-this.immediateTransfer = immediateTransfer;
-this.statementDescription = statementDescription;
-
+        this.setPaymentCustomerFromBill = setPaymentCustomerFromBill;
+        this.customerEmail = customerEmail;
+        this.paymentInfo = paymentInfo;
+        this.merchantId = merchantId;
+        this.externalReferenceId = externalReferenceId;
+        this.safetyToBreakIfOverRemainingBillAmount = safetyToBreakIfOverRemainingBillAmount;
+        this.autorizedPaymentMethod = autorizedPaymentMethod;
+        this.askForCustomerConsent = askForCustomerConsent;
+        this.doNotSendEmail = doNotSendEmail;
+        this.immediateTransfer = immediateTransfer;
+        this.statementDescription = statementDescription;
     }
 
     
@@ -250,18 +248,18 @@ this.statementDescription = statementDescription;
     @Override
     public String toString() {
         return "CreatePaymentArgs{" +
-                 "billId='" + billId + '\'' +
- ", setPaymentCustomerFromBill='" + setPaymentCustomerFromBill + '\'' +
- ", customerEmail='" + customerEmail + '\'' +
- ", paymentInfo='" + paymentInfo + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", externalReferenceId='" + externalReferenceId + '\'' +
- ", safetyToBreakIfOverRemainingBillAmount='" + safetyToBreakIfOverRemainingBillAmount + '\'' +
- ", autorizedPaymentMethod='" + autorizedPaymentMethod + '\'' +
- ", askForCustomerConsent='" + askForCustomerConsent + '\'' +
- ", doNotSendEmail='" + doNotSendEmail + '\'' +
- ", immediateTransfer='" + immediateTransfer + '\'' +
- ", statementDescription='" + statementDescription + '\'' +
+                "billId='" + billId + '\'' +
+                ", setPaymentCustomerFromBill='" + setPaymentCustomerFromBill + '\'' +
+                ", customerEmail='" + customerEmail + '\'' +
+                ", paymentInfo='" + paymentInfo + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", externalReferenceId='" + externalReferenceId + '\'' +
+                ", safetyToBreakIfOverRemainingBillAmount='" + safetyToBreakIfOverRemainingBillAmount + '\'' +
+                ", autorizedPaymentMethod='" + autorizedPaymentMethod + '\'' +
+                ", askForCustomerConsent='" + askForCustomerConsent + '\'' +
+                ", doNotSendEmail='" + doNotSendEmail + '\'' +
+                ", immediateTransfer='" + immediateTransfer + '\'' +
+                ", statementDescription='" + statementDescription + '\'' +
 
                 '}';
     }

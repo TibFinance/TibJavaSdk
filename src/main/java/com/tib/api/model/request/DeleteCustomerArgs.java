@@ -20,8 +20,8 @@ public class DeleteCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
@@ -33,14 +33,12 @@ public class DeleteCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public DeleteCustomerArgs(String customerId) {
         this.customerId = customerId;
-
     }
     
     
     public DeleteCustomerArgs(String sessionToken, String customerId) {
         super(sessionToken);
         this.customerId = customerId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class DeleteCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "DeleteCustomerArgs{" +
-                 "customerId='" + customerId + '\'' +
+                "customerId='" + customerId + '\'' +
 
                 '}';
     }

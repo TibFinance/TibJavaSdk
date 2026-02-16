@@ -20,8 +20,8 @@ public class UpdateWhiteLabelingDataResonse   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WhiteLabeling")
     private WhiteLabeling whiteLabeling;
 
@@ -33,7 +33,6 @@ public class UpdateWhiteLabelingDataResonse   {
     
     public UpdateWhiteLabelingDataResonse(WhiteLabeling whiteLabeling) {
         this.whiteLabeling = whiteLabeling;
-
     }
     
     
@@ -67,7 +66,7 @@ public class UpdateWhiteLabelingDataResonse   {
     @Override
     public String toString() {
         return "UpdateWhiteLabelingDataResonse{" +
-                 "whiteLabeling='" + whiteLabeling + '\'' +
+                "whiteLabeling='" + whiteLabeling + '\'' +
 
                 '}';
     }

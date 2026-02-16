@@ -29,7 +29,6 @@ public class GetTokenInformationArgs  extends BaseAuthenticatePublicTokenArgs  {
     
     public GetTokenInformationArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

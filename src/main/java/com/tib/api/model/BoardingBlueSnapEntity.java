@@ -19,38 +19,38 @@ public class BoardingBlueSnapEntity  extends BoardingEntity  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BusinessInfo")
     private Object businessInfo;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankingInfo")
     private Object bankingInfo;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OwnershipInfoArr")
     private List<Object> ownershipInfoArr;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyRep")
     private Object companyRep;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AdditionalCompanyReps")
     private List<Object> additionalCompanyReps;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantAgreementsSign")
     private Object merchantAgreementsSign;
 
@@ -62,12 +62,11 @@ public class BoardingBlueSnapEntity  extends BoardingEntity  {
     
     public BoardingBlueSnapEntity(Object businessInfo, Object bankingInfo, List<Object> ownershipInfoArr, Object companyRep, List<Object> additionalCompanyReps, Object merchantAgreementsSign) {
         this.businessInfo = businessInfo;
-this.bankingInfo = bankingInfo;
-this.ownershipInfoArr = ownershipInfoArr;
-this.companyRep = companyRep;
-this.additionalCompanyReps = additionalCompanyReps;
-this.merchantAgreementsSign = merchantAgreementsSign;
-
+        this.bankingInfo = bankingInfo;
+        this.ownershipInfoArr = ownershipInfoArr;
+        this.companyRep = companyRep;
+        this.additionalCompanyReps = additionalCompanyReps;
+        this.merchantAgreementsSign = merchantAgreementsSign;
     }
     
     
@@ -141,12 +140,12 @@ this.merchantAgreementsSign = merchantAgreementsSign;
     @Override
     public String toString() {
         return "BoardingBlueSnapEntity{" +
-                 "businessInfo='" + businessInfo + '\'' +
- ", bankingInfo='" + bankingInfo + '\'' +
- ", ownershipInfoArr='" + ownershipInfoArr + '\'' +
- ", companyRep='" + companyRep + '\'' +
- ", additionalCompanyReps='" + additionalCompanyReps + '\'' +
- ", merchantAgreementsSign='" + merchantAgreementsSign + '\'' +
+                "businessInfo='" + businessInfo + '\'' +
+                ", bankingInfo='" + bankingInfo + '\'' +
+                ", ownershipInfoArr='" + ownershipInfoArr + '\'' +
+                ", companyRep='" + companyRep + '\'' +
+                ", additionalCompanyReps='" + additionalCompanyReps + '\'' +
+                ", merchantAgreementsSign='" + merchantAgreementsSign + '\'' +
 
                 '}';
     }

@@ -19,80 +19,80 @@ public class BoardingInfoPersonEntity   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BoardingInfoPersonId")
     private String boardingInfoPersonId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FirstName")
     private String firstName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("LastName")
     private String lastName;
 
     /**
- * Gets or sets the address associated with the entity.
- */
+     * Gets or sets the address associated with the entity.
+     */
     @JsonProperty("Address")
     private String address;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Country")
     private String country;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("State")
     private String state;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("City")
     private String city;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Zip")
     private String zip;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Phone")
     private String phone;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BirthDate")
     private String birthDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("GovId")
     private String govId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SharePercentage")
     private Integer sharePercentage;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsRepresentant")
     private boolean isRepresentant;
 
@@ -104,19 +104,18 @@ public class BoardingInfoPersonEntity   {
     
     public BoardingInfoPersonEntity(String boardingInfoPersonId, String firstName, String lastName, String address, String country, String state, String city, String zip, String phone, String birthDate, String govId, Integer sharePercentage, boolean isRepresentant) {
         this.boardingInfoPersonId = boardingInfoPersonId;
-this.firstName = firstName;
-this.lastName = lastName;
-this.address = address;
-this.country = country;
-this.state = state;
-this.city = city;
-this.zip = zip;
-this.phone = phone;
-this.birthDate = birthDate;
-this.govId = govId;
-this.sharePercentage = sharePercentage;
-this.isRepresentant = isRepresentant;
-
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.country = country;
+        this.state = state;
+        this.city = city;
+        this.zip = zip;
+        this.phone = phone;
+        this.birthDate = birthDate;
+        this.govId = govId;
+        this.sharePercentage = sharePercentage;
+        this.isRepresentant = isRepresentant;
     }
     
     
@@ -246,19 +245,19 @@ this.isRepresentant = isRepresentant;
     @Override
     public String toString() {
         return "BoardingInfoPersonEntity{" +
-                 "boardingInfoPersonId='" + boardingInfoPersonId + '\'' +
- ", firstName='" + firstName + '\'' +
- ", lastName='" + lastName + '\'' +
- ", address='" + address + '\'' +
- ", country='" + country + '\'' +
- ", state='" + state + '\'' +
- ", city='" + city + '\'' +
- ", zip='" + zip + '\'' +
- ", phone='" + phone + '\'' +
- ", birthDate='" + birthDate + '\'' +
- ", govId='" + govId + '\'' +
- ", sharePercentage='" + sharePercentage + '\'' +
- ", isRepresentant='" + isRepresentant + '\'' +
+                "boardingInfoPersonId='" + boardingInfoPersonId + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", country='" + country + '\'' +
+                ", state='" + state + '\'' +
+                ", city='" + city + '\'' +
+                ", zip='" + zip + '\'' +
+                ", phone='" + phone + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", govId='" + govId + '\'' +
+                ", sharePercentage='" + sharePercentage + '\'' +
+                ", isRepresentant='" + isRepresentant + '\'' +
 
                 '}';
     }

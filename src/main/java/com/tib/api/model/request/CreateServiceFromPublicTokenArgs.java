@@ -26,104 +26,104 @@ public class CreateServiceFromPublicTokenArgs  extends BaseAuthenticatePublicTok
 
     
     /**
- * Retrieves or assigns the service associated with a merchant in the TIB Finance API. This property is crucial for managing service-related operations, including contract management and fee determination.
- */
+     * Retrieves or assigns the service associated with a merchant in the TIB Finance API. This property is crucial for managing service-related operations, including contract management and fee determination.
+     */
     @JsonProperty("Service")
     private ServiceEntity service;
 
     /**
- * Gets or sets the address associated with the entity.
- */
+     * Gets or sets the address associated with the entity.
+     */
     @JsonProperty("Address")
     private Address address;
 
     /**
- * Gets or sets the services fee.
- */
+     * Gets or sets the services fee.
+     */
     @JsonProperty("ServicesFee")
     private ServiceFeeSettings servicesFee;
 
     /**
- * Gets or sets the configuration settings for a TIB Finance service.
- */
+     * Gets or sets the configuration settings for a TIB Finance service.
+     */
     @JsonProperty("ServiceSettings")
     private ServiceSettings serviceSettings;
 
     /**
- * Represents the name associated with the merchant's account.
- */
+     * Represents the name associated with the merchant's account.
+     */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
- * Gets or sets a value indicating whether this instance is primary.
- */
+     * Gets or sets a value indicating whether this instance is primary.
+     */
     @JsonProperty("IsPrimary")
     private boolean isPrimary;
 
     /**
- * Gets or sets the bank address.
- */
+     * Gets or sets the bank address.
+     */
     @JsonProperty("BankAddress")
     private String bankAddress;
 
     /**
- * Gets or sets the bank city.
- */
+     * Gets or sets the bank city.
+     */
     @JsonProperty("BankCity")
     private String bankCity;
 
     /**
- * Gets or sets the bank province.
- */
+     * Gets or sets the bank province.
+     */
     @JsonProperty("BankProvince")
     private String bankProvince;
 
     /**
- * Gets or sets the bank country.
- */
+     * Gets or sets the bank country.
+     */
     @JsonProperty("BankCountry")
     private String bankCountry;
 
     /**
- * Gets or sets the name of the bank.
- */
+     * Gets or sets the name of the bank.
+     */
     @JsonProperty("BankName")
     private String bankName;
 
     /**
- * Identifies the bank associated with the account using its numeric identifier.
- */
+     * Identifies the bank associated with the account using its numeric identifier.
+     */
     @JsonProperty("BankNumber")
     private String bankNumber;
 
     /**
- * Gets or sets the bank transit.
- */
+     * Gets or sets the bank transit.
+     */
     @JsonProperty("BankTransit")
     private String bankTransit;
 
     /**
- * Gets or sets the bank account.
- */
+     * Gets or sets the bank account.
+     */
     @JsonProperty("BankAccount")
     private String bankAccount;
 
     /**
- * Gets or sets the owner email.
- */
+     * Gets or sets the owner email.
+     */
     @JsonProperty("OwnerEmail")
     private String ownerEmail;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
@@ -135,46 +135,44 @@ public class CreateServiceFromPublicTokenArgs  extends BaseAuthenticatePublicTok
     
     public CreateServiceFromPublicTokenArgs(ServiceEntity service, Address address, ServiceFeeSettings servicesFee, ServiceSettings serviceSettings, String accountName, boolean isPrimary, String bankAddress, String bankCity, String bankProvince, String bankCountry, String bankName, String bankNumber, String bankTransit, String bankAccount, String ownerEmail, Currency currency, Language language) {
         this.service = service;
-this.address = address;
-this.servicesFee = servicesFee;
-this.serviceSettings = serviceSettings;
-this.accountName = accountName;
-this.isPrimary = isPrimary;
-this.bankAddress = bankAddress;
-this.bankCity = bankCity;
-this.bankProvince = bankProvince;
-this.bankCountry = bankCountry;
-this.bankName = bankName;
-this.bankNumber = bankNumber;
-this.bankTransit = bankTransit;
-this.bankAccount = bankAccount;
-this.ownerEmail = ownerEmail;
-this.currency = currency;
-this.language = language;
-
+        this.address = address;
+        this.servicesFee = servicesFee;
+        this.serviceSettings = serviceSettings;
+        this.accountName = accountName;
+        this.isPrimary = isPrimary;
+        this.bankAddress = bankAddress;
+        this.bankCity = bankCity;
+        this.bankProvince = bankProvince;
+        this.bankCountry = bankCountry;
+        this.bankName = bankName;
+        this.bankNumber = bankNumber;
+        this.bankTransit = bankTransit;
+        this.bankAccount = bankAccount;
+        this.ownerEmail = ownerEmail;
+        this.currency = currency;
+        this.language = language;
     }
     
     
     public CreateServiceFromPublicTokenArgs(String publicTokenId, ServiceEntity service, Address address, ServiceFeeSettings servicesFee, ServiceSettings serviceSettings, String accountName, boolean isPrimary, String bankAddress, String bankCity, String bankProvince, String bankCountry, String bankName, String bankNumber, String bankTransit, String bankAccount, String ownerEmail, Currency currency, Language language) {
         super(publicTokenId);
         this.service = service;
-this.address = address;
-this.servicesFee = servicesFee;
-this.serviceSettings = serviceSettings;
-this.accountName = accountName;
-this.isPrimary = isPrimary;
-this.bankAddress = bankAddress;
-this.bankCity = bankCity;
-this.bankProvince = bankProvince;
-this.bankCountry = bankCountry;
-this.bankName = bankName;
-this.bankNumber = bankNumber;
-this.bankTransit = bankTransit;
-this.bankAccount = bankAccount;
-this.ownerEmail = ownerEmail;
-this.currency = currency;
-this.language = language;
-
+        this.address = address;
+        this.servicesFee = servicesFee;
+        this.serviceSettings = serviceSettings;
+        this.accountName = accountName;
+        this.isPrimary = isPrimary;
+        this.bankAddress = bankAddress;
+        this.bankCity = bankCity;
+        this.bankProvince = bankProvince;
+        this.bankCountry = bankCountry;
+        this.bankName = bankName;
+        this.bankNumber = bankNumber;
+        this.bankTransit = bankTransit;
+        this.bankAccount = bankAccount;
+        this.ownerEmail = ownerEmail;
+        this.currency = currency;
+        this.language = language;
     }
 
     
@@ -334,23 +332,23 @@ this.language = language;
     @Override
     public String toString() {
         return "CreateServiceFromPublicTokenArgs{" +
-                 "service='" + service + '\'' +
- ", address='" + address + '\'' +
- ", servicesFee='" + servicesFee + '\'' +
- ", serviceSettings='" + serviceSettings + '\'' +
- ", accountName='" + accountName + '\'' +
- ", isPrimary='" + isPrimary + '\'' +
- ", bankAddress='" + bankAddress + '\'' +
- ", bankCity='" + bankCity + '\'' +
- ", bankProvince='" + bankProvince + '\'' +
- ", bankCountry='" + bankCountry + '\'' +
- ", bankName='" + bankName + '\'' +
- ", bankNumber='" + bankNumber + '\'' +
- ", bankTransit='" + bankTransit + '\'' +
- ", bankAccount='" + bankAccount + '\'' +
- ", ownerEmail='" + ownerEmail + '\'' +
- ", currency='" + currency + '\'' +
- ", language='" + language + '\'' +
+                "service='" + service + '\'' +
+                ", address='" + address + '\'' +
+                ", servicesFee='" + servicesFee + '\'' +
+                ", serviceSettings='" + serviceSettings + '\'' +
+                ", accountName='" + accountName + '\'' +
+                ", isPrimary='" + isPrimary + '\'' +
+                ", bankAddress='" + bankAddress + '\'' +
+                ", bankCity='" + bankCity + '\'' +
+                ", bankProvince='" + bankProvince + '\'' +
+                ", bankCountry='" + bankCountry + '\'' +
+                ", bankName='" + bankName + '\'' +
+                ", bankNumber='" + bankNumber + '\'' +
+                ", bankTransit='" + bankTransit + '\'' +
+                ", bankAccount='" + bankAccount + '\'' +
+                ", ownerEmail='" + ownerEmail + '\'' +
+                ", currency='" + currency + '\'' +
+                ", language='" + language + '\'' +
 
                 '}';
     }

@@ -21,8 +21,8 @@ public class SaveServiceArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Retrieves or assigns the service associated with a merchant in the TIB Finance API. This property is crucial for managing service-related operations, including contract management and fee determination.
- */
+     * Retrieves or assigns the service associated with a merchant in the TIB Finance API. This property is crucial for managing service-related operations, including contract management and fee determination.
+     */
     @JsonProperty("Service")
     private Service service;
 
@@ -34,14 +34,12 @@ public class SaveServiceArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public SaveServiceArgs(Service service) {
         this.service = service;
-
     }
     
     
     public SaveServiceArgs(String adminSessionToken, Service service) {
         super(adminSessionToken);
         this.service = service;
-
     }
 
     
@@ -73,7 +71,7 @@ public class SaveServiceArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "SaveServiceArgs{" +
-                 "service='" + service + '\'' +
+                "service='" + service + '\'' +
 
                 '}';
     }

@@ -30,15 +30,13 @@ public class GetPaymentMethodResponse extends CustomAPIResponse {
     public GetPaymentMethodResponse(Error[] errors, boolean hasError, String messages, PaymentMethod paymentMethod) {
         super(errors, hasError, messages);
         this.paymentMethod = paymentMethod;
-
     }
 
     public GetPaymentMethodResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.paymentMethod = objectMapper.readValue(json, PaymentMethod.class);
-
+            this.paymentMethod = objectMapper.readValue(json, PaymentMethod.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.paymentMethod = objectMapper.readValue(json, PaymentMethod.class);
     @Override
     public String toString() {
         return "GetPaymentMethodResponse{" +
-                 "paymentMethod='" + paymentMethod + '\'' +
+                "paymentMethod='" + paymentMethod + '\'' +
 
                 '}';
     }

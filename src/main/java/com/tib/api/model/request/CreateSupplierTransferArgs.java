@@ -23,62 +23,62 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Gets or sets the date and time when the transfer must be completed.
- */
+     * Gets or sets the date and time when the transfer must be completed.
+     */
     @JsonProperty("TransferDueDate")
     private LocalDateTime transferDueDate;
 
     /**
- * The merchant receiving the money. Will be null when creating a new supplier.
- */
+     * The merchant receiving the money. Will be null when creating a new supplier.
+     */
     @JsonProperty("TargetMerchantId")
     private String targetMerchantId;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * Defines the frequency at which transfers occur within the TIB Finance API.
- */
+     * Defines the frequency at which transfers occur within the TIB Finance API.
+     */
     @JsonProperty("TransferFrequency")
     private TransferFrequency transferFrequency;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BillNumber")
     private String billNumber;
 
     /**
- * Provides a textual description of the bill associated with a payment.
- */
+     * Provides a textual description of the bill associated with a payment.
+     */
     @JsonProperty("BillDescription")
     private String billDescription;
 
     /**
- * Represents the title of a bill associated with a payment.
- */
+     * Represents the title of a bill associated with a payment.
+     */
     @JsonProperty("BillTitle")
     private String billTitle;
 
@@ -90,32 +90,30 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CreateSupplierTransferArgs(String merchantId, Double amount, LocalDateTime transferDueDate, String targetMerchantId, Currency currency, Language language, TransferFrequency transferFrequency, String billNumber, String billDescription, String billTitle) {
         this.merchantId = merchantId;
-this.amount = amount;
-this.transferDueDate = transferDueDate;
-this.targetMerchantId = targetMerchantId;
-this.currency = currency;
-this.language = language;
-this.transferFrequency = transferFrequency;
-this.billNumber = billNumber;
-this.billDescription = billDescription;
-this.billTitle = billTitle;
-
+        this.amount = amount;
+        this.transferDueDate = transferDueDate;
+        this.targetMerchantId = targetMerchantId;
+        this.currency = currency;
+        this.language = language;
+        this.transferFrequency = transferFrequency;
+        this.billNumber = billNumber;
+        this.billDescription = billDescription;
+        this.billTitle = billTitle;
     }
     
     
     public CreateSupplierTransferArgs(String sessionToken, String merchantId, Double amount, LocalDateTime transferDueDate, String targetMerchantId, Currency currency, Language language, TransferFrequency transferFrequency, String billNumber, String billDescription, String billTitle) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.amount = amount;
-this.transferDueDate = transferDueDate;
-this.targetMerchantId = targetMerchantId;
-this.currency = currency;
-this.language = language;
-this.transferFrequency = transferFrequency;
-this.billNumber = billNumber;
-this.billDescription = billDescription;
-this.billTitle = billTitle;
-
+        this.amount = amount;
+        this.transferDueDate = transferDueDate;
+        this.targetMerchantId = targetMerchantId;
+        this.currency = currency;
+        this.language = language;
+        this.transferFrequency = transferFrequency;
+        this.billNumber = billNumber;
+        this.billDescription = billDescription;
+        this.billTitle = billTitle;
     }
 
     
@@ -219,16 +217,16 @@ this.billTitle = billTitle;
     @Override
     public String toString() {
         return "CreateSupplierTransferArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", amount='" + amount + '\'' +
- ", transferDueDate='" + transferDueDate + '\'' +
- ", targetMerchantId='" + targetMerchantId + '\'' +
- ", currency='" + currency + '\'' +
- ", language='" + language + '\'' +
- ", transferFrequency='" + transferFrequency + '\'' +
- ", billNumber='" + billNumber + '\'' +
- ", billDescription='" + billDescription + '\'' +
- ", billTitle='" + billTitle + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", transferDueDate='" + transferDueDate + '\'' +
+                ", targetMerchantId='" + targetMerchantId + '\'' +
+                ", currency='" + currency + '\'' +
+                ", language='" + language + '\'' +
+                ", transferFrequency='" + transferFrequency + '\'' +
+                ", billNumber='" + billNumber + '\'' +
+                ", billDescription='" + billDescription + '\'' +
+                ", billTitle='" + billTitle + '\'' +
 
                 '}';
     }

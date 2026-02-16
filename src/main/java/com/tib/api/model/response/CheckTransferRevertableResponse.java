@@ -32,16 +32,14 @@ public class CheckTransferRevertableResponse extends CustomAPIResponse {
     public CheckTransferRevertableResponse(Error[] errors, boolean hasError, String messages, boolean isRevertable, String reason) {
         super(errors, hasError, messages);
         this.isRevertable = isRevertable;
-this.reason = reason;
-
+        this.reason = reason;
     }
 
     public CheckTransferRevertableResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.isRevertable = Boolean.parseBoolean(apiResponse.getResponse().toString());
-this.reason = apiResponse.getResponse().toString();
-
+            this.reason = apiResponse.getResponse().toString();
         }
     }
 
@@ -82,8 +80,8 @@ this.reason = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "CheckTransferRevertableResponse{" +
-                 "isRevertable='" + isRevertable + '\'' +
- ", reason='" + reason + '\'' +
+                "isRevertable='" + isRevertable + '\'' +
+                ", reason='" + reason + '\'' +
 
                 '}';
     }

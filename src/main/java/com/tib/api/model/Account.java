@@ -21,86 +21,86 @@ public class Account   {
 
     
     /**
- * Represents the name associated with the merchant's account.
- */
+     * Represents the name associated with the merchant's account.
+     */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
- * The 'Owner' property is designed to assign and identify the ownership of a specific resource or object within the system.
- */
+     * The 'Owner' property is designed to assign and identify the ownership of a specific resource or object within the system.
+     */
     @JsonProperty("Owner")
     private String owner;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FirstName")
     private String firstName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("LastName")
     private String lastName;
 
     /**
- * Specifies the payment method type associated with the account.
- */
+     * Specifies the payment method type associated with the account.
+     */
     @JsonProperty("AccountType")
     private AccountType accountType;
 
     /**
- * Identifies the bank associated with the account using its numeric identifier.
- */
+     * Identifies the bank associated with the account using its numeric identifier.
+     */
     @JsonProperty("BankNumber")
     private String bankNumber;
 
     /**
- * Bank institution code identifying the financial institution for a transaction.
- */
+     * Bank institution code identifying the financial institution for a transaction.
+     */
     @JsonProperty("InstitutionNumber")
     private String institutionNumber;
 
     /**
- * Specifies the bank account number associated with the payment method.
- */
+     * Specifies the bank account number associated with the payment method.
+     */
     @JsonProperty("AccountNumber")
     private String accountNumber;
 
     /**
- * The routing number identifying the bank where the customer's account is held.
- */
+     * The routing number identifying the bank where the customer's account is held.
+     */
     @JsonProperty("RoutingNumber")
     private String routingNumber;
 
     /**
- * Some bank as check digit
- */
+     * Some bank as check digit
+     */
     @JsonProperty("CheckDigit")
     private String checkDigit;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Full account number
- */
+     * Full account number
+     */
     @JsonProperty("FullAccountNumber")
     private String fullAccountNumber;
 
     /**
- * Gets the account number with check digit.
- */
+     * Gets the account number with check digit.
+     */
     @JsonProperty("AccountNumberWithCheckDigit")
     private String accountNumberWithCheckDigit;
 
     /**
- * Obfuscated string of the account
- */
+     * Obfuscated string of the account
+     */
     @JsonProperty("PreviewString")
     private String previewString;
 
@@ -112,20 +112,19 @@ public class Account   {
     
     public Account(String accountName, String owner, String firstName, String lastName, AccountType accountType, String bankNumber, String institutionNumber, String accountNumber, String routingNumber, String checkDigit, Currency currency, String fullAccountNumber, String accountNumberWithCheckDigit, String previewString) {
         this.accountName = accountName;
-this.owner = owner;
-this.firstName = firstName;
-this.lastName = lastName;
-this.accountType = accountType;
-this.bankNumber = bankNumber;
-this.institutionNumber = institutionNumber;
-this.accountNumber = accountNumber;
-this.routingNumber = routingNumber;
-this.checkDigit = checkDigit;
-this.currency = currency;
-this.fullAccountNumber = fullAccountNumber;
-this.accountNumberWithCheckDigit = accountNumberWithCheckDigit;
-this.previewString = previewString;
-
+        this.owner = owner;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.accountType = accountType;
+        this.bankNumber = bankNumber;
+        this.institutionNumber = institutionNumber;
+        this.accountNumber = accountNumber;
+        this.routingNumber = routingNumber;
+        this.checkDigit = checkDigit;
+        this.currency = currency;
+        this.fullAccountNumber = fullAccountNumber;
+        this.accountNumberWithCheckDigit = accountNumberWithCheckDigit;
+        this.previewString = previewString;
     }
     
     
@@ -263,20 +262,20 @@ this.previewString = previewString;
     @Override
     public String toString() {
         return "Account{" +
-                 "accountName='" + accountName + '\'' +
- ", owner='" + owner + '\'' +
- ", firstName='" + firstName + '\'' +
- ", lastName='" + lastName + '\'' +
- ", accountType='" + accountType + '\'' +
- ", bankNumber='" + bankNumber + '\'' +
- ", institutionNumber='" + institutionNumber + '\'' +
- ", accountNumber='" + accountNumber + '\'' +
- ", routingNumber='" + routingNumber + '\'' +
- ", checkDigit='" + checkDigit + '\'' +
- ", currency='" + currency + '\'' +
- ", fullAccountNumber='" + fullAccountNumber + '\'' +
- ", accountNumberWithCheckDigit='" + accountNumberWithCheckDigit + '\'' +
- ", previewString='" + previewString + '\'' +
+                "accountName='" + accountName + '\'' +
+                ", owner='" + owner + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", accountType='" + accountType + '\'' +
+                ", bankNumber='" + bankNumber + '\'' +
+                ", institutionNumber='" + institutionNumber + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", routingNumber='" + routingNumber + '\'' +
+                ", checkDigit='" + checkDigit + '\'' +
+                ", currency='" + currency + '\'' +
+                ", fullAccountNumber='" + fullAccountNumber + '\'' +
+                ", accountNumberWithCheckDigit='" + accountNumberWithCheckDigit + '\'' +
+                ", previewString='" + previewString + '\'' +
 
                 '}';
     }

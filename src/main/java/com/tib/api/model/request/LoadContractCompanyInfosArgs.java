@@ -29,7 +29,6 @@ public class LoadContractCompanyInfosArgs  extends BaseAuthenticatePublicTokenAr
     
     public LoadContractCompanyInfosArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

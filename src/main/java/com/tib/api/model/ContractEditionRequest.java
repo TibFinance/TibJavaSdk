@@ -19,56 +19,56 @@ public class ContractEditionRequest   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ContractEditionRequestId")
     private Integer contractEditionRequestId;
 
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RequestContent")
     private String requestContent;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RequestContentPreview")
     private String requestContentPreview;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CreatedAt")
     private String createdAt;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProcessedAt")
     private String processedAt;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RequestStatus")
     private Integer requestStatus;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProcessedDate")
     private LocalDateTime processedDate;
 
@@ -80,15 +80,14 @@ public class ContractEditionRequest   {
     
     public ContractEditionRequest(Integer contractEditionRequestId, String clientId, String requestContent, String requestContentPreview, String createdAt, String processedAt, Integer requestStatus, LocalDateTime createdDate, LocalDateTime processedDate) {
         this.contractEditionRequestId = contractEditionRequestId;
-this.clientId = clientId;
-this.requestContent = requestContent;
-this.requestContentPreview = requestContentPreview;
-this.createdAt = createdAt;
-this.processedAt = processedAt;
-this.requestStatus = requestStatus;
-this.createdDate = createdDate;
-this.processedDate = processedDate;
-
+        this.clientId = clientId;
+        this.requestContent = requestContent;
+        this.requestContentPreview = requestContentPreview;
+        this.createdAt = createdAt;
+        this.processedAt = processedAt;
+        this.requestStatus = requestStatus;
+        this.createdDate = createdDate;
+        this.processedDate = processedDate;
     }
     
     
@@ -186,15 +185,15 @@ this.processedDate = processedDate;
     @Override
     public String toString() {
         return "ContractEditionRequest{" +
-                 "contractEditionRequestId='" + contractEditionRequestId + '\'' +
- ", clientId='" + clientId + '\'' +
- ", requestContent='" + requestContent + '\'' +
- ", requestContentPreview='" + requestContentPreview + '\'' +
- ", createdAt='" + createdAt + '\'' +
- ", processedAt='" + processedAt + '\'' +
- ", requestStatus='" + requestStatus + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", processedDate='" + processedDate + '\'' +
+                "contractEditionRequestId='" + contractEditionRequestId + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", requestContent='" + requestContent + '\'' +
+                ", requestContentPreview='" + requestContentPreview + '\'' +
+                ", createdAt='" + createdAt + '\'' +
+                ", processedAt='" + processedAt + '\'' +
+                ", requestStatus='" + requestStatus + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", processedDate='" + processedDate + '\'' +
 
                 '}';
     }

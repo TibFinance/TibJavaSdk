@@ -25,13 +25,11 @@ public class SetClientSettingsResponse extends CustomAPIResponse {
 
     public SetClientSettingsResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SetClientSettingsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

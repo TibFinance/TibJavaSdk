@@ -25,13 +25,11 @@ public class ProcessAllEventsToBroadcastResponse extends CustomAPIResponse {
 
     public ProcessAllEventsToBroadcastResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public ProcessAllEventsToBroadcastResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

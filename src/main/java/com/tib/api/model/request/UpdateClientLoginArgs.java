@@ -21,14 +21,14 @@ public class UpdateClientLoginArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
- */
+     * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
+     */
     @JsonProperty("Password")
     private String password;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientLogin")
     private UpdateLogin clientLogin;
 
@@ -40,16 +40,14 @@ public class UpdateClientLoginArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public UpdateClientLoginArgs(String password, UpdateLogin clientLogin) {
         this.password = password;
-this.clientLogin = clientLogin;
-
+        this.clientLogin = clientLogin;
     }
     
     
     public UpdateClientLoginArgs(String adminSessionToken, String password, UpdateLogin clientLogin) {
         super(adminSessionToken);
         this.password = password;
-this.clientLogin = clientLogin;
-
+        this.clientLogin = clientLogin;
     }
 
     
@@ -89,8 +87,8 @@ this.clientLogin = clientLogin;
     @Override
     public String toString() {
         return "UpdateClientLoginArgs{" +
-                 "password='" + password + '\'' +
- ", clientLogin='" + clientLogin + '\'' +
+                "password='" + password + '\'' +
+                ", clientLogin='" + clientLogin + '\'' +
 
                 '}';
     }

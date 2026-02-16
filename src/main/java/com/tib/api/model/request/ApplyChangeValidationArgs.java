@@ -20,14 +20,14 @@ public class ApplyChangeValidationArgs  extends BaseAuthenticatePublicTokenArgs 
 
     
     /**
- * This token is provided by the PendingChange. The method GetChangeValidation in the Gateway provide the necessery information
- */
+     * This token is provided by the PendingChange. The method GetChangeValidation in the Gateway provide the necessery information
+     */
     @JsonProperty("ValidationToken")
     private String validationToken;
 
     /**
- * Gets or sets a value indicating whether [change approved].
- */
+     * Gets or sets a value indicating whether [change approved].
+     */
     @JsonProperty("ChangeApproved")
     private boolean changeApproved;
 
@@ -39,16 +39,14 @@ public class ApplyChangeValidationArgs  extends BaseAuthenticatePublicTokenArgs 
     
     public ApplyChangeValidationArgs(String validationToken, boolean changeApproved) {
         this.validationToken = validationToken;
-this.changeApproved = changeApproved;
-
+        this.changeApproved = changeApproved;
     }
     
     
     public ApplyChangeValidationArgs(String publicTokenId, String validationToken, boolean changeApproved) {
         super(publicTokenId);
         this.validationToken = validationToken;
-this.changeApproved = changeApproved;
-
+        this.changeApproved = changeApproved;
     }
 
     
@@ -88,8 +86,8 @@ this.changeApproved = changeApproved;
     @Override
     public String toString() {
         return "ApplyChangeValidationArgs{" +
-                 "validationToken='" + validationToken + '\'' +
- ", changeApproved='" + changeApproved + '\'' +
+                "validationToken='" + validationToken + '\'' +
+                ", changeApproved='" + changeApproved + '\'' +
 
                 '}';
     }

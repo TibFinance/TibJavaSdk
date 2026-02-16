@@ -21,56 +21,56 @@ public class ListPaymentsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Specifies the hierarchical level used when querying payments, indicating which data table the LevelFilterId applies to. A null value selects payments from all client levels.
- */
+     * Specifies the hierarchical level used when querying payments, indicating which data table the LevelFilterId applies to. A null value selects payments from all client levels.
+     */
     @JsonProperty("PaymentFilterLevel")
     private PaymentFilterLevel paymentFilterLevel;
 
     /**
- * Identifies the Service, Merchant, or Bill entity referenced by the PaymentFilterLevel.
- */
+     * Identifies the Service, Merchant, or Bill entity referenced by the PaymentFilterLevel.
+     */
     @JsonProperty("LevelFilterId")
     private String levelFilterId;
 
     /**
- * Indicates whether the request should consider only payments that are already marked as resolved.
- */
+     * Indicates whether the request should consider only payments that are already marked as resolved.
+     */
     @JsonProperty("MarkResolvedOnly")
     private boolean markResolvedOnly;
 
     /**
- * Specifies the starting date for filtering payment due dates.
- */
+     * Specifies the starting date for filtering payment due dates.
+     */
     @JsonProperty("FromDate")
     private LocalDateTime fromDate;
 
     /**
- * Specifies the payment due date.
- */
+     * Specifies the payment due date.
+     */
     @JsonProperty("ToDate")
     private LocalDateTime toDate;
 
     /**
- * Identifies the group of related transfer operations.
- */
+     * Identifies the group of related transfer operations.
+     */
     @JsonProperty("TransferGroupId")
     private String transferGroupId;
 
     /**
- * External merchant group identifier used to filter transfer operations.
- */
+     * External merchant group identifier used to filter transfer operations.
+     */
     @JsonProperty("ExternalMerchantGroupId")
     private String externalMerchantGroupId;
 
     /**
- * Indicates whether the transfer list should be filtered to include only operations that have an error status.
- */
+     * Indicates whether the transfer list should be filtered to include only operations that have an error status.
+     */
     @JsonProperty("OnlyWithErrors")
     private boolean onlyWithErrors;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -82,30 +82,28 @@ public class ListPaymentsArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public ListPaymentsArgs(PaymentFilterLevel paymentFilterLevel, String levelFilterId, boolean markResolvedOnly, LocalDateTime fromDate, LocalDateTime toDate, String transferGroupId, String externalMerchantGroupId, boolean onlyWithErrors, String merchantId) {
         this.paymentFilterLevel = paymentFilterLevel;
-this.levelFilterId = levelFilterId;
-this.markResolvedOnly = markResolvedOnly;
-this.fromDate = fromDate;
-this.toDate = toDate;
-this.transferGroupId = transferGroupId;
-this.externalMerchantGroupId = externalMerchantGroupId;
-this.onlyWithErrors = onlyWithErrors;
-this.merchantId = merchantId;
-
+        this.levelFilterId = levelFilterId;
+        this.markResolvedOnly = markResolvedOnly;
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+        this.transferGroupId = transferGroupId;
+        this.externalMerchantGroupId = externalMerchantGroupId;
+        this.onlyWithErrors = onlyWithErrors;
+        this.merchantId = merchantId;
     }
     
     
     public ListPaymentsArgs(String sessionToken, PaymentFilterLevel paymentFilterLevel, String levelFilterId, boolean markResolvedOnly, LocalDateTime fromDate, LocalDateTime toDate, String transferGroupId, String externalMerchantGroupId, boolean onlyWithErrors, String merchantId) {
         super(sessionToken);
         this.paymentFilterLevel = paymentFilterLevel;
-this.levelFilterId = levelFilterId;
-this.markResolvedOnly = markResolvedOnly;
-this.fromDate = fromDate;
-this.toDate = toDate;
-this.transferGroupId = transferGroupId;
-this.externalMerchantGroupId = externalMerchantGroupId;
-this.onlyWithErrors = onlyWithErrors;
-this.merchantId = merchantId;
-
+        this.levelFilterId = levelFilterId;
+        this.markResolvedOnly = markResolvedOnly;
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+        this.transferGroupId = transferGroupId;
+        this.externalMerchantGroupId = externalMerchantGroupId;
+        this.onlyWithErrors = onlyWithErrors;
+        this.merchantId = merchantId;
     }
 
     
@@ -201,15 +199,15 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "ListPaymentsArgs{" +
-                 "paymentFilterLevel='" + paymentFilterLevel + '\'' +
- ", levelFilterId='" + levelFilterId + '\'' +
- ", markResolvedOnly='" + markResolvedOnly + '\'' +
- ", fromDate='" + fromDate + '\'' +
- ", toDate='" + toDate + '\'' +
- ", transferGroupId='" + transferGroupId + '\'' +
- ", externalMerchantGroupId='" + externalMerchantGroupId + '\'' +
- ", onlyWithErrors='" + onlyWithErrors + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "paymentFilterLevel='" + paymentFilterLevel + '\'' +
+                ", levelFilterId='" + levelFilterId + '\'' +
+                ", markResolvedOnly='" + markResolvedOnly + '\'' +
+                ", fromDate='" + fromDate + '\'' +
+                ", toDate='" + toDate + '\'' +
+                ", transferGroupId='" + transferGroupId + '\'' +
+                ", externalMerchantGroupId='" + externalMerchantGroupId + '\'' +
+                ", onlyWithErrors='" + onlyWithErrors + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

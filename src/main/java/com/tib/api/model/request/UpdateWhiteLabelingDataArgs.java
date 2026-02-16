@@ -21,20 +21,20 @@ public class UpdateWhiteLabelingDataArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("UpdatedWhiteLabelingData")
     private List<WhiteLabelingData> updatedWhiteLabelingData;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WhiteLabelId")
     private String whiteLabelId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Logo")
     private String logo;
 
@@ -46,18 +46,16 @@ public class UpdateWhiteLabelingDataArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public UpdateWhiteLabelingDataArgs(List<WhiteLabelingData> updatedWhiteLabelingData, String whiteLabelId, String logo) {
         this.updatedWhiteLabelingData = updatedWhiteLabelingData;
-this.whiteLabelId = whiteLabelId;
-this.logo = logo;
-
+        this.whiteLabelId = whiteLabelId;
+        this.logo = logo;
     }
     
     
     public UpdateWhiteLabelingDataArgs(String adminSessionToken, List<WhiteLabelingData> updatedWhiteLabelingData, String whiteLabelId, String logo) {
         super(adminSessionToken);
         this.updatedWhiteLabelingData = updatedWhiteLabelingData;
-this.whiteLabelId = whiteLabelId;
-this.logo = logo;
-
+        this.whiteLabelId = whiteLabelId;
+        this.logo = logo;
     }
 
     
@@ -105,9 +103,9 @@ this.logo = logo;
     @Override
     public String toString() {
         return "UpdateWhiteLabelingDataArgs{" +
-                 "updatedWhiteLabelingData='" + updatedWhiteLabelingData + '\'' +
- ", whiteLabelId='" + whiteLabelId + '\'' +
- ", logo='" + logo + '\'' +
+                "updatedWhiteLabelingData='" + updatedWhiteLabelingData + '\'' +
+                ", whiteLabelId='" + whiteLabelId + '\'' +
+                ", logo='" + logo + '\'' +
 
                 '}';
     }

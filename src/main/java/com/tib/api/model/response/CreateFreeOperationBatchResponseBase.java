@@ -42,19 +42,17 @@ public class CreateFreeOperationBatchResponseBase extends CustomAPIResponse {
     public CreateFreeOperationBatchResponseBase(Error[] errors, boolean hasError, String messages, Integer status, String paymentId, String referenceNumber, String message, RequestDataResponse requestDataResponse) {
         super(errors, hasError, messages);
         this.status = status;
-this.paymentId = paymentId;
-this.referenceNumber = referenceNumber;
-this.message = message;
-this.requestDataResponse = requestDataResponse;
-
+        this.paymentId = paymentId;
+        this.referenceNumber = referenceNumber;
+        this.message = message;
+        this.requestDataResponse = requestDataResponse;
     }
 
     public CreateFreeOperationBatchResponseBase(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.requestDataResponse = objectMapper.readValue(json, RequestDataResponse.class);
-
+            this.requestDataResponse = objectMapper.readValue(json, RequestDataResponse.class);
         }
     }
 
@@ -119,11 +117,11 @@ this.requestDataResponse = objectMapper.readValue(json, RequestDataResponse.clas
     @Override
     public String toString() {
         return "CreateFreeOperationBatchResponseBase{" +
-                 "status='" + status + '\'' +
- ", paymentId='" + paymentId + '\'' +
- ", referenceNumber='" + referenceNumber + '\'' +
- ", message='" + message + '\'' +
- ", requestDataResponse='" + requestDataResponse + '\'' +
+                "status='" + status + '\'' +
+                ", paymentId='" + paymentId + '\'' +
+                ", referenceNumber='" + referenceNumber + '\'' +
+                ", message='" + message + '\'' +
+                ", requestDataResponse='" + requestDataResponse + '\'' +
 
                 '}';
     }

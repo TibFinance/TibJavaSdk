@@ -20,92 +20,92 @@ public class TransferPendingProcessPayload  extends BaseEventPayload  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Retrieves or assigns the service's name.
- */
+     * Retrieves or assigns the service's name.
+     */
     @JsonProperty("ServiceName")
     private String serviceName;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Identifier of the merchant in an external system
- */
+     * Identifier of the merchant in an external system
+     */
     @JsonProperty("MerchantExternalSystemId")
     private String merchantExternalSystemId;
 
     /**
- * Identifier of the merchant's external system group.
- */
+     * Identifier of the merchant's external system group.
+     */
     @JsonProperty("MerchantExternalSystemGroupId")
     private String merchantExternalSystemGroupId;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * Indicates whether the payment is processed automatically without user intervention.
- */
+     * Indicates whether the payment is processed automatically without user intervention.
+     */
     @JsonProperty("IsAutomaticPayment")
     private boolean isAutomaticPayment;
 
     /**
- * Contains metadata for a payment operation.
- */
+     * Contains metadata for a payment operation.
+     */
     @JsonProperty("PaymentInfo")
     private TransferPayload paymentInfo;
 
     /**
- * Flag used to indicate that the payment is resolved in the third‑party system. It is employed solely for filtering payment lists.
- */
+     * Flag used to indicate that the payment is resolved in the third‑party system. It is employed solely for filtering payment lists.
+     */
     @JsonProperty("IsMarkResolved")
     private boolean isMarkResolved;
 
     /**
- * Current processing state of a transaction or operation.
- */
+     * Current processing state of a transaction or operation.
+     */
     @JsonProperty("CurrentStatus")
     private Integer currentStatus;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private String createdDate;
 
     /**
- * Provides a detailed description of the payment method for easy identification.
- */
+     * Provides a detailed description of the payment method for easy identification.
+     */
     @JsonProperty("PaymentMethodDescription")
     private String paymentMethodDescription;
 
     /**
- * Provides a read‑only preview of the merchant’s bank account information.
- */
+     * Provides a read‑only preview of the merchant’s bank account information.
+     */
     @JsonProperty("AccountInformationPreview")
     private String accountInformationPreview;
 
     /**
- * Identifies the type of payment method linked to a specific account.
- */
+     * Identifies the type of payment method linked to a specific account.
+     */
     @JsonProperty("PaymentMethodType")
     private Integer paymentMethodType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PreCalculatedFees")
     private Double preCalculatedFees;
 
@@ -117,42 +117,40 @@ public class TransferPendingProcessPayload  extends BaseEventPayload  {
     
     public TransferPendingProcessPayload(String serviceId, String serviceName, String merchantId, String merchantExternalSystemId, String merchantExternalSystemGroupId, String merchantName, boolean isAutomaticPayment, TransferPayload paymentInfo, boolean isMarkResolved, Integer currentStatus, String createdDate, String paymentMethodDescription, String accountInformationPreview, Integer paymentMethodType, Double preCalculatedFees) {
         this.serviceId = serviceId;
-this.serviceName = serviceName;
-this.merchantId = merchantId;
-this.merchantExternalSystemId = merchantExternalSystemId;
-this.merchantExternalSystemGroupId = merchantExternalSystemGroupId;
-this.merchantName = merchantName;
-this.isAutomaticPayment = isAutomaticPayment;
-this.paymentInfo = paymentInfo;
-this.isMarkResolved = isMarkResolved;
-this.currentStatus = currentStatus;
-this.createdDate = createdDate;
-this.paymentMethodDescription = paymentMethodDescription;
-this.accountInformationPreview = accountInformationPreview;
-this.paymentMethodType = paymentMethodType;
-this.preCalculatedFees = preCalculatedFees;
-
+        this.serviceName = serviceName;
+        this.merchantId = merchantId;
+        this.merchantExternalSystemId = merchantExternalSystemId;
+        this.merchantExternalSystemGroupId = merchantExternalSystemGroupId;
+        this.merchantName = merchantName;
+        this.isAutomaticPayment = isAutomaticPayment;
+        this.paymentInfo = paymentInfo;
+        this.isMarkResolved = isMarkResolved;
+        this.currentStatus = currentStatus;
+        this.createdDate = createdDate;
+        this.paymentMethodDescription = paymentMethodDescription;
+        this.accountInformationPreview = accountInformationPreview;
+        this.paymentMethodType = paymentMethodType;
+        this.preCalculatedFees = preCalculatedFees;
     }
     
     
     public TransferPendingProcessPayload(String eventName, String serviceId, String serviceName, String merchantId, String merchantExternalSystemId, String merchantExternalSystemGroupId, String merchantName, boolean isAutomaticPayment, TransferPayload paymentInfo, boolean isMarkResolved, Integer currentStatus, String createdDate, String paymentMethodDescription, String accountInformationPreview, Integer paymentMethodType, Double preCalculatedFees) {
         super(eventName);
         this.serviceId = serviceId;
-this.serviceName = serviceName;
-this.merchantId = merchantId;
-this.merchantExternalSystemId = merchantExternalSystemId;
-this.merchantExternalSystemGroupId = merchantExternalSystemGroupId;
-this.merchantName = merchantName;
-this.isAutomaticPayment = isAutomaticPayment;
-this.paymentInfo = paymentInfo;
-this.isMarkResolved = isMarkResolved;
-this.currentStatus = currentStatus;
-this.createdDate = createdDate;
-this.paymentMethodDescription = paymentMethodDescription;
-this.accountInformationPreview = accountInformationPreview;
-this.paymentMethodType = paymentMethodType;
-this.preCalculatedFees = preCalculatedFees;
-
+        this.serviceName = serviceName;
+        this.merchantId = merchantId;
+        this.merchantExternalSystemId = merchantExternalSystemId;
+        this.merchantExternalSystemGroupId = merchantExternalSystemGroupId;
+        this.merchantName = merchantName;
+        this.isAutomaticPayment = isAutomaticPayment;
+        this.paymentInfo = paymentInfo;
+        this.isMarkResolved = isMarkResolved;
+        this.currentStatus = currentStatus;
+        this.createdDate = createdDate;
+        this.paymentMethodDescription = paymentMethodDescription;
+        this.accountInformationPreview = accountInformationPreview;
+        this.paymentMethodType = paymentMethodType;
+        this.preCalculatedFees = preCalculatedFees;
     }
 
     
@@ -296,21 +294,21 @@ this.preCalculatedFees = preCalculatedFees;
     @Override
     public String toString() {
         return "TransferPendingProcessPayload{" +
-                 "serviceId='" + serviceId + '\'' +
- ", serviceName='" + serviceName + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", merchantExternalSystemId='" + merchantExternalSystemId + '\'' +
- ", merchantExternalSystemGroupId='" + merchantExternalSystemGroupId + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", isAutomaticPayment='" + isAutomaticPayment + '\'' +
- ", paymentInfo='" + paymentInfo + '\'' +
- ", isMarkResolved='" + isMarkResolved + '\'' +
- ", currentStatus='" + currentStatus + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
- ", accountInformationPreview='" + accountInformationPreview + '\'' +
- ", paymentMethodType='" + paymentMethodType + '\'' +
- ", preCalculatedFees='" + preCalculatedFees + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", serviceName='" + serviceName + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", merchantExternalSystemId='" + merchantExternalSystemId + '\'' +
+                ", merchantExternalSystemGroupId='" + merchantExternalSystemGroupId + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", isAutomaticPayment='" + isAutomaticPayment + '\'' +
+                ", paymentInfo='" + paymentInfo + '\'' +
+                ", isMarkResolved='" + isMarkResolved + '\'' +
+                ", currentStatus='" + currentStatus + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
+                ", accountInformationPreview='" + accountInformationPreview + '\'' +
+                ", paymentMethodType='" + paymentMethodType + '\'' +
+                ", preCalculatedFees='" + preCalculatedFees + '\'' +
 
                 '}';
     }

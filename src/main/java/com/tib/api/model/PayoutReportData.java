@@ -20,68 +20,68 @@ public class PayoutReportData   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransferCount")
     private Integer transferCount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ExternalId")
     private String externalId;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PayoutDate")
     private LocalDateTime payoutDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("GrossAmount")
     private Double grossAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProcessingFeesAmount")
     private Double processingFeesAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ConvenientFeesAmount")
     private Double convenientFeesAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("NonProcessingFeesAmount")
     private Double nonProcessingFeesAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TotalPaidAmount")
     private Double totalPaidAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RefundsAmount")
     private Double refundsAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("NonProcessingDescriptions")
     private List<String> nonProcessingDescriptions;
 
@@ -93,17 +93,16 @@ public class PayoutReportData   {
     
     public PayoutReportData(Integer transferCount, String externalId, Currency currency, LocalDateTime payoutDate, Double grossAmount, Double processingFeesAmount, Double convenientFeesAmount, Double nonProcessingFeesAmount, Double totalPaidAmount, Double refundsAmount, List<String> nonProcessingDescriptions) {
         this.transferCount = transferCount;
-this.externalId = externalId;
-this.currency = currency;
-this.payoutDate = payoutDate;
-this.grossAmount = grossAmount;
-this.processingFeesAmount = processingFeesAmount;
-this.convenientFeesAmount = convenientFeesAmount;
-this.nonProcessingFeesAmount = nonProcessingFeesAmount;
-this.totalPaidAmount = totalPaidAmount;
-this.refundsAmount = refundsAmount;
-this.nonProcessingDescriptions = nonProcessingDescriptions;
-
+        this.externalId = externalId;
+        this.currency = currency;
+        this.payoutDate = payoutDate;
+        this.grossAmount = grossAmount;
+        this.processingFeesAmount = processingFeesAmount;
+        this.convenientFeesAmount = convenientFeesAmount;
+        this.nonProcessingFeesAmount = nonProcessingFeesAmount;
+        this.totalPaidAmount = totalPaidAmount;
+        this.refundsAmount = refundsAmount;
+        this.nonProcessingDescriptions = nonProcessingDescriptions;
     }
     
     
@@ -217,17 +216,17 @@ this.nonProcessingDescriptions = nonProcessingDescriptions;
     @Override
     public String toString() {
         return "PayoutReportData{" +
-                 "transferCount='" + transferCount + '\'' +
- ", externalId='" + externalId + '\'' +
- ", currency='" + currency + '\'' +
- ", payoutDate='" + payoutDate + '\'' +
- ", grossAmount='" + grossAmount + '\'' +
- ", processingFeesAmount='" + processingFeesAmount + '\'' +
- ", convenientFeesAmount='" + convenientFeesAmount + '\'' +
- ", nonProcessingFeesAmount='" + nonProcessingFeesAmount + '\'' +
- ", totalPaidAmount='" + totalPaidAmount + '\'' +
- ", refundsAmount='" + refundsAmount + '\'' +
- ", nonProcessingDescriptions='" + nonProcessingDescriptions + '\'' +
+                "transferCount='" + transferCount + '\'' +
+                ", externalId='" + externalId + '\'' +
+                ", currency='" + currency + '\'' +
+                ", payoutDate='" + payoutDate + '\'' +
+                ", grossAmount='" + grossAmount + '\'' +
+                ", processingFeesAmount='" + processingFeesAmount + '\'' +
+                ", convenientFeesAmount='" + convenientFeesAmount + '\'' +
+                ", nonProcessingFeesAmount='" + nonProcessingFeesAmount + '\'' +
+                ", totalPaidAmount='" + totalPaidAmount + '\'' +
+                ", refundsAmount='" + refundsAmount + '\'' +
+                ", nonProcessingDescriptions='" + nonProcessingDescriptions + '\'' +
 
                 '}';
     }

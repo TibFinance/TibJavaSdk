@@ -21,8 +21,8 @@ public class AddOrUpdateConvenientFeeSettingsForMerchantArgs  extends BaseAuthen
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ConvenientFeeSettings")
     private ConvenientFeeSettings convenientFeeSettings;
 
@@ -34,14 +34,12 @@ public class AddOrUpdateConvenientFeeSettingsForMerchantArgs  extends BaseAuthen
     
     public AddOrUpdateConvenientFeeSettingsForMerchantArgs(ConvenientFeeSettings convenientFeeSettings) {
         this.convenientFeeSettings = convenientFeeSettings;
-
     }
     
     
     public AddOrUpdateConvenientFeeSettingsForMerchantArgs(String sessionToken, ConvenientFeeSettings convenientFeeSettings) {
         super(sessionToken);
         this.convenientFeeSettings = convenientFeeSettings;
-
     }
 
     
@@ -73,7 +71,7 @@ public class AddOrUpdateConvenientFeeSettingsForMerchantArgs  extends BaseAuthen
     @Override
     public String toString() {
         return "AddOrUpdateConvenientFeeSettingsForMerchantArgs{" +
-                 "convenientFeeSettings='" + convenientFeeSettings + '\'' +
+                "convenientFeeSettings='" + convenientFeeSettings + '\'' +
 
                 '}';
     }

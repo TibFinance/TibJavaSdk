@@ -20,8 +20,8 @@ public class DeleteConvenientFeeSettingsArgs  extends BaseAuthenticatedCryptedAr
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Id")
     private String id;
 
@@ -33,14 +33,12 @@ public class DeleteConvenientFeeSettingsArgs  extends BaseAuthenticatedCryptedAr
     
     public DeleteConvenientFeeSettingsArgs(String id) {
         this.id = id;
-
     }
     
     
     public DeleteConvenientFeeSettingsArgs(String sessionToken, String id) {
         super(sessionToken);
         this.id = id;
-
     }
 
     
@@ -72,7 +70,7 @@ public class DeleteConvenientFeeSettingsArgs  extends BaseAuthenticatedCryptedAr
     @Override
     public String toString() {
         return "DeleteConvenientFeeSettingsArgs{" +
-                 "id='" + id + '\'' +
+                "id='" + id + '\'' +
 
                 '}';
     }

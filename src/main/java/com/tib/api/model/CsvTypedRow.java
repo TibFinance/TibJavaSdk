@@ -24,110 +24,110 @@ public class CsvTypedRow   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OrganizationNumber")
     private String organizationNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FileNumber")
     private Integer fileNumber;
 
     /**
- * Specifies the operation category used throughout the API.
- */
+     * Specifies the operation category used throughout the API.
+     */
     @JsonProperty("OperationType")
     private TransferDirection operationType;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DateFundsAvailable")
     private LocalDateTime dateFundsAvailable;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TargetName")
     private String targetName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TargetInstitutionNumber")
     private String targetInstitutionNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TargetFullAccountNumber")
     private String targetFullAccountNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RefNumber")
     private String refNumber;
 
     /**
- * Specifies the email address associated with the merchant.
- */
+     * Specifies the email address associated with the merchant.
+     */
     @JsonProperty("Email")
     private String email;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Phone")
     private String phone;
 
     /**
- * Gets or sets the address associated with the entity.
- */
+     * Gets or sets the address associated with the entity.
+     */
     @JsonProperty("Address")
     private String address;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("City")
     private String city;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Province")
     private ProvinceStateId province;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Country")
     private CountryId country;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ZipCode")
     private String zipCode;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Frequency")
     private TransferFrequency frequency;
 
@@ -139,24 +139,23 @@ public class CsvTypedRow   {
     
     public CsvTypedRow(String organizationNumber, Integer fileNumber, TransferDirection operationType, Double amount, LocalDateTime dateFundsAvailable, String targetName, String targetInstitutionNumber, String targetFullAccountNumber, String refNumber, String email, String phone, String address, String city, ProvinceStateId province, CountryId country, String zipCode, Language language, TransferFrequency frequency) {
         this.organizationNumber = organizationNumber;
-this.fileNumber = fileNumber;
-this.operationType = operationType;
-this.amount = amount;
-this.dateFundsAvailable = dateFundsAvailable;
-this.targetName = targetName;
-this.targetInstitutionNumber = targetInstitutionNumber;
-this.targetFullAccountNumber = targetFullAccountNumber;
-this.refNumber = refNumber;
-this.email = email;
-this.phone = phone;
-this.address = address;
-this.city = city;
-this.province = province;
-this.country = country;
-this.zipCode = zipCode;
-this.language = language;
-this.frequency = frequency;
-
+        this.fileNumber = fileNumber;
+        this.operationType = operationType;
+        this.amount = amount;
+        this.dateFundsAvailable = dateFundsAvailable;
+        this.targetName = targetName;
+        this.targetInstitutionNumber = targetInstitutionNumber;
+        this.targetFullAccountNumber = targetFullAccountNumber;
+        this.refNumber = refNumber;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.city = city;
+        this.province = province;
+        this.country = country;
+        this.zipCode = zipCode;
+        this.language = language;
+        this.frequency = frequency;
     }
     
     
@@ -326,24 +325,24 @@ this.frequency = frequency;
     @Override
     public String toString() {
         return "CsvTypedRow{" +
-                 "organizationNumber='" + organizationNumber + '\'' +
- ", fileNumber='" + fileNumber + '\'' +
- ", operationType='" + operationType + '\'' +
- ", amount='" + amount + '\'' +
- ", dateFundsAvailable='" + dateFundsAvailable + '\'' +
- ", targetName='" + targetName + '\'' +
- ", targetInstitutionNumber='" + targetInstitutionNumber + '\'' +
- ", targetFullAccountNumber='" + targetFullAccountNumber + '\'' +
- ", refNumber='" + refNumber + '\'' +
- ", email='" + email + '\'' +
- ", phone='" + phone + '\'' +
- ", address='" + address + '\'' +
- ", city='" + city + '\'' +
- ", province='" + province + '\'' +
- ", country='" + country + '\'' +
- ", zipCode='" + zipCode + '\'' +
- ", language='" + language + '\'' +
- ", frequency='" + frequency + '\'' +
+                "organizationNumber='" + organizationNumber + '\'' +
+                ", fileNumber='" + fileNumber + '\'' +
+                ", operationType='" + operationType + '\'' +
+                ", amount='" + amount + '\'' +
+                ", dateFundsAvailable='" + dateFundsAvailable + '\'' +
+                ", targetName='" + targetName + '\'' +
+                ", targetInstitutionNumber='" + targetInstitutionNumber + '\'' +
+                ", targetFullAccountNumber='" + targetFullAccountNumber + '\'' +
+                ", refNumber='" + refNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", province='" + province + '\'' +
+                ", country='" + country + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", language='" + language + '\'' +
+                ", frequency='" + frequency + '\'' +
 
                 '}';
     }

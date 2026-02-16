@@ -21,32 +21,32 @@ public class Address   {
 
     
     /**
- * Represents the street address associated with a specific entity or location.
- */
+     * Represents the street address associated with a specific entity or location.
+     */
     @JsonProperty("StreetAddress")
     private String streetAddress;
 
     /**
- * Retrieves or assigns the city component of an address.
- */
+     * Retrieves or assigns the city component of an address.
+     */
     @JsonProperty("AddressCity")
     private String addressCity;
 
     /**
- * Represents the unique identifier for a province or state within the system.
- */
+     * Represents the unique identifier for a province or state within the system.
+     */
     @JsonProperty("ProvinceStateId")
     private ProvinceStateId provinceStateId;
 
     /**
- * Gets or sets the identifier of the country using the CountryIdEnum enumeration. This identifier is required when specifying the country for client, service, or merchant operations.
- */
+     * Gets or sets the identifier of the country using the CountryIdEnum enumeration. This identifier is required when specifying the country for client, service, or merchant operations.
+     */
     @JsonProperty("CountryId")
     private CountryId countryId;
 
     /**
- * Gets or sets the postal zip code for the address entity.
- */
+     * Gets or sets the postal zip code for the address entity.
+     */
     @JsonProperty("PostalZipCode")
     private String postalZipCode;
 
@@ -58,11 +58,10 @@ public class Address   {
     
     public Address(String streetAddress, String addressCity, ProvinceStateId provinceStateId, CountryId countryId, String postalZipCode) {
         this.streetAddress = streetAddress;
-this.addressCity = addressCity;
-this.provinceStateId = provinceStateId;
-this.countryId = countryId;
-this.postalZipCode = postalZipCode;
-
+        this.addressCity = addressCity;
+        this.provinceStateId = provinceStateId;
+        this.countryId = countryId;
+        this.postalZipCode = postalZipCode;
     }
     
     
@@ -128,11 +127,11 @@ this.postalZipCode = postalZipCode;
     @Override
     public String toString() {
         return "Address{" +
-                 "streetAddress='" + streetAddress + '\'' +
- ", addressCity='" + addressCity + '\'' +
- ", provinceStateId='" + provinceStateId + '\'' +
- ", countryId='" + countryId + '\'' +
- ", postalZipCode='" + postalZipCode + '\'' +
+                "streetAddress='" + streetAddress + '\'' +
+                ", addressCity='" + addressCity + '\'' +
+                ", provinceStateId='" + provinceStateId + '\'' +
+                ", countryId='" + countryId + '\'' +
+                ", postalZipCode='" + postalZipCode + '\'' +
 
                 '}';
     }

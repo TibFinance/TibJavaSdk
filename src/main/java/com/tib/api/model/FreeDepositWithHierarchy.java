@@ -23,62 +23,62 @@ public class FreeDepositWithHierarchy   {
 
     
     /**
- * Gets or sets the free deposit identifier.
- */
+     * Gets or sets the free deposit identifier.
+     */
     @JsonProperty("FreeDepositId")
     private String freeDepositId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
- */
+     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
- * Specifies the category of a financial operation.
- */
+     * Specifies the category of a financial operation.
+     */
     @JsonProperty("OperationKind")
     private OperationKind operationKind;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Current processing state of a transaction or operation.
- */
+     * Current processing state of a transaction or operation.
+     */
     @JsonProperty("CurrentStatus")
     private ProcessStatus currentStatus;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
     /**
- * Represents the name associated with the merchant's account.
- */
+     * Represents the name associated with the merchant's account.
+     */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
- * Gets or sets the reference identifier used to uniquely identify a transaction, operation, or entity within the TIB Finance system.
- */
+     * Gets or sets the reference identifier used to uniquely identify a transaction, operation, or entity within the TIB Finance system.
+     */
     @JsonProperty("ReferenceId")
     private String referenceId;
 
@@ -90,16 +90,15 @@ public class FreeDepositWithHierarchy   {
     
     public FreeDepositWithHierarchy(String freeDepositId, String merchantId, Currency currency, TransferDirection operationDirection, OperationKind operationKind, Double amount, ProcessStatus currentStatus, LocalDateTime createdDate, String accountName, String referenceId) {
         this.freeDepositId = freeDepositId;
-this.merchantId = merchantId;
-this.currency = currency;
-this.operationDirection = operationDirection;
-this.operationKind = operationKind;
-this.amount = amount;
-this.currentStatus = currentStatus;
-this.createdDate = createdDate;
-this.accountName = accountName;
-this.referenceId = referenceId;
-
+        this.merchantId = merchantId;
+        this.currency = currency;
+        this.operationDirection = operationDirection;
+        this.operationKind = operationKind;
+        this.amount = amount;
+        this.currentStatus = currentStatus;
+        this.createdDate = createdDate;
+        this.accountName = accountName;
+        this.referenceId = referenceId;
     }
     
     
@@ -205,16 +204,16 @@ this.referenceId = referenceId;
     @Override
     public String toString() {
         return "FreeDepositWithHierarchy{" +
-                 "freeDepositId='" + freeDepositId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", currency='" + currency + '\'' +
- ", operationDirection='" + operationDirection + '\'' +
- ", operationKind='" + operationKind + '\'' +
- ", amount='" + amount + '\'' +
- ", currentStatus='" + currentStatus + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", accountName='" + accountName + '\'' +
- ", referenceId='" + referenceId + '\'' +
+                "freeDepositId='" + freeDepositId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", currency='" + currency + '\'' +
+                ", operationDirection='" + operationDirection + '\'' +
+                ", operationKind='" + operationKind + '\'' +
+                ", amount='" + amount + '\'' +
+                ", currentStatus='" + currentStatus + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", accountName='" + accountName + '\'' +
+                ", referenceId='" + referenceId + '\'' +
 
                 '}';
     }

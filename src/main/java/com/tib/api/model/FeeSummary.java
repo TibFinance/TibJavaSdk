@@ -20,56 +20,56 @@ public class FeeSummary   {
 
     
     /**
- * Gets or sets the total fee amount across all fees.
- */
+     * Gets or sets the total fee amount across all fees.
+     */
     @JsonProperty("TotalFeeAmount")
     private Double totalFeeAmount;
 
     /**
- * Gets or sets the total count of fee transactions.
- */
+     * Gets or sets the total count of fee transactions.
+     */
     @JsonProperty("TotalFeeCount")
     private Integer totalFeeCount;
 
     /**
- * Gets or sets the total fees for credit card payments.
- */
+     * Gets or sets the total fees for credit card payments.
+     */
     @JsonProperty("CreditCardFeesTotal")
     private Double creditCardFeesTotal;
 
     /**
- * Gets or sets the count of credit card fee transactions.
- */
+     * Gets or sets the count of credit card fee transactions.
+     */
     @JsonProperty("CreditCardFeesCount")
     private Integer creditCardFeesCount;
 
     /**
- * Gets or sets the total fees for direct account (bank) payments.
- */
+     * Gets or sets the total fees for direct account (bank) payments.
+     */
     @JsonProperty("DirectAccountFeesTotal")
     private Double directAccountFeesTotal;
 
     /**
- * Gets or sets the count of direct account fee transactions.
- */
+     * Gets or sets the count of direct account fee transactions.
+     */
     @JsonProperty("DirectAccountFeesCount")
     private Integer directAccountFeesCount;
 
     /**
- * Gets or sets the total fees for Interac payments.
- */
+     * Gets or sets the total fees for Interac payments.
+     */
     @JsonProperty("InteracFeesTotal")
     private Double interacFeesTotal;
 
     /**
- * Gets or sets the count of Interac fee transactions.
- */
+     * Gets or sets the count of Interac fee transactions.
+     */
     @JsonProperty("InteracFeesCount")
     private Integer interacFeesCount;
 
     /**
- * Gets or sets the breakdown of fees by fee type.
- */
+     * Gets or sets the breakdown of fees by fee type.
+     */
     @JsonProperty("FeesByType")
     private Map<OperationKind, Object> feesByType;
 
@@ -81,15 +81,14 @@ public class FeeSummary   {
     
     public FeeSummary(Double totalFeeAmount, Integer totalFeeCount, Double creditCardFeesTotal, Integer creditCardFeesCount, Double directAccountFeesTotal, Integer directAccountFeesCount, Double interacFeesTotal, Integer interacFeesCount, Map<OperationKind, Object> feesByType) {
         this.totalFeeAmount = totalFeeAmount;
-this.totalFeeCount = totalFeeCount;
-this.creditCardFeesTotal = creditCardFeesTotal;
-this.creditCardFeesCount = creditCardFeesCount;
-this.directAccountFeesTotal = directAccountFeesTotal;
-this.directAccountFeesCount = directAccountFeesCount;
-this.interacFeesTotal = interacFeesTotal;
-this.interacFeesCount = interacFeesCount;
-this.feesByType = feesByType;
-
+        this.totalFeeCount = totalFeeCount;
+        this.creditCardFeesTotal = creditCardFeesTotal;
+        this.creditCardFeesCount = creditCardFeesCount;
+        this.directAccountFeesTotal = directAccountFeesTotal;
+        this.directAccountFeesCount = directAccountFeesCount;
+        this.interacFeesTotal = interacFeesTotal;
+        this.interacFeesCount = interacFeesCount;
+        this.feesByType = feesByType;
     }
     
     
@@ -187,15 +186,15 @@ this.feesByType = feesByType;
     @Override
     public String toString() {
         return "FeeSummary{" +
-                 "totalFeeAmount='" + totalFeeAmount + '\'' +
- ", totalFeeCount='" + totalFeeCount + '\'' +
- ", creditCardFeesTotal='" + creditCardFeesTotal + '\'' +
- ", creditCardFeesCount='" + creditCardFeesCount + '\'' +
- ", directAccountFeesTotal='" + directAccountFeesTotal + '\'' +
- ", directAccountFeesCount='" + directAccountFeesCount + '\'' +
- ", interacFeesTotal='" + interacFeesTotal + '\'' +
- ", interacFeesCount='" + interacFeesCount + '\'' +
- ", feesByType='" + feesByType + '\'' +
+                "totalFeeAmount='" + totalFeeAmount + '\'' +
+                ", totalFeeCount='" + totalFeeCount + '\'' +
+                ", creditCardFeesTotal='" + creditCardFeesTotal + '\'' +
+                ", creditCardFeesCount='" + creditCardFeesCount + '\'' +
+                ", directAccountFeesTotal='" + directAccountFeesTotal + '\'' +
+                ", directAccountFeesCount='" + directAccountFeesCount + '\'' +
+                ", interacFeesTotal='" + interacFeesTotal + '\'' +
+                ", interacFeesCount='" + interacFeesCount + '\'' +
+                ", feesByType='" + feesByType + '\'' +
 
                 '}';
     }

@@ -29,7 +29,6 @@ public class ListSubClientsArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public ListSubClientsArgs(String sessionToken) {
         super(sessionToken);
-        
     }
 
     

@@ -25,14 +25,14 @@ public class ProcessTransferAccountEntity  extends ProcessTransferEntity  {
 
     
     /**
- * Gets or sets the account information.
- */
+     * Gets or sets the account information.
+     */
     @JsonProperty("AccountInformation")
     private Account accountInformation;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderGivenIdentification")
     private String providerGivenIdentification;
 
@@ -44,16 +44,14 @@ public class ProcessTransferAccountEntity  extends ProcessTransferEntity  {
     
     public ProcessTransferAccountEntity(Account accountInformation, String providerGivenIdentification) {
         this.accountInformation = accountInformation;
-this.providerGivenIdentification = providerGivenIdentification;
-
+        this.providerGivenIdentification = providerGivenIdentification;
     }
     
     
     public ProcessTransferAccountEntity(String transactionId, String transactionGroupId, Double transactionAmount, Currency currency, LocalDateTime dueDate, String transactionDescription, AcpOperationType acpOperationType, TransferDirection transferDirection, String favoriteProvider, boolean isTransactionRevert, String alreadyProcessedProviderId, String alreadyProcessedProviderAdditionalInfos, Language language, String providerTransactionId, String providerSubType, String merchantId, Provider providerType, String transferId, List<Object> relatedConvenientFeesWithTargetProviderId, Account accountInformation, String providerGivenIdentification) {
         super(transactionId, transactionGroupId, transactionAmount, currency, dueDate, transactionDescription, acpOperationType, transferDirection, favoriteProvider, isTransactionRevert, alreadyProcessedProviderId, alreadyProcessedProviderAdditionalInfos, language, providerTransactionId, providerSubType, merchantId, providerType, transferId, relatedConvenientFeesWithTargetProviderId);
         this.accountInformation = accountInformation;
-this.providerGivenIdentification = providerGivenIdentification;
-
+        this.providerGivenIdentification = providerGivenIdentification;
     }
 
     
@@ -93,8 +91,8 @@ this.providerGivenIdentification = providerGivenIdentification;
     @Override
     public String toString() {
         return "ProcessTransferAccountEntity{" +
-                 "accountInformation='" + accountInformation + '\'' +
- ", providerGivenIdentification='" + providerGivenIdentification + '\'' +
+                "accountInformation='" + accountInformation + '\'' +
+                ", providerGivenIdentification='" + providerGivenIdentification + '\'' +
 
                 '}';
     }

@@ -21,8 +21,8 @@ public class UpdateDefaultWhiteLabelingDataArgs  extends BaseAdminOnlyCryptedArg
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("UpdatedWhiteLabelingData")
     private List<WhiteLabelingData> updatedWhiteLabelingData;
 
@@ -34,14 +34,12 @@ public class UpdateDefaultWhiteLabelingDataArgs  extends BaseAdminOnlyCryptedArg
     
     public UpdateDefaultWhiteLabelingDataArgs(List<WhiteLabelingData> updatedWhiteLabelingData) {
         this.updatedWhiteLabelingData = updatedWhiteLabelingData;
-
     }
     
     
     public UpdateDefaultWhiteLabelingDataArgs(String adminSessionToken, List<WhiteLabelingData> updatedWhiteLabelingData) {
         super(adminSessionToken);
         this.updatedWhiteLabelingData = updatedWhiteLabelingData;
-
     }
 
     
@@ -73,7 +71,7 @@ public class UpdateDefaultWhiteLabelingDataArgs  extends BaseAdminOnlyCryptedArg
     @Override
     public String toString() {
         return "UpdateDefaultWhiteLabelingDataArgs{" +
-                 "updatedWhiteLabelingData='" + updatedWhiteLabelingData + '\'' +
+                "updatedWhiteLabelingData='" + updatedWhiteLabelingData + '\'' +
 
                 '}';
     }

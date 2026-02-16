@@ -29,14 +29,12 @@ public class CreateCustomerResponse extends CustomAPIResponse {
     public CreateCustomerResponse(Error[] errors, boolean hasError, String messages, String customerId) {
         super(errors, hasError, messages);
         this.customerId = customerId;
-
     }
 
     public CreateCustomerResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.customerId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class CreateCustomerResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateCustomerResponse{" +
-                 "customerId='" + customerId + '\'' +
+                "customerId='" + customerId + '\'' +
 
                 '}';
     }

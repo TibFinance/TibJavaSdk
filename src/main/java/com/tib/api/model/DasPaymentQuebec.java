@@ -21,14 +21,14 @@ public class DasPaymentQuebec  extends DasPaymentQuebecEntity  {
 
     
     /**
- * Retrieves or assigns the unique identifier for a payment.
- */
+     * Retrieves or assigns the unique identifier for a payment.
+     */
     @JsonProperty("PaymentId")
     private String paymentId;
 
     /**
- * Represents the current state of a transaction within the system.
- */
+     * Represents the current state of a transaction within the system.
+     */
     @JsonProperty("Status")
     private DasPaymentProcessStatus status;
 
@@ -40,16 +40,14 @@ public class DasPaymentQuebec  extends DasPaymentQuebecEntity  {
     
     public DasPaymentQuebec(String paymentId, DasPaymentProcessStatus status) {
         this.paymentId = paymentId;
-this.status = status;
-
+        this.status = status;
     }
     
     
     public DasPaymentQuebec(DasDateField periodStartDate, DasDateField periodEndDate, Double withhodingTax, Double retirementPensionPlan, Double healthServiceFund, Double parentalInsurancePlan, Double cNESST, String paymentId, DasPaymentProcessStatus status) {
         super(periodStartDate, periodEndDate, withhodingTax, retirementPensionPlan, healthServiceFund, parentalInsurancePlan, cNESST);
         this.paymentId = paymentId;
-this.status = status;
-
+        this.status = status;
     }
 
     
@@ -89,8 +87,8 @@ this.status = status;
     @Override
     public String toString() {
         return "DasPaymentQuebec{" +
-                 "paymentId='" + paymentId + '\'' +
- ", status='" + status + '\'' +
+                "paymentId='" + paymentId + '\'' +
+                ", status='" + status + '\'' +
 
                 '}';
     }

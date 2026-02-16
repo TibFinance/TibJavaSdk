@@ -20,32 +20,32 @@ public class SendAllClientBillsArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Gets or sets the year.
- */
+     * Gets or sets the year.
+     */
     @JsonProperty("Year")
     private Integer year;
 
     /**
- * Gets or sets the month.
- */
+     * Gets or sets the month.
+     */
     @JsonProperty("Month")
     private Integer month;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SendToQuickbook")
     private boolean sendToQuickbook;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SendToQuickbookByEmail")
     private boolean sendToQuickbookByEmail;
 
@@ -57,22 +57,20 @@ public class SendAllClientBillsArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public SendAllClientBillsArgs(String merchantId, Integer year, Integer month, boolean sendToQuickbook, boolean sendToQuickbookByEmail) {
         this.merchantId = merchantId;
-this.year = year;
-this.month = month;
-this.sendToQuickbook = sendToQuickbook;
-this.sendToQuickbookByEmail = sendToQuickbookByEmail;
-
+        this.year = year;
+        this.month = month;
+        this.sendToQuickbook = sendToQuickbook;
+        this.sendToQuickbookByEmail = sendToQuickbookByEmail;
     }
     
     
     public SendAllClientBillsArgs(String adminSessionToken, String merchantId, Integer year, Integer month, boolean sendToQuickbook, boolean sendToQuickbookByEmail) {
         super(adminSessionToken);
         this.merchantId = merchantId;
-this.year = year;
-this.month = month;
-this.sendToQuickbook = sendToQuickbook;
-this.sendToQuickbookByEmail = sendToQuickbookByEmail;
-
+        this.year = year;
+        this.month = month;
+        this.sendToQuickbook = sendToQuickbook;
+        this.sendToQuickbookByEmail = sendToQuickbookByEmail;
     }
 
     
@@ -136,11 +134,11 @@ this.sendToQuickbookByEmail = sendToQuickbookByEmail;
     @Override
     public String toString() {
         return "SendAllClientBillsArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", year='" + year + '\'' +
- ", month='" + month + '\'' +
- ", sendToQuickbook='" + sendToQuickbook + '\'' +
- ", sendToQuickbookByEmail='" + sendToQuickbookByEmail + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", year='" + year + '\'' +
+                ", month='" + month + '\'' +
+                ", sendToQuickbook='" + sendToQuickbook + '\'' +
+                ", sendToQuickbookByEmail='" + sendToQuickbookByEmail + '\'' +
 
                 '}';
     }

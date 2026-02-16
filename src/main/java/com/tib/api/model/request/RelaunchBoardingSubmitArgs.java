@@ -20,8 +20,8 @@ public class RelaunchBoardingSubmitArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BoardingInfoId")
     private String boardingInfoId;
 
@@ -33,14 +33,12 @@ public class RelaunchBoardingSubmitArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public RelaunchBoardingSubmitArgs(String boardingInfoId) {
         this.boardingInfoId = boardingInfoId;
-
     }
     
     
     public RelaunchBoardingSubmitArgs(String adminSessionToken, String boardingInfoId) {
         super(adminSessionToken);
         this.boardingInfoId = boardingInfoId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class RelaunchBoardingSubmitArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "RelaunchBoardingSubmitArgs{" +
-                 "boardingInfoId='" + boardingInfoId + '\'' +
+                "boardingInfoId='" + boardingInfoId + '\'' +
 
                 '}';
     }

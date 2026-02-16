@@ -20,14 +20,14 @@ public class GetClientsByBoardingStepArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Gets or sets the boarding step.
- */
+     * Gets or sets the boarding step.
+     */
     @JsonProperty("BoardingStep")
     private Integer boardingStep;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Override")
     private Object override;
 
@@ -39,16 +39,14 @@ public class GetClientsByBoardingStepArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public GetClientsByBoardingStepArgs(Integer boardingStep, Object override) {
         this.boardingStep = boardingStep;
-this.override = override;
-
+        this.override = override;
     }
     
     
     public GetClientsByBoardingStepArgs(String adminSessionToken, Integer boardingStep, Object override) {
         super(adminSessionToken);
         this.boardingStep = boardingStep;
-this.override = override;
-
+        this.override = override;
     }
 
     
@@ -88,8 +86,8 @@ this.override = override;
     @Override
     public String toString() {
         return "GetClientsByBoardingStepArgs{" +
-                 "boardingStep='" + boardingStep + '\'' +
- ", override='" + override + '\'' +
+                "boardingStep='" + boardingStep + '\'' +
+                ", override='" + override + '\'' +
 
                 '}';
     }

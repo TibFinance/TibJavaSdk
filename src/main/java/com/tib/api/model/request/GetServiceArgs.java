@@ -20,14 +20,14 @@ public class GetServiceArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -39,16 +39,14 @@ public class GetServiceArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetServiceArgs(String serviceId, String merchantId) {
         this.serviceId = serviceId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
     
     
     public GetServiceArgs(String sessionToken, String serviceId, String merchantId) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     
@@ -88,8 +86,8 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "GetServiceArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

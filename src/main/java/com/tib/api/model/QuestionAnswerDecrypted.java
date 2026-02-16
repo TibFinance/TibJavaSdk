@@ -19,14 +19,14 @@ public class QuestionAnswerDecrypted   {
 
     
     /**
- * Gets or sets the question.
- */
+     * Gets or sets the question.
+     */
     @JsonProperty("Question")
     private String question;
 
     /**
- * Gets or sets the answer.
- */
+     * Gets or sets the answer.
+     */
     @JsonProperty("Answer")
     private String answer;
 
@@ -38,8 +38,7 @@ public class QuestionAnswerDecrypted   {
     
     public QuestionAnswerDecrypted(String question, String answer) {
         this.question = question;
-this.answer = answer;
-
+        this.answer = answer;
     }
     
     
@@ -81,8 +80,8 @@ this.answer = answer;
     @Override
     public String toString() {
         return "QuestionAnswerDecrypted{" +
-                 "question='" + question + '\'' +
- ", answer='" + answer + '\'' +
+                "question='" + question + '\'' +
+                ", answer='" + answer + '\'' +
 
                 '}';
     }

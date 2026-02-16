@@ -19,116 +19,116 @@ public class BoardingInformationEntity   {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyName")
     private String companyName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyAddress")
     private String companyAddress;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyPhone")
     private String companyPhone;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyEmail")
     private String companyEmail;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyType")
     private Integer companyType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyName_Edited")
     private String companyName_Edited;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyAddress_Edited")
     private String companyAddress_Edited;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyType_Edited")
     private Integer companyType_Edited;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DidOwnersAlreadyBeenSubjectOfResiliationOfPaymentService")
     private boolean didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DidOwnersAlreadyAskedForBankrupcy")
     private boolean didOwnersAlreadyAskedForBankrupcy;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("HaveYouBeenSubjectOfVisaRiskProgram")
     private boolean haveYouBeenSubjectOfVisaRiskProgram;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SpecimenFile")
     private String specimenFile;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IdFile")
     private String idFile;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BoardingStep")
     private Integer boardingStep;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransitNumber")
     private String transitNumber;
 
     /**
- * Specifies the bank account number associated with the payment method.
- */
+     * Specifies the bank account number associated with the payment method.
+     */
     @JsonProperty("AccountNumber")
     private String accountNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountOwner")
     private String accountOwner;
 
     /**
- * Identifies the bank associated with the account using its numeric identifier.
- */
+     * Identifies the bank associated with the account using its numeric identifier.
+     */
     @JsonProperty("BankNumber")
     private String bankNumber;
 
@@ -140,25 +140,24 @@ public class BoardingInformationEntity   {
     
     public BoardingInformationEntity(String clientId, String companyName, String companyAddress, String companyPhone, String companyEmail, Integer companyType, String companyName_Edited, String companyAddress_Edited, Integer companyType_Edited, boolean didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService, boolean didOwnersAlreadyAskedForBankrupcy, boolean haveYouBeenSubjectOfVisaRiskProgram, String specimenFile, String idFile, Integer boardingStep, String transitNumber, String accountNumber, String accountOwner, String bankNumber) {
         this.clientId = clientId;
-this.companyName = companyName;
-this.companyAddress = companyAddress;
-this.companyPhone = companyPhone;
-this.companyEmail = companyEmail;
-this.companyType = companyType;
-this.companyName_Edited = companyName_Edited;
-this.companyAddress_Edited = companyAddress_Edited;
-this.companyType_Edited = companyType_Edited;
-this.didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService = didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService;
-this.didOwnersAlreadyAskedForBankrupcy = didOwnersAlreadyAskedForBankrupcy;
-this.haveYouBeenSubjectOfVisaRiskProgram = haveYouBeenSubjectOfVisaRiskProgram;
-this.specimenFile = specimenFile;
-this.idFile = idFile;
-this.boardingStep = boardingStep;
-this.transitNumber = transitNumber;
-this.accountNumber = accountNumber;
-this.accountOwner = accountOwner;
-this.bankNumber = bankNumber;
-
+        this.companyName = companyName;
+        this.companyAddress = companyAddress;
+        this.companyPhone = companyPhone;
+        this.companyEmail = companyEmail;
+        this.companyType = companyType;
+        this.companyName_Edited = companyName_Edited;
+        this.companyAddress_Edited = companyAddress_Edited;
+        this.companyType_Edited = companyType_Edited;
+        this.didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService = didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService;
+        this.didOwnersAlreadyAskedForBankrupcy = didOwnersAlreadyAskedForBankrupcy;
+        this.haveYouBeenSubjectOfVisaRiskProgram = haveYouBeenSubjectOfVisaRiskProgram;
+        this.specimenFile = specimenFile;
+        this.idFile = idFile;
+        this.boardingStep = boardingStep;
+        this.transitNumber = transitNumber;
+        this.accountNumber = accountNumber;
+        this.accountOwner = accountOwner;
+        this.bankNumber = bankNumber;
     }
     
     
@@ -336,25 +335,25 @@ this.bankNumber = bankNumber;
     @Override
     public String toString() {
         return "BoardingInformationEntity{" +
-                 "clientId='" + clientId + '\'' +
- ", companyName='" + companyName + '\'' +
- ", companyAddress='" + companyAddress + '\'' +
- ", companyPhone='" + companyPhone + '\'' +
- ", companyEmail='" + companyEmail + '\'' +
- ", companyType='" + companyType + '\'' +
- ", companyName_Edited='" + companyName_Edited + '\'' +
- ", companyAddress_Edited='" + companyAddress_Edited + '\'' +
- ", companyType_Edited='" + companyType_Edited + '\'' +
- ", didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService='" + didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService + '\'' +
- ", didOwnersAlreadyAskedForBankrupcy='" + didOwnersAlreadyAskedForBankrupcy + '\'' +
- ", haveYouBeenSubjectOfVisaRiskProgram='" + haveYouBeenSubjectOfVisaRiskProgram + '\'' +
- ", specimenFile='" + specimenFile + '\'' +
- ", idFile='" + idFile + '\'' +
- ", boardingStep='" + boardingStep + '\'' +
- ", transitNumber='" + transitNumber + '\'' +
- ", accountNumber='" + accountNumber + '\'' +
- ", accountOwner='" + accountOwner + '\'' +
- ", bankNumber='" + bankNumber + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", companyName='" + companyName + '\'' +
+                ", companyAddress='" + companyAddress + '\'' +
+                ", companyPhone='" + companyPhone + '\'' +
+                ", companyEmail='" + companyEmail + '\'' +
+                ", companyType='" + companyType + '\'' +
+                ", companyName_Edited='" + companyName_Edited + '\'' +
+                ", companyAddress_Edited='" + companyAddress_Edited + '\'' +
+                ", companyType_Edited='" + companyType_Edited + '\'' +
+                ", didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService='" + didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService + '\'' +
+                ", didOwnersAlreadyAskedForBankrupcy='" + didOwnersAlreadyAskedForBankrupcy + '\'' +
+                ", haveYouBeenSubjectOfVisaRiskProgram='" + haveYouBeenSubjectOfVisaRiskProgram + '\'' +
+                ", specimenFile='" + specimenFile + '\'' +
+                ", idFile='" + idFile + '\'' +
+                ", boardingStep='" + boardingStep + '\'' +
+                ", transitNumber='" + transitNumber + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", accountOwner='" + accountOwner + '\'' +
+                ", bankNumber='" + bankNumber + '\'' +
 
                 '}';
     }

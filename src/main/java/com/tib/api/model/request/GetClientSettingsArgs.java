@@ -20,8 +20,8 @@ public class GetClientSettingsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
@@ -33,14 +33,12 @@ public class GetClientSettingsArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetClientSettingsArgs(String clientId) {
         this.clientId = clientId;
-
     }
     
     
     public GetClientSettingsArgs(String sessionToken, String clientId) {
         super(sessionToken);
         this.clientId = clientId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetClientSettingsArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "GetClientSettingsArgs{" +
-                 "clientId='" + clientId + '\'' +
+                "clientId='" + clientId + '\'' +
 
                 '}';
     }

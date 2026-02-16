@@ -22,26 +22,26 @@ public class ServiceEntity   {
 
     
     /**
- * Retrieves or assigns the service's name.
- */
+     * Retrieves or assigns the service's name.
+     */
     @JsonProperty("ServiceName")
     private String serviceName;
 
     /**
- * Retrieves or assigns the default language preference for a customer.
- */
+     * Retrieves or assigns the default language preference for a customer.
+     */
     @JsonProperty("DefaultCustomerLanguage")
     private Language defaultCustomerLanguage;
 
     /**
- * Gets or sets the type of the provider.
- */
+     * Gets or sets the type of the provider.
+     */
     @JsonProperty("ProviderType")
     private Provider providerType;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
@@ -53,10 +53,9 @@ public class ServiceEntity   {
     
     public ServiceEntity(String serviceName, Language defaultCustomerLanguage, Provider providerType, Currency currency) {
         this.serviceName = serviceName;
-this.defaultCustomerLanguage = defaultCustomerLanguage;
-this.providerType = providerType;
-this.currency = currency;
-
+        this.defaultCustomerLanguage = defaultCustomerLanguage;
+        this.providerType = providerType;
+        this.currency = currency;
     }
     
     
@@ -114,10 +113,10 @@ this.currency = currency;
     @Override
     public String toString() {
         return "ServiceEntity{" +
-                 "serviceName='" + serviceName + '\'' +
- ", defaultCustomerLanguage='" + defaultCustomerLanguage + '\'' +
- ", providerType='" + providerType + '\'' +
- ", currency='" + currency + '\'' +
+                "serviceName='" + serviceName + '\'' +
+                ", defaultCustomerLanguage='" + defaultCustomerLanguage + '\'' +
+                ", providerType='" + providerType + '\'' +
+                ", currency='" + currency + '\'' +
 
                 '}';
     }

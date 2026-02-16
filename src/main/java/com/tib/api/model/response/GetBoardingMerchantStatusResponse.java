@@ -30,15 +30,13 @@ public class GetBoardingMerchantStatusResponse extends CustomAPIResponse {
     public GetBoardingMerchantStatusResponse(Error[] errors, boolean hasError, String messages, GetBoardingMerchantStatusResultEntity getBoardingStatusResultEntity) {
         super(errors, hasError, messages);
         this.getBoardingStatusResultEntity = getBoardingStatusResultEntity;
-
     }
 
     public GetBoardingMerchantStatusResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.getBoardingStatusResultEntity = objectMapper.readValue(json, GetBoardingMerchantStatusResultEntity.class);
-
+            this.getBoardingStatusResultEntity = objectMapper.readValue(json, GetBoardingMerchantStatusResultEntity.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.getBoardingStatusResultEntity = objectMapper.readValue(json, GetBoardingMer
     @Override
     public String toString() {
         return "GetBoardingMerchantStatusResponse{" +
-                 "getBoardingStatusResultEntity='" + getBoardingStatusResultEntity + '\'' +
+                "getBoardingStatusResultEntity='" + getBoardingStatusResultEntity + '\'' +
 
                 '}';
     }

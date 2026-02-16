@@ -20,8 +20,8 @@ public class GetPaymentMethodArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Acts as a unique identifier for a distinct payment method.
- */
+     * Acts as a unique identifier for a distinct payment method.
+     */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
@@ -33,14 +33,12 @@ public class GetPaymentMethodArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetPaymentMethodArgs(String paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
-
     }
     
     
     public GetPaymentMethodArgs(String sessionToken, String paymentMethodId) {
         super(sessionToken);
         this.paymentMethodId = paymentMethodId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetPaymentMethodArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "GetPaymentMethodArgs{" +
-                 "paymentMethodId='" + paymentMethodId + '\'' +
+                "paymentMethodId='" + paymentMethodId + '\'' +
 
                 '}';
     }

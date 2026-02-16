@@ -29,7 +29,6 @@ public class GetTransferValidationRequestArgs  extends BaseAuthenticatePublicTok
     
     public GetTransferValidationRequestArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

@@ -30,14 +30,12 @@ public class GetFeeCountResponse extends CustomAPIResponse {
     public GetFeeCountResponse(Error[] errors, boolean hasError, String messages, List<MerchantFee> transactionFeesAgregated) {
         super(errors, hasError, messages);
         this.transactionFeesAgregated = transactionFeesAgregated;
-
     }
 
     public GetFeeCountResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transactionFeesAgregated = (List<MerchantFee>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetFeeCountResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetFeeCountResponse{" +
-                 "transactionFeesAgregated='" + transactionFeesAgregated + '\'' +
+                "transactionFeesAgregated='" + transactionFeesAgregated + '\'' +
 
                 '}';
     }

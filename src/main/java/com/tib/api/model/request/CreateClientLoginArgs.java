@@ -21,14 +21,14 @@ public class CreateClientLoginArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
- */
+     * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
+     */
     @JsonProperty("Password")
     private String password;
 
     /**
- * The user information to create
- */
+     * The user information to create
+     */
     @JsonProperty("ClientLogin")
     private ClientLogin clientLogin;
 
@@ -40,16 +40,14 @@ public class CreateClientLoginArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public CreateClientLoginArgs(String password, ClientLogin clientLogin) {
         this.password = password;
-this.clientLogin = clientLogin;
-
+        this.clientLogin = clientLogin;
     }
     
     
     public CreateClientLoginArgs(String adminSessionToken, String password, ClientLogin clientLogin) {
         super(adminSessionToken);
         this.password = password;
-this.clientLogin = clientLogin;
-
+        this.clientLogin = clientLogin;
     }
 
     
@@ -89,8 +87,8 @@ this.clientLogin = clientLogin;
     @Override
     public String toString() {
         return "CreateClientLoginArgs{" +
-                 "password='" + password + '\'' +
- ", clientLogin='" + clientLogin + '\'' +
+                "password='" + password + '\'' +
+                ", clientLogin='" + clientLogin + '\'' +
 
                 '}';
     }

@@ -30,14 +30,12 @@ public class ListTransfersResponse extends CustomAPIResponse {
     public ListTransfersResponse(Error[] errors, boolean hasError, String messages, List<Payment> payments) {
         super(errors, hasError, messages);
         this.payments = payments;
-
     }
 
     public ListTransfersResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.payments = (List<Payment>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class ListTransfersResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ListTransfersResponse{" +
-                 "payments='" + payments + '\'' +
+                "payments='" + payments + '\'' +
 
                 '}';
     }

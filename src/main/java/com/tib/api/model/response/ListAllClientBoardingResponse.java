@@ -29,14 +29,12 @@ public class ListAllClientBoardingResponse extends CustomAPIResponse {
     public ListAllClientBoardingResponse(Error[] errors, boolean hasError, String messages, List<Object> list) {
         super(errors, hasError, messages);
         this.list = list;
-
     }
 
     public ListAllClientBoardingResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.list = (List<Object>) apiResponse.getResponse();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class ListAllClientBoardingResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ListAllClientBoardingResponse{" +
-                 "list='" + list + '\'' +
+                "list='" + list + '\'' +
 
                 '}';
     }

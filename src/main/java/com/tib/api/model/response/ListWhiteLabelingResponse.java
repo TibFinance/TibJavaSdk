@@ -30,14 +30,12 @@ public class ListWhiteLabelingResponse extends CustomAPIResponse {
     public ListWhiteLabelingResponse(Error[] errors, boolean hasError, String messages, List<WhiteLabeling> whiteLabelings) {
         super(errors, hasError, messages);
         this.whiteLabelings = whiteLabelings;
-
     }
 
     public ListWhiteLabelingResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.whiteLabelings = (List<WhiteLabeling>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class ListWhiteLabelingResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ListWhiteLabelingResponse{" +
-                 "whiteLabelings='" + whiteLabelings + '\'' +
+                "whiteLabelings='" + whiteLabelings + '\'' +
 
                 '}';
     }

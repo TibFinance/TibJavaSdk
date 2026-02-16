@@ -19,8 +19,8 @@ public class PushDataArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Gets or sets the data crypted base64.
- */
+     * Gets or sets the data crypted base64.
+     */
     @JsonProperty("DataCryptedBase64")
     private String dataCryptedBase64;
 
@@ -32,7 +32,6 @@ public class PushDataArgs  implements IBaseCryptedServiceArgs  {
     
     public PushDataArgs(String dataCryptedBase64) {
         this.dataCryptedBase64 = dataCryptedBase64;
-
     }
     
     
@@ -66,7 +65,7 @@ public class PushDataArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "PushDataArgs{" +
-                 "dataCryptedBase64='" + dataCryptedBase64 + '\'' +
+                "dataCryptedBase64='" + dataCryptedBase64 + '\'' +
 
                 '}';
     }

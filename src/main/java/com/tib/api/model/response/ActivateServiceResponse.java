@@ -25,13 +25,11 @@ public class ActivateServiceResponse extends CustomAPIResponse {
 
     public ActivateServiceResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public ActivateServiceResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

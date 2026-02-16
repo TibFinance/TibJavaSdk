@@ -20,20 +20,20 @@ public class FlatFileLine   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DefaultPaddingChar")
     private char defaultPaddingChar;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DefaultPaddingDirection")
     private PadDirection defaultPaddingDirection;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("StartPosition")
     private Integer startPosition;
 
@@ -45,9 +45,8 @@ public class FlatFileLine   {
     
     public FlatFileLine(char defaultPaddingChar, PadDirection defaultPaddingDirection, Integer startPosition) {
         this.defaultPaddingChar = defaultPaddingChar;
-this.defaultPaddingDirection = defaultPaddingDirection;
-this.startPosition = startPosition;
-
+        this.defaultPaddingDirection = defaultPaddingDirection;
+        this.startPosition = startPosition;
     }
     
     
@@ -97,9 +96,9 @@ this.startPosition = startPosition;
     @Override
     public String toString() {
         return "FlatFileLine{" +
-                 "defaultPaddingChar='" + defaultPaddingChar + '\'' +
- ", defaultPaddingDirection='" + defaultPaddingDirection + '\'' +
- ", startPosition='" + startPosition + '\'' +
+                "defaultPaddingChar='" + defaultPaddingChar + '\'' +
+                ", defaultPaddingDirection='" + defaultPaddingDirection + '\'' +
+                ", startPosition='" + startPosition + '\'' +
 
                 '}';
     }

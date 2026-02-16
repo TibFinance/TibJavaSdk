@@ -19,14 +19,14 @@ public class DasMonthlyPeriod   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Month")
     private Integer month;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Year")
     private Integer year;
 
@@ -38,8 +38,7 @@ public class DasMonthlyPeriod   {
     
     public DasMonthlyPeriod(Integer month, Integer year) {
         this.month = month;
-this.year = year;
-
+        this.year = year;
     }
     
     
@@ -81,8 +80,8 @@ this.year = year;
     @Override
     public String toString() {
         return "DasMonthlyPeriod{" +
-                 "month='" + month + '\'' +
- ", year='" + year + '\'' +
+                "month='" + month + '\'' +
+                ", year='" + year + '\'' +
 
                 '}';
     }

@@ -23,56 +23,56 @@ public class BaseTransaction  extends LineBase  {
 
     
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Gets or sets the date funds available.
- */
+     * Gets or sets the date funds available.
+     */
     @JsonProperty("DateFundsAvailable")
     private LocalDateTime dateFundsAvailable;
 
     /**
- * Gets or sets the target institution number.
- */
+     * Gets or sets the target institution number.
+     */
     @JsonProperty("TargetInstitutionNumber")
     private String targetInstitutionNumber;
 
     /**
- * Gets or sets the target full account number.
- */
+     * Gets or sets the target full account number.
+     */
     @JsonProperty("TargetFullAccountNumber")
     private String targetFullAccountNumber;
 
     /**
- * Gets or sets the name of the target.
- */
+     * Gets or sets the name of the target.
+     */
     @JsonProperty("TargetName")
     private String targetName;
 
     /**
- * Gets or sets the reference number.
- */
+     * Gets or sets the reference number.
+     */
     @JsonProperty("RefNumber")
     private String refNumber;
 
     /**
- * Specifies the operation category used throughout the API.
- */
+     * Specifies the operation category used throughout the API.
+     */
     @JsonProperty("OperationType")
     private AcpOperationType operationType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TargetContactInfo")
     private ContactInfo targetContactInfo;
 
     /**
- * Defines the frequency at which transfers occur within the TIB Finance API.
- */
+     * Defines the frequency at which transfers occur within the TIB Finance API.
+     */
     @JsonProperty("TransferFrequency")
     private TransferFrequency transferFrequency;
 
@@ -84,30 +84,28 @@ public class BaseTransaction  extends LineBase  {
     
     public BaseTransaction(Double amount, LocalDateTime dateFundsAvailable, String targetInstitutionNumber, String targetFullAccountNumber, String targetName, String refNumber, AcpOperationType operationType, ContactInfo targetContactInfo, TransferFrequency transferFrequency) {
         this.amount = amount;
-this.dateFundsAvailable = dateFundsAvailable;
-this.targetInstitutionNumber = targetInstitutionNumber;
-this.targetFullAccountNumber = targetFullAccountNumber;
-this.targetName = targetName;
-this.refNumber = refNumber;
-this.operationType = operationType;
-this.targetContactInfo = targetContactInfo;
-this.transferFrequency = transferFrequency;
-
+        this.dateFundsAvailable = dateFundsAvailable;
+        this.targetInstitutionNumber = targetInstitutionNumber;
+        this.targetFullAccountNumber = targetFullAccountNumber;
+        this.targetName = targetName;
+        this.refNumber = refNumber;
+        this.operationType = operationType;
+        this.targetContactInfo = targetContactInfo;
+        this.transferFrequency = transferFrequency;
     }
     
     
     public BaseTransaction(char defaultPaddingChar, PadDirection defaultPaddingDirection, Double amount, LocalDateTime dateFundsAvailable, String targetInstitutionNumber, String targetFullAccountNumber, String targetName, String refNumber, AcpOperationType operationType, ContactInfo targetContactInfo, TransferFrequency transferFrequency) {
         super(defaultPaddingChar, defaultPaddingDirection);
         this.amount = amount;
-this.dateFundsAvailable = dateFundsAvailable;
-this.targetInstitutionNumber = targetInstitutionNumber;
-this.targetFullAccountNumber = targetFullAccountNumber;
-this.targetName = targetName;
-this.refNumber = refNumber;
-this.operationType = operationType;
-this.targetContactInfo = targetContactInfo;
-this.transferFrequency = transferFrequency;
-
+        this.dateFundsAvailable = dateFundsAvailable;
+        this.targetInstitutionNumber = targetInstitutionNumber;
+        this.targetFullAccountNumber = targetFullAccountNumber;
+        this.targetName = targetName;
+        this.refNumber = refNumber;
+        this.operationType = operationType;
+        this.targetContactInfo = targetContactInfo;
+        this.transferFrequency = transferFrequency;
     }
 
     
@@ -203,15 +201,15 @@ this.transferFrequency = transferFrequency;
     @Override
     public String toString() {
         return "BaseTransaction{" +
-                 "amount='" + amount + '\'' +
- ", dateFundsAvailable='" + dateFundsAvailable + '\'' +
- ", targetInstitutionNumber='" + targetInstitutionNumber + '\'' +
- ", targetFullAccountNumber='" + targetFullAccountNumber + '\'' +
- ", targetName='" + targetName + '\'' +
- ", refNumber='" + refNumber + '\'' +
- ", operationType='" + operationType + '\'' +
- ", targetContactInfo='" + targetContactInfo + '\'' +
- ", transferFrequency='" + transferFrequency + '\'' +
+                "amount='" + amount + '\'' +
+                ", dateFundsAvailable='" + dateFundsAvailable + '\'' +
+                ", targetInstitutionNumber='" + targetInstitutionNumber + '\'' +
+                ", targetFullAccountNumber='" + targetFullAccountNumber + '\'' +
+                ", targetName='" + targetName + '\'' +
+                ", refNumber='" + refNumber + '\'' +
+                ", operationType='" + operationType + '\'' +
+                ", targetContactInfo='" + targetContactInfo + '\'' +
+                ", transferFrequency='" + transferFrequency + '\'' +
 
                 '}';
     }

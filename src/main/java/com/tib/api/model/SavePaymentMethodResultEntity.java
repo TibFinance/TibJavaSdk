@@ -20,8 +20,8 @@ public class SavePaymentMethodResultEntity  extends BoardingBaseResult  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderGivenIdentification")
     private String providerGivenIdentification;
 
@@ -33,14 +33,12 @@ public class SavePaymentMethodResultEntity  extends BoardingBaseResult  {
     
     public SavePaymentMethodResultEntity(String providerGivenIdentification) {
         this.providerGivenIdentification = providerGivenIdentification;
-
     }
     
     
     public SavePaymentMethodResultEntity(boolean isSuccess, Integer httpStatusCode, String message, List<BoardingBaseError> errorList, String providerGivenIdentification) {
         super(isSuccess, httpStatusCode, message, errorList);
         this.providerGivenIdentification = providerGivenIdentification;
-
     }
 
     
@@ -72,7 +70,7 @@ public class SavePaymentMethodResultEntity  extends BoardingBaseResult  {
     @Override
     public String toString() {
         return "SavePaymentMethodResultEntity{" +
-                 "providerGivenIdentification='" + providerGivenIdentification + '\'' +
+                "providerGivenIdentification='" + providerGivenIdentification + '\'' +
 
                 '}';
     }

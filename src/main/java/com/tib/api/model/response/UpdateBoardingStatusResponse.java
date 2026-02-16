@@ -35,18 +35,16 @@ public class UpdateBoardingStatusResponse extends CustomAPIResponse {
     public UpdateBoardingStatusResponse(Error[] errors, boolean hasError, String messages, String boardingInformationId, String status, Integer statusCode) {
         super(errors, hasError, messages);
         this.boardingInformationId = boardingInformationId;
-this.status = status;
-this.statusCode = statusCode;
-
+        this.status = status;
+        this.statusCode = statusCode;
     }
 
     public UpdateBoardingStatusResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.boardingInformationId = apiResponse.getResponse().toString();
-this.status = apiResponse.getResponse().toString();
-this.statusCode = Integer.parseInt(apiResponse.getResponse().toString());
-
+            this.status = apiResponse.getResponse().toString();
+            this.statusCode = Integer.parseInt(apiResponse.getResponse().toString());
         }
     }
 
@@ -95,9 +93,9 @@ this.statusCode = Integer.parseInt(apiResponse.getResponse().toString());
     @Override
     public String toString() {
         return "UpdateBoardingStatusResponse{" +
-                 "boardingInformationId='" + boardingInformationId + '\'' +
- ", status='" + status + '\'' +
- ", statusCode='" + statusCode + '\'' +
+                "boardingInformationId='" + boardingInformationId + '\'' +
+                ", status='" + status + '\'' +
+                ", statusCode='" + statusCode + '\'' +
 
                 '}';
     }

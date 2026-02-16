@@ -30,14 +30,12 @@ public class CreateSupplierTransferResponse extends CustomAPIResponse {
     public CreateSupplierTransferResponse(Error[] errors, boolean hasError, String messages, List<MerchantView> matchingExistingMerchants) {
         super(errors, hasError, messages);
         this.matchingExistingMerchants = matchingExistingMerchants;
-
     }
 
     public CreateSupplierTransferResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.matchingExistingMerchants = (List<MerchantView>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class CreateSupplierTransferResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateSupplierTransferResponse{" +
-                 "matchingExistingMerchants='" + matchingExistingMerchants + '\'' +
+                "matchingExistingMerchants='" + matchingExistingMerchants + '\'' +
 
                 '}';
     }

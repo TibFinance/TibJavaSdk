@@ -25,13 +25,11 @@ public class DeleteWhiteLabelingResponse extends CustomAPIResponse {
 
     public DeleteWhiteLabelingResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public DeleteWhiteLabelingResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

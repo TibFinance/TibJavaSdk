@@ -22,110 +22,110 @@ public class AdminTranGroup   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionGroupId")
     private String transactionGroupId;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Gets or sets the unique identifier of the target system used to reference the client’s contract within TIB Finance.
- */
+     * Gets or sets the unique identifier of the target system used to reference the client’s contract within TIB Finance.
+     */
     @JsonProperty("TargetSystemId")
     private String targetSystemId;
 
     /**
- * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
- */
+     * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
+     */
     @JsonProperty("OperationTarget")
     private OperationTarget operationTarget;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BaseOperationDirection")
     private TransferDirection baseOperationDirection;
 
     /**
- * Retrieves the identifier of the merchant (bank account) to which the operation applies.
- */
+     * Retrieves the identifier of the merchant (bank account) to which the operation applies.
+     */
     @JsonProperty("RelatedMerchantId")
     private String relatedMerchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationId")
     private String operationId;
 
     /**
- * Identifies the specific transfer operation that needs to be reverted.
- */
+     * Identifies the specific transfer operation that needs to be reverted.
+     */
     @JsonProperty("TransferId")
     private String transferId;
 
     /**
- * Identifies the customer linked to this payment, when a customer relationship exists.
- */
+     * Identifies the customer linked to this payment, when a customer relationship exists.
+     */
     @JsonProperty("RelatedCustomerId")
     private String relatedCustomerId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsChecked")
     private boolean isChecked;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantIds")
     private List<String> merchantIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CustomerIds")
     private List<String> customerIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransferIds")
     private List<String> transferIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationIds")
     private List<String> operationIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationTargetValue")
     private String operationTargetValue;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CurrencyValue")
     private String currencyValue;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BaseOperationDirectionValue")
     private String baseOperationDirectionValue;
 
@@ -137,24 +137,23 @@ public class AdminTranGroup   {
     
     public AdminTranGroup(String transactionGroupId, Double amount, Currency currency, String targetSystemId, OperationTarget operationTarget, TransferDirection baseOperationDirection, String relatedMerchantId, String operationId, String transferId, String relatedCustomerId, boolean isChecked, List<String> merchantIds, List<String> customerIds, List<String> transferIds, List<String> operationIds, String operationTargetValue, String currencyValue, String baseOperationDirectionValue) {
         this.transactionGroupId = transactionGroupId;
-this.amount = amount;
-this.currency = currency;
-this.targetSystemId = targetSystemId;
-this.operationTarget = operationTarget;
-this.baseOperationDirection = baseOperationDirection;
-this.relatedMerchantId = relatedMerchantId;
-this.operationId = operationId;
-this.transferId = transferId;
-this.relatedCustomerId = relatedCustomerId;
-this.isChecked = isChecked;
-this.merchantIds = merchantIds;
-this.customerIds = customerIds;
-this.transferIds = transferIds;
-this.operationIds = operationIds;
-this.operationTargetValue = operationTargetValue;
-this.currencyValue = currencyValue;
-this.baseOperationDirectionValue = baseOperationDirectionValue;
-
+        this.amount = amount;
+        this.currency = currency;
+        this.targetSystemId = targetSystemId;
+        this.operationTarget = operationTarget;
+        this.baseOperationDirection = baseOperationDirection;
+        this.relatedMerchantId = relatedMerchantId;
+        this.operationId = operationId;
+        this.transferId = transferId;
+        this.relatedCustomerId = relatedCustomerId;
+        this.isChecked = isChecked;
+        this.merchantIds = merchantIds;
+        this.customerIds = customerIds;
+        this.transferIds = transferIds;
+        this.operationIds = operationIds;
+        this.operationTargetValue = operationTargetValue;
+        this.currencyValue = currencyValue;
+        this.baseOperationDirectionValue = baseOperationDirectionValue;
     }
     
     
@@ -324,24 +323,24 @@ this.baseOperationDirectionValue = baseOperationDirectionValue;
     @Override
     public String toString() {
         return "AdminTranGroup{" +
-                 "transactionGroupId='" + transactionGroupId + '\'' +
- ", amount='" + amount + '\'' +
- ", currency='" + currency + '\'' +
- ", targetSystemId='" + targetSystemId + '\'' +
- ", operationTarget='" + operationTarget + '\'' +
- ", baseOperationDirection='" + baseOperationDirection + '\'' +
- ", relatedMerchantId='" + relatedMerchantId + '\'' +
- ", operationId='" + operationId + '\'' +
- ", transferId='" + transferId + '\'' +
- ", relatedCustomerId='" + relatedCustomerId + '\'' +
- ", isChecked='" + isChecked + '\'' +
- ", merchantIds='" + merchantIds + '\'' +
- ", customerIds='" + customerIds + '\'' +
- ", transferIds='" + transferIds + '\'' +
- ", operationIds='" + operationIds + '\'' +
- ", operationTargetValue='" + operationTargetValue + '\'' +
- ", currencyValue='" + currencyValue + '\'' +
- ", baseOperationDirectionValue='" + baseOperationDirectionValue + '\'' +
+                "transactionGroupId='" + transactionGroupId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", currency='" + currency + '\'' +
+                ", targetSystemId='" + targetSystemId + '\'' +
+                ", operationTarget='" + operationTarget + '\'' +
+                ", baseOperationDirection='" + baseOperationDirection + '\'' +
+                ", relatedMerchantId='" + relatedMerchantId + '\'' +
+                ", operationId='" + operationId + '\'' +
+                ", transferId='" + transferId + '\'' +
+                ", relatedCustomerId='" + relatedCustomerId + '\'' +
+                ", isChecked='" + isChecked + '\'' +
+                ", merchantIds='" + merchantIds + '\'' +
+                ", customerIds='" + customerIds + '\'' +
+                ", transferIds='" + transferIds + '\'' +
+                ", operationIds='" + operationIds + '\'' +
+                ", operationTargetValue='" + operationTargetValue + '\'' +
+                ", currencyValue='" + currencyValue + '\'' +
+                ", baseOperationDirectionValue='" + baseOperationDirectionValue + '\'' +
 
                 '}';
     }

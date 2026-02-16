@@ -20,26 +20,26 @@ public class ChangeInteracPaymentMethodQuestionAndAnswerArgs  extends BaseAuthen
 
     
     /**
- * Represents the unique identifier for an Interac payment method associated with a customer account.
- */
+     * Represents the unique identifier for an Interac payment method associated with a customer account.
+     */
     @JsonProperty("InteracPaymentMethodId")
     private String interacPaymentMethodId;
 
     /**
- * The question displayed to the Interac recipient to request acceptance of a deposit.
- */
+     * The question displayed to the Interac recipient to request acceptance of a deposit.
+     */
     @JsonProperty("InteracQuestion")
     private String interacQuestion;
 
     /**
- * InteracAnswer is the response string that the target must provide to accept an Interac deposit.
- */
+     * InteracAnswer is the response string that the target must provide to accept an Interac deposit.
+     */
     @JsonProperty("InteracAnswer")
     private String interacAnswer;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -51,20 +51,18 @@ public class ChangeInteracPaymentMethodQuestionAndAnswerArgs  extends BaseAuthen
     
     public ChangeInteracPaymentMethodQuestionAndAnswerArgs(String interacPaymentMethodId, String interacQuestion, String interacAnswer, String merchantId) {
         this.interacPaymentMethodId = interacPaymentMethodId;
-this.interacQuestion = interacQuestion;
-this.interacAnswer = interacAnswer;
-this.merchantId = merchantId;
-
+        this.interacQuestion = interacQuestion;
+        this.interacAnswer = interacAnswer;
+        this.merchantId = merchantId;
     }
     
     
     public ChangeInteracPaymentMethodQuestionAndAnswerArgs(String sessionToken, String interacPaymentMethodId, String interacQuestion, String interacAnswer, String merchantId) {
         super(sessionToken);
         this.interacPaymentMethodId = interacPaymentMethodId;
-this.interacQuestion = interacQuestion;
-this.interacAnswer = interacAnswer;
-this.merchantId = merchantId;
-
+        this.interacQuestion = interacQuestion;
+        this.interacAnswer = interacAnswer;
+        this.merchantId = merchantId;
     }
 
     
@@ -120,10 +118,10 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "ChangeInteracPaymentMethodQuestionAndAnswerArgs{" +
-                 "interacPaymentMethodId='" + interacPaymentMethodId + '\'' +
- ", interacQuestion='" + interacQuestion + '\'' +
- ", interacAnswer='" + interacAnswer + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "interacPaymentMethodId='" + interacPaymentMethodId + '\'' +
+                ", interacQuestion='" + interacQuestion + '\'' +
+                ", interacAnswer='" + interacAnswer + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

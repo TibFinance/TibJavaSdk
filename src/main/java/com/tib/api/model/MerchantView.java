@@ -25,140 +25,140 @@ public class MerchantView   {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * Represents the name associated with the merchant's account.
- */
+     * Represents the name associated with the merchant's account.
+     */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
- * Provides a secure representation of the account card number associated with a specific payment method.
- */
+     * Provides a secure representation of the account card number associated with a specific payment method.
+     */
     @JsonProperty("AccountPreview")
     private String accountPreview;
 
     /**
- * Represents the unique identifier for a merchant within an external system. This ID is crucial for integrating and synchronizing merchant data across different platforms.
- */
+     * Represents the unique identifier for a merchant within an external system. This ID is crucial for integrating and synchronizing merchant data across different platforms.
+     */
     @JsonProperty("ExternalSystemId")
     private String externalSystemId;
 
     /**
- * Represents the external identity associated with a merchant within an external system.
- */
+     * Represents the external identity associated with a merchant within an external system.
+     */
     @JsonProperty("ExternalSystemGroupId")
     private String externalSystemGroupId;
 
     /**
- * Defines the base currency utilized for bill creation by the merchant.
- */
+     * Defines the base currency utilized for bill creation by the merchant.
+     */
     @JsonProperty("MerchantCurrency")
     private Currency merchantCurrency;
 
     /**
- * Specifies the default language used by the merchant within the TIB Finance API. This setting is crucial for ensuring that all communications and operations are conducted in the preferred language of the merchant.
- */
+     * Specifies the default language used by the merchant within the TIB Finance API. This setting is crucial for ensuring that all communications and operations are conducted in the preferred language of the merchant.
+     */
     @JsonProperty("MerchantLanguage")
     private Language merchantLanguage;
 
     /**
- * Specifies the email address associated with the merchant.
- */
+     * Specifies the email address associated with the merchant.
+     */
     @JsonProperty("Email")
     private String email;
 
     /**
- * Determines if the merchant is authorized to perform billing operations.
- */
+     * Determines if the merchant is authorized to perform billing operations.
+     */
     @JsonProperty("IsAuthorized")
     private boolean isAuthorized;
 
     /**
- * Specifies a list of email addresses, separated by semicolons, that will receive copies of emails sent to the merchant.
- */
+     * Specifies a list of email addresses, separated by semicolons, that will receive copies of emails sent to the merchant.
+     */
     @JsonProperty("EmailCopyTo")
     private String emailCopyTo;
 
     /**
- * Represents the phone number associated with the merchant.
- */
+     * Represents the phone number associated with the merchant.
+     */
     @JsonProperty("MerchantPhoneNumber")
     private String merchantPhoneNumber;
 
     /**
- * Represents the street address associated with a specific entity or location.
- */
+     * Represents the street address associated with a specific entity or location.
+     */
     @JsonProperty("StreetAddress")
     private String streetAddress;
 
     /**
- * Retrieves or assigns the city component of an address.
- */
+     * Retrieves or assigns the city component of an address.
+     */
     @JsonProperty("AddressCity")
     private String addressCity;
 
     /**
- * Represents the unique identifier for a province or state within the system.
- */
+     * Represents the unique identifier for a province or state within the system.
+     */
     @JsonProperty("ProvinceStateId")
     private ProvinceStateId provinceStateId;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Gets or sets the identifier of the country using the CountryIdEnum enumeration. This identifier is required when specifying the country for client, service, or merchant operations.
- */
+     * Gets or sets the identifier of the country using the CountryIdEnum enumeration. This identifier is required when specifying the country for client, service, or merchant operations.
+     */
     @JsonProperty("CountryId")
     private CountryId countryId;
 
     /**
- * Gets or sets the postal zip code for the address entity.
- */
+     * Gets or sets the postal zip code for the address entity.
+     */
     @JsonProperty("PostalZipCode")
     private String postalZipCode;
 
     /**
- * Gets or sets the account provider for the merchant or client account.
- */
+     * Gets or sets the account provider for the merchant or client account.
+     */
     @JsonProperty("AccountProvider")
     private Provider accountProvider;
 
     /**
- * Retrieves or assigns the unique identifier for WhiteLabeling.
- */
+     * Retrieves or assigns the unique identifier for WhiteLabeling.
+     */
     @JsonProperty("WhiteLabelingId")
     private Optional<String> whiteLabelingId;
 
     /**
- * Represents the status of the merchant boarding process within the system. This status is crucial for tracking the progress and completion of merchant onboarding.
- */
+     * Represents the status of the merchant boarding process within the system. This status is crucial for tracking the progress and completion of merchant onboarding.
+     */
     @JsonProperty("BoardingStatus")
     private String boardingStatus;
 
     /**
- * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
- */
+     * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
+     */
     @JsonProperty("BoardingInformationId")
     private String boardingInformationId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BoardingFiles")
     private List<BoardingFile> boardingFiles;
 
@@ -170,29 +170,28 @@ public class MerchantView   {
     
     public MerchantView(String merchantId, String merchantName, String accountName, String accountPreview, String externalSystemId, String externalSystemGroupId, Currency merchantCurrency, Language merchantLanguage, String email, boolean isAuthorized, String emailCopyTo, String merchantPhoneNumber, String streetAddress, String addressCity, ProvinceStateId provinceStateId, String serviceId, CountryId countryId, String postalZipCode, Provider accountProvider, Optional<String> whiteLabelingId, String boardingStatus, String boardingInformationId, List<BoardingFile> boardingFiles) {
         this.merchantId = merchantId;
-this.merchantName = merchantName;
-this.accountName = accountName;
-this.accountPreview = accountPreview;
-this.externalSystemId = externalSystemId;
-this.externalSystemGroupId = externalSystemGroupId;
-this.merchantCurrency = merchantCurrency;
-this.merchantLanguage = merchantLanguage;
-this.email = email;
-this.isAuthorized = isAuthorized;
-this.emailCopyTo = emailCopyTo;
-this.merchantPhoneNumber = merchantPhoneNumber;
-this.streetAddress = streetAddress;
-this.addressCity = addressCity;
-this.provinceStateId = provinceStateId;
-this.serviceId = serviceId;
-this.countryId = countryId;
-this.postalZipCode = postalZipCode;
-this.accountProvider = accountProvider;
-this.whiteLabelingId = whiteLabelingId;
-this.boardingStatus = boardingStatus;
-this.boardingInformationId = boardingInformationId;
-this.boardingFiles = boardingFiles;
-
+        this.merchantName = merchantName;
+        this.accountName = accountName;
+        this.accountPreview = accountPreview;
+        this.externalSystemId = externalSystemId;
+        this.externalSystemGroupId = externalSystemGroupId;
+        this.merchantCurrency = merchantCurrency;
+        this.merchantLanguage = merchantLanguage;
+        this.email = email;
+        this.isAuthorized = isAuthorized;
+        this.emailCopyTo = emailCopyTo;
+        this.merchantPhoneNumber = merchantPhoneNumber;
+        this.streetAddress = streetAddress;
+        this.addressCity = addressCity;
+        this.provinceStateId = provinceStateId;
+        this.serviceId = serviceId;
+        this.countryId = countryId;
+        this.postalZipCode = postalZipCode;
+        this.accountProvider = accountProvider;
+        this.whiteLabelingId = whiteLabelingId;
+        this.boardingStatus = boardingStatus;
+        this.boardingInformationId = boardingInformationId;
+        this.boardingFiles = boardingFiles;
     }
     
     
@@ -402,29 +401,29 @@ this.boardingFiles = boardingFiles;
     @Override
     public String toString() {
         return "MerchantView{" +
-                 "merchantId='" + merchantId + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", accountName='" + accountName + '\'' +
- ", accountPreview='" + accountPreview + '\'' +
- ", externalSystemId='" + externalSystemId + '\'' +
- ", externalSystemGroupId='" + externalSystemGroupId + '\'' +
- ", merchantCurrency='" + merchantCurrency + '\'' +
- ", merchantLanguage='" + merchantLanguage + '\'' +
- ", email='" + email + '\'' +
- ", isAuthorized='" + isAuthorized + '\'' +
- ", emailCopyTo='" + emailCopyTo + '\'' +
- ", merchantPhoneNumber='" + merchantPhoneNumber + '\'' +
- ", streetAddress='" + streetAddress + '\'' +
- ", addressCity='" + addressCity + '\'' +
- ", provinceStateId='" + provinceStateId + '\'' +
- ", serviceId='" + serviceId + '\'' +
- ", countryId='" + countryId + '\'' +
- ", postalZipCode='" + postalZipCode + '\'' +
- ", accountProvider='" + accountProvider + '\'' +
- ", whiteLabelingId='" + whiteLabelingId + '\'' +
- ", boardingStatus='" + boardingStatus + '\'' +
- ", boardingInformationId='" + boardingInformationId + '\'' +
- ", boardingFiles='" + boardingFiles + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", accountName='" + accountName + '\'' +
+                ", accountPreview='" + accountPreview + '\'' +
+                ", externalSystemId='" + externalSystemId + '\'' +
+                ", externalSystemGroupId='" + externalSystemGroupId + '\'' +
+                ", merchantCurrency='" + merchantCurrency + '\'' +
+                ", merchantLanguage='" + merchantLanguage + '\'' +
+                ", email='" + email + '\'' +
+                ", isAuthorized='" + isAuthorized + '\'' +
+                ", emailCopyTo='" + emailCopyTo + '\'' +
+                ", merchantPhoneNumber='" + merchantPhoneNumber + '\'' +
+                ", streetAddress='" + streetAddress + '\'' +
+                ", addressCity='" + addressCity + '\'' +
+                ", provinceStateId='" + provinceStateId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                ", countryId='" + countryId + '\'' +
+                ", postalZipCode='" + postalZipCode + '\'' +
+                ", accountProvider='" + accountProvider + '\'' +
+                ", whiteLabelingId='" + whiteLabelingId + '\'' +
+                ", boardingStatus='" + boardingStatus + '\'' +
+                ", boardingInformationId='" + boardingInformationId + '\'' +
+                ", boardingFiles='" + boardingFiles + '\'' +
 
                 '}';
     }

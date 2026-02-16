@@ -20,8 +20,8 @@ public class DasProviderBase   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DasProviderType")
     private DasProviderType dasProviderType;
 
@@ -33,7 +33,6 @@ public class DasProviderBase   {
     
     public DasProviderBase(DasProviderType dasProviderType) {
         this.dasProviderType = dasProviderType;
-
     }
     
     
@@ -67,7 +66,7 @@ public class DasProviderBase   {
     @Override
     public String toString() {
         return "DasProviderBase{" +
-                 "dasProviderType='" + dasProviderType + '\'' +
+                "dasProviderType='" + dasProviderType + '\'' +
 
                 '}';
     }

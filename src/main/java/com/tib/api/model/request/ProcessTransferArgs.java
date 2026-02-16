@@ -22,20 +22,20 @@ public class ProcessTransferArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Gets or sets the transfer informations.
- */
+     * Gets or sets the transfer informations.
+     */
     @JsonProperty("TransferInformations")
     private List<ProcessTransferEntity> transferInformations;
 
     /**
- * Gets or sets the mailing information.
- */
+     * Gets or sets the mailing information.
+     */
     @JsonProperty("MailingInfo")
     private TransactionMailingInfo mailingInfo;
 
     /**
- * Gets or sets the provider credentials.
- */
+     * Gets or sets the provider credentials.
+     */
     @JsonProperty("ProviderCredentials")
     private List<ProviderAccount> providerCredentials;
 
@@ -47,9 +47,8 @@ public class ProcessTransferArgs  implements IBaseCryptedServiceArgs  {
     
     public ProcessTransferArgs(List<ProcessTransferEntity> transferInformations, TransactionMailingInfo mailingInfo, List<ProviderAccount> providerCredentials) {
         this.transferInformations = transferInformations;
-this.mailingInfo = mailingInfo;
-this.providerCredentials = providerCredentials;
-
+        this.mailingInfo = mailingInfo;
+        this.providerCredentials = providerCredentials;
     }
     
     
@@ -99,9 +98,9 @@ this.providerCredentials = providerCredentials;
     @Override
     public String toString() {
         return "ProcessTransferArgs{" +
-                 "transferInformations='" + transferInformations + '\'' +
- ", mailingInfo='" + mailingInfo + '\'' +
- ", providerCredentials='" + providerCredentials + '\'' +
+                "transferInformations='" + transferInformations + '\'' +
+                ", mailingInfo='" + mailingInfo + '\'' +
+                ", providerCredentials='" + providerCredentials + '\'' +
 
                 '}';
     }

@@ -21,8 +21,8 @@ public class PublicTokenValidationArgs  extends BaseAuthenticatePublicTokenArgs 
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TokenType")
     private PublicAccessTokenRoutingType tokenType;
 
@@ -34,14 +34,12 @@ public class PublicTokenValidationArgs  extends BaseAuthenticatePublicTokenArgs 
     
     public PublicTokenValidationArgs(PublicAccessTokenRoutingType tokenType) {
         this.tokenType = tokenType;
-
     }
     
     
     public PublicTokenValidationArgs(String publicTokenId, PublicAccessTokenRoutingType tokenType) {
         super(publicTokenId);
         this.tokenType = tokenType;
-
     }
 
     
@@ -73,7 +71,7 @@ public class PublicTokenValidationArgs  extends BaseAuthenticatePublicTokenArgs 
     @Override
     public String toString() {
         return "PublicTokenValidationArgs{" +
-                 "tokenType='" + tokenType + '\'' +
+                "tokenType='" + tokenType + '\'' +
 
                 '}';
     }

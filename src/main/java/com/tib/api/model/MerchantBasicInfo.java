@@ -23,68 +23,68 @@ public class MerchantBasicInfo   {
 
     
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * Represents the unique identifier for a merchant within an external system. This ID is crucial for integrating and synchronizing merchant data across different platforms.
- */
+     * Represents the unique identifier for a merchant within an external system. This ID is crucial for integrating and synchronizing merchant data across different platforms.
+     */
     @JsonProperty("ExternalSystemId")
     private String externalSystemId;
 
     /**
- * Represents the external identity associated with a merchant within an external system.
- */
+     * Represents the external identity associated with a merchant within an external system.
+     */
     @JsonProperty("ExternalSystemGroupId")
     private String externalSystemGroupId;
 
     /**
- * Defines the base currency utilized for bill creation by the merchant.
- */
+     * Defines the base currency utilized for bill creation by the merchant.
+     */
     @JsonProperty("MerchantCurrency")
     private Currency merchantCurrency;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * Specifies the email address associated with the merchant.
- */
+     * Specifies the email address associated with the merchant.
+     */
     @JsonProperty("Email")
     private String email;
 
     /**
- * Specifies a list of email addresses, separated by semicolons, that will receive copies of emails sent to the merchant.
- */
+     * Specifies a list of email addresses, separated by semicolons, that will receive copies of emails sent to the merchant.
+     */
     @JsonProperty("EmailCopyTo")
     private String emailCopyTo;
 
     /**
- * The merchant's phone number used for contact and transaction notifications.
- */
+     * The merchant's phone number used for contact and transaction notifications.
+     */
     @JsonProperty("PhoneNumber")
     private String phoneNumber;
 
     /**
- * Contains a free‑text description of the merchant, which is stored in the TIB Finance system and displayed in merchant records.
- */
+     * Contains a free‑text description of the merchant, which is stored in the TIB Finance system and displayed in merchant records.
+     */
     @JsonProperty("MerchantDescription")
     private String merchantDescription;
 
     /**
- * Gets or sets the address associated with the entity.
- */
+     * Gets or sets the address associated with the entity.
+     */
     @JsonProperty("Address")
     private Address address;
 
     /**
- * Gets or sets the favorite provider.
- */
+     * Gets or sets the favorite provider.
+     */
     @JsonProperty("FavoriteProvider")
     private Provider favoriteProvider;
 
@@ -96,17 +96,16 @@ public class MerchantBasicInfo   {
     
     public MerchantBasicInfo(String merchantName, String externalSystemId, String externalSystemGroupId, Currency merchantCurrency, Language language, String email, String emailCopyTo, String phoneNumber, String merchantDescription, Address address, Provider favoriteProvider) {
         this.merchantName = merchantName;
-this.externalSystemId = externalSystemId;
-this.externalSystemGroupId = externalSystemGroupId;
-this.merchantCurrency = merchantCurrency;
-this.language = language;
-this.email = email;
-this.emailCopyTo = emailCopyTo;
-this.phoneNumber = phoneNumber;
-this.merchantDescription = merchantDescription;
-this.address = address;
-this.favoriteProvider = favoriteProvider;
-
+        this.externalSystemId = externalSystemId;
+        this.externalSystemGroupId = externalSystemGroupId;
+        this.merchantCurrency = merchantCurrency;
+        this.language = language;
+        this.email = email;
+        this.emailCopyTo = emailCopyTo;
+        this.phoneNumber = phoneNumber;
+        this.merchantDescription = merchantDescription;
+        this.address = address;
+        this.favoriteProvider = favoriteProvider;
     }
     
     
@@ -220,17 +219,17 @@ this.favoriteProvider = favoriteProvider;
     @Override
     public String toString() {
         return "MerchantBasicInfo{" +
-                 "merchantName='" + merchantName + '\'' +
- ", externalSystemId='" + externalSystemId + '\'' +
- ", externalSystemGroupId='" + externalSystemGroupId + '\'' +
- ", merchantCurrency='" + merchantCurrency + '\'' +
- ", language='" + language + '\'' +
- ", email='" + email + '\'' +
- ", emailCopyTo='" + emailCopyTo + '\'' +
- ", phoneNumber='" + phoneNumber + '\'' +
- ", merchantDescription='" + merchantDescription + '\'' +
- ", address='" + address + '\'' +
- ", favoriteProvider='" + favoriteProvider + '\'' +
+                "merchantName='" + merchantName + '\'' +
+                ", externalSystemId='" + externalSystemId + '\'' +
+                ", externalSystemGroupId='" + externalSystemGroupId + '\'' +
+                ", merchantCurrency='" + merchantCurrency + '\'' +
+                ", language='" + language + '\'' +
+                ", email='" + email + '\'' +
+                ", emailCopyTo='" + emailCopyTo + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", merchantDescription='" + merchantDescription + '\'' +
+                ", address='" + address + '\'' +
+                ", favoriteProvider='" + favoriteProvider + '\'' +
 
                 '}';
     }

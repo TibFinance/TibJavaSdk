@@ -41,20 +41,18 @@ public class GetOperationsReportResponse<T> extends CustomAPIResponse {
     public GetOperationsReportResponse(Error[] errors, boolean hasError, String messages, List<OperationDateReportEntity> dateLineReport, List<TransferBaseInformationEntity> transfers, List<USOperationReportEntity> uSOperationsData, boolean isBrandNewSupplier) {
         super(errors, hasError, messages);
         this.dateLineReport = dateLineReport;
-this.transfers = transfers;
-this.uSOperationsData = uSOperationsData;
-this.isBrandNewSupplier = isBrandNewSupplier;
-
+        this.transfers = transfers;
+        this.uSOperationsData = uSOperationsData;
+        this.isBrandNewSupplier = isBrandNewSupplier;
     }
 
     public GetOperationsReportResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.dateLineReport = (List<OperationDateReportEntity>) apiResponse.getResponse();
-this.transfers = (List<TransferBaseInformationEntity>) apiResponse.getResponse();
-this.uSOperationsData = (List<USOperationReportEntity>) apiResponse.getResponse();
-this.isBrandNewSupplier = Boolean.parseBoolean(apiResponse.getResponse().toString());
-
+            this.transfers = (List<TransferBaseInformationEntity>) apiResponse.getResponse();
+            this.uSOperationsData = (List<USOperationReportEntity>) apiResponse.getResponse();
+            this.isBrandNewSupplier = Boolean.parseBoolean(apiResponse.getResponse().toString());
         }
     }
 
@@ -111,10 +109,10 @@ this.isBrandNewSupplier = Boolean.parseBoolean(apiResponse.getResponse().toStrin
     @Override
     public String toString() {
         return "GetOperationsReportResponse{" +
-                 "dateLineReport='" + dateLineReport + '\'' +
- ", transfers='" + transfers + '\'' +
- ", uSOperationsData='" + uSOperationsData + '\'' +
- ", isBrandNewSupplier='" + isBrandNewSupplier + '\'' +
+                "dateLineReport='" + dateLineReport + '\'' +
+                ", transfers='" + transfers + '\'' +
+                ", uSOperationsData='" + uSOperationsData + '\'' +
+                ", isBrandNewSupplier='" + isBrandNewSupplier + '\'' +
 
                 '}';
     }

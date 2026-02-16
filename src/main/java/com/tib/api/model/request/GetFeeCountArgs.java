@@ -20,20 +20,20 @@ public class GetFeeCountArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Gets or sets the month.
- */
+     * Gets or sets the month.
+     */
     @JsonProperty("Month")
     private Integer month;
 
     /**
- * Gets or sets the year.
- */
+     * Gets or sets the year.
+     */
     @JsonProperty("Year")
     private Integer year;
 
@@ -45,18 +45,16 @@ public class GetFeeCountArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetFeeCountArgs(String merchantId, Integer month, Integer year) {
         this.merchantId = merchantId;
-this.month = month;
-this.year = year;
-
+        this.month = month;
+        this.year = year;
     }
     
     
     public GetFeeCountArgs(String sessionToken, String merchantId, Integer month, Integer year) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.month = month;
-this.year = year;
-
+        this.month = month;
+        this.year = year;
     }
 
     
@@ -104,9 +102,9 @@ this.year = year;
     @Override
     public String toString() {
         return "GetFeeCountArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", month='" + month + '\'' +
- ", year='" + year + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", month='" + month + '\'' +
+                ", year='" + year + '\'' +
 
                 '}';
     }

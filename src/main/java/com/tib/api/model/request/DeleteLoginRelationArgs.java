@@ -20,8 +20,8 @@ public class DeleteLoginRelationArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("LoginRealtionId")
     private String loginRealtionId;
 
@@ -33,14 +33,12 @@ public class DeleteLoginRelationArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public DeleteLoginRelationArgs(String loginRealtionId) {
         this.loginRealtionId = loginRealtionId;
-
     }
     
     
     public DeleteLoginRelationArgs(String adminSessionToken, String loginRealtionId) {
         super(adminSessionToken);
         this.loginRealtionId = loginRealtionId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class DeleteLoginRelationArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "DeleteLoginRelationArgs{" +
-                 "loginRealtionId='" + loginRealtionId + '\'' +
+                "loginRealtionId='" + loginRealtionId + '\'' +
 
                 '}';
     }

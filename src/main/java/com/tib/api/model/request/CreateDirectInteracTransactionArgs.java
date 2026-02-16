@@ -24,56 +24,56 @@ public class CreateDirectInteracTransactionArgs  extends BaseAuthenticatedCrypte
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * This model encapsulates the details required to manage Interac payment methods for customers. It is used to facilitate electronic funds transfers via the Interac network, a widely used payment system in Canada.
- */
+     * This model encapsulates the details required to manage Interac payment methods for customers. It is used to facilitate electronic funds transfers via the Interac network, a widely used payment system in Canada.
+     */
     @JsonProperty("InteracInformation")
     private Interac interacInformation;
 
     /**
- * Indicates the direction of an Interac transaction.
- */
+     * Indicates the direction of an Interac transaction.
+     */
     @JsonProperty("TransferDirection")
     private TransferDirection transferDirection;
 
     /**
- * Specifies the due date for the payment. If the value is null, the system treats the due date as the current date and time.
- */
+     * Specifies the due date for the payment. If the value is null, the system treats the due date as the current date and time.
+     */
     @JsonProperty("DueDate")
     private LocalDateTime dueDate;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Represents a brief description used in statements to identify or clarify the transaction.
- */
+     * Represents a brief description used in statements to identify or clarify the transaction.
+     */
     @JsonProperty("StatementDescription")
     private String statementDescription;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * Retrieves or assigns the reference number associated with a transaction or operation.
- */
+     * Retrieves or assigns the reference number associated with a transaction or operation.
+     */
     @JsonProperty("ReferenceNumber")
     private String referenceNumber;
 
@@ -85,30 +85,28 @@ public class CreateDirectInteracTransactionArgs  extends BaseAuthenticatedCrypte
     
     public CreateDirectInteracTransactionArgs(String merchantId, Interac interacInformation, TransferDirection transferDirection, LocalDateTime dueDate, Double amount, String statementDescription, Currency currency, Language language, String referenceNumber) {
         this.merchantId = merchantId;
-this.interacInformation = interacInformation;
-this.transferDirection = transferDirection;
-this.dueDate = dueDate;
-this.amount = amount;
-this.statementDescription = statementDescription;
-this.currency = currency;
-this.language = language;
-this.referenceNumber = referenceNumber;
-
+        this.interacInformation = interacInformation;
+        this.transferDirection = transferDirection;
+        this.dueDate = dueDate;
+        this.amount = amount;
+        this.statementDescription = statementDescription;
+        this.currency = currency;
+        this.language = language;
+        this.referenceNumber = referenceNumber;
     }
     
     
     public CreateDirectInteracTransactionArgs(String sessionToken, String merchantId, Interac interacInformation, TransferDirection transferDirection, LocalDateTime dueDate, Double amount, String statementDescription, Currency currency, Language language, String referenceNumber) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.interacInformation = interacInformation;
-this.transferDirection = transferDirection;
-this.dueDate = dueDate;
-this.amount = amount;
-this.statementDescription = statementDescription;
-this.currency = currency;
-this.language = language;
-this.referenceNumber = referenceNumber;
-
+        this.interacInformation = interacInformation;
+        this.transferDirection = transferDirection;
+        this.dueDate = dueDate;
+        this.amount = amount;
+        this.statementDescription = statementDescription;
+        this.currency = currency;
+        this.language = language;
+        this.referenceNumber = referenceNumber;
     }
 
     
@@ -204,15 +202,15 @@ this.referenceNumber = referenceNumber;
     @Override
     public String toString() {
         return "CreateDirectInteracTransactionArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", interacInformation='" + interacInformation + '\'' +
- ", transferDirection='" + transferDirection + '\'' +
- ", dueDate='" + dueDate + '\'' +
- ", amount='" + amount + '\'' +
- ", statementDescription='" + statementDescription + '\'' +
- ", currency='" + currency + '\'' +
- ", language='" + language + '\'' +
- ", referenceNumber='" + referenceNumber + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", interacInformation='" + interacInformation + '\'' +
+                ", transferDirection='" + transferDirection + '\'' +
+                ", dueDate='" + dueDate + '\'' +
+                ", amount='" + amount + '\'' +
+                ", statementDescription='" + statementDescription + '\'' +
+                ", currency='" + currency + '\'' +
+                ", language='" + language + '\'' +
+                ", referenceNumber='" + referenceNumber + '\'' +
 
                 '}';
     }

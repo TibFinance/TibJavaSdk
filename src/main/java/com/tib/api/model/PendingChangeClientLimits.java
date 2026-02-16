@@ -19,20 +19,20 @@ public class PendingChangeClientLimits   {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Retrieves or updates the warning deposit limit configured for a client.
- */
+     * Retrieves or updates the warning deposit limit configured for a client.
+     */
     @JsonProperty("ClientWarningDepositLimit")
     private Double clientWarningDepositLimit;
 
     /**
- * Gets or sets the warning collection limit for a client. This limit defines the monetary threshold at which the system raises a warning for client collection activities.
- */
+     * Gets or sets the warning collection limit for a client. This limit defines the monetary threshold at which the system raises a warning for client collection activities.
+     */
     @JsonProperty("ClientWarningCollectionLimit")
     private Double clientWarningCollectionLimit;
 
@@ -44,9 +44,8 @@ public class PendingChangeClientLimits   {
     
     public PendingChangeClientLimits(String serviceId, Double clientWarningDepositLimit, Double clientWarningCollectionLimit) {
         this.serviceId = serviceId;
-this.clientWarningDepositLimit = clientWarningDepositLimit;
-this.clientWarningCollectionLimit = clientWarningCollectionLimit;
-
+        this.clientWarningDepositLimit = clientWarningDepositLimit;
+        this.clientWarningCollectionLimit = clientWarningCollectionLimit;
     }
     
     
@@ -96,9 +95,9 @@ this.clientWarningCollectionLimit = clientWarningCollectionLimit;
     @Override
     public String toString() {
         return "PendingChangeClientLimits{" +
-                 "serviceId='" + serviceId + '\'' +
- ", clientWarningDepositLimit='" + clientWarningDepositLimit + '\'' +
- ", clientWarningCollectionLimit='" + clientWarningCollectionLimit + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", clientWarningDepositLimit='" + clientWarningDepositLimit + '\'' +
+                ", clientWarningCollectionLimit='" + clientWarningCollectionLimit + '\'' +
 
                 '}';
     }

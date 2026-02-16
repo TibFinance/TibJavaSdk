@@ -25,13 +25,11 @@ public class SetServiceFeeSettingsResponse extends CustomAPIResponse {
 
     public SetServiceFeeSettingsResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SetServiceFeeSettingsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

@@ -25,13 +25,11 @@ public class CreateServiceFromPublicTokenResponse extends CustomAPIResponse {
 
     public CreateServiceFromPublicTokenResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public CreateServiceFromPublicTokenResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

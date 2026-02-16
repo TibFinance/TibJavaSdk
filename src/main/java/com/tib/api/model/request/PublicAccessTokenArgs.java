@@ -29,7 +29,6 @@ public class PublicAccessTokenArgs  extends BasePublicTokenArgs  {
     
     public PublicAccessTokenArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

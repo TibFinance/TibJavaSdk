@@ -44,24 +44,22 @@ public class AcpTypesResponse extends CustomAPIResponse {
     public AcpTypesResponse(Error[] errors, boolean hasError, String messages, Integer collectMerchantCode, Integer depositClientCode, Integer collectClientCode, Integer depositMerchantCode, Integer feesmerchantCode, Integer tibFeesCode) {
         super(errors, hasError, messages);
         this.collectMerchantCode = collectMerchantCode;
-this.depositClientCode = depositClientCode;
-this.collectClientCode = collectClientCode;
-this.depositMerchantCode = depositMerchantCode;
-this.feesmerchantCode = feesmerchantCode;
-this.tibFeesCode = tibFeesCode;
-
+        this.depositClientCode = depositClientCode;
+        this.collectClientCode = collectClientCode;
+        this.depositMerchantCode = depositMerchantCode;
+        this.feesmerchantCode = feesmerchantCode;
+        this.tibFeesCode = tibFeesCode;
     }
 
     public AcpTypesResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.collectMerchantCode = Integer.parseInt(apiResponse.getResponse().toString());
-this.depositClientCode = Integer.parseInt(apiResponse.getResponse().toString());
-this.collectClientCode = Integer.parseInt(apiResponse.getResponse().toString());
-this.depositMerchantCode = Integer.parseInt(apiResponse.getResponse().toString());
-this.feesmerchantCode = Integer.parseInt(apiResponse.getResponse().toString());
-this.tibFeesCode = Integer.parseInt(apiResponse.getResponse().toString());
-
+            this.depositClientCode = Integer.parseInt(apiResponse.getResponse().toString());
+            this.collectClientCode = Integer.parseInt(apiResponse.getResponse().toString());
+            this.depositMerchantCode = Integer.parseInt(apiResponse.getResponse().toString());
+            this.feesmerchantCode = Integer.parseInt(apiResponse.getResponse().toString());
+            this.tibFeesCode = Integer.parseInt(apiResponse.getResponse().toString());
         }
     }
 
@@ -134,12 +132,12 @@ this.tibFeesCode = Integer.parseInt(apiResponse.getResponse().toString());
     @Override
     public String toString() {
         return "AcpTypesResponse{" +
-                 "collectMerchantCode='" + collectMerchantCode + '\'' +
- ", depositClientCode='" + depositClientCode + '\'' +
- ", collectClientCode='" + collectClientCode + '\'' +
- ", depositMerchantCode='" + depositMerchantCode + '\'' +
- ", feesmerchantCode='" + feesmerchantCode + '\'' +
- ", tibFeesCode='" + tibFeesCode + '\'' +
+                "collectMerchantCode='" + collectMerchantCode + '\'' +
+                ", depositClientCode='" + depositClientCode + '\'' +
+                ", collectClientCode='" + collectClientCode + '\'' +
+                ", depositMerchantCode='" + depositMerchantCode + '\'' +
+                ", feesmerchantCode='" + feesmerchantCode + '\'' +
+                ", tibFeesCode='" + tibFeesCode + '\'' +
 
                 '}';
     }

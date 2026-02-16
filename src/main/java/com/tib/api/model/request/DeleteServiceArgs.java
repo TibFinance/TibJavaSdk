@@ -20,8 +20,8 @@ public class DeleteServiceArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
@@ -33,14 +33,12 @@ public class DeleteServiceArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public DeleteServiceArgs(String serviceId) {
         this.serviceId = serviceId;
-
     }
     
     
     public DeleteServiceArgs(String adminSessionToken, String serviceId) {
         super(adminSessionToken);
         this.serviceId = serviceId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class DeleteServiceArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "DeleteServiceArgs{" +
-                 "serviceId='" + serviceId + '\'' +
+                "serviceId='" + serviceId + '\'' +
 
                 '}';
     }

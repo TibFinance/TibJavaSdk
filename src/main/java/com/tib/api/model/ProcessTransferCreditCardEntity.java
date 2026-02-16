@@ -25,20 +25,20 @@ public class ProcessTransferCreditCardEntity  extends ProcessTransferEntity  {
 
     
     /**
- * Gets or sets the card information.
- */
+     * Gets or sets the card information.
+     */
     @JsonProperty("CardInformation")
     private CreditCard cardInformation;
 
     /**
- * Determine if the card is new in the system.
- */
+     * Determine if the card is new in the system.
+     */
     @JsonProperty("NeedValidation")
     private boolean needValidation;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderGivenIdentification")
     private String providerGivenIdentification;
 
@@ -50,18 +50,16 @@ public class ProcessTransferCreditCardEntity  extends ProcessTransferEntity  {
     
     public ProcessTransferCreditCardEntity(CreditCard cardInformation, boolean needValidation, String providerGivenIdentification) {
         this.cardInformation = cardInformation;
-this.needValidation = needValidation;
-this.providerGivenIdentification = providerGivenIdentification;
-
+        this.needValidation = needValidation;
+        this.providerGivenIdentification = providerGivenIdentification;
     }
     
     
     public ProcessTransferCreditCardEntity(String transactionId, String transactionGroupId, Double transactionAmount, Currency currency, LocalDateTime dueDate, String transactionDescription, AcpOperationType acpOperationType, TransferDirection transferDirection, String favoriteProvider, boolean isTransactionRevert, String alreadyProcessedProviderId, String alreadyProcessedProviderAdditionalInfos, Language language, String providerTransactionId, String providerSubType, String merchantId, Provider providerType, String transferId, List<Object> relatedConvenientFeesWithTargetProviderId, CreditCard cardInformation, boolean needValidation, String providerGivenIdentification) {
         super(transactionId, transactionGroupId, transactionAmount, currency, dueDate, transactionDescription, acpOperationType, transferDirection, favoriteProvider, isTransactionRevert, alreadyProcessedProviderId, alreadyProcessedProviderAdditionalInfos, language, providerTransactionId, providerSubType, merchantId, providerType, transferId, relatedConvenientFeesWithTargetProviderId);
         this.cardInformation = cardInformation;
-this.needValidation = needValidation;
-this.providerGivenIdentification = providerGivenIdentification;
-
+        this.needValidation = needValidation;
+        this.providerGivenIdentification = providerGivenIdentification;
     }
 
     
@@ -109,9 +107,9 @@ this.providerGivenIdentification = providerGivenIdentification;
     @Override
     public String toString() {
         return "ProcessTransferCreditCardEntity{" +
-                 "cardInformation='" + cardInformation + '\'' +
- ", needValidation='" + needValidation + '\'' +
- ", providerGivenIdentification='" + providerGivenIdentification + '\'' +
+                "cardInformation='" + cardInformation + '\'' +
+                ", needValidation='" + needValidation + '\'' +
+                ", providerGivenIdentification='" + providerGivenIdentification + '\'' +
 
                 '}';
     }

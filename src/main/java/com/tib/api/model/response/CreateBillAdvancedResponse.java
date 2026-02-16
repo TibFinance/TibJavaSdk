@@ -60,34 +60,32 @@ public class CreateBillAdvancedResponse extends CustomAPIResponse {
     public CreateBillAdvancedResponse(Error[] errors, boolean hasError, String messages, String billId, String invoiceNumber, String fullInvoiceNumber, Double subtotal, Double discountTotal, Double taxAmount1, Double taxAmount2, Double totalAmount, List<BillLineEntity> lines, String paymentUrl, String pdfUrl) {
         super(errors, hasError, messages);
         this.billId = billId;
-this.invoiceNumber = invoiceNumber;
-this.fullInvoiceNumber = fullInvoiceNumber;
-this.subtotal = subtotal;
-this.discountTotal = discountTotal;
-this.taxAmount1 = taxAmount1;
-this.taxAmount2 = taxAmount2;
-this.totalAmount = totalAmount;
-this.lines = lines;
-this.paymentUrl = paymentUrl;
-this.pdfUrl = pdfUrl;
-
+        this.invoiceNumber = invoiceNumber;
+        this.fullInvoiceNumber = fullInvoiceNumber;
+        this.subtotal = subtotal;
+        this.discountTotal = discountTotal;
+        this.taxAmount1 = taxAmount1;
+        this.taxAmount2 = taxAmount2;
+        this.totalAmount = totalAmount;
+        this.lines = lines;
+        this.paymentUrl = paymentUrl;
+        this.pdfUrl = pdfUrl;
     }
 
     public CreateBillAdvancedResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.billId = apiResponse.getResponse().toString();
-this.invoiceNumber = apiResponse.getResponse().toString();
-this.fullInvoiceNumber = apiResponse.getResponse().toString();
-this.subtotal = Double.parseDouble(apiResponse.getResponse().toString());
-this.discountTotal = Double.parseDouble(apiResponse.getResponse().toString());
-this.taxAmount1 = Double.parseDouble(apiResponse.getResponse().toString());
-this.taxAmount2 = Double.parseDouble(apiResponse.getResponse().toString());
-this.totalAmount = Double.parseDouble(apiResponse.getResponse().toString());
-this.lines = (List<BillLineEntity>) apiResponse.getResponse();
-this.paymentUrl = apiResponse.getResponse().toString();
-this.pdfUrl = apiResponse.getResponse().toString();
-
+            this.invoiceNumber = apiResponse.getResponse().toString();
+            this.fullInvoiceNumber = apiResponse.getResponse().toString();
+            this.subtotal = Double.parseDouble(apiResponse.getResponse().toString());
+            this.discountTotal = Double.parseDouble(apiResponse.getResponse().toString());
+            this.taxAmount1 = Double.parseDouble(apiResponse.getResponse().toString());
+            this.taxAmount2 = Double.parseDouble(apiResponse.getResponse().toString());
+            this.totalAmount = Double.parseDouble(apiResponse.getResponse().toString());
+            this.lines = (List<BillLineEntity>) apiResponse.getResponse();
+            this.paymentUrl = apiResponse.getResponse().toString();
+            this.pdfUrl = apiResponse.getResponse().toString();
         }
     }
 
@@ -200,17 +198,17 @@ this.pdfUrl = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "CreateBillAdvancedResponse{" +
-                 "billId='" + billId + '\'' +
- ", invoiceNumber='" + invoiceNumber + '\'' +
- ", fullInvoiceNumber='" + fullInvoiceNumber + '\'' +
- ", subtotal='" + subtotal + '\'' +
- ", discountTotal='" + discountTotal + '\'' +
- ", taxAmount1='" + taxAmount1 + '\'' +
- ", taxAmount2='" + taxAmount2 + '\'' +
- ", totalAmount='" + totalAmount + '\'' +
- ", lines='" + lines + '\'' +
- ", paymentUrl='" + paymentUrl + '\'' +
- ", pdfUrl='" + pdfUrl + '\'' +
+                "billId='" + billId + '\'' +
+                ", invoiceNumber='" + invoiceNumber + '\'' +
+                ", fullInvoiceNumber='" + fullInvoiceNumber + '\'' +
+                ", subtotal='" + subtotal + '\'' +
+                ", discountTotal='" + discountTotal + '\'' +
+                ", taxAmount1='" + taxAmount1 + '\'' +
+                ", taxAmount2='" + taxAmount2 + '\'' +
+                ", totalAmount='" + totalAmount + '\'' +
+                ", lines='" + lines + '\'' +
+                ", paymentUrl='" + paymentUrl + '\'' +
+                ", pdfUrl='" + pdfUrl + '\'' +
 
                 '}';
     }

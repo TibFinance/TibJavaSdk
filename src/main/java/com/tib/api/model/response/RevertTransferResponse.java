@@ -29,14 +29,12 @@ public class RevertTransferResponse extends CustomAPIResponse {
     public RevertTransferResponse(Error[] errors, boolean hasError, String messages, boolean hasBeenDeleted) {
         super(errors, hasError, messages);
         this.hasBeenDeleted = hasBeenDeleted;
-
     }
 
     public RevertTransferResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.hasBeenDeleted = Boolean.parseBoolean(apiResponse.getResponse().toString());
-
         }
     }
 
@@ -69,7 +67,7 @@ public class RevertTransferResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "RevertTransferResponse{" +
-                 "hasBeenDeleted='" + hasBeenDeleted + '\'' +
+                "hasBeenDeleted='" + hasBeenDeleted + '\'' +
 
                 '}';
     }

@@ -22,20 +22,20 @@ public class BoardingArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Gets or sets the BoardingEntity.
- */
+     * Gets or sets the BoardingEntity.
+     */
     @JsonProperty("BoardingEntity")
     private BoardingEntity boardingEntity;
 
     /**
- * Gets or sets the mailing information.
- */
+     * Gets or sets the mailing information.
+     */
     @JsonProperty("MailingInfo")
     private TransactionMailingInfo mailingInfo;
 
     /**
- * Gets or sets the provider credentials.
- */
+     * Gets or sets the provider credentials.
+     */
     @JsonProperty("ProviderCredentials")
     private List<ProviderAccount> providerCredentials;
 
@@ -47,9 +47,8 @@ public class BoardingArgs  implements IBaseCryptedServiceArgs  {
     
     public BoardingArgs(BoardingEntity boardingEntity, TransactionMailingInfo mailingInfo, List<ProviderAccount> providerCredentials) {
         this.boardingEntity = boardingEntity;
-this.mailingInfo = mailingInfo;
-this.providerCredentials = providerCredentials;
-
+        this.mailingInfo = mailingInfo;
+        this.providerCredentials = providerCredentials;
     }
     
     
@@ -99,9 +98,9 @@ this.providerCredentials = providerCredentials;
     @Override
     public String toString() {
         return "BoardingArgs{" +
-                 "boardingEntity='" + boardingEntity + '\'' +
- ", mailingInfo='" + mailingInfo + '\'' +
- ", providerCredentials='" + providerCredentials + '\'' +
+                "boardingEntity='" + boardingEntity + '\'' +
+                ", mailingInfo='" + mailingInfo + '\'' +
+                ", providerCredentials='" + providerCredentials + '\'' +
 
                 '}';
     }

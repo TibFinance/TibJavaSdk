@@ -19,8 +19,8 @@ public class ClientEntity   {
 
     
     /**
- * The name of the client
- */
+     * The name of the client
+     */
     @JsonProperty("ClientName")
     private String clientName;
 
@@ -32,7 +32,6 @@ public class ClientEntity   {
     
     public ClientEntity(String clientName) {
         this.clientName = clientName;
-
     }
     
     
@@ -66,7 +65,7 @@ public class ClientEntity   {
     @Override
     public String toString() {
         return "ClientEntity{" +
-                 "clientName='" + clientName + '\'' +
+                "clientName='" + clientName + '\'' +
 
                 '}';
     }

@@ -25,13 +25,11 @@ public class MarkPaymentResolvedResponse extends CustomAPIResponse {
 
     public MarkPaymentResolvedResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public MarkPaymentResolvedResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

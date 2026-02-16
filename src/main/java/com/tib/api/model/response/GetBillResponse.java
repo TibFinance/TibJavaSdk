@@ -30,15 +30,13 @@ public class GetBillResponse extends CustomAPIResponse {
     public GetBillResponse(Error[] errors, boolean hasError, String messages, Bill bill) {
         super(errors, hasError, messages);
         this.bill = bill;
-
     }
 
     public GetBillResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.bill = objectMapper.readValue(json, Bill.class);
-
+            this.bill = objectMapper.readValue(json, Bill.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.bill = objectMapper.readValue(json, Bill.class);
     @Override
     public String toString() {
         return "GetBillResponse{" +
-                 "bill='" + bill + '\'' +
+                "bill='" + bill + '\'' +
 
                 '}';
     }

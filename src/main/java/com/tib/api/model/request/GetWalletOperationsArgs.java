@@ -20,20 +20,20 @@ public class GetWalletOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("From")
     private LocalDateTime from;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("To")
     private LocalDateTime to;
 
@@ -45,18 +45,16 @@ public class GetWalletOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetWalletOperationsArgs(String serviceId, LocalDateTime from, LocalDateTime to) {
         this.serviceId = serviceId;
-this.from = from;
-this.to = to;
-
+        this.from = from;
+        this.to = to;
     }
     
     
     public GetWalletOperationsArgs(String sessionToken, String serviceId, LocalDateTime from, LocalDateTime to) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.from = from;
-this.to = to;
-
+        this.from = from;
+        this.to = to;
     }
 
     
@@ -104,9 +102,9 @@ this.to = to;
     @Override
     public String toString() {
         return "GetWalletOperationsArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", from='" + from + '\'' +
- ", to='" + to + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", from='" + from + '\'' +
+                ", to='" + to + '\'' +
 
                 '}';
     }

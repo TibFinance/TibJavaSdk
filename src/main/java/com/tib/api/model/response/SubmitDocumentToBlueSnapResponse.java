@@ -35,18 +35,16 @@ public class SubmitDocumentToBlueSnapResponse extends CustomAPIResponse {
     public SubmitDocumentToBlueSnapResponse(Error[] errors, boolean hasError, String messages, String status, String message, Integer count) {
         super(errors, hasError, messages);
         this.status = status;
-this.message = message;
-this.count = count;
-
+        this.message = message;
+        this.count = count;
     }
 
     public SubmitDocumentToBlueSnapResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.status = apiResponse.getResponse().toString();
-this.message = apiResponse.getResponse().toString();
-this.count = Integer.parseInt(apiResponse.getResponse().toString());
-
+            this.message = apiResponse.getResponse().toString();
+            this.count = Integer.parseInt(apiResponse.getResponse().toString());
         }
     }
 
@@ -95,9 +93,9 @@ this.count = Integer.parseInt(apiResponse.getResponse().toString());
     @Override
     public String toString() {
         return "SubmitDocumentToBlueSnapResponse{" +
-                 "status='" + status + '\'' +
- ", message='" + message + '\'' +
- ", count='" + count + '\'' +
+                "status='" + status + '\'' +
+                ", message='" + message + '\'' +
+                ", count='" + count + '\'' +
 
                 '}';
     }

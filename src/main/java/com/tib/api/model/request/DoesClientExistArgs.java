@@ -19,8 +19,8 @@ public class DoesClientExistArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
@@ -32,7 +32,6 @@ public class DoesClientExistArgs  implements IBaseCryptedServiceArgs  {
     
     public DoesClientExistArgs(String clientId) {
         this.clientId = clientId;
-
     }
     
     
@@ -66,7 +65,7 @@ public class DoesClientExistArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "DoesClientExistArgs{" +
-                 "clientId='" + clientId + '\'' +
+                "clientId='" + clientId + '\'' +
 
                 '}';
     }

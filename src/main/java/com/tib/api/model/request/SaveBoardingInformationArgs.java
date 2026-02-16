@@ -21,14 +21,14 @@ public class SaveBoardingInformationArgs  extends BaseAuthenticatedCryptedArgs  
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsDraft")
     private boolean isDraft;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BoardingInformation")
     private BoardingInformation boardingInformation;
 
@@ -40,16 +40,14 @@ public class SaveBoardingInformationArgs  extends BaseAuthenticatedCryptedArgs  
     
     public SaveBoardingInformationArgs(boolean isDraft, BoardingInformation boardingInformation) {
         this.isDraft = isDraft;
-this.boardingInformation = boardingInformation;
-
+        this.boardingInformation = boardingInformation;
     }
     
     
     public SaveBoardingInformationArgs(String sessionToken, boolean isDraft, BoardingInformation boardingInformation) {
         super(sessionToken);
         this.isDraft = isDraft;
-this.boardingInformation = boardingInformation;
-
+        this.boardingInformation = boardingInformation;
     }
 
     
@@ -89,8 +87,8 @@ this.boardingInformation = boardingInformation;
     @Override
     public String toString() {
         return "SaveBoardingInformationArgs{" +
-                 "isDraft='" + isDraft + '\'' +
- ", boardingInformation='" + boardingInformation + '\'' +
+                "isDraft='" + isDraft + '\'' +
+                ", boardingInformation='" + boardingInformation + '\'' +
 
                 '}';
     }

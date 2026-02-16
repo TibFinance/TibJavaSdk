@@ -20,14 +20,14 @@ public class RelaunchMerchantFailedTransferBulkArgs  extends BaseAdminOnlyCrypte
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransferIds")
     private List<String> transferIds;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -39,16 +39,14 @@ public class RelaunchMerchantFailedTransferBulkArgs  extends BaseAdminOnlyCrypte
     
     public RelaunchMerchantFailedTransferBulkArgs(List<String> transferIds, String merchantId) {
         this.transferIds = transferIds;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
     
     
     public RelaunchMerchantFailedTransferBulkArgs(String adminSessionToken, List<String> transferIds, String merchantId) {
         super(adminSessionToken);
         this.transferIds = transferIds;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     
@@ -88,8 +86,8 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "RelaunchMerchantFailedTransferBulkArgs{" +
-                 "transferIds='" + transferIds + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "transferIds='" + transferIds + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

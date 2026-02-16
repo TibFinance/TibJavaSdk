@@ -20,8 +20,8 @@ public class GetProviderMerchantCredentialsArgs  extends BaseAuthenticatedCrypte
 
     
     /**
- * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
- */
+     * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
+     */
     @JsonProperty("BoardingInformationId")
     private String boardingInformationId;
 
@@ -33,14 +33,12 @@ public class GetProviderMerchantCredentialsArgs  extends BaseAuthenticatedCrypte
     
     public GetProviderMerchantCredentialsArgs(String boardingInformationId) {
         this.boardingInformationId = boardingInformationId;
-
     }
     
     
     public GetProviderMerchantCredentialsArgs(String sessionToken, String boardingInformationId) {
         super(sessionToken);
         this.boardingInformationId = boardingInformationId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetProviderMerchantCredentialsArgs  extends BaseAuthenticatedCrypte
     @Override
     public String toString() {
         return "GetProviderMerchantCredentialsArgs{" +
-                 "boardingInformationId='" + boardingInformationId + '\'' +
+                "boardingInformationId='" + boardingInformationId + '\'' +
 
                 '}';
     }

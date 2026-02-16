@@ -20,14 +20,14 @@ public class DeletedPublicTokenData   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Reason")
     private DeletedPublicTokenReason reason;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ReferenceData")
     private String referenceData;
 
@@ -39,8 +39,7 @@ public class DeletedPublicTokenData   {
     
     public DeletedPublicTokenData(DeletedPublicTokenReason reason, String referenceData) {
         this.reason = reason;
-this.referenceData = referenceData;
-
+        this.referenceData = referenceData;
     }
     
     
@@ -82,8 +81,8 @@ this.referenceData = referenceData;
     @Override
     public String toString() {
         return "DeletedPublicTokenData{" +
-                 "reason='" + reason + '\'' +
- ", referenceData='" + referenceData + '\'' +
+                "reason='" + reason + '\'' +
+                ", referenceData='" + referenceData + '\'' +
 
                 '}';
     }

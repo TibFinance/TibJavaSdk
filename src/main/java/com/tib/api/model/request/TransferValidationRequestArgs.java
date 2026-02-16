@@ -20,8 +20,8 @@ public class TransferValidationRequestArgs  extends BaseAuthenticatePublicTokenA
 
     
     /**
- * Gets or sets a value indicating whether this <see cref="TransferValidationRequestArgs"> is approved.
- */
+     * Gets or sets a value indicating whether this <see cref="TransferValidationRequestArgs"> is approved.
+     */
     @JsonProperty("Approved")
     private boolean approved;
 
@@ -33,14 +33,12 @@ public class TransferValidationRequestArgs  extends BaseAuthenticatePublicTokenA
     
     public TransferValidationRequestArgs(boolean approved) {
         this.approved = approved;
-
     }
     
     
     public TransferValidationRequestArgs(String publicTokenId, boolean approved) {
         super(publicTokenId);
         this.approved = approved;
-
     }
 
     
@@ -72,7 +70,7 @@ public class TransferValidationRequestArgs  extends BaseAuthenticatePublicTokenA
     @Override
     public String toString() {
         return "TransferValidationRequestArgs{" +
-                 "approved='" + approved + '\'' +
+                "approved='" + approved + '\'' +
 
                 '}';
     }

@@ -20,14 +20,14 @@ public class LineBase  extends FlatFileLine  {
 
     
     /**
- * Gets the default padding character.
- */
+     * Gets the default padding character.
+     */
     @JsonProperty("DefaultPaddingChar")
     private char defaultPaddingChar;
 
     /**
- * Gets the default padding direction.
- */
+     * Gets the default padding direction.
+     */
     @JsonProperty("DefaultPaddingDirection")
     private PadDirection defaultPaddingDirection;
 
@@ -39,16 +39,14 @@ public class LineBase  extends FlatFileLine  {
     
     public LineBase(char defaultPaddingChar, PadDirection defaultPaddingDirection) {
         this.defaultPaddingChar = defaultPaddingChar;
-this.defaultPaddingDirection = defaultPaddingDirection;
-
+        this.defaultPaddingDirection = defaultPaddingDirection;
     }
     
     
     public LineBase(Integer startPosition, char defaultPaddingChar, PadDirection defaultPaddingDirection) {
         super(defaultPaddingChar, defaultPaddingDirection, startPosition);
         this.defaultPaddingChar = defaultPaddingChar;
-this.defaultPaddingDirection = defaultPaddingDirection;
-
+        this.defaultPaddingDirection = defaultPaddingDirection;
     }
 
     
@@ -88,8 +86,8 @@ this.defaultPaddingDirection = defaultPaddingDirection;
     @Override
     public String toString() {
         return "LineBase{" +
-                 "defaultPaddingChar='" + defaultPaddingChar + '\'' +
- ", defaultPaddingDirection='" + defaultPaddingDirection + '\'' +
+                "defaultPaddingChar='" + defaultPaddingChar + '\'' +
+                ", defaultPaddingDirection='" + defaultPaddingDirection + '\'' +
 
                 '}';
     }

@@ -21,14 +21,14 @@ public class CreateClientArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Identifies the TIB client (account) using its unique GUID.
- */
+     * Identifies the TIB client (account) using its unique GUID.
+     */
     @JsonProperty("Client")
     private ClientEntity client;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("KYCDone")
     private boolean kYCDone;
 
@@ -40,16 +40,14 @@ public class CreateClientArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public CreateClientArgs(ClientEntity client, boolean kYCDone) {
         this.client = client;
-this.kYCDone = kYCDone;
-
+        this.kYCDone = kYCDone;
     }
     
     
     public CreateClientArgs(String adminSessionToken, ClientEntity client, boolean kYCDone) {
         super(adminSessionToken);
         this.client = client;
-this.kYCDone = kYCDone;
-
+        this.kYCDone = kYCDone;
     }
 
     
@@ -89,8 +87,8 @@ this.kYCDone = kYCDone;
     @Override
     public String toString() {
         return "CreateClientArgs{" +
-                 "client='" + client + '\'' +
- ", kYCDone='" + kYCDone + '\'' +
+                "client='" + client + '\'' +
+                ", kYCDone='" + kYCDone + '\'' +
 
                 '}';
     }

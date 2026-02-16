@@ -20,20 +20,20 @@ public class BoardingInfoFileEntity   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Base64")
     private String base64;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Side")
     private BoardingIdFileSides side;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsAdministrator")
     private boolean isAdministrator;
 
@@ -45,9 +45,8 @@ public class BoardingInfoFileEntity   {
     
     public BoardingInfoFileEntity(String base64, BoardingIdFileSides side, boolean isAdministrator) {
         this.base64 = base64;
-this.side = side;
-this.isAdministrator = isAdministrator;
-
+        this.side = side;
+        this.isAdministrator = isAdministrator;
     }
     
     
@@ -97,9 +96,9 @@ this.isAdministrator = isAdministrator;
     @Override
     public String toString() {
         return "BoardingInfoFileEntity{" +
-                 "base64='" + base64 + '\'' +
- ", side='" + side + '\'' +
- ", isAdministrator='" + isAdministrator + '\'' +
+                "base64='" + base64 + '\'' +
+                ", side='" + side + '\'' +
+                ", isAdministrator='" + isAdministrator + '\'' +
 
                 '}';
     }

@@ -20,32 +20,32 @@ public class OperationCategoryReportEntity   {
 
     
     /**
- * Gets or sets the type of the category.
- */
+     * Gets or sets the type of the category.
+     */
     @JsonProperty("CategoryType")
     private OperationCategoryReportType categoryType;
 
     /**
- * Gets or sets the number of transactions.
- */
+     * Gets or sets the number of transactions.
+     */
     @JsonProperty("NumberOfTransactions")
     private Integer numberOfTransactions;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IncludedTransfers")
     private List<String> includedTransfers;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IncludedOperations")
     private List<String> includedOperations;
 
@@ -57,11 +57,10 @@ public class OperationCategoryReportEntity   {
     
     public OperationCategoryReportEntity(OperationCategoryReportType categoryType, Integer numberOfTransactions, Double amount, List<String> includedTransfers, List<String> includedOperations) {
         this.categoryType = categoryType;
-this.numberOfTransactions = numberOfTransactions;
-this.amount = amount;
-this.includedTransfers = includedTransfers;
-this.includedOperations = includedOperations;
-
+        this.numberOfTransactions = numberOfTransactions;
+        this.amount = amount;
+        this.includedTransfers = includedTransfers;
+        this.includedOperations = includedOperations;
     }
     
     
@@ -127,11 +126,11 @@ this.includedOperations = includedOperations;
     @Override
     public String toString() {
         return "OperationCategoryReportEntity{" +
-                 "categoryType='" + categoryType + '\'' +
- ", numberOfTransactions='" + numberOfTransactions + '\'' +
- ", amount='" + amount + '\'' +
- ", includedTransfers='" + includedTransfers + '\'' +
- ", includedOperations='" + includedOperations + '\'' +
+                "categoryType='" + categoryType + '\'' +
+                ", numberOfTransactions='" + numberOfTransactions + '\'' +
+                ", amount='" + amount + '\'' +
+                ", includedTransfers='" + includedTransfers + '\'' +
+                ", includedOperations='" + includedOperations + '\'' +
 
                 '}';
     }

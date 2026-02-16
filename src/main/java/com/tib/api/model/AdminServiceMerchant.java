@@ -19,134 +19,134 @@ public class AdminServiceMerchant   {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantAccountId")
     private String merchantAccountId;
 
     /**
- * Retrieves or assigns the service's name.
- */
+     * Retrieves or assigns the service's name.
+     */
     @JsonProperty("ServiceName")
     private String serviceName;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantEmail")
     private String merchantEmail;
 
     /**
- * The merchant's phone number used for contact and transaction notifications.
- */
+     * The merchant's phone number used for contact and transaction notifications.
+     */
     @JsonProperty("PhoneNumber")
     private String phoneNumber;
 
     /**
- * Contains a free‑text description of the merchant, which is stored in the TIB Finance system and displayed in merchant records.
- */
+     * Contains a free‑text description of the merchant, which is stored in the TIB Finance system and displayed in merchant records.
+     */
     @JsonProperty("MerchantDescription")
     private String merchantDescription;
 
     /**
- * Represents the name associated with the merchant's account.
- */
+     * Represents the name associated with the merchant's account.
+     */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountInformationView")
     private String accountInformationView;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsActive")
     private boolean isActive;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsDeletedService")
     private boolean isDeletedService;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsDeletedMerchant")
     private boolean isDeletedMerchant;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsAuthorizedMerchant")
     private boolean isAuthorizedMerchant;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsClientMerchant")
     private boolean isClientMerchant;
 
     /**
- * Retrieves or assigns the unique identifier for WhiteLabeling.
- */
+     * Retrieves or assigns the unique identifier for WhiteLabeling.
+     */
     @JsonProperty("WhiteLabelingId")
     private String whiteLabelingId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DefaultStatementDescription")
     private String defaultStatementDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CreatedDateService")
     private LocalDateTime createdDateService;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CreatedDateMerchant")
     private LocalDateTime createdDateMerchant;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsDeletedMerchantAccount")
     private boolean isDeletedMerchantAccount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsActiveService")
     private boolean isActiveService;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsChecked")
     private boolean isChecked;
 
@@ -158,28 +158,27 @@ public class AdminServiceMerchant   {
     
     public AdminServiceMerchant(String serviceId, String merchantId, String merchantAccountId, String serviceName, String merchantName, String merchantEmail, String phoneNumber, String merchantDescription, String accountName, String accountInformationView, boolean isActive, boolean isDeletedService, boolean isDeletedMerchant, boolean isAuthorizedMerchant, boolean isClientMerchant, String whiteLabelingId, String defaultStatementDescription, LocalDateTime createdDateService, LocalDateTime createdDateMerchant, boolean isDeletedMerchantAccount, boolean isActiveService, boolean isChecked) {
         this.serviceId = serviceId;
-this.merchantId = merchantId;
-this.merchantAccountId = merchantAccountId;
-this.serviceName = serviceName;
-this.merchantName = merchantName;
-this.merchantEmail = merchantEmail;
-this.phoneNumber = phoneNumber;
-this.merchantDescription = merchantDescription;
-this.accountName = accountName;
-this.accountInformationView = accountInformationView;
-this.isActive = isActive;
-this.isDeletedService = isDeletedService;
-this.isDeletedMerchant = isDeletedMerchant;
-this.isAuthorizedMerchant = isAuthorizedMerchant;
-this.isClientMerchant = isClientMerchant;
-this.whiteLabelingId = whiteLabelingId;
-this.defaultStatementDescription = defaultStatementDescription;
-this.createdDateService = createdDateService;
-this.createdDateMerchant = createdDateMerchant;
-this.isDeletedMerchantAccount = isDeletedMerchantAccount;
-this.isActiveService = isActiveService;
-this.isChecked = isChecked;
-
+        this.merchantId = merchantId;
+        this.merchantAccountId = merchantAccountId;
+        this.serviceName = serviceName;
+        this.merchantName = merchantName;
+        this.merchantEmail = merchantEmail;
+        this.phoneNumber = phoneNumber;
+        this.merchantDescription = merchantDescription;
+        this.accountName = accountName;
+        this.accountInformationView = accountInformationView;
+        this.isActive = isActive;
+        this.isDeletedService = isDeletedService;
+        this.isDeletedMerchant = isDeletedMerchant;
+        this.isAuthorizedMerchant = isAuthorizedMerchant;
+        this.isClientMerchant = isClientMerchant;
+        this.whiteLabelingId = whiteLabelingId;
+        this.defaultStatementDescription = defaultStatementDescription;
+        this.createdDateService = createdDateService;
+        this.createdDateMerchant = createdDateMerchant;
+        this.isDeletedMerchantAccount = isDeletedMerchantAccount;
+        this.isActiveService = isActiveService;
+        this.isChecked = isChecked;
     }
     
     
@@ -381,28 +380,28 @@ this.isChecked = isChecked;
     @Override
     public String toString() {
         return "AdminServiceMerchant{" +
-                 "serviceId='" + serviceId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", merchantAccountId='" + merchantAccountId + '\'' +
- ", serviceName='" + serviceName + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", merchantEmail='" + merchantEmail + '\'' +
- ", phoneNumber='" + phoneNumber + '\'' +
- ", merchantDescription='" + merchantDescription + '\'' +
- ", accountName='" + accountName + '\'' +
- ", accountInformationView='" + accountInformationView + '\'' +
- ", isActive='" + isActive + '\'' +
- ", isDeletedService='" + isDeletedService + '\'' +
- ", isDeletedMerchant='" + isDeletedMerchant + '\'' +
- ", isAuthorizedMerchant='" + isAuthorizedMerchant + '\'' +
- ", isClientMerchant='" + isClientMerchant + '\'' +
- ", whiteLabelingId='" + whiteLabelingId + '\'' +
- ", defaultStatementDescription='" + defaultStatementDescription + '\'' +
- ", createdDateService='" + createdDateService + '\'' +
- ", createdDateMerchant='" + createdDateMerchant + '\'' +
- ", isDeletedMerchantAccount='" + isDeletedMerchantAccount + '\'' +
- ", isActiveService='" + isActiveService + '\'' +
- ", isChecked='" + isChecked + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", merchantAccountId='" + merchantAccountId + '\'' +
+                ", serviceName='" + serviceName + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", merchantEmail='" + merchantEmail + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", merchantDescription='" + merchantDescription + '\'' +
+                ", accountName='" + accountName + '\'' +
+                ", accountInformationView='" + accountInformationView + '\'' +
+                ", isActive='" + isActive + '\'' +
+                ", isDeletedService='" + isDeletedService + '\'' +
+                ", isDeletedMerchant='" + isDeletedMerchant + '\'' +
+                ", isAuthorizedMerchant='" + isAuthorizedMerchant + '\'' +
+                ", isClientMerchant='" + isClientMerchant + '\'' +
+                ", whiteLabelingId='" + whiteLabelingId + '\'' +
+                ", defaultStatementDescription='" + defaultStatementDescription + '\'' +
+                ", createdDateService='" + createdDateService + '\'' +
+                ", createdDateMerchant='" + createdDateMerchant + '\'' +
+                ", isDeletedMerchantAccount='" + isDeletedMerchantAccount + '\'' +
+                ", isActiveService='" + isActiveService + '\'' +
+                ", isChecked='" + isChecked + '\'' +
 
                 '}';
     }

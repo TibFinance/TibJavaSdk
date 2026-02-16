@@ -20,32 +20,32 @@ public class CreateBoardingDocumentsArgs  extends BaseAuthenticatedCryptedArgs  
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CaseId")
     private String caseId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocType")
     private String docType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Filename")
     private String filename;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Content")
     private String content;
 
@@ -57,22 +57,20 @@ public class CreateBoardingDocumentsArgs  extends BaseAuthenticatedCryptedArgs  
     
     public CreateBoardingDocumentsArgs(String caseId, String docType, String filename, String description, String content) {
         this.caseId = caseId;
-this.docType = docType;
-this.filename = filename;
-this.description = description;
-this.content = content;
-
+        this.docType = docType;
+        this.filename = filename;
+        this.description = description;
+        this.content = content;
     }
     
     
     public CreateBoardingDocumentsArgs(String sessionToken, String caseId, String docType, String filename, String description, String content) {
         super(sessionToken);
         this.caseId = caseId;
-this.docType = docType;
-this.filename = filename;
-this.description = description;
-this.content = content;
-
+        this.docType = docType;
+        this.filename = filename;
+        this.description = description;
+        this.content = content;
     }
 
     
@@ -136,11 +134,11 @@ this.content = content;
     @Override
     public String toString() {
         return "CreateBoardingDocumentsArgs{" +
-                 "caseId='" + caseId + '\'' +
- ", docType='" + docType + '\'' +
- ", filename='" + filename + '\'' +
- ", description='" + description + '\'' +
- ", content='" + content + '\'' +
+                "caseId='" + caseId + '\'' +
+                ", docType='" + docType + '\'' +
+                ", filename='" + filename + '\'' +
+                ", description='" + description + '\'' +
+                ", content='" + content + '\'' +
 
                 '}';
     }

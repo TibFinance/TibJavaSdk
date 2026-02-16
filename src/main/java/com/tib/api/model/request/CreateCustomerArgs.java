@@ -21,14 +21,14 @@ public class CreateCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Provides access to detailed customer information necessary for transaction processing and account management.
- */
+     * Provides access to detailed customer information necessary for transaction processing and account management.
+     */
     @JsonProperty("Customer")
     private CustomerEntity customer;
 
@@ -40,16 +40,14 @@ public class CreateCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CreateCustomerArgs(String serviceId, CustomerEntity customer) {
         this.serviceId = serviceId;
-this.customer = customer;
-
+        this.customer = customer;
     }
     
     
     public CreateCustomerArgs(String sessionToken, String serviceId, CustomerEntity customer) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.customer = customer;
-
+        this.customer = customer;
     }
 
     
@@ -89,8 +87,8 @@ this.customer = customer;
     @Override
     public String toString() {
         return "CreateCustomerArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", customer='" + customer + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", customer='" + customer + '\'' +
 
                 '}';
     }

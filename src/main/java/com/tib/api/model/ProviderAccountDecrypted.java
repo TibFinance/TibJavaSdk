@@ -26,104 +26,104 @@ public class ProviderAccountDecrypted   {
 
     
     /**
- * Gets or sets the name of the provider.
- */
+     * Gets or sets the name of the provider.
+     */
     @JsonProperty("ProviderId")
     private String providerId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderName")
     private String providerName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OrderPriority")
     private Integer orderPriority;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsDefault")
     private boolean isDefault;
 
     /**
- * Identifies the type of payment method linked to a specific account.
- */
+     * Identifies the type of payment method linked to a specific account.
+     */
     @JsonProperty("PaymentMethodType")
     private PaymentMethodType paymentMethodType;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Gets or sets the type of the provider.
- */
+     * Gets or sets the type of the provider.
+     */
     @JsonProperty("ProviderType")
     private Provider providerType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OwnerType")
     private OwnerType ownerType;
 
     /**
- * Gets or sets the account.
- */
+     * Gets or sets the account.
+     */
     @JsonProperty("AccountCollect")
     private String accountCollect;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountDeposit")
     private String accountDeposit;
 
     /**
- * Gets or sets the password.
- */
+     * Gets or sets the password.
+     */
     @JsonProperty("PasswordCollect")
     private String passwordCollect;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PasswordDeposit")
     private String passwordDeposit;
 
     /**
- * Gets or sets the questions.
- */
+     * Gets or sets the questions.
+     */
     @JsonProperty("Questions")
     private List<QuestionAnswerDecrypted> questions;
 
     /**
- * Gets or sets the addresses.
- */
+     * Gets or sets the addresses.
+     */
     @JsonProperty("Addresses")
     private List<ProviderAddressEntity> addresses;
 
     /**
- * Gets or sets the credential values.
- */
+     * Gets or sets the credential values.
+     */
     @JsonProperty("CredentialValues")
     private Map<String, String> credentialValues;
 
     /**
- * List of specific CredentialValue for other Provider Credential. Example, RBC has Credential Value called "OrganizationNumber". So this property can be loaded with the Key "OrganizationNumber" and the values "RBC""Value2", "RBC2""Value2"
- */
+     * List of specific CredentialValue for other Provider Credential. Example, RBC has Credential Value called "OrganizationNumber". So this property can be loaded with the Key "OrganizationNumber" and the values "RBC""Value2", "RBC2""Value2"
+     */
     @JsonProperty("ProviderOtherCredentialValues")
     private Map<String, Map<String, String>> providerOtherCredentialValues;
 
     /**
- * List of specific MerchantCredentialValues for other Provider Credential.
- */
+     * List of specific MerchantCredentialValues for other Provider Credential.
+     */
     @JsonProperty("MerchantCredentialValues")
     private List<ProviderMerchantCredentialEntity> merchantCredentialValues;
 
@@ -135,23 +135,22 @@ public class ProviderAccountDecrypted   {
     
     public ProviderAccountDecrypted(String providerId, String providerName, Integer orderPriority, boolean isDefault, PaymentMethodType paymentMethodType, Currency currency, Provider providerType, OwnerType ownerType, String accountCollect, String accountDeposit, String passwordCollect, String passwordDeposit, List<QuestionAnswerDecrypted> questions, List<ProviderAddressEntity> addresses, Map<String, String> credentialValues, Map<String, Map<String, String>> providerOtherCredentialValues, List<ProviderMerchantCredentialEntity> merchantCredentialValues) {
         this.providerId = providerId;
-this.providerName = providerName;
-this.orderPriority = orderPriority;
-this.isDefault = isDefault;
-this.paymentMethodType = paymentMethodType;
-this.currency = currency;
-this.providerType = providerType;
-this.ownerType = ownerType;
-this.accountCollect = accountCollect;
-this.accountDeposit = accountDeposit;
-this.passwordCollect = passwordCollect;
-this.passwordDeposit = passwordDeposit;
-this.questions = questions;
-this.addresses = addresses;
-this.credentialValues = credentialValues;
-this.providerOtherCredentialValues = providerOtherCredentialValues;
-this.merchantCredentialValues = merchantCredentialValues;
-
+        this.providerName = providerName;
+        this.orderPriority = orderPriority;
+        this.isDefault = isDefault;
+        this.paymentMethodType = paymentMethodType;
+        this.currency = currency;
+        this.providerType = providerType;
+        this.ownerType = ownerType;
+        this.accountCollect = accountCollect;
+        this.accountDeposit = accountDeposit;
+        this.passwordCollect = passwordCollect;
+        this.passwordDeposit = passwordDeposit;
+        this.questions = questions;
+        this.addresses = addresses;
+        this.credentialValues = credentialValues;
+        this.providerOtherCredentialValues = providerOtherCredentialValues;
+        this.merchantCredentialValues = merchantCredentialValues;
     }
     
     
@@ -313,23 +312,23 @@ this.merchantCredentialValues = merchantCredentialValues;
     @Override
     public String toString() {
         return "ProviderAccountDecrypted{" +
-                 "providerId='" + providerId + '\'' +
- ", providerName='" + providerName + '\'' +
- ", orderPriority='" + orderPriority + '\'' +
- ", isDefault='" + isDefault + '\'' +
- ", paymentMethodType='" + paymentMethodType + '\'' +
- ", currency='" + currency + '\'' +
- ", providerType='" + providerType + '\'' +
- ", ownerType='" + ownerType + '\'' +
- ", accountCollect='" + accountCollect + '\'' +
- ", accountDeposit='" + accountDeposit + '\'' +
- ", passwordCollect='" + passwordCollect + '\'' +
- ", passwordDeposit='" + passwordDeposit + '\'' +
- ", questions='" + questions + '\'' +
- ", addresses='" + addresses + '\'' +
- ", credentialValues='" + credentialValues + '\'' +
- ", providerOtherCredentialValues='" + providerOtherCredentialValues + '\'' +
- ", merchantCredentialValues='" + merchantCredentialValues + '\'' +
+                "providerId='" + providerId + '\'' +
+                ", providerName='" + providerName + '\'' +
+                ", orderPriority='" + orderPriority + '\'' +
+                ", isDefault='" + isDefault + '\'' +
+                ", paymentMethodType='" + paymentMethodType + '\'' +
+                ", currency='" + currency + '\'' +
+                ", providerType='" + providerType + '\'' +
+                ", ownerType='" + ownerType + '\'' +
+                ", accountCollect='" + accountCollect + '\'' +
+                ", accountDeposit='" + accountDeposit + '\'' +
+                ", passwordCollect='" + passwordCollect + '\'' +
+                ", passwordDeposit='" + passwordDeposit + '\'' +
+                ", questions='" + questions + '\'' +
+                ", addresses='" + addresses + '\'' +
+                ", credentialValues='" + credentialValues + '\'' +
+                ", providerOtherCredentialValues='" + providerOtherCredentialValues + '\'' +
+                ", merchantCredentialValues='" + merchantCredentialValues + '\'' +
 
                 '}';
     }

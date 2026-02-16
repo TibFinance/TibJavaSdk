@@ -30,14 +30,12 @@ public class GetAccountInformationResponse extends CustomAPIResponse {
     public GetAccountInformationResponse(Error[] errors, boolean hasError, String messages, List<ProviderAccountOperations> providerAccountOperationList) {
         super(errors, hasError, messages);
         this.providerAccountOperationList = providerAccountOperationList;
-
     }
 
     public GetAccountInformationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.providerAccountOperationList = (List<ProviderAccountOperations>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetAccountInformationResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetAccountInformationResponse{" +
-                 "providerAccountOperationList='" + providerAccountOperationList + '\'' +
+                "providerAccountOperationList='" + providerAccountOperationList + '\'' +
 
                 '}';
     }

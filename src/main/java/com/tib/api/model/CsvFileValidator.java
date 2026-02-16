@@ -19,116 +19,116 @@ public class CsvFileValidator   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsValid")
     private boolean isValid;
 
     /**
- * The Errors property provides a collection of error objects that encapsulate details about any issues encountered during the execution of a service.
- */
+     * The Errors property provides a collection of error objects that encapsulate details about any issues encountered during the execution of a service.
+     */
     @JsonProperty("Errors")
     private List<String> errors;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OrganizationNumber")
     private String organizationNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FileNumber")
     private String fileNumber;
 
     /**
- * Specifies the operation category used throughout the API.
- */
+     * Specifies the operation category used throughout the API.
+     */
     @JsonProperty("OperationType")
     private String operationType;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private String amount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DateFundsAvailable")
     private String dateFundsAvailable;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TargetName")
     private String targetName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TargetInstitutionNumber")
     private String targetInstitutionNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TargetFullAccountNumber")
     private String targetFullAccountNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RefNumber")
     private String refNumber;
 
     /**
- * Specifies the email address associated with the merchant.
- */
+     * Specifies the email address associated with the merchant.
+     */
     @JsonProperty("Email")
     private String email;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Phone")
     private String phone;
 
     /**
- * Gets or sets the address associated with the entity.
- */
+     * Gets or sets the address associated with the entity.
+     */
     @JsonProperty("Address")
     private String address;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("City")
     private String city;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Province")
     private String province;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Country")
     private String country;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ZipCode")
     private String zipCode;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private String language;
 
@@ -140,25 +140,24 @@ public class CsvFileValidator   {
     
     public CsvFileValidator(boolean isValid, List<String> errors, String organizationNumber, String fileNumber, String operationType, String amount, String dateFundsAvailable, String targetName, String targetInstitutionNumber, String targetFullAccountNumber, String refNumber, String email, String phone, String address, String city, String province, String country, String zipCode, String language) {
         this.isValid = isValid;
-this.errors = errors;
-this.organizationNumber = organizationNumber;
-this.fileNumber = fileNumber;
-this.operationType = operationType;
-this.amount = amount;
-this.dateFundsAvailable = dateFundsAvailable;
-this.targetName = targetName;
-this.targetInstitutionNumber = targetInstitutionNumber;
-this.targetFullAccountNumber = targetFullAccountNumber;
-this.refNumber = refNumber;
-this.email = email;
-this.phone = phone;
-this.address = address;
-this.city = city;
-this.province = province;
-this.country = country;
-this.zipCode = zipCode;
-this.language = language;
-
+        this.errors = errors;
+        this.organizationNumber = organizationNumber;
+        this.fileNumber = fileNumber;
+        this.operationType = operationType;
+        this.amount = amount;
+        this.dateFundsAvailable = dateFundsAvailable;
+        this.targetName = targetName;
+        this.targetInstitutionNumber = targetInstitutionNumber;
+        this.targetFullAccountNumber = targetFullAccountNumber;
+        this.refNumber = refNumber;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.city = city;
+        this.province = province;
+        this.country = country;
+        this.zipCode = zipCode;
+        this.language = language;
     }
     
     
@@ -336,25 +335,25 @@ this.language = language;
     @Override
     public String toString() {
         return "CsvFileValidator{" +
-                 "isValid='" + isValid + '\'' +
- ", errors='" + errors + '\'' +
- ", organizationNumber='" + organizationNumber + '\'' +
- ", fileNumber='" + fileNumber + '\'' +
- ", operationType='" + operationType + '\'' +
- ", amount='" + amount + '\'' +
- ", dateFundsAvailable='" + dateFundsAvailable + '\'' +
- ", targetName='" + targetName + '\'' +
- ", targetInstitutionNumber='" + targetInstitutionNumber + '\'' +
- ", targetFullAccountNumber='" + targetFullAccountNumber + '\'' +
- ", refNumber='" + refNumber + '\'' +
- ", email='" + email + '\'' +
- ", phone='" + phone + '\'' +
- ", address='" + address + '\'' +
- ", city='" + city + '\'' +
- ", province='" + province + '\'' +
- ", country='" + country + '\'' +
- ", zipCode='" + zipCode + '\'' +
- ", language='" + language + '\'' +
+                "isValid='" + isValid + '\'' +
+                ", errors='" + errors + '\'' +
+                ", organizationNumber='" + organizationNumber + '\'' +
+                ", fileNumber='" + fileNumber + '\'' +
+                ", operationType='" + operationType + '\'' +
+                ", amount='" + amount + '\'' +
+                ", dateFundsAvailable='" + dateFundsAvailable + '\'' +
+                ", targetName='" + targetName + '\'' +
+                ", targetInstitutionNumber='" + targetInstitutionNumber + '\'' +
+                ", targetFullAccountNumber='" + targetFullAccountNumber + '\'' +
+                ", refNumber='" + refNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", province='" + province + '\'' +
+                ", country='" + country + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", language='" + language + '\'' +
 
                 '}';
     }

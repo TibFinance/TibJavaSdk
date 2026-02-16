@@ -38,19 +38,17 @@ public class GetClientSettingsResponse extends CustomAPIResponse {
     public GetClientSettingsResponse(Error[] errors, boolean hasError, String messages, ClientSettings clientSettings, ServiceSettings serviceSettings, ServiceFeeSettings serviceFeeSettings) {
         super(errors, hasError, messages);
         this.clientSettings = clientSettings;
-this.serviceSettings = serviceSettings;
-this.serviceFeeSettings = serviceFeeSettings;
-
+        this.serviceSettings = serviceSettings;
+        this.serviceFeeSettings = serviceFeeSettings;
     }
 
     public GetClientSettingsResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.clientSettings = objectMapper.readValue(json, ClientSettings.class);
-this.serviceSettings = objectMapper.readValue(json, ServiceSettings.class);
-this.serviceFeeSettings = objectMapper.readValue(json, ServiceFeeSettings.class);
-
+            this.clientSettings = objectMapper.readValue(json, ClientSettings.class);
+            this.serviceSettings = objectMapper.readValue(json, ServiceSettings.class);
+            this.serviceFeeSettings = objectMapper.readValue(json, ServiceFeeSettings.class);
         }
     }
 
@@ -99,9 +97,9 @@ this.serviceFeeSettings = objectMapper.readValue(json, ServiceFeeSettings.class)
     @Override
     public String toString() {
         return "GetClientSettingsResponse{" +
-                 "clientSettings='" + clientSettings + '\'' +
- ", serviceSettings='" + serviceSettings + '\'' +
- ", serviceFeeSettings='" + serviceFeeSettings + '\'' +
+                "clientSettings='" + clientSettings + '\'' +
+                ", serviceSettings='" + serviceSettings + '\'' +
+                ", serviceFeeSettings='" + serviceFeeSettings + '\'' +
 
                 '}';
     }

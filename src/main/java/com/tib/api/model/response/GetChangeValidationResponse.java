@@ -36,17 +36,15 @@ public class GetChangeValidationResponse extends CustomAPIResponse {
     public GetChangeValidationResponse(Error[] errors, boolean hasError, String messages, String jsonObject, String validationToken, WhiteLabeling whiteLabeling) {
         super(errors, hasError, messages);
         this.jsonObject = jsonObject;
-this.validationToken = validationToken;
-this.whiteLabeling = whiteLabeling;
-
+        this.validationToken = validationToken;
+        this.whiteLabeling = whiteLabeling;
     }
 
     public GetChangeValidationResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
-
+            this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
         }
     }
 
@@ -95,9 +93,9 @@ this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
     @Override
     public String toString() {
         return "GetChangeValidationResponse{" +
-                 "jsonObject='" + jsonObject + '\'' +
- ", validationToken='" + validationToken + '\'' +
- ", whiteLabeling='" + whiteLabeling + '\'' +
+                "jsonObject='" + jsonObject + '\'' +
+                ", validationToken='" + validationToken + '\'' +
+                ", whiteLabeling='" + whiteLabeling + '\'' +
 
                 '}';
     }

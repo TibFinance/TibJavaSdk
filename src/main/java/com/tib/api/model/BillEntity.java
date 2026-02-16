@@ -21,68 +21,68 @@ public class BillEntity   {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Represents the title of a bill associated with a payment.
- */
+     * Represents the title of a bill associated with a payment.
+     */
     @JsonProperty("BillTitle")
     private String billTitle;
 
     /**
- * Provides a textual description of the bill associated with a payment.
- */
+     * Provides a textual description of the bill associated with a payment.
+     */
     @JsonProperty("BillDescription")
     private String billDescription;
 
     /**
- * Specifies the monetary amount of a bill to be created.
- */
+     * Specifies the monetary amount of a bill to be created.
+     */
     @JsonProperty("BillAmount")
     private Double billAmount;
 
     /**
- * Represents the first external system bill reference associated with the TIB bill.
- */
+     * Represents the first external system bill reference associated with the TIB bill.
+     */
     @JsonProperty("ExternalSystemBillNumber1")
     private String externalSystemBillNumber1;
 
     /**
- * Reference number provided by an external system for the bill (field 2).
- */
+     * Reference number provided by an external system for the bill (field 2).
+     */
     @JsonProperty("ExternalSystemBillNumber2")
     private String externalSystemBillNumber2;
 
     /**
- * Identifies the bill number provided by an external system. This field allows TIB to map its internal bill to the originating system's reference.
- */
+     * Identifies the bill number provided by an external system. This field allows TIB to map its internal bill to the originating system's reference.
+     */
     @JsonProperty("ExternalSystemBillNumber3")
     private String externalSystemBillNumber3;
 
     /**
- * Specifies the currency of the bill. If null, the merchant’s default currency is applied.
- */
+     * Specifies the currency of the bill. If null, the merchant’s default currency is applied.
+     */
     @JsonProperty("BillCurrency")
     private Currency billCurrency;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * Identifies the customer linked to this payment, when a customer relationship exists.
- */
+     * Identifies the customer linked to this payment, when a customer relationship exists.
+     */
     @JsonProperty("RelatedCustomerId")
     private String relatedCustomerId;
 
     /**
- * Indicates whether the bill should apply the convenience fee according to the client’s service configuration. The fee calculation follows the configuration set by an administrator.
- */
+     * Indicates whether the bill should apply the convenience fee according to the client’s service configuration. The fee calculation follows the configuration set by an administrator.
+     */
     @JsonProperty("UseConvenientFeeRule")
     private boolean useConvenientFeeRule;
 
@@ -94,17 +94,16 @@ public class BillEntity   {
     
     public BillEntity(String merchantId, String billTitle, String billDescription, Double billAmount, String externalSystemBillNumber1, String externalSystemBillNumber2, String externalSystemBillNumber3, Currency billCurrency, Language language, String relatedCustomerId, boolean useConvenientFeeRule) {
         this.merchantId = merchantId;
-this.billTitle = billTitle;
-this.billDescription = billDescription;
-this.billAmount = billAmount;
-this.externalSystemBillNumber1 = externalSystemBillNumber1;
-this.externalSystemBillNumber2 = externalSystemBillNumber2;
-this.externalSystemBillNumber3 = externalSystemBillNumber3;
-this.billCurrency = billCurrency;
-this.language = language;
-this.relatedCustomerId = relatedCustomerId;
-this.useConvenientFeeRule = useConvenientFeeRule;
-
+        this.billTitle = billTitle;
+        this.billDescription = billDescription;
+        this.billAmount = billAmount;
+        this.externalSystemBillNumber1 = externalSystemBillNumber1;
+        this.externalSystemBillNumber2 = externalSystemBillNumber2;
+        this.externalSystemBillNumber3 = externalSystemBillNumber3;
+        this.billCurrency = billCurrency;
+        this.language = language;
+        this.relatedCustomerId = relatedCustomerId;
+        this.useConvenientFeeRule = useConvenientFeeRule;
     }
     
     
@@ -218,17 +217,17 @@ this.useConvenientFeeRule = useConvenientFeeRule;
     @Override
     public String toString() {
         return "BillEntity{" +
-                 "merchantId='" + merchantId + '\'' +
- ", billTitle='" + billTitle + '\'' +
- ", billDescription='" + billDescription + '\'' +
- ", billAmount='" + billAmount + '\'' +
- ", externalSystemBillNumber1='" + externalSystemBillNumber1 + '\'' +
- ", externalSystemBillNumber2='" + externalSystemBillNumber2 + '\'' +
- ", externalSystemBillNumber3='" + externalSystemBillNumber3 + '\'' +
- ", billCurrency='" + billCurrency + '\'' +
- ", language='" + language + '\'' +
- ", relatedCustomerId='" + relatedCustomerId + '\'' +
- ", useConvenientFeeRule='" + useConvenientFeeRule + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", billTitle='" + billTitle + '\'' +
+                ", billDescription='" + billDescription + '\'' +
+                ", billAmount='" + billAmount + '\'' +
+                ", externalSystemBillNumber1='" + externalSystemBillNumber1 + '\'' +
+                ", externalSystemBillNumber2='" + externalSystemBillNumber2 + '\'' +
+                ", externalSystemBillNumber3='" + externalSystemBillNumber3 + '\'' +
+                ", billCurrency='" + billCurrency + '\'' +
+                ", language='" + language + '\'' +
+                ", relatedCustomerId='" + relatedCustomerId + '\'' +
+                ", useConvenientFeeRule='" + useConvenientFeeRule + '\'' +
 
                 '}';
     }

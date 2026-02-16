@@ -22,20 +22,20 @@ public class Service  extends ServiceEntity  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Retrieves or assigns the unique identifier for WhiteLabeling.
- */
+     * Retrieves or assigns the unique identifier for WhiteLabeling.
+     */
     @JsonProperty("WhiteLabelingId")
     private Optional<String> whiteLabelingId;
 
     /**
- * Gets or sets a value indicating whether this service has a completed boarding (status 13 = approved).
- */
+     * Gets or sets a value indicating whether this service has a completed boarding (status 13 = approved).
+     */
     @JsonProperty("HasCompletedBoarding")
     private boolean hasCompletedBoarding;
 
@@ -47,18 +47,16 @@ public class Service  extends ServiceEntity  {
     
     public Service(String serviceId, Optional<String> whiteLabelingId, boolean hasCompletedBoarding) {
         this.serviceId = serviceId;
-this.whiteLabelingId = whiteLabelingId;
-this.hasCompletedBoarding = hasCompletedBoarding;
-
+        this.whiteLabelingId = whiteLabelingId;
+        this.hasCompletedBoarding = hasCompletedBoarding;
     }
     
     
     public Service(String serviceName, Language defaultCustomerLanguage, Provider providerType, Currency currency, String serviceId, Optional<String> whiteLabelingId, boolean hasCompletedBoarding) {
         super(serviceName, defaultCustomerLanguage, providerType, currency);
         this.serviceId = serviceId;
-this.whiteLabelingId = whiteLabelingId;
-this.hasCompletedBoarding = hasCompletedBoarding;
-
+        this.whiteLabelingId = whiteLabelingId;
+        this.hasCompletedBoarding = hasCompletedBoarding;
     }
 
     
@@ -106,9 +104,9 @@ this.hasCompletedBoarding = hasCompletedBoarding;
     @Override
     public String toString() {
         return "Service{" +
-                 "serviceId='" + serviceId + '\'' +
- ", whiteLabelingId='" + whiteLabelingId + '\'' +
- ", hasCompletedBoarding='" + hasCompletedBoarding + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", whiteLabelingId='" + whiteLabelingId + '\'' +
+                ", hasCompletedBoarding='" + hasCompletedBoarding + '\'' +
 
                 '}';
     }

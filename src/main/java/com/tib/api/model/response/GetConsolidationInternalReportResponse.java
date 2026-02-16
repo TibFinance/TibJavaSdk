@@ -30,14 +30,12 @@ public class GetConsolidationInternalReportResponse extends CustomAPIResponse {
     public GetConsolidationInternalReportResponse(Error[] errors, boolean hasError, String messages, List<ConsolidationInternalReportEntity> consolidationInternalReportList) {
         super(errors, hasError, messages);
         this.consolidationInternalReportList = consolidationInternalReportList;
-
     }
 
     public GetConsolidationInternalReportResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.consolidationInternalReportList = (List<ConsolidationInternalReportEntity>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetConsolidationInternalReportResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetConsolidationInternalReportResponse{" +
-                 "consolidationInternalReportList='" + consolidationInternalReportList + '\'' +
+                "consolidationInternalReportList='" + consolidationInternalReportList + '\'' +
 
                 '}';
     }

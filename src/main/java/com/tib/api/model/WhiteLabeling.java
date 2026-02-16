@@ -20,38 +20,38 @@ public class WhiteLabeling   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WhileLabelingId")
     private String whileLabelingId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WhiteLabelingLevel")
     private Integer whiteLabelingLevel;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WhiteLabelingLevelValue")
     private String whiteLabelingLevelValue;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Logo")
     private String logo;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Url")
     private String url;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WhiteLabelingData")
     private List<WhiteLabelingData> whiteLabelingData;
 
@@ -63,12 +63,11 @@ public class WhiteLabeling   {
     
     public WhiteLabeling(String whileLabelingId, Integer whiteLabelingLevel, String whiteLabelingLevelValue, String logo, String url, List<WhiteLabelingData> whiteLabelingData) {
         this.whileLabelingId = whileLabelingId;
-this.whiteLabelingLevel = whiteLabelingLevel;
-this.whiteLabelingLevelValue = whiteLabelingLevelValue;
-this.logo = logo;
-this.url = url;
-this.whiteLabelingData = whiteLabelingData;
-
+        this.whiteLabelingLevel = whiteLabelingLevel;
+        this.whiteLabelingLevelValue = whiteLabelingLevelValue;
+        this.logo = logo;
+        this.url = url;
+        this.whiteLabelingData = whiteLabelingData;
     }
     
     
@@ -142,12 +141,12 @@ this.whiteLabelingData = whiteLabelingData;
     @Override
     public String toString() {
         return "WhiteLabeling{" +
-                 "whileLabelingId='" + whileLabelingId + '\'' +
- ", whiteLabelingLevel='" + whiteLabelingLevel + '\'' +
- ", whiteLabelingLevelValue='" + whiteLabelingLevelValue + '\'' +
- ", logo='" + logo + '\'' +
- ", url='" + url + '\'' +
- ", whiteLabelingData='" + whiteLabelingData + '\'' +
+                "whileLabelingId='" + whileLabelingId + '\'' +
+                ", whiteLabelingLevel='" + whiteLabelingLevel + '\'' +
+                ", whiteLabelingLevelValue='" + whiteLabelingLevelValue + '\'' +
+                ", logo='" + logo + '\'' +
+                ", url='" + url + '\'' +
+                ", whiteLabelingData='" + whiteLabelingData + '\'' +
 
                 '}';
     }

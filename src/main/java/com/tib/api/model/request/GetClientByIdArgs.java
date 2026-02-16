@@ -20,14 +20,14 @@ public class GetClientByIdArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientName")
     private String clientName;
 
@@ -39,16 +39,14 @@ public class GetClientByIdArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public GetClientByIdArgs(String clientId, String clientName) {
         this.clientId = clientId;
-this.clientName = clientName;
-
+        this.clientName = clientName;
     }
     
     
     public GetClientByIdArgs(String adminSessionToken, String clientId, String clientName) {
         super(adminSessionToken);
         this.clientId = clientId;
-this.clientName = clientName;
-
+        this.clientName = clientName;
     }
 
     
@@ -88,8 +86,8 @@ this.clientName = clientName;
     @Override
     public String toString() {
         return "GetClientByIdArgs{" +
-                 "clientId='" + clientId + '\'' +
- ", clientName='" + clientName + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", clientName='" + clientName + '\'' +
 
                 '}';
     }

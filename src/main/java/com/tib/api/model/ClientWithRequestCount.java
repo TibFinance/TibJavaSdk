@@ -19,8 +19,8 @@ public class ClientWithRequestCount  extends ClientBoarding  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WaitingRequestsCount")
     private Integer waitingRequestsCount;
 
@@ -32,14 +32,12 @@ public class ClientWithRequestCount  extends ClientBoarding  {
     
     public ClientWithRequestCount(Integer waitingRequestsCount) {
         this.waitingRequestsCount = waitingRequestsCount;
-
     }
     
     
     public ClientWithRequestCount(String clientId, String clientName, String clientEmail, String clientPhone, Integer waitingRequestsCount) {
         super(clientId, clientName, clientEmail, clientPhone);
         this.waitingRequestsCount = waitingRequestsCount;
-
     }
 
     
@@ -71,7 +69,7 @@ public class ClientWithRequestCount  extends ClientBoarding  {
     @Override
     public String toString() {
         return "ClientWithRequestCount{" +
-                 "waitingRequestsCount='" + waitingRequestsCount + '\'' +
+                "waitingRequestsCount='" + waitingRequestsCount + '\'' +
 
                 '}';
     }

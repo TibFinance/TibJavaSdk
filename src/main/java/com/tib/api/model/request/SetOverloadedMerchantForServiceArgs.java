@@ -20,14 +20,14 @@ public class SetOverloadedMerchantForServiceArgs  extends BaseAdminOnlyCryptedAr
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FeesOverLoadMerchantId")
     private String feesOverLoadMerchantId;
 
@@ -39,16 +39,14 @@ public class SetOverloadedMerchantForServiceArgs  extends BaseAdminOnlyCryptedAr
     
     public SetOverloadedMerchantForServiceArgs(String serviceId, String feesOverLoadMerchantId) {
         this.serviceId = serviceId;
-this.feesOverLoadMerchantId = feesOverLoadMerchantId;
-
+        this.feesOverLoadMerchantId = feesOverLoadMerchantId;
     }
     
     
     public SetOverloadedMerchantForServiceArgs(String adminSessionToken, String serviceId, String feesOverLoadMerchantId) {
         super(adminSessionToken);
         this.serviceId = serviceId;
-this.feesOverLoadMerchantId = feesOverLoadMerchantId;
-
+        this.feesOverLoadMerchantId = feesOverLoadMerchantId;
     }
 
     
@@ -88,8 +86,8 @@ this.feesOverLoadMerchantId = feesOverLoadMerchantId;
     @Override
     public String toString() {
         return "SetOverloadedMerchantForServiceArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", feesOverLoadMerchantId='" + feesOverLoadMerchantId + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", feesOverLoadMerchantId='" + feesOverLoadMerchantId + '\'' +
 
                 '}';
     }

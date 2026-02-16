@@ -29,14 +29,12 @@ public class AdminCreateClientLoginSessionResponse extends CustomAPIResponse {
     public AdminCreateClientLoginSessionResponse(Error[] errors, boolean hasError, String messages, String sessionId) {
         super(errors, hasError, messages);
         this.sessionId = sessionId;
-
     }
 
     public AdminCreateClientLoginSessionResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.sessionId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class AdminCreateClientLoginSessionResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "AdminCreateClientLoginSessionResponse{" +
-                 "sessionId='" + sessionId + '\'' +
+                "sessionId='" + sessionId + '\'' +
 
                 '}';
     }

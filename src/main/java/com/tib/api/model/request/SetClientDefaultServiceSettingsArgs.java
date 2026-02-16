@@ -21,14 +21,14 @@ public class SetClientDefaultServiceSettingsArgs  extends BaseAdminOnlyCryptedAr
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * Gets or sets the settings.
- */
+     * Gets or sets the settings.
+     */
     @JsonProperty("Settings")
     private ServiceSettings settings;
 
@@ -40,16 +40,14 @@ public class SetClientDefaultServiceSettingsArgs  extends BaseAdminOnlyCryptedAr
     
     public SetClientDefaultServiceSettingsArgs(String clientId, ServiceSettings settings) {
         this.clientId = clientId;
-this.settings = settings;
-
+        this.settings = settings;
     }
     
     
     public SetClientDefaultServiceSettingsArgs(String adminSessionToken, String clientId, ServiceSettings settings) {
         super(adminSessionToken);
         this.clientId = clientId;
-this.settings = settings;
-
+        this.settings = settings;
     }
 
     
@@ -89,8 +87,8 @@ this.settings = settings;
     @Override
     public String toString() {
         return "SetClientDefaultServiceSettingsArgs{" +
-                 "clientId='" + clientId + '\'' +
- ", settings='" + settings + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", settings='" + settings + '\'' +
 
                 '}';
     }

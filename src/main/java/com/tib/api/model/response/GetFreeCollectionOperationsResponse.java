@@ -30,14 +30,12 @@ public class GetFreeCollectionOperationsResponse extends CustomAPIResponse {
     public GetFreeCollectionOperationsResponse(Error[] errors, boolean hasError, String messages, List<FreeCollectionOperation> operationList) {
         super(errors, hasError, messages);
         this.operationList = operationList;
-
     }
 
     public GetFreeCollectionOperationsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.operationList = (List<FreeCollectionOperation>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetFreeCollectionOperationsResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetFreeCollectionOperationsResponse{" +
-                 "operationList='" + operationList + '\'' +
+                "operationList='" + operationList + '\'' +
 
                 '}';
     }

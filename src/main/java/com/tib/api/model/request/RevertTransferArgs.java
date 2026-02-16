@@ -20,8 +20,8 @@ public class RevertTransferArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Identifies the specific transfer operation that needs to be reverted.
- */
+     * Identifies the specific transfer operation that needs to be reverted.
+     */
     @JsonProperty("TransferId")
     private String transferId;
 
@@ -33,14 +33,12 @@ public class RevertTransferArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public RevertTransferArgs(String transferId) {
         this.transferId = transferId;
-
     }
     
     
     public RevertTransferArgs(String sessionToken, String transferId) {
         super(sessionToken);
         this.transferId = transferId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class RevertTransferArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "RevertTransferArgs{" +
-                 "transferId='" + transferId + '\'' +
+                "transferId='" + transferId + '\'' +
 
                 '}';
     }

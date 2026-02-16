@@ -29,7 +29,6 @@ public class DeleteClientArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public DeleteClientArgs(String adminSessionToken) {
         super(adminSessionToken);
-        
     }
 
     

@@ -52,23 +52,21 @@ public class RequestDataResponse<T> extends CustomAPIResponse {
     public RequestDataResponse(Error[] errors, boolean hasError, String messages, String merchantId, Double amount, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Language language, LocalDateTime transactionDueDate) {
         super(errors, hasError, messages);
         this.merchantId = merchantId;
-this.amount = amount;
-this.customerId = customerId;
-this.paymentMethodId = paymentMethodId;
-this.transferType = transferType;
-this.referenceNumber = referenceNumber;
-this.language = language;
-this.transactionDueDate = transactionDueDate;
-
+        this.amount = amount;
+        this.customerId = customerId;
+        this.paymentMethodId = paymentMethodId;
+        this.transferType = transferType;
+        this.referenceNumber = referenceNumber;
+        this.language = language;
+        this.transactionDueDate = transactionDueDate;
     }
 
     public RequestDataResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.transferType = objectMapper.readValue(json, TransferType.class);
-this.language = objectMapper.readValue(json, Language.class);
-
+            this.transferType = objectMapper.readValue(json, TransferType.class);
+            this.language = objectMapper.readValue(json, Language.class);
         }
     }
 
@@ -157,14 +155,14 @@ this.language = objectMapper.readValue(json, Language.class);
     @Override
     public String toString() {
         return "RequestDataResponse{" +
-                 "merchantId='" + merchantId + '\'' +
- ", amount='" + amount + '\'' +
- ", customerId='" + customerId + '\'' +
- ", paymentMethodId='" + paymentMethodId + '\'' +
- ", transferType='" + transferType + '\'' +
- ", referenceNumber='" + referenceNumber + '\'' +
- ", language='" + language + '\'' +
- ", transactionDueDate='" + transactionDueDate + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", paymentMethodId='" + paymentMethodId + '\'' +
+                ", transferType='" + transferType + '\'' +
+                ", referenceNumber='" + referenceNumber + '\'' +
+                ", language='" + language + '\'' +
+                ", transactionDueDate='" + transactionDueDate + '\'' +
 
                 '}';
     }

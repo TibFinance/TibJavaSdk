@@ -20,50 +20,50 @@ public class DuplicateOperationArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationId")
     private String operationId;
 
     /**
- * Identifies the specific transfer operation that needs to be reverted.
- */
+     * Identifies the specific transfer operation that needs to be reverted.
+     */
     @JsonProperty("TransferId")
     private String transferId;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
- */
+     * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
+     */
     @JsonProperty("OperationTarget")
     private Integer operationTarget;
 
     /**
- * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
- */
+     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     */
     @JsonProperty("OperationDirection")
     private Integer operationDirection;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DependentOperationId")
     private String dependentOperationId;
 
     /**
- * Retrieves the numeric status code of an operation.
- */
+     * Retrieves the numeric status code of an operation.
+     */
     @JsonProperty("OperationStatus")
     private Integer operationStatus;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionGroupId")
     private String transactionGroupId;
 
@@ -75,28 +75,26 @@ public class DuplicateOperationArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public DuplicateOperationArgs(String operationId, String transferId, Double amount, Integer operationTarget, Integer operationDirection, String dependentOperationId, Integer operationStatus, String transactionGroupId) {
         this.operationId = operationId;
-this.transferId = transferId;
-this.amount = amount;
-this.operationTarget = operationTarget;
-this.operationDirection = operationDirection;
-this.dependentOperationId = dependentOperationId;
-this.operationStatus = operationStatus;
-this.transactionGroupId = transactionGroupId;
-
+        this.transferId = transferId;
+        this.amount = amount;
+        this.operationTarget = operationTarget;
+        this.operationDirection = operationDirection;
+        this.dependentOperationId = dependentOperationId;
+        this.operationStatus = operationStatus;
+        this.transactionGroupId = transactionGroupId;
     }
     
     
     public DuplicateOperationArgs(String adminSessionToken, String operationId, String transferId, Double amount, Integer operationTarget, Integer operationDirection, String dependentOperationId, Integer operationStatus, String transactionGroupId) {
         super(adminSessionToken);
         this.operationId = operationId;
-this.transferId = transferId;
-this.amount = amount;
-this.operationTarget = operationTarget;
-this.operationDirection = operationDirection;
-this.dependentOperationId = dependentOperationId;
-this.operationStatus = operationStatus;
-this.transactionGroupId = transactionGroupId;
-
+        this.transferId = transferId;
+        this.amount = amount;
+        this.operationTarget = operationTarget;
+        this.operationDirection = operationDirection;
+        this.dependentOperationId = dependentOperationId;
+        this.operationStatus = operationStatus;
+        this.transactionGroupId = transactionGroupId;
     }
 
     
@@ -184,14 +182,14 @@ this.transactionGroupId = transactionGroupId;
     @Override
     public String toString() {
         return "DuplicateOperationArgs{" +
-                 "operationId='" + operationId + '\'' +
- ", transferId='" + transferId + '\'' +
- ", amount='" + amount + '\'' +
- ", operationTarget='" + operationTarget + '\'' +
- ", operationDirection='" + operationDirection + '\'' +
- ", dependentOperationId='" + dependentOperationId + '\'' +
- ", operationStatus='" + operationStatus + '\'' +
- ", transactionGroupId='" + transactionGroupId + '\'' +
+                "operationId='" + operationId + '\'' +
+                ", transferId='" + transferId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", operationTarget='" + operationTarget + '\'' +
+                ", operationDirection='" + operationDirection + '\'' +
+                ", dependentOperationId='" + dependentOperationId + '\'' +
+                ", operationStatus='" + operationStatus + '\'' +
+                ", transactionGroupId='" + transactionGroupId + '\'' +
 
                 '}';
     }

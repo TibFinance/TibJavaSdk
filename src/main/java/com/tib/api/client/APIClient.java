@@ -116,8 +116,8 @@ public class APIClient extends AbstractAPIClient {
             throw new IOException("Failed to encode encrypted key: " + e.getMessage(), e);
         }
         KeyExchangeResponse keyExchangeResponse = performKeyExchange(tibPublicKeyModel, encodedEncryptedKey);
-        Cipher cipherMock = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-        cipherMock.init(Cipher.DECRYPT_MODE, privateKey);
+        Cipher rsaCipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+        rsaCipher.init(Cipher.DECRYPT_MODE, privateKey);
 
         // Base64 decoding with error handling
         byte[] symmetricHostHalfKeyBytes;
@@ -127,7 +127,7 @@ public class APIClient extends AbstractAPIClient {
             throw new IOException("Invalid Base64 in symmetric host half key: " + e.getMessage(), e);
         }
 
-        byte[] decryptedSymmetricHostHalfKey = cipherMock.doFinal(symmetricHostHalfKeyBytes);
+        byte[] decryptedSymmetricHostHalfKey = rsaCipher.doFinal(symmetricHostHalfKeyBytes);
 
         byte[] combinedSymmetricKey = ByteBuffer
                 .allocate(clientSymmetricKey.length + decryptedSymmetricHostHalfKey.length)
@@ -164,32 +164,35 @@ public class APIClient extends AbstractAPIClient {
     }
 
     public String makeHttpCall(String httpURL, HttpMethod httpMethod, String input, int httpStatus) throws IOException {
-        String responseString = "";
-
         URL url = new URL(httpURL);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setDoOutput(true);
-        conn.setRequestMethod(httpMethod.toString());
-        conn.setRequestProperty("Content-Type", "application/json");
+        try {
+            conn.setDoOutput(true);
+            conn.setRequestMethod(httpMethod.toString());
+            conn.setRequestProperty("Content-Type", "application/json");
 
-        OutputStream os = conn.getOutputStream();
-        os.write(input.getBytes());
-        os.flush();
+            try (OutputStream os = conn.getOutputStream()) {
+                os.write(input.getBytes());
+                os.flush();
+            }
 
-        if (conn.getResponseCode() != httpStatus) {
-            throw new RuntimeException("Failed : HTTP error code : "
-                    + conn.getResponseCode());
+            if (conn.getResponseCode() != httpStatus) {
+                throw new RuntimeException("Failed : HTTP error code : "
+                        + conn.getResponseCode());
+            }
+
+            StringBuilder responseString = new StringBuilder();
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(
+                    conn.getInputStream()))) {
+                String output;
+                while ((output = br.readLine()) != null) {
+                    responseString.append(output);
+                }
+            }
+            return responseString.toString();
+        } finally {
+            conn.disconnect();
         }
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(
-                (conn.getInputStream())));
-
-        String output;
-        while ((output = br.readLine()) != null) {
-            responseString = responseString + output;
-        }
-        conn.disconnect();
-        return responseString;
     }
 
     private byte[] generateClientSymmetricKey() {
@@ -235,11 +238,11 @@ public class APIClient extends AbstractAPIClient {
         } catch (IllegalArgumentException e) {
             throw new IOException("Invalid Base64 in public key XML: " + e.getMessage(), e);
         }
-        BigInteger modules = new BigInteger(1, modBytes);
+        BigInteger modulus = new BigInteger(1, modBytes);
         BigInteger exponent = new BigInteger(1, expBytes);
 
         KeyFactory factory = KeyFactory.getInstance("RSA");
-        RSAPublicKeySpec pubSpec = new RSAPublicKeySpec(modules, exponent);
+        RSAPublicKeySpec pubSpec = new RSAPublicKeySpec(modulus, exponent);
         return factory.generatePublic(pubSpec);
     }
 

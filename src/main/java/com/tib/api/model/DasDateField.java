@@ -19,26 +19,26 @@ public class DasDateField   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Day")
     private Integer day;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Month")
     private Integer month;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Year")
     private Integer year;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DateTimeValue")
     private LocalDateTime dateTimeValue;
 
@@ -50,10 +50,9 @@ public class DasDateField   {
     
     public DasDateField(Integer day, Integer month, Integer year, LocalDateTime dateTimeValue) {
         this.day = day;
-this.month = month;
-this.year = year;
-this.dateTimeValue = dateTimeValue;
-
+        this.month = month;
+        this.year = year;
+        this.dateTimeValue = dateTimeValue;
     }
     
     
@@ -111,10 +110,10 @@ this.dateTimeValue = dateTimeValue;
     @Override
     public String toString() {
         return "DasDateField{" +
-                 "day='" + day + '\'' +
- ", month='" + month + '\'' +
- ", year='" + year + '\'' +
- ", dateTimeValue='" + dateTimeValue + '\'' +
+                "day='" + day + '\'' +
+                ", month='" + month + '\'' +
+                ", year='" + year + '\'' +
+                ", dateTimeValue='" + dateTimeValue + '\'' +
 
                 '}';
     }

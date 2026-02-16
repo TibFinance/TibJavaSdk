@@ -20,14 +20,14 @@ public class GetReferenceInformationArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ReferenceData")
     private String referenceData;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ReferenceInformationType")
     private GetReferenceInformationType referenceInformationType;
 
@@ -39,8 +39,7 @@ public class GetReferenceInformationArgs  implements IBaseCryptedServiceArgs  {
     
     public GetReferenceInformationArgs(String referenceData, GetReferenceInformationType referenceInformationType) {
         this.referenceData = referenceData;
-this.referenceInformationType = referenceInformationType;
-
+        this.referenceInformationType = referenceInformationType;
     }
     
     
@@ -82,8 +81,8 @@ this.referenceInformationType = referenceInformationType;
     @Override
     public String toString() {
         return "GetReferenceInformationArgs{" +
-                 "referenceData='" + referenceData + '\'' +
- ", referenceInformationType='" + referenceInformationType + '\'' +
+                "referenceData='" + referenceData + '\'' +
+                ", referenceInformationType='" + referenceInformationType + '\'' +
 
                 '}';
     }

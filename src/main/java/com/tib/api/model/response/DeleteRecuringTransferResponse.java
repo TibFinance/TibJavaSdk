@@ -25,13 +25,11 @@ public class DeleteRecuringTransferResponse extends CustomAPIResponse {
 
     public DeleteRecuringTransferResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public DeleteRecuringTransferResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

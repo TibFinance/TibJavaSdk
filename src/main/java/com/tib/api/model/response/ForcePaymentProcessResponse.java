@@ -25,13 +25,11 @@ public class ForcePaymentProcessResponse extends CustomAPIResponse {
 
     public ForcePaymentProcessResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public ForcePaymentProcessResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

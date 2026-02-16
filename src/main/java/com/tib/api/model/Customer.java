@@ -22,8 +22,8 @@ public class Customer  extends CustomerEntity  {
 
     
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
@@ -35,14 +35,12 @@ public class Customer  extends CustomerEntity  {
     
     public Customer(String customerId) {
         this.customerId = customerId;
-
     }
     
     
     public Customer(String customerName, String customerExternalId, Language language, String customerDescription, String customerEmail, List<PaymentMethod> paymentMethods, ContactInfo contactInfo, String customerId) {
         super(customerName, customerExternalId, language, customerDescription, customerEmail, paymentMethods, contactInfo);
         this.customerId = customerId;
-
     }
 
     
@@ -74,7 +72,7 @@ public class Customer  extends CustomerEntity  {
     @Override
     public String toString() {
         return "Customer{" +
-                 "customerId='" + customerId + '\'' +
+                "customerId='" + customerId + '\'' +
 
                 '}';
     }

@@ -19,44 +19,44 @@ public class SubmitDocumentBlueSnapEntity  extends SubmitDocumentEntity  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderRequestId")
     private String providerRequestId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CaseId")
     private String caseId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocType")
     private String docType;
 
     /**
- * Gets or sets the title that identifies the object in a human‑readable way.
- */
+     * Gets or sets the title that identifies the object in a human‑readable way.
+     */
     @JsonProperty("Title")
     private String title;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FileType")
     private String fileType;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Content")
     private String content;
 
@@ -68,13 +68,12 @@ public class SubmitDocumentBlueSnapEntity  extends SubmitDocumentEntity  {
     
     public SubmitDocumentBlueSnapEntity(String providerRequestId, String caseId, String docType, String title, String fileType, String description, String content) {
         this.providerRequestId = providerRequestId;
-this.caseId = caseId;
-this.docType = docType;
-this.title = title;
-this.fileType = fileType;
-this.description = description;
-this.content = content;
-
+        this.caseId = caseId;
+        this.docType = docType;
+        this.title = title;
+        this.fileType = fileType;
+        this.description = description;
+        this.content = content;
     }
     
     
@@ -156,13 +155,13 @@ this.content = content;
     @Override
     public String toString() {
         return "SubmitDocumentBlueSnapEntity{" +
-                 "providerRequestId='" + providerRequestId + '\'' +
- ", caseId='" + caseId + '\'' +
- ", docType='" + docType + '\'' +
- ", title='" + title + '\'' +
- ", fileType='" + fileType + '\'' +
- ", description='" + description + '\'' +
- ", content='" + content + '\'' +
+                "providerRequestId='" + providerRequestId + '\'' +
+                ", caseId='" + caseId + '\'' +
+                ", docType='" + docType + '\'' +
+                ", title='" + title + '\'' +
+                ", fileType='" + fileType + '\'' +
+                ", description='" + description + '\'' +
+                ", content='" + content + '\'' +
 
                 '}';
     }

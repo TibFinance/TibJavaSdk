@@ -24,62 +24,62 @@ public class PaymentOperationEntity   {
 
     
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
- */
+     * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
+     */
     @JsonProperty("OperationTarget")
     private OperationTarget operationTarget;
 
     /**
- * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
- */
+     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
- * Specifies the category of a financial operation.
- */
+     * Specifies the category of a financial operation.
+     */
     @JsonProperty("OperationKind")
     private OperationKind operationKind;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
     /**
- * Gets or sets the execution date and time of the transaction.
- */
+     * Gets or sets the execution date and time of the transaction.
+     */
     @JsonProperty("ExecutedDate")
     private LocalDateTime executedDate;
 
     /**
- * Gets or sets the collection of transaction details associated with the operation.
- */
+     * Gets or sets the collection of transaction details associated with the operation.
+     */
     @JsonProperty("Transactions")
     private List<TransactionCommon> transactions;
 
     /**
- * Retrieves the numeric status code of an operation.
- */
+     * Retrieves the numeric status code of an operation.
+     */
     @JsonProperty("OperationStatus")
     private Integer operationStatus;
 
     /**
- * Gets or sets the merchant name that overrides the default merchant name.
- */
+     * Gets or sets the merchant name that overrides the default merchant name.
+     */
     @JsonProperty("OverloadMerchantName")
     private String overloadMerchantName;
 
@@ -91,16 +91,15 @@ public class PaymentOperationEntity   {
     
     public PaymentOperationEntity(Double amount, Currency currency, OperationTarget operationTarget, TransferDirection operationDirection, OperationKind operationKind, LocalDateTime createdDate, LocalDateTime executedDate, List<TransactionCommon> transactions, Integer operationStatus, String overloadMerchantName) {
         this.amount = amount;
-this.currency = currency;
-this.operationTarget = operationTarget;
-this.operationDirection = operationDirection;
-this.operationKind = operationKind;
-this.createdDate = createdDate;
-this.executedDate = executedDate;
-this.transactions = transactions;
-this.operationStatus = operationStatus;
-this.overloadMerchantName = overloadMerchantName;
-
+        this.currency = currency;
+        this.operationTarget = operationTarget;
+        this.operationDirection = operationDirection;
+        this.operationKind = operationKind;
+        this.createdDate = createdDate;
+        this.executedDate = executedDate;
+        this.transactions = transactions;
+        this.operationStatus = operationStatus;
+        this.overloadMerchantName = overloadMerchantName;
     }
     
     
@@ -206,16 +205,16 @@ this.overloadMerchantName = overloadMerchantName;
     @Override
     public String toString() {
         return "PaymentOperationEntity{" +
-                 "amount='" + amount + '\'' +
- ", currency='" + currency + '\'' +
- ", operationTarget='" + operationTarget + '\'' +
- ", operationDirection='" + operationDirection + '\'' +
- ", operationKind='" + operationKind + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", executedDate='" + executedDate + '\'' +
- ", transactions='" + transactions + '\'' +
- ", operationStatus='" + operationStatus + '\'' +
- ", overloadMerchantName='" + overloadMerchantName + '\'' +
+                "amount='" + amount + '\'' +
+                ", currency='" + currency + '\'' +
+                ", operationTarget='" + operationTarget + '\'' +
+                ", operationDirection='" + operationDirection + '\'' +
+                ", operationKind='" + operationKind + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", executedDate='" + executedDate + '\'' +
+                ", transactions='" + transactions + '\'' +
+                ", operationStatus='" + operationStatus + '\'' +
+                ", overloadMerchantName='" + overloadMerchantName + '\'' +
 
                 '}';
     }

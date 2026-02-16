@@ -20,20 +20,20 @@ public class GetTransferCreationListArgs  extends BaseAuthenticatedCryptedArgs  
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Defines and manages the type of transfer operation within the system.
- */
+     * Defines and manages the type of transfer operation within the system.
+     */
     @JsonProperty("TransferType")
     private String transferType;
 
@@ -45,18 +45,16 @@ public class GetTransferCreationListArgs  extends BaseAuthenticatedCryptedArgs  
     
     public GetTransferCreationListArgs(String serviceId, String merchantId, String transferType) {
         this.serviceId = serviceId;
-this.merchantId = merchantId;
-this.transferType = transferType;
-
+        this.merchantId = merchantId;
+        this.transferType = transferType;
     }
     
     
     public GetTransferCreationListArgs(String sessionToken, String serviceId, String merchantId, String transferType) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.merchantId = merchantId;
-this.transferType = transferType;
-
+        this.merchantId = merchantId;
+        this.transferType = transferType;
     }
 
     
@@ -104,9 +102,9 @@ this.transferType = transferType;
     @Override
     public String toString() {
         return "GetTransferCreationListArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", transferType='" + transferType + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", transferType='" + transferType + '\'' +
 
                 '}';
     }

@@ -32,16 +32,14 @@ public class SaveSpecimenResponse extends CustomAPIResponse {
     public SaveSpecimenResponse(Error[] errors, boolean hasError, String messages, String clientId, String merchantId) {
         super(errors, hasError, messages);
         this.clientId = clientId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     public SaveSpecimenResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.clientId = apiResponse.getResponse().toString();
-this.merchantId = apiResponse.getResponse().toString();
-
+            this.merchantId = apiResponse.getResponse().toString();
         }
     }
 
@@ -82,8 +80,8 @@ this.merchantId = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "SaveSpecimenResponse{" +
-                 "clientId='" + clientId + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

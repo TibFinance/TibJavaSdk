@@ -20,8 +20,8 @@ public class BaseAuthenticatePublicTokenArgs  extends BaseAuthenticatedCryptedAr
 
     
     /**
- * Gets or sets the identifier of the public token required to initiate a drop‑in session.
- */
+     * Gets or sets the identifier of the public token required to initiate a drop‑in session.
+     */
     @JsonProperty("PublicTokenId")
     private String publicTokenId;
 
@@ -33,14 +33,12 @@ public class BaseAuthenticatePublicTokenArgs  extends BaseAuthenticatedCryptedAr
     
     public BaseAuthenticatePublicTokenArgs(String publicTokenId) {
         this.publicTokenId = publicTokenId;
-
     }
     
     
     public BaseAuthenticatePublicTokenArgs(String sessionToken, String publicTokenId) {
         super(sessionToken);
         this.publicTokenId = publicTokenId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class BaseAuthenticatePublicTokenArgs  extends BaseAuthenticatedCryptedAr
     @Override
     public String toString() {
         return "BaseAuthenticatePublicTokenArgs{" +
-                 "publicTokenId='" + publicTokenId + '\'' +
+                "publicTokenId='" + publicTokenId + '\'' +
 
                 '}';
     }

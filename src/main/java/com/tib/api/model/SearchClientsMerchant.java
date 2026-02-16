@@ -19,56 +19,56 @@ public class SearchClientsMerchant   {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientName")
     private String clientName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientIsDeleted")
     private boolean clientIsDeleted;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Retrieves or assigns the service's name.
- */
+     * Retrieves or assigns the service's name.
+     */
     @JsonProperty("ServiceName")
     private String serviceName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ServiceIsDeleted")
     private boolean serviceIsDeleted;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantIsDeleted")
     private boolean merchantIsDeleted;
 
@@ -80,15 +80,14 @@ public class SearchClientsMerchant   {
     
     public SearchClientsMerchant(String clientId, String clientName, boolean clientIsDeleted, String serviceId, String serviceName, boolean serviceIsDeleted, String merchantId, String merchantName, boolean merchantIsDeleted) {
         this.clientId = clientId;
-this.clientName = clientName;
-this.clientIsDeleted = clientIsDeleted;
-this.serviceId = serviceId;
-this.serviceName = serviceName;
-this.serviceIsDeleted = serviceIsDeleted;
-this.merchantId = merchantId;
-this.merchantName = merchantName;
-this.merchantIsDeleted = merchantIsDeleted;
-
+        this.clientName = clientName;
+        this.clientIsDeleted = clientIsDeleted;
+        this.serviceId = serviceId;
+        this.serviceName = serviceName;
+        this.serviceIsDeleted = serviceIsDeleted;
+        this.merchantId = merchantId;
+        this.merchantName = merchantName;
+        this.merchantIsDeleted = merchantIsDeleted;
     }
     
     
@@ -186,15 +185,15 @@ this.merchantIsDeleted = merchantIsDeleted;
     @Override
     public String toString() {
         return "SearchClientsMerchant{" +
-                 "clientId='" + clientId + '\'' +
- ", clientName='" + clientName + '\'' +
- ", clientIsDeleted='" + clientIsDeleted + '\'' +
- ", serviceId='" + serviceId + '\'' +
- ", serviceName='" + serviceName + '\'' +
- ", serviceIsDeleted='" + serviceIsDeleted + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", merchantIsDeleted='" + merchantIsDeleted + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", clientName='" + clientName + '\'' +
+                ", clientIsDeleted='" + clientIsDeleted + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                ", serviceName='" + serviceName + '\'' +
+                ", serviceIsDeleted='" + serviceIsDeleted + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", merchantIsDeleted='" + merchantIsDeleted + '\'' +
 
                 '}';
     }

@@ -34,17 +34,15 @@ public class GetTransferValidationRequestResponse<T> extends CustomAPIResponse {
     public GetTransferValidationRequestResponse(Error[] errors, boolean hasError, String messages, TransferValidationEntity transfer, WhiteLabeling whiteLabeling) {
         super(errors, hasError, messages);
         this.transfer = transfer;
-this.whiteLabeling = whiteLabeling;
-
+        this.whiteLabeling = whiteLabeling;
     }
 
     public GetTransferValidationRequestResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.transfer = objectMapper.readValue(json, TransferValidationEntity.class);
-this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
-
+            this.transfer = objectMapper.readValue(json, TransferValidationEntity.class);
+            this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
         }
     }
 
@@ -85,8 +83,8 @@ this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
     @Override
     public String toString() {
         return "GetTransferValidationRequestResponse{" +
-                 "transfer='" + transfer + '\'' +
- ", whiteLabeling='" + whiteLabeling + '\'' +
+                "transfer='" + transfer + '\'' +
+                ", whiteLabeling='" + whiteLabeling + '\'' +
 
                 '}';
     }

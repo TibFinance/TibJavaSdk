@@ -21,32 +21,32 @@ public class AdjustWalletArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Defines the mode of wallet adjustment operations.
- */
+     * Defines the mode of wallet adjustment operations.
+     */
     @JsonProperty("Mode")
     private WalletAdjustment mode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("UseInterac")
     private boolean useInterac;
 
@@ -58,22 +58,20 @@ public class AdjustWalletArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public AdjustWalletArgs(String serviceId, String merchantId, Double amount, WalletAdjustment mode, boolean useInterac) {
         this.serviceId = serviceId;
-this.merchantId = merchantId;
-this.amount = amount;
-this.mode = mode;
-this.useInterac = useInterac;
-
+        this.merchantId = merchantId;
+        this.amount = amount;
+        this.mode = mode;
+        this.useInterac = useInterac;
     }
     
     
     public AdjustWalletArgs(String sessionToken, String serviceId, String merchantId, Double amount, WalletAdjustment mode, boolean useInterac) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.merchantId = merchantId;
-this.amount = amount;
-this.mode = mode;
-this.useInterac = useInterac;
-
+        this.merchantId = merchantId;
+        this.amount = amount;
+        this.mode = mode;
+        this.useInterac = useInterac;
     }
 
     
@@ -137,11 +135,11 @@ this.useInterac = useInterac;
     @Override
     public String toString() {
         return "AdjustWalletArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", amount='" + amount + '\'' +
- ", mode='" + mode + '\'' +
- ", useInterac='" + useInterac + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", mode='" + mode + '\'' +
+                ", useInterac='" + useInterac + '\'' +
 
                 '}';
     }

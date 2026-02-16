@@ -30,14 +30,12 @@ public class GetTransferCreationListResponse<T> extends CustomAPIResponse {
     public GetTransferCreationListResponse(Error[] errors, boolean hasError, String messages, List<TransferCreation> transfersCreations) {
         super(errors, hasError, messages);
         this.transfersCreations = transfersCreations;
-
     }
 
     public GetTransferCreationListResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transfersCreations = (List<TransferCreation>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetTransferCreationListResponse<T> extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetTransferCreationListResponse{" +
-                 "transfersCreations='" + transfersCreations + '\'' +
+                "transfersCreations='" + transfersCreations + '\'' +
 
                 '}';
     }

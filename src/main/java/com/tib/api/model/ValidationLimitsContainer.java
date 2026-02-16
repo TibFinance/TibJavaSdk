@@ -22,38 +22,38 @@ public class ValidationLimitsContainer   {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Gets or sets the limit status.
- */
+     * Gets or sets the limit status.
+     */
     @JsonProperty("LimitStatus")
     private ValidationLimitStatus limitStatus;
 
     /**
- * Gets or sets the tib authorization.
- */
+     * Gets or sets the tib authorization.
+     */
     @JsonProperty("TibAuthorization")
     private TibAuthorizationStatus tibAuthorization;
 
     /**
- * Gets or sets the client authorization.
- */
+     * Gets or sets the client authorization.
+     */
     @JsonProperty("ClientAuthorization")
     private ClientAuthorizationStatus clientAuthorization;
 
     /**
- * Gets or sets the tib messages.
- */
+     * Gets or sets the tib messages.
+     */
     @JsonProperty("TibMessages")
     private List<String> tibMessages;
 
     /**
- * Gets or sets the client messages.
- */
+     * Gets or sets the client messages.
+     */
     @JsonProperty("ClientMessages")
     private List<String> clientMessages;
 
@@ -65,12 +65,11 @@ public class ValidationLimitsContainer   {
     
     public ValidationLimitsContainer(String serviceId, ValidationLimitStatus limitStatus, TibAuthorizationStatus tibAuthorization, ClientAuthorizationStatus clientAuthorization, List<String> tibMessages, List<String> clientMessages) {
         this.serviceId = serviceId;
-this.limitStatus = limitStatus;
-this.tibAuthorization = tibAuthorization;
-this.clientAuthorization = clientAuthorization;
-this.tibMessages = tibMessages;
-this.clientMessages = clientMessages;
-
+        this.limitStatus = limitStatus;
+        this.tibAuthorization = tibAuthorization;
+        this.clientAuthorization = clientAuthorization;
+        this.tibMessages = tibMessages;
+        this.clientMessages = clientMessages;
     }
     
     
@@ -144,12 +143,12 @@ this.clientMessages = clientMessages;
     @Override
     public String toString() {
         return "ValidationLimitsContainer{" +
-                 "serviceId='" + serviceId + '\'' +
- ", limitStatus='" + limitStatus + '\'' +
- ", tibAuthorization='" + tibAuthorization + '\'' +
- ", clientAuthorization='" + clientAuthorization + '\'' +
- ", tibMessages='" + tibMessages + '\'' +
- ", clientMessages='" + clientMessages + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", limitStatus='" + limitStatus + '\'' +
+                ", tibAuthorization='" + tibAuthorization + '\'' +
+                ", clientAuthorization='" + clientAuthorization + '\'' +
+                ", tibMessages='" + tibMessages + '\'' +
+                ", clientMessages='" + clientMessages + '\'' +
 
                 '}';
     }

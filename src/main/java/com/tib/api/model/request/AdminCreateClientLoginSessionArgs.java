@@ -20,8 +20,8 @@ public class AdminCreateClientLoginSessionArgs  extends BaseAdminOnlyCryptedArgs
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
@@ -33,14 +33,12 @@ public class AdminCreateClientLoginSessionArgs  extends BaseAdminOnlyCryptedArgs
     
     public AdminCreateClientLoginSessionArgs(String clientId) {
         this.clientId = clientId;
-
     }
     
     
     public AdminCreateClientLoginSessionArgs(String adminSessionToken, String clientId) {
         super(adminSessionToken);
         this.clientId = clientId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class AdminCreateClientLoginSessionArgs  extends BaseAdminOnlyCryptedArgs
     @Override
     public String toString() {
         return "AdminCreateClientLoginSessionArgs{" +
-                 "clientId='" + clientId + '\'' +
+                "clientId='" + clientId + '\'' +
 
                 '}';
     }

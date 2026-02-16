@@ -24,44 +24,44 @@ public class Operation   {
 
     
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
- */
+     * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
+     */
     @JsonProperty("OperationTarget")
     private OperationTarget operationTarget;
 
     /**
- * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
- */
+     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
- * Gets or sets the payment or merchant identifier.
- */
+     * Gets or sets the payment or merchant identifier.
+     */
     @JsonProperty("PaymentOrMerchantId")
     private String paymentOrMerchantId;
 
     /**
- * Gets or sets the collection of transaction details associated with the operation.
- */
+     * Gets or sets the collection of transaction details associated with the operation.
+     */
     @JsonProperty("Transactions")
     private List<TransactionCommon> transactions;
 
     /**
- * Gets or sets the operation related payments.
- */
+     * Gets or sets the operation related payments.
+     */
     @JsonProperty("OperationRelatedPayments")
     private List<PaymentOperationWithHierarchy> operationRelatedPayments;
 
@@ -73,13 +73,12 @@ public class Operation   {
     
     public Operation(Double amount, Currency currency, OperationTarget operationTarget, TransferDirection operationDirection, String paymentOrMerchantId, List<TransactionCommon> transactions, List<PaymentOperationWithHierarchy> operationRelatedPayments) {
         this.amount = amount;
-this.currency = currency;
-this.operationTarget = operationTarget;
-this.operationDirection = operationDirection;
-this.paymentOrMerchantId = paymentOrMerchantId;
-this.transactions = transactions;
-this.operationRelatedPayments = operationRelatedPayments;
-
+        this.currency = currency;
+        this.operationTarget = operationTarget;
+        this.operationDirection = operationDirection;
+        this.paymentOrMerchantId = paymentOrMerchantId;
+        this.transactions = transactions;
+        this.operationRelatedPayments = operationRelatedPayments;
     }
     
     
@@ -161,13 +160,13 @@ this.operationRelatedPayments = operationRelatedPayments;
     @Override
     public String toString() {
         return "Operation{" +
-                 "amount='" + amount + '\'' +
- ", currency='" + currency + '\'' +
- ", operationTarget='" + operationTarget + '\'' +
- ", operationDirection='" + operationDirection + '\'' +
- ", paymentOrMerchantId='" + paymentOrMerchantId + '\'' +
- ", transactions='" + transactions + '\'' +
- ", operationRelatedPayments='" + operationRelatedPayments + '\'' +
+                "amount='" + amount + '\'' +
+                ", currency='" + currency + '\'' +
+                ", operationTarget='" + operationTarget + '\'' +
+                ", operationDirection='" + operationDirection + '\'' +
+                ", paymentOrMerchantId='" + paymentOrMerchantId + '\'' +
+                ", transactions='" + transactions + '\'' +
+                ", operationRelatedPayments='" + operationRelatedPayments + '\'' +
 
                 '}';
     }

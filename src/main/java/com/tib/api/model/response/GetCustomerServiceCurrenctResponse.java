@@ -29,14 +29,12 @@ public class GetCustomerServiceCurrenctResponse extends CustomAPIResponse {
     public GetCustomerServiceCurrenctResponse(Error[] errors, boolean hasError, String messages, Integer currency) {
         super(errors, hasError, messages);
         this.currency = currency;
-
     }
 
     public GetCustomerServiceCurrenctResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.currency = Integer.parseInt(apiResponse.getResponse().toString());
-
         }
     }
 
@@ -69,7 +67,7 @@ public class GetCustomerServiceCurrenctResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetCustomerServiceCurrenctResponse{" +
-                 "currency='" + currency + '\'' +
+                "currency='" + currency + '\'' +
 
                 '}';
     }

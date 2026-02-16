@@ -29,14 +29,12 @@ public class DoesClientExistResponse extends CustomAPIResponse {
     public DoesClientExistResponse(Error[] errors, boolean hasError, String messages, boolean isClientExisting) {
         super(errors, hasError, messages);
         this.isClientExisting = isClientExisting;
-
     }
 
     public DoesClientExistResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.isClientExisting = Boolean.parseBoolean(apiResponse.getResponse().toString());
-
         }
     }
 
@@ -69,7 +67,7 @@ public class DoesClientExistResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "DoesClientExistResponse{" +
-                 "isClientExisting='" + isClientExisting + '\'' +
+                "isClientExisting='" + isClientExisting + '\'' +
 
                 '}';
     }

@@ -20,8 +20,8 @@ public class RelaunchOperationArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationId")
     private String operationId;
 
@@ -33,14 +33,12 @@ public class RelaunchOperationArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public RelaunchOperationArgs(String operationId) {
         this.operationId = operationId;
-
     }
     
     
     public RelaunchOperationArgs(String adminSessionToken, String operationId) {
         super(adminSessionToken);
         this.operationId = operationId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class RelaunchOperationArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "RelaunchOperationArgs{" +
-                 "operationId='" + operationId + '\'' +
+                "operationId='" + operationId + '\'' +
 
                 '}';
     }

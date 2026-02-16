@@ -29,14 +29,12 @@ public class RetreiveDataResponse extends CustomAPIResponse {
     public RetreiveDataResponse(Error[] errors, boolean hasError, String messages, String dataCryptedBase64) {
         super(errors, hasError, messages);
         this.dataCryptedBase64 = dataCryptedBase64;
-
     }
 
     public RetreiveDataResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.dataCryptedBase64 = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class RetreiveDataResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "RetreiveDataResponse{" +
-                 "dataCryptedBase64='" + dataCryptedBase64 + '\'' +
+                "dataCryptedBase64='" + dataCryptedBase64 + '\'' +
 
                 '}';
     }

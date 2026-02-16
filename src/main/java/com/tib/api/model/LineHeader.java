@@ -20,20 +20,20 @@ public class LineHeader  extends BaseLineHeader  {
 
     
     /**
- * Gets or sets the type of the line.
- */
+     * Gets or sets the type of the line.
+     */
     @JsonProperty("LineType")
     private LineType lineType;
 
     /**
- * Gets or sets the file number.
- */
+     * Gets or sets the file number.
+     */
     @JsonProperty("FileNumber")
     private Integer fileNumber;
 
     /**
- * Gets or sets the organization number.
- */
+     * Gets or sets the organization number.
+     */
     @JsonProperty("OrganizationNumber")
     private String organizationNumber;
 
@@ -45,9 +45,8 @@ public class LineHeader  extends BaseLineHeader  {
     
     public LineHeader(LineType lineType, Integer fileNumber, String organizationNumber) {
         this.lineType = lineType;
-this.fileNumber = fileNumber;
-this.organizationNumber = organizationNumber;
-
+        this.fileNumber = fileNumber;
+        this.organizationNumber = organizationNumber;
     }
     
     
@@ -97,9 +96,9 @@ this.organizationNumber = organizationNumber;
     @Override
     public String toString() {
         return "LineHeader{" +
-                 "lineType='" + lineType + '\'' +
- ", fileNumber='" + fileNumber + '\'' +
- ", organizationNumber='" + organizationNumber + '\'' +
+                "lineType='" + lineType + '\'' +
+                ", fileNumber='" + fileNumber + '\'' +
+                ", organizationNumber='" + organizationNumber + '\'' +
 
                 '}';
     }

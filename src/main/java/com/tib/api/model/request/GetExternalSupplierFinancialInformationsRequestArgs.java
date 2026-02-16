@@ -29,7 +29,6 @@ public class GetExternalSupplierFinancialInformationsRequestArgs  extends BaseAu
     
     public GetExternalSupplierFinancialInformationsRequestArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

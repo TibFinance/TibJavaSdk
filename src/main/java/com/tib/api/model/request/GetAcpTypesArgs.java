@@ -20,8 +20,8 @@ public class GetAcpTypesArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Client information to modify
- */
+     * Client information to modify
+     */
     @JsonProperty("RelatedId")
     private String relatedId;
 
@@ -33,14 +33,12 @@ public class GetAcpTypesArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public GetAcpTypesArgs(String relatedId) {
         this.relatedId = relatedId;
-
     }
     
     
     public GetAcpTypesArgs(String adminSessionToken, String relatedId) {
         super(adminSessionToken);
         this.relatedId = relatedId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetAcpTypesArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "GetAcpTypesArgs{" +
-                 "relatedId='" + relatedId + '\'' +
+                "relatedId='" + relatedId + '\'' +
 
                 '}';
     }

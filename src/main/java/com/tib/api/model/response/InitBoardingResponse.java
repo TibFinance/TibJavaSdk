@@ -29,14 +29,12 @@ public class InitBoardingResponse extends CustomAPIResponse {
     public InitBoardingResponse(Error[] errors, boolean hasError, String messages, String redirectUrl) {
         super(errors, hasError, messages);
         this.redirectUrl = redirectUrl;
-
     }
 
     public InitBoardingResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.redirectUrl = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class InitBoardingResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "InitBoardingResponse{" +
-                 "redirectUrl='" + redirectUrl + '\'' +
+                "redirectUrl='" + redirectUrl + '\'' +
 
                 '}';
     }

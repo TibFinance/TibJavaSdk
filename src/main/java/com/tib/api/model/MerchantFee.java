@@ -20,14 +20,14 @@ public class MerchantFee   {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Gets or sets the merchant fees.
- */
+     * Gets or sets the merchant fees.
+     */
     @JsonProperty("MerchantFees")
     private TransactionFeesAgregated merchantFees;
 
@@ -39,8 +39,7 @@ public class MerchantFee   {
     
     public MerchantFee(String merchantId, TransactionFeesAgregated merchantFees) {
         this.merchantId = merchantId;
-this.merchantFees = merchantFees;
-
+        this.merchantFees = merchantFees;
     }
     
     
@@ -82,8 +81,8 @@ this.merchantFees = merchantFees;
     @Override
     public String toString() {
         return "MerchantFee{" +
-                 "merchantId='" + merchantId + '\'' +
- ", merchantFees='" + merchantFees + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", merchantFees='" + merchantFees + '\'' +
 
                 '}';
     }

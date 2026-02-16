@@ -21,14 +21,14 @@ public class SaveSpecimenArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * Contains the necessary details for replacing a merchant's account information within the system.
- */
+     * Contains the necessary details for replacing a merchant's account information within the system.
+     */
     @JsonProperty("Account")
     private Account account;
 
@@ -40,16 +40,14 @@ public class SaveSpecimenArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public SaveSpecimenArgs(String clientId, Account account) {
         this.clientId = clientId;
-this.account = account;
-
+        this.account = account;
     }
     
     
     public SaveSpecimenArgs(String adminSessionToken, String clientId, Account account) {
         super(adminSessionToken);
         this.clientId = clientId;
-this.account = account;
-
+        this.account = account;
     }
 
     
@@ -89,8 +87,8 @@ this.account = account;
     @Override
     public String toString() {
         return "SaveSpecimenArgs{" +
-                 "clientId='" + clientId + '\'' +
- ", account='" + account + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", account='" + account + '\'' +
 
                 '}';
     }

@@ -19,38 +19,38 @@ public class BoardingDocument   {
 
     
     /**
- * Represents the current state of a transaction within the system.
- */
+     * Represents the current state of a transaction within the system.
+     */
     @JsonProperty("Status")
     private String status;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocUnderWriterNotes")
     private String docUnderWriterNotes;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocType")
     private String docType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocsReceived")
     private String docsReceived;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocLimit")
     private String docLimit;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocGenericDescription")
     private String docGenericDescription;
 
@@ -62,12 +62,11 @@ public class BoardingDocument   {
     
     public BoardingDocument(String status, String docUnderWriterNotes, String docType, String docsReceived, String docLimit, String docGenericDescription) {
         this.status = status;
-this.docUnderWriterNotes = docUnderWriterNotes;
-this.docType = docType;
-this.docsReceived = docsReceived;
-this.docLimit = docLimit;
-this.docGenericDescription = docGenericDescription;
-
+        this.docUnderWriterNotes = docUnderWriterNotes;
+        this.docType = docType;
+        this.docsReceived = docsReceived;
+        this.docLimit = docLimit;
+        this.docGenericDescription = docGenericDescription;
     }
     
     
@@ -141,12 +140,12 @@ this.docGenericDescription = docGenericDescription;
     @Override
     public String toString() {
         return "BoardingDocument{" +
-                 "status='" + status + '\'' +
- ", docUnderWriterNotes='" + docUnderWriterNotes + '\'' +
- ", docType='" + docType + '\'' +
- ", docsReceived='" + docsReceived + '\'' +
- ", docLimit='" + docLimit + '\'' +
- ", docGenericDescription='" + docGenericDescription + '\'' +
+                "status='" + status + '\'' +
+                ", docUnderWriterNotes='" + docUnderWriterNotes + '\'' +
+                ", docType='" + docType + '\'' +
+                ", docsReceived='" + docsReceived + '\'' +
+                ", docLimit='" + docLimit + '\'' +
+                ", docGenericDescription='" + docGenericDescription + '\'' +
 
                 '}';
     }

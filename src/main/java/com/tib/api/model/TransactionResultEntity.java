@@ -23,80 +23,80 @@ public class TransactionResultEntity  extends TransactionIdentity  {
 
     
     /**
- * Gets or sets the description associated with a transaction.
- */
+     * Gets or sets the description associated with a transaction.
+     */
     @JsonProperty("TransactionDescription")
     private String transactionDescription;
 
     /**
- * Gets or sets the result of a banking operation as defined by the BankingOperationResultEnum.
- */
+     * Gets or sets the result of a banking operation as defined by the BankingOperationResultEnum.
+     */
     @JsonProperty("BankingOperationResult")
     private BankingOperationResult bankingOperationResult;
 
     /**
- * Gets or sets the banking operation description.
- */
+     * Gets or sets the banking operation description.
+     */
     @JsonProperty("BankingOperationDescription")
     private String bankingOperationDescription;
 
     /**
- * Retrieves the numeric status code of an operation.
- */
+     * Retrieves the numeric status code of an operation.
+     */
     @JsonProperty("OperationStatus")
     private OperationStatus operationStatus;
 
     /**
- * Gets or sets the real due date.
- */
+     * Gets or sets the real due date.
+     */
     @JsonProperty("RealDueDate")
     private LocalDateTime realDueDate;
 
     /**
- * Gets or sets ProviderTransactionAdditionalInfos.
- */
+     * Gets or sets ProviderTransactionAdditionalInfos.
+     */
     @JsonProperty("ProviderTransactionAdditionalInfos")
     private String providerTransactionAdditionalInfos;
 
     /**
- * Gets or sets the Processing Fees.
- */
+     * Gets or sets the Processing Fees.
+     */
     @JsonProperty("ProcessingFee")
     private Double processingFee;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ContainsPayoutData")
     private boolean containsPayoutData;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderPayoutFeeAmount")
     private Double providerPayoutFeeAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderPayoutDepositAmount")
     private Double providerPayoutDepositAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PayoutReportData")
     private PayoutReportData payoutReportData;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ContainsPayoutReportData")
     private boolean containsPayoutReportData;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ForceCreateWebhookEvent")
     private boolean forceCreateWebhookEvent;
 
@@ -108,38 +108,36 @@ public class TransactionResultEntity  extends TransactionIdentity  {
     
     public TransactionResultEntity(String transactionDescription, BankingOperationResult bankingOperationResult, String bankingOperationDescription, OperationStatus operationStatus, LocalDateTime realDueDate, String providerTransactionAdditionalInfos, Double processingFee, boolean containsPayoutData, Double providerPayoutFeeAmount, Double providerPayoutDepositAmount, PayoutReportData payoutReportData, boolean containsPayoutReportData, boolean forceCreateWebhookEvent) {
         this.transactionDescription = transactionDescription;
-this.bankingOperationResult = bankingOperationResult;
-this.bankingOperationDescription = bankingOperationDescription;
-this.operationStatus = operationStatus;
-this.realDueDate = realDueDate;
-this.providerTransactionAdditionalInfos = providerTransactionAdditionalInfos;
-this.processingFee = processingFee;
-this.containsPayoutData = containsPayoutData;
-this.providerPayoutFeeAmount = providerPayoutFeeAmount;
-this.providerPayoutDepositAmount = providerPayoutDepositAmount;
-this.payoutReportData = payoutReportData;
-this.containsPayoutReportData = containsPayoutReportData;
-this.forceCreateWebhookEvent = forceCreateWebhookEvent;
-
+        this.bankingOperationResult = bankingOperationResult;
+        this.bankingOperationDescription = bankingOperationDescription;
+        this.operationStatus = operationStatus;
+        this.realDueDate = realDueDate;
+        this.providerTransactionAdditionalInfos = providerTransactionAdditionalInfos;
+        this.processingFee = processingFee;
+        this.containsPayoutData = containsPayoutData;
+        this.providerPayoutFeeAmount = providerPayoutFeeAmount;
+        this.providerPayoutDepositAmount = providerPayoutDepositAmount;
+        this.payoutReportData = payoutReportData;
+        this.containsPayoutReportData = containsPayoutReportData;
+        this.forceCreateWebhookEvent = forceCreateWebhookEvent;
     }
     
     
     public TransactionResultEntity(String transactionId, String relatedMerchantId, String lastExecutionDescription, Double transactionAmount, LocalDateTime originalTransactionDueDatePassedWeekend, LocalDateTime originalTransactionCreatedDatePassedWeekend, Currency currency, String transferId, String payoutId, String transactionDescription, BankingOperationResult bankingOperationResult, String bankingOperationDescription, OperationStatus operationStatus, LocalDateTime realDueDate, String providerTransactionAdditionalInfos, Double processingFee, boolean containsPayoutData, Double providerPayoutFeeAmount, Double providerPayoutDepositAmount, PayoutReportData payoutReportData, boolean containsPayoutReportData, boolean forceCreateWebhookEvent) {
         super(transactionId, relatedMerchantId, lastExecutionDescription, transactionAmount, originalTransactionDueDatePassedWeekend, originalTransactionCreatedDatePassedWeekend, currency, transferId, payoutId);
         this.transactionDescription = transactionDescription;
-this.bankingOperationResult = bankingOperationResult;
-this.bankingOperationDescription = bankingOperationDescription;
-this.operationStatus = operationStatus;
-this.realDueDate = realDueDate;
-this.providerTransactionAdditionalInfos = providerTransactionAdditionalInfos;
-this.processingFee = processingFee;
-this.containsPayoutData = containsPayoutData;
-this.providerPayoutFeeAmount = providerPayoutFeeAmount;
-this.providerPayoutDepositAmount = providerPayoutDepositAmount;
-this.payoutReportData = payoutReportData;
-this.containsPayoutReportData = containsPayoutReportData;
-this.forceCreateWebhookEvent = forceCreateWebhookEvent;
-
+        this.bankingOperationResult = bankingOperationResult;
+        this.bankingOperationDescription = bankingOperationDescription;
+        this.operationStatus = operationStatus;
+        this.realDueDate = realDueDate;
+        this.providerTransactionAdditionalInfos = providerTransactionAdditionalInfos;
+        this.processingFee = processingFee;
+        this.containsPayoutData = containsPayoutData;
+        this.providerPayoutFeeAmount = providerPayoutFeeAmount;
+        this.providerPayoutDepositAmount = providerPayoutDepositAmount;
+        this.payoutReportData = payoutReportData;
+        this.containsPayoutReportData = containsPayoutReportData;
+        this.forceCreateWebhookEvent = forceCreateWebhookEvent;
     }
 
     
@@ -267,19 +265,19 @@ this.forceCreateWebhookEvent = forceCreateWebhookEvent;
     @Override
     public String toString() {
         return "TransactionResultEntity{" +
-                 "transactionDescription='" + transactionDescription + '\'' +
- ", bankingOperationResult='" + bankingOperationResult + '\'' +
- ", bankingOperationDescription='" + bankingOperationDescription + '\'' +
- ", operationStatus='" + operationStatus + '\'' +
- ", realDueDate='" + realDueDate + '\'' +
- ", providerTransactionAdditionalInfos='" + providerTransactionAdditionalInfos + '\'' +
- ", processingFee='" + processingFee + '\'' +
- ", containsPayoutData='" + containsPayoutData + '\'' +
- ", providerPayoutFeeAmount='" + providerPayoutFeeAmount + '\'' +
- ", providerPayoutDepositAmount='" + providerPayoutDepositAmount + '\'' +
- ", payoutReportData='" + payoutReportData + '\'' +
- ", containsPayoutReportData='" + containsPayoutReportData + '\'' +
- ", forceCreateWebhookEvent='" + forceCreateWebhookEvent + '\'' +
+                "transactionDescription='" + transactionDescription + '\'' +
+                ", bankingOperationResult='" + bankingOperationResult + '\'' +
+                ", bankingOperationDescription='" + bankingOperationDescription + '\'' +
+                ", operationStatus='" + operationStatus + '\'' +
+                ", realDueDate='" + realDueDate + '\'' +
+                ", providerTransactionAdditionalInfos='" + providerTransactionAdditionalInfos + '\'' +
+                ", processingFee='" + processingFee + '\'' +
+                ", containsPayoutData='" + containsPayoutData + '\'' +
+                ", providerPayoutFeeAmount='" + providerPayoutFeeAmount + '\'' +
+                ", providerPayoutDepositAmount='" + providerPayoutDepositAmount + '\'' +
+                ", payoutReportData='" + payoutReportData + '\'' +
+                ", containsPayoutReportData='" + containsPayoutReportData + '\'' +
+                ", forceCreateWebhookEvent='" + forceCreateWebhookEvent + '\'' +
 
                 '}';
     }

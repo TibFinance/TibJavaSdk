@@ -20,8 +20,8 @@ public class CreateServiceRequestFormArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
- * Gets or sets the merchant email.
- */
+     * Gets or sets the merchant email.
+     */
     @JsonProperty("MerchantEmail")
     private String merchantEmail;
 
@@ -33,14 +33,12 @@ public class CreateServiceRequestFormArgs  extends BaseAuthenticatedCryptedArgs 
     
     public CreateServiceRequestFormArgs(String merchantEmail) {
         this.merchantEmail = merchantEmail;
-
     }
     
     
     public CreateServiceRequestFormArgs(String sessionToken, String merchantEmail) {
         super(sessionToken);
         this.merchantEmail = merchantEmail;
-
     }
 
     
@@ -72,7 +70,7 @@ public class CreateServiceRequestFormArgs  extends BaseAuthenticatedCryptedArgs 
     @Override
     public String toString() {
         return "CreateServiceRequestFormArgs{" +
-                 "merchantEmail='" + merchantEmail + '\'' +
+                "merchantEmail='" + merchantEmail + '\'' +
 
                 '}';
     }

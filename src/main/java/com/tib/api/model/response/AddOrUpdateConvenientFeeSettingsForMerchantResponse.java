@@ -30,15 +30,13 @@ public class AddOrUpdateConvenientFeeSettingsForMerchantResponse extends CustomA
     public AddOrUpdateConvenientFeeSettingsForMerchantResponse(Error[] errors, boolean hasError, String messages, ConvenientFeeSettings convenientFeeSettings) {
         super(errors, hasError, messages);
         this.convenientFeeSettings = convenientFeeSettings;
-
     }
 
     public AddOrUpdateConvenientFeeSettingsForMerchantResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.convenientFeeSettings = objectMapper.readValue(json, ConvenientFeeSettings.class);
-
+            this.convenientFeeSettings = objectMapper.readValue(json, ConvenientFeeSettings.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.convenientFeeSettings = objectMapper.readValue(json, ConvenientFeeSettings.
     @Override
     public String toString() {
         return "AddOrUpdateConvenientFeeSettingsForMerchantResponse{" +
-                 "convenientFeeSettings='" + convenientFeeSettings + '\'' +
+                "convenientFeeSettings='" + convenientFeeSettings + '\'' +
 
                 '}';
     }

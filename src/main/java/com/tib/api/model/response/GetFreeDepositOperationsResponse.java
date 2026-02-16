@@ -30,14 +30,12 @@ public class GetFreeDepositOperationsResponse extends CustomAPIResponse {
     public GetFreeDepositOperationsResponse(Error[] errors, boolean hasError, String messages, List<FreeDepositOperation> operationList) {
         super(errors, hasError, messages);
         this.operationList = operationList;
-
     }
 
     public GetFreeDepositOperationsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.operationList = (List<FreeDepositOperation>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetFreeDepositOperationsResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetFreeDepositOperationsResponse{" +
-                 "operationList='" + operationList + '\'' +
+                "operationList='" + operationList + '\'' +
 
                 '}';
     }

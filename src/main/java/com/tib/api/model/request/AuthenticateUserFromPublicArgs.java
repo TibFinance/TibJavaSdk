@@ -20,8 +20,8 @@ public class AuthenticateUserFromPublicArgs  extends AuthenticateUserArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IpAddress")
     private String ipAddress;
 
@@ -33,14 +33,12 @@ public class AuthenticateUserFromPublicArgs  extends AuthenticateUserArgs  {
     
     public AuthenticateUserFromPublicArgs(String ipAddress) {
         this.ipAddress = ipAddress;
-
     }
     
     
     public AuthenticateUserFromPublicArgs(String clientId, String username, String password, String ipAddress) {
         super(clientId, username, password);
         this.ipAddress = ipAddress;
-
     }
 
     
@@ -72,7 +70,7 @@ public class AuthenticateUserFromPublicArgs  extends AuthenticateUserArgs  {
     @Override
     public String toString() {
         return "AuthenticateUserFromPublicArgs{" +
-                 "ipAddress='" + ipAddress + '\'' +
+                "ipAddress='" + ipAddress + '\'' +
 
                 '}';
     }

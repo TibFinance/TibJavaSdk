@@ -21,98 +21,98 @@ public class TransferValidationEntity   {
 
     
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
     /**
- * Gets or sets the acount number.
- */
+     * Gets or sets the acount number.
+     */
     @JsonProperty("AcountNumber")
     private String acountNumber;
 
     /**
- * Gets or sets the external reference number used to link this entity with an external system or business process.
- */
+     * Gets or sets the external reference number used to link this entity with an external system or business process.
+     */
     @JsonProperty("ExternalReferenceNumber")
     private String externalReferenceNumber;
 
     /**
- * Represents the unique identifier for a group within the TIB Finance API.
- */
+     * Represents the unique identifier for a group within the TIB Finance API.
+     */
     @JsonProperty("GroupId")
     private String groupId;
 
     /**
- * Gets or sets the tib authorization.
- */
+     * Gets or sets the tib authorization.
+     */
     @JsonProperty("TibAuthorization")
     private TibAuthorizationStatus tibAuthorization;
 
     /**
- * Gets or sets the tib authorization status string.
- */
+     * Gets or sets the tib authorization status string.
+     */
     @JsonProperty("TibAuthorizationStatusStr")
     private String tibAuthorizationStatusStr;
 
     /**
- * Gets or sets the client authorization.
- */
+     * Gets or sets the client authorization.
+     */
     @JsonProperty("ClientAuthorization")
     private ClientAuthorizationStatus clientAuthorization;
 
     /**
- * Gets or sets the client authorization status string.
- */
+     * Gets or sets the client authorization status string.
+     */
     @JsonProperty("ClientAuthorizationStatusStr")
     private String clientAuthorizationStatusStr;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * This property represents the full name of the customer in the system.
- */
+     * This property represents the full name of the customer in the system.
+     */
     @JsonProperty("CustomerName")
     private String customerName;
 
     /**
- * Bill model representing a financial invoice in the TIB Finance system.
- */
+     * Bill model representing a financial invoice in the TIB Finance system.
+     */
     @JsonProperty("Bill")
     private String bill;
 
     /**
- * Defines and manages the type of transfer operation within the system.
- */
+     * Defines and manages the type of transfer operation within the system.
+     */
     @JsonProperty("TransferType")
     private String transferType;
 
     /**
- * Identifies the specific transfer operation that needs to be reverted.
- */
+     * Identifies the specific transfer operation that needs to be reverted.
+     */
     @JsonProperty("TransferId")
     private String transferId;
 
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * Specifies the due date for the payment. If the value is null, the system treats the due date as the current date and time.
- */
+     * Specifies the due date for the payment. If the value is null, the system treats the due date as the current date and time.
+     */
     @JsonProperty("DueDate")
     private LocalDateTime dueDate;
 
@@ -124,22 +124,21 @@ public class TransferValidationEntity   {
     
     public TransferValidationEntity(Double amount, LocalDateTime createdDate, String acountNumber, String externalReferenceNumber, String groupId, TibAuthorizationStatus tibAuthorization, String tibAuthorizationStatusStr, ClientAuthorizationStatus clientAuthorization, String clientAuthorizationStatusStr, String merchantName, String customerName, String bill, String transferType, String transferId, String customerId, LocalDateTime dueDate) {
         this.amount = amount;
-this.createdDate = createdDate;
-this.acountNumber = acountNumber;
-this.externalReferenceNumber = externalReferenceNumber;
-this.groupId = groupId;
-this.tibAuthorization = tibAuthorization;
-this.tibAuthorizationStatusStr = tibAuthorizationStatusStr;
-this.clientAuthorization = clientAuthorization;
-this.clientAuthorizationStatusStr = clientAuthorizationStatusStr;
-this.merchantName = merchantName;
-this.customerName = customerName;
-this.bill = bill;
-this.transferType = transferType;
-this.transferId = transferId;
-this.customerId = customerId;
-this.dueDate = dueDate;
-
+        this.createdDate = createdDate;
+        this.acountNumber = acountNumber;
+        this.externalReferenceNumber = externalReferenceNumber;
+        this.groupId = groupId;
+        this.tibAuthorization = tibAuthorization;
+        this.tibAuthorizationStatusStr = tibAuthorizationStatusStr;
+        this.clientAuthorization = clientAuthorization;
+        this.clientAuthorizationStatusStr = clientAuthorizationStatusStr;
+        this.merchantName = merchantName;
+        this.customerName = customerName;
+        this.bill = bill;
+        this.transferType = transferType;
+        this.transferId = transferId;
+        this.customerId = customerId;
+        this.dueDate = dueDate;
     }
     
     
@@ -293,22 +292,22 @@ this.dueDate = dueDate;
     @Override
     public String toString() {
         return "TransferValidationEntity{" +
-                 "amount='" + amount + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", acountNumber='" + acountNumber + '\'' +
- ", externalReferenceNumber='" + externalReferenceNumber + '\'' +
- ", groupId='" + groupId + '\'' +
- ", tibAuthorization='" + tibAuthorization + '\'' +
- ", tibAuthorizationStatusStr='" + tibAuthorizationStatusStr + '\'' +
- ", clientAuthorization='" + clientAuthorization + '\'' +
- ", clientAuthorizationStatusStr='" + clientAuthorizationStatusStr + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", customerName='" + customerName + '\'' +
- ", bill='" + bill + '\'' +
- ", transferType='" + transferType + '\'' +
- ", transferId='" + transferId + '\'' +
- ", customerId='" + customerId + '\'' +
- ", dueDate='" + dueDate + '\'' +
+                "amount='" + amount + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", acountNumber='" + acountNumber + '\'' +
+                ", externalReferenceNumber='" + externalReferenceNumber + '\'' +
+                ", groupId='" + groupId + '\'' +
+                ", tibAuthorization='" + tibAuthorization + '\'' +
+                ", tibAuthorizationStatusStr='" + tibAuthorizationStatusStr + '\'' +
+                ", clientAuthorization='" + clientAuthorization + '\'' +
+                ", clientAuthorizationStatusStr='" + clientAuthorizationStatusStr + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", customerName='" + customerName + '\'' +
+                ", bill='" + bill + '\'' +
+                ", transferType='" + transferType + '\'' +
+                ", transferId='" + transferId + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", dueDate='" + dueDate + '\'' +
 
                 '}';
     }

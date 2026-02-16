@@ -19,14 +19,14 @@ public class MerchantIdName   {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
@@ -38,8 +38,7 @@ public class MerchantIdName   {
     
     public MerchantIdName(String merchantId, String merchantName) {
         this.merchantId = merchantId;
-this.merchantName = merchantName;
-
+        this.merchantName = merchantName;
     }
     
     
@@ -81,8 +80,8 @@ this.merchantName = merchantName;
     @Override
     public String toString() {
         return "MerchantIdName{" +
-                 "merchantId='" + merchantId + '\'' +
- ", merchantName='" + merchantName + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", merchantName='" + merchantName + '\'' +
 
                 '}';
     }

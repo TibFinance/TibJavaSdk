@@ -25,13 +25,11 @@ public class SetDefaultPaymentMethodResponse extends CustomAPIResponse {
 
     public SetDefaultPaymentMethodResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SetDefaultPaymentMethodResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

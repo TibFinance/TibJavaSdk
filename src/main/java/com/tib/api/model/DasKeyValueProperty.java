@@ -21,20 +21,20 @@ public class DasKeyValueProperty<T>  extends DasKeyValuePropertyBase  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Value")
     private T value;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("InnerValue")
     private Object innerValue;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DasKeyValuePropertyType")
     private DasKeyValuePropertyType dasKeyValuePropertyType;
 
@@ -46,18 +46,16 @@ public class DasKeyValueProperty<T>  extends DasKeyValuePropertyBase  {
     
     public DasKeyValueProperty(T value, Object innerValue, DasKeyValuePropertyType dasKeyValuePropertyType) {
         this.value = value;
-this.innerValue = innerValue;
-this.dasKeyValuePropertyType = dasKeyValuePropertyType;
-
+        this.innerValue = innerValue;
+        this.dasKeyValuePropertyType = dasKeyValuePropertyType;
     }
     
     
     public DasKeyValueProperty(DasFieldType fieldId, T value, Object innerValue, DasKeyValuePropertyType dasKeyValuePropertyType) {
         super(fieldId, innerValue, dasKeyValuePropertyType);
         this.value = value;
-this.innerValue = innerValue;
-this.dasKeyValuePropertyType = dasKeyValuePropertyType;
-
+        this.innerValue = innerValue;
+        this.dasKeyValuePropertyType = dasKeyValuePropertyType;
     }
 
     
@@ -105,9 +103,9 @@ this.dasKeyValuePropertyType = dasKeyValuePropertyType;
     @Override
     public String toString() {
         return "DasKeyValueProperty{" +
-                 "value='" + value + '\'' +
- ", innerValue='" + innerValue + '\'' +
- ", dasKeyValuePropertyType='" + dasKeyValuePropertyType + '\'' +
+                "value='" + value + '\'' +
+                ", innerValue='" + innerValue + '\'' +
+                ", dasKeyValuePropertyType='" + dasKeyValuePropertyType + '\'' +
 
                 '}';
     }

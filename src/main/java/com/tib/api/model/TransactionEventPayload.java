@@ -20,80 +20,80 @@ public class TransactionEventPayload  extends BaseEventPayload  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Target")
     private String target;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Direction")
     private String direction;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Step")
     private String step;
 
     /**
- * Represents the current state of a transaction within the system.
- */
+     * Represents the current state of a transaction within the system.
+     */
     @JsonProperty("Status")
     private String status;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DescriptionCode")
     private String descriptionCode;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private String amount;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantAccountPreview")
     private String merchantAccountPreview;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantExternalId")
     private String merchantExternalId;
 
     /**
- * Contains a free‑text description of the merchant, which is stored in the TIB Finance system and displayed in merchant records.
- */
+     * Contains a free‑text description of the merchant, which is stored in the TIB Finance system and displayed in merchant records.
+     */
     @JsonProperty("MerchantDescription")
     private String merchantDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransferPayload")
     private List<TransferPayload> transferPayload;
 
@@ -105,38 +105,36 @@ public class TransactionEventPayload  extends BaseEventPayload  {
     
     public TransactionEventPayload(String target, String direction, String step, String status, String descriptionCode, String description, String amount, String merchantId, String merchantName, String merchantAccountPreview, String merchantExternalId, String merchantDescription, List<TransferPayload> transferPayload) {
         this.target = target;
-this.direction = direction;
-this.step = step;
-this.status = status;
-this.descriptionCode = descriptionCode;
-this.description = description;
-this.amount = amount;
-this.merchantId = merchantId;
-this.merchantName = merchantName;
-this.merchantAccountPreview = merchantAccountPreview;
-this.merchantExternalId = merchantExternalId;
-this.merchantDescription = merchantDescription;
-this.transferPayload = transferPayload;
-
+        this.direction = direction;
+        this.step = step;
+        this.status = status;
+        this.descriptionCode = descriptionCode;
+        this.description = description;
+        this.amount = amount;
+        this.merchantId = merchantId;
+        this.merchantName = merchantName;
+        this.merchantAccountPreview = merchantAccountPreview;
+        this.merchantExternalId = merchantExternalId;
+        this.merchantDescription = merchantDescription;
+        this.transferPayload = transferPayload;
     }
     
     
     public TransactionEventPayload(String eventName, String target, String direction, String step, String status, String descriptionCode, String description, String amount, String merchantId, String merchantName, String merchantAccountPreview, String merchantExternalId, String merchantDescription, List<TransferPayload> transferPayload) {
         super(eventName);
         this.target = target;
-this.direction = direction;
-this.step = step;
-this.status = status;
-this.descriptionCode = descriptionCode;
-this.description = description;
-this.amount = amount;
-this.merchantId = merchantId;
-this.merchantName = merchantName;
-this.merchantAccountPreview = merchantAccountPreview;
-this.merchantExternalId = merchantExternalId;
-this.merchantDescription = merchantDescription;
-this.transferPayload = transferPayload;
-
+        this.direction = direction;
+        this.step = step;
+        this.status = status;
+        this.descriptionCode = descriptionCode;
+        this.description = description;
+        this.amount = amount;
+        this.merchantId = merchantId;
+        this.merchantName = merchantName;
+        this.merchantAccountPreview = merchantAccountPreview;
+        this.merchantExternalId = merchantExternalId;
+        this.merchantDescription = merchantDescription;
+        this.transferPayload = transferPayload;
     }
 
     
@@ -264,19 +262,19 @@ this.transferPayload = transferPayload;
     @Override
     public String toString() {
         return "TransactionEventPayload{" +
-                 "target='" + target + '\'' +
- ", direction='" + direction + '\'' +
- ", step='" + step + '\'' +
- ", status='" + status + '\'' +
- ", descriptionCode='" + descriptionCode + '\'' +
- ", description='" + description + '\'' +
- ", amount='" + amount + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", merchantAccountPreview='" + merchantAccountPreview + '\'' +
- ", merchantExternalId='" + merchantExternalId + '\'' +
- ", merchantDescription='" + merchantDescription + '\'' +
- ", transferPayload='" + transferPayload + '\'' +
+                "target='" + target + '\'' +
+                ", direction='" + direction + '\'' +
+                ", step='" + step + '\'' +
+                ", status='" + status + '\'' +
+                ", descriptionCode='" + descriptionCode + '\'' +
+                ", description='" + description + '\'' +
+                ", amount='" + amount + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", merchantAccountPreview='" + merchantAccountPreview + '\'' +
+                ", merchantExternalId='" + merchantExternalId + '\'' +
+                ", merchantDescription='" + merchantDescription + '\'' +
+                ", transferPayload='" + transferPayload + '\'' +
 
                 '}';
     }

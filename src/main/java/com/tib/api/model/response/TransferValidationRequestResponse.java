@@ -25,13 +25,11 @@ public class TransferValidationRequestResponse extends CustomAPIResponse {
 
     public TransferValidationRequestResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public TransferValidationRequestResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

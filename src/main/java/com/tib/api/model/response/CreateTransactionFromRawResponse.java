@@ -29,14 +29,12 @@ public class CreateTransactionFromRawResponse extends CustomAPIResponse {
     public CreateTransactionFromRawResponse(Error[] errors, boolean hasError, String messages, String transactionsGroupId) {
         super(errors, hasError, messages);
         this.transactionsGroupId = transactionsGroupId;
-
     }
 
     public CreateTransactionFromRawResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transactionsGroupId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class CreateTransactionFromRawResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateTransactionFromRawResponse{" +
-                 "transactionsGroupId='" + transactionsGroupId + '\'' +
+                "transactionsGroupId='" + transactionsGroupId + '\'' +
 
                 '}';
     }

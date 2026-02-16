@@ -22,8 +22,8 @@ public class DasProviderCanada  extends DasProviderEntityCanada  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderId")
     private String providerId;
 
@@ -35,14 +35,12 @@ public class DasProviderCanada  extends DasProviderEntityCanada  {
     
     public DasProviderCanada(String providerId) {
         this.providerId = providerId;
-
     }
     
     
     public DasProviderCanada(DasProviderType dasProviderType, String businessName, String businessOrAccountNumber, DasProviderCanadaFileType fileType, String fileNumber, DasProviderCanadaDeclarationFrequency declarationFrequency, String description, String providerId) {
         super(dasProviderType, businessName, businessOrAccountNumber, fileType, fileNumber, declarationFrequency, description);
         this.providerId = providerId;
-
     }
 
     
@@ -74,7 +72,7 @@ public class DasProviderCanada  extends DasProviderEntityCanada  {
     @Override
     public String toString() {
         return "DasProviderCanada{" +
-                 "providerId='" + providerId + '\'' +
+                "providerId='" + providerId + '\'' +
 
                 '}';
     }

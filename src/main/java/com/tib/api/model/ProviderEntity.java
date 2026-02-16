@@ -20,20 +20,20 @@ public class ProviderEntity   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderId")
     private String providerId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderType")
     private Provider providerType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OrderPriority")
     private Integer orderPriority;
 
@@ -45,9 +45,8 @@ public class ProviderEntity   {
     
     public ProviderEntity(String providerId, Provider providerType, Integer orderPriority) {
         this.providerId = providerId;
-this.providerType = providerType;
-this.orderPriority = orderPriority;
-
+        this.providerType = providerType;
+        this.orderPriority = orderPriority;
     }
     
     
@@ -97,9 +96,9 @@ this.orderPriority = orderPriority;
     @Override
     public String toString() {
         return "ProviderEntity{" +
-                 "providerId='" + providerId + '\'' +
- ", providerType='" + providerType + '\'' +
- ", orderPriority='" + orderPriority + '\'' +
+                "providerId='" + providerId + '\'' +
+                ", providerType='" + providerType + '\'' +
+                ", orderPriority='" + orderPriority + '\'' +
 
                 '}';
     }

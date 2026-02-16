@@ -24,140 +24,140 @@ public class CreateCreditCardGatewayArgs  extends BaseAuthenticatePublicTokenArg
 
     
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Determines if the customer's payment method is set as the default for automatic transactions.
- */
+     * Determines if the customer's payment method is set as the default for automatic transactions.
+     */
     @JsonProperty("IsCustomerAutomaticPaymentMethod")
     private boolean isCustomerAutomaticPaymentMethod;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Provider")
     private String provider;
 
     /**
- * Manages all operations associated with credit card data.
- */
+     * Manages all operations associated with credit card data.
+     */
     @JsonProperty("CreditCard")
     private CreditCard creditCard;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsCustomerPreAutorized")
     private boolean isCustomerPreAutorized;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsGatewayCall")
     private boolean isGatewayCall;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SkipValidation")
     private boolean skipValidation;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsImmediate")
     private boolean isImmediate;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BinCategory")
     private String binCategory;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CardCategory")
     private String cardCategory;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CardSubType")
     private String cardSubType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CcBin")
     private String ccBin;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CcType")
     private String ccType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsRegulatedCard")
     private String isRegulatedCard;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IssuingCountry")
     private String issuingCountry;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Token")
     private String token;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Exp")
     private String exp;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Last4Digits")
     private String last4Digits;
 
     /**
- * Specifies the name of the card owner.
- */
+     * Specifies the name of the card owner.
+     */
     @JsonProperty("CardOwner")
     private String cardOwner;
 
     /**
- * For ZipCode only situation, not full address
- */
+     * For ZipCode only situation, not full address
+     */
     @JsonProperty("ZipCode")
     private String zipCode;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RoutingType")
     private PublicAccessTokenRoutingType routingType;
 
@@ -169,58 +169,56 @@ public class CreateCreditCardGatewayArgs  extends BaseAuthenticatePublicTokenArg
     
     public CreateCreditCardGatewayArgs(Currency currency, boolean isCustomerAutomaticPaymentMethod, String provider, CreditCard creditCard, boolean isCustomerPreAutorized, boolean isGatewayCall, boolean skipValidation, boolean isImmediate, String merchantId, String binCategory, String cardCategory, String cardSubType, String ccBin, String ccType, String isRegulatedCard, String issuingCountry, String token, String exp, String last4Digits, String cardOwner, String zipCode, Language language, PublicAccessTokenRoutingType routingType) {
         this.currency = currency;
-this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.provider = provider;
-this.creditCard = creditCard;
-this.isCustomerPreAutorized = isCustomerPreAutorized;
-this.isGatewayCall = isGatewayCall;
-this.skipValidation = skipValidation;
-this.isImmediate = isImmediate;
-this.merchantId = merchantId;
-this.binCategory = binCategory;
-this.cardCategory = cardCategory;
-this.cardSubType = cardSubType;
-this.ccBin = ccBin;
-this.ccType = ccType;
-this.isRegulatedCard = isRegulatedCard;
-this.issuingCountry = issuingCountry;
-this.token = token;
-this.exp = exp;
-this.last4Digits = last4Digits;
-this.cardOwner = cardOwner;
-this.zipCode = zipCode;
-this.language = language;
-this.routingType = routingType;
-
+        this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
+        this.provider = provider;
+        this.creditCard = creditCard;
+        this.isCustomerPreAutorized = isCustomerPreAutorized;
+        this.isGatewayCall = isGatewayCall;
+        this.skipValidation = skipValidation;
+        this.isImmediate = isImmediate;
+        this.merchantId = merchantId;
+        this.binCategory = binCategory;
+        this.cardCategory = cardCategory;
+        this.cardSubType = cardSubType;
+        this.ccBin = ccBin;
+        this.ccType = ccType;
+        this.isRegulatedCard = isRegulatedCard;
+        this.issuingCountry = issuingCountry;
+        this.token = token;
+        this.exp = exp;
+        this.last4Digits = last4Digits;
+        this.cardOwner = cardOwner;
+        this.zipCode = zipCode;
+        this.language = language;
+        this.routingType = routingType;
     }
     
     
     public CreateCreditCardGatewayArgs(String publicTokenId, Currency currency, boolean isCustomerAutomaticPaymentMethod, String provider, CreditCard creditCard, boolean isCustomerPreAutorized, boolean isGatewayCall, boolean skipValidation, boolean isImmediate, String merchantId, String binCategory, String cardCategory, String cardSubType, String ccBin, String ccType, String isRegulatedCard, String issuingCountry, String token, String exp, String last4Digits, String cardOwner, String zipCode, Language language, PublicAccessTokenRoutingType routingType) {
         super(publicTokenId);
         this.currency = currency;
-this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.provider = provider;
-this.creditCard = creditCard;
-this.isCustomerPreAutorized = isCustomerPreAutorized;
-this.isGatewayCall = isGatewayCall;
-this.skipValidation = skipValidation;
-this.isImmediate = isImmediate;
-this.merchantId = merchantId;
-this.binCategory = binCategory;
-this.cardCategory = cardCategory;
-this.cardSubType = cardSubType;
-this.ccBin = ccBin;
-this.ccType = ccType;
-this.isRegulatedCard = isRegulatedCard;
-this.issuingCountry = issuingCountry;
-this.token = token;
-this.exp = exp;
-this.last4Digits = last4Digits;
-this.cardOwner = cardOwner;
-this.zipCode = zipCode;
-this.language = language;
-this.routingType = routingType;
-
+        this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
+        this.provider = provider;
+        this.creditCard = creditCard;
+        this.isCustomerPreAutorized = isCustomerPreAutorized;
+        this.isGatewayCall = isGatewayCall;
+        this.skipValidation = skipValidation;
+        this.isImmediate = isImmediate;
+        this.merchantId = merchantId;
+        this.binCategory = binCategory;
+        this.cardCategory = cardCategory;
+        this.cardSubType = cardSubType;
+        this.ccBin = ccBin;
+        this.ccType = ccType;
+        this.isRegulatedCard = isRegulatedCard;
+        this.issuingCountry = issuingCountry;
+        this.token = token;
+        this.exp = exp;
+        this.last4Digits = last4Digits;
+        this.cardOwner = cardOwner;
+        this.zipCode = zipCode;
+        this.language = language;
+        this.routingType = routingType;
     }
 
     
@@ -428,29 +426,29 @@ this.routingType = routingType;
     @Override
     public String toString() {
         return "CreateCreditCardGatewayArgs{" +
-                 "currency='" + currency + '\'' +
- ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
- ", provider='" + provider + '\'' +
- ", creditCard='" + creditCard + '\'' +
- ", isCustomerPreAutorized='" + isCustomerPreAutorized + '\'' +
- ", isGatewayCall='" + isGatewayCall + '\'' +
- ", skipValidation='" + skipValidation + '\'' +
- ", isImmediate='" + isImmediate + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", binCategory='" + binCategory + '\'' +
- ", cardCategory='" + cardCategory + '\'' +
- ", cardSubType='" + cardSubType + '\'' +
- ", ccBin='" + ccBin + '\'' +
- ", ccType='" + ccType + '\'' +
- ", isRegulatedCard='" + isRegulatedCard + '\'' +
- ", issuingCountry='" + issuingCountry + '\'' +
- ", token='" + token + '\'' +
- ", exp='" + exp + '\'' +
- ", last4Digits='" + last4Digits + '\'' +
- ", cardOwner='" + cardOwner + '\'' +
- ", zipCode='" + zipCode + '\'' +
- ", language='" + language + '\'' +
- ", routingType='" + routingType + '\'' +
+                "currency='" + currency + '\'' +
+                ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
+                ", provider='" + provider + '\'' +
+                ", creditCard='" + creditCard + '\'' +
+                ", isCustomerPreAutorized='" + isCustomerPreAutorized + '\'' +
+                ", isGatewayCall='" + isGatewayCall + '\'' +
+                ", skipValidation='" + skipValidation + '\'' +
+                ", isImmediate='" + isImmediate + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", binCategory='" + binCategory + '\'' +
+                ", cardCategory='" + cardCategory + '\'' +
+                ", cardSubType='" + cardSubType + '\'' +
+                ", ccBin='" + ccBin + '\'' +
+                ", ccType='" + ccType + '\'' +
+                ", isRegulatedCard='" + isRegulatedCard + '\'' +
+                ", issuingCountry='" + issuingCountry + '\'' +
+                ", token='" + token + '\'' +
+                ", exp='" + exp + '\'' +
+                ", last4Digits='" + last4Digits + '\'' +
+                ", cardOwner='" + cardOwner + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", language='" + language + '\'' +
+                ", routingType='" + routingType + '\'' +
 
                 '}';
     }

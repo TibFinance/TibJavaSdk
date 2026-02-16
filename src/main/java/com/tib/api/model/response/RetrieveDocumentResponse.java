@@ -30,15 +30,13 @@ public class RetrieveDocumentResponse extends CustomAPIResponse {
     public RetrieveDocumentResponse(Error[] errors, boolean hasError, String messages, RetrieveDocumentResultEntity retrieveDocumentResultEntity) {
         super(errors, hasError, messages);
         this.retrieveDocumentResultEntity = retrieveDocumentResultEntity;
-
     }
 
     public RetrieveDocumentResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.retrieveDocumentResultEntity = objectMapper.readValue(json, RetrieveDocumentResultEntity.class);
-
+            this.retrieveDocumentResultEntity = objectMapper.readValue(json, RetrieveDocumentResultEntity.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.retrieveDocumentResultEntity = objectMapper.readValue(json, RetrieveDocumen
     @Override
     public String toString() {
         return "RetrieveDocumentResponse{" +
-                 "retrieveDocumentResultEntity='" + retrieveDocumentResultEntity + '\'' +
+                "retrieveDocumentResultEntity='" + retrieveDocumentResultEntity + '\'' +
 
                 '}';
     }

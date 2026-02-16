@@ -19,20 +19,20 @@ public class CashBackStats   {
 
     
     /**
- * Gets or sets the date.
- */
+     * Gets or sets the date.
+     */
     @JsonProperty("Date")
     private String date;
 
     /**
- * Gets or sets the count.
- */
+     * Gets or sets the count.
+     */
     @JsonProperty("Count")
     private Integer count;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
@@ -44,9 +44,8 @@ public class CashBackStats   {
     
     public CashBackStats(String date, Integer count, Double amount) {
         this.date = date;
-this.count = count;
-this.amount = amount;
-
+        this.count = count;
+        this.amount = amount;
     }
     
     
@@ -96,9 +95,9 @@ this.amount = amount;
     @Override
     public String toString() {
         return "CashBackStats{" +
-                 "date='" + date + '\'' +
- ", count='" + count + '\'' +
- ", amount='" + amount + '\'' +
+                "date='" + date + '\'' +
+                ", count='" + count + '\'' +
+                ", amount='" + amount + '\'' +
 
                 '}';
     }

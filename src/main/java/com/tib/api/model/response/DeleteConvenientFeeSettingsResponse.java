@@ -25,13 +25,11 @@ public class DeleteConvenientFeeSettingsResponse extends CustomAPIResponse {
 
     public DeleteConvenientFeeSettingsResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public DeleteConvenientFeeSettingsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

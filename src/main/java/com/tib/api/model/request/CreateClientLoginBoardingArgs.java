@@ -20,14 +20,14 @@ public class CreateClientLoginBoardingArgs  extends BaseAuthenticatePublicTokenA
 
     
     /**
- * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
- */
+     * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
+     */
     @JsonProperty("Username")
     private String username;
 
     /**
- * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
- */
+     * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
+     */
     @JsonProperty("Password")
     private String password;
 
@@ -39,16 +39,14 @@ public class CreateClientLoginBoardingArgs  extends BaseAuthenticatePublicTokenA
     
     public CreateClientLoginBoardingArgs(String username, String password) {
         this.username = username;
-this.password = password;
-
+        this.password = password;
     }
     
     
     public CreateClientLoginBoardingArgs(String publicTokenId, String username, String password) {
         super(publicTokenId);
         this.username = username;
-this.password = password;
-
+        this.password = password;
     }
 
     
@@ -88,8 +86,8 @@ this.password = password;
     @Override
     public String toString() {
         return "CreateClientLoginBoardingArgs{" +
-                 "username='" + username + '\'' +
- ", password='" + password + '\'' +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
 
                 '}';
     }

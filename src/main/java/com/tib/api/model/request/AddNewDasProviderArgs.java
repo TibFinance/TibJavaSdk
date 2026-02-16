@@ -23,26 +23,26 @@ public class AddNewDasProviderArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * The provider type to create. Must match with the corresponding object filled.
- */
+     * The provider type to create. Must match with the corresponding object filled.
+     */
     @JsonProperty("DasProviderType")
     private DasProviderType dasProviderType;
 
     /**
- * Quebec provider to be created
- */
+     * Quebec provider to be created
+     */
     @JsonProperty("DasProviderQuebec")
     private DasProviderEntityQuebec dasProviderQuebec;
 
     /**
- * Canada provider to be created
- */
+     * Canada provider to be created
+     */
     @JsonProperty("DasProviderCanada")
     private DasProviderEntityCanada dasProviderCanada;
 
@@ -54,20 +54,18 @@ public class AddNewDasProviderArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public AddNewDasProviderArgs(String merchantId, DasProviderType dasProviderType, DasProviderEntityQuebec dasProviderQuebec, DasProviderEntityCanada dasProviderCanada) {
         this.merchantId = merchantId;
-this.dasProviderType = dasProviderType;
-this.dasProviderQuebec = dasProviderQuebec;
-this.dasProviderCanada = dasProviderCanada;
-
+        this.dasProviderType = dasProviderType;
+        this.dasProviderQuebec = dasProviderQuebec;
+        this.dasProviderCanada = dasProviderCanada;
     }
     
     
     public AddNewDasProviderArgs(String sessionToken, String merchantId, DasProviderType dasProviderType, DasProviderEntityQuebec dasProviderQuebec, DasProviderEntityCanada dasProviderCanada) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.dasProviderType = dasProviderType;
-this.dasProviderQuebec = dasProviderQuebec;
-this.dasProviderCanada = dasProviderCanada;
-
+        this.dasProviderType = dasProviderType;
+        this.dasProviderQuebec = dasProviderQuebec;
+        this.dasProviderCanada = dasProviderCanada;
     }
 
     
@@ -123,10 +121,10 @@ this.dasProviderCanada = dasProviderCanada;
     @Override
     public String toString() {
         return "AddNewDasProviderArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", dasProviderType='" + dasProviderType + '\'' +
- ", dasProviderQuebec='" + dasProviderQuebec + '\'' +
- ", dasProviderCanada='" + dasProviderCanada + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", dasProviderType='" + dasProviderType + '\'' +
+                ", dasProviderQuebec='" + dasProviderQuebec + '\'' +
+                ", dasProviderCanada='" + dasProviderCanada + '\'' +
 
                 '}';
     }

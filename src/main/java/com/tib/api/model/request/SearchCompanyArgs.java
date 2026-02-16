@@ -20,8 +20,8 @@ public class SearchCompanyArgs  extends BaseAuthenticatePublicTokenArgs  {
 
     
     /**
- * Gets and sets the searching text
- */
+     * Gets and sets the searching text
+     */
     @JsonProperty("Text")
     private String text;
 
@@ -33,14 +33,12 @@ public class SearchCompanyArgs  extends BaseAuthenticatePublicTokenArgs  {
     
     public SearchCompanyArgs(String text) {
         this.text = text;
-
     }
     
     
     public SearchCompanyArgs(String publicTokenId, String text) {
         super(publicTokenId);
         this.text = text;
-
     }
 
     
@@ -72,7 +70,7 @@ public class SearchCompanyArgs  extends BaseAuthenticatePublicTokenArgs  {
     @Override
     public String toString() {
         return "SearchCompanyArgs{" +
-                 "text='" + text + '\'' +
+                "text='" + text + '\'' +
 
                 '}';
     }

@@ -25,13 +25,11 @@ public class SupplierConfirmGenerateFullLoginResponse extends CustomAPIResponse 
 
     public SupplierConfirmGenerateFullLoginResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SupplierConfirmGenerateFullLoginResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

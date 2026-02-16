@@ -22,26 +22,26 @@ public class CreateDirectAccountPaymentMethodArgs  extends BaseAuthenticatedCryp
 
     
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * Determines if the customer's payment method is set as the default for automatic transactions.
- */
+     * Determines if the customer's payment method is set as the default for automatic transactions.
+     */
     @JsonProperty("IsCustomerAutomaticPaymentMethod")
     private boolean isCustomerAutomaticPaymentMethod;
 
     /**
- * Contains the necessary details for replacing a merchant's account information within the system.
- */
+     * Contains the necessary details for replacing a merchant's account information within the system.
+     */
     @JsonProperty("Account")
     private Account account;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
@@ -53,20 +53,18 @@ public class CreateDirectAccountPaymentMethodArgs  extends BaseAuthenticatedCryp
     
     public CreateDirectAccountPaymentMethodArgs(String customerId, boolean isCustomerAutomaticPaymentMethod, Account account, Language language) {
         this.customerId = customerId;
-this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.account = account;
-this.language = language;
-
+        this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
+        this.account = account;
+        this.language = language;
     }
     
     
     public CreateDirectAccountPaymentMethodArgs(String sessionToken, String customerId, boolean isCustomerAutomaticPaymentMethod, Account account, Language language) {
         super(sessionToken);
         this.customerId = customerId;
-this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.account = account;
-this.language = language;
-
+        this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
+        this.account = account;
+        this.language = language;
     }
 
     
@@ -122,10 +120,10 @@ this.language = language;
     @Override
     public String toString() {
         return "CreateDirectAccountPaymentMethodArgs{" +
-                 "customerId='" + customerId + '\'' +
- ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
- ", account='" + account + '\'' +
- ", language='" + language + '\'' +
+                "customerId='" + customerId + '\'' +
+                ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
+                ", account='" + account + '\'' +
+                ", language='" + language + '\'' +
 
                 '}';
     }

@@ -22,44 +22,44 @@ public class MontlyBillInfo   {
 
     
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * Specifies the default language used by the merchant within the TIB Finance API. This setting is crucial for ensuring that all communications and operations are conducted in the preferred language of the merchant.
- */
+     * Specifies the default language used by the merchant within the TIB Finance API. This setting is crucial for ensuring that all communications and operations are conducted in the preferred language of the merchant.
+     */
     @JsonProperty("MerchantLanguage")
     private Language merchantLanguage;
 
     /**
- * Specifies the category of a financial operation.
- */
+     * Specifies the category of a financial operation.
+     */
     @JsonProperty("OperationKind")
     private OperationKind operationKind;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TotalAmount")
     private Double totalAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TotalCount")
     private Integer totalCount;
 
     /**
- * Identifies the type of payment method linked to a specific account.
- */
+     * Identifies the type of payment method linked to a specific account.
+     */
     @JsonProperty("PaymentMethodType")
     private PaymentMethodType paymentMethodType;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -71,13 +71,12 @@ public class MontlyBillInfo   {
     
     public MontlyBillInfo(String merchantName, Language merchantLanguage, OperationKind operationKind, Double totalAmount, Integer totalCount, PaymentMethodType paymentMethodType, String merchantId) {
         this.merchantName = merchantName;
-this.merchantLanguage = merchantLanguage;
-this.operationKind = operationKind;
-this.totalAmount = totalAmount;
-this.totalCount = totalCount;
-this.paymentMethodType = paymentMethodType;
-this.merchantId = merchantId;
-
+        this.merchantLanguage = merchantLanguage;
+        this.operationKind = operationKind;
+        this.totalAmount = totalAmount;
+        this.totalCount = totalCount;
+        this.paymentMethodType = paymentMethodType;
+        this.merchantId = merchantId;
     }
     
     
@@ -159,13 +158,13 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "MontlyBillInfo{" +
-                 "merchantName='" + merchantName + '\'' +
- ", merchantLanguage='" + merchantLanguage + '\'' +
- ", operationKind='" + operationKind + '\'' +
- ", totalAmount='" + totalAmount + '\'' +
- ", totalCount='" + totalCount + '\'' +
- ", paymentMethodType='" + paymentMethodType + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "merchantName='" + merchantName + '\'' +
+                ", merchantLanguage='" + merchantLanguage + '\'' +
+                ", operationKind='" + operationKind + '\'' +
+                ", totalAmount='" + totalAmount + '\'' +
+                ", totalCount='" + totalCount + '\'' +
+                ", paymentMethodType='" + paymentMethodType + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

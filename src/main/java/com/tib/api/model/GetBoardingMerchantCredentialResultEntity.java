@@ -20,26 +20,26 @@ public class GetBoardingMerchantCredentialResultEntity  extends BoardingBaseResu
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("UserName")
     private String userName;
 
     /**
- * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
- */
+     * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
+     */
     @JsonProperty("Password")
     private String password;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DataProtectionKey")
     private String dataProtectionKey;
 
@@ -51,20 +51,18 @@ public class GetBoardingMerchantCredentialResultEntity  extends BoardingBaseResu
     
     public GetBoardingMerchantCredentialResultEntity(String merchantId, String userName, String password, String dataProtectionKey) {
         this.merchantId = merchantId;
-this.userName = userName;
-this.password = password;
-this.dataProtectionKey = dataProtectionKey;
-
+        this.userName = userName;
+        this.password = password;
+        this.dataProtectionKey = dataProtectionKey;
     }
     
     
     public GetBoardingMerchantCredentialResultEntity(boolean isSuccess, Integer httpStatusCode, String message, List<BoardingBaseError> errorList, String merchantId, String userName, String password, String dataProtectionKey) {
         super(isSuccess, httpStatusCode, message, errorList);
         this.merchantId = merchantId;
-this.userName = userName;
-this.password = password;
-this.dataProtectionKey = dataProtectionKey;
-
+        this.userName = userName;
+        this.password = password;
+        this.dataProtectionKey = dataProtectionKey;
     }
 
     
@@ -120,10 +118,10 @@ this.dataProtectionKey = dataProtectionKey;
     @Override
     public String toString() {
         return "GetBoardingMerchantCredentialResultEntity{" +
-                 "merchantId='" + merchantId + '\'' +
- ", userName='" + userName + '\'' +
- ", password='" + password + '\'' +
- ", dataProtectionKey='" + dataProtectionKey + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", dataProtectionKey='" + dataProtectionKey + '\'' +
 
                 '}';
     }

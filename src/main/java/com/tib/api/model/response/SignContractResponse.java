@@ -25,13 +25,11 @@ public class SignContractResponse extends CustomAPIResponse {
 
     public SignContractResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SignContractResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

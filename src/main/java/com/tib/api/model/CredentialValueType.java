@@ -20,14 +20,14 @@ public class CredentialValueType   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CredentialType")
     private CredentialType credentialType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CredentialValue")
     private String credentialValue;
 
@@ -39,8 +39,7 @@ public class CredentialValueType   {
     
     public CredentialValueType(CredentialType credentialType, String credentialValue) {
         this.credentialType = credentialType;
-this.credentialValue = credentialValue;
-
+        this.credentialValue = credentialValue;
     }
     
     
@@ -82,8 +81,8 @@ this.credentialValue = credentialValue;
     @Override
     public String toString() {
         return "CredentialValueType{" +
-                 "credentialType='" + credentialType + '\'' +
- ", credentialValue='" + credentialValue + '\'' +
+                "credentialType='" + credentialType + '\'' +
+                ", credentialValue='" + credentialValue + '\'' +
 
                 '}';
     }

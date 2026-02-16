@@ -29,7 +29,6 @@ public class SupplierConfirmGenerateFullLoginArgs  extends BaseAuthenticatedCryp
     
     public SupplierConfirmGenerateFullLoginArgs(String sessionToken) {
         super(sessionToken);
-        
     }
 
     

@@ -19,50 +19,50 @@ public class SearchCustomerResult   {
 
     
     /**
- * This property represents the full name of the customer in the system.
- */
+     * This property represents the full name of the customer in the system.
+     */
     @JsonProperty("CustomerName")
     private String customerName;
 
     /**
- * Provides a secure representation of the account card number associated with a specific payment method.
- */
+     * Provides a secure representation of the account card number associated with a specific payment method.
+     */
     @JsonProperty("AccountPreview")
     private String accountPreview;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("NumberOfTransaction")
     private Integer numberOfTransaction;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MinTransferAmount")
     private Double minTransferAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MaxTransferAmount")
     private Double maxTransferAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MinTransferDueDate")
     private LocalDateTime minTransferDueDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MaxTransferDueDate")
     private LocalDateTime maxTransferDueDate;
 
@@ -74,14 +74,13 @@ public class SearchCustomerResult   {
     
     public SearchCustomerResult(String customerName, String accountPreview, String merchantName, Integer numberOfTransaction, Double minTransferAmount, Double maxTransferAmount, LocalDateTime minTransferDueDate, LocalDateTime maxTransferDueDate) {
         this.customerName = customerName;
-this.accountPreview = accountPreview;
-this.merchantName = merchantName;
-this.numberOfTransaction = numberOfTransaction;
-this.minTransferAmount = minTransferAmount;
-this.maxTransferAmount = maxTransferAmount;
-this.minTransferDueDate = minTransferDueDate;
-this.maxTransferDueDate = maxTransferDueDate;
-
+        this.accountPreview = accountPreview;
+        this.merchantName = merchantName;
+        this.numberOfTransaction = numberOfTransaction;
+        this.minTransferAmount = minTransferAmount;
+        this.maxTransferAmount = maxTransferAmount;
+        this.minTransferDueDate = minTransferDueDate;
+        this.maxTransferDueDate = maxTransferDueDate;
     }
     
     
@@ -171,14 +170,14 @@ this.maxTransferDueDate = maxTransferDueDate;
     @Override
     public String toString() {
         return "SearchCustomerResult{" +
-                 "customerName='" + customerName + '\'' +
- ", accountPreview='" + accountPreview + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", numberOfTransaction='" + numberOfTransaction + '\'' +
- ", minTransferAmount='" + minTransferAmount + '\'' +
- ", maxTransferAmount='" + maxTransferAmount + '\'' +
- ", minTransferDueDate='" + minTransferDueDate + '\'' +
- ", maxTransferDueDate='" + maxTransferDueDate + '\'' +
+                "customerName='" + customerName + '\'' +
+                ", accountPreview='" + accountPreview + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", numberOfTransaction='" + numberOfTransaction + '\'' +
+                ", minTransferAmount='" + minTransferAmount + '\'' +
+                ", maxTransferAmount='" + maxTransferAmount + '\'' +
+                ", minTransferDueDate='" + minTransferDueDate + '\'' +
+                ", maxTransferDueDate='" + maxTransferDueDate + '\'' +
 
                 '}';
     }

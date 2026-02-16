@@ -38,20 +38,18 @@ public class SaveBoardingInformationResponse extends CustomAPIResponse {
     public SaveBoardingInformationResponse(Error[] errors, boolean hasError, String messages, String boardingInformationId, String merchantId, String message, Integer boardingStatus) {
         super(errors, hasError, messages);
         this.boardingInformationId = boardingInformationId;
-this.merchantId = merchantId;
-this.message = message;
-this.boardingStatus = boardingStatus;
-
+        this.merchantId = merchantId;
+        this.message = message;
+        this.boardingStatus = boardingStatus;
     }
 
     public SaveBoardingInformationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.boardingInformationId = apiResponse.getResponse().toString();
-this.merchantId = apiResponse.getResponse().toString();
-this.message = apiResponse.getResponse().toString();
-this.boardingStatus = Integer.parseInt(apiResponse.getResponse().toString());
-
+            this.merchantId = apiResponse.getResponse().toString();
+            this.message = apiResponse.getResponse().toString();
+            this.boardingStatus = Integer.parseInt(apiResponse.getResponse().toString());
         }
     }
 
@@ -108,10 +106,10 @@ this.boardingStatus = Integer.parseInt(apiResponse.getResponse().toString());
     @Override
     public String toString() {
         return "SaveBoardingInformationResponse{" +
-                 "boardingInformationId='" + boardingInformationId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", message='" + message + '\'' +
- ", boardingStatus='" + boardingStatus + '\'' +
+                "boardingInformationId='" + boardingInformationId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", message='" + message + '\'' +
+                ", boardingStatus='" + boardingStatus + '\'' +
 
                 '}';
     }

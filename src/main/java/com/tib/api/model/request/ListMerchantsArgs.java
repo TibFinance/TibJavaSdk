@@ -20,20 +20,20 @@ public class ListMerchantsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Gets or sets whether to include client merchants in the results. Default is false (excludes client merchants for backward compatibility).
- */
+     * Gets or sets whether to include client merchants in the results. Default is false (excludes client merchants for backward compatibility).
+     */
     @JsonProperty("IncludeClientMerchants")
     private boolean includeClientMerchants;
 
@@ -45,18 +45,16 @@ public class ListMerchantsArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public ListMerchantsArgs(String serviceId, String merchantId, boolean includeClientMerchants) {
         this.serviceId = serviceId;
-this.merchantId = merchantId;
-this.includeClientMerchants = includeClientMerchants;
-
+        this.merchantId = merchantId;
+        this.includeClientMerchants = includeClientMerchants;
     }
     
     
     public ListMerchantsArgs(String sessionToken, String serviceId, String merchantId, boolean includeClientMerchants) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.merchantId = merchantId;
-this.includeClientMerchants = includeClientMerchants;
-
+        this.merchantId = merchantId;
+        this.includeClientMerchants = includeClientMerchants;
     }
 
     
@@ -104,9 +102,9 @@ this.includeClientMerchants = includeClientMerchants;
     @Override
     public String toString() {
         return "ListMerchantsArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", includeClientMerchants='" + includeClientMerchants + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", includeClientMerchants='" + includeClientMerchants + '\'' +
 
                 '}';
     }

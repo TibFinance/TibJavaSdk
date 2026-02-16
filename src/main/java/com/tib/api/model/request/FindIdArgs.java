@@ -20,8 +20,8 @@ public class FindIdArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Id")
     private String id;
 
@@ -33,14 +33,12 @@ public class FindIdArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public FindIdArgs(String id) {
         this.id = id;
-
     }
     
     
     public FindIdArgs(String adminSessionToken, String id) {
         super(adminSessionToken);
         this.id = id;
-
     }
 
     
@@ -72,7 +70,7 @@ public class FindIdArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "FindIdArgs{" +
-                 "id='" + id + '\'' +
+                "id='" + id + '\'' +
 
                 '}';
     }

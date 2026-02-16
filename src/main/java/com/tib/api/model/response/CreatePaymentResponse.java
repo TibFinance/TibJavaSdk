@@ -40,19 +40,17 @@ public class CreatePaymentResponse extends CustomAPIResponse {
     public CreatePaymentResponse(Error[] errors, boolean hasError, String messages, String paymentId, PaymentFlow autoSelectPaymentFlowResult, PaymentFlowParsingResult paymentFlowParsingResult, String paymentLink) {
         super(errors, hasError, messages);
         this.paymentId = paymentId;
-this.autoSelectPaymentFlowResult = autoSelectPaymentFlowResult;
-this.paymentFlowParsingResult = paymentFlowParsingResult;
-this.paymentLink = paymentLink;
-
+        this.autoSelectPaymentFlowResult = autoSelectPaymentFlowResult;
+        this.paymentFlowParsingResult = paymentFlowParsingResult;
+        this.paymentLink = paymentLink;
     }
 
     public CreatePaymentResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.autoSelectPaymentFlowResult = objectMapper.readValue(json, PaymentFlow.class);
-this.paymentFlowParsingResult = objectMapper.readValue(json, PaymentFlowParsingResult.class);
-
+            this.autoSelectPaymentFlowResult = objectMapper.readValue(json, PaymentFlow.class);
+            this.paymentFlowParsingResult = objectMapper.readValue(json, PaymentFlowParsingResult.class);
         }
     }
 
@@ -109,10 +107,10 @@ this.paymentFlowParsingResult = objectMapper.readValue(json, PaymentFlowParsingR
     @Override
     public String toString() {
         return "CreatePaymentResponse{" +
-                 "paymentId='" + paymentId + '\'' +
- ", autoSelectPaymentFlowResult='" + autoSelectPaymentFlowResult + '\'' +
- ", paymentFlowParsingResult='" + paymentFlowParsingResult + '\'' +
- ", paymentLink='" + paymentLink + '\'' +
+                "paymentId='" + paymentId + '\'' +
+                ", autoSelectPaymentFlowResult='" + autoSelectPaymentFlowResult + '\'' +
+                ", paymentFlowParsingResult='" + paymentFlowParsingResult + '\'' +
+                ", paymentLink='" + paymentLink + '\'' +
 
                 '}';
     }

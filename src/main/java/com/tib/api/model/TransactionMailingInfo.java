@@ -19,26 +19,26 @@ public class TransactionMailingInfo   {
 
     
     /**
- * Gets or sets the mail body.
- */
+     * Gets or sets the mail body.
+     */
     @JsonProperty("MailBody")
     private String mailBody;
 
     /**
- * Gets or sets the mail subject.
- */
+     * Gets or sets the mail subject.
+     */
     @JsonProperty("MailSubject")
     private String mailSubject;
 
     /**
- * Converts to address.
- */
+     * Converts to address.
+     */
     @JsonProperty("ToAddress")
     private String toAddress;
 
     /**
- * Gets or sets from address.
- */
+     * Gets or sets from address.
+     */
     @JsonProperty("FromAddress")
     private String fromAddress;
 
@@ -50,10 +50,9 @@ public class TransactionMailingInfo   {
     
     public TransactionMailingInfo(String mailBody, String mailSubject, String toAddress, String fromAddress) {
         this.mailBody = mailBody;
-this.mailSubject = mailSubject;
-this.toAddress = toAddress;
-this.fromAddress = fromAddress;
-
+        this.mailSubject = mailSubject;
+        this.toAddress = toAddress;
+        this.fromAddress = fromAddress;
     }
     
     
@@ -111,10 +110,10 @@ this.fromAddress = fromAddress;
     @Override
     public String toString() {
         return "TransactionMailingInfo{" +
-                 "mailBody='" + mailBody + '\'' +
- ", mailSubject='" + mailSubject + '\'' +
- ", toAddress='" + toAddress + '\'' +
- ", fromAddress='" + fromAddress + '\'' +
+                "mailBody='" + mailBody + '\'' +
+                ", mailSubject='" + mailSubject + '\'' +
+                ", toAddress='" + toAddress + '\'' +
+                ", fromAddress='" + fromAddress + '\'' +
 
                 '}';
     }

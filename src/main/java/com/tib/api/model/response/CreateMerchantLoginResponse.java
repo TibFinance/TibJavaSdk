@@ -25,13 +25,11 @@ public class CreateMerchantLoginResponse extends CustomAPIResponse {
 
     public CreateMerchantLoginResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public CreateMerchantLoginResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

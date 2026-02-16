@@ -19,14 +19,14 @@ public class SESARWebHookArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * The crypted manifest
- */
+     * The crypted manifest
+     */
     @JsonProperty("CryptedObject")
     private String cryptedObject;
 
     /**
- * The hashkey of the crytped key used
- */
+     * The hashkey of the crytped key used
+     */
     @JsonProperty("HashKey")
     private String hashKey;
 
@@ -38,8 +38,7 @@ public class SESARWebHookArgs  implements IBaseCryptedServiceArgs  {
     
     public SESARWebHookArgs(String cryptedObject, String hashKey) {
         this.cryptedObject = cryptedObject;
-this.hashKey = hashKey;
-
+        this.hashKey = hashKey;
     }
     
     
@@ -81,8 +80,8 @@ this.hashKey = hashKey;
     @Override
     public String toString() {
         return "SESARWebHookArgs{" +
-                 "cryptedObject='" + cryptedObject + '\'' +
- ", hashKey='" + hashKey + '\'' +
+                "cryptedObject='" + cryptedObject + '\'' +
+                ", hashKey='" + hashKey + '\'' +
 
                 '}';
     }

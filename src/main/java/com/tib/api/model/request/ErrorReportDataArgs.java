@@ -20,32 +20,32 @@ public class ErrorReportDataArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Date format of dates 0 for canadian format YYYYMMDD 1 for american format MMDDYYYY
- */
+     * Date format of dates 0 for canadian format YYYYMMDD 1 for american format MMDDYYYY
+     */
     @JsonProperty("Dateformat")
     private Integer dateformat;
 
     /**
- * Interval span as number of months
- */
+     * Interval span as number of months
+     */
     @JsonProperty("Interval")
     private Integer interval;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Specifies the starting date for filtering payment due dates.
- */
+     * Specifies the starting date for filtering payment due dates.
+     */
     @JsonProperty("FromDate")
     private String fromDate;
 
@@ -57,22 +57,20 @@ public class ErrorReportDataArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public ErrorReportDataArgs(Integer dateformat, Integer interval, String merchantId, String serviceId, String fromDate) {
         this.dateformat = dateformat;
-this.interval = interval;
-this.merchantId = merchantId;
-this.serviceId = serviceId;
-this.fromDate = fromDate;
-
+        this.interval = interval;
+        this.merchantId = merchantId;
+        this.serviceId = serviceId;
+        this.fromDate = fromDate;
     }
     
     
     public ErrorReportDataArgs(String sessionToken, Integer dateformat, Integer interval, String merchantId, String serviceId, String fromDate) {
         super(sessionToken);
         this.dateformat = dateformat;
-this.interval = interval;
-this.merchantId = merchantId;
-this.serviceId = serviceId;
-this.fromDate = fromDate;
-
+        this.interval = interval;
+        this.merchantId = merchantId;
+        this.serviceId = serviceId;
+        this.fromDate = fromDate;
     }
 
     
@@ -136,11 +134,11 @@ this.fromDate = fromDate;
     @Override
     public String toString() {
         return "ErrorReportDataArgs{" +
-                 "dateformat='" + dateformat + '\'' +
- ", interval='" + interval + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", serviceId='" + serviceId + '\'' +
- ", fromDate='" + fromDate + '\'' +
+                "dateformat='" + dateformat + '\'' +
+                ", interval='" + interval + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                ", fromDate='" + fromDate + '\'' +
 
                 '}';
     }

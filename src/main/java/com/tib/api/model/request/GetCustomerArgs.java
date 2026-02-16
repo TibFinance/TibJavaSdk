@@ -20,14 +20,14 @@ public class GetCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -39,16 +39,14 @@ public class GetCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetCustomerArgs(String customerId, String merchantId) {
         this.customerId = customerId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
     
     
     public GetCustomerArgs(String sessionToken, String customerId, String merchantId) {
         super(sessionToken);
         this.customerId = customerId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     
@@ -88,8 +86,8 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "GetCustomerArgs{" +
-                 "customerId='" + customerId + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "customerId='" + customerId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

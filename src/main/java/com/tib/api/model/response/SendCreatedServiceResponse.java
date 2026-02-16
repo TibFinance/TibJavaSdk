@@ -25,13 +25,11 @@ public class SendCreatedServiceResponse extends CustomAPIResponse {
 
     public SendCreatedServiceResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SendCreatedServiceResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

@@ -19,8 +19,8 @@ public class CreateAdminSessionArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * The admin code sent by email
- */
+     * The admin code sent by email
+     */
     @JsonProperty("TemporaryAdminCode")
     private String temporaryAdminCode;
 
@@ -32,7 +32,6 @@ public class CreateAdminSessionArgs  implements IBaseCryptedServiceArgs  {
     
     public CreateAdminSessionArgs(String temporaryAdminCode) {
         this.temporaryAdminCode = temporaryAdminCode;
-
     }
     
     
@@ -66,7 +65,7 @@ public class CreateAdminSessionArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "CreateAdminSessionArgs{" +
-                 "temporaryAdminCode='" + temporaryAdminCode + '\'' +
+                "temporaryAdminCode='" + temporaryAdminCode + '\'' +
 
                 '}';
     }

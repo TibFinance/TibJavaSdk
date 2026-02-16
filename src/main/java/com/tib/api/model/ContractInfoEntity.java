@@ -22,38 +22,38 @@ public class ContractInfoEntity   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BoardingCompanyInfos")
     private BoardingInformationEntity boardingCompanyInfos;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FeeSettings")
     private ServiceFeeSettings feeSettings;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("LimitationSettings")
     private ServiceSettings limitationSettings;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsSignedContract")
     private boolean isSignedContract;
 
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -65,12 +65,11 @@ public class ContractInfoEntity   {
     
     public ContractInfoEntity(BoardingInformationEntity boardingCompanyInfos, ServiceFeeSettings feeSettings, ServiceSettings limitationSettings, boolean isSignedContract, String clientId, String merchantId) {
         this.boardingCompanyInfos = boardingCompanyInfos;
-this.feeSettings = feeSettings;
-this.limitationSettings = limitationSettings;
-this.isSignedContract = isSignedContract;
-this.clientId = clientId;
-this.merchantId = merchantId;
-
+        this.feeSettings = feeSettings;
+        this.limitationSettings = limitationSettings;
+        this.isSignedContract = isSignedContract;
+        this.clientId = clientId;
+        this.merchantId = merchantId;
     }
     
     
@@ -144,12 +143,12 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "ContractInfoEntity{" +
-                 "boardingCompanyInfos='" + boardingCompanyInfos + '\'' +
- ", feeSettings='" + feeSettings + '\'' +
- ", limitationSettings='" + limitationSettings + '\'' +
- ", isSignedContract='" + isSignedContract + '\'' +
- ", clientId='" + clientId + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "boardingCompanyInfos='" + boardingCompanyInfos + '\'' +
+                ", feeSettings='" + feeSettings + '\'' +
+                ", limitationSettings='" + limitationSettings + '\'' +
+                ", isSignedContract='" + isSignedContract + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

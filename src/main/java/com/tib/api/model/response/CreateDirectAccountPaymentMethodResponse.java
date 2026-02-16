@@ -29,14 +29,12 @@ public class CreateDirectAccountPaymentMethodResponse extends CustomAPIResponse 
     public CreateDirectAccountPaymentMethodResponse(Error[] errors, boolean hasError, String messages, String paymentMethodId) {
         super(errors, hasError, messages);
         this.paymentMethodId = paymentMethodId;
-
     }
 
     public CreateDirectAccountPaymentMethodResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.paymentMethodId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class CreateDirectAccountPaymentMethodResponse extends CustomAPIResponse 
     @Override
     public String toString() {
         return "CreateDirectAccountPaymentMethodResponse{" +
-                 "paymentMethodId='" + paymentMethodId + '\'' +
+                "paymentMethodId='" + paymentMethodId + '\'' +
 
                 '}';
     }

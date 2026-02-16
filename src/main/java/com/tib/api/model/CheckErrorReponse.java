@@ -21,14 +21,14 @@ public class CheckErrorReponse   {
 
     
     /**
- * Gets or sets the check result.
- */
+     * Gets or sets the check result.
+     */
     @JsonProperty("CheckResult")
     private CheckResult checkResult;
 
     /**
- * Gets or sets the result.
- */
+     * Gets or sets the result.
+     */
     @JsonProperty("Result")
     private List<CheckResultDetail> result;
 
@@ -40,8 +40,7 @@ public class CheckErrorReponse   {
     
     public CheckErrorReponse(CheckResult checkResult, List<CheckResultDetail> result) {
         this.checkResult = checkResult;
-this.result = result;
-
+        this.result = result;
     }
     
     
@@ -83,8 +82,8 @@ this.result = result;
     @Override
     public String toString() {
         return "CheckErrorReponse{" +
-                 "checkResult='" + checkResult + '\'' +
- ", result='" + result + '\'' +
+                "checkResult='" + checkResult + '\'' +
+                ", result='" + result + '\'' +
 
                 '}';
     }

@@ -21,20 +21,20 @@ public class BaseCreateDirectAccountPaymentMethod  extends BaseAuthenticatePubli
 
     
     /**
- * Determines if the customer's payment method is set as the default for automatic transactions.
- */
+     * Determines if the customer's payment method is set as the default for automatic transactions.
+     */
     @JsonProperty("IsCustomerAutomaticPaymentMethod")
     private boolean isCustomerAutomaticPaymentMethod;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Token")
     private String token;
 
     /**
- * Contains the necessary details for replacing a merchant's account information within the system.
- */
+     * Contains the necessary details for replacing a merchant's account information within the system.
+     */
     @JsonProperty("Account")
     private Account account;
 
@@ -46,18 +46,16 @@ public class BaseCreateDirectAccountPaymentMethod  extends BaseAuthenticatePubli
     
     public BaseCreateDirectAccountPaymentMethod(boolean isCustomerAutomaticPaymentMethod, String token, Account account) {
         this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.token = token;
-this.account = account;
-
+        this.token = token;
+        this.account = account;
     }
     
     
     public BaseCreateDirectAccountPaymentMethod(String publicTokenId, boolean isCustomerAutomaticPaymentMethod, String token, Account account) {
         super(publicTokenId);
         this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.token = token;
-this.account = account;
-
+        this.token = token;
+        this.account = account;
     }
 
     
@@ -105,9 +103,9 @@ this.account = account;
     @Override
     public String toString() {
         return "BaseCreateDirectAccountPaymentMethod{" +
-                 "isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
- ", token='" + token + '\'' +
- ", account='" + account + '\'' +
+                "isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
+                ", token='" + token + '\'' +
+                ", account='" + account + '\'' +
 
                 '}';
     }

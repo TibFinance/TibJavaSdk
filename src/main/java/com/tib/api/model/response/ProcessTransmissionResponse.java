@@ -33,16 +33,14 @@ public class ProcessTransmissionResponse<T> extends CustomAPIResponse {
     public ProcessTransmissionResponse(Error[] errors, boolean hasError, String messages, List<TransactionResultEntity> transmissionResults, String compressedTransmissionResults) {
         super(errors, hasError, messages);
         this.transmissionResults = transmissionResults;
-this.compressedTransmissionResults = compressedTransmissionResults;
-
+        this.compressedTransmissionResults = compressedTransmissionResults;
     }
 
     public ProcessTransmissionResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transmissionResults = (List<TransactionResultEntity>) apiResponse.getResponse();
-this.compressedTransmissionResults = apiResponse.getResponse().toString();
-
+            this.compressedTransmissionResults = apiResponse.getResponse().toString();
         }
     }
 
@@ -83,8 +81,8 @@ this.compressedTransmissionResults = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "ProcessTransmissionResponse{" +
-                 "transmissionResults='" + transmissionResults + '\'' +
- ", compressedTransmissionResults='" + compressedTransmissionResults + '\'' +
+                "transmissionResults='" + transmissionResults + '\'' +
+                ", compressedTransmissionResults='" + compressedTransmissionResults + '\'' +
 
                 '}';
     }

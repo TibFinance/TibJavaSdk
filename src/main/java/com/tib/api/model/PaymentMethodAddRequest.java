@@ -24,32 +24,32 @@ public class PaymentMethodAddRequest   {
 
     
     /**
- * This property holds the basic information necessary for creating or updating a merchant's account within the TIB Finance API system.
- */
+     * This property holds the basic information necessary for creating or updating a merchant's account within the TIB Finance API system.
+     */
     @JsonProperty("MerchantInfo")
     private MerchantView merchantInfo;
 
     /**
- * Gets or sets the transfer information.
- */
+     * Gets or sets the transfer information.
+     */
     @JsonProperty("TransferInfo")
     private PaymentEntity transferInfo;
 
     /**
- * Gets or sets the customer information.
- */
+     * Gets or sets the customer information.
+     */
     @JsonProperty("CustomerInfo")
     private Customer customerInfo;
 
     /**
- * Gets or sets the customer existing payment methods.
- */
+     * Gets or sets the customer existing payment methods.
+     */
     @JsonProperty("CustomerExistingPaymentMethods")
     private List<PaymentMethod> customerExistingPaymentMethods;
 
     /**
- * Gets or sets the related bill information.
- */
+     * Gets or sets the related bill information.
+     */
     @JsonProperty("RelatedBillInfo")
     private Bill relatedBillInfo;
 
@@ -61,11 +61,10 @@ public class PaymentMethodAddRequest   {
     
     public PaymentMethodAddRequest(MerchantView merchantInfo, PaymentEntity transferInfo, Customer customerInfo, List<PaymentMethod> customerExistingPaymentMethods, Bill relatedBillInfo) {
         this.merchantInfo = merchantInfo;
-this.transferInfo = transferInfo;
-this.customerInfo = customerInfo;
-this.customerExistingPaymentMethods = customerExistingPaymentMethods;
-this.relatedBillInfo = relatedBillInfo;
-
+        this.transferInfo = transferInfo;
+        this.customerInfo = customerInfo;
+        this.customerExistingPaymentMethods = customerExistingPaymentMethods;
+        this.relatedBillInfo = relatedBillInfo;
     }
     
     
@@ -131,11 +130,11 @@ this.relatedBillInfo = relatedBillInfo;
     @Override
     public String toString() {
         return "PaymentMethodAddRequest{" +
-                 "merchantInfo='" + merchantInfo + '\'' +
- ", transferInfo='" + transferInfo + '\'' +
- ", customerInfo='" + customerInfo + '\'' +
- ", customerExistingPaymentMethods='" + customerExistingPaymentMethods + '\'' +
- ", relatedBillInfo='" + relatedBillInfo + '\'' +
+                "merchantInfo='" + merchantInfo + '\'' +
+                ", transferInfo='" + transferInfo + '\'' +
+                ", customerInfo='" + customerInfo + '\'' +
+                ", customerExistingPaymentMethods='" + customerExistingPaymentMethods + '\'' +
+                ", relatedBillInfo='" + relatedBillInfo + '\'' +
 
                 '}';
     }

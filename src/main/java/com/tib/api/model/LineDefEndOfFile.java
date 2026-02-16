@@ -19,26 +19,26 @@ public class LineDefEndOfFile  extends BaseLastLine  {
 
     
     /**
- * Gets or sets the total amount collected.
- */
+     * Gets or sets the total amount collected.
+     */
     @JsonProperty("TotalAmountCollected")
     private Double totalAmountCollected;
 
     /**
- * Gets or sets the number of transaction collected.
- */
+     * Gets or sets the number of transaction collected.
+     */
     @JsonProperty("NumberOfTransactionCollected")
     private Integer numberOfTransactionCollected;
 
     /**
- * Gets or sets the total amount deposit.
- */
+     * Gets or sets the total amount deposit.
+     */
     @JsonProperty("TotalAmountDeposit")
     private Double totalAmountDeposit;
 
     /**
- * Gets or sets the number of transaction deposit.
- */
+     * Gets or sets the number of transaction deposit.
+     */
     @JsonProperty("NumberOfTransactionDeposit")
     private Integer numberOfTransactionDeposit;
 
@@ -50,10 +50,9 @@ public class LineDefEndOfFile  extends BaseLastLine  {
     
     public LineDefEndOfFile(Double totalAmountCollected, Integer numberOfTransactionCollected, Double totalAmountDeposit, Integer numberOfTransactionDeposit) {
         this.totalAmountCollected = totalAmountCollected;
-this.numberOfTransactionCollected = numberOfTransactionCollected;
-this.totalAmountDeposit = totalAmountDeposit;
-this.numberOfTransactionDeposit = numberOfTransactionDeposit;
-
+        this.numberOfTransactionCollected = numberOfTransactionCollected;
+        this.totalAmountDeposit = totalAmountDeposit;
+        this.numberOfTransactionDeposit = numberOfTransactionDeposit;
     }
     
     
@@ -111,10 +110,10 @@ this.numberOfTransactionDeposit = numberOfTransactionDeposit;
     @Override
     public String toString() {
         return "LineDefEndOfFile{" +
-                 "totalAmountCollected='" + totalAmountCollected + '\'' +
- ", numberOfTransactionCollected='" + numberOfTransactionCollected + '\'' +
- ", totalAmountDeposit='" + totalAmountDeposit + '\'' +
- ", numberOfTransactionDeposit='" + numberOfTransactionDeposit + '\'' +
+                "totalAmountCollected='" + totalAmountCollected + '\'' +
+                ", numberOfTransactionCollected='" + numberOfTransactionCollected + '\'' +
+                ", totalAmountDeposit='" + totalAmountDeposit + '\'' +
+                ", numberOfTransactionDeposit='" + numberOfTransactionDeposit + '\'' +
 
                 '}';
     }

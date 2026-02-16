@@ -20,8 +20,8 @@ public class ChangeUserPasswordArgs  extends BaseAuthenticatePublicTokenArgs  {
 
     
     /**
- * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
- */
+     * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
+     */
     @JsonProperty("Password")
     private String password;
 
@@ -33,14 +33,12 @@ public class ChangeUserPasswordArgs  extends BaseAuthenticatePublicTokenArgs  {
     
     public ChangeUserPasswordArgs(String password) {
         this.password = password;
-
     }
     
     
     public ChangeUserPasswordArgs(String publicTokenId, String password) {
         super(publicTokenId);
         this.password = password;
-
     }
 
     
@@ -72,7 +70,7 @@ public class ChangeUserPasswordArgs  extends BaseAuthenticatePublicTokenArgs  {
     @Override
     public String toString() {
         return "ChangeUserPasswordArgs{" +
-                 "password='" + password + '\'' +
+                "password='" + password + '\'' +
 
                 '}';
     }

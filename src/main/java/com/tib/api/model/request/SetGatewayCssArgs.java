@@ -20,14 +20,14 @@ public class SetGatewayCssArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Style to apply on the Gateway
- */
+     * Style to apply on the Gateway
+     */
     @JsonProperty("GatewayCss")
     private String gatewayCss;
 
@@ -39,16 +39,14 @@ public class SetGatewayCssArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public SetGatewayCssArgs(String merchantId, String gatewayCss) {
         this.merchantId = merchantId;
-this.gatewayCss = gatewayCss;
-
+        this.gatewayCss = gatewayCss;
     }
     
     
     public SetGatewayCssArgs(String sessionToken, String merchantId, String gatewayCss) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.gatewayCss = gatewayCss;
-
+        this.gatewayCss = gatewayCss;
     }
 
     
@@ -88,8 +86,8 @@ this.gatewayCss = gatewayCss;
     @Override
     public String toString() {
         return "SetGatewayCssArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", gatewayCss='" + gatewayCss + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", gatewayCss='" + gatewayCss + '\'' +
 
                 '}';
     }

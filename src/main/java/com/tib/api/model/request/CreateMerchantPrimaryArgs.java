@@ -21,14 +21,14 @@ public class CreateMerchantPrimaryArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * This property holds the basic information necessary for creating or updating a merchant's account within the TIB Finance API system.
- */
+     * This property holds the basic information necessary for creating or updating a merchant's account within the TIB Finance API system.
+     */
     @JsonProperty("MerchantInfo")
     private Merchant merchantInfo;
 
@@ -40,16 +40,14 @@ public class CreateMerchantPrimaryArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CreateMerchantPrimaryArgs(String serviceId, Merchant merchantInfo) {
         this.serviceId = serviceId;
-this.merchantInfo = merchantInfo;
-
+        this.merchantInfo = merchantInfo;
     }
     
     
     public CreateMerchantPrimaryArgs(String sessionToken, String serviceId, Merchant merchantInfo) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.merchantInfo = merchantInfo;
-
+        this.merchantInfo = merchantInfo;
     }
 
     
@@ -89,8 +87,8 @@ this.merchantInfo = merchantInfo;
     @Override
     public String toString() {
         return "CreateMerchantPrimaryArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", merchantInfo='" + merchantInfo + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", merchantInfo='" + merchantInfo + '\'' +
 
                 '}';
     }

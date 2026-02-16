@@ -25,13 +25,11 @@ public class SetOverloadedFeesMerchantResponse extends CustomAPIResponse {
 
     public SetOverloadedFeesMerchantResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SetOverloadedFeesMerchantResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

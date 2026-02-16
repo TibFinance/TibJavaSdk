@@ -38,20 +38,18 @@ public class FindIdResponse extends CustomAPIResponse {
     public FindIdResponse(Error[] errors, boolean hasError, String messages, String relatedClientId, String clientName, String tableName, String relatedDescription) {
         super(errors, hasError, messages);
         this.relatedClientId = relatedClientId;
-this.clientName = clientName;
-this.tableName = tableName;
-this.relatedDescription = relatedDescription;
-
+        this.clientName = clientName;
+        this.tableName = tableName;
+        this.relatedDescription = relatedDescription;
     }
 
     public FindIdResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.relatedClientId = apiResponse.getResponse().toString();
-this.clientName = apiResponse.getResponse().toString();
-this.tableName = apiResponse.getResponse().toString();
-this.relatedDescription = apiResponse.getResponse().toString();
-
+            this.clientName = apiResponse.getResponse().toString();
+            this.tableName = apiResponse.getResponse().toString();
+            this.relatedDescription = apiResponse.getResponse().toString();
         }
     }
 
@@ -108,10 +106,10 @@ this.relatedDescription = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "FindIdResponse{" +
-                 "relatedClientId='" + relatedClientId + '\'' +
- ", clientName='" + clientName + '\'' +
- ", tableName='" + tableName + '\'' +
- ", relatedDescription='" + relatedDescription + '\'' +
+                "relatedClientId='" + relatedClientId + '\'' +
+                ", clientName='" + clientName + '\'' +
+                ", tableName='" + tableName + '\'' +
+                ", relatedDescription='" + relatedDescription + '\'' +
 
                 '}';
     }

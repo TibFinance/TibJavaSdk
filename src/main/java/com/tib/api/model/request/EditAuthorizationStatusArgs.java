@@ -21,14 +21,14 @@ public class EditAuthorizationStatusArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Retrieves or assigns the unique identifier for a payment.
- */
+     * Retrieves or assigns the unique identifier for a payment.
+     */
     @JsonProperty("PaymentId")
     private String paymentId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AuthorizationStatus")
     private TibAuthorizationStatus authorizationStatus;
 
@@ -40,16 +40,14 @@ public class EditAuthorizationStatusArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public EditAuthorizationStatusArgs(String paymentId, TibAuthorizationStatus authorizationStatus) {
         this.paymentId = paymentId;
-this.authorizationStatus = authorizationStatus;
-
+        this.authorizationStatus = authorizationStatus;
     }
     
     
     public EditAuthorizationStatusArgs(String adminSessionToken, String paymentId, TibAuthorizationStatus authorizationStatus) {
         super(adminSessionToken);
         this.paymentId = paymentId;
-this.authorizationStatus = authorizationStatus;
-
+        this.authorizationStatus = authorizationStatus;
     }
 
     
@@ -89,8 +87,8 @@ this.authorizationStatus = authorizationStatus;
     @Override
     public String toString() {
         return "EditAuthorizationStatusArgs{" +
-                 "paymentId='" + paymentId + '\'' +
- ", authorizationStatus='" + authorizationStatus + '\'' +
+                "paymentId='" + paymentId + '\'' +
+                ", authorizationStatus='" + authorizationStatus + '\'' +
 
                 '}';
     }

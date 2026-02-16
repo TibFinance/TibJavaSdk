@@ -21,14 +21,14 @@ public class EditAuthorizationStatusBulkArgs  extends BaseAdminOnlyCryptedArgs  
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PaymentIds")
     private List<String> paymentIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AuthorizationStatus")
     private TibAuthorizationStatus authorizationStatus;
 
@@ -40,16 +40,14 @@ public class EditAuthorizationStatusBulkArgs  extends BaseAdminOnlyCryptedArgs  
     
     public EditAuthorizationStatusBulkArgs(List<String> paymentIds, TibAuthorizationStatus authorizationStatus) {
         this.paymentIds = paymentIds;
-this.authorizationStatus = authorizationStatus;
-
+        this.authorizationStatus = authorizationStatus;
     }
     
     
     public EditAuthorizationStatusBulkArgs(String adminSessionToken, List<String> paymentIds, TibAuthorizationStatus authorizationStatus) {
         super(adminSessionToken);
         this.paymentIds = paymentIds;
-this.authorizationStatus = authorizationStatus;
-
+        this.authorizationStatus = authorizationStatus;
     }
 
     
@@ -89,8 +87,8 @@ this.authorizationStatus = authorizationStatus;
     @Override
     public String toString() {
         return "EditAuthorizationStatusBulkArgs{" +
-                 "paymentIds='" + paymentIds + '\'' +
- ", authorizationStatus='" + authorizationStatus + '\'' +
+                "paymentIds='" + paymentIds + '\'' +
+                ", authorizationStatus='" + authorizationStatus + '\'' +
 
                 '}';
     }

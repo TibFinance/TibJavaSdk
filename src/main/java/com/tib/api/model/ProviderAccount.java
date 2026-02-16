@@ -24,38 +24,38 @@ public class ProviderAccount  extends ProviderEntity  {
 
     
     /**
- * Gets or sets the crypted credentials.
- */
+     * Gets or sets the crypted credentials.
+     */
     @JsonProperty("CredentialValuesTypes")
     private List<CredentialValueType> credentialValuesTypes;
 
     /**
- * Gets or sets the provider name.
- */
+     * Gets or sets the provider name.
+     */
     @JsonProperty("ProviderName")
     private String providerName;
 
     /**
- * Identifies the type of payment method linked to a specific account.
- */
+     * Identifies the type of payment method linked to a specific account.
+     */
     @JsonProperty("PaymentMethodType")
     private PaymentMethodType paymentMethodType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsDefault")
     private boolean isDefault;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OwnerType")
     private OwnerType ownerType;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
@@ -67,24 +67,22 @@ public class ProviderAccount  extends ProviderEntity  {
     
     public ProviderAccount(List<CredentialValueType> credentialValuesTypes, String providerName, PaymentMethodType paymentMethodType, boolean isDefault, OwnerType ownerType, Currency currency) {
         this.credentialValuesTypes = credentialValuesTypes;
-this.providerName = providerName;
-this.paymentMethodType = paymentMethodType;
-this.isDefault = isDefault;
-this.ownerType = ownerType;
-this.currency = currency;
-
+        this.providerName = providerName;
+        this.paymentMethodType = paymentMethodType;
+        this.isDefault = isDefault;
+        this.ownerType = ownerType;
+        this.currency = currency;
     }
     
     
     public ProviderAccount(String providerId, Provider providerType, Integer orderPriority, List<CredentialValueType> credentialValuesTypes, String providerName, PaymentMethodType paymentMethodType, boolean isDefault, OwnerType ownerType, Currency currency) {
         super(providerId, providerType, orderPriority);
         this.credentialValuesTypes = credentialValuesTypes;
-this.providerName = providerName;
-this.paymentMethodType = paymentMethodType;
-this.isDefault = isDefault;
-this.ownerType = ownerType;
-this.currency = currency;
-
+        this.providerName = providerName;
+        this.paymentMethodType = paymentMethodType;
+        this.isDefault = isDefault;
+        this.ownerType = ownerType;
+        this.currency = currency;
     }
 
     
@@ -156,12 +154,12 @@ this.currency = currency;
     @Override
     public String toString() {
         return "ProviderAccount{" +
-                 "credentialValuesTypes='" + credentialValuesTypes + '\'' +
- ", providerName='" + providerName + '\'' +
- ", paymentMethodType='" + paymentMethodType + '\'' +
- ", isDefault='" + isDefault + '\'' +
- ", ownerType='" + ownerType + '\'' +
- ", currency='" + currency + '\'' +
+                "credentialValuesTypes='" + credentialValuesTypes + '\'' +
+                ", providerName='" + providerName + '\'' +
+                ", paymentMethodType='" + paymentMethodType + '\'' +
+                ", isDefault='" + isDefault + '\'' +
+                ", ownerType='" + ownerType + '\'' +
+                ", currency='" + currency + '\'' +
 
                 '}';
     }

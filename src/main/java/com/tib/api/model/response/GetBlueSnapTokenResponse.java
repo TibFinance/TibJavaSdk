@@ -30,15 +30,13 @@ public class GetBlueSnapTokenResponse<T> extends CustomAPIResponse {
     public GetBlueSnapTokenResponse(Error[] errors, boolean hasError, String messages, GetBlueSnapClientTokenResponse getBlueSnapClientTokenResponse) {
         super(errors, hasError, messages);
         this.getBlueSnapClientTokenResponse = getBlueSnapClientTokenResponse;
-
     }
 
     public GetBlueSnapTokenResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.getBlueSnapClientTokenResponse = objectMapper.readValue(json, GetBlueSnapClientTokenResponse.class);
-
+            this.getBlueSnapClientTokenResponse = objectMapper.readValue(json, GetBlueSnapClientTokenResponse.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.getBlueSnapClientTokenResponse = objectMapper.readValue(json, GetBlueSnapCl
     @Override
     public String toString() {
         return "GetBlueSnapTokenResponse{" +
-                 "getBlueSnapClientTokenResponse='" + getBlueSnapClientTokenResponse + '\'' +
+                "getBlueSnapClientTokenResponse='" + getBlueSnapClientTokenResponse + '\'' +
 
                 '}';
     }

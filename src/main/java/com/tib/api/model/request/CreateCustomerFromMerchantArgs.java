@@ -20,20 +20,20 @@ public class CreateCustomerFromMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
@@ -45,18 +45,16 @@ public class CreateCustomerFromMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public CreateCustomerFromMerchantArgs(String merchantId, String clientId, String serviceId) {
         this.merchantId = merchantId;
-this.clientId = clientId;
-this.serviceId = serviceId;
-
+        this.clientId = clientId;
+        this.serviceId = serviceId;
     }
     
     
     public CreateCustomerFromMerchantArgs(String adminSessionToken, String merchantId, String clientId, String serviceId) {
         super(adminSessionToken);
         this.merchantId = merchantId;
-this.clientId = clientId;
-this.serviceId = serviceId;
-
+        this.clientId = clientId;
+        this.serviceId = serviceId;
     }
 
     
@@ -104,9 +102,9 @@ this.serviceId = serviceId;
     @Override
     public String toString() {
         return "CreateCustomerFromMerchantArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", clientId='" + clientId + '\'' +
- ", serviceId='" + serviceId + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
 
                 '}';
     }

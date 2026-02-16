@@ -19,8 +19,8 @@ public class GetBoardingMerchantCredentialBlueSnapEntity  extends GetBoardingMer
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderMerchantId")
     private String providerMerchantId;
 
@@ -32,7 +32,6 @@ public class GetBoardingMerchantCredentialBlueSnapEntity  extends GetBoardingMer
     
     public GetBoardingMerchantCredentialBlueSnapEntity(String providerMerchantId) {
         this.providerMerchantId = providerMerchantId;
-
     }
     
     
@@ -66,7 +65,7 @@ public class GetBoardingMerchantCredentialBlueSnapEntity  extends GetBoardingMer
     @Override
     public String toString() {
         return "GetBoardingMerchantCredentialBlueSnapEntity{" +
-                 "providerMerchantId='" + providerMerchantId + '\'' +
+                "providerMerchantId='" + providerMerchantId + '\'' +
 
                 '}';
     }

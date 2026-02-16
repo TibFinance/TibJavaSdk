@@ -20,8 +20,8 @@ public class GetBlueSnapTokenArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -33,14 +33,12 @@ public class GetBlueSnapTokenArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetBlueSnapTokenArgs(String merchantId) {
         this.merchantId = merchantId;
-
     }
     
     
     public GetBlueSnapTokenArgs(String sessionToken, String merchantId) {
         super(sessionToken);
         this.merchantId = merchantId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetBlueSnapTokenArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "GetBlueSnapTokenArgs{" +
-                 "merchantId='" + merchantId + '\'' +
+                "merchantId='" + merchantId + '\'' +
 
                 '}';
     }

@@ -30,15 +30,13 @@ public class GetBoardingMerchantCredentialResponse extends CustomAPIResponse {
     public GetBoardingMerchantCredentialResponse(Error[] errors, boolean hasError, String messages, GetBoardingMerchantCredentialResultEntity getBoardingMerchantCredentialResultEntity) {
         super(errors, hasError, messages);
         this.getBoardingMerchantCredentialResultEntity = getBoardingMerchantCredentialResultEntity;
-
     }
 
     public GetBoardingMerchantCredentialResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.getBoardingMerchantCredentialResultEntity = objectMapper.readValue(json, GetBoardingMerchantCredentialResultEntity.class);
-
+            this.getBoardingMerchantCredentialResultEntity = objectMapper.readValue(json, GetBoardingMerchantCredentialResultEntity.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.getBoardingMerchantCredentialResultEntity = objectMapper.readValue(json, Ge
     @Override
     public String toString() {
         return "GetBoardingMerchantCredentialResponse{" +
-                 "getBoardingMerchantCredentialResultEntity='" + getBoardingMerchantCredentialResultEntity + '\'' +
+                "getBoardingMerchantCredentialResultEntity='" + getBoardingMerchantCredentialResultEntity + '\'' +
 
                 '}';
     }

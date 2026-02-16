@@ -29,14 +29,12 @@ public class CreateServiceResponse extends CustomAPIResponse {
     public CreateServiceResponse(Error[] errors, boolean hasError, String messages, String createdServiceId) {
         super(errors, hasError, messages);
         this.createdServiceId = createdServiceId;
-
     }
 
     public CreateServiceResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.createdServiceId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class CreateServiceResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateServiceResponse{" +
-                 "createdServiceId='" + createdServiceId + '\'' +
+                "createdServiceId='" + createdServiceId + '\'' +
 
                 '}';
     }

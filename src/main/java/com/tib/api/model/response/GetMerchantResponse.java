@@ -30,15 +30,13 @@ public class GetMerchantResponse extends CustomAPIResponse {
     public GetMerchantResponse(Error[] errors, boolean hasError, String messages, MerchantView merchant) {
         super(errors, hasError, messages);
         this.merchant = merchant;
-
     }
 
     public GetMerchantResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.merchant = objectMapper.readValue(json, MerchantView.class);
-
+            this.merchant = objectMapper.readValue(json, MerchantView.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.merchant = objectMapper.readValue(json, MerchantView.class);
     @Override
     public String toString() {
         return "GetMerchantResponse{" +
-                 "merchant='" + merchant + '\'' +
+                "merchant='" + merchant + '\'' +
 
                 '}';
     }

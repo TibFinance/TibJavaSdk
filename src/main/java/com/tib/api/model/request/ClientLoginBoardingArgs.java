@@ -21,20 +21,20 @@ public class ClientLoginBoardingArgs  extends BaseAuthenticatePublicTokenArgs  {
 
     
     /**
- * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
- */
+     * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
+     */
     @JsonProperty("Username")
     private String username;
 
     /**
- * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
- */
+     * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
+     */
     @JsonProperty("Password")
     private String password;
 
     /**
- * Gets and set the type of the routing.
- */
+     * Gets and set the type of the routing.
+     */
     @JsonProperty("RoutingType")
     private PublicAccessTokenRoutingType routingType;
 
@@ -46,18 +46,16 @@ public class ClientLoginBoardingArgs  extends BaseAuthenticatePublicTokenArgs  {
     
     public ClientLoginBoardingArgs(String username, String password, PublicAccessTokenRoutingType routingType) {
         this.username = username;
-this.password = password;
-this.routingType = routingType;
-
+        this.password = password;
+        this.routingType = routingType;
     }
     
     
     public ClientLoginBoardingArgs(String publicTokenId, String username, String password, PublicAccessTokenRoutingType routingType) {
         super(publicTokenId);
         this.username = username;
-this.password = password;
-this.routingType = routingType;
-
+        this.password = password;
+        this.routingType = routingType;
     }
 
     
@@ -105,9 +103,9 @@ this.routingType = routingType;
     @Override
     public String toString() {
         return "ClientLoginBoardingArgs{" +
-                 "username='" + username + '\'' +
- ", password='" + password + '\'' +
- ", routingType='" + routingType + '\'' +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", routingType='" + routingType + '\'' +
 
                 '}';
     }

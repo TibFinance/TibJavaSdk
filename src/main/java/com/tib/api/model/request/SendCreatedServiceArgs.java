@@ -20,8 +20,8 @@ public class SendCreatedServiceArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
@@ -33,14 +33,12 @@ public class SendCreatedServiceArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public SendCreatedServiceArgs(String serviceId) {
         this.serviceId = serviceId;
-
     }
     
     
     public SendCreatedServiceArgs(String sessionToken, String serviceId) {
         super(sessionToken);
         this.serviceId = serviceId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class SendCreatedServiceArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "SendCreatedServiceArgs{" +
-                 "serviceId='" + serviceId + '\'' +
+                "serviceId='" + serviceId + '\'' +
 
                 '}';
     }

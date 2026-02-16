@@ -25,13 +25,11 @@ public class SaveCustomerResponse extends CustomAPIResponse {
 
     public SaveCustomerResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SaveCustomerResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

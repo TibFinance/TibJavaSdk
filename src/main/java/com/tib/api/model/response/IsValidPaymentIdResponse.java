@@ -29,14 +29,12 @@ public class IsValidPaymentIdResponse extends CustomAPIResponse {
     public IsValidPaymentIdResponse(Error[] errors, boolean hasError, String messages, boolean isValidPaymentId) {
         super(errors, hasError, messages);
         this.isValidPaymentId = isValidPaymentId;
-
     }
 
     public IsValidPaymentIdResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.isValidPaymentId = Boolean.parseBoolean(apiResponse.getResponse().toString());
-
         }
     }
 
@@ -69,7 +67,7 @@ public class IsValidPaymentIdResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "IsValidPaymentIdResponse{" +
-                 "isValidPaymentId='" + isValidPaymentId + '\'' +
+                "isValidPaymentId='" + isValidPaymentId + '\'' +
 
                 '}';
     }

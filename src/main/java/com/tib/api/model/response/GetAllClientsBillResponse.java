@@ -30,14 +30,12 @@ public class GetAllClientsBillResponse extends CustomAPIResponse {
     public GetAllClientsBillResponse(Error[] errors, boolean hasError, String messages, List<MontlyBillInfo> billsInfo) {
         super(errors, hasError, messages);
         this.billsInfo = billsInfo;
-
     }
 
     public GetAllClientsBillResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.billsInfo = (List<MontlyBillInfo>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetAllClientsBillResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetAllClientsBillResponse{" +
-                 "billsInfo='" + billsInfo + '\'' +
+                "billsInfo='" + billsInfo + '\'' +
 
                 '}';
     }

@@ -19,32 +19,32 @@ public class MonerisCredenitals   {
 
     
     /**
- * Gets or sets the store identifier.
- */
+     * Gets or sets the store identifier.
+     */
     @JsonProperty("StoreID")
     private String storeID;
 
     /**
- * Gets or sets the API token.
- */
+     * Gets or sets the API token.
+     */
     @JsonProperty("ApiToken")
     private String apiToken;
 
     /**
- * Gets or sets the country code.
- */
+     * Gets or sets the country code.
+     */
     @JsonProperty("CountryCode")
     private String countryCode;
 
     /**
- * Gets or sets the crypt.
- */
+     * Gets or sets the crypt.
+     */
     @JsonProperty("Crypt")
     private String crypt;
 
     /**
- * Gets or sets the CVD idicator.
- */
+     * Gets or sets the CVD idicator.
+     */
     @JsonProperty("CvdIdicator")
     private String cvdIdicator;
 
@@ -56,11 +56,10 @@ public class MonerisCredenitals   {
     
     public MonerisCredenitals(String storeID, String apiToken, String countryCode, String crypt, String cvdIdicator) {
         this.storeID = storeID;
-this.apiToken = apiToken;
-this.countryCode = countryCode;
-this.crypt = crypt;
-this.cvdIdicator = cvdIdicator;
-
+        this.apiToken = apiToken;
+        this.countryCode = countryCode;
+        this.crypt = crypt;
+        this.cvdIdicator = cvdIdicator;
     }
     
     
@@ -126,11 +125,11 @@ this.cvdIdicator = cvdIdicator;
     @Override
     public String toString() {
         return "MonerisCredenitals{" +
-                 "storeID='" + storeID + '\'' +
- ", apiToken='" + apiToken + '\'' +
- ", countryCode='" + countryCode + '\'' +
- ", crypt='" + crypt + '\'' +
- ", cvdIdicator='" + cvdIdicator + '\'' +
+                "storeID='" + storeID + '\'' +
+                ", apiToken='" + apiToken + '\'' +
+                ", countryCode='" + countryCode + '\'' +
+                ", crypt='" + crypt + '\'' +
+                ", cvdIdicator='" + cvdIdicator + '\'' +
 
                 '}';
     }

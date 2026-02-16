@@ -20,14 +20,14 @@ public class SetOverloadedFeesMerchantArgs  extends BaseAuthenticatedCryptedArgs
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OverloadedMerchantId")
     private String overloadedMerchantId;
 
@@ -39,16 +39,14 @@ public class SetOverloadedFeesMerchantArgs  extends BaseAuthenticatedCryptedArgs
     
     public SetOverloadedFeesMerchantArgs(String serviceId, String overloadedMerchantId) {
         this.serviceId = serviceId;
-this.overloadedMerchantId = overloadedMerchantId;
-
+        this.overloadedMerchantId = overloadedMerchantId;
     }
     
     
     public SetOverloadedFeesMerchantArgs(String sessionToken, String serviceId, String overloadedMerchantId) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.overloadedMerchantId = overloadedMerchantId;
-
+        this.overloadedMerchantId = overloadedMerchantId;
     }
 
     
@@ -88,8 +86,8 @@ this.overloadedMerchantId = overloadedMerchantId;
     @Override
     public String toString() {
         return "SetOverloadedFeesMerchantArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", overloadedMerchantId='" + overloadedMerchantId + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", overloadedMerchantId='" + overloadedMerchantId + '\'' +
 
                 '}';
     }

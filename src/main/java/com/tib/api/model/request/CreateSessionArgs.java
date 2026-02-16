@@ -19,20 +19,20 @@ public class CreateSessionArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
- */
+     * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
+     */
     @JsonProperty("Username")
     private String username;
 
     /**
- * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
- */
+     * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
+     */
     @JsonProperty("Password")
     private String password;
 
@@ -44,9 +44,8 @@ public class CreateSessionArgs  implements IBaseCryptedServiceArgs  {
     
     public CreateSessionArgs(String clientId, String username, String password) {
         this.clientId = clientId;
-this.username = username;
-this.password = password;
-
+        this.username = username;
+        this.password = password;
     }
     
     
@@ -96,9 +95,9 @@ this.password = password;
     @Override
     public String toString() {
         return "CreateSessionArgs{" +
-                 "clientId='" + clientId + '\'' +
- ", username='" + username + '\'' +
- ", password='" + password + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
 
                 '}';
     }

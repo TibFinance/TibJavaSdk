@@ -20,14 +20,14 @@ public class GetAllClientsBillArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Gets or sets the year.
- */
+     * Gets or sets the year.
+     */
     @JsonProperty("Year")
     private Integer year;
 
     /**
- * Gets or sets the month.
- */
+     * Gets or sets the month.
+     */
     @JsonProperty("Month")
     private Integer month;
 
@@ -39,16 +39,14 @@ public class GetAllClientsBillArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public GetAllClientsBillArgs(Integer year, Integer month) {
         this.year = year;
-this.month = month;
-
+        this.month = month;
     }
     
     
     public GetAllClientsBillArgs(String adminSessionToken, Integer year, Integer month) {
         super(adminSessionToken);
         this.year = year;
-this.month = month;
-
+        this.month = month;
     }
 
     
@@ -88,8 +86,8 @@ this.month = month;
     @Override
     public String toString() {
         return "GetAllClientsBillArgs{" +
-                 "year='" + year + '\'' +
- ", month='" + month + '\'' +
+                "year='" + year + '\'' +
+                ", month='" + month + '\'' +
 
                 '}';
     }

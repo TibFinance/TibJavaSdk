@@ -50,28 +50,26 @@ public class GetSessionCookiesAdminResponse extends CustomAPIResponse {
     public GetSessionCookiesAdminResponse(Error[] errors, boolean hasError, String messages, String clientId, String serviceId, String sessionId, Integer loginTypeId, String username, String language, boolean isReadOnly, String internalReferenceId) {
         super(errors, hasError, messages);
         this.clientId = clientId;
-this.serviceId = serviceId;
-this.sessionId = sessionId;
-this.loginTypeId = loginTypeId;
-this.username = username;
-this.language = language;
-this.isReadOnly = isReadOnly;
-this.internalReferenceId = internalReferenceId;
-
+        this.serviceId = serviceId;
+        this.sessionId = sessionId;
+        this.loginTypeId = loginTypeId;
+        this.username = username;
+        this.language = language;
+        this.isReadOnly = isReadOnly;
+        this.internalReferenceId = internalReferenceId;
     }
 
     public GetSessionCookiesAdminResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.clientId = apiResponse.getResponse().toString();
-this.serviceId = apiResponse.getResponse().toString();
-this.sessionId = apiResponse.getResponse().toString();
-this.loginTypeId = Integer.parseInt(apiResponse.getResponse().toString());
-this.username = apiResponse.getResponse().toString();
-this.language = apiResponse.getResponse().toString();
-this.isReadOnly = Boolean.parseBoolean(apiResponse.getResponse().toString());
-this.internalReferenceId = apiResponse.getResponse().toString();
-
+            this.serviceId = apiResponse.getResponse().toString();
+            this.sessionId = apiResponse.getResponse().toString();
+            this.loginTypeId = Integer.parseInt(apiResponse.getResponse().toString());
+            this.username = apiResponse.getResponse().toString();
+            this.language = apiResponse.getResponse().toString();
+            this.isReadOnly = Boolean.parseBoolean(apiResponse.getResponse().toString());
+            this.internalReferenceId = apiResponse.getResponse().toString();
         }
     }
 
@@ -160,14 +158,14 @@ this.internalReferenceId = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "GetSessionCookiesAdminResponse{" +
-                 "clientId='" + clientId + '\'' +
- ", serviceId='" + serviceId + '\'' +
- ", sessionId='" + sessionId + '\'' +
- ", loginTypeId='" + loginTypeId + '\'' +
- ", username='" + username + '\'' +
- ", language='" + language + '\'' +
- ", isReadOnly='" + isReadOnly + '\'' +
- ", internalReferenceId='" + internalReferenceId + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                ", sessionId='" + sessionId + '\'' +
+                ", loginTypeId='" + loginTypeId + '\'' +
+                ", username='" + username + '\'' +
+                ", language='" + language + '\'' +
+                ", isReadOnly='" + isReadOnly + '\'' +
+                ", internalReferenceId='" + internalReferenceId + '\'' +
 
                 '}';
     }

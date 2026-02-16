@@ -22,86 +22,86 @@ public class Wallet   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WalletId")
     private String walletId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ReferenceType")
     private ReferenceType referenceType;
 
     /**
- * Gets or sets the reference identifier used to uniquely identify a transaction, operation, or entity within the TIB Finance system.
- */
+     * Gets or sets the reference identifier used to uniquely identify a transaction, operation, or entity within the TIB Finance system.
+     */
     @JsonProperty("ReferenceId")
     private String referenceId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Balance")
     private Double balance;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WithdrawableAmount")
     private Double withdrawableAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WalletRefillSchedule")
     private String walletRefillSchedule;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsProcessing")
     private boolean isProcessing;
 
     /**
- * Gets or sets the wallet type identifier used by the TIB Finance API to select the appropriate wallet configuration.
- */
+     * Gets or sets the wallet type identifier used by the TIB Finance API to select the appropriate wallet configuration.
+     */
     @JsonProperty("WalletType")
     private WalletType walletType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WalletHolders")
     private List<WalletHolder> walletHolders;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ReferenceTypeName")
     private String referenceTypeName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WalletTypeName")
     private String walletTypeName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WalletCombinationTypeName")
     private String walletCombinationTypeName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WalletDescription")
     private String walletDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WalletFeatureIsActive")
     private boolean walletFeatureIsActive;
 
@@ -113,20 +113,19 @@ public class Wallet   {
     
     public Wallet(String walletId, ReferenceType referenceType, String referenceId, Double balance, Double withdrawableAmount, String walletRefillSchedule, boolean isProcessing, WalletType walletType, List<WalletHolder> walletHolders, String referenceTypeName, String walletTypeName, String walletCombinationTypeName, String walletDescription, boolean walletFeatureIsActive) {
         this.walletId = walletId;
-this.referenceType = referenceType;
-this.referenceId = referenceId;
-this.balance = balance;
-this.withdrawableAmount = withdrawableAmount;
-this.walletRefillSchedule = walletRefillSchedule;
-this.isProcessing = isProcessing;
-this.walletType = walletType;
-this.walletHolders = walletHolders;
-this.referenceTypeName = referenceTypeName;
-this.walletTypeName = walletTypeName;
-this.walletCombinationTypeName = walletCombinationTypeName;
-this.walletDescription = walletDescription;
-this.walletFeatureIsActive = walletFeatureIsActive;
-
+        this.referenceType = referenceType;
+        this.referenceId = referenceId;
+        this.balance = balance;
+        this.withdrawableAmount = withdrawableAmount;
+        this.walletRefillSchedule = walletRefillSchedule;
+        this.isProcessing = isProcessing;
+        this.walletType = walletType;
+        this.walletHolders = walletHolders;
+        this.referenceTypeName = referenceTypeName;
+        this.walletTypeName = walletTypeName;
+        this.walletCombinationTypeName = walletCombinationTypeName;
+        this.walletDescription = walletDescription;
+        this.walletFeatureIsActive = walletFeatureIsActive;
     }
     
     
@@ -264,20 +263,20 @@ this.walletFeatureIsActive = walletFeatureIsActive;
     @Override
     public String toString() {
         return "Wallet{" +
-                 "walletId='" + walletId + '\'' +
- ", referenceType='" + referenceType + '\'' +
- ", referenceId='" + referenceId + '\'' +
- ", balance='" + balance + '\'' +
- ", withdrawableAmount='" + withdrawableAmount + '\'' +
- ", walletRefillSchedule='" + walletRefillSchedule + '\'' +
- ", isProcessing='" + isProcessing + '\'' +
- ", walletType='" + walletType + '\'' +
- ", walletHolders='" + walletHolders + '\'' +
- ", referenceTypeName='" + referenceTypeName + '\'' +
- ", walletTypeName='" + walletTypeName + '\'' +
- ", walletCombinationTypeName='" + walletCombinationTypeName + '\'' +
- ", walletDescription='" + walletDescription + '\'' +
- ", walletFeatureIsActive='" + walletFeatureIsActive + '\'' +
+                "walletId='" + walletId + '\'' +
+                ", referenceType='" + referenceType + '\'' +
+                ", referenceId='" + referenceId + '\'' +
+                ", balance='" + balance + '\'' +
+                ", withdrawableAmount='" + withdrawableAmount + '\'' +
+                ", walletRefillSchedule='" + walletRefillSchedule + '\'' +
+                ", isProcessing='" + isProcessing + '\'' +
+                ", walletType='" + walletType + '\'' +
+                ", walletHolders='" + walletHolders + '\'' +
+                ", referenceTypeName='" + referenceTypeName + '\'' +
+                ", walletTypeName='" + walletTypeName + '\'' +
+                ", walletCombinationTypeName='" + walletCombinationTypeName + '\'' +
+                ", walletDescription='" + walletDescription + '\'' +
+                ", walletFeatureIsActive='" + walletFeatureIsActive + '\'' +
 
                 '}';
     }

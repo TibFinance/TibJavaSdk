@@ -21,14 +21,14 @@ public class USOperationReportEntity   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Payout")
     private PayoutData payout;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Transfers")
     private List<TransferBaseInformationEntity> transfers;
 
@@ -40,8 +40,7 @@ public class USOperationReportEntity   {
     
     public USOperationReportEntity(PayoutData payout, List<TransferBaseInformationEntity> transfers) {
         this.payout = payout;
-this.transfers = transfers;
-
+        this.transfers = transfers;
     }
     
     
@@ -83,8 +82,8 @@ this.transfers = transfers;
     @Override
     public String toString() {
         return "USOperationReportEntity{" +
-                 "payout='" + payout + '\'' +
- ", transfers='" + transfers + '\'' +
+                "payout='" + payout + '\'' +
+                ", transfers='" + transfers + '\'' +
 
                 '}';
     }

@@ -19,92 +19,92 @@ public class BillLineEntity   {
 
     
     /**
- * Unique identifier for the line item (optional on creation, will be assigned by system)
- */
+     * Unique identifier for the line item (optional on creation, will be assigned by system)
+     */
     @JsonProperty("BillLineId")
     private String billLineId;
 
     /**
- * Line number for ordering (1-based)
- */
+     * Line number for ordering (1-based)
+     */
     @JsonProperty("LineNumber")
     private Integer lineNumber;
 
     /**
- * Product SKUcode (optional)
- */
+     * Product SKUcode (optional)
+     */
     @JsonProperty("ProductSku")
     private String productSku;
 
     /**
- * Product name (required)
- */
+     * Product name (required)
+     */
     @JsonProperty("ProductName")
     private String productName;
 
     /**
- * Product description (optional)
- */
+     * Product description (optional)
+     */
     @JsonProperty("ProductDescription")
     private String productDescription;
 
     /**
- * Quantity (default: 1)
- */
+     * Quantity (default: 1)
+     */
     @JsonProperty("Quantity")
     private Double quantity;
 
     /**
- * Unit of measure (e.g., "unit", "hour", "kg")
- */
+     * Unit of measure (e.g., "unit", "hour", "kg")
+     */
     @JsonProperty("UnitOfMeasure")
     private String unitOfMeasure;
 
     /**
- * Unit price
- */
+     * Unit price
+     */
     @JsonProperty("UnitPrice")
     private Double unitPrice;
 
     /**
- * Discount percentage for this line (0-100)
- */
+     * Discount percentage for this line (0-100)
+     */
     @JsonProperty("DiscountPercent")
     private Double discountPercent;
 
     /**
- * Discount amount for this line (alternative to percentage)
- */
+     * Discount amount for this line (alternative to percentage)
+     */
     @JsonProperty("DiscountAmount")
     private Double discountAmount;
 
     /**
- * Tax code (e.g., "TX" for taxable, "NT" for non-taxable)
- */
+     * Tax code (e.g., "TX" for taxable, "NT" for non-taxable)
+     */
     @JsonProperty("TaxCode")
     private String taxCode;
 
     /**
- * Whether this line is taxable
- */
+     * Whether this line is taxable
+     */
     @JsonProperty("IsTaxable")
     private boolean isTaxable;
 
     /**
- * Calculated line subtotal (Quantity * UnitPrice - Discount) Read-only on response, calculated by system
- */
+     * Calculated line subtotal (Quantity * UnitPrice - Discount) Read-only on response, calculated by system
+     */
     @JsonProperty("LineSubtotal")
     private Double lineSubtotal;
 
     /**
- * Calculated tax amount for this line Read-only on response, calculated by system
- */
+     * Calculated tax amount for this line Read-only on response, calculated by system
+     */
     @JsonProperty("LineTaxAmount")
     private Double lineTaxAmount;
 
     /**
- * Calculated line total (Subtotal + Tax) Read-only on response, calculated by system
- */
+     * Calculated line total (Subtotal + Tax) Read-only on response, calculated by system
+     */
     @JsonProperty("LineTotal")
     private Double lineTotal;
 
@@ -116,21 +116,20 @@ public class BillLineEntity   {
     
     public BillLineEntity(String billLineId, Integer lineNumber, String productSku, String productName, String productDescription, Double quantity, String unitOfMeasure, Double unitPrice, Double discountPercent, Double discountAmount, String taxCode, boolean isTaxable, Double lineSubtotal, Double lineTaxAmount, Double lineTotal) {
         this.billLineId = billLineId;
-this.lineNumber = lineNumber;
-this.productSku = productSku;
-this.productName = productName;
-this.productDescription = productDescription;
-this.quantity = quantity;
-this.unitOfMeasure = unitOfMeasure;
-this.unitPrice = unitPrice;
-this.discountPercent = discountPercent;
-this.discountAmount = discountAmount;
-this.taxCode = taxCode;
-this.isTaxable = isTaxable;
-this.lineSubtotal = lineSubtotal;
-this.lineTaxAmount = lineTaxAmount;
-this.lineTotal = lineTotal;
-
+        this.lineNumber = lineNumber;
+        this.productSku = productSku;
+        this.productName = productName;
+        this.productDescription = productDescription;
+        this.quantity = quantity;
+        this.unitOfMeasure = unitOfMeasure;
+        this.unitPrice = unitPrice;
+        this.discountPercent = discountPercent;
+        this.discountAmount = discountAmount;
+        this.taxCode = taxCode;
+        this.isTaxable = isTaxable;
+        this.lineSubtotal = lineSubtotal;
+        this.lineTaxAmount = lineTaxAmount;
+        this.lineTotal = lineTotal;
     }
     
     
@@ -276,21 +275,21 @@ this.lineTotal = lineTotal;
     @Override
     public String toString() {
         return "BillLineEntity{" +
-                 "billLineId='" + billLineId + '\'' +
- ", lineNumber='" + lineNumber + '\'' +
- ", productSku='" + productSku + '\'' +
- ", productName='" + productName + '\'' +
- ", productDescription='" + productDescription + '\'' +
- ", quantity='" + quantity + '\'' +
- ", unitOfMeasure='" + unitOfMeasure + '\'' +
- ", unitPrice='" + unitPrice + '\'' +
- ", discountPercent='" + discountPercent + '\'' +
- ", discountAmount='" + discountAmount + '\'' +
- ", taxCode='" + taxCode + '\'' +
- ", isTaxable='" + isTaxable + '\'' +
- ", lineSubtotal='" + lineSubtotal + '\'' +
- ", lineTaxAmount='" + lineTaxAmount + '\'' +
- ", lineTotal='" + lineTotal + '\'' +
+                "billLineId='" + billLineId + '\'' +
+                ", lineNumber='" + lineNumber + '\'' +
+                ", productSku='" + productSku + '\'' +
+                ", productName='" + productName + '\'' +
+                ", productDescription='" + productDescription + '\'' +
+                ", quantity='" + quantity + '\'' +
+                ", unitOfMeasure='" + unitOfMeasure + '\'' +
+                ", unitPrice='" + unitPrice + '\'' +
+                ", discountPercent='" + discountPercent + '\'' +
+                ", discountAmount='" + discountAmount + '\'' +
+                ", taxCode='" + taxCode + '\'' +
+                ", isTaxable='" + isTaxable + '\'' +
+                ", lineSubtotal='" + lineSubtotal + '\'' +
+                ", lineTaxAmount='" + lineTaxAmount + '\'' +
+                ", lineTotal='" + lineTotal + '\'' +
 
                 '}';
     }

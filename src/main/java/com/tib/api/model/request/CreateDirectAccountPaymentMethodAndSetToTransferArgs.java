@@ -20,14 +20,14 @@ public class CreateDirectAccountPaymentMethodAndSetToTransferArgs  implements IB
 
     
     /**
- * Indicates if the system must request the customer's consent prior to executing the payment.
- */
+     * Indicates if the system must request the customer's consent prior to executing the payment.
+     */
     @JsonProperty("AskForCustomerConsent")
     private boolean askForCustomerConsent;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RoutingType")
     private PublicAccessTokenRoutingType routingType;
 
@@ -39,8 +39,7 @@ public class CreateDirectAccountPaymentMethodAndSetToTransferArgs  implements IB
     
     public CreateDirectAccountPaymentMethodAndSetToTransferArgs(boolean askForCustomerConsent, PublicAccessTokenRoutingType routingType) {
         this.askForCustomerConsent = askForCustomerConsent;
-this.routingType = routingType;
-
+        this.routingType = routingType;
     }
     
     
@@ -82,8 +81,8 @@ this.routingType = routingType;
     @Override
     public String toString() {
         return "CreateDirectAccountPaymentMethodAndSetToTransferArgs{" +
-                 "askForCustomerConsent='" + askForCustomerConsent + '\'' +
- ", routingType='" + routingType + '\'' +
+                "askForCustomerConsent='" + askForCustomerConsent + '\'' +
+                ", routingType='" + routingType + '\'' +
 
                 '}';
     }

@@ -21,32 +21,32 @@ public class GetPaymentInvoiceArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderCredentials")
     private List<ProviderAccount> providerCredentials;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Specifies the starting date for filtering payment due dates.
- */
+     * Specifies the starting date for filtering payment due dates.
+     */
     @JsonProperty("FromDate")
     private LocalDateTime fromDate;
 
     /**
- * Specifies the payment due date.
- */
+     * Specifies the payment due date.
+     */
     @JsonProperty("ToDate")
     private LocalDateTime toDate;
 
@@ -58,11 +58,10 @@ public class GetPaymentInvoiceArgs  implements IBaseCryptedServiceArgs  {
     
     public GetPaymentInvoiceArgs(List<ProviderAccount> providerCredentials, Currency currency, String merchantId, LocalDateTime fromDate, LocalDateTime toDate) {
         this.providerCredentials = providerCredentials;
-this.currency = currency;
-this.merchantId = merchantId;
-this.fromDate = fromDate;
-this.toDate = toDate;
-
+        this.currency = currency;
+        this.merchantId = merchantId;
+        this.fromDate = fromDate;
+        this.toDate = toDate;
     }
     
     
@@ -128,11 +127,11 @@ this.toDate = toDate;
     @Override
     public String toString() {
         return "GetPaymentInvoiceArgs{" +
-                 "providerCredentials='" + providerCredentials + '\'' +
- ", currency='" + currency + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", fromDate='" + fromDate + '\'' +
- ", toDate='" + toDate + '\'' +
+                "providerCredentials='" + providerCredentials + '\'' +
+                ", currency='" + currency + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", fromDate='" + fromDate + '\'' +
+                ", toDate='" + toDate + '\'' +
 
                 '}';
     }

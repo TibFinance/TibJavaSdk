@@ -20,44 +20,44 @@ public class GetDepositOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Filter only for a specific merchant group
- */
+     * Filter only for a specific merchant group
+     */
     @JsonProperty("MerchantExternalGroupId")
     private String merchantExternalGroupId;
 
     /**
- * Specifies the starting date for filtering payment due dates.
- */
+     * Specifies the starting date for filtering payment due dates.
+     */
     @JsonProperty("FromDate")
     private LocalDateTime fromDate;
 
     /**
- * Specifies the payment due date.
- */
+     * Specifies the payment due date.
+     */
     @JsonProperty("ToDate")
     private LocalDateTime toDate;
 
     /**
- * Identifies the group of related transfer operations.
- */
+     * Identifies the group of related transfer operations.
+     */
     @JsonProperty("TransferGroupId")
     private String transferGroupId;
 
     /**
- * Indicates whether the transfer list should be filtered to include only operations that have an error status.
- */
+     * Indicates whether the transfer list should be filtered to include only operations that have an error status.
+     */
     @JsonProperty("OnlyWithErrors")
     private boolean onlyWithErrors;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
@@ -69,26 +69,24 @@ public class GetDepositOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetDepositOperationsArgs(String merchantExternalGroupId, LocalDateTime fromDate, LocalDateTime toDate, String transferGroupId, boolean onlyWithErrors, String merchantId, String serviceId) {
         this.merchantExternalGroupId = merchantExternalGroupId;
-this.fromDate = fromDate;
-this.toDate = toDate;
-this.transferGroupId = transferGroupId;
-this.onlyWithErrors = onlyWithErrors;
-this.merchantId = merchantId;
-this.serviceId = serviceId;
-
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+        this.transferGroupId = transferGroupId;
+        this.onlyWithErrors = onlyWithErrors;
+        this.merchantId = merchantId;
+        this.serviceId = serviceId;
     }
     
     
     public GetDepositOperationsArgs(String sessionToken, String merchantExternalGroupId, LocalDateTime fromDate, LocalDateTime toDate, String transferGroupId, boolean onlyWithErrors, String merchantId, String serviceId) {
         super(sessionToken);
         this.merchantExternalGroupId = merchantExternalGroupId;
-this.fromDate = fromDate;
-this.toDate = toDate;
-this.transferGroupId = transferGroupId;
-this.onlyWithErrors = onlyWithErrors;
-this.merchantId = merchantId;
-this.serviceId = serviceId;
-
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+        this.transferGroupId = transferGroupId;
+        this.onlyWithErrors = onlyWithErrors;
+        this.merchantId = merchantId;
+        this.serviceId = serviceId;
     }
 
     
@@ -168,13 +166,13 @@ this.serviceId = serviceId;
     @Override
     public String toString() {
         return "GetDepositOperationsArgs{" +
-                 "merchantExternalGroupId='" + merchantExternalGroupId + '\'' +
- ", fromDate='" + fromDate + '\'' +
- ", toDate='" + toDate + '\'' +
- ", transferGroupId='" + transferGroupId + '\'' +
- ", onlyWithErrors='" + onlyWithErrors + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", serviceId='" + serviceId + '\'' +
+                "merchantExternalGroupId='" + merchantExternalGroupId + '\'' +
+                ", fromDate='" + fromDate + '\'' +
+                ", toDate='" + toDate + '\'' +
+                ", transferGroupId='" + transferGroupId + '\'' +
+                ", onlyWithErrors='" + onlyWithErrors + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
 
                 '}';
     }

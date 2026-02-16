@@ -22,26 +22,26 @@ public class ServiceWithMerchant  extends Service  {
 
     
     /**
- * Retrieves or assigns the primary merchant associated with the service.
- */
+     * Retrieves or assigns the primary merchant associated with the service.
+     */
     @JsonProperty("ServicePrimaryMerchant")
     private MerchantView servicePrimaryMerchant;
 
     /**
- * Gets or sets the ServiceFeeSettings model that defines the fee configuration for a specific service contract.
- */
+     * Gets or sets the ServiceFeeSettings model that defines the fee configuration for a specific service contract.
+     */
     @JsonProperty("ServiceFeeSettings")
     private ServiceFeeSettings serviceFeeSettings;
 
     /**
- * Gets or sets the configuration settings for a TIB Finance service.
- */
+     * Gets or sets the configuration settings for a TIB Finance service.
+     */
     @JsonProperty("ServiceSettings")
     private ServiceSettings serviceSettings;
 
     /**
- * Specifies the merchant name that is charged for fees when an override is applied.
- */
+     * Specifies the merchant name that is charged for fees when an override is applied.
+     */
     @JsonProperty("OverloadedFeesMerchantName")
     private String overloadedFeesMerchantName;
 
@@ -53,20 +53,18 @@ public class ServiceWithMerchant  extends Service  {
     
     public ServiceWithMerchant(MerchantView servicePrimaryMerchant, ServiceFeeSettings serviceFeeSettings, ServiceSettings serviceSettings, String overloadedFeesMerchantName) {
         this.servicePrimaryMerchant = servicePrimaryMerchant;
-this.serviceFeeSettings = serviceFeeSettings;
-this.serviceSettings = serviceSettings;
-this.overloadedFeesMerchantName = overloadedFeesMerchantName;
-
+        this.serviceFeeSettings = serviceFeeSettings;
+        this.serviceSettings = serviceSettings;
+        this.overloadedFeesMerchantName = overloadedFeesMerchantName;
     }
     
     
     public ServiceWithMerchant(String serviceId, Optional<String> whiteLabelingId, boolean hasCompletedBoarding, MerchantView servicePrimaryMerchant, ServiceFeeSettings serviceFeeSettings, ServiceSettings serviceSettings, String overloadedFeesMerchantName) {
         super(serviceId, whiteLabelingId, hasCompletedBoarding);
         this.servicePrimaryMerchant = servicePrimaryMerchant;
-this.serviceFeeSettings = serviceFeeSettings;
-this.serviceSettings = serviceSettings;
-this.overloadedFeesMerchantName = overloadedFeesMerchantName;
-
+        this.serviceFeeSettings = serviceFeeSettings;
+        this.serviceSettings = serviceSettings;
+        this.overloadedFeesMerchantName = overloadedFeesMerchantName;
     }
 
     
@@ -122,10 +120,10 @@ this.overloadedFeesMerchantName = overloadedFeesMerchantName;
     @Override
     public String toString() {
         return "ServiceWithMerchant{" +
-                 "servicePrimaryMerchant='" + servicePrimaryMerchant + '\'' +
- ", serviceFeeSettings='" + serviceFeeSettings + '\'' +
- ", serviceSettings='" + serviceSettings + '\'' +
- ", overloadedFeesMerchantName='" + overloadedFeesMerchantName + '\'' +
+                "servicePrimaryMerchant='" + servicePrimaryMerchant + '\'' +
+                ", serviceFeeSettings='" + serviceFeeSettings + '\'' +
+                ", serviceSettings='" + serviceSettings + '\'' +
+                ", overloadedFeesMerchantName='" + overloadedFeesMerchantName + '\'' +
 
                 '}';
     }

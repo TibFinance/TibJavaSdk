@@ -20,14 +20,14 @@ public class SetDefaultPaymentMethodArgs  extends BaseAuthenticatedCryptedArgs  
 
     
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * Acts as a unique identifier for a distinct payment method.
- */
+     * Acts as a unique identifier for a distinct payment method.
+     */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
@@ -39,16 +39,14 @@ public class SetDefaultPaymentMethodArgs  extends BaseAuthenticatedCryptedArgs  
     
     public SetDefaultPaymentMethodArgs(String customerId, String paymentMethodId) {
         this.customerId = customerId;
-this.paymentMethodId = paymentMethodId;
-
+        this.paymentMethodId = paymentMethodId;
     }
     
     
     public SetDefaultPaymentMethodArgs(String sessionToken, String customerId, String paymentMethodId) {
         super(sessionToken);
         this.customerId = customerId;
-this.paymentMethodId = paymentMethodId;
-
+        this.paymentMethodId = paymentMethodId;
     }
 
     
@@ -88,8 +86,8 @@ this.paymentMethodId = paymentMethodId;
     @Override
     public String toString() {
         return "SetDefaultPaymentMethodArgs{" +
-                 "customerId='" + customerId + '\'' +
- ", paymentMethodId='" + paymentMethodId + '\'' +
+                "customerId='" + customerId + '\'' +
+                ", paymentMethodId='" + paymentMethodId + '\'' +
 
                 '}';
     }

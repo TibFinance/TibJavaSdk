@@ -34,17 +34,15 @@ public class GetPublicTokenRoutingTypeResponse<T> extends CustomAPIResponse {
     public GetPublicTokenRoutingTypeResponse(Error[] errors, boolean hasError, String messages, PublicAccessTokenRoutingType routingType, WhiteLabeling whiteLabeling) {
         super(errors, hasError, messages);
         this.routingType = routingType;
-this.whiteLabeling = whiteLabeling;
-
+        this.whiteLabeling = whiteLabeling;
     }
 
     public GetPublicTokenRoutingTypeResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.routingType = objectMapper.readValue(json, PublicAccessTokenRoutingType.class);
-this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
-
+            this.routingType = objectMapper.readValue(json, PublicAccessTokenRoutingType.class);
+            this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
         }
     }
 
@@ -85,8 +83,8 @@ this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
     @Override
     public String toString() {
         return "GetPublicTokenRoutingTypeResponse{" +
-                 "routingType='" + routingType + '\'' +
- ", whiteLabeling='" + whiteLabeling + '\'' +
+                "routingType='" + routingType + '\'' +
+                ", whiteLabeling='" + whiteLabeling + '\'' +
 
                 '}';
     }

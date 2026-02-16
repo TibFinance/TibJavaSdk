@@ -22,176 +22,176 @@ public class BillEntityAdvanced  extends BillEntity  {
 
     
     /**
- * Invoice number prefix (e.g., "INV-", "FAC-"). If not provided, merchant's default will be used.
- */
+     * Invoice number prefix (e.g., "INV-", "FAC-"). If not provided, merchant's default will be used.
+     */
     @JsonProperty("InvoiceNumberPrefix")
     private String invoiceNumberPrefix;
 
     /**
- * Custom invoice number. If not provided, system will auto-generate based on merchant's sequence.
- */
+     * Custom invoice number. If not provided, system will auto-generate based on merchant's sequence.
+     */
     @JsonProperty("InvoiceNumber")
     private String invoiceNumber;
 
     /**
- * Purchase order number from customer (optional reference)
- */
+     * Purchase order number from customer (optional reference)
+     */
     @JsonProperty("PurchaseOrderNumber")
     private String purchaseOrderNumber;
 
     /**
- * Specifies the due date for the payment. If the value is null, the system treats the due date as the current date and time.
- */
+     * Specifies the due date for the payment. If the value is null, the system treats the due date as the current date and time.
+     */
     @JsonProperty("DueDate")
     private LocalDateTime dueDate;
 
     /**
- * Invoice status. Defaults to Draft (0). 0=Draft, 1=Sent, 2=Viewed, 3=Paid, 4=Overdue, 5=Cancelled, 6=PartiallyPaid
- */
+     * Invoice status. Defaults to Draft (0). 0=Draft, 1=Sent, 2=Viewed, 3=Paid, 4=Overdue, 5=Cancelled, 6=PartiallyPaid
+     */
     @JsonProperty("InvoiceStatus")
     private Integer invoiceStatus;
 
     /**
- * Customer billing name
- */
+     * Customer billing name
+     */
     @JsonProperty("BillingName")
     private String billingName;
 
     /**
- * Customer billing email
- */
+     * Customer billing email
+     */
     @JsonProperty("BillingEmail")
     private String billingEmail;
 
     /**
- * Customer billing phone
- */
+     * Customer billing phone
+     */
     @JsonProperty("BillingPhone")
     private String billingPhone;
 
     /**
- * Customer billing address line 1
- */
+     * Customer billing address line 1
+     */
     @JsonProperty("BillingAddress1")
     private String billingAddress1;
 
     /**
- * Customer billing address line 2
- */
+     * Customer billing address line 2
+     */
     @JsonProperty("BillingAddress2")
     private String billingAddress2;
 
     /**
- * Customer billing city
- */
+     * Customer billing city
+     */
     @JsonProperty("BillingCity")
     private String billingCity;
 
     /**
- * Customer billing provincestate
- */
+     * Customer billing provincestate
+     */
     @JsonProperty("BillingProvince")
     private String billingProvince;
 
     /**
- * Customer billing postalzip code
- */
+     * Customer billing postalzip code
+     */
     @JsonProperty("BillingPostalCode")
     private String billingPostalCode;
 
     /**
- * Customer billing country (ISO 2-letter code, e.g., "CA", "US")
- */
+     * Customer billing country (ISO 2-letter code, e.g., "CA", "US")
+     */
     @JsonProperty("BillingCountry")
     private String billingCountry;
 
     /**
- * First tax name (e.g., "TPS", "GST", "HST")
- */
+     * First tax name (e.g., "TPS", "GST", "HST")
+     */
     @JsonProperty("TaxName1")
     private String taxName1;
 
     /**
- * First tax rate as percentage (e.g., 5.00 for 5%)
- */
+     * First tax rate as percentage (e.g., 5.00 for 5%)
+     */
     @JsonProperty("TaxRate1")
     private Double taxRate1;
 
     /**
- * First tax registration number (e.g., GST number)
- */
+     * First tax registration number (e.g., GST number)
+     */
     @JsonProperty("TaxNumber1")
     private String taxNumber1;
 
     /**
- * Second tax name (e.g., "TVQ", "PST", "QST")
- */
+     * Second tax name (e.g., "TVQ", "PST", "QST")
+     */
     @JsonProperty("TaxName2")
     private String taxName2;
 
     /**
- * Second tax rate as percentage (e.g., 9.975 for QST)
- */
+     * Second tax rate as percentage (e.g., 9.975 for QST)
+     */
     @JsonProperty("TaxRate2")
     private Double taxRate2;
 
     /**
- * Second tax registration number (e.g., QST number)
- */
+     * Second tax registration number (e.g., QST number)
+     */
     @JsonProperty("TaxNumber2")
     private String taxNumber2;
 
     /**
- * Overall discount percentage applied to subtotal (0-100)
- */
+     * Overall discount percentage applied to subtotal (0-100)
+     */
     @JsonProperty("DiscountPercent")
     private Double discountPercent;
 
     /**
- * Overall discount amount applied to subtotal (alternative to percentage)
- */
+     * Overall discount amount applied to subtotal (alternative to percentage)
+     */
     @JsonProperty("DiscountAmount")
     private Double discountAmount;
 
     /**
- * Notes visible to the customer on the invoice
- */
+     * Notes visible to the customer on the invoice
+     */
     @JsonProperty("Notes")
     private String notes;
 
     /**
- * Internal notes (not visible to customer)
- */
+     * Internal notes (not visible to customer)
+     */
     @JsonProperty("InternalNotes")
     private String internalNotes;
 
     /**
- * Terms and conditions text for the invoice
- */
+     * Terms and conditions text for the invoice
+     */
     @JsonProperty("TermsAndConditions")
     private String termsAndConditions;
 
     /**
- * Footer text for the invoice
- */
+     * Footer text for the invoice
+     */
     @JsonProperty("FooterText")
     private String footerText;
 
     /**
- * External accounting system ID (for sync with QuickBooks, Sage, Xero, etc.)
- */
+     * External accounting system ID (for sync with QuickBooks, Sage, Xero, etc.)
+     */
     @JsonProperty("ExternalAccountingId")
     private String externalAccountingId;
 
     /**
- * Name of the external accounting system (e.g., "QuickBooks", "Sage", "Xero")
- */
+     * Name of the external accounting system (e.g., "QuickBooks", "Sage", "Xero")
+     */
     @JsonProperty("ExternalAccountingSystem")
     private String externalAccountingSystem;
 
     /**
- * Line items for the invoice. If not provided, a single line will be created from BillAmount.
- */
+     * Line items for the invoice. If not provided, a single line will be created from BillAmount.
+     */
     @JsonProperty("Lines")
     private List<BillLineEntity> lines;
 
@@ -203,70 +203,68 @@ public class BillEntityAdvanced  extends BillEntity  {
     
     public BillEntityAdvanced(String invoiceNumberPrefix, String invoiceNumber, String purchaseOrderNumber, LocalDateTime dueDate, Integer invoiceStatus, String billingName, String billingEmail, String billingPhone, String billingAddress1, String billingAddress2, String billingCity, String billingProvince, String billingPostalCode, String billingCountry, String taxName1, Double taxRate1, String taxNumber1, String taxName2, Double taxRate2, String taxNumber2, Double discountPercent, Double discountAmount, String notes, String internalNotes, String termsAndConditions, String footerText, String externalAccountingId, String externalAccountingSystem, List<BillLineEntity> lines) {
         this.invoiceNumberPrefix = invoiceNumberPrefix;
-this.invoiceNumber = invoiceNumber;
-this.purchaseOrderNumber = purchaseOrderNumber;
-this.dueDate = dueDate;
-this.invoiceStatus = invoiceStatus;
-this.billingName = billingName;
-this.billingEmail = billingEmail;
-this.billingPhone = billingPhone;
-this.billingAddress1 = billingAddress1;
-this.billingAddress2 = billingAddress2;
-this.billingCity = billingCity;
-this.billingProvince = billingProvince;
-this.billingPostalCode = billingPostalCode;
-this.billingCountry = billingCountry;
-this.taxName1 = taxName1;
-this.taxRate1 = taxRate1;
-this.taxNumber1 = taxNumber1;
-this.taxName2 = taxName2;
-this.taxRate2 = taxRate2;
-this.taxNumber2 = taxNumber2;
-this.discountPercent = discountPercent;
-this.discountAmount = discountAmount;
-this.notes = notes;
-this.internalNotes = internalNotes;
-this.termsAndConditions = termsAndConditions;
-this.footerText = footerText;
-this.externalAccountingId = externalAccountingId;
-this.externalAccountingSystem = externalAccountingSystem;
-this.lines = lines;
-
+        this.invoiceNumber = invoiceNumber;
+        this.purchaseOrderNumber = purchaseOrderNumber;
+        this.dueDate = dueDate;
+        this.invoiceStatus = invoiceStatus;
+        this.billingName = billingName;
+        this.billingEmail = billingEmail;
+        this.billingPhone = billingPhone;
+        this.billingAddress1 = billingAddress1;
+        this.billingAddress2 = billingAddress2;
+        this.billingCity = billingCity;
+        this.billingProvince = billingProvince;
+        this.billingPostalCode = billingPostalCode;
+        this.billingCountry = billingCountry;
+        this.taxName1 = taxName1;
+        this.taxRate1 = taxRate1;
+        this.taxNumber1 = taxNumber1;
+        this.taxName2 = taxName2;
+        this.taxRate2 = taxRate2;
+        this.taxNumber2 = taxNumber2;
+        this.discountPercent = discountPercent;
+        this.discountAmount = discountAmount;
+        this.notes = notes;
+        this.internalNotes = internalNotes;
+        this.termsAndConditions = termsAndConditions;
+        this.footerText = footerText;
+        this.externalAccountingId = externalAccountingId;
+        this.externalAccountingSystem = externalAccountingSystem;
+        this.lines = lines;
     }
     
     
     public BillEntityAdvanced(String merchantId, String billTitle, String billDescription, Double billAmount, String externalSystemBillNumber1, String externalSystemBillNumber2, String externalSystemBillNumber3, Currency billCurrency, Language language, String relatedCustomerId, boolean useConvenientFeeRule, String invoiceNumberPrefix, String invoiceNumber, String purchaseOrderNumber, LocalDateTime dueDate, Integer invoiceStatus, String billingName, String billingEmail, String billingPhone, String billingAddress1, String billingAddress2, String billingCity, String billingProvince, String billingPostalCode, String billingCountry, String taxName1, Double taxRate1, String taxNumber1, String taxName2, Double taxRate2, String taxNumber2, Double discountPercent, Double discountAmount, String notes, String internalNotes, String termsAndConditions, String footerText, String externalAccountingId, String externalAccountingSystem, List<BillLineEntity> lines) {
         super(merchantId, billTitle, billDescription, billAmount, externalSystemBillNumber1, externalSystemBillNumber2, externalSystemBillNumber3, billCurrency, language, relatedCustomerId, useConvenientFeeRule);
         this.invoiceNumberPrefix = invoiceNumberPrefix;
-this.invoiceNumber = invoiceNumber;
-this.purchaseOrderNumber = purchaseOrderNumber;
-this.dueDate = dueDate;
-this.invoiceStatus = invoiceStatus;
-this.billingName = billingName;
-this.billingEmail = billingEmail;
-this.billingPhone = billingPhone;
-this.billingAddress1 = billingAddress1;
-this.billingAddress2 = billingAddress2;
-this.billingCity = billingCity;
-this.billingProvince = billingProvince;
-this.billingPostalCode = billingPostalCode;
-this.billingCountry = billingCountry;
-this.taxName1 = taxName1;
-this.taxRate1 = taxRate1;
-this.taxNumber1 = taxNumber1;
-this.taxName2 = taxName2;
-this.taxRate2 = taxRate2;
-this.taxNumber2 = taxNumber2;
-this.discountPercent = discountPercent;
-this.discountAmount = discountAmount;
-this.notes = notes;
-this.internalNotes = internalNotes;
-this.termsAndConditions = termsAndConditions;
-this.footerText = footerText;
-this.externalAccountingId = externalAccountingId;
-this.externalAccountingSystem = externalAccountingSystem;
-this.lines = lines;
-
+        this.invoiceNumber = invoiceNumber;
+        this.purchaseOrderNumber = purchaseOrderNumber;
+        this.dueDate = dueDate;
+        this.invoiceStatus = invoiceStatus;
+        this.billingName = billingName;
+        this.billingEmail = billingEmail;
+        this.billingPhone = billingPhone;
+        this.billingAddress1 = billingAddress1;
+        this.billingAddress2 = billingAddress2;
+        this.billingCity = billingCity;
+        this.billingProvince = billingProvince;
+        this.billingPostalCode = billingPostalCode;
+        this.billingCountry = billingCountry;
+        this.taxName1 = taxName1;
+        this.taxRate1 = taxRate1;
+        this.taxNumber1 = taxNumber1;
+        this.taxName2 = taxName2;
+        this.taxRate2 = taxRate2;
+        this.taxNumber2 = taxNumber2;
+        this.discountPercent = discountPercent;
+        this.discountAmount = discountAmount;
+        this.notes = notes;
+        this.internalNotes = internalNotes;
+        this.termsAndConditions = termsAndConditions;
+        this.footerText = footerText;
+        this.externalAccountingId = externalAccountingId;
+        this.externalAccountingSystem = externalAccountingSystem;
+        this.lines = lines;
     }
 
     
@@ -522,35 +520,35 @@ this.lines = lines;
     @Override
     public String toString() {
         return "BillEntityAdvanced{" +
-                 "invoiceNumberPrefix='" + invoiceNumberPrefix + '\'' +
- ", invoiceNumber='" + invoiceNumber + '\'' +
- ", purchaseOrderNumber='" + purchaseOrderNumber + '\'' +
- ", dueDate='" + dueDate + '\'' +
- ", invoiceStatus='" + invoiceStatus + '\'' +
- ", billingName='" + billingName + '\'' +
- ", billingEmail='" + billingEmail + '\'' +
- ", billingPhone='" + billingPhone + '\'' +
- ", billingAddress1='" + billingAddress1 + '\'' +
- ", billingAddress2='" + billingAddress2 + '\'' +
- ", billingCity='" + billingCity + '\'' +
- ", billingProvince='" + billingProvince + '\'' +
- ", billingPostalCode='" + billingPostalCode + '\'' +
- ", billingCountry='" + billingCountry + '\'' +
- ", taxName1='" + taxName1 + '\'' +
- ", taxRate1='" + taxRate1 + '\'' +
- ", taxNumber1='" + taxNumber1 + '\'' +
- ", taxName2='" + taxName2 + '\'' +
- ", taxRate2='" + taxRate2 + '\'' +
- ", taxNumber2='" + taxNumber2 + '\'' +
- ", discountPercent='" + discountPercent + '\'' +
- ", discountAmount='" + discountAmount + '\'' +
- ", notes='" + notes + '\'' +
- ", internalNotes='" + internalNotes + '\'' +
- ", termsAndConditions='" + termsAndConditions + '\'' +
- ", footerText='" + footerText + '\'' +
- ", externalAccountingId='" + externalAccountingId + '\'' +
- ", externalAccountingSystem='" + externalAccountingSystem + '\'' +
- ", lines='" + lines + '\'' +
+                "invoiceNumberPrefix='" + invoiceNumberPrefix + '\'' +
+                ", invoiceNumber='" + invoiceNumber + '\'' +
+                ", purchaseOrderNumber='" + purchaseOrderNumber + '\'' +
+                ", dueDate='" + dueDate + '\'' +
+                ", invoiceStatus='" + invoiceStatus + '\'' +
+                ", billingName='" + billingName + '\'' +
+                ", billingEmail='" + billingEmail + '\'' +
+                ", billingPhone='" + billingPhone + '\'' +
+                ", billingAddress1='" + billingAddress1 + '\'' +
+                ", billingAddress2='" + billingAddress2 + '\'' +
+                ", billingCity='" + billingCity + '\'' +
+                ", billingProvince='" + billingProvince + '\'' +
+                ", billingPostalCode='" + billingPostalCode + '\'' +
+                ", billingCountry='" + billingCountry + '\'' +
+                ", taxName1='" + taxName1 + '\'' +
+                ", taxRate1='" + taxRate1 + '\'' +
+                ", taxNumber1='" + taxNumber1 + '\'' +
+                ", taxName2='" + taxName2 + '\'' +
+                ", taxRate2='" + taxRate2 + '\'' +
+                ", taxNumber2='" + taxNumber2 + '\'' +
+                ", discountPercent='" + discountPercent + '\'' +
+                ", discountAmount='" + discountAmount + '\'' +
+                ", notes='" + notes + '\'' +
+                ", internalNotes='" + internalNotes + '\'' +
+                ", termsAndConditions='" + termsAndConditions + '\'' +
+                ", footerText='" + footerText + '\'' +
+                ", externalAccountingId='" + externalAccountingId + '\'' +
+                ", externalAccountingSystem='" + externalAccountingSystem + '\'' +
+                ", lines='" + lines + '\'' +
 
                 '}';
     }

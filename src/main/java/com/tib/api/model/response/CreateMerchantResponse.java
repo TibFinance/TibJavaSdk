@@ -29,14 +29,12 @@ public class CreateMerchantResponse extends CustomAPIResponse {
     public CreateMerchantResponse(Error[] errors, boolean hasError, String messages, String merchantId) {
         super(errors, hasError, messages);
         this.merchantId = merchantId;
-
     }
 
     public CreateMerchantResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.merchantId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class CreateMerchantResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateMerchantResponse{" +
-                 "merchantId='" + merchantId + '\'' +
+                "merchantId='" + merchantId + '\'' +
 
                 '}';
     }

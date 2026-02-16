@@ -20,32 +20,32 @@ public class SimpleCustomer   {
 
     
     /**
- * This property represents the full name of the customer in the system.
- */
+     * This property represents the full name of the customer in the system.
+     */
     @JsonProperty("CustomerName")
     private String customerName;
 
     /**
- * Serves as a unique identifier for customers within an external system, enabling efficient data mapping and integration across various platforms.
- */
+     * Serves as a unique identifier for customers within an external system, enabling efficient data mapping and integration across various platforms.
+     */
     @JsonProperty("CustomerExternalId")
     private String customerExternalId;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * Retrieves or assigns a detailed description for a specific customer.
- */
+     * Retrieves or assigns a detailed description for a specific customer.
+     */
     @JsonProperty("CustomerDescription")
     private String customerDescription;
 
     /**
- * Handles the acquisition and assignment of a customer's email address.
- */
+     * Handles the acquisition and assignment of a customer's email address.
+     */
     @JsonProperty("CustomerEmail")
     private String customerEmail;
 
@@ -57,11 +57,10 @@ public class SimpleCustomer   {
     
     public SimpleCustomer(String customerName, String customerExternalId, Language language, String customerDescription, String customerEmail) {
         this.customerName = customerName;
-this.customerExternalId = customerExternalId;
-this.language = language;
-this.customerDescription = customerDescription;
-this.customerEmail = customerEmail;
-
+        this.customerExternalId = customerExternalId;
+        this.language = language;
+        this.customerDescription = customerDescription;
+        this.customerEmail = customerEmail;
     }
     
     
@@ -127,11 +126,11 @@ this.customerEmail = customerEmail;
     @Override
     public String toString() {
         return "SimpleCustomer{" +
-                 "customerName='" + customerName + '\'' +
- ", customerExternalId='" + customerExternalId + '\'' +
- ", language='" + language + '\'' +
- ", customerDescription='" + customerDescription + '\'' +
- ", customerEmail='" + customerEmail + '\'' +
+                "customerName='" + customerName + '\'' +
+                ", customerExternalId='" + customerExternalId + '\'' +
+                ", language='" + language + '\'' +
+                ", customerDescription='" + customerDescription + '\'' +
+                ", customerEmail='" + customerEmail + '\'' +
 
                 '}';
     }

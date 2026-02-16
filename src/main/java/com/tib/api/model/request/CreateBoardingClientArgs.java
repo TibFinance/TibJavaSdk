@@ -19,32 +19,32 @@ public class CreateBoardingClientArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Retrieves or assigns the name of the sub-client.
- */
+     * Retrieves or assigns the name of the sub-client.
+     */
     @JsonProperty("Name")
     private String name;
 
     /**
- * Specifies the email address associated with the merchant.
- */
+     * Specifies the email address associated with the merchant.
+     */
     @JsonProperty("Email")
     private String email;
 
     /**
- * The merchant's phone number used for contact and transaction notifications.
- */
+     * The merchant's phone number used for contact and transaction notifications.
+     */
     @JsonProperty("PhoneNumber")
     private String phoneNumber;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Integer language;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Integer currency;
 
@@ -56,11 +56,10 @@ public class CreateBoardingClientArgs  implements IBaseCryptedServiceArgs  {
     
     public CreateBoardingClientArgs(String name, String email, String phoneNumber, Integer language, Integer currency) {
         this.name = name;
-this.email = email;
-this.phoneNumber = phoneNumber;
-this.language = language;
-this.currency = currency;
-
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.language = language;
+        this.currency = currency;
     }
     
     
@@ -126,11 +125,11 @@ this.currency = currency;
     @Override
     public String toString() {
         return "CreateBoardingClientArgs{" +
-                 "name='" + name + '\'' +
- ", email='" + email + '\'' +
- ", phoneNumber='" + phoneNumber + '\'' +
- ", language='" + language + '\'' +
- ", currency='" + currency + '\'' +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", language='" + language + '\'' +
+                ", currency='" + currency + '\'' +
 
                 '}';
     }

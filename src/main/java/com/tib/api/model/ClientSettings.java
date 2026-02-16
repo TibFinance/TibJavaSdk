@@ -19,26 +19,26 @@ public class ClientSettings   {
 
     
     /**
- * Gets or sets the daily collection limit applied to the service contract.
- */
+     * Gets or sets the daily collection limit applied to the service contract.
+     */
     @JsonProperty("CollectionLimitDaily")
     private Double collectionLimitDaily;
 
     /**
- * Gets or sets the maximum amount that can be deposited in a single day for the client’s service contract.
- */
+     * Gets or sets the maximum amount that can be deposited in a single day for the client’s service contract.
+     */
     @JsonProperty("DepositLimitDaily")
     private Double depositLimitDaily;
 
     /**
- * Gets the tib warning collection limit daily.
- */
+     * Gets the tib warning collection limit daily.
+     */
     @JsonProperty("ClientWarningCollectionLimitDaily")
     private Double clientWarningCollectionLimitDaily;
 
     /**
- * Gets the tib warning deposit limit daily.
- */
+     * Gets the tib warning deposit limit daily.
+     */
     @JsonProperty("ClientWarningDepositLimitDaily")
     private Double clientWarningDepositLimitDaily;
 
@@ -50,10 +50,9 @@ public class ClientSettings   {
     
     public ClientSettings(Double collectionLimitDaily, Double depositLimitDaily, Double clientWarningCollectionLimitDaily, Double clientWarningDepositLimitDaily) {
         this.collectionLimitDaily = collectionLimitDaily;
-this.depositLimitDaily = depositLimitDaily;
-this.clientWarningCollectionLimitDaily = clientWarningCollectionLimitDaily;
-this.clientWarningDepositLimitDaily = clientWarningDepositLimitDaily;
-
+        this.depositLimitDaily = depositLimitDaily;
+        this.clientWarningCollectionLimitDaily = clientWarningCollectionLimitDaily;
+        this.clientWarningDepositLimitDaily = clientWarningDepositLimitDaily;
     }
     
     
@@ -111,10 +110,10 @@ this.clientWarningDepositLimitDaily = clientWarningDepositLimitDaily;
     @Override
     public String toString() {
         return "ClientSettings{" +
-                 "collectionLimitDaily='" + collectionLimitDaily + '\'' +
- ", depositLimitDaily='" + depositLimitDaily + '\'' +
- ", clientWarningCollectionLimitDaily='" + clientWarningCollectionLimitDaily + '\'' +
- ", clientWarningDepositLimitDaily='" + clientWarningDepositLimitDaily + '\'' +
+                "collectionLimitDaily='" + collectionLimitDaily + '\'' +
+                ", depositLimitDaily='" + depositLimitDaily + '\'' +
+                ", clientWarningCollectionLimitDaily='" + clientWarningCollectionLimitDaily + '\'' +
+                ", clientWarningDepositLimitDaily='" + clientWarningDepositLimitDaily + '\'' +
 
                 '}';
     }

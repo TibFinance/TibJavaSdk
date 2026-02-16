@@ -19,20 +19,20 @@ public class BoardingBaseError   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ErrorName")
     private String errorName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Code")
     private String code;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
@@ -44,9 +44,8 @@ public class BoardingBaseError   {
     
     public BoardingBaseError(String errorName, String code, String description) {
         this.errorName = errorName;
-this.code = code;
-this.description = description;
-
+        this.code = code;
+        this.description = description;
     }
     
     
@@ -96,9 +95,9 @@ this.description = description;
     @Override
     public String toString() {
         return "BoardingBaseError{" +
-                 "errorName='" + errorName + '\'' +
- ", code='" + code + '\'' +
- ", description='" + description + '\'' +
+                "errorName='" + errorName + '\'' +
+                ", code='" + code + '\'' +
+                ", description='" + description + '\'' +
 
                 '}';
     }

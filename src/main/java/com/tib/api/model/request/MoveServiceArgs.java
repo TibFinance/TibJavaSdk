@@ -20,14 +20,14 @@ public class MoveServiceArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
@@ -39,16 +39,14 @@ public class MoveServiceArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public MoveServiceArgs(String clientId, String serviceId) {
         this.clientId = clientId;
-this.serviceId = serviceId;
-
+        this.serviceId = serviceId;
     }
     
     
     public MoveServiceArgs(String adminSessionToken, String clientId, String serviceId) {
         super(adminSessionToken);
         this.clientId = clientId;
-this.serviceId = serviceId;
-
+        this.serviceId = serviceId;
     }
 
     
@@ -88,8 +86,8 @@ this.serviceId = serviceId;
     @Override
     public String toString() {
         return "MoveServiceArgs{" +
-                 "clientId='" + clientId + '\'' +
- ", serviceId='" + serviceId + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
 
                 '}';
     }

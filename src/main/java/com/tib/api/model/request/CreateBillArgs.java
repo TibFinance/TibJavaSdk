@@ -21,14 +21,14 @@ public class CreateBillArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Represents the data required to create a new bill in the TIB Finance system.
- */
+     * Represents the data required to create a new bill in the TIB Finance system.
+     */
     @JsonProperty("BillData")
     private BillEntity billData;
 
     /**
- * Determines whether the function should return an error if the merchant has not been authorized. This boolean property ensures that unauthorized merchants are not processed further.
- */
+     * Determines whether the function should return an error if the merchant has not been authorized. This boolean property ensures that unauthorized merchants are not processed further.
+     */
     @JsonProperty("BreakIfMerchantNeverBeenAuthorized")
     private boolean breakIfMerchantNeverBeenAuthorized;
 
@@ -40,16 +40,14 @@ public class CreateBillArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CreateBillArgs(BillEntity billData, boolean breakIfMerchantNeverBeenAuthorized) {
         this.billData = billData;
-this.breakIfMerchantNeverBeenAuthorized = breakIfMerchantNeverBeenAuthorized;
-
+        this.breakIfMerchantNeverBeenAuthorized = breakIfMerchantNeverBeenAuthorized;
     }
     
     
     public CreateBillArgs(String sessionToken, BillEntity billData, boolean breakIfMerchantNeverBeenAuthorized) {
         super(sessionToken);
         this.billData = billData;
-this.breakIfMerchantNeverBeenAuthorized = breakIfMerchantNeverBeenAuthorized;
-
+        this.breakIfMerchantNeverBeenAuthorized = breakIfMerchantNeverBeenAuthorized;
     }
 
     
@@ -89,8 +87,8 @@ this.breakIfMerchantNeverBeenAuthorized = breakIfMerchantNeverBeenAuthorized;
     @Override
     public String toString() {
         return "CreateBillArgs{" +
-                 "billData='" + billData + '\'' +
- ", breakIfMerchantNeverBeenAuthorized='" + breakIfMerchantNeverBeenAuthorized + '\'' +
+                "billData='" + billData + '\'' +
+                ", breakIfMerchantNeverBeenAuthorized='" + breakIfMerchantNeverBeenAuthorized + '\'' +
 
                 '}';
     }

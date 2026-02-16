@@ -29,14 +29,12 @@ public class GetSuppliersResponse extends CustomAPIResponse {
     public GetSuppliersResponse(Error[] errors, boolean hasError, String messages, List<Object> suppliers) {
         super(errors, hasError, messages);
         this.suppliers = suppliers;
-
     }
 
     public GetSuppliersResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.suppliers = (List<Object>) apiResponse.getResponse();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class GetSuppliersResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetSuppliersResponse{" +
-                 "suppliers='" + suppliers + '\'' +
+                "suppliers='" + suppliers + '\'' +
 
                 '}';
     }

@@ -19,38 +19,38 @@ public class MerchantEntity   {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantEmail")
     private String merchantEmail;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsClientMerchant")
     private boolean isClientMerchant;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Integer language;
 
@@ -62,12 +62,11 @@ public class MerchantEntity   {
     
     public MerchantEntity(String merchantId, String serviceId, String merchantName, String merchantEmail, boolean isClientMerchant, Integer language) {
         this.merchantId = merchantId;
-this.serviceId = serviceId;
-this.merchantName = merchantName;
-this.merchantEmail = merchantEmail;
-this.isClientMerchant = isClientMerchant;
-this.language = language;
-
+        this.serviceId = serviceId;
+        this.merchantName = merchantName;
+        this.merchantEmail = merchantEmail;
+        this.isClientMerchant = isClientMerchant;
+        this.language = language;
     }
     
     
@@ -141,12 +140,12 @@ this.language = language;
     @Override
     public String toString() {
         return "MerchantEntity{" +
-                 "merchantId='" + merchantId + '\'' +
- ", serviceId='" + serviceId + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", merchantEmail='" + merchantEmail + '\'' +
- ", isClientMerchant='" + isClientMerchant + '\'' +
- ", language='" + language + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", merchantEmail='" + merchantEmail + '\'' +
+                ", isClientMerchant='" + isClientMerchant + '\'' +
+                ", language='" + language + '\'' +
 
                 '}';
     }

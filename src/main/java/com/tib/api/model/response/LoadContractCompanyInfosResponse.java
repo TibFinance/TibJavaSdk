@@ -34,17 +34,15 @@ public class LoadContractCompanyInfosResponse extends CustomAPIResponse {
     public LoadContractCompanyInfosResponse(Error[] errors, boolean hasError, String messages, ContractInfoEntity companyInfos, List<EditionRequest> editionRequests) {
         super(errors, hasError, messages);
         this.companyInfos = companyInfos;
-this.editionRequests = editionRequests;
-
+        this.editionRequests = editionRequests;
     }
 
     public LoadContractCompanyInfosResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.companyInfos = objectMapper.readValue(json, ContractInfoEntity.class);
-this.editionRequests = (List<EditionRequest>) apiResponse.getResponse();
-
+            this.companyInfos = objectMapper.readValue(json, ContractInfoEntity.class);
+            this.editionRequests = (List<EditionRequest>) apiResponse.getResponse();
         }
     }
 
@@ -85,8 +83,8 @@ this.editionRequests = (List<EditionRequest>) apiResponse.getResponse();
     @Override
     public String toString() {
         return "LoadContractCompanyInfosResponse{" +
-                 "companyInfos='" + companyInfos + '\'' +
- ", editionRequests='" + editionRequests + '\'' +
+                "companyInfos='" + companyInfos + '\'' +
+                ", editionRequests='" + editionRequests + '\'' +
 
                 '}';
     }

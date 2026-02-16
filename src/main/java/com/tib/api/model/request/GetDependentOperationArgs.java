@@ -20,14 +20,14 @@ public class GetDependentOperationArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Identifies the specific transfer operation that needs to be reverted.
- */
+     * Identifies the specific transfer operation that needs to be reverted.
+     */
     @JsonProperty("TransferId")
     private String transferId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationId")
     private String operationId;
 
@@ -39,16 +39,14 @@ public class GetDependentOperationArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public GetDependentOperationArgs(String transferId, String operationId) {
         this.transferId = transferId;
-this.operationId = operationId;
-
+        this.operationId = operationId;
     }
     
     
     public GetDependentOperationArgs(String adminSessionToken, String transferId, String operationId) {
         super(adminSessionToken);
         this.transferId = transferId;
-this.operationId = operationId;
-
+        this.operationId = operationId;
     }
 
     
@@ -88,8 +86,8 @@ this.operationId = operationId;
     @Override
     public String toString() {
         return "GetDependentOperationArgs{" +
-                 "transferId='" + transferId + '\'' +
- ", operationId='" + operationId + '\'' +
+                "transferId='" + transferId + '\'' +
+                ", operationId='" + operationId + '\'' +
 
                 '}';
     }

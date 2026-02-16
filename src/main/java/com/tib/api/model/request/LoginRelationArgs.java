@@ -20,26 +20,26 @@ public class LoginRelationArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("InternalReferenceId")
     private String internalReferenceId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("InternalReferenceType")
     private Integer internalReferenceType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("LoginId")
     private String loginId;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
@@ -51,20 +51,18 @@ public class LoginRelationArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public LoginRelationArgs(String internalReferenceId, Integer internalReferenceType, String loginId, String description) {
         this.internalReferenceId = internalReferenceId;
-this.internalReferenceType = internalReferenceType;
-this.loginId = loginId;
-this.description = description;
-
+        this.internalReferenceType = internalReferenceType;
+        this.loginId = loginId;
+        this.description = description;
     }
     
     
     public LoginRelationArgs(String adminSessionToken, String internalReferenceId, Integer internalReferenceType, String loginId, String description) {
         super(adminSessionToken);
         this.internalReferenceId = internalReferenceId;
-this.internalReferenceType = internalReferenceType;
-this.loginId = loginId;
-this.description = description;
-
+        this.internalReferenceType = internalReferenceType;
+        this.loginId = loginId;
+        this.description = description;
     }
 
     
@@ -120,10 +118,10 @@ this.description = description;
     @Override
     public String toString() {
         return "LoginRelationArgs{" +
-                 "internalReferenceId='" + internalReferenceId + '\'' +
- ", internalReferenceType='" + internalReferenceType + '\'' +
- ", loginId='" + loginId + '\'' +
- ", description='" + description + '\'' +
+                "internalReferenceId='" + internalReferenceId + '\'' +
+                ", internalReferenceType='" + internalReferenceType + '\'' +
+                ", loginId='" + loginId + '\'' +
+                ", description='" + description + '\'' +
 
                 '}';
     }

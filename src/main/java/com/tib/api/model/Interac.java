@@ -19,38 +19,38 @@ public class Interac   {
 
     
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * The 'Owner' property is designed to assign and identify the ownership of a specific resource or object within the system.
- */
+     * The 'Owner' property is designed to assign and identify the ownership of a specific resource or object within the system.
+     */
     @JsonProperty("Owner")
     private String owner;
 
     /**
- * TargetEmailAddress specifies the email address to which the Interac request is sent. It identifies the recipient for initiating an Interac transaction.
- */
+     * TargetEmailAddress specifies the email address to which the Interac request is sent. It identifies the recipient for initiating an Interac transaction.
+     */
     @JsonProperty("TargetEmailAddress")
     private String targetEmailAddress;
 
     /**
- * Specifies the mobile phone number to which the Interac request is sent.
- */
+     * Specifies the mobile phone number to which the Interac request is sent.
+     */
     @JsonProperty("TargetMobilePhoneNumber")
     private String targetMobilePhoneNumber;
 
     /**
- * The question displayed to the Interac recipient to request acceptance of a deposit.
- */
+     * The question displayed to the Interac recipient to request acceptance of a deposit.
+     */
     @JsonProperty("InteracQuestion")
     private String interacQuestion;
 
     /**
- * InteracAnswer is the response string that the target must provide to accept an Interac deposit.
- */
+     * InteracAnswer is the response string that the target must provide to accept an Interac deposit.
+     */
     @JsonProperty("InteracAnswer")
     private String interacAnswer;
 
@@ -62,12 +62,11 @@ public class Interac   {
     
     public Interac(String description, String owner, String targetEmailAddress, String targetMobilePhoneNumber, String interacQuestion, String interacAnswer) {
         this.description = description;
-this.owner = owner;
-this.targetEmailAddress = targetEmailAddress;
-this.targetMobilePhoneNumber = targetMobilePhoneNumber;
-this.interacQuestion = interacQuestion;
-this.interacAnswer = interacAnswer;
-
+        this.owner = owner;
+        this.targetEmailAddress = targetEmailAddress;
+        this.targetMobilePhoneNumber = targetMobilePhoneNumber;
+        this.interacQuestion = interacQuestion;
+        this.interacAnswer = interacAnswer;
     }
     
     
@@ -141,12 +140,12 @@ this.interacAnswer = interacAnswer;
     @Override
     public String toString() {
         return "Interac{" +
-                 "description='" + description + '\'' +
- ", owner='" + owner + '\'' +
- ", targetEmailAddress='" + targetEmailAddress + '\'' +
- ", targetMobilePhoneNumber='" + targetMobilePhoneNumber + '\'' +
- ", interacQuestion='" + interacQuestion + '\'' +
- ", interacAnswer='" + interacAnswer + '\'' +
+                "description='" + description + '\'' +
+                ", owner='" + owner + '\'' +
+                ", targetEmailAddress='" + targetEmailAddress + '\'' +
+                ", targetMobilePhoneNumber='" + targetMobilePhoneNumber + '\'' +
+                ", interacQuestion='" + interacQuestion + '\'' +
+                ", interacAnswer='" + interacAnswer + '\'' +
 
                 '}';
     }

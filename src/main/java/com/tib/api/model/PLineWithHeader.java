@@ -29,7 +29,6 @@ public class PLineWithHeader  extends LineBaseWithHeader  {
     
     public PLineWithHeader(BaseLineHeader header, Integer startPosition) {
         super(header, startPosition);
-        
     }
 
     

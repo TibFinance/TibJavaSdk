@@ -20,26 +20,26 @@ public class DasPaymentCanadaEntity   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PeriodEndDate")
     private DasMonthlyPeriod periodEndDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("LastPayPeriodEmployeeCount")
     private Integer lastPayPeriodEmployeeCount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PeriodRawRemuneration")
     private Double periodRawRemuneration;
 
     /**
- * Specifies the amount to be paid. The value must not exceed the sum of the associated bill amount and any previously recorded payments. If null, the system applies the remaining unpaid portion of the bill.
- */
+     * Specifies the amount to be paid. The value must not exceed the sum of the associated bill amount and any previously recorded payments. If null, the system applies the remaining unpaid portion of the bill.
+     */
     @JsonProperty("PaymentAmount")
     private Double paymentAmount;
 
@@ -51,10 +51,9 @@ public class DasPaymentCanadaEntity   {
     
     public DasPaymentCanadaEntity(DasMonthlyPeriod periodEndDate, Integer lastPayPeriodEmployeeCount, Double periodRawRemuneration, Double paymentAmount) {
         this.periodEndDate = periodEndDate;
-this.lastPayPeriodEmployeeCount = lastPayPeriodEmployeeCount;
-this.periodRawRemuneration = periodRawRemuneration;
-this.paymentAmount = paymentAmount;
-
+        this.lastPayPeriodEmployeeCount = lastPayPeriodEmployeeCount;
+        this.periodRawRemuneration = periodRawRemuneration;
+        this.paymentAmount = paymentAmount;
     }
     
     
@@ -112,10 +111,10 @@ this.paymentAmount = paymentAmount;
     @Override
     public String toString() {
         return "DasPaymentCanadaEntity{" +
-                 "periodEndDate='" + periodEndDate + '\'' +
- ", lastPayPeriodEmployeeCount='" + lastPayPeriodEmployeeCount + '\'' +
- ", periodRawRemuneration='" + periodRawRemuneration + '\'' +
- ", paymentAmount='" + paymentAmount + '\'' +
+                "periodEndDate='" + periodEndDate + '\'' +
+                ", lastPayPeriodEmployeeCount='" + lastPayPeriodEmployeeCount + '\'' +
+                ", periodRawRemuneration='" + periodRawRemuneration + '\'' +
+                ", paymentAmount='" + paymentAmount + '\'' +
 
                 '}';
     }

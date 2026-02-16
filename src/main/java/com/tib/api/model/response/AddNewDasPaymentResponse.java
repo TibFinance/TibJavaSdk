@@ -29,14 +29,12 @@ public class AddNewDasPaymentResponse extends CustomAPIResponse {
     public AddNewDasPaymentResponse(Error[] errors, boolean hasError, String messages, String dasPaymentId) {
         super(errors, hasError, messages);
         this.dasPaymentId = dasPaymentId;
-
     }
 
     public AddNewDasPaymentResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.dasPaymentId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class AddNewDasPaymentResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "AddNewDasPaymentResponse{" +
-                 "dasPaymentId='" + dasPaymentId + '\'' +
+                "dasPaymentId='" + dasPaymentId + '\'' +
 
                 '}';
     }

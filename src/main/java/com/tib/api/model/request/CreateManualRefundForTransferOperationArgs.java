@@ -20,14 +20,14 @@ public class CreateManualRefundForTransferOperationArgs  extends BaseAuthenticat
 
     
     /**
- * Identifies the specific transfer operation that needs to be reverted.
- */
+     * Identifies the specific transfer operation that needs to be reverted.
+     */
     @JsonProperty("TransferId")
     private String transferId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -39,16 +39,14 @@ public class CreateManualRefundForTransferOperationArgs  extends BaseAuthenticat
     
     public CreateManualRefundForTransferOperationArgs(String transferId, String merchantId) {
         this.transferId = transferId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
     
     
     public CreateManualRefundForTransferOperationArgs(String sessionToken, String transferId, String merchantId) {
         super(sessionToken);
         this.transferId = transferId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     
@@ -88,8 +86,8 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "CreateManualRefundForTransferOperationArgs{" +
-                 "transferId='" + transferId + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "transferId='" + transferId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

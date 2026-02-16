@@ -34,17 +34,15 @@ public class GetDropInResponse extends CustomAPIResponse {
     public GetDropInResponse(Error[] errors, boolean hasError, String messages, DropInEntity dropIn, WhiteLabeling whiteLabeling) {
         super(errors, hasError, messages);
         this.dropIn = dropIn;
-this.whiteLabeling = whiteLabeling;
-
+        this.whiteLabeling = whiteLabeling;
     }
 
     public GetDropInResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.dropIn = objectMapper.readValue(json, DropInEntity.class);
-this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
-
+            this.dropIn = objectMapper.readValue(json, DropInEntity.class);
+            this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
         }
     }
 
@@ -85,8 +83,8 @@ this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
     @Override
     public String toString() {
         return "GetDropInResponse{" +
-                 "dropIn='" + dropIn + '\'' +
- ", whiteLabeling='" + whiteLabeling + '\'' +
+                "dropIn='" + dropIn + '\'' +
+                ", whiteLabeling='" + whiteLabeling + '\'' +
 
                 '}';
     }

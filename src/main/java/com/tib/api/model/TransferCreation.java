@@ -20,26 +20,26 @@ public class TransferCreation   {
 
     
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
     /**
- * Represents the unique identifier for a group within the TIB Finance API.
- */
+     * Represents the unique identifier for a group within the TIB Finance API.
+     */
     @JsonProperty("GroupId")
     private String groupId;
 
     /**
- * Gets or sets the number of transfers.
- */
+     * Gets or sets the number of transfers.
+     */
     @JsonProperty("NumberOfTransfers")
     private Integer numberOfTransfers;
 
     /**
- * Defines and manages the type of transfer operation within the system.
- */
+     * Defines and manages the type of transfer operation within the system.
+     */
     @JsonProperty("TransferType")
     private TransferType transferType;
 
@@ -51,10 +51,9 @@ public class TransferCreation   {
     
     public TransferCreation(LocalDateTime createdDate, String groupId, Integer numberOfTransfers, TransferType transferType) {
         this.createdDate = createdDate;
-this.groupId = groupId;
-this.numberOfTransfers = numberOfTransfers;
-this.transferType = transferType;
-
+        this.groupId = groupId;
+        this.numberOfTransfers = numberOfTransfers;
+        this.transferType = transferType;
     }
     
     
@@ -112,10 +111,10 @@ this.transferType = transferType;
     @Override
     public String toString() {
         return "TransferCreation{" +
-                 "createdDate='" + createdDate + '\'' +
- ", groupId='" + groupId + '\'' +
- ", numberOfTransfers='" + numberOfTransfers + '\'' +
- ", transferType='" + transferType + '\'' +
+                "createdDate='" + createdDate + '\'' +
+                ", groupId='" + groupId + '\'' +
+                ", numberOfTransfers='" + numberOfTransfers + '\'' +
+                ", transferType='" + transferType + '\'' +
 
                 '}';
     }

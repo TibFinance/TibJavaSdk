@@ -19,8 +19,8 @@ public class DependentOperation   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationId")
     private String operationId;
 
@@ -32,7 +32,6 @@ public class DependentOperation   {
     
     public DependentOperation(String operationId) {
         this.operationId = operationId;
-
     }
     
     
@@ -66,7 +65,7 @@ public class DependentOperation   {
     @Override
     public String toString() {
         return "DependentOperation{" +
-                 "operationId='" + operationId + '\'' +
+                "operationId='" + operationId + '\'' +
 
                 '}';
     }

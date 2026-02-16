@@ -25,13 +25,11 @@ public class DeletePaymentMethodResponse extends CustomAPIResponse {
 
     public DeletePaymentMethodResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public DeletePaymentMethodResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

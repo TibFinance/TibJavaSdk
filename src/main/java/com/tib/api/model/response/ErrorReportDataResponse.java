@@ -30,14 +30,12 @@ public class ErrorReportDataResponse extends CustomAPIResponse {
     public ErrorReportDataResponse(Error[] errors, boolean hasError, String messages, List<ErrorReportData> errorReportDataList) {
         super(errors, hasError, messages);
         this.errorReportDataList = errorReportDataList;
-
     }
 
     public ErrorReportDataResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.errorReportDataList = (List<ErrorReportData>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class ErrorReportDataResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ErrorReportDataResponse{" +
-                 "errorReportDataList='" + errorReportDataList + '\'' +
+                "errorReportDataList='" + errorReportDataList + '\'' +
 
                 '}';
     }

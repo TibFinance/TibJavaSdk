@@ -33,16 +33,14 @@ public class ListServicesResponse extends CustomAPIResponse {
     public ListServicesResponse(Error[] errors, boolean hasError, String messages, List<Service> services, boolean skipClientApprobation) {
         super(errors, hasError, messages);
         this.services = services;
-this.skipClientApprobation = skipClientApprobation;
-
+        this.skipClientApprobation = skipClientApprobation;
     }
 
     public ListServicesResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.services = (List<Service>) apiResponse.getResponse();
-this.skipClientApprobation = Boolean.parseBoolean(apiResponse.getResponse().toString());
-
+            this.skipClientApprobation = Boolean.parseBoolean(apiResponse.getResponse().toString());
         }
     }
 
@@ -83,8 +81,8 @@ this.skipClientApprobation = Boolean.parseBoolean(apiResponse.getResponse().toSt
     @Override
     public String toString() {
         return "ListServicesResponse{" +
-                 "services='" + services + '\'' +
- ", skipClientApprobation='" + skipClientApprobation + '\'' +
+                "services='" + services + '\'' +
+                ", skipClientApprobation='" + skipClientApprobation + '\'' +
 
                 '}';
     }

@@ -20,8 +20,8 @@ public class GetSessionCookiesAdminArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Key")
     private String key;
 
@@ -33,14 +33,12 @@ public class GetSessionCookiesAdminArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public GetSessionCookiesAdminArgs(String key) {
         this.key = key;
-
     }
     
     
     public GetSessionCookiesAdminArgs(String adminSessionToken, String key) {
         super(adminSessionToken);
         this.key = key;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetSessionCookiesAdminArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "GetSessionCookiesAdminArgs{" +
-                 "key='" + key + '\'' +
+                "key='" + key + '\'' +
 
                 '}';
     }

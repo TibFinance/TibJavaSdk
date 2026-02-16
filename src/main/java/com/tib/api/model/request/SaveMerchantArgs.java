@@ -21,14 +21,14 @@ public class SaveMerchantArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * This property holds the basic information necessary for creating or updating a merchant's account within the TIB Finance API system.
- */
+     * This property holds the basic information necessary for creating or updating a merchant's account within the TIB Finance API system.
+     */
     @JsonProperty("MerchantInfo")
     private Merchant merchantInfo;
 
@@ -40,16 +40,14 @@ public class SaveMerchantArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public SaveMerchantArgs(String merchantId, Merchant merchantInfo) {
         this.merchantId = merchantId;
-this.merchantInfo = merchantInfo;
-
+        this.merchantInfo = merchantInfo;
     }
     
     
     public SaveMerchantArgs(String sessionToken, String merchantId, Merchant merchantInfo) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.merchantInfo = merchantInfo;
-
+        this.merchantInfo = merchantInfo;
     }
 
     
@@ -89,8 +87,8 @@ this.merchantInfo = merchantInfo;
     @Override
     public String toString() {
         return "SaveMerchantArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", merchantInfo='" + merchantInfo + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", merchantInfo='" + merchantInfo + '\'' +
 
                 '}';
     }

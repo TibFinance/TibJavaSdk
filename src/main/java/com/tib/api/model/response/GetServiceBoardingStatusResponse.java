@@ -33,16 +33,14 @@ public class GetServiceBoardingStatusResponse extends CustomAPIResponse {
     public GetServiceBoardingStatusResponse(Error[] errors, boolean hasError, String messages, String serviceId, List<BoardingServiceMerchant> boardingServiceMerchants) {
         super(errors, hasError, messages);
         this.serviceId = serviceId;
-this.boardingServiceMerchants = boardingServiceMerchants;
-
+        this.boardingServiceMerchants = boardingServiceMerchants;
     }
 
     public GetServiceBoardingStatusResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.serviceId = apiResponse.getResponse().toString();
-this.boardingServiceMerchants = (List<BoardingServiceMerchant>) apiResponse.getResponse();
-
+            this.boardingServiceMerchants = (List<BoardingServiceMerchant>) apiResponse.getResponse();
         }
     }
 
@@ -83,8 +81,8 @@ this.boardingServiceMerchants = (List<BoardingServiceMerchant>) apiResponse.getR
     @Override
     public String toString() {
         return "GetServiceBoardingStatusResponse{" +
-                 "serviceId='" + serviceId + '\'' +
- ", boardingServiceMerchants='" + boardingServiceMerchants + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", boardingServiceMerchants='" + boardingServiceMerchants + '\'' +
 
                 '}';
     }

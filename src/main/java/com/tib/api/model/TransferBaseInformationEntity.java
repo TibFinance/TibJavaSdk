@@ -19,188 +19,188 @@ public class TransferBaseInformationEntity   {
 
     
     /**
- * TransferId
- */
+     * TransferId
+     */
     @JsonProperty("I")
     private String i;
 
     /**
- * CreatedDate
- */
+     * CreatedDate
+     */
     @JsonProperty("Cdt")
     private LocalDateTime cdt;
 
     /**
- * Title
- */
+     * Title
+     */
     @JsonProperty("T")
     private String t;
 
     /**
- * payment method type.
- */
+     * payment method type.
+     */
     @JsonProperty("Pmt")
     private Integer pmt;
 
     /**
- * Description
- */
+     * Description
+     */
     @JsonProperty("D")
     private String d;
 
     /**
- * Merchant Name
- */
+     * Merchant Name
+     */
     @JsonProperty("M")
     private String m;
 
     /**
- * Transfer Due Date.
- */
+     * Transfer Due Date.
+     */
     @JsonProperty("Td")
     private LocalDateTime td;
 
     /**
- * Amount
- */
+     * Amount
+     */
     @JsonProperty("A")
     private Double a;
 
     /**
- * Status
- */
+     * Status
+     */
     @JsonProperty("S")
     private Integer s;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Ts")
     private Integer ts;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Cps")
     private String cps;
 
     /**
- * Bank error Code
- */
+     * Bank error Code
+     */
     @JsonProperty("C")
     private Integer c;
 
     /**
- * customer Name
- */
+     * customer Name
+     */
     @JsonProperty("Cn")
     private String cn;
 
     /**
- * customer email
- */
+     * customer email
+     */
     @JsonProperty("Cem")
     private String cem;
 
     /**
- * customer's id
- */
+     * customer's id
+     */
     @JsonProperty("Cid")
     private String cid;
 
     /**
- * transaction description
- */
+     * transaction description
+     */
     @JsonProperty("Trd")
     private String trd;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Man")
     private String man;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Map")
     private String map;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Ed")
     private LocalDateTime ed;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Ed2")
     private LocalDateTime ed2;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("He")
     private boolean he;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Del")
     private boolean del;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CollectOperationAmount")
     private Double collectOperationAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DepositOperationAmount")
     private Double depositOperationAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ConvenientFeesOperationAmount")
     private Double convenientFeesOperationAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FeesOperationAmount")
     private Double feesOperationAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Direction")
     private Integer direction;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Refunded")
     private boolean refunded;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransferAmount")
     private Double transferAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsSupplierTransfer")
     private boolean isSupplierTransfer;
 
     /**
- * External Reference Number (ern)
- */
+     * External Reference Number (ern)
+     */
     @JsonProperty("Ern")
     private String ern;
 
@@ -212,37 +212,36 @@ public class TransferBaseInformationEntity   {
     
     public TransferBaseInformationEntity(String i, LocalDateTime cdt, String t, Integer pmt, String d, String m, LocalDateTime td, Double a, Integer s, Integer ts, String cps, Integer c, String cn, String cem, String cid, String trd, String man, String map, LocalDateTime ed, LocalDateTime ed2, boolean he, boolean del, Double collectOperationAmount, Double depositOperationAmount, Double convenientFeesOperationAmount, Double feesOperationAmount, Integer direction, boolean refunded, Double transferAmount, boolean isSupplierTransfer, String ern) {
         this.i = i;
-this.cdt = cdt;
-this.t = t;
-this.pmt = pmt;
-this.d = d;
-this.m = m;
-this.td = td;
-this.a = a;
-this.s = s;
-this.ts = ts;
-this.cps = cps;
-this.c = c;
-this.cn = cn;
-this.cem = cem;
-this.cid = cid;
-this.trd = trd;
-this.man = man;
-this.map = map;
-this.ed = ed;
-this.ed2 = ed2;
-this.he = he;
-this.del = del;
-this.collectOperationAmount = collectOperationAmount;
-this.depositOperationAmount = depositOperationAmount;
-this.convenientFeesOperationAmount = convenientFeesOperationAmount;
-this.feesOperationAmount = feesOperationAmount;
-this.direction = direction;
-this.refunded = refunded;
-this.transferAmount = transferAmount;
-this.isSupplierTransfer = isSupplierTransfer;
-this.ern = ern;
-
+        this.cdt = cdt;
+        this.t = t;
+        this.pmt = pmt;
+        this.d = d;
+        this.m = m;
+        this.td = td;
+        this.a = a;
+        this.s = s;
+        this.ts = ts;
+        this.cps = cps;
+        this.c = c;
+        this.cn = cn;
+        this.cem = cem;
+        this.cid = cid;
+        this.trd = trd;
+        this.man = man;
+        this.map = map;
+        this.ed = ed;
+        this.ed2 = ed2;
+        this.he = he;
+        this.del = del;
+        this.collectOperationAmount = collectOperationAmount;
+        this.depositOperationAmount = depositOperationAmount;
+        this.convenientFeesOperationAmount = convenientFeesOperationAmount;
+        this.feesOperationAmount = feesOperationAmount;
+        this.direction = direction;
+        this.refunded = refunded;
+        this.transferAmount = transferAmount;
+        this.isSupplierTransfer = isSupplierTransfer;
+        this.ern = ern;
     }
     
     
@@ -516,37 +515,37 @@ this.ern = ern;
     @Override
     public String toString() {
         return "TransferBaseInformationEntity{" +
-                 "i='" + i + '\'' +
- ", cdt='" + cdt + '\'' +
- ", t='" + t + '\'' +
- ", pmt='" + pmt + '\'' +
- ", d='" + d + '\'' +
- ", m='" + m + '\'' +
- ", td='" + td + '\'' +
- ", a='" + a + '\'' +
- ", s='" + s + '\'' +
- ", ts='" + ts + '\'' +
- ", cps='" + cps + '\'' +
- ", c='" + c + '\'' +
- ", cn='" + cn + '\'' +
- ", cem='" + cem + '\'' +
- ", cid='" + cid + '\'' +
- ", trd='" + trd + '\'' +
- ", man='" + man + '\'' +
- ", map='" + map + '\'' +
- ", ed='" + ed + '\'' +
- ", ed2='" + ed2 + '\'' +
- ", he='" + he + '\'' +
- ", del='" + del + '\'' +
- ", collectOperationAmount='" + collectOperationAmount + '\'' +
- ", depositOperationAmount='" + depositOperationAmount + '\'' +
- ", convenientFeesOperationAmount='" + convenientFeesOperationAmount + '\'' +
- ", feesOperationAmount='" + feesOperationAmount + '\'' +
- ", direction='" + direction + '\'' +
- ", refunded='" + refunded + '\'' +
- ", transferAmount='" + transferAmount + '\'' +
- ", isSupplierTransfer='" + isSupplierTransfer + '\'' +
- ", ern='" + ern + '\'' +
+                "i='" + i + '\'' +
+                ", cdt='" + cdt + '\'' +
+                ", t='" + t + '\'' +
+                ", pmt='" + pmt + '\'' +
+                ", d='" + d + '\'' +
+                ", m='" + m + '\'' +
+                ", td='" + td + '\'' +
+                ", a='" + a + '\'' +
+                ", s='" + s + '\'' +
+                ", ts='" + ts + '\'' +
+                ", cps='" + cps + '\'' +
+                ", c='" + c + '\'' +
+                ", cn='" + cn + '\'' +
+                ", cem='" + cem + '\'' +
+                ", cid='" + cid + '\'' +
+                ", trd='" + trd + '\'' +
+                ", man='" + man + '\'' +
+                ", map='" + map + '\'' +
+                ", ed='" + ed + '\'' +
+                ", ed2='" + ed2 + '\'' +
+                ", he='" + he + '\'' +
+                ", del='" + del + '\'' +
+                ", collectOperationAmount='" + collectOperationAmount + '\'' +
+                ", depositOperationAmount='" + depositOperationAmount + '\'' +
+                ", convenientFeesOperationAmount='" + convenientFeesOperationAmount + '\'' +
+                ", feesOperationAmount='" + feesOperationAmount + '\'' +
+                ", direction='" + direction + '\'' +
+                ", refunded='" + refunded + '\'' +
+                ", transferAmount='" + transferAmount + '\'' +
+                ", isSupplierTransfer='" + isSupplierTransfer + '\'' +
+                ", ern='" + ern + '\'' +
 
                 '}';
     }

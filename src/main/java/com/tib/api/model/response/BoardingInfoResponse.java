@@ -30,15 +30,13 @@ public class BoardingInfoResponse extends CustomAPIResponse {
     public BoardingInfoResponse(Error[] errors, boolean hasError, String messages, BoardingInformation boardingInfo) {
         super(errors, hasError, messages);
         this.boardingInfo = boardingInfo;
-
     }
 
     public BoardingInfoResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.boardingInfo = objectMapper.readValue(json, BoardingInformation.class);
-
+            this.boardingInfo = objectMapper.readValue(json, BoardingInformation.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.boardingInfo = objectMapper.readValue(json, BoardingInformation.class);
     @Override
     public String toString() {
         return "BoardingInfoResponse{" +
-                 "boardingInfo='" + boardingInfo + '\'' +
+                "boardingInfo='" + boardingInfo + '\'' +
 
                 '}';
     }

@@ -38,20 +38,18 @@ public class GetPaymentMethodFeesResponse extends CustomAPIResponse {
     public GetPaymentMethodFeesResponse(Error[] errors, boolean hasError, String messages, Double grossTotal, Double convenientFeeAmount, Double processingFeeFixedAmount, Double processingFeeTotal) {
         super(errors, hasError, messages);
         this.grossTotal = grossTotal;
-this.convenientFeeAmount = convenientFeeAmount;
-this.processingFeeFixedAmount = processingFeeFixedAmount;
-this.processingFeeTotal = processingFeeTotal;
-
+        this.convenientFeeAmount = convenientFeeAmount;
+        this.processingFeeFixedAmount = processingFeeFixedAmount;
+        this.processingFeeTotal = processingFeeTotal;
     }
 
     public GetPaymentMethodFeesResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.grossTotal = Double.parseDouble(apiResponse.getResponse().toString());
-this.convenientFeeAmount = Double.parseDouble(apiResponse.getResponse().toString());
-this.processingFeeFixedAmount = Double.parseDouble(apiResponse.getResponse().toString());
-this.processingFeeTotal = Double.parseDouble(apiResponse.getResponse().toString());
-
+            this.convenientFeeAmount = Double.parseDouble(apiResponse.getResponse().toString());
+            this.processingFeeFixedAmount = Double.parseDouble(apiResponse.getResponse().toString());
+            this.processingFeeTotal = Double.parseDouble(apiResponse.getResponse().toString());
         }
     }
 
@@ -108,10 +106,10 @@ this.processingFeeTotal = Double.parseDouble(apiResponse.getResponse().toString(
     @Override
     public String toString() {
         return "GetPaymentMethodFeesResponse{" +
-                 "grossTotal='" + grossTotal + '\'' +
- ", convenientFeeAmount='" + convenientFeeAmount + '\'' +
- ", processingFeeFixedAmount='" + processingFeeFixedAmount + '\'' +
- ", processingFeeTotal='" + processingFeeTotal + '\'' +
+                "grossTotal='" + grossTotal + '\'' +
+                ", convenientFeeAmount='" + convenientFeeAmount + '\'' +
+                ", processingFeeFixedAmount='" + processingFeeFixedAmount + '\'' +
+                ", processingFeeTotal='" + processingFeeTotal + '\'' +
 
                 '}';
     }

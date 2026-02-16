@@ -19,26 +19,26 @@ public class ExternallyCryptedDataEntity   {
 
     
     /**
- * Gets or sets the external key identifier.
- */
+     * Gets or sets the external key identifier.
+     */
     @JsonProperty("ExternalKeyId")
     private String externalKeyId;
 
     /**
- * Gets or sets the external vault identifier.
- */
+     * Gets or sets the external vault identifier.
+     */
     @JsonProperty("ExternalVaultId")
     private String externalVaultId;
 
     /**
- * Gets or sets the encryption iv.
- */
+     * Gets or sets the encryption iv.
+     */
     @JsonProperty("EncryptionIV")
     private String encryptionIV;
 
     /**
- * Gets or sets the crypted data part1.
- */
+     * Gets or sets the crypted data part1.
+     */
     @JsonProperty("CryptedDataPart1")
     private String cryptedDataPart1;
 
@@ -50,10 +50,9 @@ public class ExternallyCryptedDataEntity   {
     
     public ExternallyCryptedDataEntity(String externalKeyId, String externalVaultId, String encryptionIV, String cryptedDataPart1) {
         this.externalKeyId = externalKeyId;
-this.externalVaultId = externalVaultId;
-this.encryptionIV = encryptionIV;
-this.cryptedDataPart1 = cryptedDataPart1;
-
+        this.externalVaultId = externalVaultId;
+        this.encryptionIV = encryptionIV;
+        this.cryptedDataPart1 = cryptedDataPart1;
     }
     
     
@@ -111,10 +110,10 @@ this.cryptedDataPart1 = cryptedDataPart1;
     @Override
     public String toString() {
         return "ExternallyCryptedDataEntity{" +
-                 "externalKeyId='" + externalKeyId + '\'' +
- ", externalVaultId='" + externalVaultId + '\'' +
- ", encryptionIV='" + encryptionIV + '\'' +
- ", cryptedDataPart1='" + cryptedDataPart1 + '\'' +
+                "externalKeyId='" + externalKeyId + '\'' +
+                ", externalVaultId='" + externalVaultId + '\'' +
+                ", encryptionIV='" + encryptionIV + '\'' +
+                ", cryptedDataPart1='" + cryptedDataPart1 + '\'' +
 
                 '}';
     }

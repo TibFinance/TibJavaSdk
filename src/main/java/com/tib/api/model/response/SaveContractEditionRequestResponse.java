@@ -25,13 +25,11 @@ public class SaveContractEditionRequestResponse extends CustomAPIResponse {
 
     public SaveContractEditionRequestResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SaveContractEditionRequestResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

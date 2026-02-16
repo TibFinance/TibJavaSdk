@@ -20,8 +20,8 @@ public class DeleteRecuringTransferArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Identifies a specific recurring transfer operation associated with a client's account.
- */
+     * Identifies a specific recurring transfer operation associated with a client's account.
+     */
     @JsonProperty("RecuringTransferId")
     private String recuringTransferId;
 
@@ -33,14 +33,12 @@ public class DeleteRecuringTransferArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public DeleteRecuringTransferArgs(String recuringTransferId) {
         this.recuringTransferId = recuringTransferId;
-
     }
     
     
     public DeleteRecuringTransferArgs(String sessionToken, String recuringTransferId) {
         super(sessionToken);
         this.recuringTransferId = recuringTransferId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class DeleteRecuringTransferArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "DeleteRecuringTransferArgs{" +
-                 "recuringTransferId='" + recuringTransferId + '\'' +
+                "recuringTransferId='" + recuringTransferId + '\'' +
 
                 '}';
     }

@@ -30,14 +30,12 @@ public class SearchAdminServiceMerchantsResponse extends CustomAPIResponse {
     public SearchAdminServiceMerchantsResponse(Error[] errors, boolean hasError, String messages, List<AdminServiceMerchant> searchResult) {
         super(errors, hasError, messages);
         this.searchResult = searchResult;
-
     }
 
     public SearchAdminServiceMerchantsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.searchResult = (List<AdminServiceMerchant>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class SearchAdminServiceMerchantsResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "SearchAdminServiceMerchantsResponse{" +
-                 "searchResult='" + searchResult + '\'' +
+                "searchResult='" + searchResult + '\'' +
 
                 '}';
     }

@@ -20,8 +20,8 @@ public class AuthorizeMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -33,14 +33,12 @@ public class AuthorizeMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public AuthorizeMerchantArgs(String merchantId) {
         this.merchantId = merchantId;
-
     }
     
     
     public AuthorizeMerchantArgs(String adminSessionToken, String merchantId) {
         super(adminSessionToken);
         this.merchantId = merchantId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class AuthorizeMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "AuthorizeMerchantArgs{" +
-                 "merchantId='" + merchantId + '\'' +
+                "merchantId='" + merchantId + '\'' +
 
                 '}';
     }

@@ -19,32 +19,32 @@ public class GetLoginAccessListResult   {
 
     
     /**
- * Retrieves or assigns the identifier for user login relations.
- */
+     * Retrieves or assigns the identifier for user login relations.
+     */
     @JsonProperty("LoginsUserRelationsId")
     private String loginsUserRelationsId;
 
     /**
- * Gets or sets the type of the internal reference.
- */
+     * Gets or sets the type of the internal reference.
+     */
     @JsonProperty("InternalReferenceType")
     private Integer internalReferenceType;
 
     /**
- * The level of login related ID
- */
+     * The level of login related ID
+     */
     @JsonProperty("InternalReferenceId")
     private String internalReferenceId;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * Gets or sets the IsReadOnly.
- */
+     * Gets or sets the IsReadOnly.
+     */
     @JsonProperty("IsReadOnly")
     private boolean isReadOnly;
 
@@ -56,11 +56,10 @@ public class GetLoginAccessListResult   {
     
     public GetLoginAccessListResult(String loginsUserRelationsId, Integer internalReferenceType, String internalReferenceId, String description, boolean isReadOnly) {
         this.loginsUserRelationsId = loginsUserRelationsId;
-this.internalReferenceType = internalReferenceType;
-this.internalReferenceId = internalReferenceId;
-this.description = description;
-this.isReadOnly = isReadOnly;
-
+        this.internalReferenceType = internalReferenceType;
+        this.internalReferenceId = internalReferenceId;
+        this.description = description;
+        this.isReadOnly = isReadOnly;
     }
     
     
@@ -126,11 +125,11 @@ this.isReadOnly = isReadOnly;
     @Override
     public String toString() {
         return "GetLoginAccessListResult{" +
-                 "loginsUserRelationsId='" + loginsUserRelationsId + '\'' +
- ", internalReferenceType='" + internalReferenceType + '\'' +
- ", internalReferenceId='" + internalReferenceId + '\'' +
- ", description='" + description + '\'' +
- ", isReadOnly='" + isReadOnly + '\'' +
+                "loginsUserRelationsId='" + loginsUserRelationsId + '\'' +
+                ", internalReferenceType='" + internalReferenceType + '\'' +
+                ", internalReferenceId='" + internalReferenceId + '\'' +
+                ", description='" + description + '\'' +
+                ", isReadOnly='" + isReadOnly + '\'' +
 
                 '}';
     }

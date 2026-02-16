@@ -34,17 +34,15 @@ public class GetExternalSupplierFinancialInformationsRequestResponse extends Cus
     public GetExternalSupplierFinancialInformationsRequestResponse(Error[] errors, boolean hasError, String messages, PaymentMethodAddRequest paymentMethodRequestData, MerchantView merchantInfo) {
         super(errors, hasError, messages);
         this.paymentMethodRequestData = paymentMethodRequestData;
-this.merchantInfo = merchantInfo;
-
+        this.merchantInfo = merchantInfo;
     }
 
     public GetExternalSupplierFinancialInformationsRequestResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.paymentMethodRequestData = objectMapper.readValue(json, PaymentMethodAddRequest.class);
-this.merchantInfo = objectMapper.readValue(json, MerchantView.class);
-
+            this.paymentMethodRequestData = objectMapper.readValue(json, PaymentMethodAddRequest.class);
+            this.merchantInfo = objectMapper.readValue(json, MerchantView.class);
         }
     }
 
@@ -85,8 +83,8 @@ this.merchantInfo = objectMapper.readValue(json, MerchantView.class);
     @Override
     public String toString() {
         return "GetExternalSupplierFinancialInformationsRequestResponse{" +
-                 "paymentMethodRequestData='" + paymentMethodRequestData + '\'' +
- ", merchantInfo='" + merchantInfo + '\'' +
+                "paymentMethodRequestData='" + paymentMethodRequestData + '\'' +
+                ", merchantInfo='" + merchantInfo + '\'' +
 
                 '}';
     }

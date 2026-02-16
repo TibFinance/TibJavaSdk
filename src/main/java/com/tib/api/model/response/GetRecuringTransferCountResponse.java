@@ -29,14 +29,12 @@ public class GetRecuringTransferCountResponse extends CustomAPIResponse {
     public GetRecuringTransferCountResponse(Error[] errors, boolean hasError, String messages, Integer recuringTransfersCount) {
         super(errors, hasError, messages);
         this.recuringTransfersCount = recuringTransfersCount;
-
     }
 
     public GetRecuringTransferCountResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.recuringTransfersCount = Integer.parseInt(apiResponse.getResponse().toString());
-
         }
     }
 
@@ -69,7 +67,7 @@ public class GetRecuringTransferCountResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetRecuringTransferCountResponse{" +
-                 "recuringTransfersCount='" + recuringTransfersCount + '\'' +
+                "recuringTransfersCount='" + recuringTransfersCount + '\'' +
 
                 '}';
     }

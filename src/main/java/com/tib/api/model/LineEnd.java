@@ -19,32 +19,32 @@ public class LineEnd  extends BaseLastLine  {
 
     
     /**
- * Gets or sets the total amount collected.
- */
+     * Gets or sets the total amount collected.
+     */
     @JsonProperty("TotalAmountCollected")
     private Double totalAmountCollected;
 
     /**
- * Gets or sets the number of transaction collected.
- */
+     * Gets or sets the number of transaction collected.
+     */
     @JsonProperty("NumberOfTransactionCollected")
     private Integer numberOfTransactionCollected;
 
     /**
- * Gets or sets the total amount deposit.
- */
+     * Gets or sets the total amount deposit.
+     */
     @JsonProperty("TotalAmountDeposit")
     private Double totalAmountDeposit;
 
     /**
- * Gets or sets the number of transaction deposit.
- */
+     * Gets or sets the number of transaction deposit.
+     */
     @JsonProperty("NumberOfTransactionDeposit")
     private Integer numberOfTransactionDeposit;
 
     /**
- * Gets the start position.
- */
+     * Gets the start position.
+     */
     @JsonProperty("StartPosition")
     private Integer startPosition;
 
@@ -56,11 +56,10 @@ public class LineEnd  extends BaseLastLine  {
     
     public LineEnd(Double totalAmountCollected, Integer numberOfTransactionCollected, Double totalAmountDeposit, Integer numberOfTransactionDeposit, Integer startPosition) {
         this.totalAmountCollected = totalAmountCollected;
-this.numberOfTransactionCollected = numberOfTransactionCollected;
-this.totalAmountDeposit = totalAmountDeposit;
-this.numberOfTransactionDeposit = numberOfTransactionDeposit;
-this.startPosition = startPosition;
-
+        this.numberOfTransactionCollected = numberOfTransactionCollected;
+        this.totalAmountDeposit = totalAmountDeposit;
+        this.numberOfTransactionDeposit = numberOfTransactionDeposit;
+        this.startPosition = startPosition;
     }
     
     
@@ -126,11 +125,11 @@ this.startPosition = startPosition;
     @Override
     public String toString() {
         return "LineEnd{" +
-                 "totalAmountCollected='" + totalAmountCollected + '\'' +
- ", numberOfTransactionCollected='" + numberOfTransactionCollected + '\'' +
- ", totalAmountDeposit='" + totalAmountDeposit + '\'' +
- ", numberOfTransactionDeposit='" + numberOfTransactionDeposit + '\'' +
- ", startPosition='" + startPosition + '\'' +
+                "totalAmountCollected='" + totalAmountCollected + '\'' +
+                ", numberOfTransactionCollected='" + numberOfTransactionCollected + '\'' +
+                ", totalAmountDeposit='" + totalAmountDeposit + '\'' +
+                ", numberOfTransactionDeposit='" + numberOfTransactionDeposit + '\'' +
+                ", startPosition='" + startPosition + '\'' +
 
                 '}';
     }

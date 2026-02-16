@@ -20,26 +20,26 @@ public class CreateOrUpdateBlueSnapProviderArgs  extends BaseAuthenticatedCrypte
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BsMerchantId")
     private String bsMerchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BsUsername")
     private String bsUsername;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BsPassword")
     private String bsPassword;
 
@@ -51,20 +51,18 @@ public class CreateOrUpdateBlueSnapProviderArgs  extends BaseAuthenticatedCrypte
     
     public CreateOrUpdateBlueSnapProviderArgs(String merchantId, String bsMerchantId, String bsUsername, String bsPassword) {
         this.merchantId = merchantId;
-this.bsMerchantId = bsMerchantId;
-this.bsUsername = bsUsername;
-this.bsPassword = bsPassword;
-
+        this.bsMerchantId = bsMerchantId;
+        this.bsUsername = bsUsername;
+        this.bsPassword = bsPassword;
     }
     
     
     public CreateOrUpdateBlueSnapProviderArgs(String sessionToken, String merchantId, String bsMerchantId, String bsUsername, String bsPassword) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.bsMerchantId = bsMerchantId;
-this.bsUsername = bsUsername;
-this.bsPassword = bsPassword;
-
+        this.bsMerchantId = bsMerchantId;
+        this.bsUsername = bsUsername;
+        this.bsPassword = bsPassword;
     }
 
     
@@ -120,10 +118,10 @@ this.bsPassword = bsPassword;
     @Override
     public String toString() {
         return "CreateOrUpdateBlueSnapProviderArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", bsMerchantId='" + bsMerchantId + '\'' +
- ", bsUsername='" + bsUsername + '\'' +
- ", bsPassword='" + bsPassword + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", bsMerchantId='" + bsMerchantId + '\'' +
+                ", bsUsername='" + bsUsername + '\'' +
+                ", bsPassword='" + bsPassword + '\'' +
 
                 '}';
     }

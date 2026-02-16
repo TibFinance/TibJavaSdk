@@ -20,8 +20,8 @@ public class DeleteMerchantForAdminArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -33,14 +33,12 @@ public class DeleteMerchantForAdminArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public DeleteMerchantForAdminArgs(String merchantId) {
         this.merchantId = merchantId;
-
     }
     
     
     public DeleteMerchantForAdminArgs(String adminSessionToken, String merchantId) {
         super(adminSessionToken);
         this.merchantId = merchantId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class DeleteMerchantForAdminArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "DeleteMerchantForAdminArgs{" +
-                 "merchantId='" + merchantId + '\'' +
+                "merchantId='" + merchantId + '\'' +
 
                 '}';
     }

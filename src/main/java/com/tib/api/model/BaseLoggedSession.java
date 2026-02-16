@@ -20,26 +20,26 @@ public class BaseLoggedSession   {
 
     
     /**
- * Determine the last activity of this session
- */
+     * Determine the last activity of this session
+     */
     @JsonProperty("LastActivityDate")
     private LocalDateTime lastActivityDate;
 
     /**
- * Determine the date of the Session creation date
- */
+     * Determine the date of the Session creation date
+     */
     @JsonProperty("CreationDate")
     private LocalDateTime creationDate;
 
     /**
- * Retrieves or assigns the identifier for user login relations.
- */
+     * Retrieves or assigns the identifier for user login relations.
+     */
     @JsonProperty("LoginsUserRelationsId")
     private String loginsUserRelationsId;
 
     /**
- * The permission Type, will defined the level of permission and will also define What is the reference to the InternalReferenceid If you set Merchant or Client, the internal referenceid should be a merchant or a client
- */
+     * The permission Type, will defined the level of permission and will also define What is the reference to the InternalReferenceid If you set Merchant or Client, the internal referenceid should be a merchant or a client
+     */
     @JsonProperty("PermissionType")
     private LoginType permissionType;
 
@@ -51,10 +51,9 @@ public class BaseLoggedSession   {
     
     public BaseLoggedSession(LocalDateTime lastActivityDate, LocalDateTime creationDate, String loginsUserRelationsId, LoginType permissionType) {
         this.lastActivityDate = lastActivityDate;
-this.creationDate = creationDate;
-this.loginsUserRelationsId = loginsUserRelationsId;
-this.permissionType = permissionType;
-
+        this.creationDate = creationDate;
+        this.loginsUserRelationsId = loginsUserRelationsId;
+        this.permissionType = permissionType;
     }
     
     
@@ -112,10 +111,10 @@ this.permissionType = permissionType;
     @Override
     public String toString() {
         return "BaseLoggedSession{" +
-                 "lastActivityDate='" + lastActivityDate + '\'' +
- ", creationDate='" + creationDate + '\'' +
- ", loginsUserRelationsId='" + loginsUserRelationsId + '\'' +
- ", permissionType='" + permissionType + '\'' +
+                "lastActivityDate='" + lastActivityDate + '\'' +
+                ", creationDate='" + creationDate + '\'' +
+                ", loginsUserRelationsId='" + loginsUserRelationsId + '\'' +
+                ", permissionType='" + permissionType + '\'' +
 
                 '}';
     }

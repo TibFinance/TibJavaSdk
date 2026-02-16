@@ -32,16 +32,14 @@ public class CreateClientLoginBoardingResponse extends CustomAPIResponse {
     public CreateClientLoginBoardingResponse(Error[] errors, boolean hasError, String messages, String redirectUrl, String token) {
         super(errors, hasError, messages);
         this.redirectUrl = redirectUrl;
-this.token = token;
-
+        this.token = token;
     }
 
     public CreateClientLoginBoardingResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.redirectUrl = apiResponse.getResponse().toString();
-this.token = apiResponse.getResponse().toString();
-
+            this.token = apiResponse.getResponse().toString();
         }
     }
 
@@ -82,8 +80,8 @@ this.token = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "CreateClientLoginBoardingResponse{" +
-                 "redirectUrl='" + redirectUrl + '\'' +
- ", token='" + token + '\'' +
+                "redirectUrl='" + redirectUrl + '\'' +
+                ", token='" + token + '\'' +
 
                 '}';
     }

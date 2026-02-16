@@ -19,26 +19,26 @@ public class SearchCustomerRelatedPaymentMethod   {
 
     
     /**
- * Acts as a unique identifier for a distinct payment method.
- */
+     * Acts as a unique identifier for a distinct payment method.
+     */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
     /**
- * Provides a detailed description of the payment method for easy identification.
- */
+     * Provides a detailed description of the payment method for easy identification.
+     */
     @JsonProperty("PaymentMethodDescription")
     private String paymentMethodDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PaymentMethodIsDeleted")
     private boolean paymentMethodIsDeleted;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountInformationOwner")
     private String accountInformationOwner;
 
@@ -50,10 +50,9 @@ public class SearchCustomerRelatedPaymentMethod   {
     
     public SearchCustomerRelatedPaymentMethod(String paymentMethodId, String paymentMethodDescription, boolean paymentMethodIsDeleted, String accountInformationOwner) {
         this.paymentMethodId = paymentMethodId;
-this.paymentMethodDescription = paymentMethodDescription;
-this.paymentMethodIsDeleted = paymentMethodIsDeleted;
-this.accountInformationOwner = accountInformationOwner;
-
+        this.paymentMethodDescription = paymentMethodDescription;
+        this.paymentMethodIsDeleted = paymentMethodIsDeleted;
+        this.accountInformationOwner = accountInformationOwner;
     }
     
     
@@ -111,10 +110,10 @@ this.accountInformationOwner = accountInformationOwner;
     @Override
     public String toString() {
         return "SearchCustomerRelatedPaymentMethod{" +
-                 "paymentMethodId='" + paymentMethodId + '\'' +
- ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
- ", paymentMethodIsDeleted='" + paymentMethodIsDeleted + '\'' +
- ", accountInformationOwner='" + accountInformationOwner + '\'' +
+                "paymentMethodId='" + paymentMethodId + '\'' +
+                ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
+                ", paymentMethodIsDeleted='" + paymentMethodIsDeleted + '\'' +
+                ", accountInformationOwner='" + accountInformationOwner + '\'' +
 
                 '}';
     }

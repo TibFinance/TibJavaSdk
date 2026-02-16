@@ -25,13 +25,11 @@ public class DeleteMerchantResponse extends CustomAPIResponse {
 
     public DeleteMerchantResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public DeleteMerchantResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

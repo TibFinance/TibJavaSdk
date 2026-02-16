@@ -20,14 +20,14 @@ public class ListTransfersForBillFastArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Retrieves or assigns the unique identifier for a bill.
- */
+     * Retrieves or assigns the unique identifier for a bill.
+     */
     @JsonProperty("BillId")
     private String billId;
 
@@ -39,16 +39,14 @@ public class ListTransfersForBillFastArgs  extends BaseAuthenticatedCryptedArgs 
     
     public ListTransfersForBillFastArgs(String merchantId, String billId) {
         this.merchantId = merchantId;
-this.billId = billId;
-
+        this.billId = billId;
     }
     
     
     public ListTransfersForBillFastArgs(String sessionToken, String merchantId, String billId) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.billId = billId;
-
+        this.billId = billId;
     }
 
     
@@ -88,8 +86,8 @@ this.billId = billId;
     @Override
     public String toString() {
         return "ListTransfersForBillFastArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", billId='" + billId + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", billId='" + billId + '\'' +
 
                 '}';
     }

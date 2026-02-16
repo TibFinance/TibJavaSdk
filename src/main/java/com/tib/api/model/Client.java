@@ -19,14 +19,14 @@ public class Client  extends ClientEntity  {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * Retrieves or assigns the unique identifier for WhiteLabeling.
- */
+     * Retrieves or assigns the unique identifier for WhiteLabeling.
+     */
     @JsonProperty("WhiteLabelingId")
     private Optional<String> whiteLabelingId;
 
@@ -38,16 +38,14 @@ public class Client  extends ClientEntity  {
     
     public Client(String clientId, Optional<String> whiteLabelingId) {
         this.clientId = clientId;
-this.whiteLabelingId = whiteLabelingId;
-
+        this.whiteLabelingId = whiteLabelingId;
     }
     
     
     public Client(String clientName, String clientId, Optional<String> whiteLabelingId) {
         super(clientName);
         this.clientId = clientId;
-this.whiteLabelingId = whiteLabelingId;
-
+        this.whiteLabelingId = whiteLabelingId;
     }
 
     
@@ -87,8 +85,8 @@ this.whiteLabelingId = whiteLabelingId;
     @Override
     public String toString() {
         return "Client{" +
-                 "clientId='" + clientId + '\'' +
- ", whiteLabelingId='" + whiteLabelingId + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", whiteLabelingId='" + whiteLabelingId + '\'' +
 
                 '}';
     }

@@ -19,8 +19,8 @@ public class BaseEventPayload   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("EventName")
     private String eventName;
 
@@ -32,7 +32,6 @@ public class BaseEventPayload   {
     
     public BaseEventPayload(String eventName) {
         this.eventName = eventName;
-
     }
     
     
@@ -66,7 +65,7 @@ public class BaseEventPayload   {
     @Override
     public String toString() {
         return "BaseEventPayload{" +
-                 "eventName='" + eventName + '\'' +
+                "eventName='" + eventName + '\'' +
 
                 '}';
     }

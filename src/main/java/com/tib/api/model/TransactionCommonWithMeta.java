@@ -25,14 +25,14 @@ public class TransactionCommonWithMeta  extends TransactionCommon  {
 
     
     /**
- * Gets or sets the transaction identifier.
- */
+     * Gets or sets the transaction identifier.
+     */
     @JsonProperty("TransactionId")
     private String transactionId;
 
     /**
- * Gets or sets the transaction amount.
- */
+     * Gets or sets the transaction amount.
+     */
     @JsonProperty("TransactionAmount")
     private Double transactionAmount;
 
@@ -44,16 +44,14 @@ public class TransactionCommonWithMeta  extends TransactionCommon  {
     
     public TransactionCommonWithMeta(String transactionId, Double transactionAmount) {
         this.transactionId = transactionId;
-this.transactionAmount = transactionAmount;
-
+        this.transactionAmount = transactionAmount;
     }
     
     
     public TransactionCommonWithMeta(OperationTarget operationTarget, OperationType operationType, TransferDirection operationDirection, OperationStatus status, String description, BankingOperationResult bankingOperationResult, String bankDescription, String accountName, String accoutPreview, PaymentMethodType accountType, String transactionDescription, LocalDateTime transactionDueDate, LocalDateTime lastModifiedDate, String transactionId, Double transactionAmount) {
         super(operationTarget, operationType, operationDirection, status, description, bankingOperationResult, bankDescription, accountName, accoutPreview, accountType, transactionDescription, transactionDueDate, lastModifiedDate);
         this.transactionId = transactionId;
-this.transactionAmount = transactionAmount;
-
+        this.transactionAmount = transactionAmount;
     }
 
     
@@ -93,8 +91,8 @@ this.transactionAmount = transactionAmount;
     @Override
     public String toString() {
         return "TransactionCommonWithMeta{" +
-                 "transactionId='" + transactionId + '\'' +
- ", transactionAmount='" + transactionAmount + '\'' +
+                "transactionId='" + transactionId + '\'' +
+                ", transactionAmount='" + transactionAmount + '\'' +
 
                 '}';
     }

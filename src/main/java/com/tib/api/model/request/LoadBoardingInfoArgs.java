@@ -29,7 +29,6 @@ public class LoadBoardingInfoArgs  extends BaseAuthenticatePublicTokenArgs  {
     
     public LoadBoardingInfoArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

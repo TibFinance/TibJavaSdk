@@ -23,50 +23,50 @@ public class GetOperationsReportArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DateFrom")
     private LocalDateTime dateFrom;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DateTo")
     private LocalDateTime dateTo;
 
     /**
- * Defines and manages the type of transfer operation within the system.
- */
+     * Defines and manages the type of transfer operation within the system.
+     */
     @JsonProperty("TransferType")
     private TransferType transferType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TargetType")
     private OperationTarget targetType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ReturnTransferList")
     private boolean returnTransferList;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("LimitToSpecificCategory")
     private OperationCategoryReportType limitToSpecificCategory;
 
@@ -78,28 +78,26 @@ public class GetOperationsReportArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetOperationsReportArgs(String merchantId, String serviceId, LocalDateTime dateFrom, LocalDateTime dateTo, TransferType transferType, OperationTarget targetType, boolean returnTransferList, OperationCategoryReportType limitToSpecificCategory) {
         this.merchantId = merchantId;
-this.serviceId = serviceId;
-this.dateFrom = dateFrom;
-this.dateTo = dateTo;
-this.transferType = transferType;
-this.targetType = targetType;
-this.returnTransferList = returnTransferList;
-this.limitToSpecificCategory = limitToSpecificCategory;
-
+        this.serviceId = serviceId;
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
+        this.transferType = transferType;
+        this.targetType = targetType;
+        this.returnTransferList = returnTransferList;
+        this.limitToSpecificCategory = limitToSpecificCategory;
     }
     
     
     public GetOperationsReportArgs(String sessionToken, String merchantId, String serviceId, LocalDateTime dateFrom, LocalDateTime dateTo, TransferType transferType, OperationTarget targetType, boolean returnTransferList, OperationCategoryReportType limitToSpecificCategory) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.serviceId = serviceId;
-this.dateFrom = dateFrom;
-this.dateTo = dateTo;
-this.transferType = transferType;
-this.targetType = targetType;
-this.returnTransferList = returnTransferList;
-this.limitToSpecificCategory = limitToSpecificCategory;
-
+        this.serviceId = serviceId;
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
+        this.transferType = transferType;
+        this.targetType = targetType;
+        this.returnTransferList = returnTransferList;
+        this.limitToSpecificCategory = limitToSpecificCategory;
     }
 
     
@@ -187,14 +185,14 @@ this.limitToSpecificCategory = limitToSpecificCategory;
     @Override
     public String toString() {
         return "GetOperationsReportArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", serviceId='" + serviceId + '\'' +
- ", dateFrom='" + dateFrom + '\'' +
- ", dateTo='" + dateTo + '\'' +
- ", transferType='" + transferType + '\'' +
- ", targetType='" + targetType + '\'' +
- ", returnTransferList='" + returnTransferList + '\'' +
- ", limitToSpecificCategory='" + limitToSpecificCategory + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                ", dateFrom='" + dateFrom + '\'' +
+                ", dateTo='" + dateTo + '\'' +
+                ", transferType='" + transferType + '\'' +
+                ", targetType='" + targetType + '\'' +
+                ", returnTransferList='" + returnTransferList + '\'' +
+                ", limitToSpecificCategory='" + limitToSpecificCategory + '\'' +
 
                 '}';
     }

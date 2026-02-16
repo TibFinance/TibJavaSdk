@@ -30,14 +30,12 @@ public class ListPaymentMethodsResponse extends CustomAPIResponse {
     public ListPaymentMethodsResponse(Error[] errors, boolean hasError, String messages, List<PaymentMethod> paymentMethods) {
         super(errors, hasError, messages);
         this.paymentMethods = paymentMethods;
-
     }
 
     public ListPaymentMethodsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.paymentMethods = (List<PaymentMethod>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class ListPaymentMethodsResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ListPaymentMethodsResponse{" +
-                 "paymentMethods='" + paymentMethods + '\'' +
+                "paymentMethods='" + paymentMethods + '\'' +
 
                 '}';
     }

@@ -19,62 +19,62 @@ public class ClientLogin   {
 
     
     /**
- * The identity of the login
- */
+     * The identity of the login
+     */
     @JsonProperty("ClientLoginId")
     private String clientLoginId;
 
     /**
- * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
- */
+     * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
+     */
     @JsonProperty("Username")
     private String username;
 
     /**
- * The user first name
- */
+     * The user first name
+     */
     @JsonProperty("Firstname")
     private String firstname;
 
     /**
- * The user last name
- */
+     * The user last name
+     */
     @JsonProperty("Lastname")
     private String lastname;
 
     /**
- * Specifies the email address associated with the merchant.
- */
+     * Specifies the email address associated with the merchant.
+     */
     @JsonProperty("Email")
     private String email;
 
     /**
- * LoginType
- */
+     * LoginType
+     */
     @JsonProperty("LoginType")
     private Integer loginType;
 
     /**
- * LoginType
- */
+     * LoginType
+     */
     @JsonProperty("ReferenceType")
     private String referenceType;
 
     /**
- * LoginType
- */
+     * LoginType
+     */
     @JsonProperty("Reference")
     private String reference;
 
     /**
- * InternalRefernceId
- */
+     * InternalRefernceId
+     */
     @JsonProperty("InternalRefernceIds")
     private String internalRefernceIds;
 
     /**
- * InternalRefernceId
- */
+     * InternalRefernceId
+     */
     @JsonProperty("LoginRelationId")
     private String loginRelationId;
 
@@ -86,16 +86,15 @@ public class ClientLogin   {
     
     public ClientLogin(String clientLoginId, String username, String firstname, String lastname, String email, Integer loginType, String referenceType, String reference, String internalRefernceIds, String loginRelationId) {
         this.clientLoginId = clientLoginId;
-this.username = username;
-this.firstname = firstname;
-this.lastname = lastname;
-this.email = email;
-this.loginType = loginType;
-this.referenceType = referenceType;
-this.reference = reference;
-this.internalRefernceIds = internalRefernceIds;
-this.loginRelationId = loginRelationId;
-
+        this.username = username;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.loginType = loginType;
+        this.referenceType = referenceType;
+        this.reference = reference;
+        this.internalRefernceIds = internalRefernceIds;
+        this.loginRelationId = loginRelationId;
     }
     
     
@@ -201,16 +200,16 @@ this.loginRelationId = loginRelationId;
     @Override
     public String toString() {
         return "ClientLogin{" +
-                 "clientLoginId='" + clientLoginId + '\'' +
- ", username='" + username + '\'' +
- ", firstname='" + firstname + '\'' +
- ", lastname='" + lastname + '\'' +
- ", email='" + email + '\'' +
- ", loginType='" + loginType + '\'' +
- ", referenceType='" + referenceType + '\'' +
- ", reference='" + reference + '\'' +
- ", internalRefernceIds='" + internalRefernceIds + '\'' +
- ", loginRelationId='" + loginRelationId + '\'' +
+                "clientLoginId='" + clientLoginId + '\'' +
+                ", username='" + username + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", email='" + email + '\'' +
+                ", loginType='" + loginType + '\'' +
+                ", referenceType='" + referenceType + '\'' +
+                ", reference='" + reference + '\'' +
+                ", internalRefernceIds='" + internalRefernceIds + '\'' +
+                ", loginRelationId='" + loginRelationId + '\'' +
 
                 '}';
     }

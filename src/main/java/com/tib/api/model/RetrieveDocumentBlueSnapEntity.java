@@ -19,14 +19,14 @@ public class RetrieveDocumentBlueSnapEntity  extends RetrieveDocumentEntity  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderRequestId")
     private String providerRequestId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CaseId")
     private String caseId;
 
@@ -38,8 +38,7 @@ public class RetrieveDocumentBlueSnapEntity  extends RetrieveDocumentEntity  {
     
     public RetrieveDocumentBlueSnapEntity(String providerRequestId, String caseId) {
         this.providerRequestId = providerRequestId;
-this.caseId = caseId;
-
+        this.caseId = caseId;
     }
     
     
@@ -81,8 +80,8 @@ this.caseId = caseId;
     @Override
     public String toString() {
         return "RetrieveDocumentBlueSnapEntity{" +
-                 "providerRequestId='" + providerRequestId + '\'' +
- ", caseId='" + caseId + '\'' +
+                "providerRequestId='" + providerRequestId + '\'' +
+                ", caseId='" + caseId + '\'' +
 
                 '}';
     }

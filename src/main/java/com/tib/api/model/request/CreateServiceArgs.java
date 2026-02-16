@@ -21,14 +21,14 @@ public class CreateServiceArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Gets or sets the service information.
- */
+     * Gets or sets the service information.
+     */
     @JsonProperty("ServiceInfo")
     private ServiceEntity serviceInfo;
 
     /**
- * Gets or sets a value indicating whether [create innactive].
- */
+     * Gets or sets a value indicating whether [create innactive].
+     */
     @JsonProperty("CreateInnactive")
     private boolean createInnactive;
 
@@ -40,16 +40,14 @@ public class CreateServiceArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CreateServiceArgs(ServiceEntity serviceInfo, boolean createInnactive) {
         this.serviceInfo = serviceInfo;
-this.createInnactive = createInnactive;
-
+        this.createInnactive = createInnactive;
     }
     
     
     public CreateServiceArgs(String sessionToken, ServiceEntity serviceInfo, boolean createInnactive) {
         super(sessionToken);
         this.serviceInfo = serviceInfo;
-this.createInnactive = createInnactive;
-
+        this.createInnactive = createInnactive;
     }
 
     
@@ -89,8 +87,8 @@ this.createInnactive = createInnactive;
     @Override
     public String toString() {
         return "CreateServiceArgs{" +
-                 "serviceInfo='" + serviceInfo + '\'' +
- ", createInnactive='" + createInnactive + '\'' +
+                "serviceInfo='" + serviceInfo + '\'' +
+                ", createInnactive='" + createInnactive + '\'' +
 
                 '}';
     }

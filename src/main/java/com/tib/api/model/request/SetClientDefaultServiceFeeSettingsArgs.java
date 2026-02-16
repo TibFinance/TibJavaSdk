@@ -21,14 +21,14 @@ public class SetClientDefaultServiceFeeSettingsArgs  extends BaseAuthenticatedCr
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * Gets or sets the ServiceFeeSettings model that defines the fee configuration for a specific service contract.
- */
+     * Gets or sets the ServiceFeeSettings model that defines the fee configuration for a specific service contract.
+     */
     @JsonProperty("ServiceFeeSettings")
     private ServiceFeeSettings serviceFeeSettings;
 
@@ -40,16 +40,14 @@ public class SetClientDefaultServiceFeeSettingsArgs  extends BaseAuthenticatedCr
     
     public SetClientDefaultServiceFeeSettingsArgs(String clientId, ServiceFeeSettings serviceFeeSettings) {
         this.clientId = clientId;
-this.serviceFeeSettings = serviceFeeSettings;
-
+        this.serviceFeeSettings = serviceFeeSettings;
     }
     
     
     public SetClientDefaultServiceFeeSettingsArgs(String sessionToken, String clientId, ServiceFeeSettings serviceFeeSettings) {
         super(sessionToken);
         this.clientId = clientId;
-this.serviceFeeSettings = serviceFeeSettings;
-
+        this.serviceFeeSettings = serviceFeeSettings;
     }
 
     
@@ -89,8 +87,8 @@ this.serviceFeeSettings = serviceFeeSettings;
     @Override
     public String toString() {
         return "SetClientDefaultServiceFeeSettingsArgs{" +
-                 "clientId='" + clientId + '\'' +
- ", serviceFeeSettings='" + serviceFeeSettings + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", serviceFeeSettings='" + serviceFeeSettings + '\'' +
 
                 '}';
     }

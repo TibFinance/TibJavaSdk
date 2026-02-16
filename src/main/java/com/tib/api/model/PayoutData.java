@@ -19,26 +19,26 @@ public class PayoutData   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Paid")
     private Double paid;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Date")
     private LocalDateTime date;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Gross")
     private Double gross;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Fees")
     private Double fees;
 
@@ -50,10 +50,9 @@ public class PayoutData   {
     
     public PayoutData(Double paid, LocalDateTime date, Double gross, Double fees) {
         this.paid = paid;
-this.date = date;
-this.gross = gross;
-this.fees = fees;
-
+        this.date = date;
+        this.gross = gross;
+        this.fees = fees;
     }
     
     
@@ -111,10 +110,10 @@ this.fees = fees;
     @Override
     public String toString() {
         return "PayoutData{" +
-                 "paid='" + paid + '\'' +
- ", date='" + date + '\'' +
- ", gross='" + gross + '\'' +
- ", fees='" + fees + '\'' +
+                "paid='" + paid + '\'' +
+                ", date='" + date + '\'' +
+                ", gross='" + gross + '\'' +
+                ", fees='" + fees + '\'' +
 
                 '}';
     }

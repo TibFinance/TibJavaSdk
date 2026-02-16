@@ -29,14 +29,12 @@ public class DeleteLoginRelationResponse extends CustomAPIResponse {
     public DeleteLoginRelationResponse(Error[] errors, boolean hasError, String messages, String loginRelationId) {
         super(errors, hasError, messages);
         this.loginRelationId = loginRelationId;
-
     }
 
     public DeleteLoginRelationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.loginRelationId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class DeleteLoginRelationResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "DeleteLoginRelationResponse{" +
-                 "loginRelationId='" + loginRelationId + '\'' +
+                "loginRelationId='" + loginRelationId + '\'' +
 
                 '}';
     }

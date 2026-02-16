@@ -20,194 +20,194 @@ public class TibServiceContractForm   {
 
     
     /**
- * Gets or sets the name of the bank.
- */
+     * Gets or sets the name of the bank.
+     */
     @JsonProperty("BankName")
     private String bankName;
 
     /**
- * Gets or sets the bank address.
- */
+     * Gets or sets the bank address.
+     */
     @JsonProperty("BankAddress")
     private String bankAddress;
 
     /**
- * Gets or sets the bank city.
- */
+     * Gets or sets the bank city.
+     */
     @JsonProperty("BankCity")
     private String bankCity;
 
     /**
- * Gets or sets the bank province.
- */
+     * Gets or sets the bank province.
+     */
     @JsonProperty("BankProvince")
     private String bankProvince;
 
     /**
- * Gets or sets the bank country.
- */
+     * Gets or sets the bank country.
+     */
     @JsonProperty("BankCountry")
     private String bankCountry;
 
     /**
- * Gets or sets the bank name1.
- */
+     * Gets or sets the bank name1.
+     */
     @JsonProperty("BankName1")
     private String bankName1;
 
     /**
- * Gets or sets the bank number1.
- */
+     * Gets or sets the bank number1.
+     */
     @JsonProperty("BankNumber1")
     private String bankNumber1;
 
     /**
- * Gets or sets the bank transit1.
- */
+     * Gets or sets the bank transit1.
+     */
     @JsonProperty("BankTransit1")
     private String bankTransit1;
 
     /**
- * Gets or sets the bank account1.
- */
+     * Gets or sets the bank account1.
+     */
     @JsonProperty("BankAccount1")
     private String bankAccount1;
 
     /**
- * Gets or sets the name of the enterprise.
- */
+     * Gets or sets the name of the enterprise.
+     */
     @JsonProperty("EnterpriseName")
     private String enterpriseName;
 
     /**
- * Gets or sets the name of the owner.
- */
+     * Gets or sets the name of the owner.
+     */
     @JsonProperty("OwnerName")
     private String ownerName;
 
     /**
- * Gets or sets the owner address.
- */
+     * Gets or sets the owner address.
+     */
     @JsonProperty("OwnerAddress")
     private String ownerAddress;
 
     /**
- * Gets or sets the owner city.
- */
+     * Gets or sets the owner city.
+     */
     @JsonProperty("OwnerCity")
     private String ownerCity;
 
     /**
- * Gets or sets the owner country.
- */
+     * Gets or sets the owner country.
+     */
     @JsonProperty("OwnerCountry")
     private String ownerCountry;
 
     /**
- * Gets or sets the owner province.
- */
+     * Gets or sets the owner province.
+     */
     @JsonProperty("OwnerProvince")
     private String ownerProvince;
 
     /**
- * Gets or sets the owner postal code.
- */
+     * Gets or sets the owner postal code.
+     */
     @JsonProperty("OwnerPostalCode")
     private String ownerPostalCode;
 
     /**
- * Gets or sets the owner email.
- */
+     * Gets or sets the owner email.
+     */
     @JsonProperty("OwnerEmail")
     private String ownerEmail;
 
     /**
- * Gets or sets the transaction number withdraw.
- */
+     * Gets or sets the transaction number withdraw.
+     */
     @JsonProperty("TransactionNumberWithdraw")
     private String transactionNumberWithdraw;
 
     /**
- * Gets or sets the transaction number deposit.
- */
+     * Gets or sets the transaction number deposit.
+     */
     @JsonProperty("TransactionNumberDeposit")
     private String transactionNumberDeposit;
 
     /**
- * Gets or sets the transaction number NSF.
- */
+     * Gets or sets the transaction number NSF.
+     */
     @JsonProperty("TransactionNumberNsf")
     private String transactionNumberNsf;
 
     /**
- * Gets or sets the amount limit withdraw.
- */
+     * Gets or sets the amount limit withdraw.
+     */
     @JsonProperty("AmountLimitWithdraw")
     private String amountLimitWithdraw;
 
     /**
- * Gets or sets the amount limit deposit.
- */
+     * Gets or sets the amount limit deposit.
+     */
     @JsonProperty("AmountLimitDeposit")
     private String amountLimitDeposit;
 
     /**
- * Gets or sets the amount limit NSF.
- */
+     * Gets or sets the amount limit NSF.
+     */
     @JsonProperty("AmountLimitNsf")
     private String amountLimitNsf;
 
     /**
- * Gets or sets the transaction maximum amount.
- */
+     * Gets or sets the transaction maximum amount.
+     */
     @JsonProperty("TransactionMaxAmount")
     private String transactionMaxAmount;
 
     /**
- * Gets or sets the autorization mail1.
- */
+     * Gets or sets the autorization mail1.
+     */
     @JsonProperty("AutorizationMail1")
     private String autorizationMail1;
 
     /**
- * Gets or sets the autorization mail2.
- */
+     * Gets or sets the autorization mail2.
+     */
     @JsonProperty("AutorizationMail2")
     private String autorizationMail2;
 
     /**
- * Gets or sets the double authentication account.
- */
+     * Gets or sets the double authentication account.
+     */
     @JsonProperty("DoubleAuthenticationAccount")
     private String doubleAuthenticationAccount;
 
     /**
- * Gets or sets the authorization limit.
- */
+     * Gets or sets the authorization limit.
+     */
     @JsonProperty("AuthorizationLimit")
     private String authorizationLimit;
 
     /**
- * Gets or sets the client autorisation limit.
- */
+     * Gets or sets the client autorisation limit.
+     */
     @JsonProperty("ClientAutorisationLimit")
     private String clientAutorisationLimit;
 
     /**
- * Gets or sets the is accepted.
- */
+     * Gets or sets the is accepted.
+     */
     @JsonProperty("IsAccepted")
     private String isAccepted;
 
     /**
- * Gets or sets the public token.
- */
+     * Gets or sets the public token.
+     */
     @JsonProperty("PublicToken")
     private String publicToken;
 
     /**
- * Retrieves or assigns the default language preference for a customer.
- */
+     * Retrieves or assigns the default language preference for a customer.
+     */
     @JsonProperty("DefaultCustomerLanguage")
     private Language defaultCustomerLanguage;
 
@@ -219,38 +219,37 @@ public class TibServiceContractForm   {
     
     public TibServiceContractForm(String bankName, String bankAddress, String bankCity, String bankProvince, String bankCountry, String bankName1, String bankNumber1, String bankTransit1, String bankAccount1, String enterpriseName, String ownerName, String ownerAddress, String ownerCity, String ownerCountry, String ownerProvince, String ownerPostalCode, String ownerEmail, String transactionNumberWithdraw, String transactionNumberDeposit, String transactionNumberNsf, String amountLimitWithdraw, String amountLimitDeposit, String amountLimitNsf, String transactionMaxAmount, String autorizationMail1, String autorizationMail2, String doubleAuthenticationAccount, String authorizationLimit, String clientAutorisationLimit, String isAccepted, String publicToken, Language defaultCustomerLanguage) {
         this.bankName = bankName;
-this.bankAddress = bankAddress;
-this.bankCity = bankCity;
-this.bankProvince = bankProvince;
-this.bankCountry = bankCountry;
-this.bankName1 = bankName1;
-this.bankNumber1 = bankNumber1;
-this.bankTransit1 = bankTransit1;
-this.bankAccount1 = bankAccount1;
-this.enterpriseName = enterpriseName;
-this.ownerName = ownerName;
-this.ownerAddress = ownerAddress;
-this.ownerCity = ownerCity;
-this.ownerCountry = ownerCountry;
-this.ownerProvince = ownerProvince;
-this.ownerPostalCode = ownerPostalCode;
-this.ownerEmail = ownerEmail;
-this.transactionNumberWithdraw = transactionNumberWithdraw;
-this.transactionNumberDeposit = transactionNumberDeposit;
-this.transactionNumberNsf = transactionNumberNsf;
-this.amountLimitWithdraw = amountLimitWithdraw;
-this.amountLimitDeposit = amountLimitDeposit;
-this.amountLimitNsf = amountLimitNsf;
-this.transactionMaxAmount = transactionMaxAmount;
-this.autorizationMail1 = autorizationMail1;
-this.autorizationMail2 = autorizationMail2;
-this.doubleAuthenticationAccount = doubleAuthenticationAccount;
-this.authorizationLimit = authorizationLimit;
-this.clientAutorisationLimit = clientAutorisationLimit;
-this.isAccepted = isAccepted;
-this.publicToken = publicToken;
-this.defaultCustomerLanguage = defaultCustomerLanguage;
-
+        this.bankAddress = bankAddress;
+        this.bankCity = bankCity;
+        this.bankProvince = bankProvince;
+        this.bankCountry = bankCountry;
+        this.bankName1 = bankName1;
+        this.bankNumber1 = bankNumber1;
+        this.bankTransit1 = bankTransit1;
+        this.bankAccount1 = bankAccount1;
+        this.enterpriseName = enterpriseName;
+        this.ownerName = ownerName;
+        this.ownerAddress = ownerAddress;
+        this.ownerCity = ownerCity;
+        this.ownerCountry = ownerCountry;
+        this.ownerProvince = ownerProvince;
+        this.ownerPostalCode = ownerPostalCode;
+        this.ownerEmail = ownerEmail;
+        this.transactionNumberWithdraw = transactionNumberWithdraw;
+        this.transactionNumberDeposit = transactionNumberDeposit;
+        this.transactionNumberNsf = transactionNumberNsf;
+        this.amountLimitWithdraw = amountLimitWithdraw;
+        this.amountLimitDeposit = amountLimitDeposit;
+        this.amountLimitNsf = amountLimitNsf;
+        this.transactionMaxAmount = transactionMaxAmount;
+        this.autorizationMail1 = autorizationMail1;
+        this.autorizationMail2 = autorizationMail2;
+        this.doubleAuthenticationAccount = doubleAuthenticationAccount;
+        this.authorizationLimit = authorizationLimit;
+        this.clientAutorisationLimit = clientAutorisationLimit;
+        this.isAccepted = isAccepted;
+        this.publicToken = publicToken;
+        this.defaultCustomerLanguage = defaultCustomerLanguage;
     }
     
     
@@ -532,38 +531,38 @@ this.defaultCustomerLanguage = defaultCustomerLanguage;
     @Override
     public String toString() {
         return "TibServiceContractForm{" +
-                 "bankName='" + bankName + '\'' +
- ", bankAddress='" + bankAddress + '\'' +
- ", bankCity='" + bankCity + '\'' +
- ", bankProvince='" + bankProvince + '\'' +
- ", bankCountry='" + bankCountry + '\'' +
- ", bankName1='" + bankName1 + '\'' +
- ", bankNumber1='" + bankNumber1 + '\'' +
- ", bankTransit1='" + bankTransit1 + '\'' +
- ", bankAccount1='" + bankAccount1 + '\'' +
- ", enterpriseName='" + enterpriseName + '\'' +
- ", ownerName='" + ownerName + '\'' +
- ", ownerAddress='" + ownerAddress + '\'' +
- ", ownerCity='" + ownerCity + '\'' +
- ", ownerCountry='" + ownerCountry + '\'' +
- ", ownerProvince='" + ownerProvince + '\'' +
- ", ownerPostalCode='" + ownerPostalCode + '\'' +
- ", ownerEmail='" + ownerEmail + '\'' +
- ", transactionNumberWithdraw='" + transactionNumberWithdraw + '\'' +
- ", transactionNumberDeposit='" + transactionNumberDeposit + '\'' +
- ", transactionNumberNsf='" + transactionNumberNsf + '\'' +
- ", amountLimitWithdraw='" + amountLimitWithdraw + '\'' +
- ", amountLimitDeposit='" + amountLimitDeposit + '\'' +
- ", amountLimitNsf='" + amountLimitNsf + '\'' +
- ", transactionMaxAmount='" + transactionMaxAmount + '\'' +
- ", autorizationMail1='" + autorizationMail1 + '\'' +
- ", autorizationMail2='" + autorizationMail2 + '\'' +
- ", doubleAuthenticationAccount='" + doubleAuthenticationAccount + '\'' +
- ", authorizationLimit='" + authorizationLimit + '\'' +
- ", clientAutorisationLimit='" + clientAutorisationLimit + '\'' +
- ", isAccepted='" + isAccepted + '\'' +
- ", publicToken='" + publicToken + '\'' +
- ", defaultCustomerLanguage='" + defaultCustomerLanguage + '\'' +
+                "bankName='" + bankName + '\'' +
+                ", bankAddress='" + bankAddress + '\'' +
+                ", bankCity='" + bankCity + '\'' +
+                ", bankProvince='" + bankProvince + '\'' +
+                ", bankCountry='" + bankCountry + '\'' +
+                ", bankName1='" + bankName1 + '\'' +
+                ", bankNumber1='" + bankNumber1 + '\'' +
+                ", bankTransit1='" + bankTransit1 + '\'' +
+                ", bankAccount1='" + bankAccount1 + '\'' +
+                ", enterpriseName='" + enterpriseName + '\'' +
+                ", ownerName='" + ownerName + '\'' +
+                ", ownerAddress='" + ownerAddress + '\'' +
+                ", ownerCity='" + ownerCity + '\'' +
+                ", ownerCountry='" + ownerCountry + '\'' +
+                ", ownerProvince='" + ownerProvince + '\'' +
+                ", ownerPostalCode='" + ownerPostalCode + '\'' +
+                ", ownerEmail='" + ownerEmail + '\'' +
+                ", transactionNumberWithdraw='" + transactionNumberWithdraw + '\'' +
+                ", transactionNumberDeposit='" + transactionNumberDeposit + '\'' +
+                ", transactionNumberNsf='" + transactionNumberNsf + '\'' +
+                ", amountLimitWithdraw='" + amountLimitWithdraw + '\'' +
+                ", amountLimitDeposit='" + amountLimitDeposit + '\'' +
+                ", amountLimitNsf='" + amountLimitNsf + '\'' +
+                ", transactionMaxAmount='" + transactionMaxAmount + '\'' +
+                ", autorizationMail1='" + autorizationMail1 + '\'' +
+                ", autorizationMail2='" + autorizationMail2 + '\'' +
+                ", doubleAuthenticationAccount='" + doubleAuthenticationAccount + '\'' +
+                ", authorizationLimit='" + authorizationLimit + '\'' +
+                ", clientAutorisationLimit='" + clientAutorisationLimit + '\'' +
+                ", isAccepted='" + isAccepted + '\'' +
+                ", publicToken='" + publicToken + '\'' +
+                ", defaultCustomerLanguage='" + defaultCustomerLanguage + '\'' +
 
                 '}';
     }

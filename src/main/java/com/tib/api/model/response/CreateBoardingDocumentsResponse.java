@@ -32,16 +32,14 @@ public class CreateBoardingDocumentsResponse extends CustomAPIResponse {
     public CreateBoardingDocumentsResponse(Error[] errors, boolean hasError, String messages, String status, String message) {
         super(errors, hasError, messages);
         this.status = status;
-this.message = message;
-
+        this.message = message;
     }
 
     public CreateBoardingDocumentsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.status = apiResponse.getResponse().toString();
-this.message = apiResponse.getResponse().toString();
-
+            this.message = apiResponse.getResponse().toString();
         }
     }
 
@@ -82,8 +80,8 @@ this.message = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "CreateBoardingDocumentsResponse{" +
-                 "status='" + status + '\'' +
- ", message='" + message + '\'' +
+                "status='" + status + '\'' +
+                ", message='" + message + '\'' +
 
                 '}';
     }

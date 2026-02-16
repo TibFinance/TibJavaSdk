@@ -21,14 +21,14 @@ public class ProviderAccountOperations   {
 
     
     /**
- * Gets or sets the type of the provider.
- */
+     * Gets or sets the type of the provider.
+     */
     @JsonProperty("ProviderType")
     private Provider providerType;
 
     /**
- * Gets or sets the account operations.
- */
+     * Gets or sets the account operations.
+     */
     @JsonProperty("AccountOperations")
     private List<AccountOperationLine> accountOperations;
 
@@ -40,8 +40,7 @@ public class ProviderAccountOperations   {
     
     public ProviderAccountOperations(Provider providerType, List<AccountOperationLine> accountOperations) {
         this.providerType = providerType;
-this.accountOperations = accountOperations;
-
+        this.accountOperations = accountOperations;
     }
     
     
@@ -83,8 +82,8 @@ this.accountOperations = accountOperations;
     @Override
     public String toString() {
         return "ProviderAccountOperations{" +
-                 "providerType='" + providerType + '\'' +
- ", accountOperations='" + accountOperations + '\'' +
+                "providerType='" + providerType + '\'' +
+                ", accountOperations='" + accountOperations + '\'' +
 
                 '}';
     }

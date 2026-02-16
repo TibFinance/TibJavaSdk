@@ -30,14 +30,12 @@ public class SearchAdminTransferResponse<T> extends CustomAPIResponse {
     public SearchAdminTransferResponse(Error[] errors, boolean hasError, String messages, List<AdminTransfer> searchResult) {
         super(errors, hasError, messages);
         this.searchResult = searchResult;
-
     }
 
     public SearchAdminTransferResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.searchResult = (List<AdminTransfer>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class SearchAdminTransferResponse<T> extends CustomAPIResponse {
     @Override
     public String toString() {
         return "SearchAdminTransferResponse{" +
-                 "searchResult='" + searchResult + '\'' +
+                "searchResult='" + searchResult + '\'' +
 
                 '}';
     }

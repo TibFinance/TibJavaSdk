@@ -21,38 +21,38 @@ public class CredentialBaseObject   {
 
     
     /**
- * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
- */
+     * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
+     */
     @JsonProperty("Username")
     private String username;
 
     /**
- * The user's username2
- */
+     * The user's username2
+     */
     @JsonProperty("Username2")
     private String username2;
 
     /**
- * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
- */
+     * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
+     */
     @JsonProperty("Password")
     private String password;
 
     /**
- * Password 2
- */
+     * Password 2
+     */
     @JsonProperty("Password2")
     private String password2;
 
     /**
- * Gets or sets the questions.
- */
+     * Gets or sets the questions.
+     */
     @JsonProperty("Questions")
     private List<QuestionAnswer> questions;
 
     /**
- * Gets or sets the addresses.
- */
+     * Gets or sets the addresses.
+     */
     @JsonProperty("Addresses")
     private List<ProviderAddressEntity> addresses;
 
@@ -64,12 +64,11 @@ public class CredentialBaseObject   {
     
     public CredentialBaseObject(String username, String username2, String password, String password2, List<QuestionAnswer> questions, List<ProviderAddressEntity> addresses) {
         this.username = username;
-this.username2 = username2;
-this.password = password;
-this.password2 = password2;
-this.questions = questions;
-this.addresses = addresses;
-
+        this.username2 = username2;
+        this.password = password;
+        this.password2 = password2;
+        this.questions = questions;
+        this.addresses = addresses;
     }
     
     
@@ -143,12 +142,12 @@ this.addresses = addresses;
     @Override
     public String toString() {
         return "CredentialBaseObject{" +
-                 "username='" + username + '\'' +
- ", username2='" + username2 + '\'' +
- ", password='" + password + '\'' +
- ", password2='" + password2 + '\'' +
- ", questions='" + questions + '\'' +
- ", addresses='" + addresses + '\'' +
+                "username='" + username + '\'' +
+                ", username2='" + username2 + '\'' +
+                ", password='" + password + '\'' +
+                ", password2='" + password2 + '\'' +
+                ", questions='" + questions + '\'' +
+                ", addresses='" + addresses + '\'' +
 
                 '}';
     }

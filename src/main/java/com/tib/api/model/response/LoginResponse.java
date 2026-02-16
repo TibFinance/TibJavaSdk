@@ -29,14 +29,12 @@ public class LoginResponse extends CustomAPIResponse {
     public LoginResponse(Error[] errors, boolean hasError, String messages, String sessionId) {
         super(errors, hasError, messages);
         this.sessionId = sessionId;
-
     }
 
     public LoginResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.sessionId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class LoginResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "LoginResponse{" +
-                 "sessionId='" + sessionId + '\'' +
+                "sessionId='" + sessionId + '\'' +
 
                 '}';
     }

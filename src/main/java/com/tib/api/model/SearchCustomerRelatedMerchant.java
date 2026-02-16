@@ -19,20 +19,20 @@ public class SearchCustomerRelatedMerchant   {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantIsDeleted")
     private boolean merchantIsDeleted;
 
@@ -44,9 +44,8 @@ public class SearchCustomerRelatedMerchant   {
     
     public SearchCustomerRelatedMerchant(String merchantId, String merchantName, boolean merchantIsDeleted) {
         this.merchantId = merchantId;
-this.merchantName = merchantName;
-this.merchantIsDeleted = merchantIsDeleted;
-
+        this.merchantName = merchantName;
+        this.merchantIsDeleted = merchantIsDeleted;
     }
     
     
@@ -96,9 +95,9 @@ this.merchantIsDeleted = merchantIsDeleted;
     @Override
     public String toString() {
         return "SearchCustomerRelatedMerchant{" +
-                 "merchantId='" + merchantId + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", merchantIsDeleted='" + merchantIsDeleted + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", merchantIsDeleted='" + merchantIsDeleted + '\'' +
 
                 '}';
     }

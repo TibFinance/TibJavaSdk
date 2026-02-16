@@ -19,26 +19,26 @@ public class ClientBoarding   {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientName")
     private String clientName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientEmail")
     private String clientEmail;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientPhone")
     private String clientPhone;
 
@@ -50,10 +50,9 @@ public class ClientBoarding   {
     
     public ClientBoarding(String clientId, String clientName, String clientEmail, String clientPhone) {
         this.clientId = clientId;
-this.clientName = clientName;
-this.clientEmail = clientEmail;
-this.clientPhone = clientPhone;
-
+        this.clientName = clientName;
+        this.clientEmail = clientEmail;
+        this.clientPhone = clientPhone;
     }
     
     
@@ -111,10 +110,10 @@ this.clientPhone = clientPhone;
     @Override
     public String toString() {
         return "ClientBoarding{" +
-                 "clientId='" + clientId + '\'' +
- ", clientName='" + clientName + '\'' +
- ", clientEmail='" + clientEmail + '\'' +
- ", clientPhone='" + clientPhone + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", clientName='" + clientName + '\'' +
+                ", clientEmail='" + clientEmail + '\'' +
+                ", clientPhone='" + clientPhone + '\'' +
 
                 '}';
     }

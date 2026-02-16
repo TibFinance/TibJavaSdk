@@ -20,14 +20,14 @@ public class ResendPaymentEmailArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Retrieves or assigns the unique identifier for a payment.
- */
+     * Retrieves or assigns the unique identifier for a payment.
+     */
     @JsonProperty("PaymentId")
     private String paymentId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -39,16 +39,14 @@ public class ResendPaymentEmailArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public ResendPaymentEmailArgs(String paymentId, String merchantId) {
         this.paymentId = paymentId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
     
     
     public ResendPaymentEmailArgs(String sessionToken, String paymentId, String merchantId) {
         super(sessionToken);
         this.paymentId = paymentId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     
@@ -88,8 +86,8 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "ResendPaymentEmailArgs{" +
-                 "paymentId='" + paymentId + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "paymentId='" + paymentId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

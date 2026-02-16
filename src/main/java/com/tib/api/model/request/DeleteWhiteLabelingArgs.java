@@ -20,20 +20,20 @@ public class DeleteWhiteLabelingArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Id")
     private String id;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Level")
     private Integer level;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Url")
     private String url;
 
@@ -45,18 +45,16 @@ public class DeleteWhiteLabelingArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public DeleteWhiteLabelingArgs(String id, Integer level, String url) {
         this.id = id;
-this.level = level;
-this.url = url;
-
+        this.level = level;
+        this.url = url;
     }
     
     
     public DeleteWhiteLabelingArgs(String adminSessionToken, String id, Integer level, String url) {
         super(adminSessionToken);
         this.id = id;
-this.level = level;
-this.url = url;
-
+        this.level = level;
+        this.url = url;
     }
 
     
@@ -104,9 +102,9 @@ this.url = url;
     @Override
     public String toString() {
         return "DeleteWhiteLabelingArgs{" +
-                 "id='" + id + '\'' +
- ", level='" + level + '\'' +
- ", url='" + url + '\'' +
+                "id='" + id + '\'' +
+                ", level='" + level + '\'' +
+                ", url='" + url + '\'' +
 
                 '}';
     }

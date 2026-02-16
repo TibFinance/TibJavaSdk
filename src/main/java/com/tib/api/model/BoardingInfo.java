@@ -20,248 +20,248 @@ public class BoardingInfo  extends BoardingInfoEntity  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BoardingInfoId")
     private String boardingInfoId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AdminBirthDate")
     private String adminBirthDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AdminZip")
     private String adminZip;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AdminCountryCode")
     private String adminCountryCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AdminStateCode")
     private String adminStateCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AdminPhone")
     private String adminPhone;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AdminGovId")
     private String adminGovId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ManagerBirthDate")
     private String managerBirthDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ManagerZip")
     private String managerZip;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ManagerStateCode")
     private String managerStateCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ManagerPhone")
     private String managerPhone;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ManagerCountryCode")
     private String managerCountryCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ManagerGovId")
     private String managerGovId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ManagerAddress_Edited")
     private String managerAddress_Edited;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ManagerFirstName_Edited")
     private String managerFirstName_Edited;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ManagerLastName_Edited")
     private String managerLastName_Edited;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyCountryCode")
     private String companyCountryCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyCity")
     private String companyCity;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyZip")
     private String companyZip;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyStateCode")
     private String companyStateCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyTaxId")
     private String companyTaxId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyWebSite")
     private String companyWebSite;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanySalesVolume")
     private String companySalesVolume;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyProductAndServiceDescription")
     private String companyProductAndServiceDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BusinessRegistrationNumber")
     private String businessRegistrationNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BusinessRegistrationNumber_Edited")
     private String businessRegistrationNumber_Edited;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankBic")
     private String bankBic;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankIban")
     private String bankIban;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankCity")
     private String bankCity;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankStateCode")
     private String bankStateCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankCountryCode")
     private String bankCountryCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankName")
     private String bankName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankRoutingNumber")
     private String bankRoutingNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankPayoutCurrency")
     private String bankPayoutCurrency;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankSortCode")
     private String bankSortCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankBsb")
     private String bankBsb;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankSwiftCode")
     private String bankSwiftCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyBusinessCategory")
     private String companyBusinessCategory;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AdminCity")
     private String adminCity;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ManagerCity")
     private String managerCity;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Files")
     private List<BoardingInfoFileEntity> files;
 
@@ -273,94 +273,92 @@ public class BoardingInfo  extends BoardingInfoEntity  {
     
     public BoardingInfo(String boardingInfoId, String adminBirthDate, String adminZip, String adminCountryCode, String adminStateCode, String adminPhone, String adminGovId, String managerBirthDate, String managerZip, String managerStateCode, String managerPhone, String managerCountryCode, String managerGovId, String managerAddress_Edited, String managerFirstName_Edited, String managerLastName_Edited, String companyCountryCode, String companyCity, String companyZip, String companyStateCode, String companyTaxId, String companyWebSite, String companySalesVolume, String companyProductAndServiceDescription, String businessRegistrationNumber, String businessRegistrationNumber_Edited, String bankBic, String bankIban, String bankCity, String bankStateCode, String bankCountryCode, String bankName, String bankRoutingNumber, String bankPayoutCurrency, String bankSortCode, String bankBsb, String bankSwiftCode, String companyBusinessCategory, String adminCity, String managerCity, List<BoardingInfoFileEntity> files) {
         this.boardingInfoId = boardingInfoId;
-this.adminBirthDate = adminBirthDate;
-this.adminZip = adminZip;
-this.adminCountryCode = adminCountryCode;
-this.adminStateCode = adminStateCode;
-this.adminPhone = adminPhone;
-this.adminGovId = adminGovId;
-this.managerBirthDate = managerBirthDate;
-this.managerZip = managerZip;
-this.managerStateCode = managerStateCode;
-this.managerPhone = managerPhone;
-this.managerCountryCode = managerCountryCode;
-this.managerGovId = managerGovId;
-this.managerAddress_Edited = managerAddress_Edited;
-this.managerFirstName_Edited = managerFirstName_Edited;
-this.managerLastName_Edited = managerLastName_Edited;
-this.companyCountryCode = companyCountryCode;
-this.companyCity = companyCity;
-this.companyZip = companyZip;
-this.companyStateCode = companyStateCode;
-this.companyTaxId = companyTaxId;
-this.companyWebSite = companyWebSite;
-this.companySalesVolume = companySalesVolume;
-this.companyProductAndServiceDescription = companyProductAndServiceDescription;
-this.businessRegistrationNumber = businessRegistrationNumber;
-this.businessRegistrationNumber_Edited = businessRegistrationNumber_Edited;
-this.bankBic = bankBic;
-this.bankIban = bankIban;
-this.bankCity = bankCity;
-this.bankStateCode = bankStateCode;
-this.bankCountryCode = bankCountryCode;
-this.bankName = bankName;
-this.bankRoutingNumber = bankRoutingNumber;
-this.bankPayoutCurrency = bankPayoutCurrency;
-this.bankSortCode = bankSortCode;
-this.bankBsb = bankBsb;
-this.bankSwiftCode = bankSwiftCode;
-this.companyBusinessCategory = companyBusinessCategory;
-this.adminCity = adminCity;
-this.managerCity = managerCity;
-this.files = files;
-
+        this.adminBirthDate = adminBirthDate;
+        this.adminZip = adminZip;
+        this.adminCountryCode = adminCountryCode;
+        this.adminStateCode = adminStateCode;
+        this.adminPhone = adminPhone;
+        this.adminGovId = adminGovId;
+        this.managerBirthDate = managerBirthDate;
+        this.managerZip = managerZip;
+        this.managerStateCode = managerStateCode;
+        this.managerPhone = managerPhone;
+        this.managerCountryCode = managerCountryCode;
+        this.managerGovId = managerGovId;
+        this.managerAddress_Edited = managerAddress_Edited;
+        this.managerFirstName_Edited = managerFirstName_Edited;
+        this.managerLastName_Edited = managerLastName_Edited;
+        this.companyCountryCode = companyCountryCode;
+        this.companyCity = companyCity;
+        this.companyZip = companyZip;
+        this.companyStateCode = companyStateCode;
+        this.companyTaxId = companyTaxId;
+        this.companyWebSite = companyWebSite;
+        this.companySalesVolume = companySalesVolume;
+        this.companyProductAndServiceDescription = companyProductAndServiceDescription;
+        this.businessRegistrationNumber = businessRegistrationNumber;
+        this.businessRegistrationNumber_Edited = businessRegistrationNumber_Edited;
+        this.bankBic = bankBic;
+        this.bankIban = bankIban;
+        this.bankCity = bankCity;
+        this.bankStateCode = bankStateCode;
+        this.bankCountryCode = bankCountryCode;
+        this.bankName = bankName;
+        this.bankRoutingNumber = bankRoutingNumber;
+        this.bankPayoutCurrency = bankPayoutCurrency;
+        this.bankSortCode = bankSortCode;
+        this.bankBsb = bankBsb;
+        this.bankSwiftCode = bankSwiftCode;
+        this.companyBusinessCategory = companyBusinessCategory;
+        this.adminCity = adminCity;
+        this.managerCity = managerCity;
+        this.files = files;
     }
     
     
     public BoardingInfo(String clientId, String companyName, String companyAddress, String companyPhone, String companyEmail, String adminFirstName, String adminLastName, String adminAddress, boolean isManagerAlsoAdmin, String managerFirstName, String managerLastName, String managerAddress, String managerLinkedIn, Integer companyType, String companyName_Edited, String companyAddress_Edited, Integer companyType_Edited, String adminFirstName_Edited, String adminLastName_Edited, String adminAddress_Edited, boolean didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService, boolean didOwnersAlreadyAskedForBankrupcy, boolean haveYouBeenSubjectOfVisaRiskProgram, String specimenFile, String idFile, Integer boardingStep, String transitNumber, String accountNumber, String accountOwner, String bankNumber, String boardingInfoId, String adminBirthDate, String adminZip, String adminCountryCode, String adminStateCode, String adminPhone, String adminGovId, String managerBirthDate, String managerZip, String managerStateCode, String managerPhone, String managerCountryCode, String managerGovId, String managerAddress_Edited, String managerFirstName_Edited, String managerLastName_Edited, String companyCountryCode, String companyCity, String companyZip, String companyStateCode, String companyTaxId, String companyWebSite, String companySalesVolume, String companyProductAndServiceDescription, String businessRegistrationNumber, String businessRegistrationNumber_Edited, String bankBic, String bankIban, String bankCity, String bankStateCode, String bankCountryCode, String bankName, String bankRoutingNumber, String bankPayoutCurrency, String bankSortCode, String bankBsb, String bankSwiftCode, String companyBusinessCategory, String adminCity, String managerCity, List<BoardingInfoFileEntity> files) {
         super(clientId, companyName, companyAddress, companyPhone, companyEmail, adminFirstName, adminLastName, adminAddress, isManagerAlsoAdmin, managerFirstName, managerLastName, managerAddress, managerLinkedIn, companyType, companyName_Edited, companyAddress_Edited, companyType_Edited, adminFirstName_Edited, adminLastName_Edited, adminAddress_Edited, didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService, didOwnersAlreadyAskedForBankrupcy, haveYouBeenSubjectOfVisaRiskProgram, specimenFile, idFile, boardingStep, transitNumber, accountNumber, accountOwner, bankNumber);
         this.boardingInfoId = boardingInfoId;
-this.adminBirthDate = adminBirthDate;
-this.adminZip = adminZip;
-this.adminCountryCode = adminCountryCode;
-this.adminStateCode = adminStateCode;
-this.adminPhone = adminPhone;
-this.adminGovId = adminGovId;
-this.managerBirthDate = managerBirthDate;
-this.managerZip = managerZip;
-this.managerStateCode = managerStateCode;
-this.managerPhone = managerPhone;
-this.managerCountryCode = managerCountryCode;
-this.managerGovId = managerGovId;
-this.managerAddress_Edited = managerAddress_Edited;
-this.managerFirstName_Edited = managerFirstName_Edited;
-this.managerLastName_Edited = managerLastName_Edited;
-this.companyCountryCode = companyCountryCode;
-this.companyCity = companyCity;
-this.companyZip = companyZip;
-this.companyStateCode = companyStateCode;
-this.companyTaxId = companyTaxId;
-this.companyWebSite = companyWebSite;
-this.companySalesVolume = companySalesVolume;
-this.companyProductAndServiceDescription = companyProductAndServiceDescription;
-this.businessRegistrationNumber = businessRegistrationNumber;
-this.businessRegistrationNumber_Edited = businessRegistrationNumber_Edited;
-this.bankBic = bankBic;
-this.bankIban = bankIban;
-this.bankCity = bankCity;
-this.bankStateCode = bankStateCode;
-this.bankCountryCode = bankCountryCode;
-this.bankName = bankName;
-this.bankRoutingNumber = bankRoutingNumber;
-this.bankPayoutCurrency = bankPayoutCurrency;
-this.bankSortCode = bankSortCode;
-this.bankBsb = bankBsb;
-this.bankSwiftCode = bankSwiftCode;
-this.companyBusinessCategory = companyBusinessCategory;
-this.adminCity = adminCity;
-this.managerCity = managerCity;
-this.files = files;
-
+        this.adminBirthDate = adminBirthDate;
+        this.adminZip = adminZip;
+        this.adminCountryCode = adminCountryCode;
+        this.adminStateCode = adminStateCode;
+        this.adminPhone = adminPhone;
+        this.adminGovId = adminGovId;
+        this.managerBirthDate = managerBirthDate;
+        this.managerZip = managerZip;
+        this.managerStateCode = managerStateCode;
+        this.managerPhone = managerPhone;
+        this.managerCountryCode = managerCountryCode;
+        this.managerGovId = managerGovId;
+        this.managerAddress_Edited = managerAddress_Edited;
+        this.managerFirstName_Edited = managerFirstName_Edited;
+        this.managerLastName_Edited = managerLastName_Edited;
+        this.companyCountryCode = companyCountryCode;
+        this.companyCity = companyCity;
+        this.companyZip = companyZip;
+        this.companyStateCode = companyStateCode;
+        this.companyTaxId = companyTaxId;
+        this.companyWebSite = companyWebSite;
+        this.companySalesVolume = companySalesVolume;
+        this.companyProductAndServiceDescription = companyProductAndServiceDescription;
+        this.businessRegistrationNumber = businessRegistrationNumber;
+        this.businessRegistrationNumber_Edited = businessRegistrationNumber_Edited;
+        this.bankBic = bankBic;
+        this.bankIban = bankIban;
+        this.bankCity = bankCity;
+        this.bankStateCode = bankStateCode;
+        this.bankCountryCode = bankCountryCode;
+        this.bankName = bankName;
+        this.bankRoutingNumber = bankRoutingNumber;
+        this.bankPayoutCurrency = bankPayoutCurrency;
+        this.bankSortCode = bankSortCode;
+        this.bankBsb = bankBsb;
+        this.bankSwiftCode = bankSwiftCode;
+        this.companyBusinessCategory = companyBusinessCategory;
+        this.adminCity = adminCity;
+        this.managerCity = managerCity;
+        this.files = files;
     }
 
     
@@ -712,47 +710,47 @@ this.files = files;
     @Override
     public String toString() {
         return "BoardingInfo{" +
-                 "boardingInfoId='" + boardingInfoId + '\'' +
- ", adminBirthDate='" + adminBirthDate + '\'' +
- ", adminZip='" + adminZip + '\'' +
- ", adminCountryCode='" + adminCountryCode + '\'' +
- ", adminStateCode='" + adminStateCode + '\'' +
- ", adminPhone='" + adminPhone + '\'' +
- ", adminGovId='" + adminGovId + '\'' +
- ", managerBirthDate='" + managerBirthDate + '\'' +
- ", managerZip='" + managerZip + '\'' +
- ", managerStateCode='" + managerStateCode + '\'' +
- ", managerPhone='" + managerPhone + '\'' +
- ", managerCountryCode='" + managerCountryCode + '\'' +
- ", managerGovId='" + managerGovId + '\'' +
- ", managerAddress_Edited='" + managerAddress_Edited + '\'' +
- ", managerFirstName_Edited='" + managerFirstName_Edited + '\'' +
- ", managerLastName_Edited='" + managerLastName_Edited + '\'' +
- ", companyCountryCode='" + companyCountryCode + '\'' +
- ", companyCity='" + companyCity + '\'' +
- ", companyZip='" + companyZip + '\'' +
- ", companyStateCode='" + companyStateCode + '\'' +
- ", companyTaxId='" + companyTaxId + '\'' +
- ", companyWebSite='" + companyWebSite + '\'' +
- ", companySalesVolume='" + companySalesVolume + '\'' +
- ", companyProductAndServiceDescription='" + companyProductAndServiceDescription + '\'' +
- ", businessRegistrationNumber='" + businessRegistrationNumber + '\'' +
- ", businessRegistrationNumber_Edited='" + businessRegistrationNumber_Edited + '\'' +
- ", bankBic='" + bankBic + '\'' +
- ", bankIban='" + bankIban + '\'' +
- ", bankCity='" + bankCity + '\'' +
- ", bankStateCode='" + bankStateCode + '\'' +
- ", bankCountryCode='" + bankCountryCode + '\'' +
- ", bankName='" + bankName + '\'' +
- ", bankRoutingNumber='" + bankRoutingNumber + '\'' +
- ", bankPayoutCurrency='" + bankPayoutCurrency + '\'' +
- ", bankSortCode='" + bankSortCode + '\'' +
- ", bankBsb='" + bankBsb + '\'' +
- ", bankSwiftCode='" + bankSwiftCode + '\'' +
- ", companyBusinessCategory='" + companyBusinessCategory + '\'' +
- ", adminCity='" + adminCity + '\'' +
- ", managerCity='" + managerCity + '\'' +
- ", files='" + files + '\'' +
+                "boardingInfoId='" + boardingInfoId + '\'' +
+                ", adminBirthDate='" + adminBirthDate + '\'' +
+                ", adminZip='" + adminZip + '\'' +
+                ", adminCountryCode='" + adminCountryCode + '\'' +
+                ", adminStateCode='" + adminStateCode + '\'' +
+                ", adminPhone='" + adminPhone + '\'' +
+                ", adminGovId='" + adminGovId + '\'' +
+                ", managerBirthDate='" + managerBirthDate + '\'' +
+                ", managerZip='" + managerZip + '\'' +
+                ", managerStateCode='" + managerStateCode + '\'' +
+                ", managerPhone='" + managerPhone + '\'' +
+                ", managerCountryCode='" + managerCountryCode + '\'' +
+                ", managerGovId='" + managerGovId + '\'' +
+                ", managerAddress_Edited='" + managerAddress_Edited + '\'' +
+                ", managerFirstName_Edited='" + managerFirstName_Edited + '\'' +
+                ", managerLastName_Edited='" + managerLastName_Edited + '\'' +
+                ", companyCountryCode='" + companyCountryCode + '\'' +
+                ", companyCity='" + companyCity + '\'' +
+                ", companyZip='" + companyZip + '\'' +
+                ", companyStateCode='" + companyStateCode + '\'' +
+                ", companyTaxId='" + companyTaxId + '\'' +
+                ", companyWebSite='" + companyWebSite + '\'' +
+                ", companySalesVolume='" + companySalesVolume + '\'' +
+                ", companyProductAndServiceDescription='" + companyProductAndServiceDescription + '\'' +
+                ", businessRegistrationNumber='" + businessRegistrationNumber + '\'' +
+                ", businessRegistrationNumber_Edited='" + businessRegistrationNumber_Edited + '\'' +
+                ", bankBic='" + bankBic + '\'' +
+                ", bankIban='" + bankIban + '\'' +
+                ", bankCity='" + bankCity + '\'' +
+                ", bankStateCode='" + bankStateCode + '\'' +
+                ", bankCountryCode='" + bankCountryCode + '\'' +
+                ", bankName='" + bankName + '\'' +
+                ", bankRoutingNumber='" + bankRoutingNumber + '\'' +
+                ", bankPayoutCurrency='" + bankPayoutCurrency + '\'' +
+                ", bankSortCode='" + bankSortCode + '\'' +
+                ", bankBsb='" + bankBsb + '\'' +
+                ", bankSwiftCode='" + bankSwiftCode + '\'' +
+                ", companyBusinessCategory='" + companyBusinessCategory + '\'' +
+                ", adminCity='" + adminCity + '\'' +
+                ", managerCity='" + managerCity + '\'' +
+                ", files='" + files + '\'' +
 
                 '}';
     }

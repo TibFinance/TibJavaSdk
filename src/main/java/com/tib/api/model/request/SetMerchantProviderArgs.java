@@ -21,14 +21,14 @@ public class SetMerchantProviderArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Null means "service's default"
- */
+     * Null means "service's default"
+     */
     @JsonProperty("FavoriteProvider")
     private Provider favoriteProvider;
 
@@ -40,16 +40,14 @@ public class SetMerchantProviderArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public SetMerchantProviderArgs(String merchantId, Provider favoriteProvider) {
         this.merchantId = merchantId;
-this.favoriteProvider = favoriteProvider;
-
+        this.favoriteProvider = favoriteProvider;
     }
     
     
     public SetMerchantProviderArgs(String adminSessionToken, String merchantId, Provider favoriteProvider) {
         super(adminSessionToken);
         this.merchantId = merchantId;
-this.favoriteProvider = favoriteProvider;
-
+        this.favoriteProvider = favoriteProvider;
     }
 
     
@@ -89,8 +87,8 @@ this.favoriteProvider = favoriteProvider;
     @Override
     public String toString() {
         return "SetMerchantProviderArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", favoriteProvider='" + favoriteProvider + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", favoriteProvider='" + favoriteProvider + '\'' +
 
                 '}';
     }

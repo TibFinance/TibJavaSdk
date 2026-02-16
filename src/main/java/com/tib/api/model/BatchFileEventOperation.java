@@ -19,50 +19,50 @@ public class BatchFileEventOperation   {
 
     
     /**
- * Indicates that the operation completed successfully.
- */
+     * Indicates that the operation completed successfully.
+     */
     @JsonProperty("Success")
     private boolean success;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CreatedTransferId")
     private String createdTransferId;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Gets or sets the reference identifier used to uniquely identify a transaction, operation, or entity within the TIB Finance system.
- */
+     * Gets or sets the reference identifier used to uniquely identify a transaction, operation, or entity within the TIB Finance system.
+     */
     @JsonProperty("ReferenceId")
     private String referenceId;
 
     /**
- * Acts as a unique identifier for a distinct payment method.
- */
+     * Acts as a unique identifier for a distinct payment method.
+     */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
@@ -74,14 +74,13 @@ public class BatchFileEventOperation   {
     
     public BatchFileEventOperation(boolean success, String createdTransferId, Double amount, String clientId, String customerId, String merchantId, String referenceId, String paymentMethodId) {
         this.success = success;
-this.createdTransferId = createdTransferId;
-this.amount = amount;
-this.clientId = clientId;
-this.customerId = customerId;
-this.merchantId = merchantId;
-this.referenceId = referenceId;
-this.paymentMethodId = paymentMethodId;
-
+        this.createdTransferId = createdTransferId;
+        this.amount = amount;
+        this.clientId = clientId;
+        this.customerId = customerId;
+        this.merchantId = merchantId;
+        this.referenceId = referenceId;
+        this.paymentMethodId = paymentMethodId;
     }
     
     
@@ -171,14 +170,14 @@ this.paymentMethodId = paymentMethodId;
     @Override
     public String toString() {
         return "BatchFileEventOperation{" +
-                 "success='" + success + '\'' +
- ", createdTransferId='" + createdTransferId + '\'' +
- ", amount='" + amount + '\'' +
- ", clientId='" + clientId + '\'' +
- ", customerId='" + customerId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", referenceId='" + referenceId + '\'' +
- ", paymentMethodId='" + paymentMethodId + '\'' +
+                "success='" + success + '\'' +
+                ", createdTransferId='" + createdTransferId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", referenceId='" + referenceId + '\'' +
+                ", paymentMethodId='" + paymentMethodId + '\'' +
 
                 '}';
     }

@@ -19,50 +19,50 @@ public class ContactInfo   {
 
     
     /**
- * Specifies the email address associated with the merchant.
- */
+     * Specifies the email address associated with the merchant.
+     */
     @JsonProperty("Email")
     private String email;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Phone")
     private String phone;
 
     /**
- * Gets or sets the address associated with the entity.
- */
+     * Gets or sets the address associated with the entity.
+     */
     @JsonProperty("Address")
     private String address;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("City")
     private String city;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Province")
     private Integer province;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Country")
     private Integer country;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ZipCode")
     private String zipCode;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Integer language;
 
@@ -74,14 +74,13 @@ public class ContactInfo   {
     
     public ContactInfo(String email, String phone, String address, String city, Integer province, Integer country, String zipCode, Integer language) {
         this.email = email;
-this.phone = phone;
-this.address = address;
-this.city = city;
-this.province = province;
-this.country = country;
-this.zipCode = zipCode;
-this.language = language;
-
+        this.phone = phone;
+        this.address = address;
+        this.city = city;
+        this.province = province;
+        this.country = country;
+        this.zipCode = zipCode;
+        this.language = language;
     }
     
     
@@ -171,14 +170,14 @@ this.language = language;
     @Override
     public String toString() {
         return "ContactInfo{" +
-                 "email='" + email + '\'' +
- ", phone='" + phone + '\'' +
- ", address='" + address + '\'' +
- ", city='" + city + '\'' +
- ", province='" + province + '\'' +
- ", country='" + country + '\'' +
- ", zipCode='" + zipCode + '\'' +
- ", language='" + language + '\'' +
+                "email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", province='" + province + '\'' +
+                ", country='" + country + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", language='" + language + '\'' +
 
                 '}';
     }

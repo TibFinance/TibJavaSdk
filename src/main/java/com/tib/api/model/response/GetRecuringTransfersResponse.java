@@ -30,14 +30,12 @@ public class GetRecuringTransfersResponse<T> extends CustomAPIResponse {
     public GetRecuringTransfersResponse(Error[] errors, boolean hasError, String messages, List<RecuringTransfer> recuringTransfers) {
         super(errors, hasError, messages);
         this.recuringTransfers = recuringTransfers;
-
     }
 
     public GetRecuringTransfersResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.recuringTransfers = (List<RecuringTransfer>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetRecuringTransfersResponse<T> extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetRecuringTransfersResponse{" +
-                 "recuringTransfers='" + recuringTransfers + '\'' +
+                "recuringTransfers='" + recuringTransfers + '\'' +
 
                 '}';
     }

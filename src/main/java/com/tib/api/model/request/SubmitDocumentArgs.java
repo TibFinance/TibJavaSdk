@@ -22,20 +22,20 @@ public class SubmitDocumentArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Gets or sets the SubmitDocumentEntity.
- */
+     * Gets or sets the SubmitDocumentEntity.
+     */
     @JsonProperty("SubmitDocumentEntity")
     private SubmitDocumentEntity submitDocumentEntity;
 
     /**
- * Gets or sets the mailing information.
- */
+     * Gets or sets the mailing information.
+     */
     @JsonProperty("MailingInfo")
     private TransactionMailingInfo mailingInfo;
 
     /**
- * Gets or sets the provider credentials.
- */
+     * Gets or sets the provider credentials.
+     */
     @JsonProperty("ProviderCredentials")
     private List<ProviderAccount> providerCredentials;
 
@@ -47,9 +47,8 @@ public class SubmitDocumentArgs  implements IBaseCryptedServiceArgs  {
     
     public SubmitDocumentArgs(SubmitDocumentEntity submitDocumentEntity, TransactionMailingInfo mailingInfo, List<ProviderAccount> providerCredentials) {
         this.submitDocumentEntity = submitDocumentEntity;
-this.mailingInfo = mailingInfo;
-this.providerCredentials = providerCredentials;
-
+        this.mailingInfo = mailingInfo;
+        this.providerCredentials = providerCredentials;
     }
     
     
@@ -99,9 +98,9 @@ this.providerCredentials = providerCredentials;
     @Override
     public String toString() {
         return "SubmitDocumentArgs{" +
-                 "submitDocumentEntity='" + submitDocumentEntity + '\'' +
- ", mailingInfo='" + mailingInfo + '\'' +
- ", providerCredentials='" + providerCredentials + '\'' +
+                "submitDocumentEntity='" + submitDocumentEntity + '\'' +
+                ", mailingInfo='" + mailingInfo + '\'' +
+                ", providerCredentials='" + providerCredentials + '\'' +
 
                 '}';
     }

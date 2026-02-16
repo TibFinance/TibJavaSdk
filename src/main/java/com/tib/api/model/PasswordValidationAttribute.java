@@ -19,44 +19,44 @@ public class PasswordValidationAttribute   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MinLength")
     private Integer minLength;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MaxLength")
     private Integer maxLength;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RequireUppercase")
     private boolean requireUppercase;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RequireLowercase")
     private boolean requireLowercase;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RequireDigit")
     private boolean requireDigit;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RequireSpecialChar")
     private boolean requireSpecialChar;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SpecialCharacters")
     private String specialCharacters;
 
@@ -68,13 +68,12 @@ public class PasswordValidationAttribute   {
     
     public PasswordValidationAttribute(Integer minLength, Integer maxLength, boolean requireUppercase, boolean requireLowercase, boolean requireDigit, boolean requireSpecialChar, String specialCharacters) {
         this.minLength = minLength;
-this.maxLength = maxLength;
-this.requireUppercase = requireUppercase;
-this.requireLowercase = requireLowercase;
-this.requireDigit = requireDigit;
-this.requireSpecialChar = requireSpecialChar;
-this.specialCharacters = specialCharacters;
-
+        this.maxLength = maxLength;
+        this.requireUppercase = requireUppercase;
+        this.requireLowercase = requireLowercase;
+        this.requireDigit = requireDigit;
+        this.requireSpecialChar = requireSpecialChar;
+        this.specialCharacters = specialCharacters;
     }
     
     
@@ -156,13 +155,13 @@ this.specialCharacters = specialCharacters;
     @Override
     public String toString() {
         return "PasswordValidationAttribute{" +
-                 "minLength='" + minLength + '\'' +
- ", maxLength='" + maxLength + '\'' +
- ", requireUppercase='" + requireUppercase + '\'' +
- ", requireLowercase='" + requireLowercase + '\'' +
- ", requireDigit='" + requireDigit + '\'' +
- ", requireSpecialChar='" + requireSpecialChar + '\'' +
- ", specialCharacters='" + specialCharacters + '\'' +
+                "minLength='" + minLength + '\'' +
+                ", maxLength='" + maxLength + '\'' +
+                ", requireUppercase='" + requireUppercase + '\'' +
+                ", requireLowercase='" + requireLowercase + '\'' +
+                ", requireDigit='" + requireDigit + '\'' +
+                ", requireSpecialChar='" + requireSpecialChar + '\'' +
+                ", specialCharacters='" + specialCharacters + '\'' +
 
                 '}';
     }

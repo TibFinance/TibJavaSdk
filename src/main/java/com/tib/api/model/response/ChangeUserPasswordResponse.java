@@ -25,13 +25,11 @@ public class ChangeUserPasswordResponse extends CustomAPIResponse {
 
     public ChangeUserPasswordResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public ChangeUserPasswordResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

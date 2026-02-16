@@ -29,7 +29,6 @@ public class LogOffSessionArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public LogOffSessionArgs(String sessionToken) {
         super(sessionToken);
-        
     }
 
     

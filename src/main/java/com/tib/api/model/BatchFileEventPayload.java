@@ -20,14 +20,14 @@ public class BatchFileEventPayload  extends BaseEventPayload  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("File")
     private String file;
 
     /**
- * Gets or sets the collection of payment operations associated with the current entity.
- */
+     * Gets or sets the collection of payment operations associated with the current entity.
+     */
     @JsonProperty("Operations")
     private List<BatchFileEventOperation> operations;
 
@@ -39,16 +39,14 @@ public class BatchFileEventPayload  extends BaseEventPayload  {
     
     public BatchFileEventPayload(String file, List<BatchFileEventOperation> operations) {
         this.file = file;
-this.operations = operations;
-
+        this.operations = operations;
     }
     
     
     public BatchFileEventPayload(String eventName, String file, List<BatchFileEventOperation> operations) {
         super(eventName);
         this.file = file;
-this.operations = operations;
-
+        this.operations = operations;
     }
 
     
@@ -88,8 +86,8 @@ this.operations = operations;
     @Override
     public String toString() {
         return "BatchFileEventPayload{" +
-                 "file='" + file + '\'' +
- ", operations='" + operations + '\'' +
+                "file='" + file + '\'' +
+                ", operations='" + operations + '\'' +
 
                 '}';
     }

@@ -21,14 +21,14 @@ public class SetServiceSettingsArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Gets or sets the settings.
- */
+     * Gets or sets the settings.
+     */
     @JsonProperty("Settings")
     private ServiceSettings settings;
 
@@ -40,16 +40,14 @@ public class SetServiceSettingsArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public SetServiceSettingsArgs(String serviceId, ServiceSettings settings) {
         this.serviceId = serviceId;
-this.settings = settings;
-
+        this.settings = settings;
     }
     
     
     public SetServiceSettingsArgs(String adminSessionToken, String serviceId, ServiceSettings settings) {
         super(adminSessionToken);
         this.serviceId = serviceId;
-this.settings = settings;
-
+        this.settings = settings;
     }
 
     
@@ -89,8 +87,8 @@ this.settings = settings;
     @Override
     public String toString() {
         return "SetServiceSettingsArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", settings='" + settings + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", settings='" + settings + '\'' +
 
                 '}';
     }

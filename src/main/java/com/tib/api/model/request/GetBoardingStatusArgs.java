@@ -20,8 +20,8 @@ public class GetBoardingStatusArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
- */
+     * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
+     */
     @JsonProperty("BoardingInformationId")
     private String boardingInformationId;
 
@@ -33,14 +33,12 @@ public class GetBoardingStatusArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetBoardingStatusArgs(String boardingInformationId) {
         this.boardingInformationId = boardingInformationId;
-
     }
     
     
     public GetBoardingStatusArgs(String sessionToken, String boardingInformationId) {
         super(sessionToken);
         this.boardingInformationId = boardingInformationId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetBoardingStatusArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "GetBoardingStatusArgs{" +
-                 "boardingInformationId='" + boardingInformationId + '\'' +
+                "boardingInformationId='" + boardingInformationId + '\'' +
 
                 '}';
     }

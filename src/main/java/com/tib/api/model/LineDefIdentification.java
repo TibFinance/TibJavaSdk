@@ -21,20 +21,20 @@ public class LineDefIdentification  extends LineBaseWithHeader  {
 
     
     /**
- * Gets or sets the creation date.
- */
+     * Gets or sets the creation date.
+     */
     @JsonProperty("CreationDate")
     private LocalDateTime creationDate;
 
     /**
- * Gets the bank central.
- */
+     * Gets the bank central.
+     */
     @JsonProperty("BankCentral")
     private String bankCentral;
 
     /**
- * Gets or sets the money code identifier.
- */
+     * Gets or sets the money code identifier.
+     */
     @JsonProperty("MoneyCodeIdentifier")
     private Currency moneyCodeIdentifier;
 
@@ -46,18 +46,16 @@ public class LineDefIdentification  extends LineBaseWithHeader  {
     
     public LineDefIdentification(LocalDateTime creationDate, String bankCentral, Currency moneyCodeIdentifier) {
         this.creationDate = creationDate;
-this.bankCentral = bankCentral;
-this.moneyCodeIdentifier = moneyCodeIdentifier;
-
+        this.bankCentral = bankCentral;
+        this.moneyCodeIdentifier = moneyCodeIdentifier;
     }
     
     
     public LineDefIdentification(BaseLineHeader header, Integer startPosition, LocalDateTime creationDate, String bankCentral, Currency moneyCodeIdentifier) {
         super(header, startPosition);
         this.creationDate = creationDate;
-this.bankCentral = bankCentral;
-this.moneyCodeIdentifier = moneyCodeIdentifier;
-
+        this.bankCentral = bankCentral;
+        this.moneyCodeIdentifier = moneyCodeIdentifier;
     }
 
     
@@ -105,9 +103,9 @@ this.moneyCodeIdentifier = moneyCodeIdentifier;
     @Override
     public String toString() {
         return "LineDefIdentification{" +
-                 "creationDate='" + creationDate + '\'' +
- ", bankCentral='" + bankCentral + '\'' +
- ", moneyCodeIdentifier='" + moneyCodeIdentifier + '\'' +
+                "creationDate='" + creationDate + '\'' +
+                ", bankCentral='" + bankCentral + '\'' +
+                ", moneyCodeIdentifier='" + moneyCodeIdentifier + '\'' +
 
                 '}';
     }

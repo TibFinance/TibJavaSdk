@@ -29,14 +29,12 @@ public class ClientLoginBoardingResponse extends CustomAPIResponse {
     public ClientLoginBoardingResponse(Error[] errors, boolean hasError, String messages, boolean isValid) {
         super(errors, hasError, messages);
         this.isValid = isValid;
-
     }
 
     public ClientLoginBoardingResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.isValid = Boolean.parseBoolean(apiResponse.getResponse().toString());
-
         }
     }
 
@@ -69,7 +67,7 @@ public class ClientLoginBoardingResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ClientLoginBoardingResponse{" +
-                 "isValid='" + isValid + '\'' +
+                "isValid='" + isValid + '\'' +
 
                 '}';
     }

@@ -20,32 +20,32 @@ public class UpdateInfoArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientName")
     private String clientName;
 
     /**
- * Retrieves or assigns the service's name.
- */
+     * Retrieves or assigns the service's name.
+     */
     @JsonProperty("ServiceName")
     private String serviceName;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * Represents the name associated with the merchant's account.
- */
+     * Represents the name associated with the merchant's account.
+     */
     @JsonProperty("AccountName")
     private String accountName;
 
@@ -57,22 +57,20 @@ public class UpdateInfoArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public UpdateInfoArgs(String merchantId, String clientName, String serviceName, String merchantName, String accountName) {
         this.merchantId = merchantId;
-this.clientName = clientName;
-this.serviceName = serviceName;
-this.merchantName = merchantName;
-this.accountName = accountName;
-
+        this.clientName = clientName;
+        this.serviceName = serviceName;
+        this.merchantName = merchantName;
+        this.accountName = accountName;
     }
     
     
     public UpdateInfoArgs(String adminSessionToken, String merchantId, String clientName, String serviceName, String merchantName, String accountName) {
         super(adminSessionToken);
         this.merchantId = merchantId;
-this.clientName = clientName;
-this.serviceName = serviceName;
-this.merchantName = merchantName;
-this.accountName = accountName;
-
+        this.clientName = clientName;
+        this.serviceName = serviceName;
+        this.merchantName = merchantName;
+        this.accountName = accountName;
     }
 
     
@@ -136,11 +134,11 @@ this.accountName = accountName;
     @Override
     public String toString() {
         return "UpdateInfoArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", clientName='" + clientName + '\'' +
- ", serviceName='" + serviceName + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", accountName='" + accountName + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", clientName='" + clientName + '\'' +
+                ", serviceName='" + serviceName + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", accountName='" + accountName + '\'' +
 
                 '}';
     }

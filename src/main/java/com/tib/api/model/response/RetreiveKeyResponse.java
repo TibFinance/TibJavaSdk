@@ -29,14 +29,12 @@ public class RetreiveKeyResponse extends CustomAPIResponse {
     public RetreiveKeyResponse(Error[] errors, boolean hasError, String messages, byte[] key) {
         super(errors, hasError, messages);
         this.key = key;
-
     }
 
     public RetreiveKeyResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.key = apiResponse.getResponse().toString().getBytes();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class RetreiveKeyResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "RetreiveKeyResponse{" +
-                 "key='" + key + '\'' +
+                "key='" + key + '\'' +
 
                 '}';
     }

@@ -29,14 +29,12 @@ public class ChangeInteracPaymentMethodQuestionAndAnswerResponse extends CustomA
     public ChangeInteracPaymentMethodQuestionAndAnswerResponse(Error[] errors, boolean hasError, String messages, String paymentMethodId) {
         super(errors, hasError, messages);
         this.paymentMethodId = paymentMethodId;
-
     }
 
     public ChangeInteracPaymentMethodQuestionAndAnswerResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.paymentMethodId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class ChangeInteracPaymentMethodQuestionAndAnswerResponse extends CustomA
     @Override
     public String toString() {
         return "ChangeInteracPaymentMethodQuestionAndAnswerResponse{" +
-                 "paymentMethodId='" + paymentMethodId + '\'' +
+                "paymentMethodId='" + paymentMethodId + '\'' +
 
                 '}';
     }

@@ -23,44 +23,44 @@ public class CreateCreditCardPaymentMethodArgs  extends BaseAuthenticatedCrypted
 
     
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * Determines if the customer's payment method is set as the default for automatic transactions.
- */
+     * Determines if the customer's payment method is set as the default for automatic transactions.
+     */
     @JsonProperty("IsCustomerAutomaticPaymentMethod")
     private boolean isCustomerAutomaticPaymentMethod;
 
     /**
- * Manages all operations associated with credit card data.
- */
+     * Manages all operations associated with credit card data.
+     */
     @JsonProperty("CreditCard")
     private CreditCard creditCard;
 
     /**
- * Specifies the name of the card owner.
- */
+     * Specifies the name of the card owner.
+     */
     @JsonProperty("CardOwner")
     private String cardOwner;
 
     /**
- * For ZipCode only situation, not full address
- */
+     * For ZipCode only situation, not full address
+     */
     @JsonProperty("ZipCode")
     private String zipCode;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
@@ -72,26 +72,24 @@ public class CreateCreditCardPaymentMethodArgs  extends BaseAuthenticatedCrypted
     
     public CreateCreditCardPaymentMethodArgs(Currency currency, String customerId, boolean isCustomerAutomaticPaymentMethod, CreditCard creditCard, String cardOwner, String zipCode, Language language) {
         this.currency = currency;
-this.customerId = customerId;
-this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.creditCard = creditCard;
-this.cardOwner = cardOwner;
-this.zipCode = zipCode;
-this.language = language;
-
+        this.customerId = customerId;
+        this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
+        this.creditCard = creditCard;
+        this.cardOwner = cardOwner;
+        this.zipCode = zipCode;
+        this.language = language;
     }
     
     
     public CreateCreditCardPaymentMethodArgs(String sessionToken, Currency currency, String customerId, boolean isCustomerAutomaticPaymentMethod, CreditCard creditCard, String cardOwner, String zipCode, Language language) {
         super(sessionToken);
         this.currency = currency;
-this.customerId = customerId;
-this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.creditCard = creditCard;
-this.cardOwner = cardOwner;
-this.zipCode = zipCode;
-this.language = language;
-
+        this.customerId = customerId;
+        this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
+        this.creditCard = creditCard;
+        this.cardOwner = cardOwner;
+        this.zipCode = zipCode;
+        this.language = language;
     }
 
     
@@ -171,13 +169,13 @@ this.language = language;
     @Override
     public String toString() {
         return "CreateCreditCardPaymentMethodArgs{" +
-                 "currency='" + currency + '\'' +
- ", customerId='" + customerId + '\'' +
- ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
- ", creditCard='" + creditCard + '\'' +
- ", cardOwner='" + cardOwner + '\'' +
- ", zipCode='" + zipCode + '\'' +
- ", language='" + language + '\'' +
+                "currency='" + currency + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
+                ", creditCard='" + creditCard + '\'' +
+                ", cardOwner='" + cardOwner + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", language='" + language + '\'' +
 
                 '}';
     }

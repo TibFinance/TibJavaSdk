@@ -25,80 +25,80 @@ public class TransferOperation   {
 
     
     /**
- * Gets or sets the operation identifier.
- */
+     * Gets or sets the operation identifier.
+     */
     @JsonProperty("OperationId")
     private String operationId;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
- */
+     * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
+     */
     @JsonProperty("OperationTarget")
     private OperationTarget operationTarget;
 
     /**
- * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
- */
+     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
- * Gets or sets the dependent operation.
- */
+     * Gets or sets the dependent operation.
+     */
     @JsonProperty("DependentOperation")
     private String dependentOperation;
 
     /**
- * Specifies the category of a financial operation.
- */
+     * Specifies the category of a financial operation.
+     */
     @JsonProperty("OperationKind")
     private OperationKind operationKind;
 
     /**
- * Gets or sets the process date.
- */
+     * Gets or sets the process date.
+     */
     @JsonProperty("ProcessDate")
     private LocalDateTime processDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OverloadedMerchantId")
     private String overloadedMerchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OverloadedProviderId")
     private String overloadedProviderId;
 
     /**
- * Retrieves the numeric status code of an operation.
- */
+     * Retrieves the numeric status code of an operation.
+     */
     @JsonProperty("OperationStatus")
     private TibOperationStatus operationStatus;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("HasUsedWallet")
     private boolean hasUsedWallet;
 
     /**
- * Gets or sets the collection of transaction details associated with the operation.
- */
+     * Gets or sets the collection of transaction details associated with the operation.
+     */
     @JsonProperty("Transactions")
     private List<TransactionCommon> transactions;
 
@@ -110,19 +110,18 @@ public class TransferOperation   {
     
     public TransferOperation(String operationId, Double amount, Currency currency, OperationTarget operationTarget, TransferDirection operationDirection, String dependentOperation, OperationKind operationKind, LocalDateTime processDate, String overloadedMerchantId, String overloadedProviderId, TibOperationStatus operationStatus, boolean hasUsedWallet, List<TransactionCommon> transactions) {
         this.operationId = operationId;
-this.amount = amount;
-this.currency = currency;
-this.operationTarget = operationTarget;
-this.operationDirection = operationDirection;
-this.dependentOperation = dependentOperation;
-this.operationKind = operationKind;
-this.processDate = processDate;
-this.overloadedMerchantId = overloadedMerchantId;
-this.overloadedProviderId = overloadedProviderId;
-this.operationStatus = operationStatus;
-this.hasUsedWallet = hasUsedWallet;
-this.transactions = transactions;
-
+        this.amount = amount;
+        this.currency = currency;
+        this.operationTarget = operationTarget;
+        this.operationDirection = operationDirection;
+        this.dependentOperation = dependentOperation;
+        this.operationKind = operationKind;
+        this.processDate = processDate;
+        this.overloadedMerchantId = overloadedMerchantId;
+        this.overloadedProviderId = overloadedProviderId;
+        this.operationStatus = operationStatus;
+        this.hasUsedWallet = hasUsedWallet;
+        this.transactions = transactions;
     }
     
     
@@ -252,19 +251,19 @@ this.transactions = transactions;
     @Override
     public String toString() {
         return "TransferOperation{" +
-                 "operationId='" + operationId + '\'' +
- ", amount='" + amount + '\'' +
- ", currency='" + currency + '\'' +
- ", operationTarget='" + operationTarget + '\'' +
- ", operationDirection='" + operationDirection + '\'' +
- ", dependentOperation='" + dependentOperation + '\'' +
- ", operationKind='" + operationKind + '\'' +
- ", processDate='" + processDate + '\'' +
- ", overloadedMerchantId='" + overloadedMerchantId + '\'' +
- ", overloadedProviderId='" + overloadedProviderId + '\'' +
- ", operationStatus='" + operationStatus + '\'' +
- ", hasUsedWallet='" + hasUsedWallet + '\'' +
- ", transactions='" + transactions + '\'' +
+                "operationId='" + operationId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", currency='" + currency + '\'' +
+                ", operationTarget='" + operationTarget + '\'' +
+                ", operationDirection='" + operationDirection + '\'' +
+                ", dependentOperation='" + dependentOperation + '\'' +
+                ", operationKind='" + operationKind + '\'' +
+                ", processDate='" + processDate + '\'' +
+                ", overloadedMerchantId='" + overloadedMerchantId + '\'' +
+                ", overloadedProviderId='" + overloadedProviderId + '\'' +
+                ", operationStatus='" + operationStatus + '\'' +
+                ", hasUsedWallet='" + hasUsedWallet + '\'' +
+                ", transactions='" + transactions + '\'' +
 
                 '}';
     }

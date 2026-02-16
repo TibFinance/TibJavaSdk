@@ -20,8 +20,8 @@ public class DeletePaymentArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Retrieves or assigns the unique identifier for a payment.
- */
+     * Retrieves or assigns the unique identifier for a payment.
+     */
     @JsonProperty("PaymentId")
     private String paymentId;
 
@@ -33,14 +33,12 @@ public class DeletePaymentArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public DeletePaymentArgs(String paymentId) {
         this.paymentId = paymentId;
-
     }
     
     
     public DeletePaymentArgs(String sessionToken, String paymentId) {
         super(sessionToken);
         this.paymentId = paymentId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class DeletePaymentArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "DeletePaymentArgs{" +
-                 "paymentId='" + paymentId + '\'' +
+                "paymentId='" + paymentId + '\'' +
 
                 '}';
     }

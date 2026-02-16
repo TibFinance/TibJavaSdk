@@ -29,14 +29,12 @@ public class ApplyChangeValidationResponse extends CustomAPIResponse {
     public ApplyChangeValidationResponse(Error[] errors, boolean hasError, String messages, boolean recordIsModify) {
         super(errors, hasError, messages);
         this.recordIsModify = recordIsModify;
-
     }
 
     public ApplyChangeValidationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.recordIsModify = Boolean.parseBoolean(apiResponse.getResponse().toString());
-
         }
     }
 
@@ -69,7 +67,7 @@ public class ApplyChangeValidationResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ApplyChangeValidationResponse{" +
-                 "recordIsModify='" + recordIsModify + '\'' +
+                "recordIsModify='" + recordIsModify + '\'' +
 
                 '}';
     }

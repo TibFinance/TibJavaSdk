@@ -29,14 +29,12 @@ public class EditAuthorizationStatusResponse extends CustomAPIResponse {
     public EditAuthorizationStatusResponse(Error[] errors, boolean hasError, String messages, String authorizationStatus) {
         super(errors, hasError, messages);
         this.authorizationStatus = authorizationStatus;
-
     }
 
     public EditAuthorizationStatusResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.authorizationStatus = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class EditAuthorizationStatusResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "EditAuthorizationStatusResponse{" +
-                 "authorizationStatus='" + authorizationStatus + '\'' +
+                "authorizationStatus='" + authorizationStatus + '\'' +
 
                 '}';
     }

@@ -20,14 +20,14 @@ public class LoginAttempt   {
 
     
     /**
- * Gets or sets the type.
- */
+     * Gets or sets the type.
+     */
     @JsonProperty("Type")
     private UserType type;
 
     /**
- * Gets or sets the attempts.
- */
+     * Gets or sets the attempts.
+     */
     @JsonProperty("Attempts")
     private List<LocalDateTime> attempts;
 
@@ -39,8 +39,7 @@ public class LoginAttempt   {
     
     public LoginAttempt(UserType type, List<LocalDateTime> attempts) {
         this.type = type;
-this.attempts = attempts;
-
+        this.attempts = attempts;
     }
     
     
@@ -82,8 +81,8 @@ this.attempts = attempts;
     @Override
     public String toString() {
         return "LoginAttempt{" +
-                 "type='" + type + '\'' +
- ", attempts='" + attempts + '\'' +
+                "type='" + type + '\'' +
+                ", attempts='" + attempts + '\'' +
 
                 '}';
     }

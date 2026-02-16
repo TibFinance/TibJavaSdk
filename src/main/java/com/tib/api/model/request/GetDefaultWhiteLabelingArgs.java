@@ -29,7 +29,6 @@ public class GetDefaultWhiteLabelingArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public GetDefaultWhiteLabelingArgs(String adminSessionToken) {
         super(adminSessionToken);
-        
     }
 
     

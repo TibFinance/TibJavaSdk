@@ -20,8 +20,8 @@ public class ProcessDropInWhitExistingPaymentMethodIdArgs  extends BaseAuthentic
 
     
     /**
- * Acts as a unique identifier for a distinct payment method.
- */
+     * Acts as a unique identifier for a distinct payment method.
+     */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
@@ -33,14 +33,12 @@ public class ProcessDropInWhitExistingPaymentMethodIdArgs  extends BaseAuthentic
     
     public ProcessDropInWhitExistingPaymentMethodIdArgs(String paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
-
     }
     
     
     public ProcessDropInWhitExistingPaymentMethodIdArgs(String publicTokenId, String paymentMethodId) {
         super(publicTokenId);
         this.paymentMethodId = paymentMethodId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class ProcessDropInWhitExistingPaymentMethodIdArgs  extends BaseAuthentic
     @Override
     public String toString() {
         return "ProcessDropInWhitExistingPaymentMethodIdArgs{" +
-                 "paymentMethodId='" + paymentMethodId + '\'' +
+                "paymentMethodId='" + paymentMethodId + '\'' +
 
                 '}';
     }

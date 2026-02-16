@@ -19,8 +19,8 @@ public class RetreiveDataArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Gets or sets the data identifier.
- */
+     * Gets or sets the data identifier.
+     */
     @JsonProperty("DataId")
     private String dataId;
 
@@ -32,7 +32,6 @@ public class RetreiveDataArgs  implements IBaseCryptedServiceArgs  {
     
     public RetreiveDataArgs(String dataId) {
         this.dataId = dataId;
-
     }
     
     
@@ -66,7 +65,7 @@ public class RetreiveDataArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "RetreiveDataArgs{" +
-                 "dataId='" + dataId + '\'' +
+                "dataId='" + dataId + '\'' +
 
                 '}';
     }

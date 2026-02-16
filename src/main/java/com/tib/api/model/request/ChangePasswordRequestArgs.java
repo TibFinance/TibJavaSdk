@@ -21,14 +21,14 @@ public class ChangePasswordRequestArgs  extends BaseAuthenticatePublicTokenArgs 
 
     
     /**
- * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
- */
+     * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
+     */
     @JsonProperty("Username")
     private String username;
 
     /**
- * Gets and set the type of the routing.
- */
+     * Gets and set the type of the routing.
+     */
     @JsonProperty("RoutingType")
     private PublicAccessTokenRoutingType routingType;
 
@@ -40,16 +40,14 @@ public class ChangePasswordRequestArgs  extends BaseAuthenticatePublicTokenArgs 
     
     public ChangePasswordRequestArgs(String username, PublicAccessTokenRoutingType routingType) {
         this.username = username;
-this.routingType = routingType;
-
+        this.routingType = routingType;
     }
     
     
     public ChangePasswordRequestArgs(String publicTokenId, String username, PublicAccessTokenRoutingType routingType) {
         super(publicTokenId);
         this.username = username;
-this.routingType = routingType;
-
+        this.routingType = routingType;
     }
 
     
@@ -89,8 +87,8 @@ this.routingType = routingType;
     @Override
     public String toString() {
         return "ChangePasswordRequestArgs{" +
-                 "username='" + username + '\'' +
- ", routingType='" + routingType + '\'' +
+                "username='" + username + '\'' +
+                ", routingType='" + routingType + '\'' +
 
                 '}';
     }

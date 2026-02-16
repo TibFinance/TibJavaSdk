@@ -30,14 +30,12 @@ public class GetContractEditionRequestsResponse extends CustomAPIResponse {
     public GetContractEditionRequestsResponse(Error[] errors, boolean hasError, String messages, List<ContractEditionRequest> contractEdditionRequests) {
         super(errors, hasError, messages);
         this.contractEdditionRequests = contractEdditionRequests;
-
     }
 
     public GetContractEditionRequestsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.contractEdditionRequests = (List<ContractEditionRequest>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetContractEditionRequestsResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetContractEditionRequestsResponse{" +
-                 "contractEdditionRequests='" + contractEdditionRequests + '\'' +
+                "contractEdditionRequests='" + contractEdditionRequests + '\'' +
 
                 '}';
     }

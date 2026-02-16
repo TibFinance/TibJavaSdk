@@ -21,8 +21,8 @@ public class LineDefTransaction  extends LineBaseWithHeader  {
 
     
     /**
- * Gets the segments.
- */
+     * Gets the segments.
+     */
     @JsonProperty("Segments")
     private List<BaseTransaction> segments;
 
@@ -34,14 +34,12 @@ public class LineDefTransaction  extends LineBaseWithHeader  {
     
     public LineDefTransaction(List<BaseTransaction> segments) {
         this.segments = segments;
-
     }
     
     
     public LineDefTransaction(BaseLineHeader header, Integer startPosition, List<BaseTransaction> segments) {
         super(header, startPosition);
         this.segments = segments;
-
     }
 
     
@@ -73,7 +71,7 @@ public class LineDefTransaction  extends LineBaseWithHeader  {
     @Override
     public String toString() {
         return "LineDefTransaction{" +
-                 "segments='" + segments + '\'' +
+                "segments='" + segments + '\'' +
 
                 '}';
     }

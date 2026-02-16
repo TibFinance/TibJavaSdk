@@ -20,62 +20,62 @@ public class CreditCard   {
 
     
     /**
- * Provides a description to identify the credit card within the TIB Finance API. This description helps in distinguishing between multiple credit card payment methods associated with a customer.
- */
+     * Provides a description to identify the credit card within the TIB Finance API. This description helps in distinguishing between multiple credit card payment methods associated with a customer.
+     */
     @JsonProperty("CreditCardDescription")
     private String creditCardDescription;
 
     /**
- * Represents the primary account number (PAN) of the credit card.
- */
+     * Represents the primary account number (PAN) of the credit card.
+     */
     @JsonProperty("Pan")
     private Long pan;
 
     /**
- * Represents the card verification code (CVD) used for validating credit card transactions.
- */
+     * Represents the card verification code (CVD) used for validating credit card transactions.
+     */
     @JsonProperty("CVD")
     private String cVD;
 
     /**
- * Specifies the expiration month of the credit card.
- */
+     * Specifies the expiration month of the credit card.
+     */
     @JsonProperty("ExpirationMonth")
     private Integer expirationMonth;
 
     /**
- * Specifies the expiration year of the credit card. This is a crucial component for validating the card's validity period within the TIB Finance API.
- */
+     * Specifies the expiration year of the credit card. This is a crucial component for validating the card's validity period within the TIB Finance API.
+     */
     @JsonProperty("ExpirationYear")
     private Integer expirationYear;
 
     /**
- * Specifies the name of the card owner.
- */
+     * Specifies the name of the card owner.
+     */
     @JsonProperty("CardOwner")
     private String cardOwner;
 
     /**
- * Retrieves or assigns the registered address associated with a credit card. This property is crucial for verifying the billing address linked to the credit card, ensuring secure and accurate transaction processing.
- */
+     * Retrieves or assigns the registered address associated with a credit card. This property is crucial for verifying the billing address linked to the credit card, ensuring secure and accurate transaction processing.
+     */
     @JsonProperty("CreditCardRegisteredAddress")
     private Address creditCardRegisteredAddress;
 
     /**
- * Handles the extraction or assignment of a particular entity's expiration date.
- */
+     * Handles the extraction or assignment of a particular entity's expiration date.
+     */
     @JsonProperty("ExpirationDate")
     private LocalDateTime expirationDate;
 
     /**
- * A well formated string of the credit card number
- */
+     * A well formated string of the credit card number
+     */
     @JsonProperty("FormatedCreditCardString")
     private String formatedCreditCardString;
 
     /**
- * An obfuscated string of the card number
- */
+     * An obfuscated string of the card number
+     */
     @JsonProperty("PreviewString")
     private String previewString;
 
@@ -87,16 +87,15 @@ public class CreditCard   {
     
     public CreditCard(String creditCardDescription, Long pan, String cVD, Integer expirationMonth, Integer expirationYear, String cardOwner, Address creditCardRegisteredAddress, LocalDateTime expirationDate, String formatedCreditCardString, String previewString) {
         this.creditCardDescription = creditCardDescription;
-this.pan = pan;
-this.cVD = cVD;
-this.expirationMonth = expirationMonth;
-this.expirationYear = expirationYear;
-this.cardOwner = cardOwner;
-this.creditCardRegisteredAddress = creditCardRegisteredAddress;
-this.expirationDate = expirationDate;
-this.formatedCreditCardString = formatedCreditCardString;
-this.previewString = previewString;
-
+        this.pan = pan;
+        this.cVD = cVD;
+        this.expirationMonth = expirationMonth;
+        this.expirationYear = expirationYear;
+        this.cardOwner = cardOwner;
+        this.creditCardRegisteredAddress = creditCardRegisteredAddress;
+        this.expirationDate = expirationDate;
+        this.formatedCreditCardString = formatedCreditCardString;
+        this.previewString = previewString;
     }
     
     
@@ -202,16 +201,16 @@ this.previewString = previewString;
     @Override
     public String toString() {
         return "CreditCard{" +
-                 "creditCardDescription='" + creditCardDescription + '\'' +
- ", pan='" + pan + '\'' +
- ", cVD='" + cVD + '\'' +
- ", expirationMonth='" + expirationMonth + '\'' +
- ", expirationYear='" + expirationYear + '\'' +
- ", cardOwner='" + cardOwner + '\'' +
- ", creditCardRegisteredAddress='" + creditCardRegisteredAddress + '\'' +
- ", expirationDate='" + expirationDate + '\'' +
- ", formatedCreditCardString='" + formatedCreditCardString + '\'' +
- ", previewString='" + previewString + '\'' +
+                "creditCardDescription='" + creditCardDescription + '\'' +
+                ", pan='" + pan + '\'' +
+                ", cVD='" + cVD + '\'' +
+                ", expirationMonth='" + expirationMonth + '\'' +
+                ", expirationYear='" + expirationYear + '\'' +
+                ", cardOwner='" + cardOwner + '\'' +
+                ", creditCardRegisteredAddress='" + creditCardRegisteredAddress + '\'' +
+                ", expirationDate='" + expirationDate + '\'' +
+                ", formatedCreditCardString='" + formatedCreditCardString + '\'' +
+                ", previewString='" + previewString + '\'' +
 
                 '}';
     }

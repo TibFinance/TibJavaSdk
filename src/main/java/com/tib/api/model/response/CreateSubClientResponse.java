@@ -29,14 +29,12 @@ public class CreateSubClientResponse extends CustomAPIResponse {
     public CreateSubClientResponse(Error[] errors, boolean hasError, String messages, String serviceId) {
         super(errors, hasError, messages);
         this.serviceId = serviceId;
-
     }
 
     public CreateSubClientResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.serviceId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class CreateSubClientResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateSubClientResponse{" +
-                 "serviceId='" + serviceId + '\'' +
+                "serviceId='" + serviceId + '\'' +
 
                 '}';
     }

@@ -20,8 +20,8 @@ public class SaveContractEditionRequestArgs  extends BaseAuthenticatePublicToken
 
     
     /**
- * Gets and sets the request content for contract edition.
- */
+     * Gets and sets the request content for contract edition.
+     */
     @JsonProperty("RequestContent")
     private String requestContent;
 
@@ -33,14 +33,12 @@ public class SaveContractEditionRequestArgs  extends BaseAuthenticatePublicToken
     
     public SaveContractEditionRequestArgs(String requestContent) {
         this.requestContent = requestContent;
-
     }
     
     
     public SaveContractEditionRequestArgs(String publicTokenId, String requestContent) {
         super(publicTokenId);
         this.requestContent = requestContent;
-
     }
 
     
@@ -72,7 +70,7 @@ public class SaveContractEditionRequestArgs  extends BaseAuthenticatePublicToken
     @Override
     public String toString() {
         return "SaveContractEditionRequestArgs{" +
-                 "requestContent='" + requestContent + '\'' +
+                "requestContent='" + requestContent + '\'' +
 
                 '}';
     }

@@ -20,8 +20,8 @@ public class GetServiceBoardingStatusArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
- * The BoardingServiceId uniquely identifies a boarding service within the system. It is essential for tracking and managing the onboarding process of merchants.
- */
+     * The BoardingServiceId uniquely identifies a boarding service within the system. It is essential for tracking and managing the onboarding process of merchants.
+     */
     @JsonProperty("BoardingServiceId")
     private String boardingServiceId;
 
@@ -33,14 +33,12 @@ public class GetServiceBoardingStatusArgs  extends BaseAuthenticatedCryptedArgs 
     
     public GetServiceBoardingStatusArgs(String boardingServiceId) {
         this.boardingServiceId = boardingServiceId;
-
     }
     
     
     public GetServiceBoardingStatusArgs(String sessionToken, String boardingServiceId) {
         super(sessionToken);
         this.boardingServiceId = boardingServiceId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetServiceBoardingStatusArgs  extends BaseAuthenticatedCryptedArgs 
     @Override
     public String toString() {
         return "GetServiceBoardingStatusArgs{" +
-                 "boardingServiceId='" + boardingServiceId + '\'' +
+                "boardingServiceId='" + boardingServiceId + '\'' +
 
                 '}';
     }

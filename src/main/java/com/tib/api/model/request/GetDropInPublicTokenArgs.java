@@ -23,80 +23,80 @@ public class GetDropInPublicTokenArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * Retrieves or assigns the unique identifier for a bill.
- */
+     * Retrieves or assigns the unique identifier for a bill.
+     */
     @JsonProperty("BillId")
     private String billId;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Defines and manages the type of transfer operation within the system.
- */
+     * Defines and manages the type of transfer operation within the system.
+     */
     @JsonProperty("TransferType")
     private TransferType transferType;
 
     /**
- * Specifies the payment method flags that are authorized for the Drop‑In session.
- */
+     * Specifies the payment method flags that are authorized for the Drop‑In session.
+     */
     @JsonProperty("DropInAuthorizedPaymentMethod")
     private AutorizedPaymentMethodFlags dropInAuthorizedPaymentMethod;
 
     /**
- * Gets or sets the external reference number used to link this entity with an external system or business process.
- */
+     * Gets or sets the external reference number used to link this entity with an external system or business process.
+     */
     @JsonProperty("ExternalReferenceNumber")
     private String externalReferenceNumber;
 
     /**
- * Specifies whether the API request should include the customer's existing payment methods in the response.
- */
+     * Specifies whether the API request should include the customer's existing payment methods in the response.
+     */
     @JsonProperty("ShowCustomerExistingPaymentMethods")
     private boolean showCustomerExistingPaymentMethods;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * Specifies the lifetime of the public token in days.
- */
+     * Specifies the lifetime of the public token in days.
+     */
     @JsonProperty("ExpirationDays")
     private Integer expirationDays;
 
     /**
- * Gets or sets the title that identifies the object in a human‑readable way.
- */
+     * Gets or sets the title that identifies the object in a human‑readable way.
+     */
     @JsonProperty("Title")
     private String title;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * Gets or sets the due date for a payment.
- */
+     * Gets or sets the due date for a payment.
+     */
     @JsonProperty("PaymentDueDate")
     private LocalDateTime paymentDueDate;
 
@@ -108,38 +108,36 @@ public class GetDropInPublicTokenArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetDropInPublicTokenArgs(String merchantId, String customerId, String billId, Double amount, TransferType transferType, AutorizedPaymentMethodFlags dropInAuthorizedPaymentMethod, String externalReferenceNumber, boolean showCustomerExistingPaymentMethods, Language language, Integer expirationDays, String title, String description, LocalDateTime paymentDueDate) {
         this.merchantId = merchantId;
-this.customerId = customerId;
-this.billId = billId;
-this.amount = amount;
-this.transferType = transferType;
-this.dropInAuthorizedPaymentMethod = dropInAuthorizedPaymentMethod;
-this.externalReferenceNumber = externalReferenceNumber;
-this.showCustomerExistingPaymentMethods = showCustomerExistingPaymentMethods;
-this.language = language;
-this.expirationDays = expirationDays;
-this.title = title;
-this.description = description;
-this.paymentDueDate = paymentDueDate;
-
+        this.customerId = customerId;
+        this.billId = billId;
+        this.amount = amount;
+        this.transferType = transferType;
+        this.dropInAuthorizedPaymentMethod = dropInAuthorizedPaymentMethod;
+        this.externalReferenceNumber = externalReferenceNumber;
+        this.showCustomerExistingPaymentMethods = showCustomerExistingPaymentMethods;
+        this.language = language;
+        this.expirationDays = expirationDays;
+        this.title = title;
+        this.description = description;
+        this.paymentDueDate = paymentDueDate;
     }
     
     
     public GetDropInPublicTokenArgs(String sessionToken, String merchantId, String customerId, String billId, Double amount, TransferType transferType, AutorizedPaymentMethodFlags dropInAuthorizedPaymentMethod, String externalReferenceNumber, boolean showCustomerExistingPaymentMethods, Language language, Integer expirationDays, String title, String description, LocalDateTime paymentDueDate) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.customerId = customerId;
-this.billId = billId;
-this.amount = amount;
-this.transferType = transferType;
-this.dropInAuthorizedPaymentMethod = dropInAuthorizedPaymentMethod;
-this.externalReferenceNumber = externalReferenceNumber;
-this.showCustomerExistingPaymentMethods = showCustomerExistingPaymentMethods;
-this.language = language;
-this.expirationDays = expirationDays;
-this.title = title;
-this.description = description;
-this.paymentDueDate = paymentDueDate;
-
+        this.customerId = customerId;
+        this.billId = billId;
+        this.amount = amount;
+        this.transferType = transferType;
+        this.dropInAuthorizedPaymentMethod = dropInAuthorizedPaymentMethod;
+        this.externalReferenceNumber = externalReferenceNumber;
+        this.showCustomerExistingPaymentMethods = showCustomerExistingPaymentMethods;
+        this.language = language;
+        this.expirationDays = expirationDays;
+        this.title = title;
+        this.description = description;
+        this.paymentDueDate = paymentDueDate;
     }
 
     
@@ -267,19 +265,19 @@ this.paymentDueDate = paymentDueDate;
     @Override
     public String toString() {
         return "GetDropInPublicTokenArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", customerId='" + customerId + '\'' +
- ", billId='" + billId + '\'' +
- ", amount='" + amount + '\'' +
- ", transferType='" + transferType + '\'' +
- ", dropInAuthorizedPaymentMethod='" + dropInAuthorizedPaymentMethod + '\'' +
- ", externalReferenceNumber='" + externalReferenceNumber + '\'' +
- ", showCustomerExistingPaymentMethods='" + showCustomerExistingPaymentMethods + '\'' +
- ", language='" + language + '\'' +
- ", expirationDays='" + expirationDays + '\'' +
- ", title='" + title + '\'' +
- ", description='" + description + '\'' +
- ", paymentDueDate='" + paymentDueDate + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", billId='" + billId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", transferType='" + transferType + '\'' +
+                ", dropInAuthorizedPaymentMethod='" + dropInAuthorizedPaymentMethod + '\'' +
+                ", externalReferenceNumber='" + externalReferenceNumber + '\'' +
+                ", showCustomerExistingPaymentMethods='" + showCustomerExistingPaymentMethods + '\'' +
+                ", language='" + language + '\'' +
+                ", expirationDays='" + expirationDays + '\'' +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", paymentDueDate='" + paymentDueDate + '\'' +
 
                 '}';
     }

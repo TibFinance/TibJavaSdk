@@ -29,7 +29,6 @@ public class LoadCompanyTypesArgs  extends BaseAuthenticatePublicTokenArgs  {
     
     public LoadCompanyTypesArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

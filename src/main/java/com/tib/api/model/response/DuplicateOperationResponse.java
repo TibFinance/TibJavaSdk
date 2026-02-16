@@ -30,15 +30,13 @@ public class DuplicateOperationResponse extends CustomAPIResponse {
     public DuplicateOperationResponse(Error[] errors, boolean hasError, String messages, AdminOperation operation) {
         super(errors, hasError, messages);
         this.operation = operation;
-
     }
 
     public DuplicateOperationResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.operation = objectMapper.readValue(json, AdminOperation.class);
-
+            this.operation = objectMapper.readValue(json, AdminOperation.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.operation = objectMapper.readValue(json, AdminOperation.class);
     @Override
     public String toString() {
         return "DuplicateOperationResponse{" +
-                 "operation='" + operation + '\'' +
+                "operation='" + operation + '\'' +
 
                 '}';
     }

@@ -20,26 +20,26 @@ public class CreateMerchantLoginArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Specifies the email address associated with the merchant.
- */
+     * Specifies the email address associated with the merchant.
+     */
     @JsonProperty("Email")
     private String email;
 
     /**
- * Gets or sets the first name.
- */
+     * Gets or sets the first name.
+     */
     @JsonProperty("FirstName")
     private String firstName;
 
     /**
- * Gets or sets the last name.
- */
+     * Gets or sets the last name.
+     */
     @JsonProperty("LastName")
     private String lastName;
 
@@ -51,20 +51,18 @@ public class CreateMerchantLoginArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CreateMerchantLoginArgs(String merchantId, String email, String firstName, String lastName) {
         this.merchantId = merchantId;
-this.email = email;
-this.firstName = firstName;
-this.lastName = lastName;
-
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
     
     
     public CreateMerchantLoginArgs(String sessionToken, String merchantId, String email, String firstName, String lastName) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.email = email;
-this.firstName = firstName;
-this.lastName = lastName;
-
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     
@@ -120,10 +118,10 @@ this.lastName = lastName;
     @Override
     public String toString() {
         return "CreateMerchantLoginArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", email='" + email + '\'' +
- ", firstName='" + firstName + '\'' +
- ", lastName='" + lastName + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", email='" + email + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
 
                 '}';
     }

@@ -20,8 +20,8 @@ public class GetSuppliersArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -33,14 +33,12 @@ public class GetSuppliersArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetSuppliersArgs(String merchantId) {
         this.merchantId = merchantId;
-
     }
     
     
     public GetSuppliersArgs(String sessionToken, String merchantId) {
         super(sessionToken);
         this.merchantId = merchantId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetSuppliersArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "GetSuppliersArgs{" +
-                 "merchantId='" + merchantId + '\'' +
+                "merchantId='" + merchantId + '\'' +
 
                 '}';
     }

@@ -32,16 +32,14 @@ public class CreateFreeOperationResponse extends CustomAPIResponse {
     public CreateFreeOperationResponse(Error[] errors, boolean hasError, String messages, String paymentId, String clientId) {
         super(errors, hasError, messages);
         this.paymentId = paymentId;
-this.clientId = clientId;
-
+        this.clientId = clientId;
     }
 
     public CreateFreeOperationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.paymentId = apiResponse.getResponse().toString();
-this.clientId = apiResponse.getResponse().toString();
-
+            this.clientId = apiResponse.getResponse().toString();
         }
     }
 
@@ -82,8 +80,8 @@ this.clientId = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "CreateFreeOperationResponse{" +
-                 "paymentId='" + paymentId + '\'' +
- ", clientId='" + clientId + '\'' +
+                "paymentId='" + paymentId + '\'' +
+                ", clientId='" + clientId + '\'' +
 
                 '}';
     }

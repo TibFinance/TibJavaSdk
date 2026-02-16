@@ -19,422 +19,422 @@ public class BoardingEventToBroadcast   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BoardingInfoId")
     private String boardingInfoId;
 
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyName")
     private String companyName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyAddress")
     private String companyAddress;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyType")
     private Optional<Integer> companyType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DidOwnersAlreadyBeenSubjectOfResiliationOfPaymentService")
     private Optional<Boolean> didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DidOwnersAlreadyAskedForBankrupcy")
     private Optional<Boolean> didOwnersAlreadyAskedForBankrupcy;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("HaveYouBeenSubjectOfVisaRiskProgram")
     private Optional<Boolean> haveYouBeenSubjectOfVisaRiskProgram;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DrivingLicenceNumber")
     private String drivingLicenceNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BoardingStep")
     private Integer boardingStep;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyName_Edited")
     private String companyName_Edited;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyAddress_Edited")
     private String companyAddress_Edited;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyType_Edited")
     private Optional<Integer> companyType_Edited;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountOwner")
     private String accountOwner;
 
     /**
- * Specifies the bank account number associated with the payment method.
- */
+     * Specifies the bank account number associated with the payment method.
+     */
     @JsonProperty("AccountNumber")
     private String accountNumber;
 
     /**
- * Identifies the bank associated with the account using its numeric identifier.
- */
+     * Identifies the bank associated with the account using its numeric identifier.
+     */
     @JsonProperty("BankNumber")
     private String bankNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransitNumber")
     private String transitNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SignedContractContent")
     private byte[] signedContractContent;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientName")
     private String clientName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientEmail")
     private String clientEmail;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientPhone")
     private String clientPhone;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SpecimenFile")
     private String specimenFile;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IdFile")
     private String idFile;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyTaxId")
     private String companyTaxId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyCountryCode")
     private String companyCountryCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyStateCode")
     private String companyStateCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyCity")
     private String companyCity;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyZip")
     private String companyZip;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyPhone")
     private String companyPhone;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyProductAndServiceDescription")
     private String companyProductAndServiceDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyWebSite")
     private String companyWebSite;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyBusinessCategory")
     private String companyBusinessCategory;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanySalesVolume")
     private String companySalesVolume;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankPayoutCurrency")
     private String bankPayoutCurrency;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankCountryCode")
     private String bankCountryCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankStateCode")
     private String bankStateCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankCity")
     private String bankCity;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankName")
     private String bankName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankRoutingNumber")
     private String bankRoutingNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankBic")
     private String bankBic;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankIban")
     private String bankIban;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankSortCode")
     private String bankSortCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankSwiftCode")
     private String bankSwiftCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankBsb")
     private String bankBsb;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BusinessRegistrationNumber")
     private String businessRegistrationNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BusinessRegistrationNumber_Edited")
     private String businessRegistrationNumber_Edited;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyLegalName")
     private String companyLegalName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyBusinessType")
     private String companyBusinessType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyAccountUserName")
     private String companyAccountUserName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankAccountType")
     private String bankAccountType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankMinimalPayoutAmount")
     private String bankMinimalPayoutAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankRefundReserve")
     private String bankRefundReserve;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantServiceAgreementDate")
     private String merchantServiceAgreementDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantPricingAgreementDate")
     private String merchantPricingAgreementDate;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private Optional<String> merchantId;
 
     /**
- * Represents the current state of a transaction within the system.
- */
+     * Represents the current state of a transaction within the system.
+     */
     @JsonProperty("Status")
     private Optional<Integer> status;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ErrorResponse")
     private String errorResponse;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private Optional<String> serviceId;
 
     /**
- * Gets or sets the string that contains the required document identifiers for the client.
- */
+     * Gets or sets the string that contains the required document identifiers for the client.
+     */
     @JsonProperty("RequiredDocuments")
     private String requiredDocuments;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderRequestId")
     private String providerRequestId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CaseId")
     private String caseId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CompanyEmail")
     private String companyEmail;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AverageTransactionAmount")
     private String averageTransactionAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("HighestTransactionAmount")
     private String highestTransactionAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RiskMonitoring")
     private String riskMonitoring;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RiskPayment")
     private String riskPayment;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RiskByCommission")
     private String riskByCommission;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PaymentReference")
     private String paymentReference;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ManagerLinkedIn")
     private String managerLinkedIn;
 
@@ -446,76 +446,75 @@ public class BoardingEventToBroadcast   {
     
     public BoardingEventToBroadcast(String boardingInfoId, String clientId, String companyName, String companyAddress, Optional<Integer> companyType, Optional<Boolean> didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService, Optional<Boolean> didOwnersAlreadyAskedForBankrupcy, Optional<Boolean> haveYouBeenSubjectOfVisaRiskProgram, String drivingLicenceNumber, Integer boardingStep, String companyName_Edited, String companyAddress_Edited, Optional<Integer> companyType_Edited, String accountOwner, String accountNumber, String bankNumber, String transitNumber, byte[] signedContractContent, String clientName, String clientEmail, String clientPhone, LocalDateTime createdDate, String specimenFile, String idFile, String companyTaxId, String companyCountryCode, String companyStateCode, String companyCity, String companyZip, String companyPhone, String companyProductAndServiceDescription, String companyWebSite, String companyBusinessCategory, String companySalesVolume, String bankPayoutCurrency, String bankCountryCode, String bankStateCode, String bankCity, String bankName, String bankRoutingNumber, String bankBic, String bankIban, String bankSortCode, String bankSwiftCode, String bankBsb, String businessRegistrationNumber, String businessRegistrationNumber_Edited, String companyLegalName, String companyBusinessType, String companyAccountUserName, String bankAccountType, String bankMinimalPayoutAmount, String bankRefundReserve, String merchantServiceAgreementDate, String merchantPricingAgreementDate, Optional<String> merchantId, Optional<Integer> status, String errorResponse, Optional<String> serviceId, String requiredDocuments, String providerRequestId, String caseId, String companyEmail, String averageTransactionAmount, String highestTransactionAmount, String riskMonitoring, String riskPayment, String riskByCommission, String paymentReference, String managerLinkedIn) {
         this.boardingInfoId = boardingInfoId;
-this.clientId = clientId;
-this.companyName = companyName;
-this.companyAddress = companyAddress;
-this.companyType = companyType;
-this.didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService = didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService;
-this.didOwnersAlreadyAskedForBankrupcy = didOwnersAlreadyAskedForBankrupcy;
-this.haveYouBeenSubjectOfVisaRiskProgram = haveYouBeenSubjectOfVisaRiskProgram;
-this.drivingLicenceNumber = drivingLicenceNumber;
-this.boardingStep = boardingStep;
-this.companyName_Edited = companyName_Edited;
-this.companyAddress_Edited = companyAddress_Edited;
-this.companyType_Edited = companyType_Edited;
-this.accountOwner = accountOwner;
-this.accountNumber = accountNumber;
-this.bankNumber = bankNumber;
-this.transitNumber = transitNumber;
-this.signedContractContent = signedContractContent;
-this.clientName = clientName;
-this.clientEmail = clientEmail;
-this.clientPhone = clientPhone;
-this.createdDate = createdDate;
-this.specimenFile = specimenFile;
-this.idFile = idFile;
-this.companyTaxId = companyTaxId;
-this.companyCountryCode = companyCountryCode;
-this.companyStateCode = companyStateCode;
-this.companyCity = companyCity;
-this.companyZip = companyZip;
-this.companyPhone = companyPhone;
-this.companyProductAndServiceDescription = companyProductAndServiceDescription;
-this.companyWebSite = companyWebSite;
-this.companyBusinessCategory = companyBusinessCategory;
-this.companySalesVolume = companySalesVolume;
-this.bankPayoutCurrency = bankPayoutCurrency;
-this.bankCountryCode = bankCountryCode;
-this.bankStateCode = bankStateCode;
-this.bankCity = bankCity;
-this.bankName = bankName;
-this.bankRoutingNumber = bankRoutingNumber;
-this.bankBic = bankBic;
-this.bankIban = bankIban;
-this.bankSortCode = bankSortCode;
-this.bankSwiftCode = bankSwiftCode;
-this.bankBsb = bankBsb;
-this.businessRegistrationNumber = businessRegistrationNumber;
-this.businessRegistrationNumber_Edited = businessRegistrationNumber_Edited;
-this.companyLegalName = companyLegalName;
-this.companyBusinessType = companyBusinessType;
-this.companyAccountUserName = companyAccountUserName;
-this.bankAccountType = bankAccountType;
-this.bankMinimalPayoutAmount = bankMinimalPayoutAmount;
-this.bankRefundReserve = bankRefundReserve;
-this.merchantServiceAgreementDate = merchantServiceAgreementDate;
-this.merchantPricingAgreementDate = merchantPricingAgreementDate;
-this.merchantId = merchantId;
-this.status = status;
-this.errorResponse = errorResponse;
-this.serviceId = serviceId;
-this.requiredDocuments = requiredDocuments;
-this.providerRequestId = providerRequestId;
-this.caseId = caseId;
-this.companyEmail = companyEmail;
-this.averageTransactionAmount = averageTransactionAmount;
-this.highestTransactionAmount = highestTransactionAmount;
-this.riskMonitoring = riskMonitoring;
-this.riskPayment = riskPayment;
-this.riskByCommission = riskByCommission;
-this.paymentReference = paymentReference;
-this.managerLinkedIn = managerLinkedIn;
-
+        this.clientId = clientId;
+        this.companyName = companyName;
+        this.companyAddress = companyAddress;
+        this.companyType = companyType;
+        this.didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService = didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService;
+        this.didOwnersAlreadyAskedForBankrupcy = didOwnersAlreadyAskedForBankrupcy;
+        this.haveYouBeenSubjectOfVisaRiskProgram = haveYouBeenSubjectOfVisaRiskProgram;
+        this.drivingLicenceNumber = drivingLicenceNumber;
+        this.boardingStep = boardingStep;
+        this.companyName_Edited = companyName_Edited;
+        this.companyAddress_Edited = companyAddress_Edited;
+        this.companyType_Edited = companyType_Edited;
+        this.accountOwner = accountOwner;
+        this.accountNumber = accountNumber;
+        this.bankNumber = bankNumber;
+        this.transitNumber = transitNumber;
+        this.signedContractContent = signedContractContent;
+        this.clientName = clientName;
+        this.clientEmail = clientEmail;
+        this.clientPhone = clientPhone;
+        this.createdDate = createdDate;
+        this.specimenFile = specimenFile;
+        this.idFile = idFile;
+        this.companyTaxId = companyTaxId;
+        this.companyCountryCode = companyCountryCode;
+        this.companyStateCode = companyStateCode;
+        this.companyCity = companyCity;
+        this.companyZip = companyZip;
+        this.companyPhone = companyPhone;
+        this.companyProductAndServiceDescription = companyProductAndServiceDescription;
+        this.companyWebSite = companyWebSite;
+        this.companyBusinessCategory = companyBusinessCategory;
+        this.companySalesVolume = companySalesVolume;
+        this.bankPayoutCurrency = bankPayoutCurrency;
+        this.bankCountryCode = bankCountryCode;
+        this.bankStateCode = bankStateCode;
+        this.bankCity = bankCity;
+        this.bankName = bankName;
+        this.bankRoutingNumber = bankRoutingNumber;
+        this.bankBic = bankBic;
+        this.bankIban = bankIban;
+        this.bankSortCode = bankSortCode;
+        this.bankSwiftCode = bankSwiftCode;
+        this.bankBsb = bankBsb;
+        this.businessRegistrationNumber = businessRegistrationNumber;
+        this.businessRegistrationNumber_Edited = businessRegistrationNumber_Edited;
+        this.companyLegalName = companyLegalName;
+        this.companyBusinessType = companyBusinessType;
+        this.companyAccountUserName = companyAccountUserName;
+        this.bankAccountType = bankAccountType;
+        this.bankMinimalPayoutAmount = bankMinimalPayoutAmount;
+        this.bankRefundReserve = bankRefundReserve;
+        this.merchantServiceAgreementDate = merchantServiceAgreementDate;
+        this.merchantPricingAgreementDate = merchantPricingAgreementDate;
+        this.merchantId = merchantId;
+        this.status = status;
+        this.errorResponse = errorResponse;
+        this.serviceId = serviceId;
+        this.requiredDocuments = requiredDocuments;
+        this.providerRequestId = providerRequestId;
+        this.caseId = caseId;
+        this.companyEmail = companyEmail;
+        this.averageTransactionAmount = averageTransactionAmount;
+        this.highestTransactionAmount = highestTransactionAmount;
+        this.riskMonitoring = riskMonitoring;
+        this.riskPayment = riskPayment;
+        this.riskByCommission = riskByCommission;
+        this.paymentReference = paymentReference;
+        this.managerLinkedIn = managerLinkedIn;
     }
     
     
@@ -1101,76 +1100,76 @@ this.managerLinkedIn = managerLinkedIn;
     @Override
     public String toString() {
         return "BoardingEventToBroadcast{" +
-                 "boardingInfoId='" + boardingInfoId + '\'' +
- ", clientId='" + clientId + '\'' +
- ", companyName='" + companyName + '\'' +
- ", companyAddress='" + companyAddress + '\'' +
- ", companyType='" + companyType + '\'' +
- ", didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService='" + didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService + '\'' +
- ", didOwnersAlreadyAskedForBankrupcy='" + didOwnersAlreadyAskedForBankrupcy + '\'' +
- ", haveYouBeenSubjectOfVisaRiskProgram='" + haveYouBeenSubjectOfVisaRiskProgram + '\'' +
- ", drivingLicenceNumber='" + drivingLicenceNumber + '\'' +
- ", boardingStep='" + boardingStep + '\'' +
- ", companyName_Edited='" + companyName_Edited + '\'' +
- ", companyAddress_Edited='" + companyAddress_Edited + '\'' +
- ", companyType_Edited='" + companyType_Edited + '\'' +
- ", accountOwner='" + accountOwner + '\'' +
- ", accountNumber='" + accountNumber + '\'' +
- ", bankNumber='" + bankNumber + '\'' +
- ", transitNumber='" + transitNumber + '\'' +
- ", signedContractContent='" + signedContractContent + '\'' +
- ", clientName='" + clientName + '\'' +
- ", clientEmail='" + clientEmail + '\'' +
- ", clientPhone='" + clientPhone + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", specimenFile='" + specimenFile + '\'' +
- ", idFile='" + idFile + '\'' +
- ", companyTaxId='" + companyTaxId + '\'' +
- ", companyCountryCode='" + companyCountryCode + '\'' +
- ", companyStateCode='" + companyStateCode + '\'' +
- ", companyCity='" + companyCity + '\'' +
- ", companyZip='" + companyZip + '\'' +
- ", companyPhone='" + companyPhone + '\'' +
- ", companyProductAndServiceDescription='" + companyProductAndServiceDescription + '\'' +
- ", companyWebSite='" + companyWebSite + '\'' +
- ", companyBusinessCategory='" + companyBusinessCategory + '\'' +
- ", companySalesVolume='" + companySalesVolume + '\'' +
- ", bankPayoutCurrency='" + bankPayoutCurrency + '\'' +
- ", bankCountryCode='" + bankCountryCode + '\'' +
- ", bankStateCode='" + bankStateCode + '\'' +
- ", bankCity='" + bankCity + '\'' +
- ", bankName='" + bankName + '\'' +
- ", bankRoutingNumber='" + bankRoutingNumber + '\'' +
- ", bankBic='" + bankBic + '\'' +
- ", bankIban='" + bankIban + '\'' +
- ", bankSortCode='" + bankSortCode + '\'' +
- ", bankSwiftCode='" + bankSwiftCode + '\'' +
- ", bankBsb='" + bankBsb + '\'' +
- ", businessRegistrationNumber='" + businessRegistrationNumber + '\'' +
- ", businessRegistrationNumber_Edited='" + businessRegistrationNumber_Edited + '\'' +
- ", companyLegalName='" + companyLegalName + '\'' +
- ", companyBusinessType='" + companyBusinessType + '\'' +
- ", companyAccountUserName='" + companyAccountUserName + '\'' +
- ", bankAccountType='" + bankAccountType + '\'' +
- ", bankMinimalPayoutAmount='" + bankMinimalPayoutAmount + '\'' +
- ", bankRefundReserve='" + bankRefundReserve + '\'' +
- ", merchantServiceAgreementDate='" + merchantServiceAgreementDate + '\'' +
- ", merchantPricingAgreementDate='" + merchantPricingAgreementDate + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", status='" + status + '\'' +
- ", errorResponse='" + errorResponse + '\'' +
- ", serviceId='" + serviceId + '\'' +
- ", requiredDocuments='" + requiredDocuments + '\'' +
- ", providerRequestId='" + providerRequestId + '\'' +
- ", caseId='" + caseId + '\'' +
- ", companyEmail='" + companyEmail + '\'' +
- ", averageTransactionAmount='" + averageTransactionAmount + '\'' +
- ", highestTransactionAmount='" + highestTransactionAmount + '\'' +
- ", riskMonitoring='" + riskMonitoring + '\'' +
- ", riskPayment='" + riskPayment + '\'' +
- ", riskByCommission='" + riskByCommission + '\'' +
- ", paymentReference='" + paymentReference + '\'' +
- ", managerLinkedIn='" + managerLinkedIn + '\'' +
+                "boardingInfoId='" + boardingInfoId + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", companyName='" + companyName + '\'' +
+                ", companyAddress='" + companyAddress + '\'' +
+                ", companyType='" + companyType + '\'' +
+                ", didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService='" + didOwnersAlreadyBeenSubjectOfResiliationOfPaymentService + '\'' +
+                ", didOwnersAlreadyAskedForBankrupcy='" + didOwnersAlreadyAskedForBankrupcy + '\'' +
+                ", haveYouBeenSubjectOfVisaRiskProgram='" + haveYouBeenSubjectOfVisaRiskProgram + '\'' +
+                ", drivingLicenceNumber='" + drivingLicenceNumber + '\'' +
+                ", boardingStep='" + boardingStep + '\'' +
+                ", companyName_Edited='" + companyName_Edited + '\'' +
+                ", companyAddress_Edited='" + companyAddress_Edited + '\'' +
+                ", companyType_Edited='" + companyType_Edited + '\'' +
+                ", accountOwner='" + accountOwner + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", bankNumber='" + bankNumber + '\'' +
+                ", transitNumber='" + transitNumber + '\'' +
+                ", signedContractContent='" + signedContractContent + '\'' +
+                ", clientName='" + clientName + '\'' +
+                ", clientEmail='" + clientEmail + '\'' +
+                ", clientPhone='" + clientPhone + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", specimenFile='" + specimenFile + '\'' +
+                ", idFile='" + idFile + '\'' +
+                ", companyTaxId='" + companyTaxId + '\'' +
+                ", companyCountryCode='" + companyCountryCode + '\'' +
+                ", companyStateCode='" + companyStateCode + '\'' +
+                ", companyCity='" + companyCity + '\'' +
+                ", companyZip='" + companyZip + '\'' +
+                ", companyPhone='" + companyPhone + '\'' +
+                ", companyProductAndServiceDescription='" + companyProductAndServiceDescription + '\'' +
+                ", companyWebSite='" + companyWebSite + '\'' +
+                ", companyBusinessCategory='" + companyBusinessCategory + '\'' +
+                ", companySalesVolume='" + companySalesVolume + '\'' +
+                ", bankPayoutCurrency='" + bankPayoutCurrency + '\'' +
+                ", bankCountryCode='" + bankCountryCode + '\'' +
+                ", bankStateCode='" + bankStateCode + '\'' +
+                ", bankCity='" + bankCity + '\'' +
+                ", bankName='" + bankName + '\'' +
+                ", bankRoutingNumber='" + bankRoutingNumber + '\'' +
+                ", bankBic='" + bankBic + '\'' +
+                ", bankIban='" + bankIban + '\'' +
+                ", bankSortCode='" + bankSortCode + '\'' +
+                ", bankSwiftCode='" + bankSwiftCode + '\'' +
+                ", bankBsb='" + bankBsb + '\'' +
+                ", businessRegistrationNumber='" + businessRegistrationNumber + '\'' +
+                ", businessRegistrationNumber_Edited='" + businessRegistrationNumber_Edited + '\'' +
+                ", companyLegalName='" + companyLegalName + '\'' +
+                ", companyBusinessType='" + companyBusinessType + '\'' +
+                ", companyAccountUserName='" + companyAccountUserName + '\'' +
+                ", bankAccountType='" + bankAccountType + '\'' +
+                ", bankMinimalPayoutAmount='" + bankMinimalPayoutAmount + '\'' +
+                ", bankRefundReserve='" + bankRefundReserve + '\'' +
+                ", merchantServiceAgreementDate='" + merchantServiceAgreementDate + '\'' +
+                ", merchantPricingAgreementDate='" + merchantPricingAgreementDate + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", status='" + status + '\'' +
+                ", errorResponse='" + errorResponse + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                ", requiredDocuments='" + requiredDocuments + '\'' +
+                ", providerRequestId='" + providerRequestId + '\'' +
+                ", caseId='" + caseId + '\'' +
+                ", companyEmail='" + companyEmail + '\'' +
+                ", averageTransactionAmount='" + averageTransactionAmount + '\'' +
+                ", highestTransactionAmount='" + highestTransactionAmount + '\'' +
+                ", riskMonitoring='" + riskMonitoring + '\'' +
+                ", riskPayment='" + riskPayment + '\'' +
+                ", riskByCommission='" + riskByCommission + '\'' +
+                ", paymentReference='" + paymentReference + '\'' +
+                ", managerLinkedIn='" + managerLinkedIn + '\'' +
 
                 '}';
     }

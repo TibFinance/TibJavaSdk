@@ -24,8 +24,8 @@ public class Merchant  extends MerchantBasicInfo  {
 
     
     /**
- * Contains the necessary details for replacing a merchant's account information within the system.
- */
+     * Contains the necessary details for replacing a merchant's account information within the system.
+     */
     @JsonProperty("Account")
     private Account account;
 
@@ -37,14 +37,12 @@ public class Merchant  extends MerchantBasicInfo  {
     
     public Merchant(Account account) {
         this.account = account;
-
     }
     
     
     public Merchant(String merchantName, String externalSystemId, String externalSystemGroupId, Currency merchantCurrency, Language language, String email, String emailCopyTo, String phoneNumber, String merchantDescription, Address address, Provider favoriteProvider, Account account) {
         super(merchantName, externalSystemId, externalSystemGroupId, merchantCurrency, language, email, emailCopyTo, phoneNumber, merchantDescription, address, favoriteProvider);
         this.account = account;
-
     }
 
     
@@ -76,7 +74,7 @@ public class Merchant  extends MerchantBasicInfo  {
     @Override
     public String toString() {
         return "Merchant{" +
-                 "account='" + account + '\'' +
+                "account='" + account + '\'' +
 
                 '}';
     }

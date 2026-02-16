@@ -20,26 +20,26 @@ public class ListBillsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Specifies the starting date and time for filtering data.
- */
+     * Specifies the starting date and time for filtering data.
+     */
     @JsonProperty("FromDateTime")
     private LocalDateTime fromDateTime;
 
     /**
- * Converts a specified date filter to a DateTime object.
- */
+     * Converts a specified date filter to a DateTime object.
+     */
     @JsonProperty("ToDateTime")
     private LocalDateTime toDateTime;
 
@@ -51,20 +51,18 @@ public class ListBillsArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public ListBillsArgs(String serviceId, String merchantId, LocalDateTime fromDateTime, LocalDateTime toDateTime) {
         this.serviceId = serviceId;
-this.merchantId = merchantId;
-this.fromDateTime = fromDateTime;
-this.toDateTime = toDateTime;
-
+        this.merchantId = merchantId;
+        this.fromDateTime = fromDateTime;
+        this.toDateTime = toDateTime;
     }
     
     
     public ListBillsArgs(String sessionToken, String serviceId, String merchantId, LocalDateTime fromDateTime, LocalDateTime toDateTime) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.merchantId = merchantId;
-this.fromDateTime = fromDateTime;
-this.toDateTime = toDateTime;
-
+        this.merchantId = merchantId;
+        this.fromDateTime = fromDateTime;
+        this.toDateTime = toDateTime;
     }
 
     
@@ -120,10 +118,10 @@ this.toDateTime = toDateTime;
     @Override
     public String toString() {
         return "ListBillsArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", fromDateTime='" + fromDateTime + '\'' +
- ", toDateTime='" + toDateTime + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", fromDateTime='" + fromDateTime + '\'' +
+                ", toDateTime='" + toDateTime + '\'' +
 
                 '}';
     }

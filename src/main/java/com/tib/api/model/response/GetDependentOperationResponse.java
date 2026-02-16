@@ -30,14 +30,12 @@ public class GetDependentOperationResponse extends CustomAPIResponse {
     public GetDependentOperationResponse(Error[] errors, boolean hasError, String messages, List<DependentOperation> operationIds) {
         super(errors, hasError, messages);
         this.operationIds = operationIds;
-
     }
 
     public GetDependentOperationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.operationIds = (List<DependentOperation>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetDependentOperationResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetDependentOperationResponse{" +
-                 "operationIds='" + operationIds + '\'' +
+                "operationIds='" + operationIds + '\'' +
 
                 '}';
     }

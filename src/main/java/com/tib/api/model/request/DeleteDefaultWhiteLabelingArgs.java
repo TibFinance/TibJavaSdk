@@ -29,7 +29,6 @@ public class DeleteDefaultWhiteLabelingArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public DeleteDefaultWhiteLabelingArgs(String adminSessionToken) {
         super(adminSessionToken);
-        
     }
 
     

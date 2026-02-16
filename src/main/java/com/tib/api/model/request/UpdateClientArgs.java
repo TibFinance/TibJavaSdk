@@ -20,20 +20,20 @@ public class UpdateClientArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientName")
     private String clientName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FeesOverloadedMerchantId")
     private String feesOverloadedMerchantId;
 
@@ -45,18 +45,16 @@ public class UpdateClientArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public UpdateClientArgs(String clientId, String clientName, String feesOverloadedMerchantId) {
         this.clientId = clientId;
-this.clientName = clientName;
-this.feesOverloadedMerchantId = feesOverloadedMerchantId;
-
+        this.clientName = clientName;
+        this.feesOverloadedMerchantId = feesOverloadedMerchantId;
     }
     
     
     public UpdateClientArgs(String adminSessionToken, String clientId, String clientName, String feesOverloadedMerchantId) {
         super(adminSessionToken);
         this.clientId = clientId;
-this.clientName = clientName;
-this.feesOverloadedMerchantId = feesOverloadedMerchantId;
-
+        this.clientName = clientName;
+        this.feesOverloadedMerchantId = feesOverloadedMerchantId;
     }
 
     
@@ -104,9 +102,9 @@ this.feesOverloadedMerchantId = feesOverloadedMerchantId;
     @Override
     public String toString() {
         return "UpdateClientArgs{" +
-                 "clientId='" + clientId + '\'' +
- ", clientName='" + clientName + '\'' +
- ", feesOverloadedMerchantId='" + feesOverloadedMerchantId + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", clientName='" + clientName + '\'' +
+                ", feesOverloadedMerchantId='" + feesOverloadedMerchantId + '\'' +
 
                 '}';
     }

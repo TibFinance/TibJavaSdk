@@ -29,7 +29,6 @@ public class GetClientArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public GetClientArgs(String adminSessionToken) {
         super(adminSessionToken);
-        
     }
 
     

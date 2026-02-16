@@ -21,26 +21,26 @@ public class Bill  extends BillEntity  {
 
     
     /**
- * Retrieves or assigns the unique identifier for a bill.
- */
+     * Retrieves or assigns the unique identifier for a bill.
+     */
     @JsonProperty("BillId")
     private String billId;
 
     /**
- * Gets or sets the fee applied to credit‑card transactions when the convenient fee option is used.
- */
+     * Gets or sets the fee applied to credit‑card transactions when the convenient fee option is used.
+     */
     @JsonProperty("ConvenientFeeCreditCard")
     private Double convenientFeeCreditCard;
 
     /**
- * Gets or sets the fee amount that is directly applied to the merchant's account for convenience services.
- */
+     * Gets or sets the fee amount that is directly applied to the merchant's account for convenience services.
+     */
     @JsonProperty("ConvenientFeeDirectAccount")
     private Double convenientFeeDirectAccount;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
@@ -52,20 +52,18 @@ public class Bill  extends BillEntity  {
     
     public Bill(String billId, Double convenientFeeCreditCard, Double convenientFeeDirectAccount, LocalDateTime createdDate) {
         this.billId = billId;
-this.convenientFeeCreditCard = convenientFeeCreditCard;
-this.convenientFeeDirectAccount = convenientFeeDirectAccount;
-this.createdDate = createdDate;
-
+        this.convenientFeeCreditCard = convenientFeeCreditCard;
+        this.convenientFeeDirectAccount = convenientFeeDirectAccount;
+        this.createdDate = createdDate;
     }
     
     
     public Bill(String merchantId, String billTitle, String billDescription, Double billAmount, String externalSystemBillNumber1, String externalSystemBillNumber2, String externalSystemBillNumber3, Currency billCurrency, Language language, String relatedCustomerId, boolean useConvenientFeeRule, String billId, Double convenientFeeCreditCard, Double convenientFeeDirectAccount, LocalDateTime createdDate) {
         super(merchantId, billTitle, billDescription, billAmount, externalSystemBillNumber1, externalSystemBillNumber2, externalSystemBillNumber3, billCurrency, language, relatedCustomerId, useConvenientFeeRule);
         this.billId = billId;
-this.convenientFeeCreditCard = convenientFeeCreditCard;
-this.convenientFeeDirectAccount = convenientFeeDirectAccount;
-this.createdDate = createdDate;
-
+        this.convenientFeeCreditCard = convenientFeeCreditCard;
+        this.convenientFeeDirectAccount = convenientFeeDirectAccount;
+        this.createdDate = createdDate;
     }
 
     
@@ -121,10 +119,10 @@ this.createdDate = createdDate;
     @Override
     public String toString() {
         return "Bill{" +
-                 "billId='" + billId + '\'' +
- ", convenientFeeCreditCard='" + convenientFeeCreditCard + '\'' +
- ", convenientFeeDirectAccount='" + convenientFeeDirectAccount + '\'' +
- ", createdDate='" + createdDate + '\'' +
+                "billId='" + billId + '\'' +
+                ", convenientFeeCreditCard='" + convenientFeeCreditCard + '\'' +
+                ", convenientFeeDirectAccount='" + convenientFeeDirectAccount + '\'' +
+                ", createdDate='" + createdDate + '\'' +
 
                 '}';
     }

@@ -20,14 +20,14 @@ public class GetBillArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Retrieves or assigns the unique identifier for a bill.
- */
+     * Retrieves or assigns the unique identifier for a bill.
+     */
     @JsonProperty("BillId")
     private String billId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -39,16 +39,14 @@ public class GetBillArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetBillArgs(String billId, String merchantId) {
         this.billId = billId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
     
     
     public GetBillArgs(String sessionToken, String billId, String merchantId) {
         super(sessionToken);
         this.billId = billId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     
@@ -88,8 +86,8 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "GetBillArgs{" +
-                 "billId='" + billId + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "billId='" + billId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

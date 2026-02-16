@@ -29,14 +29,12 @@ public class PushDataResponse extends CustomAPIResponse {
     public PushDataResponse(Error[] errors, boolean hasError, String messages, String dataId) {
         super(errors, hasError, messages);
         this.dataId = dataId;
-
     }
 
     public PushDataResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.dataId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class PushDataResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "PushDataResponse{" +
-                 "dataId='" + dataId + '\'' +
+                "dataId='" + dataId + '\'' +
 
                 '}';
     }

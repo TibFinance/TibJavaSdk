@@ -19,14 +19,14 @@ public class BlueSnapWebhookArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionType")
     private String transactionType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WebhookDatas")
     private Map<String, String> webhookDatas;
 
@@ -38,8 +38,7 @@ public class BlueSnapWebhookArgs  implements IBaseCryptedServiceArgs  {
     
     public BlueSnapWebhookArgs(String transactionType, Map<String, String> webhookDatas) {
         this.transactionType = transactionType;
-this.webhookDatas = webhookDatas;
-
+        this.webhookDatas = webhookDatas;
     }
     
     
@@ -81,8 +80,8 @@ this.webhookDatas = webhookDatas;
     @Override
     public String toString() {
         return "BlueSnapWebhookArgs{" +
-                 "transactionType='" + transactionType + '\'' +
- ", webhookDatas='" + webhookDatas + '\'' +
+                "transactionType='" + transactionType + '\'' +
+                ", webhookDatas='" + webhookDatas + '\'' +
 
                 '}';
     }

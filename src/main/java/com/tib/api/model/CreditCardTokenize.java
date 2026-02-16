@@ -19,20 +19,20 @@ public class CreditCardTokenize   {
 
     
     /**
- * Gets or sets the card token.
- */
+     * Gets or sets the card token.
+     */
     @JsonProperty("CardToken")
     private String cardToken;
 
     /**
- * Returns true if ... is valid.
- */
+     * Returns true if ... is valid.
+     */
     @JsonProperty("IsValid")
     private boolean isValid;
 
     /**
- * The ErrorMessage property provides a textual description of any error encountered during the execution of a function or process.
- */
+     * The ErrorMessage property provides a textual description of any error encountered during the execution of a function or process.
+     */
     @JsonProperty("ErrorMessage")
     private String errorMessage;
 
@@ -44,9 +44,8 @@ public class CreditCardTokenize   {
     
     public CreditCardTokenize(String cardToken, boolean isValid, String errorMessage) {
         this.cardToken = cardToken;
-this.isValid = isValid;
-this.errorMessage = errorMessage;
-
+        this.isValid = isValid;
+        this.errorMessage = errorMessage;
     }
     
     
@@ -96,9 +95,9 @@ this.errorMessage = errorMessage;
     @Override
     public String toString() {
         return "CreditCardTokenize{" +
-                 "cardToken='" + cardToken + '\'' +
- ", isValid='" + isValid + '\'' +
- ", errorMessage='" + errorMessage + '\'' +
+                "cardToken='" + cardToken + '\'' +
+                ", isValid='" + isValid + '\'' +
+                ", errorMessage='" + errorMessage + '\'' +
 
                 '}';
     }

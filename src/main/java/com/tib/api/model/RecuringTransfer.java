@@ -21,92 +21,92 @@ public class RecuringTransfer   {
 
     
     /**
- * Indicates the next scheduled date for a recurring transfer operation associated with the client's account.
- */
+     * Indicates the next scheduled date for a recurring transfer operation associated with the client's account.
+     */
     @JsonProperty("NextRecuringDate")
     private LocalDateTime nextRecuringDate;
 
     /**
- * Identifies a specific recurring transfer operation associated with a client's account.
- */
+     * Identifies a specific recurring transfer operation associated with a client's account.
+     */
     @JsonProperty("RecuringTransferId")
     private String recuringTransferId;
 
     /**
- * Defines the frequency of recurring transfer operations within the client's account. This enumeration is crucial for setting up and managing scheduled transfers.
- */
+     * Defines the frequency of recurring transfer operations within the client's account. This enumeration is crucial for setting up and managing scheduled transfers.
+     */
     @JsonProperty("RecuringMode")
     private TransferFrequency recuringMode;
 
     /**
- * Defines and manages the type of transfer operation within the system.
- */
+     * Defines and manages the type of transfer operation within the system.
+     */
     @JsonProperty("TransferType")
     private TransferType transferType;
 
     /**
- * Identifies the payment method associated with a specific transaction or operation.
- */
+     * Identifies the payment method associated with a specific transaction or operation.
+     */
     @JsonProperty("RelatedPaymentMethodId")
     private String relatedPaymentMethodId;
 
     /**
- * Gets or sets the reference date used for scheduling recurring transfers.
- */
+     * Gets or sets the reference date used for scheduling recurring transfers.
+     */
     @JsonProperty("RecuringRefDate")
     private LocalDateTime recuringRefDate;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
     /**
- * Retrieves the identifier of the merchant (bank account) to which the operation applies.
- */
+     * Retrieves the identifier of the merchant (bank account) to which the operation applies.
+     */
     @JsonProperty("RelatedMerchantId")
     private String relatedMerchantId;
 
     /**
- * Gets or sets the name of the merchant related to the current operation.
- */
+     * Gets or sets the name of the merchant related to the current operation.
+     */
     @JsonProperty("RelatedMerchantName")
     private String relatedMerchantName;
 
     /**
- * This property represents the full name of the customer in the system.
- */
+     * This property represents the full name of the customer in the system.
+     */
     @JsonProperty("CustomerName")
     private String customerName;
 
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Gets or sets the title of the transfer.
- */
+     * Gets or sets the title of the transfer.
+     */
     @JsonProperty("TrasnferTitle")
     private String trasnferTitle;
 
     /**
- * Provides a textual description of a transfer operation.
- */
+     * Provides a textual description of a transfer operation.
+     */
     @JsonProperty("TrasnferDescription")
     private String trasnferDescription;
 
     /**
- * External system identifier for a transfer.
- */
+     * External system identifier for a transfer.
+     */
     @JsonProperty("TrasnferExternalSystemNumber")
     private String trasnferExternalSystemNumber;
 
@@ -118,21 +118,20 @@ public class RecuringTransfer   {
     
     public RecuringTransfer(LocalDateTime nextRecuringDate, String recuringTransferId, TransferFrequency recuringMode, TransferType transferType, String relatedPaymentMethodId, LocalDateTime recuringRefDate, LocalDateTime createdDate, String relatedMerchantId, String relatedMerchantName, String customerName, String customerId, Double amount, String trasnferTitle, String trasnferDescription, String trasnferExternalSystemNumber) {
         this.nextRecuringDate = nextRecuringDate;
-this.recuringTransferId = recuringTransferId;
-this.recuringMode = recuringMode;
-this.transferType = transferType;
-this.relatedPaymentMethodId = relatedPaymentMethodId;
-this.recuringRefDate = recuringRefDate;
-this.createdDate = createdDate;
-this.relatedMerchantId = relatedMerchantId;
-this.relatedMerchantName = relatedMerchantName;
-this.customerName = customerName;
-this.customerId = customerId;
-this.amount = amount;
-this.trasnferTitle = trasnferTitle;
-this.trasnferDescription = trasnferDescription;
-this.trasnferExternalSystemNumber = trasnferExternalSystemNumber;
-
+        this.recuringTransferId = recuringTransferId;
+        this.recuringMode = recuringMode;
+        this.transferType = transferType;
+        this.relatedPaymentMethodId = relatedPaymentMethodId;
+        this.recuringRefDate = recuringRefDate;
+        this.createdDate = createdDate;
+        this.relatedMerchantId = relatedMerchantId;
+        this.relatedMerchantName = relatedMerchantName;
+        this.customerName = customerName;
+        this.customerId = customerId;
+        this.amount = amount;
+        this.trasnferTitle = trasnferTitle;
+        this.trasnferDescription = trasnferDescription;
+        this.trasnferExternalSystemNumber = trasnferExternalSystemNumber;
     }
     
     
@@ -278,21 +277,21 @@ this.trasnferExternalSystemNumber = trasnferExternalSystemNumber;
     @Override
     public String toString() {
         return "RecuringTransfer{" +
-                 "nextRecuringDate='" + nextRecuringDate + '\'' +
- ", recuringTransferId='" + recuringTransferId + '\'' +
- ", recuringMode='" + recuringMode + '\'' +
- ", transferType='" + transferType + '\'' +
- ", relatedPaymentMethodId='" + relatedPaymentMethodId + '\'' +
- ", recuringRefDate='" + recuringRefDate + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", relatedMerchantId='" + relatedMerchantId + '\'' +
- ", relatedMerchantName='" + relatedMerchantName + '\'' +
- ", customerName='" + customerName + '\'' +
- ", customerId='" + customerId + '\'' +
- ", amount='" + amount + '\'' +
- ", trasnferTitle='" + trasnferTitle + '\'' +
- ", trasnferDescription='" + trasnferDescription + '\'' +
- ", trasnferExternalSystemNumber='" + trasnferExternalSystemNumber + '\'' +
+                "nextRecuringDate='" + nextRecuringDate + '\'' +
+                ", recuringTransferId='" + recuringTransferId + '\'' +
+                ", recuringMode='" + recuringMode + '\'' +
+                ", transferType='" + transferType + '\'' +
+                ", relatedPaymentMethodId='" + relatedPaymentMethodId + '\'' +
+                ", recuringRefDate='" + recuringRefDate + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", relatedMerchantId='" + relatedMerchantId + '\'' +
+                ", relatedMerchantName='" + relatedMerchantName + '\'' +
+                ", customerName='" + customerName + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", trasnferTitle='" + trasnferTitle + '\'' +
+                ", trasnferDescription='" + trasnferDescription + '\'' +
+                ", trasnferExternalSystemNumber='" + trasnferExternalSystemNumber + '\'' +
 
                 '}';
     }

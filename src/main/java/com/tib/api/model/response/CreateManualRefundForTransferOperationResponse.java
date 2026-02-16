@@ -25,13 +25,11 @@ public class CreateManualRefundForTransferOperationResponse extends CustomAPIRes
 
     public CreateManualRefundForTransferOperationResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public CreateManualRefundForTransferOperationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

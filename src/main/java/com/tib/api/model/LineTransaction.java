@@ -23,50 +23,50 @@ public class LineTransaction  extends BaseTransaction  {
 
     
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Gets or sets the date funds available.
- */
+     * Gets or sets the date funds available.
+     */
     @JsonProperty("DateFundsAvailable")
     private LocalDateTime dateFundsAvailable;
 
     /**
- * Gets or sets the target institution number.
- */
+     * Gets or sets the target institution number.
+     */
     @JsonProperty("TargetInstitutionNumber")
     private String targetInstitutionNumber;
 
     /**
- * Gets or sets the target full account number.
- */
+     * Gets or sets the target full account number.
+     */
     @JsonProperty("TargetFullAccountNumber")
     private String targetFullAccountNumber;
 
     /**
- * Gets or sets the name of the target.
- */
+     * Gets or sets the name of the target.
+     */
     @JsonProperty("TargetName")
     private String targetName;
 
     /**
- * Gets or sets the reference number.
- */
+     * Gets or sets the reference number.
+     */
     @JsonProperty("RefNumber")
     private String refNumber;
 
     /**
- * Specifies the operation category used throughout the API.
- */
+     * Specifies the operation category used throughout the API.
+     */
     @JsonProperty("OperationType")
     private AcpOperationType operationType;
 
     /**
- * Gets or sets the type of the line.
- */
+     * Gets or sets the type of the line.
+     */
     @JsonProperty("LineType")
     private LineType lineType;
 
@@ -78,28 +78,26 @@ public class LineTransaction  extends BaseTransaction  {
     
     public LineTransaction(Double amount, LocalDateTime dateFundsAvailable, String targetInstitutionNumber, String targetFullAccountNumber, String targetName, String refNumber, AcpOperationType operationType, LineType lineType) {
         this.amount = amount;
-this.dateFundsAvailable = dateFundsAvailable;
-this.targetInstitutionNumber = targetInstitutionNumber;
-this.targetFullAccountNumber = targetFullAccountNumber;
-this.targetName = targetName;
-this.refNumber = refNumber;
-this.operationType = operationType;
-this.lineType = lineType;
-
+        this.dateFundsAvailable = dateFundsAvailable;
+        this.targetInstitutionNumber = targetInstitutionNumber;
+        this.targetFullAccountNumber = targetFullAccountNumber;
+        this.targetName = targetName;
+        this.refNumber = refNumber;
+        this.operationType = operationType;
+        this.lineType = lineType;
     }
     
     
     public LineTransaction(ContactInfo targetContactInfo, TransferFrequency transferFrequency, Double amount, LocalDateTime dateFundsAvailable, String targetInstitutionNumber, String targetFullAccountNumber, String targetName, String refNumber, AcpOperationType operationType, LineType lineType) {
         super(amount, dateFundsAvailable, targetInstitutionNumber, targetFullAccountNumber, targetName, refNumber, operationType, targetContactInfo, transferFrequency);
         this.amount = amount;
-this.dateFundsAvailable = dateFundsAvailable;
-this.targetInstitutionNumber = targetInstitutionNumber;
-this.targetFullAccountNumber = targetFullAccountNumber;
-this.targetName = targetName;
-this.refNumber = refNumber;
-this.operationType = operationType;
-this.lineType = lineType;
-
+        this.dateFundsAvailable = dateFundsAvailable;
+        this.targetInstitutionNumber = targetInstitutionNumber;
+        this.targetFullAccountNumber = targetFullAccountNumber;
+        this.targetName = targetName;
+        this.refNumber = refNumber;
+        this.operationType = operationType;
+        this.lineType = lineType;
     }
 
     
@@ -187,14 +185,14 @@ this.lineType = lineType;
     @Override
     public String toString() {
         return "LineTransaction{" +
-                 "amount='" + amount + '\'' +
- ", dateFundsAvailable='" + dateFundsAvailable + '\'' +
- ", targetInstitutionNumber='" + targetInstitutionNumber + '\'' +
- ", targetFullAccountNumber='" + targetFullAccountNumber + '\'' +
- ", targetName='" + targetName + '\'' +
- ", refNumber='" + refNumber + '\'' +
- ", operationType='" + operationType + '\'' +
- ", lineType='" + lineType + '\'' +
+                "amount='" + amount + '\'' +
+                ", dateFundsAvailable='" + dateFundsAvailable + '\'' +
+                ", targetInstitutionNumber='" + targetInstitutionNumber + '\'' +
+                ", targetFullAccountNumber='" + targetFullAccountNumber + '\'' +
+                ", targetName='" + targetName + '\'' +
+                ", refNumber='" + refNumber + '\'' +
+                ", operationType='" + operationType + '\'' +
+                ", lineType='" + lineType + '\'' +
 
                 '}';
     }

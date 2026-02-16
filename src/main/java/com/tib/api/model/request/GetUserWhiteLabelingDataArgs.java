@@ -20,20 +20,20 @@ public class GetUserWhiteLabelingDataArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
- * the unique identifier of an entity that will ger a new whitelabeling.
- */
+     * the unique identifier of an entity that will ger a new whitelabeling.
+     */
     @JsonProperty("Id")
     private String id;
 
     /**
- * the entity type
- */
+     * the entity type
+     */
     @JsonProperty("WhiteLabelingLevel")
     private Integer whiteLabelingLevel;
 
     /**
- * Url entity
- */
+     * Url entity
+     */
     @JsonProperty("Url")
     private String url;
 
@@ -45,18 +45,16 @@ public class GetUserWhiteLabelingDataArgs  extends BaseAuthenticatedCryptedArgs 
     
     public GetUserWhiteLabelingDataArgs(String id, Integer whiteLabelingLevel, String url) {
         this.id = id;
-this.whiteLabelingLevel = whiteLabelingLevel;
-this.url = url;
-
+        this.whiteLabelingLevel = whiteLabelingLevel;
+        this.url = url;
     }
     
     
     public GetUserWhiteLabelingDataArgs(String sessionToken, String id, Integer whiteLabelingLevel, String url) {
         super(sessionToken);
         this.id = id;
-this.whiteLabelingLevel = whiteLabelingLevel;
-this.url = url;
-
+        this.whiteLabelingLevel = whiteLabelingLevel;
+        this.url = url;
     }
 
     
@@ -104,9 +102,9 @@ this.url = url;
     @Override
     public String toString() {
         return "GetUserWhiteLabelingDataArgs{" +
-                 "id='" + id + '\'' +
- ", whiteLabelingLevel='" + whiteLabelingLevel + '\'' +
- ", url='" + url + '\'' +
+                "id='" + id + '\'' +
+                ", whiteLabelingLevel='" + whiteLabelingLevel + '\'' +
+                ", url='" + url + '\'' +
 
                 '}';
     }

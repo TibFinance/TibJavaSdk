@@ -29,14 +29,12 @@ public class SaveProviderMerchantResponse extends CustomAPIResponse {
     public SaveProviderMerchantResponse(Error[] errors, boolean hasError, String messages, String status) {
         super(errors, hasError, messages);
         this.status = status;
-
     }
 
     public SaveProviderMerchantResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.status = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class SaveProviderMerchantResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "SaveProviderMerchantResponse{" +
-                 "status='" + status + '\'' +
+                "status='" + status + '\'' +
 
                 '}';
     }

@@ -36,18 +36,16 @@ public class CreateSupplierResponse extends CustomAPIResponse {
     public CreateSupplierResponse(Error[] errors, boolean hasError, String messages, String supplierId, String supplierName, List<MerchantView> matchingExistingMerchants) {
         super(errors, hasError, messages);
         this.supplierId = supplierId;
-this.supplierName = supplierName;
-this.matchingExistingMerchants = matchingExistingMerchants;
-
+        this.supplierName = supplierName;
+        this.matchingExistingMerchants = matchingExistingMerchants;
     }
 
     public CreateSupplierResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.supplierId = apiResponse.getResponse().toString();
-this.supplierName = apiResponse.getResponse().toString();
-this.matchingExistingMerchants = (List<MerchantView>) apiResponse.getResponse();
-
+            this.supplierName = apiResponse.getResponse().toString();
+            this.matchingExistingMerchants = (List<MerchantView>) apiResponse.getResponse();
         }
     }
 
@@ -96,9 +94,9 @@ this.matchingExistingMerchants = (List<MerchantView>) apiResponse.getResponse();
     @Override
     public String toString() {
         return "CreateSupplierResponse{" +
-                 "supplierId='" + supplierId + '\'' +
- ", supplierName='" + supplierName + '\'' +
- ", matchingExistingMerchants='" + matchingExistingMerchants + '\'' +
+                "supplierId='" + supplierId + '\'' +
+                ", supplierName='" + supplierName + '\'' +
+                ", matchingExistingMerchants='" + matchingExistingMerchants + '\'' +
 
                 '}';
     }

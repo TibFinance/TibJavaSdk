@@ -20,8 +20,8 @@ public class BaseProcessDropInArgs  extends BaseAuthenticatePublicTokenArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsPPAAuthorized")
     private boolean isPPAAuthorized;
 
@@ -33,14 +33,12 @@ public class BaseProcessDropInArgs  extends BaseAuthenticatePublicTokenArgs  {
     
     public BaseProcessDropInArgs(boolean isPPAAuthorized) {
         this.isPPAAuthorized = isPPAAuthorized;
-
     }
     
     
     public BaseProcessDropInArgs(String publicTokenId, boolean isPPAAuthorized) {
         super(publicTokenId);
         this.isPPAAuthorized = isPPAAuthorized;
-
     }
 
     
@@ -72,7 +70,7 @@ public class BaseProcessDropInArgs  extends BaseAuthenticatePublicTokenArgs  {
     @Override
     public String toString() {
         return "BaseProcessDropInArgs{" +
-                 "isPPAAuthorized='" + isPPAAuthorized + '\'' +
+                "isPPAAuthorized='" + isPPAAuthorized + '\'' +
 
                 '}';
     }

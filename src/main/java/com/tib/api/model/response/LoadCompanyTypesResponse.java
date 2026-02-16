@@ -29,14 +29,12 @@ public class LoadCompanyTypesResponse extends CustomAPIResponse {
     public LoadCompanyTypesResponse(Error[] errors, boolean hasError, String messages, String companyTypes) {
         super(errors, hasError, messages);
         this.companyTypes = companyTypes;
-
     }
 
     public LoadCompanyTypesResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.companyTypes = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class LoadCompanyTypesResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "LoadCompanyTypesResponse{" +
-                 "companyTypes='" + companyTypes + '\'' +
+                "companyTypes='" + companyTypes + '\'' +
 
                 '}';
     }

@@ -32,16 +32,14 @@ public class GatherGatewayContextResponse extends CustomAPIResponse {
     public GatherGatewayContextResponse(Error[] errors, boolean hasError, String messages, String paymentId, Double billAmount) {
         super(errors, hasError, messages);
         this.paymentId = paymentId;
-this.billAmount = billAmount;
-
+        this.billAmount = billAmount;
     }
 
     public GatherGatewayContextResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.paymentId = apiResponse.getResponse().toString();
-this.billAmount = Double.parseDouble(apiResponse.getResponse().toString());
-
+            this.billAmount = Double.parseDouble(apiResponse.getResponse().toString());
         }
     }
 
@@ -82,8 +80,8 @@ this.billAmount = Double.parseDouble(apiResponse.getResponse().toString());
     @Override
     public String toString() {
         return "GatherGatewayContextResponse{" +
-                 "paymentId='" + paymentId + '\'' +
- ", billAmount='" + billAmount + '\'' +
+                "paymentId='" + paymentId + '\'' +
+                ", billAmount='" + billAmount + '\'' +
 
                 '}';
     }

@@ -62,36 +62,34 @@ public class GetBoardingStatusResponse<T> extends CustomAPIResponse {
     public GetBoardingStatusResponse(Error[] errors, boolean hasError, String messages, String merchantId, String merchantName, String currency, Integer merchantLanguage, String merchantEmail, String authorizationStatus, LocalDateTime createdDate, String phoneNumber, String merchantDescription, String accountName, String accountInformation, String boardingStatus) {
         super(errors, hasError, messages);
         this.merchantId = merchantId;
-this.merchantName = merchantName;
-this.currency = currency;
-this.merchantLanguage = merchantLanguage;
-this.merchantEmail = merchantEmail;
-this.authorizationStatus = authorizationStatus;
-this.createdDate = createdDate;
-this.phoneNumber = phoneNumber;
-this.merchantDescription = merchantDescription;
-this.accountName = accountName;
-this.accountInformation = accountInformation;
-this.boardingStatus = boardingStatus;
-
+        this.merchantName = merchantName;
+        this.currency = currency;
+        this.merchantLanguage = merchantLanguage;
+        this.merchantEmail = merchantEmail;
+        this.authorizationStatus = authorizationStatus;
+        this.createdDate = createdDate;
+        this.phoneNumber = phoneNumber;
+        this.merchantDescription = merchantDescription;
+        this.accountName = accountName;
+        this.accountInformation = accountInformation;
+        this.boardingStatus = boardingStatus;
     }
 
     public GetBoardingStatusResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.merchantId = apiResponse.getResponse().toString();
-this.merchantName = apiResponse.getResponse().toString();
-this.currency = apiResponse.getResponse().toString();
-this.merchantLanguage = Integer.parseInt(apiResponse.getResponse().toString());
-this.merchantEmail = apiResponse.getResponse().toString();
-this.authorizationStatus = apiResponse.getResponse().toString();
-this.createdDate = LocalDateTime.parse(apiResponse.getResponse().toString());
-this.phoneNumber = apiResponse.getResponse().toString();
-this.merchantDescription = apiResponse.getResponse().toString();
-this.accountName = apiResponse.getResponse().toString();
-this.accountInformation = apiResponse.getResponse().toString();
-this.boardingStatus = apiResponse.getResponse().toString();
-
+            this.merchantName = apiResponse.getResponse().toString();
+            this.currency = apiResponse.getResponse().toString();
+            this.merchantLanguage = Integer.parseInt(apiResponse.getResponse().toString());
+            this.merchantEmail = apiResponse.getResponse().toString();
+            this.authorizationStatus = apiResponse.getResponse().toString();
+            this.createdDate = LocalDateTime.parse(apiResponse.getResponse().toString());
+            this.phoneNumber = apiResponse.getResponse().toString();
+            this.merchantDescription = apiResponse.getResponse().toString();
+            this.accountName = apiResponse.getResponse().toString();
+            this.accountInformation = apiResponse.getResponse().toString();
+            this.boardingStatus = apiResponse.getResponse().toString();
         }
     }
 
@@ -212,18 +210,18 @@ this.boardingStatus = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "GetBoardingStatusResponse{" +
-                 "merchantId='" + merchantId + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", currency='" + currency + '\'' +
- ", merchantLanguage='" + merchantLanguage + '\'' +
- ", merchantEmail='" + merchantEmail + '\'' +
- ", authorizationStatus='" + authorizationStatus + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", phoneNumber='" + phoneNumber + '\'' +
- ", merchantDescription='" + merchantDescription + '\'' +
- ", accountName='" + accountName + '\'' +
- ", accountInformation='" + accountInformation + '\'' +
- ", boardingStatus='" + boardingStatus + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", currency='" + currency + '\'' +
+                ", merchantLanguage='" + merchantLanguage + '\'' +
+                ", merchantEmail='" + merchantEmail + '\'' +
+                ", authorizationStatus='" + authorizationStatus + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", merchantDescription='" + merchantDescription + '\'' +
+                ", accountName='" + accountName + '\'' +
+                ", accountInformation='" + accountInformation + '\'' +
+                ", boardingStatus='" + boardingStatus + '\'' +
 
                 '}';
     }

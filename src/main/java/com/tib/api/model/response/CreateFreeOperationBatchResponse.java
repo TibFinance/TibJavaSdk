@@ -30,14 +30,12 @@ public class CreateFreeOperationBatchResponse extends CustomAPIResponse {
     public CreateFreeOperationBatchResponse(Error[] errors, boolean hasError, String messages, List<CreateFreeOperationBatchResponseBase> createFreeOperationBatchResponses) {
         super(errors, hasError, messages);
         this.createFreeOperationBatchResponses = createFreeOperationBatchResponses;
-
     }
 
     public CreateFreeOperationBatchResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.createFreeOperationBatchResponses = (List<CreateFreeOperationBatchResponseBase>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class CreateFreeOperationBatchResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateFreeOperationBatchResponse{" +
-                 "createFreeOperationBatchResponses='" + createFreeOperationBatchResponses + '\'' +
+                "createFreeOperationBatchResponses='" + createFreeOperationBatchResponses + '\'' +
 
                 '}';
     }

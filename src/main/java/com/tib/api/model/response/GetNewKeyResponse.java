@@ -32,16 +32,14 @@ public class GetNewKeyResponse extends CustomAPIResponse {
     public GetNewKeyResponse(Error[] errors, boolean hasError, String messages, String token, byte[] key) {
         super(errors, hasError, messages);
         this.token = token;
-this.key = key;
-
+        this.key = key;
     }
 
     public GetNewKeyResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.token = apiResponse.getResponse().toString();
-this.key = apiResponse.getResponse().toString().getBytes();
-
+            this.key = apiResponse.getResponse().toString().getBytes();
         }
     }
 
@@ -82,8 +80,8 @@ this.key = apiResponse.getResponse().toString().getBytes();
     @Override
     public String toString() {
         return "GetNewKeyResponse{" +
-                 "token='" + token + '\'' +
- ", key='" + key + '\'' +
+                "token='" + token + '\'' +
+                ", key='" + key + '\'' +
 
                 '}';
     }

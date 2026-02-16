@@ -22,44 +22,44 @@ public class DasProviderEntityCanada  extends DasProviderBase  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DasProviderType")
     private DasProviderType dasProviderType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BusinessName")
     private String businessName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BusinessOrAccountNumber")
     private String businessOrAccountNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FileType")
     private DasProviderCanadaFileType fileType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FileNumber")
     private String fileNumber;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DeclarationFrequency")
     private DasProviderCanadaDeclarationFrequency declarationFrequency;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
@@ -71,13 +71,12 @@ public class DasProviderEntityCanada  extends DasProviderBase  {
     
     public DasProviderEntityCanada(DasProviderType dasProviderType, String businessName, String businessOrAccountNumber, DasProviderCanadaFileType fileType, String fileNumber, DasProviderCanadaDeclarationFrequency declarationFrequency, String description) {
         this.dasProviderType = dasProviderType;
-this.businessName = businessName;
-this.businessOrAccountNumber = businessOrAccountNumber;
-this.fileType = fileType;
-this.fileNumber = fileNumber;
-this.declarationFrequency = declarationFrequency;
-this.description = description;
-
+        this.businessName = businessName;
+        this.businessOrAccountNumber = businessOrAccountNumber;
+        this.fileType = fileType;
+        this.fileNumber = fileNumber;
+        this.declarationFrequency = declarationFrequency;
+        this.description = description;
     }
     
     
@@ -159,13 +158,13 @@ this.description = description;
     @Override
     public String toString() {
         return "DasProviderEntityCanada{" +
-                 "dasProviderType='" + dasProviderType + '\'' +
- ", businessName='" + businessName + '\'' +
- ", businessOrAccountNumber='" + businessOrAccountNumber + '\'' +
- ", fileType='" + fileType + '\'' +
- ", fileNumber='" + fileNumber + '\'' +
- ", declarationFrequency='" + declarationFrequency + '\'' +
- ", description='" + description + '\'' +
+                "dasProviderType='" + dasProviderType + '\'' +
+                ", businessName='" + businessName + '\'' +
+                ", businessOrAccountNumber='" + businessOrAccountNumber + '\'' +
+                ", fileType='" + fileType + '\'' +
+                ", fileNumber='" + fileNumber + '\'' +
+                ", declarationFrequency='" + declarationFrequency + '\'' +
+                ", description='" + description + '\'' +
 
                 '}';
     }

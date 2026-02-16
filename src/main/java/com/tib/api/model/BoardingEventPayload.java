@@ -19,26 +19,26 @@ public class BoardingEventPayload  extends BaseEventPayload  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * Represents the status of the merchant boarding process within the system. This status is crucial for tracking the progress and completion of merchant onboarding.
- */
+     * Represents the status of the merchant boarding process within the system. This status is crucial for tracking the progress and completion of merchant onboarding.
+     */
     @JsonProperty("BoardingStatus")
     private String boardingStatus;
 
@@ -50,20 +50,18 @@ public class BoardingEventPayload  extends BaseEventPayload  {
     
     public BoardingEventPayload(String merchantId, String serviceId, String clientId, String boardingStatus) {
         this.merchantId = merchantId;
-this.serviceId = serviceId;
-this.clientId = clientId;
-this.boardingStatus = boardingStatus;
-
+        this.serviceId = serviceId;
+        this.clientId = clientId;
+        this.boardingStatus = boardingStatus;
     }
     
     
     public BoardingEventPayload(String eventName, String merchantId, String serviceId, String clientId, String boardingStatus) {
         super(eventName);
         this.merchantId = merchantId;
-this.serviceId = serviceId;
-this.clientId = clientId;
-this.boardingStatus = boardingStatus;
-
+        this.serviceId = serviceId;
+        this.clientId = clientId;
+        this.boardingStatus = boardingStatus;
     }
 
     
@@ -119,10 +117,10 @@ this.boardingStatus = boardingStatus;
     @Override
     public String toString() {
         return "BoardingEventPayload{" +
-                 "merchantId='" + merchantId + '\'' +
- ", serviceId='" + serviceId + '\'' +
- ", clientId='" + clientId + '\'' +
- ", boardingStatus='" + boardingStatus + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", boardingStatus='" + boardingStatus + '\'' +
 
                 '}';
     }

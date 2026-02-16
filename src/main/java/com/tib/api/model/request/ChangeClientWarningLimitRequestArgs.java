@@ -21,8 +21,8 @@ public class ChangeClientWarningLimitRequestArgs  extends BaseAuthenticatedCrypt
 
     
     /**
- * Gets or sets the client limits.
- */
+     * Gets or sets the client limits.
+     */
     @JsonProperty("ClientLimits")
     private PendingChangeClientLimits clientLimits;
 
@@ -34,14 +34,12 @@ public class ChangeClientWarningLimitRequestArgs  extends BaseAuthenticatedCrypt
     
     public ChangeClientWarningLimitRequestArgs(PendingChangeClientLimits clientLimits) {
         this.clientLimits = clientLimits;
-
     }
     
     
     public ChangeClientWarningLimitRequestArgs(String sessionToken, PendingChangeClientLimits clientLimits) {
         super(sessionToken);
         this.clientLimits = clientLimits;
-
     }
 
     
@@ -73,7 +71,7 @@ public class ChangeClientWarningLimitRequestArgs  extends BaseAuthenticatedCrypt
     @Override
     public String toString() {
         return "ChangeClientWarningLimitRequestArgs{" +
-                 "clientLimits='" + clientLimits + '\'' +
+                "clientLimits='" + clientLimits + '\'' +
 
                 '}';
     }

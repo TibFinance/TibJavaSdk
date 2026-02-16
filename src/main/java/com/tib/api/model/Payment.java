@@ -20,8 +20,8 @@ public class Payment  extends PaymentBaseWithHierarchy  {
 
     
     /**
- * Gets or sets the collection of payment operations associated with the current entity.
- */
+     * Gets or sets the collection of payment operations associated with the current entity.
+     */
     @JsonProperty("Operations")
     private List<PaymentOperationEntity> operations;
 
@@ -33,14 +33,12 @@ public class Payment  extends PaymentBaseWithHierarchy  {
     
     public Payment(List<PaymentOperationEntity> operations) {
         this.operations = operations;
-
     }
     
     
     public Payment(String serviceId, String serviceName, String merchantId, String merchantExternalSystemId, String merchantExternalSystemGroupId, String merchantName, boolean isOverlodedMerchant, List<PaymentOperationEntity> operations) {
         super(serviceId, serviceName, merchantId, merchantExternalSystemId, merchantExternalSystemGroupId, merchantName, isOverlodedMerchant);
         this.operations = operations;
-
     }
 
     
@@ -72,7 +70,7 @@ public class Payment  extends PaymentBaseWithHierarchy  {
     @Override
     public String toString() {
         return "Payment{" +
-                 "operations='" + operations + '\'' +
+                "operations='" + operations + '\'' +
 
                 '}';
     }

@@ -20,20 +20,20 @@ public class SendCreditCardPaymentArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Retrieves or assigns the unique identifier for a payment.
- */
+     * Retrieves or assigns the unique identifier for a payment.
+     */
     @JsonProperty("PaymentId")
     private String paymentId;
 
     /**
- * Manages all operations associated with credit card data.
- */
+     * Manages all operations associated with credit card data.
+     */
     @JsonProperty("CreditCard")
     private CreditCard creditCard;
 
     /**
- * Specifies the amount to be paid. The value must not exceed the sum of the associated bill amount and any previously recorded payments. If null, the system applies the remaining unpaid portion of the bill.
- */
+     * Specifies the amount to be paid. The value must not exceed the sum of the associated bill amount and any previously recorded payments. If null, the system applies the remaining unpaid portion of the bill.
+     */
     @JsonProperty("PaymentAmount")
     private Double paymentAmount;
 
@@ -45,9 +45,8 @@ public class SendCreditCardPaymentArgs  implements IBaseCryptedServiceArgs  {
     
     public SendCreditCardPaymentArgs(String paymentId, CreditCard creditCard, Double paymentAmount) {
         this.paymentId = paymentId;
-this.creditCard = creditCard;
-this.paymentAmount = paymentAmount;
-
+        this.creditCard = creditCard;
+        this.paymentAmount = paymentAmount;
     }
     
     
@@ -97,9 +96,9 @@ this.paymentAmount = paymentAmount;
     @Override
     public String toString() {
         return "SendCreditCardPaymentArgs{" +
-                 "paymentId='" + paymentId + '\'' +
- ", creditCard='" + creditCard + '\'' +
- ", paymentAmount='" + paymentAmount + '\'' +
+                "paymentId='" + paymentId + '\'' +
+                ", creditCard='" + creditCard + '\'' +
+                ", paymentAmount='" + paymentAmount + '\'' +
 
                 '}';
     }

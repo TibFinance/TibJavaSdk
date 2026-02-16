@@ -29,14 +29,12 @@ public class DeleteLoginResponse extends CustomAPIResponse {
     public DeleteLoginResponse(Error[] errors, boolean hasError, String messages, String loginId) {
         super(errors, hasError, messages);
         this.loginId = loginId;
-
     }
 
     public DeleteLoginResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.loginId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class DeleteLoginResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "DeleteLoginResponse{" +
-                 "loginId='" + loginId + '\'' +
+                "loginId='" + loginId + '\'' +
 
                 '}';
     }

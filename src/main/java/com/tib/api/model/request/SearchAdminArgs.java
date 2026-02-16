@@ -20,200 +20,200 @@ public class SearchAdminArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SearchText")
     private String searchText;
 
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DateFrom")
     private LocalDateTime dateFrom;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DateTo")
     private LocalDateTime dateTo;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantIds")
     private List<String> merchantIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CustomerIds")
     private List<String> customerIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransferIds")
     private List<String> transferIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationIds")
     private List<String> operationIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionGroupIds")
     private List<String> transactionGroupIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionIds")
     private List<String> transactionIds;
 
     /**
- * Defines and manages the type of transfer operation within the system.
- */
+     * Defines and manages the type of transfer operation within the system.
+     */
     @JsonProperty("TransferType")
     private Integer transferType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TIBAuthorizationStatus")
     private Integer tIBAuthorizationStatus;
 
     /**
- * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
- */
+     * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
+     */
     @JsonProperty("OperationTarget")
     private Integer operationTarget;
 
     /**
- * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
- */
+     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     */
     @JsonProperty("OperationDirection")
     private Integer operationDirection;
 
     /**
- * Specifies the category of a financial operation.
- */
+     * Specifies the category of a financial operation.
+     */
     @JsonProperty("OperationKind")
     private Integer operationKind;
 
     /**
- * Retrieves the numeric status code of an operation.
- */
+     * Retrieves the numeric status code of an operation.
+     */
     @JsonProperty("OperationStatus")
     private Integer operationStatus;
 
     /**
- * Specifies the operation category used throughout the API.
- */
+     * Specifies the operation category used throughout the API.
+     */
     @JsonProperty("OperationType")
     private Integer operationType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RowCount")
     private Integer rowCount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsTextSearch")
     private boolean isTextSearch;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsRevertSearch")
     private boolean isRevertSearch;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DueDateFrom")
     private LocalDateTime dueDateFrom;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DueDateTo")
     private LocalDateTime dueDateTo;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ExecutedFrom")
     private LocalDateTime executedFrom;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ExecutedTo")
     private LocalDateTime executedTo;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RealDueDateFrom")
     private LocalDateTime realDueDateFrom;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RealDueDateTo")
     private LocalDateTime realDueDateTo;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("LastModifiedDateFrom")
     private LocalDateTime lastModifiedDateFrom;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("LastModifiedDateTo")
     private LocalDateTime lastModifiedDateTo;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsCreatedDateChecked")
     private boolean isCreatedDateChecked;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsDueDateChecked")
     private boolean isDueDateChecked;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsExecutedDateChecked")
     private boolean isExecutedDateChecked;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsRealDueDateChecked")
     private boolean isRealDueDateChecked;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsLastModifiedDateChecked")
     private boolean isLastModifiedDateChecked;
 
@@ -225,78 +225,76 @@ public class SearchAdminArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public SearchAdminArgs(String searchText, String clientId, LocalDateTime dateFrom, LocalDateTime dateTo, List<String> merchantIds, List<String> customerIds, List<String> transferIds, List<String> operationIds, List<String> transactionGroupIds, List<String> transactionIds, Integer transferType, Integer tIBAuthorizationStatus, Integer operationTarget, Integer operationDirection, Integer operationKind, Integer operationStatus, Integer operationType, Integer rowCount, boolean isTextSearch, boolean isRevertSearch, LocalDateTime dueDateFrom, LocalDateTime dueDateTo, LocalDateTime executedFrom, LocalDateTime executedTo, LocalDateTime realDueDateFrom, LocalDateTime realDueDateTo, LocalDateTime lastModifiedDateFrom, LocalDateTime lastModifiedDateTo, boolean isCreatedDateChecked, boolean isDueDateChecked, boolean isExecutedDateChecked, boolean isRealDueDateChecked, boolean isLastModifiedDateChecked) {
         this.searchText = searchText;
-this.clientId = clientId;
-this.dateFrom = dateFrom;
-this.dateTo = dateTo;
-this.merchantIds = merchantIds;
-this.customerIds = customerIds;
-this.transferIds = transferIds;
-this.operationIds = operationIds;
-this.transactionGroupIds = transactionGroupIds;
-this.transactionIds = transactionIds;
-this.transferType = transferType;
-this.tIBAuthorizationStatus = tIBAuthorizationStatus;
-this.operationTarget = operationTarget;
-this.operationDirection = operationDirection;
-this.operationKind = operationKind;
-this.operationStatus = operationStatus;
-this.operationType = operationType;
-this.rowCount = rowCount;
-this.isTextSearch = isTextSearch;
-this.isRevertSearch = isRevertSearch;
-this.dueDateFrom = dueDateFrom;
-this.dueDateTo = dueDateTo;
-this.executedFrom = executedFrom;
-this.executedTo = executedTo;
-this.realDueDateFrom = realDueDateFrom;
-this.realDueDateTo = realDueDateTo;
-this.lastModifiedDateFrom = lastModifiedDateFrom;
-this.lastModifiedDateTo = lastModifiedDateTo;
-this.isCreatedDateChecked = isCreatedDateChecked;
-this.isDueDateChecked = isDueDateChecked;
-this.isExecutedDateChecked = isExecutedDateChecked;
-this.isRealDueDateChecked = isRealDueDateChecked;
-this.isLastModifiedDateChecked = isLastModifiedDateChecked;
-
+        this.clientId = clientId;
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
+        this.merchantIds = merchantIds;
+        this.customerIds = customerIds;
+        this.transferIds = transferIds;
+        this.operationIds = operationIds;
+        this.transactionGroupIds = transactionGroupIds;
+        this.transactionIds = transactionIds;
+        this.transferType = transferType;
+        this.tIBAuthorizationStatus = tIBAuthorizationStatus;
+        this.operationTarget = operationTarget;
+        this.operationDirection = operationDirection;
+        this.operationKind = operationKind;
+        this.operationStatus = operationStatus;
+        this.operationType = operationType;
+        this.rowCount = rowCount;
+        this.isTextSearch = isTextSearch;
+        this.isRevertSearch = isRevertSearch;
+        this.dueDateFrom = dueDateFrom;
+        this.dueDateTo = dueDateTo;
+        this.executedFrom = executedFrom;
+        this.executedTo = executedTo;
+        this.realDueDateFrom = realDueDateFrom;
+        this.realDueDateTo = realDueDateTo;
+        this.lastModifiedDateFrom = lastModifiedDateFrom;
+        this.lastModifiedDateTo = lastModifiedDateTo;
+        this.isCreatedDateChecked = isCreatedDateChecked;
+        this.isDueDateChecked = isDueDateChecked;
+        this.isExecutedDateChecked = isExecutedDateChecked;
+        this.isRealDueDateChecked = isRealDueDateChecked;
+        this.isLastModifiedDateChecked = isLastModifiedDateChecked;
     }
     
     
     public SearchAdminArgs(String adminSessionToken, String searchText, String clientId, LocalDateTime dateFrom, LocalDateTime dateTo, List<String> merchantIds, List<String> customerIds, List<String> transferIds, List<String> operationIds, List<String> transactionGroupIds, List<String> transactionIds, Integer transferType, Integer tIBAuthorizationStatus, Integer operationTarget, Integer operationDirection, Integer operationKind, Integer operationStatus, Integer operationType, Integer rowCount, boolean isTextSearch, boolean isRevertSearch, LocalDateTime dueDateFrom, LocalDateTime dueDateTo, LocalDateTime executedFrom, LocalDateTime executedTo, LocalDateTime realDueDateFrom, LocalDateTime realDueDateTo, LocalDateTime lastModifiedDateFrom, LocalDateTime lastModifiedDateTo, boolean isCreatedDateChecked, boolean isDueDateChecked, boolean isExecutedDateChecked, boolean isRealDueDateChecked, boolean isLastModifiedDateChecked) {
         super(adminSessionToken);
         this.searchText = searchText;
-this.clientId = clientId;
-this.dateFrom = dateFrom;
-this.dateTo = dateTo;
-this.merchantIds = merchantIds;
-this.customerIds = customerIds;
-this.transferIds = transferIds;
-this.operationIds = operationIds;
-this.transactionGroupIds = transactionGroupIds;
-this.transactionIds = transactionIds;
-this.transferType = transferType;
-this.tIBAuthorizationStatus = tIBAuthorizationStatus;
-this.operationTarget = operationTarget;
-this.operationDirection = operationDirection;
-this.operationKind = operationKind;
-this.operationStatus = operationStatus;
-this.operationType = operationType;
-this.rowCount = rowCount;
-this.isTextSearch = isTextSearch;
-this.isRevertSearch = isRevertSearch;
-this.dueDateFrom = dueDateFrom;
-this.dueDateTo = dueDateTo;
-this.executedFrom = executedFrom;
-this.executedTo = executedTo;
-this.realDueDateFrom = realDueDateFrom;
-this.realDueDateTo = realDueDateTo;
-this.lastModifiedDateFrom = lastModifiedDateFrom;
-this.lastModifiedDateTo = lastModifiedDateTo;
-this.isCreatedDateChecked = isCreatedDateChecked;
-this.isDueDateChecked = isDueDateChecked;
-this.isExecutedDateChecked = isExecutedDateChecked;
-this.isRealDueDateChecked = isRealDueDateChecked;
-this.isLastModifiedDateChecked = isLastModifiedDateChecked;
-
+        this.clientId = clientId;
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
+        this.merchantIds = merchantIds;
+        this.customerIds = customerIds;
+        this.transferIds = transferIds;
+        this.operationIds = operationIds;
+        this.transactionGroupIds = transactionGroupIds;
+        this.transactionIds = transactionIds;
+        this.transferType = transferType;
+        this.tIBAuthorizationStatus = tIBAuthorizationStatus;
+        this.operationTarget = operationTarget;
+        this.operationDirection = operationDirection;
+        this.operationKind = operationKind;
+        this.operationStatus = operationStatus;
+        this.operationType = operationType;
+        this.rowCount = rowCount;
+        this.isTextSearch = isTextSearch;
+        this.isRevertSearch = isRevertSearch;
+        this.dueDateFrom = dueDateFrom;
+        this.dueDateTo = dueDateTo;
+        this.executedFrom = executedFrom;
+        this.executedTo = executedTo;
+        this.realDueDateFrom = realDueDateFrom;
+        this.realDueDateTo = realDueDateTo;
+        this.lastModifiedDateFrom = lastModifiedDateFrom;
+        this.lastModifiedDateTo = lastModifiedDateTo;
+        this.isCreatedDateChecked = isCreatedDateChecked;
+        this.isDueDateChecked = isDueDateChecked;
+        this.isExecutedDateChecked = isExecutedDateChecked;
+        this.isRealDueDateChecked = isRealDueDateChecked;
+        this.isLastModifiedDateChecked = isLastModifiedDateChecked;
     }
 
     
@@ -584,39 +582,39 @@ this.isLastModifiedDateChecked = isLastModifiedDateChecked;
     @Override
     public String toString() {
         return "SearchAdminArgs{" +
-                 "searchText='" + searchText + '\'' +
- ", clientId='" + clientId + '\'' +
- ", dateFrom='" + dateFrom + '\'' +
- ", dateTo='" + dateTo + '\'' +
- ", merchantIds='" + merchantIds + '\'' +
- ", customerIds='" + customerIds + '\'' +
- ", transferIds='" + transferIds + '\'' +
- ", operationIds='" + operationIds + '\'' +
- ", transactionGroupIds='" + transactionGroupIds + '\'' +
- ", transactionIds='" + transactionIds + '\'' +
- ", transferType='" + transferType + '\'' +
- ", tIBAuthorizationStatus='" + tIBAuthorizationStatus + '\'' +
- ", operationTarget='" + operationTarget + '\'' +
- ", operationDirection='" + operationDirection + '\'' +
- ", operationKind='" + operationKind + '\'' +
- ", operationStatus='" + operationStatus + '\'' +
- ", operationType='" + operationType + '\'' +
- ", rowCount='" + rowCount + '\'' +
- ", isTextSearch='" + isTextSearch + '\'' +
- ", isRevertSearch='" + isRevertSearch + '\'' +
- ", dueDateFrom='" + dueDateFrom + '\'' +
- ", dueDateTo='" + dueDateTo + '\'' +
- ", executedFrom='" + executedFrom + '\'' +
- ", executedTo='" + executedTo + '\'' +
- ", realDueDateFrom='" + realDueDateFrom + '\'' +
- ", realDueDateTo='" + realDueDateTo + '\'' +
- ", lastModifiedDateFrom='" + lastModifiedDateFrom + '\'' +
- ", lastModifiedDateTo='" + lastModifiedDateTo + '\'' +
- ", isCreatedDateChecked='" + isCreatedDateChecked + '\'' +
- ", isDueDateChecked='" + isDueDateChecked + '\'' +
- ", isExecutedDateChecked='" + isExecutedDateChecked + '\'' +
- ", isRealDueDateChecked='" + isRealDueDateChecked + '\'' +
- ", isLastModifiedDateChecked='" + isLastModifiedDateChecked + '\'' +
+                "searchText='" + searchText + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", dateFrom='" + dateFrom + '\'' +
+                ", dateTo='" + dateTo + '\'' +
+                ", merchantIds='" + merchantIds + '\'' +
+                ", customerIds='" + customerIds + '\'' +
+                ", transferIds='" + transferIds + '\'' +
+                ", operationIds='" + operationIds + '\'' +
+                ", transactionGroupIds='" + transactionGroupIds + '\'' +
+                ", transactionIds='" + transactionIds + '\'' +
+                ", transferType='" + transferType + '\'' +
+                ", tIBAuthorizationStatus='" + tIBAuthorizationStatus + '\'' +
+                ", operationTarget='" + operationTarget + '\'' +
+                ", operationDirection='" + operationDirection + '\'' +
+                ", operationKind='" + operationKind + '\'' +
+                ", operationStatus='" + operationStatus + '\'' +
+                ", operationType='" + operationType + '\'' +
+                ", rowCount='" + rowCount + '\'' +
+                ", isTextSearch='" + isTextSearch + '\'' +
+                ", isRevertSearch='" + isRevertSearch + '\'' +
+                ", dueDateFrom='" + dueDateFrom + '\'' +
+                ", dueDateTo='" + dueDateTo + '\'' +
+                ", executedFrom='" + executedFrom + '\'' +
+                ", executedTo='" + executedTo + '\'' +
+                ", realDueDateFrom='" + realDueDateFrom + '\'' +
+                ", realDueDateTo='" + realDueDateTo + '\'' +
+                ", lastModifiedDateFrom='" + lastModifiedDateFrom + '\'' +
+                ", lastModifiedDateTo='" + lastModifiedDateTo + '\'' +
+                ", isCreatedDateChecked='" + isCreatedDateChecked + '\'' +
+                ", isDueDateChecked='" + isDueDateChecked + '\'' +
+                ", isExecutedDateChecked='" + isExecutedDateChecked + '\'' +
+                ", isRealDueDateChecked='" + isRealDueDateChecked + '\'' +
+                ", isLastModifiedDateChecked='" + isLastModifiedDateChecked + '\'' +
 
                 '}';
     }

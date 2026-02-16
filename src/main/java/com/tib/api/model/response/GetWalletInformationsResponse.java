@@ -30,14 +30,12 @@ public class GetWalletInformationsResponse extends CustomAPIResponse {
     public GetWalletInformationsResponse(Error[] errors, boolean hasError, String messages, List<Wallet> wallets) {
         super(errors, hasError, messages);
         this.wallets = wallets;
-
     }
 
     public GetWalletInformationsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.wallets = (List<Wallet>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetWalletInformationsResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetWalletInformationsResponse{" +
-                 "wallets='" + wallets + '\'' +
+                "wallets='" + wallets + '\'' +
 
                 '}';
     }

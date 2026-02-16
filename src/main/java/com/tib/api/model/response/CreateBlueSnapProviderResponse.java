@@ -25,13 +25,11 @@ public class CreateBlueSnapProviderResponse extends CustomAPIResponse {
 
     public CreateBlueSnapProviderResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public CreateBlueSnapProviderResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

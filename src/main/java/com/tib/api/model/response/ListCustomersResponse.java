@@ -30,14 +30,12 @@ public class ListCustomersResponse extends CustomAPIResponse {
     public ListCustomersResponse(Error[] errors, boolean hasError, String messages, List<Customer> customers) {
         super(errors, hasError, messages);
         this.customers = customers;
-
     }
 
     public ListCustomersResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.customers = (List<Customer>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class ListCustomersResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ListCustomersResponse{" +
-                 "customers='" + customers + '\'' +
+                "customers='" + customers + '\'' +
 
                 '}';
     }

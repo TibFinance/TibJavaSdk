@@ -21,20 +21,20 @@ public class DasKeyValuePropertyBase   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FieldId")
     private DasFieldType fieldId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("InnerValue")
     private Object innerValue;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DasKeyValuePropertyType")
     private DasKeyValuePropertyType dasKeyValuePropertyType;
 
@@ -46,9 +46,8 @@ public class DasKeyValuePropertyBase   {
     
     public DasKeyValuePropertyBase(DasFieldType fieldId, Object innerValue, DasKeyValuePropertyType dasKeyValuePropertyType) {
         this.fieldId = fieldId;
-this.innerValue = innerValue;
-this.dasKeyValuePropertyType = dasKeyValuePropertyType;
-
+        this.innerValue = innerValue;
+        this.dasKeyValuePropertyType = dasKeyValuePropertyType;
     }
     
     
@@ -98,9 +97,9 @@ this.dasKeyValuePropertyType = dasKeyValuePropertyType;
     @Override
     public String toString() {
         return "DasKeyValuePropertyBase{" +
-                 "fieldId='" + fieldId + '\'' +
- ", innerValue='" + innerValue + '\'' +
- ", dasKeyValuePropertyType='" + dasKeyValuePropertyType + '\'' +
+                "fieldId='" + fieldId + '\'' +
+                ", innerValue='" + innerValue + '\'' +
+                ", dasKeyValuePropertyType='" + dasKeyValuePropertyType + '\'' +
 
                 '}';
     }

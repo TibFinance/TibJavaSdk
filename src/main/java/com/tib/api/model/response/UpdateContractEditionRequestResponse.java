@@ -30,15 +30,13 @@ public class UpdateContractEditionRequestResponse extends CustomAPIResponse {
     public UpdateContractEditionRequestResponse(Error[] errors, boolean hasError, String messages, ContractEditionRequest contractEditionRequest) {
         super(errors, hasError, messages);
         this.contractEditionRequest = contractEditionRequest;
-
     }
 
     public UpdateContractEditionRequestResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.contractEditionRequest = objectMapper.readValue(json, ContractEditionRequest.class);
-
+            this.contractEditionRequest = objectMapper.readValue(json, ContractEditionRequest.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.contractEditionRequest = objectMapper.readValue(json, ContractEditionReques
     @Override
     public String toString() {
         return "UpdateContractEditionRequestResponse{" +
-                 "contractEditionRequest='" + contractEditionRequest + '\'' +
+                "contractEditionRequest='" + contractEditionRequest + '\'' +
 
                 '}';
     }

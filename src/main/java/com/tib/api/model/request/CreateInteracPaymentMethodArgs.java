@@ -22,32 +22,32 @@ public class CreateInteracPaymentMethodArgs  extends BaseAuthenticatedCryptedArg
 
     
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * Determines if the customer's payment method is set as the default for automatic transactions.
- */
+     * Determines if the customer's payment method is set as the default for automatic transactions.
+     */
     @JsonProperty("IsCustomerAutomaticPaymentMethod")
     private boolean isCustomerAutomaticPaymentMethod;
 
     /**
- * This model encapsulates the details required to manage Interac payment methods for customers. It is used to facilitate electronic funds transfers via the Interac network, a widely used payment system in Canada.
- */
+     * This model encapsulates the details required to manage Interac payment methods for customers. It is used to facilitate electronic funds transfers via the Interac network, a widely used payment system in Canada.
+     */
     @JsonProperty("InteracInformation")
     private Interac interacInformation;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -59,22 +59,20 @@ public class CreateInteracPaymentMethodArgs  extends BaseAuthenticatedCryptedArg
     
     public CreateInteracPaymentMethodArgs(String customerId, boolean isCustomerAutomaticPaymentMethod, Interac interacInformation, Language language, String merchantId) {
         this.customerId = customerId;
-this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.interacInformation = interacInformation;
-this.language = language;
-this.merchantId = merchantId;
-
+        this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
+        this.interacInformation = interacInformation;
+        this.language = language;
+        this.merchantId = merchantId;
     }
     
     
     public CreateInteracPaymentMethodArgs(String sessionToken, String customerId, boolean isCustomerAutomaticPaymentMethod, Interac interacInformation, Language language, String merchantId) {
         super(sessionToken);
         this.customerId = customerId;
-this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.interacInformation = interacInformation;
-this.language = language;
-this.merchantId = merchantId;
-
+        this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
+        this.interacInformation = interacInformation;
+        this.language = language;
+        this.merchantId = merchantId;
     }
 
     
@@ -138,11 +136,11 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "CreateInteracPaymentMethodArgs{" +
-                 "customerId='" + customerId + '\'' +
- ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
- ", interacInformation='" + interacInformation + '\'' +
- ", language='" + language + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "customerId='" + customerId + '\'' +
+                ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
+                ", interacInformation='" + interacInformation + '\'' +
+                ", language='" + language + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

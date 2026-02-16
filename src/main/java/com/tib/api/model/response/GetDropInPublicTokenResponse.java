@@ -29,14 +29,12 @@ public class GetDropInPublicTokenResponse extends CustomAPIResponse {
     public GetDropInPublicTokenResponse(Error[] errors, boolean hasError, String messages, String publicTokenId) {
         super(errors, hasError, messages);
         this.publicTokenId = publicTokenId;
-
     }
 
     public GetDropInPublicTokenResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.publicTokenId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class GetDropInPublicTokenResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetDropInPublicTokenResponse{" +
-                 "publicTokenId='" + publicTokenId + '\'' +
+                "publicTokenId='" + publicTokenId + '\'' +
 
                 '}';
     }

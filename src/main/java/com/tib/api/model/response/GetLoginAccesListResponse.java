@@ -30,14 +30,12 @@ public class GetLoginAccesListResponse extends CustomAPIResponse {
     public GetLoginAccesListResponse(Error[] errors, boolean hasError, String messages, List<LoginRelationsEntity> loginRelations) {
         super(errors, hasError, messages);
         this.loginRelations = loginRelations;
-
     }
 
     public GetLoginAccesListResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.loginRelations = (List<LoginRelationsEntity>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetLoginAccesListResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetLoginAccesListResponse{" +
-                 "loginRelations='" + loginRelations + '\'' +
+                "loginRelations='" + loginRelations + '\'' +
 
                 '}';
     }

@@ -25,13 +25,11 @@ public class UpdateClientResponse extends CustomAPIResponse {
 
     public UpdateClientResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public UpdateClientResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

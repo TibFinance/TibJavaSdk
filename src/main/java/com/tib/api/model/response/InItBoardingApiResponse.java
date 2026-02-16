@@ -32,16 +32,14 @@ public class InItBoardingApiResponse extends CustomAPIResponse {
     public InItBoardingApiResponse(Error[] errors, boolean hasError, String messages, Integer noOfPendingBoarding, Integer noOfActiveBoarding) {
         super(errors, hasError, messages);
         this.noOfPendingBoarding = noOfPendingBoarding;
-this.noOfActiveBoarding = noOfActiveBoarding;
-
+        this.noOfActiveBoarding = noOfActiveBoarding;
     }
 
     public InItBoardingApiResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.noOfPendingBoarding = Integer.parseInt(apiResponse.getResponse().toString());
-this.noOfActiveBoarding = Integer.parseInt(apiResponse.getResponse().toString());
-
+            this.noOfActiveBoarding = Integer.parseInt(apiResponse.getResponse().toString());
         }
     }
 
@@ -82,8 +80,8 @@ this.noOfActiveBoarding = Integer.parseInt(apiResponse.getResponse().toString())
     @Override
     public String toString() {
         return "InItBoardingApiResponse{" +
-                 "noOfPendingBoarding='" + noOfPendingBoarding + '\'' +
- ", noOfActiveBoarding='" + noOfActiveBoarding + '\'' +
+                "noOfPendingBoarding='" + noOfPendingBoarding + '\'' +
+                ", noOfActiveBoarding='" + noOfActiveBoarding + '\'' +
 
                 '}';
     }

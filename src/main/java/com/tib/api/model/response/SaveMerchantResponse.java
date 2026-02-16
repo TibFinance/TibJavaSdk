@@ -25,13 +25,11 @@ public class SaveMerchantResponse extends CustomAPIResponse {
 
     public SaveMerchantResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SaveMerchantResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

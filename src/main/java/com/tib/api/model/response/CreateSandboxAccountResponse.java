@@ -25,13 +25,11 @@ public class CreateSandboxAccountResponse extends CustomAPIResponse {
 
     public CreateSandboxAccountResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public CreateSandboxAccountResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

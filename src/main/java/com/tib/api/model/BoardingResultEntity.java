@@ -20,14 +20,14 @@ public class BoardingResultEntity  extends BoardingBaseResult  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderRequestId")
     private String providerRequestId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Processing")
     private String processing;
 
@@ -39,16 +39,14 @@ public class BoardingResultEntity  extends BoardingBaseResult  {
     
     public BoardingResultEntity(String providerRequestId, String processing) {
         this.providerRequestId = providerRequestId;
-this.processing = processing;
-
+        this.processing = processing;
     }
     
     
     public BoardingResultEntity(boolean isSuccess, Integer httpStatusCode, String message, List<BoardingBaseError> errorList, String providerRequestId, String processing) {
         super(isSuccess, httpStatusCode, message, errorList);
         this.providerRequestId = providerRequestId;
-this.processing = processing;
-
+        this.processing = processing;
     }
 
     
@@ -88,8 +86,8 @@ this.processing = processing;
     @Override
     public String toString() {
         return "BoardingResultEntity{" +
-                 "providerRequestId='" + providerRequestId + '\'' +
- ", processing='" + processing + '\'' +
+                "providerRequestId='" + providerRequestId + '\'' +
+                ", processing='" + processing + '\'' +
 
                 '}';
     }

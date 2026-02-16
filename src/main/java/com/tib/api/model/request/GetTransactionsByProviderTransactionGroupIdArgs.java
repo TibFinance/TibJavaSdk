@@ -20,8 +20,8 @@ public class GetTransactionsByProviderTransactionGroupIdArgs  extends BaseAdminO
 
     
     /**
- * Gets or sets the provider transaction group identifier.
- */
+     * Gets or sets the provider transaction group identifier.
+     */
     @JsonProperty("ProviderTransactionGroupId")
     private String providerTransactionGroupId;
 
@@ -33,14 +33,12 @@ public class GetTransactionsByProviderTransactionGroupIdArgs  extends BaseAdminO
     
     public GetTransactionsByProviderTransactionGroupIdArgs(String providerTransactionGroupId) {
         this.providerTransactionGroupId = providerTransactionGroupId;
-
     }
     
     
     public GetTransactionsByProviderTransactionGroupIdArgs(String adminSessionToken, String providerTransactionGroupId) {
         super(adminSessionToken);
         this.providerTransactionGroupId = providerTransactionGroupId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetTransactionsByProviderTransactionGroupIdArgs  extends BaseAdminO
     @Override
     public String toString() {
         return "GetTransactionsByProviderTransactionGroupIdArgs{" +
-                 "providerTransactionGroupId='" + providerTransactionGroupId + '\'' +
+                "providerTransactionGroupId='" + providerTransactionGroupId + '\'' +
 
                 '}';
     }

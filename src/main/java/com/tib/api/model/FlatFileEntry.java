@@ -20,38 +20,38 @@ public class FlatFileEntry   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Position")
     private Integer position;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Length")
     private Integer length;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PadChar")
     private char padChar;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PadDirection")
     private PadDirection padDirection;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Value")
     private Object value;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ValueString")
     private String valueString;
 
@@ -63,12 +63,11 @@ public class FlatFileEntry   {
     
     public FlatFileEntry(Integer position, Integer length, char padChar, PadDirection padDirection, Object value, String valueString) {
         this.position = position;
-this.length = length;
-this.padChar = padChar;
-this.padDirection = padDirection;
-this.value = value;
-this.valueString = valueString;
-
+        this.length = length;
+        this.padChar = padChar;
+        this.padDirection = padDirection;
+        this.value = value;
+        this.valueString = valueString;
     }
     
     
@@ -142,12 +141,12 @@ this.valueString = valueString;
     @Override
     public String toString() {
         return "FlatFileEntry{" +
-                 "position='" + position + '\'' +
- ", length='" + length + '\'' +
- ", padChar='" + padChar + '\'' +
- ", padDirection='" + padDirection + '\'' +
- ", value='" + value + '\'' +
- ", valueString='" + valueString + '\'' +
+                "position='" + position + '\'' +
+                ", length='" + length + '\'' +
+                ", padChar='" + padChar + '\'' +
+                ", padDirection='" + padDirection + '\'' +
+                ", value='" + value + '\'' +
+                ", valueString='" + valueString + '\'' +
 
                 '}';
     }

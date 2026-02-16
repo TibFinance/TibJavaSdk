@@ -21,14 +21,14 @@ public class BaseCreateCreditCardPaymentMethodArgs  extends BaseAuthenticatePubl
 
     
     /**
- * Determines if the customer's payment method is set as the default for automatic transactions.
- */
+     * Determines if the customer's payment method is set as the default for automatic transactions.
+     */
     @JsonProperty("IsCustomerAutomaticPaymentMethod")
     private boolean isCustomerAutomaticPaymentMethod;
 
     /**
- * Manages all operations associated with credit card data.
- */
+     * Manages all operations associated with credit card data.
+     */
     @JsonProperty("CreditCard")
     private CreditCard creditCard;
 
@@ -40,16 +40,14 @@ public class BaseCreateCreditCardPaymentMethodArgs  extends BaseAuthenticatePubl
     
     public BaseCreateCreditCardPaymentMethodArgs(boolean isCustomerAutomaticPaymentMethod, CreditCard creditCard) {
         this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.creditCard = creditCard;
-
+        this.creditCard = creditCard;
     }
     
     
     public BaseCreateCreditCardPaymentMethodArgs(String publicTokenId, boolean isCustomerAutomaticPaymentMethod, CreditCard creditCard) {
         super(publicTokenId);
         this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.creditCard = creditCard;
-
+        this.creditCard = creditCard;
     }
 
     
@@ -89,8 +87,8 @@ this.creditCard = creditCard;
     @Override
     public String toString() {
         return "BaseCreateCreditCardPaymentMethodArgs{" +
-                 "isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
- ", creditCard='" + creditCard + '\'' +
+                "isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
+                ", creditCard='" + creditCard + '\'' +
 
                 '}';
     }

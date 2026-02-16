@@ -19,50 +19,50 @@ public class BoardingFile   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BoardingInfoFilesId")
     private String boardingInfoFilesId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderCaseId")
     private String providerCaseId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocUnderWriterNotes")
     private String docUnderWriterNotes;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocType")
     private String docType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocsReceived")
     private String docsReceived;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocLimit")
     private String docLimit;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocGenericDescription")
     private String docGenericDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DocStatus")
     private String docStatus;
 
@@ -74,14 +74,13 @@ public class BoardingFile   {
     
     public BoardingFile(String boardingInfoFilesId, String providerCaseId, String docUnderWriterNotes, String docType, String docsReceived, String docLimit, String docGenericDescription, String docStatus) {
         this.boardingInfoFilesId = boardingInfoFilesId;
-this.providerCaseId = providerCaseId;
-this.docUnderWriterNotes = docUnderWriterNotes;
-this.docType = docType;
-this.docsReceived = docsReceived;
-this.docLimit = docLimit;
-this.docGenericDescription = docGenericDescription;
-this.docStatus = docStatus;
-
+        this.providerCaseId = providerCaseId;
+        this.docUnderWriterNotes = docUnderWriterNotes;
+        this.docType = docType;
+        this.docsReceived = docsReceived;
+        this.docLimit = docLimit;
+        this.docGenericDescription = docGenericDescription;
+        this.docStatus = docStatus;
     }
     
     
@@ -171,14 +170,14 @@ this.docStatus = docStatus;
     @Override
     public String toString() {
         return "BoardingFile{" +
-                 "boardingInfoFilesId='" + boardingInfoFilesId + '\'' +
- ", providerCaseId='" + providerCaseId + '\'' +
- ", docUnderWriterNotes='" + docUnderWriterNotes + '\'' +
- ", docType='" + docType + '\'' +
- ", docsReceived='" + docsReceived + '\'' +
- ", docLimit='" + docLimit + '\'' +
- ", docGenericDescription='" + docGenericDescription + '\'' +
- ", docStatus='" + docStatus + '\'' +
+                "boardingInfoFilesId='" + boardingInfoFilesId + '\'' +
+                ", providerCaseId='" + providerCaseId + '\'' +
+                ", docUnderWriterNotes='" + docUnderWriterNotes + '\'' +
+                ", docType='" + docType + '\'' +
+                ", docsReceived='" + docsReceived + '\'' +
+                ", docLimit='" + docLimit + '\'' +
+                ", docGenericDescription='" + docGenericDescription + '\'' +
+                ", docStatus='" + docStatus + '\'' +
 
                 '}';
     }

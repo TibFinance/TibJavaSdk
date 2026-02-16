@@ -19,14 +19,14 @@ public class ChangePasswordRequest2Args  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
- */
+     * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
+     */
     @JsonProperty("Username")
     private String username;
 
@@ -38,8 +38,7 @@ public class ChangePasswordRequest2Args  implements IBaseCryptedServiceArgs  {
     
     public ChangePasswordRequest2Args(String clientId, String username) {
         this.clientId = clientId;
-this.username = username;
-
+        this.username = username;
     }
     
     
@@ -81,8 +80,8 @@ this.username = username;
     @Override
     public String toString() {
         return "ChangePasswordRequest2Args{" +
-                 "clientId='" + clientId + '\'' +
- ", username='" + username + '\'' +
+                "clientId='" + clientId + '\'' +
+                ", username='" + username + '\'' +
 
                 '}';
     }

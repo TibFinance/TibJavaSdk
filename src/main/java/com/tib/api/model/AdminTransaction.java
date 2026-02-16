@@ -25,272 +25,272 @@ public class AdminTransaction   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionId")
     private String transactionId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionGroupId")
     private String transactionGroupId;
 
     /**
- * Specifies the operation category used throughout the API.
- */
+     * Specifies the operation category used throughout the API.
+     */
     @JsonProperty("OperationType")
     private OperationType operationType;
 
     /**
- * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
- */
+     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
- * Retrieves the numeric status code of an operation.
- */
+     * Retrieves the numeric status code of an operation.
+     */
     @JsonProperty("OperationStatus")
     private OperationStatus operationStatus;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DescriptionCode")
     private Integer descriptionCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderTransactionId")
     private String providerTransactionId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderTransactionGroupId")
     private String providerTransactionGroupId;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("NextStepTransaction")
     private String nextStepTransaction;
 
     /**
- * Represents the name associated with the merchant's account.
- */
+     * Represents the name associated with the merchant's account.
+     */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
- * Gets or sets the preview text for a merchant account.
- */
+     * Gets or sets the preview text for a merchant account.
+     */
     @JsonProperty("AccoutPreview")
     private String accoutPreview;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountInformationId")
     private String accountInformationId;
 
     /**
- * Specifies the payment method type associated with the account.
- */
+     * Specifies the payment method type associated with the account.
+     */
     @JsonProperty("AccountType")
     private AccountType accountType;
 
     /**
- * Gets or sets the description associated with a transaction.
- */
+     * Gets or sets the description associated with a transaction.
+     */
     @JsonProperty("TransactionDescription")
     private String transactionDescription;
 
     /**
- * Retrieves or assigns the due date for a transaction.
- */
+     * Retrieves or assigns the due date for a transaction.
+     */
     @JsonProperty("TransactionDueDate")
     private LocalDateTime transactionDueDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AcpTransactionType")
     private AcpOperationType acpTransactionType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ReceivedDescription")
     private String receivedDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RealDueDate")
     private LocalDateTime realDueDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DueDateUpdatedDate")
     private LocalDateTime dueDateUpdatedDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProcessExecuted")
     private boolean processExecuted;
 
     /**
- * Gets or sets the timestamp indicating when the entity was last modified.
- */
+     * Gets or sets the timestamp indicating when the entity was last modified.
+     */
     @JsonProperty("LastModifiedDate")
     private LocalDateTime lastModifiedDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ExportBeenExecuted")
     private boolean exportBeenExecuted;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsRevert")
     private boolean isRevert;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsArchived")
     private boolean isArchived;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FavoriteProviderId")
     private String favoriteProviderId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ExecutedByProviderId")
     private String executedByProviderId;
 
     /**
- * Specifies the category of a financial operation.
- */
+     * Specifies the category of a financial operation.
+     */
     @JsonProperty("OperationKind")
     private OperationKind operationKind;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderTransactionAdditionalInfos")
     private String providerTransactionAdditionalInfos;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationId")
     private String operationId;
 
     /**
- * Identifies the specific transfer operation that needs to be reverted.
- */
+     * Identifies the specific transfer operation that needs to be reverted.
+     */
     @JsonProperty("TransferId")
     private String transferId;
 
     /**
- * Retrieves the identifier of the merchant (bank account) to which the operation applies.
- */
+     * Retrieves the identifier of the merchant (bank account) to which the operation applies.
+     */
     @JsonProperty("RelatedMerchantId")
     private String relatedMerchantId;
 
     /**
- * Identifies the customer linked to this payment, when a customer relationship exists.
- */
+     * Identifies the customer linked to this payment, when a customer relationship exists.
+     */
     @JsonProperty("RelatedCustomerId")
     private String relatedCustomerId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsChecked")
     private boolean isChecked;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantIds")
     private List<String> merchantIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CustomerIds")
     private List<String> customerIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransferIds")
     private List<String> transferIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationIds")
     private List<String> operationIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationTypeValue")
     private String operationTypeValue;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationDirectionValue")
     private String operationDirectionValue;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationStatusValue")
     private String operationStatusValue;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationKindValue")
     private String operationKindValue;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountTypeValue")
     private String accountTypeValue;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AcpTransactionTypeValue")
     private String acpTransactionTypeValue;
 
@@ -302,51 +302,50 @@ public class AdminTransaction   {
     
     public AdminTransaction(String transactionId, String transactionGroupId, OperationType operationType, TransferDirection operationDirection, OperationStatus operationStatus, String description, Integer descriptionCode, String providerTransactionId, String providerTransactionGroupId, LocalDateTime createdDate, String nextStepTransaction, String accountName, String accoutPreview, String accountInformationId, AccountType accountType, String transactionDescription, LocalDateTime transactionDueDate, AcpOperationType acpTransactionType, String receivedDescription, LocalDateTime realDueDate, LocalDateTime dueDateUpdatedDate, boolean processExecuted, LocalDateTime lastModifiedDate, boolean exportBeenExecuted, boolean isRevert, boolean isArchived, String favoriteProviderId, String executedByProviderId, OperationKind operationKind, String providerTransactionAdditionalInfos, String operationId, String transferId, String relatedMerchantId, String relatedCustomerId, boolean isChecked, List<String> merchantIds, List<String> customerIds, List<String> transferIds, List<String> operationIds, String operationTypeValue, String operationDirectionValue, String operationStatusValue, String operationKindValue, String accountTypeValue, String acpTransactionTypeValue) {
         this.transactionId = transactionId;
-this.transactionGroupId = transactionGroupId;
-this.operationType = operationType;
-this.operationDirection = operationDirection;
-this.operationStatus = operationStatus;
-this.description = description;
-this.descriptionCode = descriptionCode;
-this.providerTransactionId = providerTransactionId;
-this.providerTransactionGroupId = providerTransactionGroupId;
-this.createdDate = createdDate;
-this.nextStepTransaction = nextStepTransaction;
-this.accountName = accountName;
-this.accoutPreview = accoutPreview;
-this.accountInformationId = accountInformationId;
-this.accountType = accountType;
-this.transactionDescription = transactionDescription;
-this.transactionDueDate = transactionDueDate;
-this.acpTransactionType = acpTransactionType;
-this.receivedDescription = receivedDescription;
-this.realDueDate = realDueDate;
-this.dueDateUpdatedDate = dueDateUpdatedDate;
-this.processExecuted = processExecuted;
-this.lastModifiedDate = lastModifiedDate;
-this.exportBeenExecuted = exportBeenExecuted;
-this.isRevert = isRevert;
-this.isArchived = isArchived;
-this.favoriteProviderId = favoriteProviderId;
-this.executedByProviderId = executedByProviderId;
-this.operationKind = operationKind;
-this.providerTransactionAdditionalInfos = providerTransactionAdditionalInfos;
-this.operationId = operationId;
-this.transferId = transferId;
-this.relatedMerchantId = relatedMerchantId;
-this.relatedCustomerId = relatedCustomerId;
-this.isChecked = isChecked;
-this.merchantIds = merchantIds;
-this.customerIds = customerIds;
-this.transferIds = transferIds;
-this.operationIds = operationIds;
-this.operationTypeValue = operationTypeValue;
-this.operationDirectionValue = operationDirectionValue;
-this.operationStatusValue = operationStatusValue;
-this.operationKindValue = operationKindValue;
-this.accountTypeValue = accountTypeValue;
-this.acpTransactionTypeValue = acpTransactionTypeValue;
-
+        this.transactionGroupId = transactionGroupId;
+        this.operationType = operationType;
+        this.operationDirection = operationDirection;
+        this.operationStatus = operationStatus;
+        this.description = description;
+        this.descriptionCode = descriptionCode;
+        this.providerTransactionId = providerTransactionId;
+        this.providerTransactionGroupId = providerTransactionGroupId;
+        this.createdDate = createdDate;
+        this.nextStepTransaction = nextStepTransaction;
+        this.accountName = accountName;
+        this.accoutPreview = accoutPreview;
+        this.accountInformationId = accountInformationId;
+        this.accountType = accountType;
+        this.transactionDescription = transactionDescription;
+        this.transactionDueDate = transactionDueDate;
+        this.acpTransactionType = acpTransactionType;
+        this.receivedDescription = receivedDescription;
+        this.realDueDate = realDueDate;
+        this.dueDateUpdatedDate = dueDateUpdatedDate;
+        this.processExecuted = processExecuted;
+        this.lastModifiedDate = lastModifiedDate;
+        this.exportBeenExecuted = exportBeenExecuted;
+        this.isRevert = isRevert;
+        this.isArchived = isArchived;
+        this.favoriteProviderId = favoriteProviderId;
+        this.executedByProviderId = executedByProviderId;
+        this.operationKind = operationKind;
+        this.providerTransactionAdditionalInfos = providerTransactionAdditionalInfos;
+        this.operationId = operationId;
+        this.transferId = transferId;
+        this.relatedMerchantId = relatedMerchantId;
+        this.relatedCustomerId = relatedCustomerId;
+        this.isChecked = isChecked;
+        this.merchantIds = merchantIds;
+        this.customerIds = customerIds;
+        this.transferIds = transferIds;
+        this.operationIds = operationIds;
+        this.operationTypeValue = operationTypeValue;
+        this.operationDirectionValue = operationDirectionValue;
+        this.operationStatusValue = operationStatusValue;
+        this.operationKindValue = operationKindValue;
+        this.accountTypeValue = accountTypeValue;
+        this.acpTransactionTypeValue = acpTransactionTypeValue;
     }
     
     
@@ -732,51 +731,51 @@ this.acpTransactionTypeValue = acpTransactionTypeValue;
     @Override
     public String toString() {
         return "AdminTransaction{" +
-                 "transactionId='" + transactionId + '\'' +
- ", transactionGroupId='" + transactionGroupId + '\'' +
- ", operationType='" + operationType + '\'' +
- ", operationDirection='" + operationDirection + '\'' +
- ", operationStatus='" + operationStatus + '\'' +
- ", description='" + description + '\'' +
- ", descriptionCode='" + descriptionCode + '\'' +
- ", providerTransactionId='" + providerTransactionId + '\'' +
- ", providerTransactionGroupId='" + providerTransactionGroupId + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", nextStepTransaction='" + nextStepTransaction + '\'' +
- ", accountName='" + accountName + '\'' +
- ", accoutPreview='" + accoutPreview + '\'' +
- ", accountInformationId='" + accountInformationId + '\'' +
- ", accountType='" + accountType + '\'' +
- ", transactionDescription='" + transactionDescription + '\'' +
- ", transactionDueDate='" + transactionDueDate + '\'' +
- ", acpTransactionType='" + acpTransactionType + '\'' +
- ", receivedDescription='" + receivedDescription + '\'' +
- ", realDueDate='" + realDueDate + '\'' +
- ", dueDateUpdatedDate='" + dueDateUpdatedDate + '\'' +
- ", processExecuted='" + processExecuted + '\'' +
- ", lastModifiedDate='" + lastModifiedDate + '\'' +
- ", exportBeenExecuted='" + exportBeenExecuted + '\'' +
- ", isRevert='" + isRevert + '\'' +
- ", isArchived='" + isArchived + '\'' +
- ", favoriteProviderId='" + favoriteProviderId + '\'' +
- ", executedByProviderId='" + executedByProviderId + '\'' +
- ", operationKind='" + operationKind + '\'' +
- ", providerTransactionAdditionalInfos='" + providerTransactionAdditionalInfos + '\'' +
- ", operationId='" + operationId + '\'' +
- ", transferId='" + transferId + '\'' +
- ", relatedMerchantId='" + relatedMerchantId + '\'' +
- ", relatedCustomerId='" + relatedCustomerId + '\'' +
- ", isChecked='" + isChecked + '\'' +
- ", merchantIds='" + merchantIds + '\'' +
- ", customerIds='" + customerIds + '\'' +
- ", transferIds='" + transferIds + '\'' +
- ", operationIds='" + operationIds + '\'' +
- ", operationTypeValue='" + operationTypeValue + '\'' +
- ", operationDirectionValue='" + operationDirectionValue + '\'' +
- ", operationStatusValue='" + operationStatusValue + '\'' +
- ", operationKindValue='" + operationKindValue + '\'' +
- ", accountTypeValue='" + accountTypeValue + '\'' +
- ", acpTransactionTypeValue='" + acpTransactionTypeValue + '\'' +
+                "transactionId='" + transactionId + '\'' +
+                ", transactionGroupId='" + transactionGroupId + '\'' +
+                ", operationType='" + operationType + '\'' +
+                ", operationDirection='" + operationDirection + '\'' +
+                ", operationStatus='" + operationStatus + '\'' +
+                ", description='" + description + '\'' +
+                ", descriptionCode='" + descriptionCode + '\'' +
+                ", providerTransactionId='" + providerTransactionId + '\'' +
+                ", providerTransactionGroupId='" + providerTransactionGroupId + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", nextStepTransaction='" + nextStepTransaction + '\'' +
+                ", accountName='" + accountName + '\'' +
+                ", accoutPreview='" + accoutPreview + '\'' +
+                ", accountInformationId='" + accountInformationId + '\'' +
+                ", accountType='" + accountType + '\'' +
+                ", transactionDescription='" + transactionDescription + '\'' +
+                ", transactionDueDate='" + transactionDueDate + '\'' +
+                ", acpTransactionType='" + acpTransactionType + '\'' +
+                ", receivedDescription='" + receivedDescription + '\'' +
+                ", realDueDate='" + realDueDate + '\'' +
+                ", dueDateUpdatedDate='" + dueDateUpdatedDate + '\'' +
+                ", processExecuted='" + processExecuted + '\'' +
+                ", lastModifiedDate='" + lastModifiedDate + '\'' +
+                ", exportBeenExecuted='" + exportBeenExecuted + '\'' +
+                ", isRevert='" + isRevert + '\'' +
+                ", isArchived='" + isArchived + '\'' +
+                ", favoriteProviderId='" + favoriteProviderId + '\'' +
+                ", executedByProviderId='" + executedByProviderId + '\'' +
+                ", operationKind='" + operationKind + '\'' +
+                ", providerTransactionAdditionalInfos='" + providerTransactionAdditionalInfos + '\'' +
+                ", operationId='" + operationId + '\'' +
+                ", transferId='" + transferId + '\'' +
+                ", relatedMerchantId='" + relatedMerchantId + '\'' +
+                ", relatedCustomerId='" + relatedCustomerId + '\'' +
+                ", isChecked='" + isChecked + '\'' +
+                ", merchantIds='" + merchantIds + '\'' +
+                ", customerIds='" + customerIds + '\'' +
+                ", transferIds='" + transferIds + '\'' +
+                ", operationIds='" + operationIds + '\'' +
+                ", operationTypeValue='" + operationTypeValue + '\'' +
+                ", operationDirectionValue='" + operationDirectionValue + '\'' +
+                ", operationStatusValue='" + operationStatusValue + '\'' +
+                ", operationKindValue='" + operationKindValue + '\'' +
+                ", accountTypeValue='" + accountTypeValue + '\'' +
+                ", acpTransactionTypeValue='" + acpTransactionTypeValue + '\'' +
 
                 '}';
     }

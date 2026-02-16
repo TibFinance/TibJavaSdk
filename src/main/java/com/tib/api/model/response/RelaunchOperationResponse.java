@@ -25,13 +25,11 @@ public class RelaunchOperationResponse extends CustomAPIResponse {
 
     public RelaunchOperationResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public RelaunchOperationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

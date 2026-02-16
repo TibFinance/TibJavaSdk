@@ -20,8 +20,8 @@ public class DeletePaymentMethodArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Acts as a unique identifier for a distinct payment method.
- */
+     * Acts as a unique identifier for a distinct payment method.
+     */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
@@ -33,14 +33,12 @@ public class DeletePaymentMethodArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public DeletePaymentMethodArgs(String paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
-
     }
     
     
     public DeletePaymentMethodArgs(String sessionToken, String paymentMethodId) {
         super(sessionToken);
         this.paymentMethodId = paymentMethodId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class DeletePaymentMethodArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "DeletePaymentMethodArgs{" +
-                 "paymentMethodId='" + paymentMethodId + '\'' +
+                "paymentMethodId='" + paymentMethodId + '\'' +
 
                 '}';
     }

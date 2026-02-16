@@ -30,14 +30,12 @@ public class ListClientsWithRequestCountResponse extends CustomAPIResponse {
     public ListClientsWithRequestCountResponse(Error[] errors, boolean hasError, String messages, List<ClientWithRequestCount> clients) {
         super(errors, hasError, messages);
         this.clients = clients;
-
     }
 
     public ListClientsWithRequestCountResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.clients = (List<ClientWithRequestCount>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class ListClientsWithRequestCountResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ListClientsWithRequestCountResponse{" +
-                 "clients='" + clients + '\'' +
+                "clients='" + clients + '\'' +
 
                 '}';
     }

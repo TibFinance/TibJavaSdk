@@ -21,14 +21,14 @@ public class CheckNsfArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Contains the necessary details for replacing a merchant's account information within the system.
- */
+     * Contains the necessary details for replacing a merchant's account information within the system.
+     */
     @JsonProperty("Account")
     private Account account;
 
@@ -40,16 +40,14 @@ public class CheckNsfArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CheckNsfArgs(String serviceId, Account account) {
         this.serviceId = serviceId;
-this.account = account;
-
+        this.account = account;
     }
     
     
     public CheckNsfArgs(String sessionToken, String serviceId, Account account) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.account = account;
-
+        this.account = account;
     }
 
     
@@ -89,8 +87,8 @@ this.account = account;
     @Override
     public String toString() {
         return "CheckNsfArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", account='" + account + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", account='" + account + '\'' +
 
                 '}';
     }

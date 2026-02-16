@@ -21,8 +21,8 @@ public class SaveClientArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Identifies the TIB client (account) using its unique GUID.
- */
+     * Identifies the TIB client (account) using its unique GUID.
+     */
     @JsonProperty("Client")
     private ClientEntity client;
 
@@ -34,14 +34,12 @@ public class SaveClientArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public SaveClientArgs(ClientEntity client) {
         this.client = client;
-
     }
     
     
     public SaveClientArgs(String adminSessionToken, ClientEntity client) {
         super(adminSessionToken);
         this.client = client;
-
     }
 
     
@@ -73,7 +71,7 @@ public class SaveClientArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "SaveClientArgs{" +
-                 "client='" + client + '\'' +
+                "client='" + client + '\'' +
 
                 '}';
     }

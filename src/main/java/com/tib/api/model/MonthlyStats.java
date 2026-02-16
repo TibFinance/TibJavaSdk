@@ -19,26 +19,26 @@ public class MonthlyStats   {
 
     
     /**
- * Gets or sets the transaction category.
- */
+     * Gets or sets the transaction category.
+     */
     @JsonProperty("TransactionCategory")
     private String transactionCategory;
 
     /**
- * Gets or sets the year month.
- */
+     * Gets or sets the year month.
+     */
     @JsonProperty("YearMonth")
     private String yearMonth;
 
     /**
- * Gets or sets the number of transactions.
- */
+     * Gets or sets the number of transactions.
+     */
     @JsonProperty("NumberOfTransactions")
     private Integer numberOfTransactions;
 
     /**
- * Gets or sets the amount of transactions.
- */
+     * Gets or sets the amount of transactions.
+     */
     @JsonProperty("AmountOfTransactions")
     private Double amountOfTransactions;
 
@@ -50,10 +50,9 @@ public class MonthlyStats   {
     
     public MonthlyStats(String transactionCategory, String yearMonth, Integer numberOfTransactions, Double amountOfTransactions) {
         this.transactionCategory = transactionCategory;
-this.yearMonth = yearMonth;
-this.numberOfTransactions = numberOfTransactions;
-this.amountOfTransactions = amountOfTransactions;
-
+        this.yearMonth = yearMonth;
+        this.numberOfTransactions = numberOfTransactions;
+        this.amountOfTransactions = amountOfTransactions;
     }
     
     
@@ -111,10 +110,10 @@ this.amountOfTransactions = amountOfTransactions;
     @Override
     public String toString() {
         return "MonthlyStats{" +
-                 "transactionCategory='" + transactionCategory + '\'' +
- ", yearMonth='" + yearMonth + '\'' +
- ", numberOfTransactions='" + numberOfTransactions + '\'' +
- ", amountOfTransactions='" + amountOfTransactions + '\'' +
+                "transactionCategory='" + transactionCategory + '\'' +
+                ", yearMonth='" + yearMonth + '\'' +
+                ", numberOfTransactions='" + numberOfTransactions + '\'' +
+                ", amountOfTransactions='" + amountOfTransactions + '\'' +
 
                 '}';
     }

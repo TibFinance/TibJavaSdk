@@ -29,14 +29,12 @@ public class AuthenticateUserFromPublicResponse extends CustomAPIResponse {
     public AuthenticateUserFromPublicResponse(Error[] errors, boolean hasError, String messages, String key) {
         super(errors, hasError, messages);
         this.key = key;
-
     }
 
     public AuthenticateUserFromPublicResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.key = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class AuthenticateUserFromPublicResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "AuthenticateUserFromPublicResponse{" +
-                 "key='" + key + '\'' +
+                "key='" + key + '\'' +
 
                 '}';
     }

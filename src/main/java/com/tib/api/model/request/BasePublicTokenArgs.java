@@ -19,8 +19,8 @@ public class BasePublicTokenArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Gets or sets the identifier of the public token required to initiate a drop‑in session.
- */
+     * Gets or sets the identifier of the public token required to initiate a drop‑in session.
+     */
     @JsonProperty("PublicTokenId")
     private String publicTokenId;
 
@@ -32,7 +32,6 @@ public class BasePublicTokenArgs  implements IBaseCryptedServiceArgs  {
     
     public BasePublicTokenArgs(String publicTokenId) {
         this.publicTokenId = publicTokenId;
-
     }
     
     
@@ -66,7 +65,7 @@ public class BasePublicTokenArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "BasePublicTokenArgs{" +
-                 "publicTokenId='" + publicTokenId + '\'' +
+                "publicTokenId='" + publicTokenId + '\'' +
 
                 '}';
     }

@@ -22,20 +22,20 @@ public class CreateSubClientArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Retrieves or assigns the name of the sub-client.
- */
+     * Retrieves or assigns the name of the sub-client.
+     */
     @JsonProperty("Name")
     private String name;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
@@ -47,18 +47,16 @@ public class CreateSubClientArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CreateSubClientArgs(String name, Language language, Currency currency) {
         this.name = name;
-this.language = language;
-this.currency = currency;
-
+        this.language = language;
+        this.currency = currency;
     }
     
     
     public CreateSubClientArgs(String sessionToken, String name, Language language, Currency currency) {
         super(sessionToken);
         this.name = name;
-this.language = language;
-this.currency = currency;
-
+        this.language = language;
+        this.currency = currency;
     }
 
     
@@ -106,9 +104,9 @@ this.currency = currency;
     @Override
     public String toString() {
         return "CreateSubClientArgs{" +
-                 "name='" + name + '\'' +
- ", language='" + language + '\'' +
- ", currency='" + currency + '\'' +
+                "name='" + name + '\'' +
+                ", language='" + language + '\'' +
+                ", currency='" + currency + '\'' +
 
                 '}';
     }

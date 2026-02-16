@@ -29,14 +29,12 @@ public class CreateDirectInteracTransactionResponse extends CustomAPIResponse {
     public CreateDirectInteracTransactionResponse(Error[] errors, boolean hasError, String messages, String transferId) {
         super(errors, hasError, messages);
         this.transferId = transferId;
-
     }
 
     public CreateDirectInteracTransactionResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transferId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class CreateDirectInteracTransactionResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateDirectInteracTransactionResponse{" +
-                 "transferId='" + transferId + '\'' +
+                "transferId='" + transferId + '\'' +
 
                 '}';
     }

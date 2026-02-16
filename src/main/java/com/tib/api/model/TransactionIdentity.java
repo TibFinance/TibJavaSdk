@@ -22,56 +22,56 @@ public class TransactionIdentity  extends ProviderTransactionIdentity  {
 
     
     /**
- * Gets or sets the transaction identifier.
- */
+     * Gets or sets the transaction identifier.
+     */
     @JsonProperty("TransactionId")
     private String transactionId;
 
     /**
- * Retrieves the identifier of the merchant (bank account) to which the operation applies.
- */
+     * Retrieves the identifier of the merchant (bank account) to which the operation applies.
+     */
     @JsonProperty("RelatedMerchantId")
     private String relatedMerchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("LastExecutionDescription")
     private String lastExecutionDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionAmount")
     private Double transactionAmount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OriginalTransactionDueDatePassedWeekend")
     private LocalDateTime originalTransactionDueDatePassedWeekend;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OriginalTransactionCreatedDatePassedWeekend")
     private LocalDateTime originalTransactionCreatedDatePassedWeekend;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Identifies the specific transfer operation that needs to be reverted.
- */
+     * Identifies the specific transfer operation that needs to be reverted.
+     */
     @JsonProperty("TransferId")
     private String transferId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PayoutId")
     private String payoutId;
 
@@ -83,30 +83,28 @@ public class TransactionIdentity  extends ProviderTransactionIdentity  {
     
     public TransactionIdentity(String transactionId, String relatedMerchantId, String lastExecutionDescription, Double transactionAmount, LocalDateTime originalTransactionDueDatePassedWeekend, LocalDateTime originalTransactionCreatedDatePassedWeekend, Currency currency, String transferId, String payoutId) {
         this.transactionId = transactionId;
-this.relatedMerchantId = relatedMerchantId;
-this.lastExecutionDescription = lastExecutionDescription;
-this.transactionAmount = transactionAmount;
-this.originalTransactionDueDatePassedWeekend = originalTransactionDueDatePassedWeekend;
-this.originalTransactionCreatedDatePassedWeekend = originalTransactionCreatedDatePassedWeekend;
-this.currency = currency;
-this.transferId = transferId;
-this.payoutId = payoutId;
-
+        this.relatedMerchantId = relatedMerchantId;
+        this.lastExecutionDescription = lastExecutionDescription;
+        this.transactionAmount = transactionAmount;
+        this.originalTransactionDueDatePassedWeekend = originalTransactionDueDatePassedWeekend;
+        this.originalTransactionCreatedDatePassedWeekend = originalTransactionCreatedDatePassedWeekend;
+        this.currency = currency;
+        this.transferId = transferId;
+        this.payoutId = payoutId;
     }
     
     
     public TransactionIdentity(Provider providerType, String providerId, TransferDirection transferDirection, String providerTransactionId, String providerTransactionGroupId, String transactionId, String relatedMerchantId, String lastExecutionDescription, Double transactionAmount, LocalDateTime originalTransactionDueDatePassedWeekend, LocalDateTime originalTransactionCreatedDatePassedWeekend, Currency currency, String transferId, String payoutId) {
         super(providerType, providerId, transferDirection, providerTransactionId, providerTransactionGroupId);
         this.transactionId = transactionId;
-this.relatedMerchantId = relatedMerchantId;
-this.lastExecutionDescription = lastExecutionDescription;
-this.transactionAmount = transactionAmount;
-this.originalTransactionDueDatePassedWeekend = originalTransactionDueDatePassedWeekend;
-this.originalTransactionCreatedDatePassedWeekend = originalTransactionCreatedDatePassedWeekend;
-this.currency = currency;
-this.transferId = transferId;
-this.payoutId = payoutId;
-
+        this.relatedMerchantId = relatedMerchantId;
+        this.lastExecutionDescription = lastExecutionDescription;
+        this.transactionAmount = transactionAmount;
+        this.originalTransactionDueDatePassedWeekend = originalTransactionDueDatePassedWeekend;
+        this.originalTransactionCreatedDatePassedWeekend = originalTransactionCreatedDatePassedWeekend;
+        this.currency = currency;
+        this.transferId = transferId;
+        this.payoutId = payoutId;
     }
 
     
@@ -202,15 +200,15 @@ this.payoutId = payoutId;
     @Override
     public String toString() {
         return "TransactionIdentity{" +
-                 "transactionId='" + transactionId + '\'' +
- ", relatedMerchantId='" + relatedMerchantId + '\'' +
- ", lastExecutionDescription='" + lastExecutionDescription + '\'' +
- ", transactionAmount='" + transactionAmount + '\'' +
- ", originalTransactionDueDatePassedWeekend='" + originalTransactionDueDatePassedWeekend + '\'' +
- ", originalTransactionCreatedDatePassedWeekend='" + originalTransactionCreatedDatePassedWeekend + '\'' +
- ", currency='" + currency + '\'' +
- ", transferId='" + transferId + '\'' +
- ", payoutId='" + payoutId + '\'' +
+                "transactionId='" + transactionId + '\'' +
+                ", relatedMerchantId='" + relatedMerchantId + '\'' +
+                ", lastExecutionDescription='" + lastExecutionDescription + '\'' +
+                ", transactionAmount='" + transactionAmount + '\'' +
+                ", originalTransactionDueDatePassedWeekend='" + originalTransactionDueDatePassedWeekend + '\'' +
+                ", originalTransactionCreatedDatePassedWeekend='" + originalTransactionCreatedDatePassedWeekend + '\'' +
+                ", currency='" + currency + '\'' +
+                ", transferId='" + transferId + '\'' +
+                ", payoutId='" + payoutId + '\'' +
 
                 '}';
     }

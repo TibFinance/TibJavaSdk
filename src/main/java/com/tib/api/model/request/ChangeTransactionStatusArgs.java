@@ -20,14 +20,14 @@ public class ChangeTransactionStatusArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionId")
     private String transactionId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionStatus")
     private Integer transactionStatus;
 
@@ -39,16 +39,14 @@ public class ChangeTransactionStatusArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public ChangeTransactionStatusArgs(String transactionId, Integer transactionStatus) {
         this.transactionId = transactionId;
-this.transactionStatus = transactionStatus;
-
+        this.transactionStatus = transactionStatus;
     }
     
     
     public ChangeTransactionStatusArgs(String adminSessionToken, String transactionId, Integer transactionStatus) {
         super(adminSessionToken);
         this.transactionId = transactionId;
-this.transactionStatus = transactionStatus;
-
+        this.transactionStatus = transactionStatus;
     }
 
     
@@ -88,8 +86,8 @@ this.transactionStatus = transactionStatus;
     @Override
     public String toString() {
         return "ChangeTransactionStatusArgs{" +
-                 "transactionId='" + transactionId + '\'' +
- ", transactionStatus='" + transactionStatus + '\'' +
+                "transactionId='" + transactionId + '\'' +
+                ", transactionStatus='" + transactionStatus + '\'' +
 
                 '}';
     }

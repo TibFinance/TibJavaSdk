@@ -20,8 +20,8 @@ public class GetClientRelatedMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
@@ -33,14 +33,12 @@ public class GetClientRelatedMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public GetClientRelatedMerchantArgs(String clientId) {
         this.clientId = clientId;
-
     }
     
     
     public GetClientRelatedMerchantArgs(String adminSessionToken, String clientId) {
         super(adminSessionToken);
         this.clientId = clientId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetClientRelatedMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "GetClientRelatedMerchantArgs{" +
-                 "clientId='" + clientId + '\'' +
+                "clientId='" + clientId + '\'' +
 
                 '}';
     }

@@ -25,13 +25,11 @@ public class SaveBoardingInfoResponse extends CustomAPIResponse {
 
     public SaveBoardingInfoResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public SaveBoardingInfoResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

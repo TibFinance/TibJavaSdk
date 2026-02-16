@@ -32,16 +32,14 @@ public class CreateCustomerFromMerchantResponse extends CustomAPIResponse {
     public CreateCustomerFromMerchantResponse(Error[] errors, boolean hasError, String messages, String customerId, String paymentMethodId) {
         super(errors, hasError, messages);
         this.customerId = customerId;
-this.paymentMethodId = paymentMethodId;
-
+        this.paymentMethodId = paymentMethodId;
     }
 
     public CreateCustomerFromMerchantResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.customerId = apiResponse.getResponse().toString();
-this.paymentMethodId = apiResponse.getResponse().toString();
-
+            this.paymentMethodId = apiResponse.getResponse().toString();
         }
     }
 
@@ -82,8 +80,8 @@ this.paymentMethodId = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "CreateCustomerFromMerchantResponse{" +
-                 "customerId='" + customerId + '\'' +
- ", paymentMethodId='" + paymentMethodId + '\'' +
+                "customerId='" + customerId + '\'' +
+                ", paymentMethodId='" + paymentMethodId + '\'' +
 
                 '}';
     }

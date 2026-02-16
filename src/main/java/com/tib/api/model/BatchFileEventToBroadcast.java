@@ -20,20 +20,20 @@ public class BatchFileEventToBroadcast   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("FreeOperation")
     private FreeOperation freeOperation;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("File")
     private String file;
 
     /**
- * Retrieves or assigns the unique identifier for a payment.
- */
+     * Retrieves or assigns the unique identifier for a payment.
+     */
     @JsonProperty("PaymentId")
     private String paymentId;
 
@@ -45,9 +45,8 @@ public class BatchFileEventToBroadcast   {
     
     public BatchFileEventToBroadcast(FreeOperation freeOperation, String file, String paymentId) {
         this.freeOperation = freeOperation;
-this.file = file;
-this.paymentId = paymentId;
-
+        this.file = file;
+        this.paymentId = paymentId;
     }
     
     
@@ -97,9 +96,9 @@ this.paymentId = paymentId;
     @Override
     public String toString() {
         return "BatchFileEventToBroadcast{" +
-                 "freeOperation='" + freeOperation + '\'' +
- ", file='" + file + '\'' +
- ", paymentId='" + paymentId + '\'' +
+                "freeOperation='" + freeOperation + '\'' +
+                ", file='" + file + '\'' +
+                ", paymentId='" + paymentId + '\'' +
 
                 '}';
     }

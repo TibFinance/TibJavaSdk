@@ -24,116 +24,116 @@ public class ProcessTransferEntity   {
 
     
     /**
- * Gets or sets the transaction identifier.
- */
+     * Gets or sets the transaction identifier.
+     */
     @JsonProperty("TransactionId")
     private String transactionId;
 
     /**
- * Gets or sets the transaction group identifier.
- */
+     * Gets or sets the transaction group identifier.
+     */
     @JsonProperty("TransactionGroupId")
     private String transactionGroupId;
 
     /**
- * Gets or sets the transaction amount.
- */
+     * Gets or sets the transaction amount.
+     */
     @JsonProperty("TransactionAmount")
     private Double transactionAmount;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Specifies the due date for the payment. If the value is null, the system treats the due date as the current date and time.
- */
+     * Specifies the due date for the payment. If the value is null, the system treats the due date as the current date and time.
+     */
     @JsonProperty("DueDate")
     private LocalDateTime dueDate;
 
     /**
- * Gets or sets the description associated with a transaction.
- */
+     * Gets or sets the description associated with a transaction.
+     */
     @JsonProperty("TransactionDescription")
     private String transactionDescription;
 
     /**
- * Gets or sets the type of the acp operation.
- */
+     * Gets or sets the type of the acp operation.
+     */
     @JsonProperty("AcpOperationType")
     private AcpOperationType acpOperationType;
 
     /**
- * Indicates the direction of an Interac transaction.
- */
+     * Indicates the direction of an Interac transaction.
+     */
     @JsonProperty("TransferDirection")
     private TransferDirection transferDirection;
 
     /**
- * Gets or sets the favorite provider.
- */
+     * Gets or sets the favorite provider.
+     */
     @JsonProperty("FavoriteProvider")
     private String favoriteProvider;
 
     /**
- * True determine the transaction is process as "reverting" of existing operation, need to fill AlreadyProcessedProviderInfo.
- */
+     * True determine the transaction is process as "reverting" of existing operation, need to fill AlreadyProcessedProviderInfo.
+     */
     @JsonProperty("IsTransactionRevert")
     private boolean isTransactionRevert;
 
     /**
- * Must be filled when IsTransactionRevert is set to true in order to be able to know what is the transaction to be reverted.
- */
+     * Must be filled when IsTransactionRevert is set to true in order to be able to know what is the transaction to be reverted.
+     */
     @JsonProperty("AlreadyProcessedProviderId")
     private String alreadyProcessedProviderId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AlreadyProcessedProviderAdditionalInfos")
     private String alreadyProcessedProviderAdditionalInfos;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderTransactionId")
     private String providerTransactionId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderSubType")
     private String providerSubType;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderType")
     private Provider providerType;
 
     /**
- * Identifies the specific transfer operation that needs to be reverted.
- */
+     * Identifies the specific transfer operation that needs to be reverted.
+     */
     @JsonProperty("TransferId")
     private String transferId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RelatedConvenientFeesWithTargetProviderId")
     private List<Object> relatedConvenientFeesWithTargetProviderId;
 
@@ -145,25 +145,24 @@ public class ProcessTransferEntity   {
     
     public ProcessTransferEntity(String transactionId, String transactionGroupId, Double transactionAmount, Currency currency, LocalDateTime dueDate, String transactionDescription, AcpOperationType acpOperationType, TransferDirection transferDirection, String favoriteProvider, boolean isTransactionRevert, String alreadyProcessedProviderId, String alreadyProcessedProviderAdditionalInfos, Language language, String providerTransactionId, String providerSubType, String merchantId, Provider providerType, String transferId, List<Object> relatedConvenientFeesWithTargetProviderId) {
         this.transactionId = transactionId;
-this.transactionGroupId = transactionGroupId;
-this.transactionAmount = transactionAmount;
-this.currency = currency;
-this.dueDate = dueDate;
-this.transactionDescription = transactionDescription;
-this.acpOperationType = acpOperationType;
-this.transferDirection = transferDirection;
-this.favoriteProvider = favoriteProvider;
-this.isTransactionRevert = isTransactionRevert;
-this.alreadyProcessedProviderId = alreadyProcessedProviderId;
-this.alreadyProcessedProviderAdditionalInfos = alreadyProcessedProviderAdditionalInfos;
-this.language = language;
-this.providerTransactionId = providerTransactionId;
-this.providerSubType = providerSubType;
-this.merchantId = merchantId;
-this.providerType = providerType;
-this.transferId = transferId;
-this.relatedConvenientFeesWithTargetProviderId = relatedConvenientFeesWithTargetProviderId;
-
+        this.transactionGroupId = transactionGroupId;
+        this.transactionAmount = transactionAmount;
+        this.currency = currency;
+        this.dueDate = dueDate;
+        this.transactionDescription = transactionDescription;
+        this.acpOperationType = acpOperationType;
+        this.transferDirection = transferDirection;
+        this.favoriteProvider = favoriteProvider;
+        this.isTransactionRevert = isTransactionRevert;
+        this.alreadyProcessedProviderId = alreadyProcessedProviderId;
+        this.alreadyProcessedProviderAdditionalInfos = alreadyProcessedProviderAdditionalInfos;
+        this.language = language;
+        this.providerTransactionId = providerTransactionId;
+        this.providerSubType = providerSubType;
+        this.merchantId = merchantId;
+        this.providerType = providerType;
+        this.transferId = transferId;
+        this.relatedConvenientFeesWithTargetProviderId = relatedConvenientFeesWithTargetProviderId;
     }
     
     
@@ -341,25 +340,25 @@ this.relatedConvenientFeesWithTargetProviderId = relatedConvenientFeesWithTarget
     @Override
     public String toString() {
         return "ProcessTransferEntity{" +
-                 "transactionId='" + transactionId + '\'' +
- ", transactionGroupId='" + transactionGroupId + '\'' +
- ", transactionAmount='" + transactionAmount + '\'' +
- ", currency='" + currency + '\'' +
- ", dueDate='" + dueDate + '\'' +
- ", transactionDescription='" + transactionDescription + '\'' +
- ", acpOperationType='" + acpOperationType + '\'' +
- ", transferDirection='" + transferDirection + '\'' +
- ", favoriteProvider='" + favoriteProvider + '\'' +
- ", isTransactionRevert='" + isTransactionRevert + '\'' +
- ", alreadyProcessedProviderId='" + alreadyProcessedProviderId + '\'' +
- ", alreadyProcessedProviderAdditionalInfos='" + alreadyProcessedProviderAdditionalInfos + '\'' +
- ", language='" + language + '\'' +
- ", providerTransactionId='" + providerTransactionId + '\'' +
- ", providerSubType='" + providerSubType + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", providerType='" + providerType + '\'' +
- ", transferId='" + transferId + '\'' +
- ", relatedConvenientFeesWithTargetProviderId='" + relatedConvenientFeesWithTargetProviderId + '\'' +
+                "transactionId='" + transactionId + '\'' +
+                ", transactionGroupId='" + transactionGroupId + '\'' +
+                ", transactionAmount='" + transactionAmount + '\'' +
+                ", currency='" + currency + '\'' +
+                ", dueDate='" + dueDate + '\'' +
+                ", transactionDescription='" + transactionDescription + '\'' +
+                ", acpOperationType='" + acpOperationType + '\'' +
+                ", transferDirection='" + transferDirection + '\'' +
+                ", favoriteProvider='" + favoriteProvider + '\'' +
+                ", isTransactionRevert='" + isTransactionRevert + '\'' +
+                ", alreadyProcessedProviderId='" + alreadyProcessedProviderId + '\'' +
+                ", alreadyProcessedProviderAdditionalInfos='" + alreadyProcessedProviderAdditionalInfos + '\'' +
+                ", language='" + language + '\'' +
+                ", providerTransactionId='" + providerTransactionId + '\'' +
+                ", providerSubType='" + providerSubType + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", providerType='" + providerType + '\'' +
+                ", transferId='" + transferId + '\'' +
+                ", relatedConvenientFeesWithTargetProviderId='" + relatedConvenientFeesWithTargetProviderId + '\'' +
 
                 '}';
     }

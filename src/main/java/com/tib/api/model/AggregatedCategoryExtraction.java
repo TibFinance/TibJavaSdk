@@ -20,20 +20,20 @@ public class AggregatedCategoryExtraction   {
 
     
     /**
- * Gets or sets the data summary aggregation category.
- */
+     * Gets or sets the data summary aggregation category.
+     */
     @JsonProperty("DataSummaryAggregationCategory")
     private DataSummaryAggregationCategory dataSummaryAggregationCategory;
 
     /**
- * Gets or sets the count.
- */
+     * Gets or sets the count.
+     */
     @JsonProperty("Count")
     private Integer count;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
@@ -45,9 +45,8 @@ public class AggregatedCategoryExtraction   {
     
     public AggregatedCategoryExtraction(DataSummaryAggregationCategory dataSummaryAggregationCategory, Integer count, Double amount) {
         this.dataSummaryAggregationCategory = dataSummaryAggregationCategory;
-this.count = count;
-this.amount = amount;
-
+        this.count = count;
+        this.amount = amount;
     }
     
     
@@ -97,9 +96,9 @@ this.amount = amount;
     @Override
     public String toString() {
         return "AggregatedCategoryExtraction{" +
-                 "dataSummaryAggregationCategory='" + dataSummaryAggregationCategory + '\'' +
- ", count='" + count + '\'' +
- ", amount='" + amount + '\'' +
+                "dataSummaryAggregationCategory='" + dataSummaryAggregationCategory + '\'' +
+                ", count='" + count + '\'' +
+                ", amount='" + amount + '\'' +
 
                 '}';
     }

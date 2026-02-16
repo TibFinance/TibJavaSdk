@@ -21,8 +21,8 @@ public class ProcessDropInCreditCardArgs  extends BaseProcessDropInArgs  {
 
     
     /**
- * Manages all operations associated with credit card data.
- */
+     * Manages all operations associated with credit card data.
+     */
     @JsonProperty("CreditCard")
     private CreditCard creditCard;
 
@@ -34,14 +34,12 @@ public class ProcessDropInCreditCardArgs  extends BaseProcessDropInArgs  {
     
     public ProcessDropInCreditCardArgs(CreditCard creditCard) {
         this.creditCard = creditCard;
-
     }
     
     
     public ProcessDropInCreditCardArgs(boolean isPPAAuthorized, CreditCard creditCard) {
         super(isPPAAuthorized);
         this.creditCard = creditCard;
-
     }
 
     
@@ -73,7 +71,7 @@ public class ProcessDropInCreditCardArgs  extends BaseProcessDropInArgs  {
     @Override
     public String toString() {
         return "ProcessDropInCreditCardArgs{" +
-                 "creditCard='" + creditCard + '\'' +
+                "creditCard='" + creditCard + '\'' +
 
                 '}';
     }

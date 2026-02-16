@@ -30,14 +30,12 @@ public class GetMerchantsByExternalIdResponse extends CustomAPIResponse {
     public GetMerchantsByExternalIdResponse(Error[] errors, boolean hasError, String messages, List<MerchantView> merchants) {
         super(errors, hasError, messages);
         this.merchants = merchants;
-
     }
 
     public GetMerchantsByExternalIdResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.merchants = (List<MerchantView>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetMerchantsByExternalIdResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetMerchantsByExternalIdResponse{" +
-                 "merchants='" + merchants + '\'' +
+                "merchants='" + merchants + '\'' +
 
                 '}';
     }

@@ -25,13 +25,11 @@ public class AddProviderTransactionsResponse extends CustomAPIResponse {
 
     public AddProviderTransactionsResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public AddProviderTransactionsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

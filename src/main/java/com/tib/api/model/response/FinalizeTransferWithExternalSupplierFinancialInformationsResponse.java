@@ -29,14 +29,12 @@ public class FinalizeTransferWithExternalSupplierFinancialInformationsResponse e
     public FinalizeTransferWithExternalSupplierFinancialInformationsResponse(Error[] errors, boolean hasError, String messages, String link) {
         super(errors, hasError, messages);
         this.link = link;
-
     }
 
     public FinalizeTransferWithExternalSupplierFinancialInformationsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.link = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class FinalizeTransferWithExternalSupplierFinancialInformationsResponse e
     @Override
     public String toString() {
         return "FinalizeTransferWithExternalSupplierFinancialInformationsResponse{" +
-                 "link='" + link + '\'' +
+                "link='" + link + '\'' +
 
                 '}';
     }

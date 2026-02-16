@@ -20,8 +20,8 @@ public class BaseAdminOnlyCryptedArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Gets or sets the admin session token.
- */
+     * Gets or sets the admin session token.
+     */
     @JsonProperty("AdminSessionToken")
     private String adminSessionToken;
 
@@ -33,14 +33,12 @@ public class BaseAdminOnlyCryptedArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public BaseAdminOnlyCryptedArgs(String adminSessionToken) {
         this.adminSessionToken = adminSessionToken;
-
     }
     
     
     public BaseAdminOnlyCryptedArgs(String sessionToken, String adminSessionToken) {
         super(sessionToken);
         this.adminSessionToken = adminSessionToken;
-
     }
 
     
@@ -72,7 +70,7 @@ public class BaseAdminOnlyCryptedArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "BaseAdminOnlyCryptedArgs{" +
-                 "adminSessionToken='" + adminSessionToken + '\'' +
+                "adminSessionToken='" + adminSessionToken + '\'' +
 
                 '}';
     }

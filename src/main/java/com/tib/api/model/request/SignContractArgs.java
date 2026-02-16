@@ -29,7 +29,6 @@ public class SignContractArgs  extends BaseAuthenticatePublicTokenArgs  {
     
     public SignContractArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

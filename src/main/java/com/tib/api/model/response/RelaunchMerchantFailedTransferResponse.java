@@ -25,13 +25,11 @@ public class RelaunchMerchantFailedTransferResponse extends CustomAPIResponse {
 
     public RelaunchMerchantFailedTransferResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public RelaunchMerchantFailedTransferResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

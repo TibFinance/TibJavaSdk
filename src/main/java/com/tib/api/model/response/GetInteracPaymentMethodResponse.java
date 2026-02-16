@@ -41,22 +41,20 @@ public class GetInteracPaymentMethodResponse extends CustomAPIResponse {
     public GetInteracPaymentMethodResponse(Error[] errors, boolean hasError, String messages, String question, String owner, String email, String description, String mobile) {
         super(errors, hasError, messages);
         this.question = question;
-this.owner = owner;
-this.email = email;
-this.description = description;
-this.mobile = mobile;
-
+        this.owner = owner;
+        this.email = email;
+        this.description = description;
+        this.mobile = mobile;
     }
 
     public GetInteracPaymentMethodResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.question = apiResponse.getResponse().toString();
-this.owner = apiResponse.getResponse().toString();
-this.email = apiResponse.getResponse().toString();
-this.description = apiResponse.getResponse().toString();
-this.mobile = apiResponse.getResponse().toString();
-
+            this.owner = apiResponse.getResponse().toString();
+            this.email = apiResponse.getResponse().toString();
+            this.description = apiResponse.getResponse().toString();
+            this.mobile = apiResponse.getResponse().toString();
         }
     }
 
@@ -121,11 +119,11 @@ this.mobile = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "GetInteracPaymentMethodResponse{" +
-                 "question='" + question + '\'' +
- ", owner='" + owner + '\'' +
- ", email='" + email + '\'' +
- ", description='" + description + '\'' +
- ", mobile='" + mobile + '\'' +
+                "question='" + question + '\'' +
+                ", owner='" + owner + '\'' +
+                ", email='" + email + '\'' +
+                ", description='" + description + '\'' +
+                ", mobile='" + mobile + '\'' +
 
                 '}';
     }

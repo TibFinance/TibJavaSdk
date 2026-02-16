@@ -21,200 +21,200 @@ public class AdminCustomerPayment   {
 
     
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Acts as a unique identifier for a distinct payment method.
- */
+     * Acts as a unique identifier for a distinct payment method.
+     */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountInformationId")
     private String accountInformationId;
 
     /**
- * This property represents the full name of the customer in the system.
- */
+     * This property represents the full name of the customer in the system.
+     */
     @JsonProperty("CustomerName")
     private String customerName;
 
     /**
- * Handles the acquisition and assignment of a customer's email address.
- */
+     * Handles the acquisition and assignment of a customer's email address.
+     */
     @JsonProperty("CustomerEmail")
     private String customerEmail;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountInformationView")
     private String accountInformationView;
 
     /**
- * Identifies the type of payment method linked to a specific account.
- */
+     * Identifies the type of payment method linked to a specific account.
+     */
     @JsonProperty("PaymentMethodType")
     private PaymentMethodType paymentMethodType;
 
     /**
- * The 'Owner' property is designed to assign and identify the ownership of a specific resource or object within the system.
- */
+     * The 'Owner' property is designed to assign and identify the ownership of a specific resource or object within the system.
+     */
     @JsonProperty("Owner")
     private String owner;
 
     /**
- * Retrieves or assigns the identifier used for external customer identification. This property is crucial for linking customer data with external systems.
- */
+     * Retrieves or assigns the identifier used for external customer identification. This property is crucial for linking customer data with external systems.
+     */
     @JsonProperty("ExternalCustomerId")
     private String externalCustomerId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsDeletedCustomer")
     private boolean isDeletedCustomer;
 
     /**
- * Provides a detailed description of the payment method for easy identification.
- */
+     * Provides a detailed description of the payment method for easy identification.
+     */
     @JsonProperty("PaymentMethodDescription")
     private String paymentMethodDescription;
 
     /**
- * Determines if the customer's payment method is set as the default for automatic transactions.
- */
+     * Determines if the customer's payment method is set as the default for automatic transactions.
+     */
     @JsonProperty("IsCustomerAutomaticPaymentMethod")
     private boolean isCustomerAutomaticPaymentMethod;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsVerifiedPaymentMethod")
     private boolean isVerifiedPaymentMethod;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsDeletedPaymentMethod")
     private boolean isDeletedPaymentMethod;
 
     /**
- * Handles the extraction or assignment of a particular entity's expiration date.
- */
+     * Handles the extraction or assignment of a particular entity's expiration date.
+     */
     @JsonProperty("ExpirationDate")
     private LocalDateTime expirationDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountAddressId")
     private String accountAddressId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Question")
     private String question;
 
     /**
- * Specifies the email address associated with the merchant.
- */
+     * Specifies the email address associated with the merchant.
+     */
     @JsonProperty("Email")
     private String email;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MobilePhone")
     private String mobilePhone;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountLanguage")
     private Language accountLanguage;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Memo")
     private String memo;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsChecked")
     private boolean isChecked;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CreatedDateCustomer")
     private LocalDateTime createdDateCustomer;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CreatedDatePaymentMethod")
     private LocalDateTime createdDatePaymentMethod;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CustomerInfoEmail")
     private String customerInfoEmail;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Phone")
     private String phone;
 
     /**
- * Gets or sets the address associated with the entity.
- */
+     * Gets or sets the address associated with the entity.
+     */
     @JsonProperty("Address")
     private String address;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("City")
     private String city;
 
     /**
- * Gets or sets the postal zip code for the address entity.
- */
+     * Gets or sets the postal zip code for the address entity.
+     */
     @JsonProperty("PostalZipCode")
     private String postalZipCode;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PaymentMethodTypeValue")
     private String paymentMethodTypeValue;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AccountLanguageValue")
     private String accountLanguageValue;
 
@@ -226,39 +226,38 @@ public class AdminCustomerPayment   {
     
     public AdminCustomerPayment(String customerId, String serviceId, String paymentMethodId, String accountInformationId, String customerName, String customerEmail, String description, String accountInformationView, PaymentMethodType paymentMethodType, String owner, String externalCustomerId, boolean isDeletedCustomer, String paymentMethodDescription, boolean isCustomerAutomaticPaymentMethod, boolean isVerifiedPaymentMethod, boolean isDeletedPaymentMethod, LocalDateTime expirationDate, String accountAddressId, String question, String email, String mobilePhone, Language accountLanguage, String memo, boolean isChecked, LocalDateTime createdDateCustomer, LocalDateTime createdDatePaymentMethod, String customerInfoEmail, String phone, String address, String city, String postalZipCode, String paymentMethodTypeValue, String accountLanguageValue) {
         this.customerId = customerId;
-this.serviceId = serviceId;
-this.paymentMethodId = paymentMethodId;
-this.accountInformationId = accountInformationId;
-this.customerName = customerName;
-this.customerEmail = customerEmail;
-this.description = description;
-this.accountInformationView = accountInformationView;
-this.paymentMethodType = paymentMethodType;
-this.owner = owner;
-this.externalCustomerId = externalCustomerId;
-this.isDeletedCustomer = isDeletedCustomer;
-this.paymentMethodDescription = paymentMethodDescription;
-this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.isVerifiedPaymentMethod = isVerifiedPaymentMethod;
-this.isDeletedPaymentMethod = isDeletedPaymentMethod;
-this.expirationDate = expirationDate;
-this.accountAddressId = accountAddressId;
-this.question = question;
-this.email = email;
-this.mobilePhone = mobilePhone;
-this.accountLanguage = accountLanguage;
-this.memo = memo;
-this.isChecked = isChecked;
-this.createdDateCustomer = createdDateCustomer;
-this.createdDatePaymentMethod = createdDatePaymentMethod;
-this.customerInfoEmail = customerInfoEmail;
-this.phone = phone;
-this.address = address;
-this.city = city;
-this.postalZipCode = postalZipCode;
-this.paymentMethodTypeValue = paymentMethodTypeValue;
-this.accountLanguageValue = accountLanguageValue;
-
+        this.serviceId = serviceId;
+        this.paymentMethodId = paymentMethodId;
+        this.accountInformationId = accountInformationId;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.description = description;
+        this.accountInformationView = accountInformationView;
+        this.paymentMethodType = paymentMethodType;
+        this.owner = owner;
+        this.externalCustomerId = externalCustomerId;
+        this.isDeletedCustomer = isDeletedCustomer;
+        this.paymentMethodDescription = paymentMethodDescription;
+        this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
+        this.isVerifiedPaymentMethod = isVerifiedPaymentMethod;
+        this.isDeletedPaymentMethod = isDeletedPaymentMethod;
+        this.expirationDate = expirationDate;
+        this.accountAddressId = accountAddressId;
+        this.question = question;
+        this.email = email;
+        this.mobilePhone = mobilePhone;
+        this.accountLanguage = accountLanguage;
+        this.memo = memo;
+        this.isChecked = isChecked;
+        this.createdDateCustomer = createdDateCustomer;
+        this.createdDatePaymentMethod = createdDatePaymentMethod;
+        this.customerInfoEmail = customerInfoEmail;
+        this.phone = phone;
+        this.address = address;
+        this.city = city;
+        this.postalZipCode = postalZipCode;
+        this.paymentMethodTypeValue = paymentMethodTypeValue;
+        this.accountLanguageValue = accountLanguageValue;
     }
     
     
@@ -548,39 +547,39 @@ this.accountLanguageValue = accountLanguageValue;
     @Override
     public String toString() {
         return "AdminCustomerPayment{" +
-                 "customerId='" + customerId + '\'' +
- ", serviceId='" + serviceId + '\'' +
- ", paymentMethodId='" + paymentMethodId + '\'' +
- ", accountInformationId='" + accountInformationId + '\'' +
- ", customerName='" + customerName + '\'' +
- ", customerEmail='" + customerEmail + '\'' +
- ", description='" + description + '\'' +
- ", accountInformationView='" + accountInformationView + '\'' +
- ", paymentMethodType='" + paymentMethodType + '\'' +
- ", owner='" + owner + '\'' +
- ", externalCustomerId='" + externalCustomerId + '\'' +
- ", isDeletedCustomer='" + isDeletedCustomer + '\'' +
- ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
- ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
- ", isVerifiedPaymentMethod='" + isVerifiedPaymentMethod + '\'' +
- ", isDeletedPaymentMethod='" + isDeletedPaymentMethod + '\'' +
- ", expirationDate='" + expirationDate + '\'' +
- ", accountAddressId='" + accountAddressId + '\'' +
- ", question='" + question + '\'' +
- ", email='" + email + '\'' +
- ", mobilePhone='" + mobilePhone + '\'' +
- ", accountLanguage='" + accountLanguage + '\'' +
- ", memo='" + memo + '\'' +
- ", isChecked='" + isChecked + '\'' +
- ", createdDateCustomer='" + createdDateCustomer + '\'' +
- ", createdDatePaymentMethod='" + createdDatePaymentMethod + '\'' +
- ", customerInfoEmail='" + customerInfoEmail + '\'' +
- ", phone='" + phone + '\'' +
- ", address='" + address + '\'' +
- ", city='" + city + '\'' +
- ", postalZipCode='" + postalZipCode + '\'' +
- ", paymentMethodTypeValue='" + paymentMethodTypeValue + '\'' +
- ", accountLanguageValue='" + accountLanguageValue + '\'' +
+                "customerId='" + customerId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                ", paymentMethodId='" + paymentMethodId + '\'' +
+                ", accountInformationId='" + accountInformationId + '\'' +
+                ", customerName='" + customerName + '\'' +
+                ", customerEmail='" + customerEmail + '\'' +
+                ", description='" + description + '\'' +
+                ", accountInformationView='" + accountInformationView + '\'' +
+                ", paymentMethodType='" + paymentMethodType + '\'' +
+                ", owner='" + owner + '\'' +
+                ", externalCustomerId='" + externalCustomerId + '\'' +
+                ", isDeletedCustomer='" + isDeletedCustomer + '\'' +
+                ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
+                ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
+                ", isVerifiedPaymentMethod='" + isVerifiedPaymentMethod + '\'' +
+                ", isDeletedPaymentMethod='" + isDeletedPaymentMethod + '\'' +
+                ", expirationDate='" + expirationDate + '\'' +
+                ", accountAddressId='" + accountAddressId + '\'' +
+                ", question='" + question + '\'' +
+                ", email='" + email + '\'' +
+                ", mobilePhone='" + mobilePhone + '\'' +
+                ", accountLanguage='" + accountLanguage + '\'' +
+                ", memo='" + memo + '\'' +
+                ", isChecked='" + isChecked + '\'' +
+                ", createdDateCustomer='" + createdDateCustomer + '\'' +
+                ", createdDatePaymentMethod='" + createdDatePaymentMethod + '\'' +
+                ", customerInfoEmail='" + customerInfoEmail + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", postalZipCode='" + postalZipCode + '\'' +
+                ", paymentMethodTypeValue='" + paymentMethodTypeValue + '\'' +
+                ", accountLanguageValue='" + accountLanguageValue + '\'' +
 
                 '}';
     }

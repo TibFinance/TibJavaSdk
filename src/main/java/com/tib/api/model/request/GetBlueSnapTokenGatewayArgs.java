@@ -19,8 +19,8 @@ public class GetBlueSnapTokenGatewayArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -32,7 +32,6 @@ public class GetBlueSnapTokenGatewayArgs  implements IBaseCryptedServiceArgs  {
     
     public GetBlueSnapTokenGatewayArgs(String merchantId) {
         this.merchantId = merchantId;
-
     }
     
     
@@ -66,7 +65,7 @@ public class GetBlueSnapTokenGatewayArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "GetBlueSnapTokenGatewayArgs{" +
-                 "merchantId='" + merchantId + '\'' +
+                "merchantId='" + merchantId + '\'' +
 
                 '}';
     }

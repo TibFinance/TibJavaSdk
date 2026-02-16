@@ -20,20 +20,20 @@ public class CollectMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Specifies the category of a financial operation.
- */
+     * Specifies the category of a financial operation.
+     */
     @JsonProperty("OperationKind")
     private Integer operationKind;
 
@@ -45,18 +45,16 @@ public class CollectMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public CollectMerchantArgs(String merchantId, Double amount, Integer operationKind) {
         this.merchantId = merchantId;
-this.amount = amount;
-this.operationKind = operationKind;
-
+        this.amount = amount;
+        this.operationKind = operationKind;
     }
     
     
     public CollectMerchantArgs(String adminSessionToken, String merchantId, Double amount, Integer operationKind) {
         super(adminSessionToken);
         this.merchantId = merchantId;
-this.amount = amount;
-this.operationKind = operationKind;
-
+        this.amount = amount;
+        this.operationKind = operationKind;
     }
 
     
@@ -104,9 +102,9 @@ this.operationKind = operationKind;
     @Override
     public String toString() {
         return "CollectMerchantArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", amount='" + amount + '\'' +
- ", operationKind='" + operationKind + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", operationKind='" + operationKind + '\'' +
 
                 '}';
     }

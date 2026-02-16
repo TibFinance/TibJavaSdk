@@ -20,8 +20,8 @@ public class SearchClientsMerchantsArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SearchText")
     private String searchText;
 
@@ -33,14 +33,12 @@ public class SearchClientsMerchantsArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public SearchClientsMerchantsArgs(String searchText) {
         this.searchText = searchText;
-
     }
     
     
     public SearchClientsMerchantsArgs(String adminSessionToken, String searchText) {
         super(adminSessionToken);
         this.searchText = searchText;
-
     }
 
     
@@ -72,7 +70,7 @@ public class SearchClientsMerchantsArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "SearchClientsMerchantsArgs{" +
-                 "searchText='" + searchText + '\'' +
+                "searchText='" + searchText + '\'' +
 
                 '}';
     }

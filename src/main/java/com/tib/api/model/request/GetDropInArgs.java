@@ -29,7 +29,6 @@ public class GetDropInArgs  extends BaseAuthenticatePublicTokenArgs  {
     
     public GetDropInArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

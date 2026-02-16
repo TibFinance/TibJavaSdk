@@ -30,15 +30,13 @@ public class GetSubClientResponse extends CustomAPIResponse {
     public GetSubClientResponse(Error[] errors, boolean hasError, String messages, ServiceWithMerchant service) {
         super(errors, hasError, messages);
         this.service = service;
-
     }
 
     public GetSubClientResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.service = objectMapper.readValue(json, ServiceWithMerchant.class);
-
+            this.service = objectMapper.readValue(json, ServiceWithMerchant.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.service = objectMapper.readValue(json, ServiceWithMerchant.class);
     @Override
     public String toString() {
         return "GetSubClientResponse{" +
-                 "service='" + service + '\'' +
+                "service='" + service + '\'' +
 
                 '}';
     }

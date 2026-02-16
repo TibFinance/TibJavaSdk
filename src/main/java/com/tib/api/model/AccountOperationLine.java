@@ -20,26 +20,26 @@ public class AccountOperationLine   {
 
     
     /**
- * Gets or sets the operation date.
- */
+     * Gets or sets the operation date.
+     */
     @JsonProperty("OperationDate")
     private LocalDateTime operationDate;
 
     /**
- * Gets or sets the operation description.
- */
+     * Gets or sets the operation description.
+     */
     @JsonProperty("OperationDescription")
     private String operationDescription;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Gets or sets the account operation direction.
- */
+     * Gets or sets the account operation direction.
+     */
     @JsonProperty("AccountOperationDirection")
     private AccountOperationDirection accountOperationDirection;
 
@@ -51,10 +51,9 @@ public class AccountOperationLine   {
     
     public AccountOperationLine(LocalDateTime operationDate, String operationDescription, Double amount, AccountOperationDirection accountOperationDirection) {
         this.operationDate = operationDate;
-this.operationDescription = operationDescription;
-this.amount = amount;
-this.accountOperationDirection = accountOperationDirection;
-
+        this.operationDescription = operationDescription;
+        this.amount = amount;
+        this.accountOperationDirection = accountOperationDirection;
     }
     
     
@@ -112,10 +111,10 @@ this.accountOperationDirection = accountOperationDirection;
     @Override
     public String toString() {
         return "AccountOperationLine{" +
-                 "operationDate='" + operationDate + '\'' +
- ", operationDescription='" + operationDescription + '\'' +
- ", amount='" + amount + '\'' +
- ", accountOperationDirection='" + accountOperationDirection + '\'' +
+                "operationDate='" + operationDate + '\'' +
+                ", operationDescription='" + operationDescription + '\'' +
+                ", amount='" + amount + '\'' +
+                ", accountOperationDirection='" + accountOperationDirection + '\'' +
 
                 '}';
     }

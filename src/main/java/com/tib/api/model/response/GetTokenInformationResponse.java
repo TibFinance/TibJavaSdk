@@ -32,16 +32,14 @@ public class GetTokenInformationResponse extends CustomAPIResponse {
     public GetTokenInformationResponse(Error[] errors, boolean hasError, String messages, String serviceId, String serviceName) {
         super(errors, hasError, messages);
         this.serviceId = serviceId;
-this.serviceName = serviceName;
-
+        this.serviceName = serviceName;
     }
 
     public GetTokenInformationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.serviceId = apiResponse.getResponse().toString();
-this.serviceName = apiResponse.getResponse().toString();
-
+            this.serviceName = apiResponse.getResponse().toString();
         }
     }
 
@@ -82,8 +80,8 @@ this.serviceName = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "GetTokenInformationResponse{" +
-                 "serviceId='" + serviceId + '\'' +
- ", serviceName='" + serviceName + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", serviceName='" + serviceName + '\'' +
 
                 '}';
     }

@@ -30,14 +30,12 @@ public class MerchantEntityResponse extends CustomAPIResponse {
     public MerchantEntityResponse(Error[] errors, boolean hasError, String messages, List<MerchantEntity> merchants) {
         super(errors, hasError, messages);
         this.merchants = merchants;
-
     }
 
     public MerchantEntityResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.merchants = (List<MerchantEntity>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class MerchantEntityResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "MerchantEntityResponse{" +
-                 "merchants='" + merchants + '\'' +
+                "merchants='" + merchants + '\'' +
 
                 '}';
     }

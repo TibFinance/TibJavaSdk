@@ -20,14 +20,14 @@ public class ListDasPaymentsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * The idenfication of the DAS provider to list payment for
- */
+     * The idenfication of the DAS provider to list payment for
+     */
     @JsonProperty("DasProviderId")
     private String dasProviderId;
 
@@ -39,16 +39,14 @@ public class ListDasPaymentsArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public ListDasPaymentsArgs(String merchantId, String dasProviderId) {
         this.merchantId = merchantId;
-this.dasProviderId = dasProviderId;
-
+        this.dasProviderId = dasProviderId;
     }
     
     
     public ListDasPaymentsArgs(String sessionToken, String merchantId, String dasProviderId) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.dasProviderId = dasProviderId;
-
+        this.dasProviderId = dasProviderId;
     }
 
     
@@ -88,8 +86,8 @@ this.dasProviderId = dasProviderId;
     @Override
     public String toString() {
         return "ListDasPaymentsArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", dasProviderId='" + dasProviderId + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", dasProviderId='" + dasProviderId + '\'' +
 
                 '}';
     }

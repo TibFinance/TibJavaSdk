@@ -19,44 +19,44 @@ public class WalletHolder   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WalletHolderId")
     private String walletHolderId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Balance")
     private Double balance;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsProcessing")
     private Optional<Boolean> isProcessing;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WalletId")
     private String walletId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("DepositAmount")
     private Double depositAmount;
 
@@ -68,13 +68,12 @@ public class WalletHolder   {
     
     public WalletHolder(String walletHolderId, String merchantId, String merchantName, Double balance, Optional<Boolean> isProcessing, String walletId, Double depositAmount) {
         this.walletHolderId = walletHolderId;
-this.merchantId = merchantId;
-this.merchantName = merchantName;
-this.balance = balance;
-this.isProcessing = isProcessing;
-this.walletId = walletId;
-this.depositAmount = depositAmount;
-
+        this.merchantId = merchantId;
+        this.merchantName = merchantName;
+        this.balance = balance;
+        this.isProcessing = isProcessing;
+        this.walletId = walletId;
+        this.depositAmount = depositAmount;
     }
     
     
@@ -156,13 +155,13 @@ this.depositAmount = depositAmount;
     @Override
     public String toString() {
         return "WalletHolder{" +
-                 "walletHolderId='" + walletHolderId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", balance='" + balance + '\'' +
- ", isProcessing='" + isProcessing + '\'' +
- ", walletId='" + walletId + '\'' +
- ", depositAmount='" + depositAmount + '\'' +
+                "walletHolderId='" + walletHolderId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", balance='" + balance + '\'' +
+                ", isProcessing='" + isProcessing + '\'' +
+                ", walletId='" + walletId + '\'' +
+                ", depositAmount='" + depositAmount + '\'' +
 
                 '}';
     }

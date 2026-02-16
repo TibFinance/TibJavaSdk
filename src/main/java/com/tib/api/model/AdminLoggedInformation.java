@@ -20,8 +20,8 @@ public class AdminLoggedInformation  extends BaseLoggedSession  {
 
     
     /**
- * Gets or sets the admin identifier.
- */
+     * Gets or sets the admin identifier.
+     */
     @JsonProperty("AdminID")
     private String adminID;
 
@@ -33,14 +33,12 @@ public class AdminLoggedInformation  extends BaseLoggedSession  {
     
     public AdminLoggedInformation(String adminID) {
         this.adminID = adminID;
-
     }
     
     
     public AdminLoggedInformation(LocalDateTime lastActivityDate, LocalDateTime creationDate, String loginsUserRelationsId, LoginType permissionType, String adminID) {
         super(lastActivityDate, creationDate, loginsUserRelationsId, permissionType);
         this.adminID = adminID;
-
     }
 
     
@@ -72,7 +70,7 @@ public class AdminLoggedInformation  extends BaseLoggedSession  {
     @Override
     public String toString() {
         return "AdminLoggedInformation{" +
-                 "adminID='" + adminID + '\'' +
+                "adminID='" + adminID + '\'' +
 
                 '}';
     }

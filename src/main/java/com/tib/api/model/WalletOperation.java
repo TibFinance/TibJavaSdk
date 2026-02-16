@@ -19,26 +19,26 @@ public class WalletOperation   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Date")
     private LocalDateTime date;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsWithdrawn")
     private boolean isWithdrawn;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
@@ -50,10 +50,9 @@ public class WalletOperation   {
     
     public WalletOperation(LocalDateTime date, Double amount, boolean isWithdrawn, String description) {
         this.date = date;
-this.amount = amount;
-this.isWithdrawn = isWithdrawn;
-this.description = description;
-
+        this.amount = amount;
+        this.isWithdrawn = isWithdrawn;
+        this.description = description;
     }
     
     
@@ -111,10 +110,10 @@ this.description = description;
     @Override
     public String toString() {
         return "WalletOperation{" +
-                 "date='" + date + '\'' +
- ", amount='" + amount + '\'' +
- ", isWithdrawn='" + isWithdrawn + '\'' +
- ", description='" + description + '\'' +
+                "date='" + date + '\'' +
+                ", amount='" + amount + '\'' +
+                ", isWithdrawn='" + isWithdrawn + '\'' +
+                ", description='" + description + '\'' +
 
                 '}';
     }

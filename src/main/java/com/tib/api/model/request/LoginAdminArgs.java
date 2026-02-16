@@ -20,20 +20,20 @@ public class LoginAdminArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Retrieves or assigns the identifier for user login relations.
- */
+     * Retrieves or assigns the identifier for user login relations.
+     */
     @JsonProperty("LoginsUserRelationsId")
     private String loginsUserRelationsId;
 
     /**
- * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
- */
+     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
- * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
- */
+     * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
+     */
     @JsonProperty("Username")
     private String username;
 
@@ -45,18 +45,16 @@ public class LoginAdminArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public LoginAdminArgs(String loginsUserRelationsId, String clientId, String username) {
         this.loginsUserRelationsId = loginsUserRelationsId;
-this.clientId = clientId;
-this.username = username;
-
+        this.clientId = clientId;
+        this.username = username;
     }
     
     
     public LoginAdminArgs(String adminSessionToken, String loginsUserRelationsId, String clientId, String username) {
         super(adminSessionToken);
         this.loginsUserRelationsId = loginsUserRelationsId;
-this.clientId = clientId;
-this.username = username;
-
+        this.clientId = clientId;
+        this.username = username;
     }
 
     
@@ -104,9 +102,9 @@ this.username = username;
     @Override
     public String toString() {
         return "LoginAdminArgs{" +
-                 "loginsUserRelationsId='" + loginsUserRelationsId + '\'' +
- ", clientId='" + clientId + '\'' +
- ", username='" + username + '\'' +
+                "loginsUserRelationsId='" + loginsUserRelationsId + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", username='" + username + '\'' +
 
                 '}';
     }

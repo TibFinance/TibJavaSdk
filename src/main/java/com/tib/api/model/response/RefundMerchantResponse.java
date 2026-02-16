@@ -29,14 +29,12 @@ public class RefundMerchantResponse extends CustomAPIResponse {
     public RefundMerchantResponse(Error[] errors, boolean hasError, String messages, String transferId) {
         super(errors, hasError, messages);
         this.transferId = transferId;
-
     }
 
     public RefundMerchantResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transferId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class RefundMerchantResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "RefundMerchantResponse{" +
-                 "transferId='" + transferId + '\'' +
+                "transferId='" + transferId + '\'' +
 
                 '}';
     }

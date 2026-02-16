@@ -30,14 +30,12 @@ public class GetCustomersByExternalIdResponse extends CustomAPIResponse {
     public GetCustomersByExternalIdResponse(Error[] errors, boolean hasError, String messages, List<Customer> customers) {
         super(errors, hasError, messages);
         this.customers = customers;
-
     }
 
     public GetCustomersByExternalIdResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.customers = (List<Customer>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetCustomersByExternalIdResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "GetCustomersByExternalIdResponse{" +
-                 "customers='" + customers + '\'' +
+                "customers='" + customers + '\'' +
 
                 '}';
     }

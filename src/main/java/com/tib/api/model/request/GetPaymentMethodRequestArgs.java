@@ -29,7 +29,6 @@ public class GetPaymentMethodRequestArgs  extends BaseAuthenticatePublicTokenArg
     
     public GetPaymentMethodRequestArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

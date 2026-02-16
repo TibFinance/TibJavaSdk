@@ -21,14 +21,14 @@ public class LineBaseWithHeader  extends LineBase  {
 
     
     /**
- * Gets or sets the header.
- */
+     * Gets or sets the header.
+     */
     @JsonProperty("Header")
     private BaseLineHeader header;
 
     /**
- * Gets the start position.
- */
+     * Gets the start position.
+     */
     @JsonProperty("StartPosition")
     private Integer startPosition;
 
@@ -40,16 +40,14 @@ public class LineBaseWithHeader  extends LineBase  {
     
     public LineBaseWithHeader(BaseLineHeader header, Integer startPosition) {
         this.header = header;
-this.startPosition = startPosition;
-
+        this.startPosition = startPosition;
     }
     
     
     public LineBaseWithHeader(char defaultPaddingChar, PadDirection defaultPaddingDirection, BaseLineHeader header, Integer startPosition) {
         super(defaultPaddingChar, defaultPaddingDirection);
         this.header = header;
-this.startPosition = startPosition;
-
+        this.startPosition = startPosition;
     }
 
     
@@ -89,8 +87,8 @@ this.startPosition = startPosition;
     @Override
     public String toString() {
         return "LineBaseWithHeader{" +
-                 "header='" + header + '\'' +
- ", startPosition='" + startPosition + '\'' +
+                "header='" + header + '\'' +
+                ", startPosition='" + startPosition + '\'' +
 
                 '}';
     }

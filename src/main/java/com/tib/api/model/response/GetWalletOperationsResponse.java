@@ -36,18 +36,16 @@ public class GetWalletOperationsResponse extends CustomAPIResponse {
     public GetWalletOperationsResponse(Error[] errors, boolean hasError, String messages, List<WalletOperation> dailyOperations, Double balanceBeforeOperations, Double delayBufferAmount) {
         super(errors, hasError, messages);
         this.dailyOperations = dailyOperations;
-this.balanceBeforeOperations = balanceBeforeOperations;
-this.delayBufferAmount = delayBufferAmount;
-
+        this.balanceBeforeOperations = balanceBeforeOperations;
+        this.delayBufferAmount = delayBufferAmount;
     }
 
     public GetWalletOperationsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.dailyOperations = (List<WalletOperation>) apiResponse.getResponse();
-this.balanceBeforeOperations = Double.parseDouble(apiResponse.getResponse().toString());
-this.delayBufferAmount = Double.parseDouble(apiResponse.getResponse().toString());
-
+            this.balanceBeforeOperations = Double.parseDouble(apiResponse.getResponse().toString());
+            this.delayBufferAmount = Double.parseDouble(apiResponse.getResponse().toString());
         }
     }
 
@@ -96,9 +94,9 @@ this.delayBufferAmount = Double.parseDouble(apiResponse.getResponse().toString()
     @Override
     public String toString() {
         return "GetWalletOperationsResponse{" +
-                 "dailyOperations='" + dailyOperations + '\'' +
- ", balanceBeforeOperations='" + balanceBeforeOperations + '\'' +
- ", delayBufferAmount='" + delayBufferAmount + '\'' +
+                "dailyOperations='" + dailyOperations + '\'' +
+                ", balanceBeforeOperations='" + balanceBeforeOperations + '\'' +
+                ", delayBufferAmount='" + delayBufferAmount + '\'' +
 
                 '}';
     }

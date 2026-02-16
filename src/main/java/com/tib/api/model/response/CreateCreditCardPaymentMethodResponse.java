@@ -29,14 +29,12 @@ public class CreateCreditCardPaymentMethodResponse extends CustomAPIResponse {
     public CreateCreditCardPaymentMethodResponse(Error[] errors, boolean hasError, String messages, String paymentMethodId) {
         super(errors, hasError, messages);
         this.paymentMethodId = paymentMethodId;
-
     }
 
     public CreateCreditCardPaymentMethodResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.paymentMethodId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class CreateCreditCardPaymentMethodResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateCreditCardPaymentMethodResponse{" +
-                 "paymentMethodId='" + paymentMethodId + '\'' +
+                "paymentMethodId='" + paymentMethodId + '\'' +
 
                 '}';
     }

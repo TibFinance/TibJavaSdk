@@ -22,14 +22,14 @@ public class CreateCreditCardPaymentMethodAndSetToTransferArgs  extends BaseCrea
 
     
     /**
- * Indicates if the system must request the customer's consent prior to executing the payment.
- */
+     * Indicates if the system must request the customer's consent prior to executing the payment.
+     */
     @JsonProperty("AskForCustomerConsent")
     private boolean askForCustomerConsent;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RoutingType")
     private PublicAccessTokenRoutingType routingType;
 
@@ -41,16 +41,14 @@ public class CreateCreditCardPaymentMethodAndSetToTransferArgs  extends BaseCrea
     
     public CreateCreditCardPaymentMethodAndSetToTransferArgs(boolean askForCustomerConsent, PublicAccessTokenRoutingType routingType) {
         this.askForCustomerConsent = askForCustomerConsent;
-this.routingType = routingType;
-
+        this.routingType = routingType;
     }
     
     
     public CreateCreditCardPaymentMethodAndSetToTransferArgs(boolean isCustomerAutomaticPaymentMethod, CreditCard creditCard, boolean askForCustomerConsent, PublicAccessTokenRoutingType routingType) {
         super(isCustomerAutomaticPaymentMethod, creditCard);
         this.askForCustomerConsent = askForCustomerConsent;
-this.routingType = routingType;
-
+        this.routingType = routingType;
     }
 
     
@@ -90,8 +88,8 @@ this.routingType = routingType;
     @Override
     public String toString() {
         return "CreateCreditCardPaymentMethodAndSetToTransferArgs{" +
-                 "askForCustomerConsent='" + askForCustomerConsent + '\'' +
- ", routingType='" + routingType + '\'' +
+                "askForCustomerConsent='" + askForCustomerConsent + '\'' +
+                ", routingType='" + routingType + '\'' +
 
                 '}';
     }

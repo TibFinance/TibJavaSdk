@@ -19,8 +19,8 @@ public class RetreiveKeyArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Gets or sets the encryption key.
- */
+     * Gets or sets the encryption key.
+     */
     @JsonProperty("EncryptionKey")
     private String encryptionKey;
 
@@ -32,7 +32,6 @@ public class RetreiveKeyArgs  implements IBaseCryptedServiceArgs  {
     
     public RetreiveKeyArgs(String encryptionKey) {
         this.encryptionKey = encryptionKey;
-
     }
     
     
@@ -66,7 +65,7 @@ public class RetreiveKeyArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "RetreiveKeyArgs{" +
-                 "encryptionKey='" + encryptionKey + '\'' +
+                "encryptionKey='" + encryptionKey + '\'' +
 
                 '}';
     }

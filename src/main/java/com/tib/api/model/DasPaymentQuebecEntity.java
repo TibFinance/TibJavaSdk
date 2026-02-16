@@ -20,44 +20,44 @@ public class DasPaymentQuebecEntity   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PeriodStartDate")
     private DasDateField periodStartDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PeriodEndDate")
     private DasDateField periodEndDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WithhodingTax")
     private Double withhodingTax;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RetirementPensionPlan")
     private Double retirementPensionPlan;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("HealthServiceFund")
     private Double healthServiceFund;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ParentalInsurancePlan")
     private Double parentalInsurancePlan;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CNESST")
     private Double cNESST;
 
@@ -69,13 +69,12 @@ public class DasPaymentQuebecEntity   {
     
     public DasPaymentQuebecEntity(DasDateField periodStartDate, DasDateField periodEndDate, Double withhodingTax, Double retirementPensionPlan, Double healthServiceFund, Double parentalInsurancePlan, Double cNESST) {
         this.periodStartDate = periodStartDate;
-this.periodEndDate = periodEndDate;
-this.withhodingTax = withhodingTax;
-this.retirementPensionPlan = retirementPensionPlan;
-this.healthServiceFund = healthServiceFund;
-this.parentalInsurancePlan = parentalInsurancePlan;
-this.cNESST = cNESST;
-
+        this.periodEndDate = periodEndDate;
+        this.withhodingTax = withhodingTax;
+        this.retirementPensionPlan = retirementPensionPlan;
+        this.healthServiceFund = healthServiceFund;
+        this.parentalInsurancePlan = parentalInsurancePlan;
+        this.cNESST = cNESST;
     }
     
     
@@ -157,13 +156,13 @@ this.cNESST = cNESST;
     @Override
     public String toString() {
         return "DasPaymentQuebecEntity{" +
-                 "periodStartDate='" + periodStartDate + '\'' +
- ", periodEndDate='" + periodEndDate + '\'' +
- ", withhodingTax='" + withhodingTax + '\'' +
- ", retirementPensionPlan='" + retirementPensionPlan + '\'' +
- ", healthServiceFund='" + healthServiceFund + '\'' +
- ", parentalInsurancePlan='" + parentalInsurancePlan + '\'' +
- ", cNESST='" + cNESST + '\'' +
+                "periodStartDate='" + periodStartDate + '\'' +
+                ", periodEndDate='" + periodEndDate + '\'' +
+                ", withhodingTax='" + withhodingTax + '\'' +
+                ", retirementPensionPlan='" + retirementPensionPlan + '\'' +
+                ", healthServiceFund='" + healthServiceFund + '\'' +
+                ", parentalInsurancePlan='" + parentalInsurancePlan + '\'' +
+                ", cNESST='" + cNESST + '\'' +
 
                 '}';
     }

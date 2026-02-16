@@ -20,14 +20,14 @@ public class UpdateBoardingStatusArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
- */
+     * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
+     */
     @JsonProperty("BoardingInformationId")
     private String boardingInformationId;
 
     /**
- * Represents the status of the merchant boarding process within the system. This status is crucial for tracking the progress and completion of merchant onboarding.
- */
+     * Represents the status of the merchant boarding process within the system. This status is crucial for tracking the progress and completion of merchant onboarding.
+     */
     @JsonProperty("BoardingStatus")
     private String boardingStatus;
 
@@ -39,16 +39,14 @@ public class UpdateBoardingStatusArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public UpdateBoardingStatusArgs(String boardingInformationId, String boardingStatus) {
         this.boardingInformationId = boardingInformationId;
-this.boardingStatus = boardingStatus;
-
+        this.boardingStatus = boardingStatus;
     }
     
     
     public UpdateBoardingStatusArgs(String adminSessionToken, String boardingInformationId, String boardingStatus) {
         super(adminSessionToken);
         this.boardingInformationId = boardingInformationId;
-this.boardingStatus = boardingStatus;
-
+        this.boardingStatus = boardingStatus;
     }
 
     
@@ -88,8 +86,8 @@ this.boardingStatus = boardingStatus;
     @Override
     public String toString() {
         return "UpdateBoardingStatusArgs{" +
-                 "boardingInformationId='" + boardingInformationId + '\'' +
- ", boardingStatus='" + boardingStatus + '\'' +
+                "boardingInformationId='" + boardingInformationId + '\'' +
+                ", boardingStatus='" + boardingStatus + '\'' +
 
                 '}';
     }

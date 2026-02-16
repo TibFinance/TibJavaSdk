@@ -21,26 +21,26 @@ public class ProvinceState   {
 
     
     /**
- * Gets or sets the identifier of the country using the CountryIdEnum enumeration. This identifier is required when specifying the country for client, service, or merchant operations.
- */
+     * Gets or sets the identifier of the country using the CountryIdEnum enumeration. This identifier is required when specifying the country for client, service, or merchant operations.
+     */
     @JsonProperty("CountryId")
     private CountryId countryId;
 
     /**
- * Gets or sets the country abreviation.
- */
+     * Gets or sets the country abreviation.
+     */
     @JsonProperty("CountryAbreviation")
     private String countryAbreviation;
 
     /**
- * Represents the unique identifier for a province or state within the system.
- */
+     * Represents the unique identifier for a province or state within the system.
+     */
     @JsonProperty("ProvinceStateId")
     private ProvinceStateId provinceStateId;
 
     /**
- * Gets or sets the province abreviation.
- */
+     * Gets or sets the province abreviation.
+     */
     @JsonProperty("ProvinceAbreviation")
     private String provinceAbreviation;
 
@@ -52,10 +52,9 @@ public class ProvinceState   {
     
     public ProvinceState(CountryId countryId, String countryAbreviation, ProvinceStateId provinceStateId, String provinceAbreviation) {
         this.countryId = countryId;
-this.countryAbreviation = countryAbreviation;
-this.provinceStateId = provinceStateId;
-this.provinceAbreviation = provinceAbreviation;
-
+        this.countryAbreviation = countryAbreviation;
+        this.provinceStateId = provinceStateId;
+        this.provinceAbreviation = provinceAbreviation;
     }
     
     
@@ -113,10 +112,10 @@ this.provinceAbreviation = provinceAbreviation;
     @Override
     public String toString() {
         return "ProvinceState{" +
-                 "countryId='" + countryId + '\'' +
- ", countryAbreviation='" + countryAbreviation + '\'' +
- ", provinceStateId='" + provinceStateId + '\'' +
- ", provinceAbreviation='" + provinceAbreviation + '\'' +
+                "countryId='" + countryId + '\'' +
+                ", countryAbreviation='" + countryAbreviation + '\'' +
+                ", provinceStateId='" + provinceStateId + '\'' +
+                ", provinceAbreviation='" + provinceAbreviation + '\'' +
 
                 '}';
     }

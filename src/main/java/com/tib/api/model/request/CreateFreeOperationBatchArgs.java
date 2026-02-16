@@ -21,20 +21,20 @@ public class CreateFreeOperationBatchArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
- * Facilitates the initiation of a batch of free operations, enabling transactions that are not associated with a specific bill. This is crucial for managing payments or deposits directly linked to customer payment methods.
- */
+     * Facilitates the initiation of a batch of free operations, enabling transactions that are not associated with a specific bill. This is crucial for managing payments or deposits directly linked to customer payment methods.
+     */
     @JsonProperty("FreeOperationBatchList")
     private List<FreeOperation> freeOperationBatchList;
 
     /**
- * Represents the unique identifier for a group within the TIB Finance API.
- */
+     * Represents the unique identifier for a group within the TIB Finance API.
+     */
     @JsonProperty("GroupId")
     private String groupId;
 
     /**
- * Determines whether to halt operations with identical identifications.
- */
+     * Determines whether to halt operations with identical identifications.
+     */
     @JsonProperty("StopSameIdentifications")
     private boolean stopSameIdentifications;
 
@@ -46,18 +46,16 @@ public class CreateFreeOperationBatchArgs  extends BaseAuthenticatedCryptedArgs 
     
     public CreateFreeOperationBatchArgs(List<FreeOperation> freeOperationBatchList, String groupId, boolean stopSameIdentifications) {
         this.freeOperationBatchList = freeOperationBatchList;
-this.groupId = groupId;
-this.stopSameIdentifications = stopSameIdentifications;
-
+        this.groupId = groupId;
+        this.stopSameIdentifications = stopSameIdentifications;
     }
     
     
     public CreateFreeOperationBatchArgs(String sessionToken, List<FreeOperation> freeOperationBatchList, String groupId, boolean stopSameIdentifications) {
         super(sessionToken);
         this.freeOperationBatchList = freeOperationBatchList;
-this.groupId = groupId;
-this.stopSameIdentifications = stopSameIdentifications;
-
+        this.groupId = groupId;
+        this.stopSameIdentifications = stopSameIdentifications;
     }
 
     
@@ -105,9 +103,9 @@ this.stopSameIdentifications = stopSameIdentifications;
     @Override
     public String toString() {
         return "CreateFreeOperationBatchArgs{" +
-                 "freeOperationBatchList='" + freeOperationBatchList + '\'' +
- ", groupId='" + groupId + '\'' +
- ", stopSameIdentifications='" + stopSameIdentifications + '\'' +
+                "freeOperationBatchList='" + freeOperationBatchList + '\'' +
+                ", groupId='" + groupId + '\'' +
+                ", stopSameIdentifications='" + stopSameIdentifications + '\'' +
 
                 '}';
     }

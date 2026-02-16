@@ -20,26 +20,26 @@ public class RefundMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsCommission")
     private boolean isCommission;
 
@@ -51,20 +51,18 @@ public class RefundMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public RefundMerchantArgs(String merchantId, Double amount, String description, boolean isCommission) {
         this.merchantId = merchantId;
-this.amount = amount;
-this.description = description;
-this.isCommission = isCommission;
-
+        this.amount = amount;
+        this.description = description;
+        this.isCommission = isCommission;
     }
     
     
     public RefundMerchantArgs(String adminSessionToken, String merchantId, Double amount, String description, boolean isCommission) {
         super(adminSessionToken);
         this.merchantId = merchantId;
-this.amount = amount;
-this.description = description;
-this.isCommission = isCommission;
-
+        this.amount = amount;
+        this.description = description;
+        this.isCommission = isCommission;
     }
 
     
@@ -120,10 +118,10 @@ this.isCommission = isCommission;
     @Override
     public String toString() {
         return "RefundMerchantArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", amount='" + amount + '\'' +
- ", description='" + description + '\'' +
- ", isCommission='" + isCommission + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", description='" + description + '\'' +
+                ", isCommission='" + isCommission + '\'' +
 
                 '}';
     }

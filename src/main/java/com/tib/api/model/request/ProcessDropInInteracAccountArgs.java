@@ -21,8 +21,8 @@ public class ProcessDropInInteracAccountArgs  extends BaseProcessDropInArgs  {
 
     
     /**
- * This model encapsulates the details required to manage Interac payment methods for customers. It is used to facilitate electronic funds transfers via the Interac network, a widely used payment system in Canada.
- */
+     * This model encapsulates the details required to manage Interac payment methods for customers. It is used to facilitate electronic funds transfers via the Interac network, a widely used payment system in Canada.
+     */
     @JsonProperty("InteracInformation")
     private Interac interacInformation;
 
@@ -34,14 +34,12 @@ public class ProcessDropInInteracAccountArgs  extends BaseProcessDropInArgs  {
     
     public ProcessDropInInteracAccountArgs(Interac interacInformation) {
         this.interacInformation = interacInformation;
-
     }
     
     
     public ProcessDropInInteracAccountArgs(boolean isPPAAuthorized, Interac interacInformation) {
         super(isPPAAuthorized);
         this.interacInformation = interacInformation;
-
     }
 
     
@@ -73,7 +71,7 @@ public class ProcessDropInInteracAccountArgs  extends BaseProcessDropInArgs  {
     @Override
     public String toString() {
         return "ProcessDropInInteracAccountArgs{" +
-                 "interacInformation='" + interacInformation + '\'' +
+                "interacInformation='" + interacInformation + '\'' +
 
                 '}';
     }

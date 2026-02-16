@@ -19,26 +19,26 @@ public class TransactionFeesForCount   {
 
     
     /**
- * Gets or sets the fee count.
- */
+     * Gets or sets the fee count.
+     */
     @JsonProperty("FeeCount")
     private Integer feeCount;
 
     /**
- * Gets or sets the fee amount.
- */
+     * Gets or sets the fee amount.
+     */
     @JsonProperty("FeeAmount")
     private Double feeAmount;
 
     /**
- * Gets or sets the number of payment.
- */
+     * Gets or sets the number of payment.
+     */
     @JsonProperty("NumberOfPayment")
     private Integer numberOfPayment;
 
     /**
- * Gets or sets the number of fees.
- */
+     * Gets or sets the number of fees.
+     */
     @JsonProperty("NumberOfFees")
     private Integer numberOfFees;
 
@@ -50,10 +50,9 @@ public class TransactionFeesForCount   {
     
     public TransactionFeesForCount(Integer feeCount, Double feeAmount, Integer numberOfPayment, Integer numberOfFees) {
         this.feeCount = feeCount;
-this.feeAmount = feeAmount;
-this.numberOfPayment = numberOfPayment;
-this.numberOfFees = numberOfFees;
-
+        this.feeAmount = feeAmount;
+        this.numberOfPayment = numberOfPayment;
+        this.numberOfFees = numberOfFees;
     }
     
     
@@ -111,10 +110,10 @@ this.numberOfFees = numberOfFees;
     @Override
     public String toString() {
         return "TransactionFeesForCount{" +
-                 "feeCount='" + feeCount + '\'' +
- ", feeAmount='" + feeAmount + '\'' +
- ", numberOfPayment='" + numberOfPayment + '\'' +
- ", numberOfFees='" + numberOfFees + '\'' +
+                "feeCount='" + feeCount + '\'' +
+                ", feeAmount='" + feeAmount + '\'' +
+                ", numberOfPayment='" + numberOfPayment + '\'' +
+                ", numberOfFees='" + numberOfFees + '\'' +
 
                 '}';
     }

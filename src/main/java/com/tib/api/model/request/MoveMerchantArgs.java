@@ -20,14 +20,14 @@ public class MoveMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantdId")
     private String merchantdId;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
@@ -39,16 +39,14 @@ public class MoveMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public MoveMerchantArgs(String merchantdId, String serviceId) {
         this.merchantdId = merchantdId;
-this.serviceId = serviceId;
-
+        this.serviceId = serviceId;
     }
     
     
     public MoveMerchantArgs(String adminSessionToken, String merchantdId, String serviceId) {
         super(adminSessionToken);
         this.merchantdId = merchantdId;
-this.serviceId = serviceId;
-
+        this.serviceId = serviceId;
     }
 
     
@@ -88,8 +86,8 @@ this.serviceId = serviceId;
     @Override
     public String toString() {
         return "MoveMerchantArgs{" +
-                 "merchantdId='" + merchantdId + '\'' +
- ", serviceId='" + serviceId + '\'' +
+                "merchantdId='" + merchantdId + '\'' +
+                ", serviceId='" + serviceId + '\'' +
 
                 '}';
     }

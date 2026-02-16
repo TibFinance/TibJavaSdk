@@ -29,14 +29,12 @@ public class AdjustWalletResponse extends CustomAPIResponse {
     public AdjustWalletResponse(Error[] errors, boolean hasError, String messages, String transferId) {
         super(errors, hasError, messages);
         this.transferId = transferId;
-
     }
 
     public AdjustWalletResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transferId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class AdjustWalletResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "AdjustWalletResponse{" +
-                 "transferId='" + transferId + '\'' +
+                "transferId='" + transferId + '\'' +
 
                 '}';
     }

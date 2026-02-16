@@ -20,8 +20,8 @@ public class GetConvenientFeeSettingsByMerchantArgs  extends BaseAuthenticatedCr
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -33,14 +33,12 @@ public class GetConvenientFeeSettingsByMerchantArgs  extends BaseAuthenticatedCr
     
     public GetConvenientFeeSettingsByMerchantArgs(String merchantId) {
         this.merchantId = merchantId;
-
     }
     
     
     public GetConvenientFeeSettingsByMerchantArgs(String sessionToken, String merchantId) {
         super(sessionToken);
         this.merchantId = merchantId;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetConvenientFeeSettingsByMerchantArgs  extends BaseAuthenticatedCr
     @Override
     public String toString() {
         return "GetConvenientFeeSettingsByMerchantArgs{" +
-                 "merchantId='" + merchantId + '\'' +
+                "merchantId='" + merchantId + '\'' +
 
                 '}';
     }

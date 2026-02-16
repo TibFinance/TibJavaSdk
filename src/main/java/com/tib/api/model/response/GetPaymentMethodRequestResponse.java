@@ -34,17 +34,15 @@ public class GetPaymentMethodRequestResponse extends CustomAPIResponse {
     public GetPaymentMethodRequestResponse(Error[] errors, boolean hasError, String messages, PaymentMethodAddRequest paymentMethodRequestData, WhiteLabeling whiteLabeling) {
         super(errors, hasError, messages);
         this.paymentMethodRequestData = paymentMethodRequestData;
-this.whiteLabeling = whiteLabeling;
-
+        this.whiteLabeling = whiteLabeling;
     }
 
     public GetPaymentMethodRequestResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.paymentMethodRequestData = objectMapper.readValue(json, PaymentMethodAddRequest.class);
-this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
-
+            this.paymentMethodRequestData = objectMapper.readValue(json, PaymentMethodAddRequest.class);
+            this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
         }
     }
 
@@ -85,8 +83,8 @@ this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
     @Override
     public String toString() {
         return "GetPaymentMethodRequestResponse{" +
-                 "paymentMethodRequestData='" + paymentMethodRequestData + '\'' +
- ", whiteLabeling='" + whiteLabeling + '\'' +
+                "paymentMethodRequestData='" + paymentMethodRequestData + '\'' +
+                ", whiteLabeling='" + whiteLabeling + '\'' +
 
                 '}';
     }

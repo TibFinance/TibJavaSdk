@@ -22,50 +22,50 @@ public class ListExecutedOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Specifies the starting date for filtering payment due dates.
- */
+     * Specifies the starting date for filtering payment due dates.
+     */
     @JsonProperty("FromDate")
     private LocalDateTime fromDate;
 
     /**
- * Specifies the payment due date.
- */
+     * Specifies the payment due date.
+     */
     @JsonProperty("ToDate")
     private LocalDateTime toDate;
 
     /**
- * Defines and manages the type of transfer operation within the system.
- */
+     * Defines and manages the type of transfer operation within the system.
+     */
     @JsonProperty("TransferType")
     private TransferTypeFlag transferType;
 
     /**
- * Identifies the group of related transfer operations.
- */
+     * Identifies the group of related transfer operations.
+     */
     @JsonProperty("TransferGroupId")
     private String transferGroupId;
 
     /**
- * Indicates whether the transfer list should be filtered to include only operations that have an error status.
- */
+     * Indicates whether the transfer list should be filtered to include only operations that have an error status.
+     */
     @JsonProperty("OnlyWithErrors")
     private boolean onlyWithErrors;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Enumerates the supported date classifications used throughout the API.
- */
+     * Enumerates the supported date classifications used throughout the API.
+     */
     @JsonProperty("DateType")
     private DateType dateType;
 
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
@@ -77,28 +77,26 @@ public class ListExecutedOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public ListExecutedOperationsArgs(LocalDateTime fromDate, LocalDateTime toDate, TransferTypeFlag transferType, String transferGroupId, boolean onlyWithErrors, String merchantId, DateType dateType, String serviceId) {
         this.fromDate = fromDate;
-this.toDate = toDate;
-this.transferType = transferType;
-this.transferGroupId = transferGroupId;
-this.onlyWithErrors = onlyWithErrors;
-this.merchantId = merchantId;
-this.dateType = dateType;
-this.serviceId = serviceId;
-
+        this.toDate = toDate;
+        this.transferType = transferType;
+        this.transferGroupId = transferGroupId;
+        this.onlyWithErrors = onlyWithErrors;
+        this.merchantId = merchantId;
+        this.dateType = dateType;
+        this.serviceId = serviceId;
     }
     
     
     public ListExecutedOperationsArgs(String sessionToken, LocalDateTime fromDate, LocalDateTime toDate, TransferTypeFlag transferType, String transferGroupId, boolean onlyWithErrors, String merchantId, DateType dateType, String serviceId) {
         super(sessionToken);
         this.fromDate = fromDate;
-this.toDate = toDate;
-this.transferType = transferType;
-this.transferGroupId = transferGroupId;
-this.onlyWithErrors = onlyWithErrors;
-this.merchantId = merchantId;
-this.dateType = dateType;
-this.serviceId = serviceId;
-
+        this.toDate = toDate;
+        this.transferType = transferType;
+        this.transferGroupId = transferGroupId;
+        this.onlyWithErrors = onlyWithErrors;
+        this.merchantId = merchantId;
+        this.dateType = dateType;
+        this.serviceId = serviceId;
     }
 
     
@@ -186,14 +184,14 @@ this.serviceId = serviceId;
     @Override
     public String toString() {
         return "ListExecutedOperationsArgs{" +
-                 "fromDate='" + fromDate + '\'' +
- ", toDate='" + toDate + '\'' +
- ", transferType='" + transferType + '\'' +
- ", transferGroupId='" + transferGroupId + '\'' +
- ", onlyWithErrors='" + onlyWithErrors + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", dateType='" + dateType + '\'' +
- ", serviceId='" + serviceId + '\'' +
+                "fromDate='" + fromDate + '\'' +
+                ", toDate='" + toDate + '\'' +
+                ", transferType='" + transferType + '\'' +
+                ", transferGroupId='" + transferGroupId + '\'' +
+                ", onlyWithErrors='" + onlyWithErrors + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", dateType='" + dateType + '\'' +
+                ", serviceId='" + serviceId + '\'' +
 
                 '}';
     }

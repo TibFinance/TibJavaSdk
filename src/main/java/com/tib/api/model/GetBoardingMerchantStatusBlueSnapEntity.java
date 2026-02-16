@@ -19,8 +19,8 @@ public class GetBoardingMerchantStatusBlueSnapEntity  extends GetBoardingMerchan
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -32,14 +32,12 @@ public class GetBoardingMerchantStatusBlueSnapEntity  extends GetBoardingMerchan
     
     public GetBoardingMerchantStatusBlueSnapEntity(String merchantId) {
         this.merchantId = merchantId;
-
     }
     
     
     public GetBoardingMerchantStatusBlueSnapEntity(String providerMerchantId, String merchantId) {
         super(providerMerchantId);
         this.merchantId = merchantId;
-
     }
 
     
@@ -71,7 +69,7 @@ public class GetBoardingMerchantStatusBlueSnapEntity  extends GetBoardingMerchan
     @Override
     public String toString() {
         return "GetBoardingMerchantStatusBlueSnapEntity{" +
-                 "merchantId='" + merchantId + '\'' +
+                "merchantId='" + merchantId + '\'' +
 
                 '}';
     }

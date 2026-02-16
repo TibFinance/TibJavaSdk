@@ -23,104 +23,104 @@ public class CreateFreeOperationArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Retrieves or assigns the unique identifier for a bill.
- */
+     * Retrieves or assigns the unique identifier for a bill.
+     */
     @JsonProperty("BillId")
     private String billId;
 
     /**
- * Serves as a unique identifier for each customer within the system.
- */
+     * Serves as a unique identifier for each customer within the system.
+     */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
- * Acts as a unique identifier for a distinct payment method.
- */
+     * Acts as a unique identifier for a distinct payment method.
+     */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
     /**
- * Defines and manages the type of transfer operation within the system.
- */
+     * Defines and manages the type of transfer operation within the system.
+     */
     @JsonProperty("TransferType")
     private TransferType transferType;
 
     /**
- * Retrieves or assigns the reference number associated with a transaction or operation.
- */
+     * Retrieves or assigns the reference number associated with a transaction or operation.
+     */
     @JsonProperty("ReferenceNumber")
     private String referenceNumber;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * Retrieves or assigns the due date for a transaction.
- */
+     * Retrieves or assigns the due date for a transaction.
+     */
     @JsonProperty("TransactionDueDate")
     private LocalDateTime transactionDueDate;
 
     /**
- * Specifies the title or description of a transfer within the TIB Finance API.
- */
+     * Specifies the title or description of a transfer within the TIB Finance API.
+     */
     @JsonProperty("TransferTitle")
     private String transferTitle;
 
     /**
- * Provides a textual representation of the transaction, detailing any errors encountered during processing.
- */
+     * Provides a textual representation of the transaction, detailing any errors encountered during processing.
+     */
     @JsonProperty("TransferDescription")
     private String transferDescription;
 
     /**
- * Represents the unique identifier for a transfer within an external system, facilitating tracking and integration.
- */
+     * Represents the unique identifier for a transfer within an external system, facilitating tracking and integration.
+     */
     @JsonProperty("TransferExternalSystemNumber")
     private String transferExternalSystemNumber;
 
     /**
- * Defines the frequency at which transfers occur within the TIB Finance API.
- */
+     * Defines the frequency at which transfers occur within the TIB Finance API.
+     */
     @JsonProperty("TransferFrequency")
     private TransferFrequency transferFrequency;
 
     /**
- * Represents the unique identifier for a group within the TIB Finance API.
- */
+     * Represents the unique identifier for a group within the TIB Finance API.
+     */
     @JsonProperty("GroupId")
     private String groupId;
 
     /**
- * Indicates whether the transfer should be executed immediately within the TIB Finance API.
- */
+     * Indicates whether the transfer should be executed immediately within the TIB Finance API.
+     */
     @JsonProperty("ImmediateTransfer")
     private boolean immediateTransfer;
 
     /**
- * Represents a brief description used in statements to identify or clarify the transaction.
- */
+     * Represents a brief description used in statements to identify or clarify the transaction.
+     */
     @JsonProperty("StatementDescription")
     private String statementDescription;
 
     /**
- * Determines whether to halt operations with identical identifications.
- */
+     * Determines whether to halt operations with identical identifications.
+     */
     @JsonProperty("StopSameIdentifications")
     private boolean stopSameIdentifications;
 
@@ -132,46 +132,44 @@ public class CreateFreeOperationArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CreateFreeOperationArgs(String merchantId, String billId, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Double amount, Language language, LocalDateTime transactionDueDate, String transferTitle, String transferDescription, String transferExternalSystemNumber, TransferFrequency transferFrequency, String groupId, boolean immediateTransfer, String statementDescription, boolean stopSameIdentifications) {
         this.merchantId = merchantId;
-this.billId = billId;
-this.customerId = customerId;
-this.paymentMethodId = paymentMethodId;
-this.transferType = transferType;
-this.referenceNumber = referenceNumber;
-this.amount = amount;
-this.language = language;
-this.transactionDueDate = transactionDueDate;
-this.transferTitle = transferTitle;
-this.transferDescription = transferDescription;
-this.transferExternalSystemNumber = transferExternalSystemNumber;
-this.transferFrequency = transferFrequency;
-this.groupId = groupId;
-this.immediateTransfer = immediateTransfer;
-this.statementDescription = statementDescription;
-this.stopSameIdentifications = stopSameIdentifications;
-
+        this.billId = billId;
+        this.customerId = customerId;
+        this.paymentMethodId = paymentMethodId;
+        this.transferType = transferType;
+        this.referenceNumber = referenceNumber;
+        this.amount = amount;
+        this.language = language;
+        this.transactionDueDate = transactionDueDate;
+        this.transferTitle = transferTitle;
+        this.transferDescription = transferDescription;
+        this.transferExternalSystemNumber = transferExternalSystemNumber;
+        this.transferFrequency = transferFrequency;
+        this.groupId = groupId;
+        this.immediateTransfer = immediateTransfer;
+        this.statementDescription = statementDescription;
+        this.stopSameIdentifications = stopSameIdentifications;
     }
     
     
     public CreateFreeOperationArgs(String sessionToken, String merchantId, String billId, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Double amount, Language language, LocalDateTime transactionDueDate, String transferTitle, String transferDescription, String transferExternalSystemNumber, TransferFrequency transferFrequency, String groupId, boolean immediateTransfer, String statementDescription, boolean stopSameIdentifications) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.billId = billId;
-this.customerId = customerId;
-this.paymentMethodId = paymentMethodId;
-this.transferType = transferType;
-this.referenceNumber = referenceNumber;
-this.amount = amount;
-this.language = language;
-this.transactionDueDate = transactionDueDate;
-this.transferTitle = transferTitle;
-this.transferDescription = transferDescription;
-this.transferExternalSystemNumber = transferExternalSystemNumber;
-this.transferFrequency = transferFrequency;
-this.groupId = groupId;
-this.immediateTransfer = immediateTransfer;
-this.statementDescription = statementDescription;
-this.stopSameIdentifications = stopSameIdentifications;
-
+        this.billId = billId;
+        this.customerId = customerId;
+        this.paymentMethodId = paymentMethodId;
+        this.transferType = transferType;
+        this.referenceNumber = referenceNumber;
+        this.amount = amount;
+        this.language = language;
+        this.transactionDueDate = transactionDueDate;
+        this.transferTitle = transferTitle;
+        this.transferDescription = transferDescription;
+        this.transferExternalSystemNumber = transferExternalSystemNumber;
+        this.transferFrequency = transferFrequency;
+        this.groupId = groupId;
+        this.immediateTransfer = immediateTransfer;
+        this.statementDescription = statementDescription;
+        this.stopSameIdentifications = stopSameIdentifications;
     }
 
     
@@ -331,23 +329,23 @@ this.stopSameIdentifications = stopSameIdentifications;
     @Override
     public String toString() {
         return "CreateFreeOperationArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", billId='" + billId + '\'' +
- ", customerId='" + customerId + '\'' +
- ", paymentMethodId='" + paymentMethodId + '\'' +
- ", transferType='" + transferType + '\'' +
- ", referenceNumber='" + referenceNumber + '\'' +
- ", amount='" + amount + '\'' +
- ", language='" + language + '\'' +
- ", transactionDueDate='" + transactionDueDate + '\'' +
- ", transferTitle='" + transferTitle + '\'' +
- ", transferDescription='" + transferDescription + '\'' +
- ", transferExternalSystemNumber='" + transferExternalSystemNumber + '\'' +
- ", transferFrequency='" + transferFrequency + '\'' +
- ", groupId='" + groupId + '\'' +
- ", immediateTransfer='" + immediateTransfer + '\'' +
- ", statementDescription='" + statementDescription + '\'' +
- ", stopSameIdentifications='" + stopSameIdentifications + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", billId='" + billId + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", paymentMethodId='" + paymentMethodId + '\'' +
+                ", transferType='" + transferType + '\'' +
+                ", referenceNumber='" + referenceNumber + '\'' +
+                ", amount='" + amount + '\'' +
+                ", language='" + language + '\'' +
+                ", transactionDueDate='" + transactionDueDate + '\'' +
+                ", transferTitle='" + transferTitle + '\'' +
+                ", transferDescription='" + transferDescription + '\'' +
+                ", transferExternalSystemNumber='" + transferExternalSystemNumber + '\'' +
+                ", transferFrequency='" + transferFrequency + '\'' +
+                ", groupId='" + groupId + '\'' +
+                ", immediateTransfer='" + immediateTransfer + '\'' +
+                ", statementDescription='" + statementDescription + '\'' +
+                ", stopSameIdentifications='" + stopSameIdentifications + '\'' +
 
                 '}';
     }

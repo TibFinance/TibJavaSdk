@@ -36,17 +36,15 @@ public class ProcessWebHookResponse extends CustomAPIResponse {
     public ProcessWebHookResponse(Error[] errors, boolean hasError, String messages, String boardingInformationId, String transactionType, BoardingStatus boardingStatus) {
         super(errors, hasError, messages);
         this.boardingInformationId = boardingInformationId;
-this.transactionType = transactionType;
-this.boardingStatus = boardingStatus;
-
+        this.transactionType = transactionType;
+        this.boardingStatus = boardingStatus;
     }
 
     public ProcessWebHookResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.boardingStatus = objectMapper.readValue(json, BoardingStatus.class);
-
+            this.boardingStatus = objectMapper.readValue(json, BoardingStatus.class);
         }
     }
 
@@ -95,9 +93,9 @@ this.boardingStatus = objectMapper.readValue(json, BoardingStatus.class);
     @Override
     public String toString() {
         return "ProcessWebHookResponse{" +
-                 "boardingInformationId='" + boardingInformationId + '\'' +
- ", transactionType='" + transactionType + '\'' +
- ", boardingStatus='" + boardingStatus + '\'' +
+                "boardingInformationId='" + boardingInformationId + '\'' +
+                ", transactionType='" + transactionType + '\'' +
+                ", boardingStatus='" + boardingStatus + '\'' +
 
                 '}';
     }

@@ -30,14 +30,12 @@ public class SearchClientsMerchantsResponse extends CustomAPIResponse {
     public SearchClientsMerchantsResponse(Error[] errors, boolean hasError, String messages, List<SearchClientsMerchant> searchResult) {
         super(errors, hasError, messages);
         this.searchResult = searchResult;
-
     }
 
     public SearchClientsMerchantsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.searchResult = (List<SearchClientsMerchant>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class SearchClientsMerchantsResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "SearchClientsMerchantsResponse{" +
-                 "searchResult='" + searchResult + '\'' +
+                "searchResult='" + searchResult + '\'' +
 
                 '}';
     }

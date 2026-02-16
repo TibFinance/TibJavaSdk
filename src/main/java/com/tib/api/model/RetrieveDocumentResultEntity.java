@@ -21,26 +21,26 @@ public class RetrieveDocumentResultEntity  extends BoardingBaseResult  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CaseStatus")
     private String caseStatus;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderRequestId")
     private String providerRequestId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CaseId")
     private String caseId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Documentation")
     private List<BoardingDocument> documentation;
 
@@ -52,20 +52,18 @@ public class RetrieveDocumentResultEntity  extends BoardingBaseResult  {
     
     public RetrieveDocumentResultEntity(String caseStatus, String providerRequestId, String caseId, List<BoardingDocument> documentation) {
         this.caseStatus = caseStatus;
-this.providerRequestId = providerRequestId;
-this.caseId = caseId;
-this.documentation = documentation;
-
+        this.providerRequestId = providerRequestId;
+        this.caseId = caseId;
+        this.documentation = documentation;
     }
     
     
     public RetrieveDocumentResultEntity(boolean isSuccess, Integer httpStatusCode, String message, List<BoardingBaseError> errorList, String caseStatus, String providerRequestId, String caseId, List<BoardingDocument> documentation) {
         super(isSuccess, httpStatusCode, message, errorList);
         this.caseStatus = caseStatus;
-this.providerRequestId = providerRequestId;
-this.caseId = caseId;
-this.documentation = documentation;
-
+        this.providerRequestId = providerRequestId;
+        this.caseId = caseId;
+        this.documentation = documentation;
     }
 
     
@@ -121,10 +119,10 @@ this.documentation = documentation;
     @Override
     public String toString() {
         return "RetrieveDocumentResultEntity{" +
-                 "caseStatus='" + caseStatus + '\'' +
- ", providerRequestId='" + providerRequestId + '\'' +
- ", caseId='" + caseId + '\'' +
- ", documentation='" + documentation + '\'' +
+                "caseStatus='" + caseStatus + '\'' +
+                ", providerRequestId='" + providerRequestId + '\'' +
+                ", caseId='" + caseId + '\'' +
+                ", documentation='" + documentation + '\'' +
 
                 '}';
     }

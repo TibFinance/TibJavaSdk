@@ -22,50 +22,50 @@ public class CreateSupplierArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SupplierName")
     private String supplierName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SupplierEmail")
     private String supplierEmail;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * Specifies the bank account number associated with the payment method.
- */
+     * Specifies the bank account number associated with the payment method.
+     */
     @JsonProperty("AccountNumber")
     private String accountNumber;
 
     /**
- * Identifies the bank associated with the account using its numeric identifier.
- */
+     * Identifies the bank associated with the account using its numeric identifier.
+     */
     @JsonProperty("BankNumber")
     private String bankNumber;
 
     /**
- * Bank institution code identifying the financial institution for a transaction.
- */
+     * Bank institution code identifying the financial institution for a transaction.
+     */
     @JsonProperty("InstitutionNumber")
     private String institutionNumber;
 
@@ -77,28 +77,26 @@ public class CreateSupplierArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CreateSupplierArgs(String merchantId, String supplierName, String supplierEmail, Currency currency, Language language, String accountNumber, String bankNumber, String institutionNumber) {
         this.merchantId = merchantId;
-this.supplierName = supplierName;
-this.supplierEmail = supplierEmail;
-this.currency = currency;
-this.language = language;
-this.accountNumber = accountNumber;
-this.bankNumber = bankNumber;
-this.institutionNumber = institutionNumber;
-
+        this.supplierName = supplierName;
+        this.supplierEmail = supplierEmail;
+        this.currency = currency;
+        this.language = language;
+        this.accountNumber = accountNumber;
+        this.bankNumber = bankNumber;
+        this.institutionNumber = institutionNumber;
     }
     
     
     public CreateSupplierArgs(String sessionToken, String merchantId, String supplierName, String supplierEmail, Currency currency, Language language, String accountNumber, String bankNumber, String institutionNumber) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.supplierName = supplierName;
-this.supplierEmail = supplierEmail;
-this.currency = currency;
-this.language = language;
-this.accountNumber = accountNumber;
-this.bankNumber = bankNumber;
-this.institutionNumber = institutionNumber;
-
+        this.supplierName = supplierName;
+        this.supplierEmail = supplierEmail;
+        this.currency = currency;
+        this.language = language;
+        this.accountNumber = accountNumber;
+        this.bankNumber = bankNumber;
+        this.institutionNumber = institutionNumber;
     }
 
     
@@ -186,14 +184,14 @@ this.institutionNumber = institutionNumber;
     @Override
     public String toString() {
         return "CreateSupplierArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", supplierName='" + supplierName + '\'' +
- ", supplierEmail='" + supplierEmail + '\'' +
- ", currency='" + currency + '\'' +
- ", language='" + language + '\'' +
- ", accountNumber='" + accountNumber + '\'' +
- ", bankNumber='" + bankNumber + '\'' +
- ", institutionNumber='" + institutionNumber + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", supplierName='" + supplierName + '\'' +
+                ", supplierEmail='" + supplierEmail + '\'' +
+                ", currency='" + currency + '\'' +
+                ", language='" + language + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", bankNumber='" + bankNumber + '\'' +
+                ", institutionNumber='" + institutionNumber + '\'' +
 
                 '}';
     }

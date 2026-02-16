@@ -25,13 +25,11 @@ public class CreateClientNewAdminResponse extends CustomAPIResponse {
 
     public CreateClientNewAdminResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public CreateClientNewAdminResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

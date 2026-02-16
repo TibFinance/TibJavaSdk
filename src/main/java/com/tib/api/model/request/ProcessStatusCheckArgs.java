@@ -22,26 +22,26 @@ public class ProcessStatusCheckArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Gets or sets the collection of transaction details associated with the operation.
- */
+     * Gets or sets the collection of transaction details associated with the operation.
+     */
     @JsonProperty("Transactions")
     private List<TransactionIdentity> transactions;
 
     /**
- * Gets or sets the mailing information.
- */
+     * Gets or sets the mailing information.
+     */
     @JsonProperty("MailingInfo")
     private TransactionMailingInfo mailingInfo;
 
     /**
- * Gets or sets the provider credentials.
- */
+     * Gets or sets the provider credentials.
+     */
     @JsonProperty("ProviderCredentials")
     private List<ProviderAccount> providerCredentials;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionsCompressed")
     private String transactionsCompressed;
 
@@ -53,10 +53,9 @@ public class ProcessStatusCheckArgs  implements IBaseCryptedServiceArgs  {
     
     public ProcessStatusCheckArgs(List<TransactionIdentity> transactions, TransactionMailingInfo mailingInfo, List<ProviderAccount> providerCredentials, String transactionsCompressed) {
         this.transactions = transactions;
-this.mailingInfo = mailingInfo;
-this.providerCredentials = providerCredentials;
-this.transactionsCompressed = transactionsCompressed;
-
+        this.mailingInfo = mailingInfo;
+        this.providerCredentials = providerCredentials;
+        this.transactionsCompressed = transactionsCompressed;
     }
     
     
@@ -114,10 +113,10 @@ this.transactionsCompressed = transactionsCompressed;
     @Override
     public String toString() {
         return "ProcessStatusCheckArgs{" +
-                 "transactions='" + transactions + '\'' +
- ", mailingInfo='" + mailingInfo + '\'' +
- ", providerCredentials='" + providerCredentials + '\'' +
- ", transactionsCompressed='" + transactionsCompressed + '\'' +
+                "transactions='" + transactions + '\'' +
+                ", mailingInfo='" + mailingInfo + '\'' +
+                ", providerCredentials='" + providerCredentials + '\'' +
+                ", transactionsCompressed='" + transactionsCompressed + '\'' +
 
                 '}';
     }

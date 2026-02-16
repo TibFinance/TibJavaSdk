@@ -24,44 +24,44 @@ public class FreeDepositOperation   {
 
     
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
- */
+     * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
+     */
     @JsonProperty("OperationTarget")
     private OperationTarget operationTarget;
 
     /**
- * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
- */
+     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
- * Gets or sets the unique identifier of the target system used to reference the client’s contract within TIB Finance.
- */
+     * Gets or sets the unique identifier of the target system used to reference the client’s contract within TIB Finance.
+     */
     @JsonProperty("TargetSystemId")
     private String targetSystemId;
 
     /**
- * Gets or sets the collection of transaction details associated with the operation.
- */
+     * Gets or sets the collection of transaction details associated with the operation.
+     */
     @JsonProperty("Transactions")
     private List<TransactionCommon> transactions;
 
     /**
- * Gets or sets the free deposit list.
- */
+     * Gets or sets the free deposit list.
+     */
     @JsonProperty("FreeDepositList")
     private List<FreeDepositWithHierarchy> freeDepositList;
 
@@ -73,13 +73,12 @@ public class FreeDepositOperation   {
     
     public FreeDepositOperation(Double amount, Currency currency, OperationTarget operationTarget, TransferDirection operationDirection, String targetSystemId, List<TransactionCommon> transactions, List<FreeDepositWithHierarchy> freeDepositList) {
         this.amount = amount;
-this.currency = currency;
-this.operationTarget = operationTarget;
-this.operationDirection = operationDirection;
-this.targetSystemId = targetSystemId;
-this.transactions = transactions;
-this.freeDepositList = freeDepositList;
-
+        this.currency = currency;
+        this.operationTarget = operationTarget;
+        this.operationDirection = operationDirection;
+        this.targetSystemId = targetSystemId;
+        this.transactions = transactions;
+        this.freeDepositList = freeDepositList;
     }
     
     
@@ -161,13 +160,13 @@ this.freeDepositList = freeDepositList;
     @Override
     public String toString() {
         return "FreeDepositOperation{" +
-                 "amount='" + amount + '\'' +
- ", currency='" + currency + '\'' +
- ", operationTarget='" + operationTarget + '\'' +
- ", operationDirection='" + operationDirection + '\'' +
- ", targetSystemId='" + targetSystemId + '\'' +
- ", transactions='" + transactions + '\'' +
- ", freeDepositList='" + freeDepositList + '\'' +
+                "amount='" + amount + '\'' +
+                ", currency='" + currency + '\'' +
+                ", operationTarget='" + operationTarget + '\'' +
+                ", operationDirection='" + operationDirection + '\'' +
+                ", targetSystemId='" + targetSystemId + '\'' +
+                ", transactions='" + transactions + '\'' +
+                ", freeDepositList='" + freeDepositList + '\'' +
 
                 '}';
     }

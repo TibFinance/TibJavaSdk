@@ -20,14 +20,14 @@ public class SearchCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * This property represents the full name of the customer in the system.
- */
+     * This property represents the full name of the customer in the system.
+     */
     @JsonProperty("CustomerName")
     private String customerName;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
@@ -39,16 +39,14 @@ public class SearchCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public SearchCustomerArgs(String customerName, String merchantId) {
         this.customerName = customerName;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
     
     
     public SearchCustomerArgs(String sessionToken, String customerName, String merchantId) {
         super(sessionToken);
         this.customerName = customerName;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     
@@ -88,8 +86,8 @@ this.merchantId = merchantId;
     @Override
     public String toString() {
         return "SearchCustomerArgs{" +
-                 "customerName='" + customerName + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "customerName='" + customerName + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

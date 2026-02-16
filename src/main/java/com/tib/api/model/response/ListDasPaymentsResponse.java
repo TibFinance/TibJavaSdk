@@ -34,16 +34,14 @@ public class ListDasPaymentsResponse extends CustomAPIResponse {
     public ListDasPaymentsResponse(Error[] errors, boolean hasError, String messages, List<DasPaymentCanada> canadaDasPayments, List<DasPaymentQuebec> quebecDasPayments) {
         super(errors, hasError, messages);
         this.canadaDasPayments = canadaDasPayments;
-this.quebecDasPayments = quebecDasPayments;
-
+        this.quebecDasPayments = quebecDasPayments;
     }
 
     public ListDasPaymentsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.canadaDasPayments = (List<DasPaymentCanada>) apiResponse.getResponse();
-this.quebecDasPayments = (List<DasPaymentQuebec>) apiResponse.getResponse();
-
+            this.quebecDasPayments = (List<DasPaymentQuebec>) apiResponse.getResponse();
         }
     }
 
@@ -84,8 +82,8 @@ this.quebecDasPayments = (List<DasPaymentQuebec>) apiResponse.getResponse();
     @Override
     public String toString() {
         return "ListDasPaymentsResponse{" +
-                 "canadaDasPayments='" + canadaDasPayments + '\'' +
- ", quebecDasPayments='" + quebecDasPayments + '\'' +
+                "canadaDasPayments='" + canadaDasPayments + '\'' +
+                ", quebecDasPayments='" + quebecDasPayments + '\'' +
 
                 '}';
     }

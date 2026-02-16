@@ -32,16 +32,14 @@ public class ChangeTransactionStatusResponse extends CustomAPIResponse {
     public ChangeTransactionStatusResponse(Error[] errors, boolean hasError, String messages, String transactionId, Integer transactionStatus) {
         super(errors, hasError, messages);
         this.transactionId = transactionId;
-this.transactionStatus = transactionStatus;
-
+        this.transactionStatus = transactionStatus;
     }
 
     public ChangeTransactionStatusResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transactionId = apiResponse.getResponse().toString();
-this.transactionStatus = Integer.parseInt(apiResponse.getResponse().toString());
-
+            this.transactionStatus = Integer.parseInt(apiResponse.getResponse().toString());
         }
     }
 
@@ -82,8 +80,8 @@ this.transactionStatus = Integer.parseInt(apiResponse.getResponse().toString());
     @Override
     public String toString() {
         return "ChangeTransactionStatusResponse{" +
-                 "transactionId='" + transactionId + '\'' +
- ", transactionStatus='" + transactionStatus + '\'' +
+                "transactionId='" + transactionId + '\'' +
+                ", transactionStatus='" + transactionStatus + '\'' +
 
                 '}';
     }

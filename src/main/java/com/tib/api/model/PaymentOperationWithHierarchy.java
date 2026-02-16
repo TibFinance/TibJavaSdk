@@ -23,92 +23,92 @@ public class PaymentOperationWithHierarchy   {
 
     
     /**
- * Retrieves or assigns the unique identifier for a payment.
- */
+     * Retrieves or assigns the unique identifier for a payment.
+     */
     @JsonProperty("PaymentId")
     private String paymentId;
 
     /**
- * Retrieves or assigns the unique identifier for a bill.
- */
+     * Retrieves or assigns the unique identifier for a bill.
+     */
     @JsonProperty("BillId")
     private String billId;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Gets or sets the payment group identifier.
- */
+     * Gets or sets the payment group identifier.
+     */
     @JsonProperty("PaymentGroupId")
     private String paymentGroupId;
 
     /**
- * Gets or sets the monetary amount associated with an operation.
- */
+     * Gets or sets the monetary amount associated with an operation.
+     */
     @JsonProperty("OperationAmount")
     private Double operationAmount;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
- */
+     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
- * Specifies the category of a financial operation.
- */
+     * Specifies the category of a financial operation.
+     */
     @JsonProperty("OperationKind")
     private OperationKind operationKind;
 
     /**
- * Gets or sets the operation created date.
- */
+     * Gets or sets the operation created date.
+     */
     @JsonProperty("OperationCreatedDate")
     private LocalDateTime operationCreatedDate;
 
     /**
- * Gets or sets the related payment amount.
- */
+     * Gets or sets the related payment amount.
+     */
     @JsonProperty("RelatedPaymentAmount")
     private Double relatedPaymentAmount;
 
     /**
- * Gets or sets the related payment convenient fees for credit card.
- */
+     * Gets or sets the related payment convenient fees for credit card.
+     */
     @JsonProperty("RelatedPaymentConvenientFeesForCreditCard")
     private Double relatedPaymentConvenientFeesForCreditCard;
 
     /**
- * Gets or sets the related payment convenient fees for direct account.
- */
+     * Gets or sets the related payment convenient fees for direct account.
+     */
     @JsonProperty("RelatedPaymentConvenientFeesForDirectAccount")
     private Double relatedPaymentConvenientFeesForDirectAccount;
 
     /**
- * Gets or sets the related payment current status.
- */
+     * Gets or sets the related payment current status.
+     */
     @JsonProperty("RelatedPaymentCurrentStatus")
     private ProcessStatus relatedPaymentCurrentStatus;
 
     /**
- * Gets or sets the related payment created date.
- */
+     * Gets or sets the related payment created date.
+     */
     @JsonProperty("RelatedPaymentCreatedDate")
     private LocalDateTime relatedPaymentCreatedDate;
 
     /**
- * Gets or sets the related payment customer identifier.
- */
+     * Gets or sets the related payment customer identifier.
+     */
     @JsonProperty("RelatedPaymentCustomerId")
     private String relatedPaymentCustomerId;
 
@@ -120,21 +120,20 @@ public class PaymentOperationWithHierarchy   {
     
     public PaymentOperationWithHierarchy(String paymentId, String billId, String merchantId, String paymentGroupId, Double operationAmount, Currency currency, TransferDirection operationDirection, OperationKind operationKind, LocalDateTime operationCreatedDate, Double relatedPaymentAmount, Double relatedPaymentConvenientFeesForCreditCard, Double relatedPaymentConvenientFeesForDirectAccount, ProcessStatus relatedPaymentCurrentStatus, LocalDateTime relatedPaymentCreatedDate, String relatedPaymentCustomerId) {
         this.paymentId = paymentId;
-this.billId = billId;
-this.merchantId = merchantId;
-this.paymentGroupId = paymentGroupId;
-this.operationAmount = operationAmount;
-this.currency = currency;
-this.operationDirection = operationDirection;
-this.operationKind = operationKind;
-this.operationCreatedDate = operationCreatedDate;
-this.relatedPaymentAmount = relatedPaymentAmount;
-this.relatedPaymentConvenientFeesForCreditCard = relatedPaymentConvenientFeesForCreditCard;
-this.relatedPaymentConvenientFeesForDirectAccount = relatedPaymentConvenientFeesForDirectAccount;
-this.relatedPaymentCurrentStatus = relatedPaymentCurrentStatus;
-this.relatedPaymentCreatedDate = relatedPaymentCreatedDate;
-this.relatedPaymentCustomerId = relatedPaymentCustomerId;
-
+        this.billId = billId;
+        this.merchantId = merchantId;
+        this.paymentGroupId = paymentGroupId;
+        this.operationAmount = operationAmount;
+        this.currency = currency;
+        this.operationDirection = operationDirection;
+        this.operationKind = operationKind;
+        this.operationCreatedDate = operationCreatedDate;
+        this.relatedPaymentAmount = relatedPaymentAmount;
+        this.relatedPaymentConvenientFeesForCreditCard = relatedPaymentConvenientFeesForCreditCard;
+        this.relatedPaymentConvenientFeesForDirectAccount = relatedPaymentConvenientFeesForDirectAccount;
+        this.relatedPaymentCurrentStatus = relatedPaymentCurrentStatus;
+        this.relatedPaymentCreatedDate = relatedPaymentCreatedDate;
+        this.relatedPaymentCustomerId = relatedPaymentCustomerId;
     }
     
     
@@ -280,21 +279,21 @@ this.relatedPaymentCustomerId = relatedPaymentCustomerId;
     @Override
     public String toString() {
         return "PaymentOperationWithHierarchy{" +
-                 "paymentId='" + paymentId + '\'' +
- ", billId='" + billId + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", paymentGroupId='" + paymentGroupId + '\'' +
- ", operationAmount='" + operationAmount + '\'' +
- ", currency='" + currency + '\'' +
- ", operationDirection='" + operationDirection + '\'' +
- ", operationKind='" + operationKind + '\'' +
- ", operationCreatedDate='" + operationCreatedDate + '\'' +
- ", relatedPaymentAmount='" + relatedPaymentAmount + '\'' +
- ", relatedPaymentConvenientFeesForCreditCard='" + relatedPaymentConvenientFeesForCreditCard + '\'' +
- ", relatedPaymentConvenientFeesForDirectAccount='" + relatedPaymentConvenientFeesForDirectAccount + '\'' +
- ", relatedPaymentCurrentStatus='" + relatedPaymentCurrentStatus + '\'' +
- ", relatedPaymentCreatedDate='" + relatedPaymentCreatedDate + '\'' +
- ", relatedPaymentCustomerId='" + relatedPaymentCustomerId + '\'' +
+                "paymentId='" + paymentId + '\'' +
+                ", billId='" + billId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", paymentGroupId='" + paymentGroupId + '\'' +
+                ", operationAmount='" + operationAmount + '\'' +
+                ", currency='" + currency + '\'' +
+                ", operationDirection='" + operationDirection + '\'' +
+                ", operationKind='" + operationKind + '\'' +
+                ", operationCreatedDate='" + operationCreatedDate + '\'' +
+                ", relatedPaymentAmount='" + relatedPaymentAmount + '\'' +
+                ", relatedPaymentConvenientFeesForCreditCard='" + relatedPaymentConvenientFeesForCreditCard + '\'' +
+                ", relatedPaymentConvenientFeesForDirectAccount='" + relatedPaymentConvenientFeesForDirectAccount + '\'' +
+                ", relatedPaymentCurrentStatus='" + relatedPaymentCurrentStatus + '\'' +
+                ", relatedPaymentCreatedDate='" + relatedPaymentCreatedDate + '\'' +
+                ", relatedPaymentCustomerId='" + relatedPaymentCustomerId + '\'' +
 
                 '}';
     }

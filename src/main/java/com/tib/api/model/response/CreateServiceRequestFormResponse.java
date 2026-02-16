@@ -25,13 +25,11 @@ public class CreateServiceRequestFormResponse extends CustomAPIResponse {
 
     public CreateServiceRequestFormResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public CreateServiceRequestFormResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

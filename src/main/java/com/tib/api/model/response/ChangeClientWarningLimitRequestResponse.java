@@ -25,13 +25,11 @@ public class ChangeClientWarningLimitRequestResponse extends CustomAPIResponse {
 
     public ChangeClientWarningLimitRequestResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public ChangeClientWarningLimitRequestResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

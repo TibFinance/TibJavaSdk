@@ -22,44 +22,44 @@ public class TransactionSatusResultEntity   {
 
     
     /**
- * Retrieves the numeric status code of an operation.
- */
+     * Retrieves the numeric status code of an operation.
+     */
     @JsonProperty("OperationStatus")
     private OperationStatus operationStatus;
 
     /**
- * Gets or sets the result of a banking operation as defined by the BankingOperationResultEnum.
- */
+     * Gets or sets the result of a banking operation as defined by the BankingOperationResultEnum.
+     */
     @JsonProperty("BankingOperationResult")
     private BankingOperationResult bankingOperationResult;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("BankingOperationDescription")
     private String bankingOperationDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderType")
     private Provider providerType;
 
     /**
- * Gets or sets the description associated with a transaction.
- */
+     * Gets or sets the description associated with a transaction.
+     */
     @JsonProperty("TransactionDescription")
     private String transactionDescription;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderTransactionId")
     private String providerTransactionId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("RealDueDate")
     private LocalDateTime realDueDate;
 
@@ -71,13 +71,12 @@ public class TransactionSatusResultEntity   {
     
     public TransactionSatusResultEntity(OperationStatus operationStatus, BankingOperationResult bankingOperationResult, String bankingOperationDescription, Provider providerType, String transactionDescription, String providerTransactionId, LocalDateTime realDueDate) {
         this.operationStatus = operationStatus;
-this.bankingOperationResult = bankingOperationResult;
-this.bankingOperationDescription = bankingOperationDescription;
-this.providerType = providerType;
-this.transactionDescription = transactionDescription;
-this.providerTransactionId = providerTransactionId;
-this.realDueDate = realDueDate;
-
+        this.bankingOperationResult = bankingOperationResult;
+        this.bankingOperationDescription = bankingOperationDescription;
+        this.providerType = providerType;
+        this.transactionDescription = transactionDescription;
+        this.providerTransactionId = providerTransactionId;
+        this.realDueDate = realDueDate;
     }
     
     
@@ -159,13 +158,13 @@ this.realDueDate = realDueDate;
     @Override
     public String toString() {
         return "TransactionSatusResultEntity{" +
-                 "operationStatus='" + operationStatus + '\'' +
- ", bankingOperationResult='" + bankingOperationResult + '\'' +
- ", bankingOperationDescription='" + bankingOperationDescription + '\'' +
- ", providerType='" + providerType + '\'' +
- ", transactionDescription='" + transactionDescription + '\'' +
- ", providerTransactionId='" + providerTransactionId + '\'' +
- ", realDueDate='" + realDueDate + '\'' +
+                "operationStatus='" + operationStatus + '\'' +
+                ", bankingOperationResult='" + bankingOperationResult + '\'' +
+                ", bankingOperationDescription='" + bankingOperationDescription + '\'' +
+                ", providerType='" + providerType + '\'' +
+                ", transactionDescription='" + transactionDescription + '\'' +
+                ", providerTransactionId='" + providerTransactionId + '\'' +
+                ", realDueDate='" + realDueDate + '\'' +
 
                 '}';
     }

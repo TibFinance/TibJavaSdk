@@ -19,8 +19,8 @@ public class IsValidPaymentIdArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Retrieves or assigns the unique identifier for a payment.
- */
+     * Retrieves or assigns the unique identifier for a payment.
+     */
     @JsonProperty("PaymentId")
     private String paymentId;
 
@@ -32,7 +32,6 @@ public class IsValidPaymentIdArgs  implements IBaseCryptedServiceArgs  {
     
     public IsValidPaymentIdArgs(String paymentId) {
         this.paymentId = paymentId;
-
     }
     
     
@@ -66,7 +65,7 @@ public class IsValidPaymentIdArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "IsValidPaymentIdArgs{" +
-                 "paymentId='" + paymentId + '\'' +
+                "paymentId='" + paymentId + '\'' +
 
                 '}';
     }

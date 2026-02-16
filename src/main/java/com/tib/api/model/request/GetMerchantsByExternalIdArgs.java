@@ -20,14 +20,14 @@ public class GetMerchantsByExternalIdArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
- * Represents the unique identifier for a merchant within an external system. This ID is crucial for integrating and synchronizing merchant data across different platforms.
- */
+     * Represents the unique identifier for a merchant within an external system. This ID is crucial for integrating and synchronizing merchant data across different platforms.
+     */
     @JsonProperty("ExternalSystemId")
     private String externalSystemId;
 
     /**
- * Represents the external identity associated with a merchant within an external system.
- */
+     * Represents the external identity associated with a merchant within an external system.
+     */
     @JsonProperty("ExternalSystemGroupId")
     private String externalSystemGroupId;
 
@@ -39,16 +39,14 @@ public class GetMerchantsByExternalIdArgs  extends BaseAuthenticatedCryptedArgs 
     
     public GetMerchantsByExternalIdArgs(String externalSystemId, String externalSystemGroupId) {
         this.externalSystemId = externalSystemId;
-this.externalSystemGroupId = externalSystemGroupId;
-
+        this.externalSystemGroupId = externalSystemGroupId;
     }
     
     
     public GetMerchantsByExternalIdArgs(String sessionToken, String externalSystemId, String externalSystemGroupId) {
         super(sessionToken);
         this.externalSystemId = externalSystemId;
-this.externalSystemGroupId = externalSystemGroupId;
-
+        this.externalSystemGroupId = externalSystemGroupId;
     }
 
     
@@ -88,8 +86,8 @@ this.externalSystemGroupId = externalSystemGroupId;
     @Override
     public String toString() {
         return "GetMerchantsByExternalIdArgs{" +
-                 "externalSystemId='" + externalSystemId + '\'' +
- ", externalSystemGroupId='" + externalSystemGroupId + '\'' +
+                "externalSystemId='" + externalSystemId + '\'' +
+                ", externalSystemGroupId='" + externalSystemGroupId + '\'' +
 
                 '}';
     }

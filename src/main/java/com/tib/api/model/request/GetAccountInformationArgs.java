@@ -20,8 +20,8 @@ public class GetAccountInformationArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Gets or sets the providers to call.
- */
+     * Gets or sets the providers to call.
+     */
     @JsonProperty("ProvidersToCall")
     private List<ProviderAccount> providersToCall;
 
@@ -33,7 +33,6 @@ public class GetAccountInformationArgs  implements IBaseCryptedServiceArgs  {
     
     public GetAccountInformationArgs(List<ProviderAccount> providersToCall) {
         this.providersToCall = providersToCall;
-
     }
     
     
@@ -67,7 +66,7 @@ public class GetAccountInformationArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "GetAccountInformationArgs{" +
-                 "providersToCall='" + providersToCall + '\'' +
+                "providersToCall='" + providersToCall + '\'' +
 
                 '}';
     }

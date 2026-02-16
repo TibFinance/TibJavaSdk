@@ -20,14 +20,14 @@ public class AdminTransferValidationRequestArgs  extends BaseAdminOnlyCryptedArg
 
     
     /**
- * Gets or sets a value indicating whether this <see cref="AdminTransferValidationRequestArgs"> is approved.
- */
+     * Gets or sets a value indicating whether this <see cref="AdminTransferValidationRequestArgs"> is approved.
+     */
     @JsonProperty("Approved")
     private boolean approved;
 
     /**
- * Gets or sets the identifier of the public token required to initiate a drop‑in session.
- */
+     * Gets or sets the identifier of the public token required to initiate a drop‑in session.
+     */
     @JsonProperty("PublicTokenId")
     private String publicTokenId;
 
@@ -39,16 +39,14 @@ public class AdminTransferValidationRequestArgs  extends BaseAdminOnlyCryptedArg
     
     public AdminTransferValidationRequestArgs(boolean approved, String publicTokenId) {
         this.approved = approved;
-this.publicTokenId = publicTokenId;
-
+        this.publicTokenId = publicTokenId;
     }
     
     
     public AdminTransferValidationRequestArgs(String adminSessionToken, boolean approved, String publicTokenId) {
         super(adminSessionToken);
         this.approved = approved;
-this.publicTokenId = publicTokenId;
-
+        this.publicTokenId = publicTokenId;
     }
 
     
@@ -88,8 +86,8 @@ this.publicTokenId = publicTokenId;
     @Override
     public String toString() {
         return "AdminTransferValidationRequestArgs{" +
-                 "approved='" + approved + '\'' +
- ", publicTokenId='" + publicTokenId + '\'' +
+                "approved='" + approved + '\'' +
+                ", publicTokenId='" + publicTokenId + '\'' +
 
                 '}';
     }

@@ -33,16 +33,14 @@ public class GetBinInfoResponse extends CustomAPIResponse {
     public GetBinInfoResponse(Error[] errors, boolean hasError, String messages, BinInfoDto binInfo, boolean found) {
         super(errors, hasError, messages);
         this.binInfo = binInfo;
-this.found = found;
-
+        this.found = found;
     }
 
     public GetBinInfoResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.binInfo = objectMapper.readValue(json, BinInfoDto.class);
-
+            this.binInfo = objectMapper.readValue(json, BinInfoDto.class);
         }
     }
 
@@ -83,8 +81,8 @@ this.binInfo = objectMapper.readValue(json, BinInfoDto.class);
     @Override
     public String toString() {
         return "GetBinInfoResponse{" +
-                 "binInfo='" + binInfo + '\'' +
- ", found='" + found + '\'' +
+                "binInfo='" + binInfo + '\'' +
+                ", found='" + found + '\'' +
 
                 '}';
     }

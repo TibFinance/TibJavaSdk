@@ -32,16 +32,14 @@ public class GetReferenceInformationResponse extends CustomAPIResponse {
     public GetReferenceInformationResponse(Error[] errors, boolean hasError, String messages, String referenceDataString1, String referenceDataGuid1) {
         super(errors, hasError, messages);
         this.referenceDataString1 = referenceDataString1;
-this.referenceDataGuid1 = referenceDataGuid1;
-
+        this.referenceDataGuid1 = referenceDataGuid1;
     }
 
     public GetReferenceInformationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.referenceDataString1 = apiResponse.getResponse().toString();
-this.referenceDataGuid1 = apiResponse.getResponse().toString();
-
+            this.referenceDataGuid1 = apiResponse.getResponse().toString();
         }
     }
 
@@ -82,8 +80,8 @@ this.referenceDataGuid1 = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "GetReferenceInformationResponse{" +
-                 "referenceDataString1='" + referenceDataString1 + '\'' +
- ", referenceDataGuid1='" + referenceDataGuid1 + '\'' +
+                "referenceDataString1='" + referenceDataString1 + '\'' +
+                ", referenceDataGuid1='" + referenceDataGuid1 + '\'' +
 
                 '}';
     }

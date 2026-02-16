@@ -32,16 +32,14 @@ public class EditPaymentResponse extends CustomAPIResponse {
     public EditPaymentResponse(Error[] errors, boolean hasError, String messages, String paymentId, String merchantId) {
         super(errors, hasError, messages);
         this.paymentId = paymentId;
-this.merchantId = merchantId;
-
+        this.merchantId = merchantId;
     }
 
     public EditPaymentResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.paymentId = apiResponse.getResponse().toString();
-this.merchantId = apiResponse.getResponse().toString();
-
+            this.merchantId = apiResponse.getResponse().toString();
         }
     }
 
@@ -82,8 +80,8 @@ this.merchantId = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "EditPaymentResponse{" +
-                 "paymentId='" + paymentId + '\'' +
- ", merchantId='" + merchantId + '\'' +
+                "paymentId='" + paymentId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
 
                 '}';
     }

@@ -20,14 +20,14 @@ public class ChangeOperationStatusBulkArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("OperationIds")
     private List<String> operationIds;
 
     /**
- * Retrieves the numeric status code of an operation.
- */
+     * Retrieves the numeric status code of an operation.
+     */
     @JsonProperty("OperationStatus")
     private Integer operationStatus;
 
@@ -39,16 +39,14 @@ public class ChangeOperationStatusBulkArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public ChangeOperationStatusBulkArgs(List<String> operationIds, Integer operationStatus) {
         this.operationIds = operationIds;
-this.operationStatus = operationStatus;
-
+        this.operationStatus = operationStatus;
     }
     
     
     public ChangeOperationStatusBulkArgs(String adminSessionToken, List<String> operationIds, Integer operationStatus) {
         super(adminSessionToken);
         this.operationIds = operationIds;
-this.operationStatus = operationStatus;
-
+        this.operationStatus = operationStatus;
     }
 
     
@@ -88,8 +86,8 @@ this.operationStatus = operationStatus;
     @Override
     public String toString() {
         return "ChangeOperationStatusBulkArgs{" +
-                 "operationIds='" + operationIds + '\'' +
- ", operationStatus='" + operationStatus + '\'' +
+                "operationIds='" + operationIds + '\'' +
+                ", operationStatus='" + operationStatus + '\'' +
 
                 '}';
     }

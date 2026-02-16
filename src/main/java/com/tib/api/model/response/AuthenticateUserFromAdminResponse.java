@@ -29,14 +29,12 @@ public class AuthenticateUserFromAdminResponse extends CustomAPIResponse {
     public AuthenticateUserFromAdminResponse(Error[] errors, boolean hasError, String messages, String key) {
         super(errors, hasError, messages);
         this.key = key;
-
     }
 
     public AuthenticateUserFromAdminResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.key = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class AuthenticateUserFromAdminResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "AuthenticateUserFromAdminResponse{" +
-                 "key='" + key + '\'' +
+                "key='" + key + '\'' +
 
                 '}';
     }

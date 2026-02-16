@@ -20,8 +20,8 @@ public class SubmitDocumentResultEntity  extends BoardingBaseResult  {
 
     
     /**
- * Represents the current state of a transaction within the system.
- */
+     * Represents the current state of a transaction within the system.
+     */
     @JsonProperty("Status")
     private String status;
 
@@ -33,14 +33,12 @@ public class SubmitDocumentResultEntity  extends BoardingBaseResult  {
     
     public SubmitDocumentResultEntity(String status) {
         this.status = status;
-
     }
     
     
     public SubmitDocumentResultEntity(boolean isSuccess, Integer httpStatusCode, String message, List<BoardingBaseError> errorList, String status) {
         super(isSuccess, httpStatusCode, message, errorList);
         this.status = status;
-
     }
 
     
@@ -72,7 +70,7 @@ public class SubmitDocumentResultEntity  extends BoardingBaseResult  {
     @Override
     public String toString() {
         return "SubmitDocumentResultEntity{" +
-                 "status='" + status + '\'' +
+                "status='" + status + '\'' +
 
                 '}';
     }

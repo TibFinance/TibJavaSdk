@@ -23,50 +23,50 @@ public class CreateDirectDepositArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Gets or sets the origin merchant identifier.
- */
+     * Gets or sets the origin merchant identifier.
+     */
     @JsonProperty("OriginMerchantId")
     private String originMerchantId;
 
     /**
- * Free deposit account information
- */
+     * Free deposit account information
+     */
     @JsonProperty("DestinationAccount")
     private Account destinationAccount;
 
     /**
- * Gets or sets the deposit due date.
- */
+     * Gets or sets the deposit due date.
+     */
     @JsonProperty("DepositDueDate")
     private LocalDateTime depositDueDate;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Represents a brief description used in statements to identify or clarify the transaction.
- */
+     * Represents a brief description used in statements to identify or clarify the transaction.
+     */
     @JsonProperty("StatementDescription")
     private String statementDescription;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
- * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
- */
+     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     */
     @JsonProperty("Language")
     private Language language;
 
     /**
- * Retrieves or assigns the reference number associated with a transaction or operation.
- */
+     * Retrieves or assigns the reference number associated with a transaction or operation.
+     */
     @JsonProperty("ReferenceNumber")
     private String referenceNumber;
 
@@ -78,28 +78,26 @@ public class CreateDirectDepositArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public CreateDirectDepositArgs(String originMerchantId, Account destinationAccount, LocalDateTime depositDueDate, Double amount, String statementDescription, Currency currency, Language language, String referenceNumber) {
         this.originMerchantId = originMerchantId;
-this.destinationAccount = destinationAccount;
-this.depositDueDate = depositDueDate;
-this.amount = amount;
-this.statementDescription = statementDescription;
-this.currency = currency;
-this.language = language;
-this.referenceNumber = referenceNumber;
-
+        this.destinationAccount = destinationAccount;
+        this.depositDueDate = depositDueDate;
+        this.amount = amount;
+        this.statementDescription = statementDescription;
+        this.currency = currency;
+        this.language = language;
+        this.referenceNumber = referenceNumber;
     }
     
     
     public CreateDirectDepositArgs(String sessionToken, String originMerchantId, Account destinationAccount, LocalDateTime depositDueDate, Double amount, String statementDescription, Currency currency, Language language, String referenceNumber) {
         super(sessionToken);
         this.originMerchantId = originMerchantId;
-this.destinationAccount = destinationAccount;
-this.depositDueDate = depositDueDate;
-this.amount = amount;
-this.statementDescription = statementDescription;
-this.currency = currency;
-this.language = language;
-this.referenceNumber = referenceNumber;
-
+        this.destinationAccount = destinationAccount;
+        this.depositDueDate = depositDueDate;
+        this.amount = amount;
+        this.statementDescription = statementDescription;
+        this.currency = currency;
+        this.language = language;
+        this.referenceNumber = referenceNumber;
     }
 
     
@@ -187,14 +185,14 @@ this.referenceNumber = referenceNumber;
     @Override
     public String toString() {
         return "CreateDirectDepositArgs{" +
-                 "originMerchantId='" + originMerchantId + '\'' +
- ", destinationAccount='" + destinationAccount + '\'' +
- ", depositDueDate='" + depositDueDate + '\'' +
- ", amount='" + amount + '\'' +
- ", statementDescription='" + statementDescription + '\'' +
- ", currency='" + currency + '\'' +
- ", language='" + language + '\'' +
- ", referenceNumber='" + referenceNumber + '\'' +
+                "originMerchantId='" + originMerchantId + '\'' +
+                ", destinationAccount='" + destinationAccount + '\'' +
+                ", depositDueDate='" + depositDueDate + '\'' +
+                ", amount='" + amount + '\'' +
+                ", statementDescription='" + statementDescription + '\'' +
+                ", currency='" + currency + '\'' +
+                ", language='" + language + '\'' +
+                ", referenceNumber='" + referenceNumber + '\'' +
 
                 '}';
     }

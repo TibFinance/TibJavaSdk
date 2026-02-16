@@ -19,26 +19,26 @@ public class CheckResult   {
 
     
     /**
- * Gets or sets a value indicating whether [account found].
- */
+     * Gets or sets a value indicating whether [account found].
+     */
     @JsonProperty("AccountFound")
     private boolean accountFound;
 
     /**
- * Specifies the starting date for filtering payment due dates.
- */
+     * Specifies the starting date for filtering payment due dates.
+     */
     @JsonProperty("FromDate")
     private LocalDateTime fromDate;
 
     /**
- * Specifies the payment due date.
- */
+     * Specifies the payment due date.
+     */
     @JsonProperty("ToDate")
     private LocalDateTime toDate;
 
     /**
- * Gets or sets the fail count.
- */
+     * Gets or sets the fail count.
+     */
     @JsonProperty("FailCount")
     private Integer failCount;
 
@@ -50,10 +50,9 @@ public class CheckResult   {
     
     public CheckResult(boolean accountFound, LocalDateTime fromDate, LocalDateTime toDate, Integer failCount) {
         this.accountFound = accountFound;
-this.fromDate = fromDate;
-this.toDate = toDate;
-this.failCount = failCount;
-
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+        this.failCount = failCount;
     }
     
     
@@ -111,10 +110,10 @@ this.failCount = failCount;
     @Override
     public String toString() {
         return "CheckResult{" +
-                 "accountFound='" + accountFound + '\'' +
- ", fromDate='" + fromDate + '\'' +
- ", toDate='" + toDate + '\'' +
- ", failCount='" + failCount + '\'' +
+                "accountFound='" + accountFound + '\'' +
+                ", fromDate='" + fromDate + '\'' +
+                ", toDate='" + toDate + '\'' +
+                ", failCount='" + failCount + '\'' +
 
                 '}';
     }

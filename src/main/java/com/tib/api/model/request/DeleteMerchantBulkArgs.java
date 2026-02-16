@@ -20,8 +20,8 @@ public class DeleteMerchantBulkArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantIds")
     private List<String> merchantIds;
 
@@ -33,14 +33,12 @@ public class DeleteMerchantBulkArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public DeleteMerchantBulkArgs(List<String> merchantIds) {
         this.merchantIds = merchantIds;
-
     }
     
     
     public DeleteMerchantBulkArgs(String adminSessionToken, List<String> merchantIds) {
         super(adminSessionToken);
         this.merchantIds = merchantIds;
-
     }
 
     
@@ -72,7 +70,7 @@ public class DeleteMerchantBulkArgs  extends BaseAdminOnlyCryptedArgs  {
     @Override
     public String toString() {
         return "DeleteMerchantBulkArgs{" +
-                 "merchantIds='" + merchantIds + '\'' +
+                "merchantIds='" + merchantIds + '\'' +
 
                 '}';
     }

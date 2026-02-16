@@ -27,56 +27,56 @@ public class CreateClientNewAdminArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Identifies the TIB client (account) using its unique GUID.
- */
+     * Identifies the TIB client (account) using its unique GUID.
+     */
     @JsonProperty("Client")
     private ClientEntity client;
 
     /**
- * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
- */
+     * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
+     */
     @JsonProperty("Password")
     private String password;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientLogin")
     private ClientLogin clientLogin;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ServiceInfo")
     private ServiceEntity serviceInfo;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CreateInnactive")
     private boolean createInnactive;
 
     /**
- * This property holds the basic information necessary for creating or updating a merchant's account within the TIB Finance API system.
- */
+     * This property holds the basic information necessary for creating or updating a merchant's account within the TIB Finance API system.
+     */
     @JsonProperty("MerchantInfo")
     private Merchant merchantInfo;
 
     /**
- * Gets or sets the ServiceFeeSettings model that defines the fee configuration for a specific service contract.
- */
+     * Gets or sets the ServiceFeeSettings model that defines the fee configuration for a specific service contract.
+     */
     @JsonProperty("ServiceFeeSettings")
     private ServiceFeeSettings serviceFeeSettings;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Settings")
     private ServiceSettings settings;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ClientSettings")
     private ClientSettings clientSettings;
 
@@ -88,30 +88,28 @@ public class CreateClientNewAdminArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public CreateClientNewAdminArgs(ClientEntity client, String password, ClientLogin clientLogin, ServiceEntity serviceInfo, boolean createInnactive, Merchant merchantInfo, ServiceFeeSettings serviceFeeSettings, ServiceSettings settings, ClientSettings clientSettings) {
         this.client = client;
-this.password = password;
-this.clientLogin = clientLogin;
-this.serviceInfo = serviceInfo;
-this.createInnactive = createInnactive;
-this.merchantInfo = merchantInfo;
-this.serviceFeeSettings = serviceFeeSettings;
-this.settings = settings;
-this.clientSettings = clientSettings;
-
+        this.password = password;
+        this.clientLogin = clientLogin;
+        this.serviceInfo = serviceInfo;
+        this.createInnactive = createInnactive;
+        this.merchantInfo = merchantInfo;
+        this.serviceFeeSettings = serviceFeeSettings;
+        this.settings = settings;
+        this.clientSettings = clientSettings;
     }
     
     
     public CreateClientNewAdminArgs(String adminSessionToken, ClientEntity client, String password, ClientLogin clientLogin, ServiceEntity serviceInfo, boolean createInnactive, Merchant merchantInfo, ServiceFeeSettings serviceFeeSettings, ServiceSettings settings, ClientSettings clientSettings) {
         super(adminSessionToken);
         this.client = client;
-this.password = password;
-this.clientLogin = clientLogin;
-this.serviceInfo = serviceInfo;
-this.createInnactive = createInnactive;
-this.merchantInfo = merchantInfo;
-this.serviceFeeSettings = serviceFeeSettings;
-this.settings = settings;
-this.clientSettings = clientSettings;
-
+        this.password = password;
+        this.clientLogin = clientLogin;
+        this.serviceInfo = serviceInfo;
+        this.createInnactive = createInnactive;
+        this.merchantInfo = merchantInfo;
+        this.serviceFeeSettings = serviceFeeSettings;
+        this.settings = settings;
+        this.clientSettings = clientSettings;
     }
 
     
@@ -207,15 +205,15 @@ this.clientSettings = clientSettings;
     @Override
     public String toString() {
         return "CreateClientNewAdminArgs{" +
-                 "client='" + client + '\'' +
- ", password='" + password + '\'' +
- ", clientLogin='" + clientLogin + '\'' +
- ", serviceInfo='" + serviceInfo + '\'' +
- ", createInnactive='" + createInnactive + '\'' +
- ", merchantInfo='" + merchantInfo + '\'' +
- ", serviceFeeSettings='" + serviceFeeSettings + '\'' +
- ", settings='" + settings + '\'' +
- ", clientSettings='" + clientSettings + '\'' +
+                "client='" + client + '\'' +
+                ", password='" + password + '\'' +
+                ", clientLogin='" + clientLogin + '\'' +
+                ", serviceInfo='" + serviceInfo + '\'' +
+                ", createInnactive='" + createInnactive + '\'' +
+                ", merchantInfo='" + merchantInfo + '\'' +
+                ", serviceFeeSettings='" + serviceFeeSettings + '\'' +
+                ", settings='" + settings + '\'' +
+                ", clientSettings='" + clientSettings + '\'' +
 
                 '}';
     }

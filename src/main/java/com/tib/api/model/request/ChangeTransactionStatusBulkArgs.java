@@ -20,14 +20,14 @@ public class ChangeTransactionStatusBulkArgs  extends BaseAdminOnlyCryptedArgs  
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionIds")
     private List<String> transactionIds;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionStatus")
     private Integer transactionStatus;
 
@@ -39,16 +39,14 @@ public class ChangeTransactionStatusBulkArgs  extends BaseAdminOnlyCryptedArgs  
     
     public ChangeTransactionStatusBulkArgs(List<String> transactionIds, Integer transactionStatus) {
         this.transactionIds = transactionIds;
-this.transactionStatus = transactionStatus;
-
+        this.transactionStatus = transactionStatus;
     }
     
     
     public ChangeTransactionStatusBulkArgs(String adminSessionToken, List<String> transactionIds, Integer transactionStatus) {
         super(adminSessionToken);
         this.transactionIds = transactionIds;
-this.transactionStatus = transactionStatus;
-
+        this.transactionStatus = transactionStatus;
     }
 
     
@@ -88,8 +86,8 @@ this.transactionStatus = transactionStatus;
     @Override
     public String toString() {
         return "ChangeTransactionStatusBulkArgs{" +
-                 "transactionIds='" + transactionIds + '\'' +
- ", transactionStatus='" + transactionStatus + '\'' +
+                "transactionIds='" + transactionIds + '\'' +
+                ", transactionStatus='" + transactionStatus + '\'' +
 
                 '}';
     }

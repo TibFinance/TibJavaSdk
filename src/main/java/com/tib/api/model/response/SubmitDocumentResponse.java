@@ -30,15 +30,13 @@ public class SubmitDocumentResponse extends CustomAPIResponse {
     public SubmitDocumentResponse(Error[] errors, boolean hasError, String messages, SubmitDocumentResultEntity submitDocumentResultEntity) {
         super(errors, hasError, messages);
         this.submitDocumentResultEntity = submitDocumentResultEntity;
-
     }
 
     public SubmitDocumentResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.submitDocumentResultEntity = objectMapper.readValue(json, SubmitDocumentResultEntity.class);
-
+            this.submitDocumentResultEntity = objectMapper.readValue(json, SubmitDocumentResultEntity.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.submitDocumentResultEntity = objectMapper.readValue(json, SubmitDocumentRes
     @Override
     public String toString() {
         return "SubmitDocumentResponse{" +
-                 "submitDocumentResultEntity='" + submitDocumentResultEntity + '\'' +
+                "submitDocumentResultEntity='" + submitDocumentResultEntity + '\'' +
 
                 '}';
     }

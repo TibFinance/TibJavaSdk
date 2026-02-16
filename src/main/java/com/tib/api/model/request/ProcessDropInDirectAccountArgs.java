@@ -21,8 +21,8 @@ public class ProcessDropInDirectAccountArgs  extends BaseProcessDropInArgs  {
 
     
     /**
- * Contains the necessary details for replacing a merchant's account information within the system.
- */
+     * Contains the necessary details for replacing a merchant's account information within the system.
+     */
     @JsonProperty("Account")
     private Account account;
 
@@ -34,14 +34,12 @@ public class ProcessDropInDirectAccountArgs  extends BaseProcessDropInArgs  {
     
     public ProcessDropInDirectAccountArgs(Account account) {
         this.account = account;
-
     }
     
     
     public ProcessDropInDirectAccountArgs(boolean isPPAAuthorized, Account account) {
         super(isPPAAuthorized);
         this.account = account;
-
     }
 
     
@@ -73,7 +71,7 @@ public class ProcessDropInDirectAccountArgs  extends BaseProcessDropInArgs  {
     @Override
     public String toString() {
         return "ProcessDropInDirectAccountArgs{" +
-                 "account='" + account + '\'' +
+                "account='" + account + '\'' +
 
                 '}';
     }

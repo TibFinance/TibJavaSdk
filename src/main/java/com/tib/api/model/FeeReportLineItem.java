@@ -21,92 +21,92 @@ public class FeeReportLineItem   {
 
     
     /**
- * Gets or sets the operation identifier.
- */
+     * Gets or sets the operation identifier.
+     */
     @JsonProperty("OperationId")
     private String operationId;
 
     /**
- * Identifies the specific transfer operation that needs to be reverted.
- */
+     * Identifies the specific transfer operation that needs to be reverted.
+     */
     @JsonProperty("TransferId")
     private String transferId;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
     /**
- * Gets or sets the execution date and time of the transaction.
- */
+     * Gets or sets the execution date and time of the transaction.
+     */
     @JsonProperty("ExecutedDate")
     private LocalDateTime executedDate;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * Retrieves or assigns the currency type used in transactions.
- */
+     * Retrieves or assigns the currency type used in transactions.
+     */
     @JsonProperty("Currency")
     private Integer currency;
 
     /**
- * Gets or sets the fee type (OperationKind).
- */
+     * Gets or sets the fee type (OperationKind).
+     */
     @JsonProperty("FeeType")
     private OperationKind feeType;
 
     /**
- * Gets or sets the human-readable fee type description.
- */
+     * Gets or sets the human-readable fee type description.
+     */
     @JsonProperty("FeeTypeDescription")
     private String feeTypeDescription;
 
     /**
- * Identifies the type of payment method linked to a specific account.
- */
+     * Identifies the type of payment method linked to a specific account.
+     */
     @JsonProperty("PaymentMethodType")
     private PaymentMethodType paymentMethodType;
 
     /**
- * Gets or sets the human-readable payment method description.
- */
+     * Gets or sets the human-readable payment method description.
+     */
     @JsonProperty("PaymentMethodTypeDescription")
     private String paymentMethodTypeDescription;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * This property represents the full name of the customer in the system.
- */
+     * This property represents the full name of the customer in the system.
+     */
     @JsonProperty("CustomerName")
     private String customerName;
 
     /**
- * Gets or sets the external reference number from the transfer.
- */
+     * Gets or sets the external reference number from the transfer.
+     */
     @JsonProperty("TransferExternalReference")
     private String transferExternalReference;
 
     /**
- * Retrieves the numeric status code of an operation.
- */
+     * Retrieves the numeric status code of an operation.
+     */
     @JsonProperty("OperationStatus")
     private Integer operationStatus;
 
@@ -118,21 +118,20 @@ public class FeeReportLineItem   {
     
     public FeeReportLineItem(String operationId, String transferId, LocalDateTime createdDate, LocalDateTime executedDate, Double amount, Integer currency, OperationKind feeType, String feeTypeDescription, PaymentMethodType paymentMethodType, String paymentMethodTypeDescription, String merchantName, String merchantId, String customerName, String transferExternalReference, Integer operationStatus) {
         this.operationId = operationId;
-this.transferId = transferId;
-this.createdDate = createdDate;
-this.executedDate = executedDate;
-this.amount = amount;
-this.currency = currency;
-this.feeType = feeType;
-this.feeTypeDescription = feeTypeDescription;
-this.paymentMethodType = paymentMethodType;
-this.paymentMethodTypeDescription = paymentMethodTypeDescription;
-this.merchantName = merchantName;
-this.merchantId = merchantId;
-this.customerName = customerName;
-this.transferExternalReference = transferExternalReference;
-this.operationStatus = operationStatus;
-
+        this.transferId = transferId;
+        this.createdDate = createdDate;
+        this.executedDate = executedDate;
+        this.amount = amount;
+        this.currency = currency;
+        this.feeType = feeType;
+        this.feeTypeDescription = feeTypeDescription;
+        this.paymentMethodType = paymentMethodType;
+        this.paymentMethodTypeDescription = paymentMethodTypeDescription;
+        this.merchantName = merchantName;
+        this.merchantId = merchantId;
+        this.customerName = customerName;
+        this.transferExternalReference = transferExternalReference;
+        this.operationStatus = operationStatus;
     }
     
     
@@ -278,21 +277,21 @@ this.operationStatus = operationStatus;
     @Override
     public String toString() {
         return "FeeReportLineItem{" +
-                 "operationId='" + operationId + '\'' +
- ", transferId='" + transferId + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", executedDate='" + executedDate + '\'' +
- ", amount='" + amount + '\'' +
- ", currency='" + currency + '\'' +
- ", feeType='" + feeType + '\'' +
- ", feeTypeDescription='" + feeTypeDescription + '\'' +
- ", paymentMethodType='" + paymentMethodType + '\'' +
- ", paymentMethodTypeDescription='" + paymentMethodTypeDescription + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", customerName='" + customerName + '\'' +
- ", transferExternalReference='" + transferExternalReference + '\'' +
- ", operationStatus='" + operationStatus + '\'' +
+                "operationId='" + operationId + '\'' +
+                ", transferId='" + transferId + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", executedDate='" + executedDate + '\'' +
+                ", amount='" + amount + '\'' +
+                ", currency='" + currency + '\'' +
+                ", feeType='" + feeType + '\'' +
+                ", feeTypeDescription='" + feeTypeDescription + '\'' +
+                ", paymentMethodType='" + paymentMethodType + '\'' +
+                ", paymentMethodTypeDescription='" + paymentMethodTypeDescription + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", customerName='" + customerName + '\'' +
+                ", transferExternalReference='" + transferExternalReference + '\'' +
+                ", operationStatus='" + operationStatus + '\'' +
 
                 '}';
     }

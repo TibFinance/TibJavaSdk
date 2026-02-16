@@ -21,32 +21,32 @@ public class ProviderTransactionIdentity   {
 
     
     /**
- * Gets or sets the type of the provider.
- */
+     * Gets or sets the type of the provider.
+     */
     @JsonProperty("ProviderType")
     private Provider providerType;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderId")
     private String providerId;
 
     /**
- * Indicates the direction of an Interac transaction.
- */
+     * Indicates the direction of an Interac transaction.
+     */
     @JsonProperty("TransferDirection")
     private TransferDirection transferDirection;
 
     /**
- * Gets or sets the provider transaction identifier.
- */
+     * Gets or sets the provider transaction identifier.
+     */
     @JsonProperty("ProviderTransactionId")
     private String providerTransactionId;
 
     /**
- * Gets or sets the provider transaction group identifier.
- */
+     * Gets or sets the provider transaction group identifier.
+     */
     @JsonProperty("ProviderTransactionGroupId")
     private String providerTransactionGroupId;
 
@@ -58,11 +58,10 @@ public class ProviderTransactionIdentity   {
     
     public ProviderTransactionIdentity(Provider providerType, String providerId, TransferDirection transferDirection, String providerTransactionId, String providerTransactionGroupId) {
         this.providerType = providerType;
-this.providerId = providerId;
-this.transferDirection = transferDirection;
-this.providerTransactionId = providerTransactionId;
-this.providerTransactionGroupId = providerTransactionGroupId;
-
+        this.providerId = providerId;
+        this.transferDirection = transferDirection;
+        this.providerTransactionId = providerTransactionId;
+        this.providerTransactionGroupId = providerTransactionGroupId;
     }
     
     
@@ -128,11 +127,11 @@ this.providerTransactionGroupId = providerTransactionGroupId;
     @Override
     public String toString() {
         return "ProviderTransactionIdentity{" +
-                 "providerType='" + providerType + '\'' +
- ", providerId='" + providerId + '\'' +
- ", transferDirection='" + transferDirection + '\'' +
- ", providerTransactionId='" + providerTransactionId + '\'' +
- ", providerTransactionGroupId='" + providerTransactionGroupId + '\'' +
+                "providerType='" + providerType + '\'' +
+                ", providerId='" + providerId + '\'' +
+                ", transferDirection='" + transferDirection + '\'' +
+                ", providerTransactionId='" + providerTransactionId + '\'' +
+                ", providerTransactionGroupId='" + providerTransactionGroupId + '\'' +
 
                 '}';
     }

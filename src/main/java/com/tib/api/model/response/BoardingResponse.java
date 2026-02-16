@@ -30,15 +30,13 @@ public class BoardingResponse extends CustomAPIResponse {
     public BoardingResponse(Error[] errors, boolean hasError, String messages, BoardingResultEntity boardingResultEntity) {
         super(errors, hasError, messages);
         this.boardingResultEntity = boardingResultEntity;
-
     }
 
     public BoardingResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.boardingResultEntity = objectMapper.readValue(json, BoardingResultEntity.class);
-
+            this.boardingResultEntity = objectMapper.readValue(json, BoardingResultEntity.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.boardingResultEntity = objectMapper.readValue(json, BoardingResultEntity.cl
     @Override
     public String toString() {
         return "BoardingResponse{" +
-                 "boardingResultEntity='" + boardingResultEntity + '\'' +
+                "boardingResultEntity='" + boardingResultEntity + '\'' +
 
                 '}';
     }

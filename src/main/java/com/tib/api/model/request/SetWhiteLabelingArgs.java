@@ -21,32 +21,32 @@ public class SetWhiteLabelingArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WhiteLabelingData")
     private List<WhiteLabelingData> whiteLabelingData;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Id")
     private String id;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WhiteLabelingLevel")
     private Integer whiteLabelingLevel;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Url")
     private String url;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Logo")
     private String logo;
 
@@ -58,22 +58,20 @@ public class SetWhiteLabelingArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public SetWhiteLabelingArgs(List<WhiteLabelingData> whiteLabelingData, String id, Integer whiteLabelingLevel, String url, String logo) {
         this.whiteLabelingData = whiteLabelingData;
-this.id = id;
-this.whiteLabelingLevel = whiteLabelingLevel;
-this.url = url;
-this.logo = logo;
-
+        this.id = id;
+        this.whiteLabelingLevel = whiteLabelingLevel;
+        this.url = url;
+        this.logo = logo;
     }
     
     
     public SetWhiteLabelingArgs(String adminSessionToken, List<WhiteLabelingData> whiteLabelingData, String id, Integer whiteLabelingLevel, String url, String logo) {
         super(adminSessionToken);
         this.whiteLabelingData = whiteLabelingData;
-this.id = id;
-this.whiteLabelingLevel = whiteLabelingLevel;
-this.url = url;
-this.logo = logo;
-
+        this.id = id;
+        this.whiteLabelingLevel = whiteLabelingLevel;
+        this.url = url;
+        this.logo = logo;
     }
 
     
@@ -137,11 +135,11 @@ this.logo = logo;
     @Override
     public String toString() {
         return "SetWhiteLabelingArgs{" +
-                 "whiteLabelingData='" + whiteLabelingData + '\'' +
- ", id='" + id + '\'' +
- ", whiteLabelingLevel='" + whiteLabelingLevel + '\'' +
- ", url='" + url + '\'' +
- ", logo='" + logo + '\'' +
+                "whiteLabelingData='" + whiteLabelingData + '\'' +
+                ", id='" + id + '\'' +
+                ", whiteLabelingLevel='" + whiteLabelingLevel + '\'' +
+                ", url='" + url + '\'' +
+                ", logo='" + logo + '\'' +
 
                 '}';
     }

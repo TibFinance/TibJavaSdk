@@ -29,14 +29,12 @@ public class LogOffSessionResponse extends CustomAPIResponse {
     public LogOffSessionResponse(Error[] errors, boolean hasError, String messages, boolean loggOffSuccess) {
         super(errors, hasError, messages);
         this.loggOffSuccess = loggOffSuccess;
-
     }
 
     public LogOffSessionResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.loggOffSuccess = Boolean.parseBoolean(apiResponse.getResponse().toString());
-
         }
     }
 
@@ -69,7 +67,7 @@ public class LogOffSessionResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "LogOffSessionResponse{" +
-                 "loggOffSuccess='" + loggOffSuccess + '\'' +
+                "loggOffSuccess='" + loggOffSuccess + '\'' +
 
                 '}';
     }

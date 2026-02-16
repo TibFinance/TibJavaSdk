@@ -30,15 +30,13 @@ public class SetWhiteLabelingResponse extends CustomAPIResponse {
     public SetWhiteLabelingResponse(Error[] errors, boolean hasError, String messages, WhiteLabeling whiteLabeling) {
         super(errors, hasError, messages);
         this.whiteLabeling = whiteLabeling;
-
     }
 
     public SetWhiteLabelingResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
-
+            this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.whiteLabeling = objectMapper.readValue(json, WhiteLabeling.class);
     @Override
     public String toString() {
         return "SetWhiteLabelingResponse{" +
-                 "whiteLabeling='" + whiteLabeling + '\'' +
+                "whiteLabeling='" + whiteLabeling + '\'' +
 
                 '}';
     }

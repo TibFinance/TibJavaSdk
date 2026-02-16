@@ -19,14 +19,14 @@ public class SplitedCryptedDataEntity   {
 
     
     /**
- * Gets or sets the base64 crypted data part1.
- */
+     * Gets or sets the base64 crypted data part1.
+     */
     @JsonProperty("Base64CryptedDataPart1")
     private String base64CryptedDataPart1;
 
     /**
- * Gets or sets the base64 crypted data part2.
- */
+     * Gets or sets the base64 crypted data part2.
+     */
     @JsonProperty("Base64CryptedDataPart2")
     private String base64CryptedDataPart2;
 
@@ -38,8 +38,7 @@ public class SplitedCryptedDataEntity   {
     
     public SplitedCryptedDataEntity(String base64CryptedDataPart1, String base64CryptedDataPart2) {
         this.base64CryptedDataPart1 = base64CryptedDataPart1;
-this.base64CryptedDataPart2 = base64CryptedDataPart2;
-
+        this.base64CryptedDataPart2 = base64CryptedDataPart2;
     }
     
     
@@ -81,8 +80,8 @@ this.base64CryptedDataPart2 = base64CryptedDataPart2;
     @Override
     public String toString() {
         return "SplitedCryptedDataEntity{" +
-                 "base64CryptedDataPart1='" + base64CryptedDataPart1 + '\'' +
- ", base64CryptedDataPart2='" + base64CryptedDataPart2 + '\'' +
+                "base64CryptedDataPart1='" + base64CryptedDataPart1 + '\'' +
+                ", base64CryptedDataPart2='" + base64CryptedDataPart2 + '\'' +
 
                 '}';
     }

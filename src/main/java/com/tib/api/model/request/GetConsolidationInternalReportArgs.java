@@ -20,26 +20,26 @@ public class GetConsolidationInternalReportArgs  extends BaseAdminOnlyCryptedArg
 
     
     /**
- * Gets or sets the month.
- */
+     * Gets or sets the month.
+     */
     @JsonProperty("Month")
     private Integer month;
 
     /**
- * Gets or sets the year.
- */
+     * Gets or sets the year.
+     */
     @JsonProperty("Year")
     private Integer year;
 
     /**
- * Gets or sets a value indicating whether [split group identifier].
- */
+     * Gets or sets a value indicating whether [split group identifier].
+     */
     @JsonProperty("SplitGroupId")
     private boolean splitGroupId;
 
     /**
- * Gets or sets a value indicating whether [use collection].
- */
+     * Gets or sets a value indicating whether [use collection].
+     */
     @JsonProperty("UseCollection")
     private boolean useCollection;
 
@@ -51,20 +51,18 @@ public class GetConsolidationInternalReportArgs  extends BaseAdminOnlyCryptedArg
     
     public GetConsolidationInternalReportArgs(Integer month, Integer year, boolean splitGroupId, boolean useCollection) {
         this.month = month;
-this.year = year;
-this.splitGroupId = splitGroupId;
-this.useCollection = useCollection;
-
+        this.year = year;
+        this.splitGroupId = splitGroupId;
+        this.useCollection = useCollection;
     }
     
     
     public GetConsolidationInternalReportArgs(String adminSessionToken, Integer month, Integer year, boolean splitGroupId, boolean useCollection) {
         super(adminSessionToken);
         this.month = month;
-this.year = year;
-this.splitGroupId = splitGroupId;
-this.useCollection = useCollection;
-
+        this.year = year;
+        this.splitGroupId = splitGroupId;
+        this.useCollection = useCollection;
     }
 
     
@@ -120,10 +118,10 @@ this.useCollection = useCollection;
     @Override
     public String toString() {
         return "GetConsolidationInternalReportArgs{" +
-                 "month='" + month + '\'' +
- ", year='" + year + '\'' +
- ", splitGroupId='" + splitGroupId + '\'' +
- ", useCollection='" + useCollection + '\'' +
+                "month='" + month + '\'' +
+                ", year='" + year + '\'' +
+                ", splitGroupId='" + splitGroupId + '\'' +
+                ", useCollection='" + useCollection + '\'' +
 
                 '}';
     }

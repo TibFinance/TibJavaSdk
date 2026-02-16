@@ -25,13 +25,11 @@ public class DeleteServiceResponse extends CustomAPIResponse {
 
     public DeleteServiceResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public DeleteServiceResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

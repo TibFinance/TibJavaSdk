@@ -20,14 +20,14 @@ public class DeleteMerchantLoginArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Retrieves or assigns the identifier for user login relations.
- */
+     * Retrieves or assigns the identifier for user login relations.
+     */
     @JsonProperty("LoginsUserRelationsId")
     private String loginsUserRelationsId;
 
@@ -39,16 +39,14 @@ public class DeleteMerchantLoginArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public DeleteMerchantLoginArgs(String merchantId, String loginsUserRelationsId) {
         this.merchantId = merchantId;
-this.loginsUserRelationsId = loginsUserRelationsId;
-
+        this.loginsUserRelationsId = loginsUserRelationsId;
     }
     
     
     public DeleteMerchantLoginArgs(String sessionToken, String merchantId, String loginsUserRelationsId) {
         super(sessionToken);
         this.merchantId = merchantId;
-this.loginsUserRelationsId = loginsUserRelationsId;
-
+        this.loginsUserRelationsId = loginsUserRelationsId;
     }
 
     
@@ -88,8 +86,8 @@ this.loginsUserRelationsId = loginsUserRelationsId;
     @Override
     public String toString() {
         return "DeleteMerchantLoginArgs{" +
-                 "merchantId='" + merchantId + '\'' +
- ", loginsUserRelationsId='" + loginsUserRelationsId + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", loginsUserRelationsId='" + loginsUserRelationsId + '\'' +
 
                 '}';
     }

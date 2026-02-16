@@ -38,18 +38,16 @@ public class GetSummaryInformationsResponse extends CustomAPIResponse {
     public GetSummaryInformationsResponse(Error[] errors, boolean hasError, String messages, List<AggregatedCategoryExtraction> aggregatedCategoryExtractions, List<MonthlyStats> monthlyTransactionStats, List<CashBackStats> dailyCashbackStats) {
         super(errors, hasError, messages);
         this.aggregatedCategoryExtractions = aggregatedCategoryExtractions;
-this.monthlyTransactionStats = monthlyTransactionStats;
-this.dailyCashbackStats = dailyCashbackStats;
-
+        this.monthlyTransactionStats = monthlyTransactionStats;
+        this.dailyCashbackStats = dailyCashbackStats;
     }
 
     public GetSummaryInformationsResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.aggregatedCategoryExtractions = (List<AggregatedCategoryExtraction>) apiResponse.getResponse();
-this.monthlyTransactionStats = (List<MonthlyStats>) apiResponse.getResponse();
-this.dailyCashbackStats = (List<CashBackStats>) apiResponse.getResponse();
-
+            this.monthlyTransactionStats = (List<MonthlyStats>) apiResponse.getResponse();
+            this.dailyCashbackStats = (List<CashBackStats>) apiResponse.getResponse();
         }
     }
 
@@ -98,9 +96,9 @@ this.dailyCashbackStats = (List<CashBackStats>) apiResponse.getResponse();
     @Override
     public String toString() {
         return "GetSummaryInformationsResponse{" +
-                 "aggregatedCategoryExtractions='" + aggregatedCategoryExtractions + '\'' +
- ", monthlyTransactionStats='" + monthlyTransactionStats + '\'' +
- ", dailyCashbackStats='" + dailyCashbackStats + '\'' +
+                "aggregatedCategoryExtractions='" + aggregatedCategoryExtractions + '\'' +
+                ", monthlyTransactionStats='" + monthlyTransactionStats + '\'' +
+                ", dailyCashbackStats='" + dailyCashbackStats + '\'' +
 
                 '}';
     }

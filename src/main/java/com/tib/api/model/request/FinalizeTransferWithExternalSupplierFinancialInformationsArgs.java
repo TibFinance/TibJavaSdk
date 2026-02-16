@@ -21,32 +21,32 @@ public class FinalizeTransferWithExternalSupplierFinancialInformationsArgs  exte
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("SupplierAccountAlreadyExists")
     private boolean supplierAccountAlreadyExists;
 
     /**
- * Contains the necessary details for replacing a merchant's account information within the system.
- */
+     * Contains the necessary details for replacing a merchant's account information within the system.
+     */
     @JsonProperty("Account")
     private Account account;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CustomerConsent")
     private boolean customerConsent;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PreAuthorizationGivenForThisMerchant")
     private boolean preAuthorizationGivenForThisMerchant;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("PreAuthorizationGivenForAllMerchants")
     private boolean preAuthorizationGivenForAllMerchants;
 
@@ -58,22 +58,20 @@ public class FinalizeTransferWithExternalSupplierFinancialInformationsArgs  exte
     
     public FinalizeTransferWithExternalSupplierFinancialInformationsArgs(boolean supplierAccountAlreadyExists, Account account, boolean customerConsent, boolean preAuthorizationGivenForThisMerchant, boolean preAuthorizationGivenForAllMerchants) {
         this.supplierAccountAlreadyExists = supplierAccountAlreadyExists;
-this.account = account;
-this.customerConsent = customerConsent;
-this.preAuthorizationGivenForThisMerchant = preAuthorizationGivenForThisMerchant;
-this.preAuthorizationGivenForAllMerchants = preAuthorizationGivenForAllMerchants;
-
+        this.account = account;
+        this.customerConsent = customerConsent;
+        this.preAuthorizationGivenForThisMerchant = preAuthorizationGivenForThisMerchant;
+        this.preAuthorizationGivenForAllMerchants = preAuthorizationGivenForAllMerchants;
     }
     
     
     public FinalizeTransferWithExternalSupplierFinancialInformationsArgs(String publicTokenId, boolean supplierAccountAlreadyExists, Account account, boolean customerConsent, boolean preAuthorizationGivenForThisMerchant, boolean preAuthorizationGivenForAllMerchants) {
         super(publicTokenId);
         this.supplierAccountAlreadyExists = supplierAccountAlreadyExists;
-this.account = account;
-this.customerConsent = customerConsent;
-this.preAuthorizationGivenForThisMerchant = preAuthorizationGivenForThisMerchant;
-this.preAuthorizationGivenForAllMerchants = preAuthorizationGivenForAllMerchants;
-
+        this.account = account;
+        this.customerConsent = customerConsent;
+        this.preAuthorizationGivenForThisMerchant = preAuthorizationGivenForThisMerchant;
+        this.preAuthorizationGivenForAllMerchants = preAuthorizationGivenForAllMerchants;
     }
 
     
@@ -137,11 +135,11 @@ this.preAuthorizationGivenForAllMerchants = preAuthorizationGivenForAllMerchants
     @Override
     public String toString() {
         return "FinalizeTransferWithExternalSupplierFinancialInformationsArgs{" +
-                 "supplierAccountAlreadyExists='" + supplierAccountAlreadyExists + '\'' +
- ", account='" + account + '\'' +
- ", customerConsent='" + customerConsent + '\'' +
- ", preAuthorizationGivenForThisMerchant='" + preAuthorizationGivenForThisMerchant + '\'' +
- ", preAuthorizationGivenForAllMerchants='" + preAuthorizationGivenForAllMerchants + '\'' +
+                "supplierAccountAlreadyExists='" + supplierAccountAlreadyExists + '\'' +
+                ", account='" + account + '\'' +
+                ", customerConsent='" + customerConsent + '\'' +
+                ", preAuthorizationGivenForThisMerchant='" + preAuthorizationGivenForThisMerchant + '\'' +
+                ", preAuthorizationGivenForAllMerchants='" + preAuthorizationGivenForAllMerchants + '\'' +
 
                 '}';
     }

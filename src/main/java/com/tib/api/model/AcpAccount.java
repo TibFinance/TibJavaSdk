@@ -19,38 +19,38 @@ public class AcpAccount   {
 
     
     /**
- * Gets or sets the organization number.
- */
+     * Gets or sets the organization number.
+     */
     @JsonProperty("OrganizationNumber")
     private String organizationNumber;
 
     /**
- * Gets or sets the name of the organization.
- */
+     * Gets or sets the name of the organization.
+     */
     @JsonProperty("OrganizationName")
     private String organizationName;
 
     /**
- * Gets or sets the organization account.
- */
+     * Gets or sets the organization account.
+     */
     @JsonProperty("OrganizationAccount")
     private String organizationAccount;
 
     /**
- * Gets or sets the organization bank.
- */
+     * Gets or sets the organization bank.
+     */
     @JsonProperty("OrganizationBank")
     private Integer organizationBank;
 
     /**
- * Gets or sets the short name of the organization.
- */
+     * Gets or sets the short name of the organization.
+     */
     @JsonProperty("OrganizationShortName")
     private String organizationShortName;
 
     /**
- * Gets or sets the routing information.
- */
+     * Gets or sets the routing information.
+     */
     @JsonProperty("RoutingInformation")
     private String routingInformation;
 
@@ -62,12 +62,11 @@ public class AcpAccount   {
     
     public AcpAccount(String organizationNumber, String organizationName, String organizationAccount, Integer organizationBank, String organizationShortName, String routingInformation) {
         this.organizationNumber = organizationNumber;
-this.organizationName = organizationName;
-this.organizationAccount = organizationAccount;
-this.organizationBank = organizationBank;
-this.organizationShortName = organizationShortName;
-this.routingInformation = routingInformation;
-
+        this.organizationName = organizationName;
+        this.organizationAccount = organizationAccount;
+        this.organizationBank = organizationBank;
+        this.organizationShortName = organizationShortName;
+        this.routingInformation = routingInformation;
     }
     
     
@@ -141,12 +140,12 @@ this.routingInformation = routingInformation;
     @Override
     public String toString() {
         return "AcpAccount{" +
-                 "organizationNumber='" + organizationNumber + '\'' +
- ", organizationName='" + organizationName + '\'' +
- ", organizationAccount='" + organizationAccount + '\'' +
- ", organizationBank='" + organizationBank + '\'' +
- ", organizationShortName='" + organizationShortName + '\'' +
- ", routingInformation='" + routingInformation + '\'' +
+                "organizationNumber='" + organizationNumber + '\'' +
+                ", organizationName='" + organizationName + '\'' +
+                ", organizationAccount='" + organizationAccount + '\'' +
+                ", organizationBank='" + organizationBank + '\'' +
+                ", organizationShortName='" + organizationShortName + '\'' +
+                ", routingInformation='" + routingInformation + '\'' +
 
                 '}';
     }

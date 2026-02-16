@@ -29,14 +29,12 @@ public class CreateBillResponse extends CustomAPIResponse {
     public CreateBillResponse(Error[] errors, boolean hasError, String messages, String billId) {
         super(errors, hasError, messages);
         this.billId = billId;
-
     }
 
     public CreateBillResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.billId = apiResponse.getResponse().toString();
-
         }
     }
 
@@ -69,7 +67,7 @@ public class CreateBillResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateBillResponse{" +
-                 "billId='" + billId + '\'' +
+                "billId='" + billId + '\'' +
 
                 '}';
     }

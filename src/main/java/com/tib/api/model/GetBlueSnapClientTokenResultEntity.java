@@ -20,8 +20,8 @@ public class GetBlueSnapClientTokenResultEntity  extends BoardingBaseResult  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Token")
     private String token;
 
@@ -33,14 +33,12 @@ public class GetBlueSnapClientTokenResultEntity  extends BoardingBaseResult  {
     
     public GetBlueSnapClientTokenResultEntity(String token) {
         this.token = token;
-
     }
     
     
     public GetBlueSnapClientTokenResultEntity(boolean isSuccess, Integer httpStatusCode, String message, List<BoardingBaseError> errorList, String token) {
         super(isSuccess, httpStatusCode, message, errorList);
         this.token = token;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetBlueSnapClientTokenResultEntity  extends BoardingBaseResult  {
     @Override
     public String toString() {
         return "GetBlueSnapClientTokenResultEntity{" +
-                 "token='" + token + '\'' +
+                "token='" + token + '\'' +
 
                 '}';
     }

@@ -29,7 +29,6 @@ public class GetChangeValidationArgs  extends BaseAuthenticatePublicTokenArgs  {
     
     public GetChangeValidationArgs(String publicTokenId) {
         super(publicTokenId);
-        
     }
 
     

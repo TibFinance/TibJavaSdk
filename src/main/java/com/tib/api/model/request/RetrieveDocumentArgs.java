@@ -22,20 +22,20 @@ public class RetrieveDocumentArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * Gets or sets the RetrieveDocumentEntity.
- */
+     * Gets or sets the RetrieveDocumentEntity.
+     */
     @JsonProperty("RetrieveDocumentEntity")
     private RetrieveDocumentEntity retrieveDocumentEntity;
 
     /**
- * Gets or sets the mailing information.
- */
+     * Gets or sets the mailing information.
+     */
     @JsonProperty("MailingInfo")
     private TransactionMailingInfo mailingInfo;
 
     /**
- * Gets or sets the provider credentials.
- */
+     * Gets or sets the provider credentials.
+     */
     @JsonProperty("ProviderCredentials")
     private List<ProviderAccount> providerCredentials;
 
@@ -47,9 +47,8 @@ public class RetrieveDocumentArgs  implements IBaseCryptedServiceArgs  {
     
     public RetrieveDocumentArgs(RetrieveDocumentEntity retrieveDocumentEntity, TransactionMailingInfo mailingInfo, List<ProviderAccount> providerCredentials) {
         this.retrieveDocumentEntity = retrieveDocumentEntity;
-this.mailingInfo = mailingInfo;
-this.providerCredentials = providerCredentials;
-
+        this.mailingInfo = mailingInfo;
+        this.providerCredentials = providerCredentials;
     }
     
     
@@ -99,9 +98,9 @@ this.providerCredentials = providerCredentials;
     @Override
     public String toString() {
         return "RetrieveDocumentArgs{" +
-                 "retrieveDocumentEntity='" + retrieveDocumentEntity + '\'' +
- ", mailingInfo='" + mailingInfo + '\'' +
- ", providerCredentials='" + providerCredentials + '\'' +
+                "retrieveDocumentEntity='" + retrieveDocumentEntity + '\'' +
+                ", mailingInfo='" + mailingInfo + '\'' +
+                ", providerCredentials='" + providerCredentials + '\'' +
 
                 '}';
     }

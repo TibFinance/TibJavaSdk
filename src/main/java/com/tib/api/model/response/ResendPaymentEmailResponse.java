@@ -25,13 +25,11 @@ public class ResendPaymentEmailResponse extends CustomAPIResponse {
 
     public ResendPaymentEmailResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public ResendPaymentEmailResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

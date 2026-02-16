@@ -30,14 +30,12 @@ public class ProcessStatusResponse<T> extends CustomAPIResponse {
     public ProcessStatusResponse(Error[] errors, boolean hasError, String messages, List<TransactionSatusResultEntity> transmissionResults) {
         super(errors, hasError, messages);
         this.transmissionResults = transmissionResults;
-
     }
 
     public ProcessStatusResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transmissionResults = (List<TransactionSatusResultEntity>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class ProcessStatusResponse<T> extends CustomAPIResponse {
     @Override
     public String toString() {
         return "ProcessStatusResponse{" +
-                 "transmissionResults='" + transmissionResults + '\'' +
+                "transmissionResults='" + transmissionResults + '\'' +
 
                 '}';
     }

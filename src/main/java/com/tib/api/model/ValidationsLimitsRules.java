@@ -20,104 +20,104 @@ public class ValidationsLimitsRules   {
 
     
     /**
- * Gets or sets the limit.
- */
+     * Gets or sets the limit.
+     */
     @JsonProperty("Limit")
     private Double limit;
 
     /**
- * Gets or sets the limit daily.
- */
+     * Gets or sets the limit daily.
+     */
     @JsonProperty("LimitDaily")
     private Double limitDaily;
 
     /**
- * Gets or sets the limit per bank account daily.
- */
+     * Gets or sets the limit per bank account daily.
+     */
     @JsonProperty("LimitPerBankAccountDaily")
     private Double limitPerBankAccountDaily;
 
     /**
- * Gets or sets the limit per bank account per delays.
- */
+     * Gets or sets the limit per bank account per delays.
+     */
     @JsonProperty("LimitPerBankAccountPerDelays")
     private Double limitPerBankAccountPerDelays;
 
     /**
- * Gets or sets the delays.
- */
+     * Gets or sets the delays.
+     */
     @JsonProperty("Delays")
     private Integer delays;
 
     /**
- * Gets or sets the client warning limit.
- */
+     * Gets or sets the client warning limit.
+     */
     @JsonProperty("ClientWarningLimit")
     private Double clientWarningLimit;
 
     /**
- * Gets or sets the tib warning limit.
- */
+     * Gets or sets the tib warning limit.
+     */
     @JsonProperty("TIBWarningLimit")
     private Double tIBWarningLimit;
 
     /**
- * Gets or sets the number per bank account daily.
- */
+     * Gets or sets the number per bank account daily.
+     */
     @JsonProperty("NumberPerBankAccountDaily")
     private Integer numberPerBankAccountDaily;
 
     /**
- * Gets or sets the number per bank per delays.
- */
+     * Gets or sets the number per bank per delays.
+     */
     @JsonProperty("NumberPerBankPerDelays")
     private Integer numberPerBankPerDelays;
 
     /**
- * Gets or sets the tib warning limit per bank account daily.
- */
+     * Gets or sets the tib warning limit per bank account daily.
+     */
     @JsonProperty("TIBWarningLimitPerBankAccountDaily")
     private Double tIBWarningLimitPerBankAccountDaily;
 
     /**
- * Gets or sets the tib warning limit per bank account per delays.
- */
+     * Gets or sets the tib warning limit per bank account per delays.
+     */
     @JsonProperty("TIBWarningLimitPerBankAccountPerDelays")
     private Double tIBWarningLimitPerBankAccountPerDelays;
 
     /**
- * Gets or sets the tib warning number per bank account daily.
- */
+     * Gets or sets the tib warning number per bank account daily.
+     */
     @JsonProperty("TIBWarningNumberPerBankAccountDaily")
     private Integer tIBWarningNumberPerBankAccountDaily;
 
     /**
- * Gets or sets the tib warning number per bank per delays.
- */
+     * Gets or sets the tib warning number per bank per delays.
+     */
     @JsonProperty("TIBWarningNumberPerBankPerDelays")
     private Integer tIBWarningNumberPerBankPerDelays;
 
     /**
- * Gets or sets the tib warning limit daily.
- */
+     * Gets or sets the tib warning limit daily.
+     */
     @JsonProperty("TIBWarningLimitDaily")
     private Double tIBWarningLimitDaily;
 
     /**
- * Specifies the operation category used throughout the API.
- */
+     * Specifies the operation category used throughout the API.
+     */
     @JsonProperty("OperationType")
     private AcpTransactionType operationType;
 
     /**
- * Gets or sets the client Daily limit
- */
+     * Gets or sets the client Daily limit
+     */
     @JsonProperty("ClientLimitDaily")
     private Double clientLimitDaily;
 
     /**
- * Gets or sets the tib warning client Daily limit
- */
+     * Gets or sets the tib warning client Daily limit
+     */
     @JsonProperty("TIBWarningClientLimitDaily")
     private Double tIBWarningClientLimitDaily;
 
@@ -129,23 +129,22 @@ public class ValidationsLimitsRules   {
     
     public ValidationsLimitsRules(Double limit, Double limitDaily, Double limitPerBankAccountDaily, Double limitPerBankAccountPerDelays, Integer delays, Double clientWarningLimit, Double tIBWarningLimit, Integer numberPerBankAccountDaily, Integer numberPerBankPerDelays, Double tIBWarningLimitPerBankAccountDaily, Double tIBWarningLimitPerBankAccountPerDelays, Integer tIBWarningNumberPerBankAccountDaily, Integer tIBWarningNumberPerBankPerDelays, Double tIBWarningLimitDaily, AcpTransactionType operationType, Double clientLimitDaily, Double tIBWarningClientLimitDaily) {
         this.limit = limit;
-this.limitDaily = limitDaily;
-this.limitPerBankAccountDaily = limitPerBankAccountDaily;
-this.limitPerBankAccountPerDelays = limitPerBankAccountPerDelays;
-this.delays = delays;
-this.clientWarningLimit = clientWarningLimit;
-this.tIBWarningLimit = tIBWarningLimit;
-this.numberPerBankAccountDaily = numberPerBankAccountDaily;
-this.numberPerBankPerDelays = numberPerBankPerDelays;
-this.tIBWarningLimitPerBankAccountDaily = tIBWarningLimitPerBankAccountDaily;
-this.tIBWarningLimitPerBankAccountPerDelays = tIBWarningLimitPerBankAccountPerDelays;
-this.tIBWarningNumberPerBankAccountDaily = tIBWarningNumberPerBankAccountDaily;
-this.tIBWarningNumberPerBankPerDelays = tIBWarningNumberPerBankPerDelays;
-this.tIBWarningLimitDaily = tIBWarningLimitDaily;
-this.operationType = operationType;
-this.clientLimitDaily = clientLimitDaily;
-this.tIBWarningClientLimitDaily = tIBWarningClientLimitDaily;
-
+        this.limitDaily = limitDaily;
+        this.limitPerBankAccountDaily = limitPerBankAccountDaily;
+        this.limitPerBankAccountPerDelays = limitPerBankAccountPerDelays;
+        this.delays = delays;
+        this.clientWarningLimit = clientWarningLimit;
+        this.tIBWarningLimit = tIBWarningLimit;
+        this.numberPerBankAccountDaily = numberPerBankAccountDaily;
+        this.numberPerBankPerDelays = numberPerBankPerDelays;
+        this.tIBWarningLimitPerBankAccountDaily = tIBWarningLimitPerBankAccountDaily;
+        this.tIBWarningLimitPerBankAccountPerDelays = tIBWarningLimitPerBankAccountPerDelays;
+        this.tIBWarningNumberPerBankAccountDaily = tIBWarningNumberPerBankAccountDaily;
+        this.tIBWarningNumberPerBankPerDelays = tIBWarningNumberPerBankPerDelays;
+        this.tIBWarningLimitDaily = tIBWarningLimitDaily;
+        this.operationType = operationType;
+        this.clientLimitDaily = clientLimitDaily;
+        this.tIBWarningClientLimitDaily = tIBWarningClientLimitDaily;
     }
     
     
@@ -307,23 +306,23 @@ this.tIBWarningClientLimitDaily = tIBWarningClientLimitDaily;
     @Override
     public String toString() {
         return "ValidationsLimitsRules{" +
-                 "limit='" + limit + '\'' +
- ", limitDaily='" + limitDaily + '\'' +
- ", limitPerBankAccountDaily='" + limitPerBankAccountDaily + '\'' +
- ", limitPerBankAccountPerDelays='" + limitPerBankAccountPerDelays + '\'' +
- ", delays='" + delays + '\'' +
- ", clientWarningLimit='" + clientWarningLimit + '\'' +
- ", tIBWarningLimit='" + tIBWarningLimit + '\'' +
- ", numberPerBankAccountDaily='" + numberPerBankAccountDaily + '\'' +
- ", numberPerBankPerDelays='" + numberPerBankPerDelays + '\'' +
- ", tIBWarningLimitPerBankAccountDaily='" + tIBWarningLimitPerBankAccountDaily + '\'' +
- ", tIBWarningLimitPerBankAccountPerDelays='" + tIBWarningLimitPerBankAccountPerDelays + '\'' +
- ", tIBWarningNumberPerBankAccountDaily='" + tIBWarningNumberPerBankAccountDaily + '\'' +
- ", tIBWarningNumberPerBankPerDelays='" + tIBWarningNumberPerBankPerDelays + '\'' +
- ", tIBWarningLimitDaily='" + tIBWarningLimitDaily + '\'' +
- ", operationType='" + operationType + '\'' +
- ", clientLimitDaily='" + clientLimitDaily + '\'' +
- ", tIBWarningClientLimitDaily='" + tIBWarningClientLimitDaily + '\'' +
+                "limit='" + limit + '\'' +
+                ", limitDaily='" + limitDaily + '\'' +
+                ", limitPerBankAccountDaily='" + limitPerBankAccountDaily + '\'' +
+                ", limitPerBankAccountPerDelays='" + limitPerBankAccountPerDelays + '\'' +
+                ", delays='" + delays + '\'' +
+                ", clientWarningLimit='" + clientWarningLimit + '\'' +
+                ", tIBWarningLimit='" + tIBWarningLimit + '\'' +
+                ", numberPerBankAccountDaily='" + numberPerBankAccountDaily + '\'' +
+                ", numberPerBankPerDelays='" + numberPerBankPerDelays + '\'' +
+                ", tIBWarningLimitPerBankAccountDaily='" + tIBWarningLimitPerBankAccountDaily + '\'' +
+                ", tIBWarningLimitPerBankAccountPerDelays='" + tIBWarningLimitPerBankAccountPerDelays + '\'' +
+                ", tIBWarningNumberPerBankAccountDaily='" + tIBWarningNumberPerBankAccountDaily + '\'' +
+                ", tIBWarningNumberPerBankPerDelays='" + tIBWarningNumberPerBankPerDelays + '\'' +
+                ", tIBWarningLimitDaily='" + tIBWarningLimitDaily + '\'' +
+                ", operationType='" + operationType + '\'' +
+                ", clientLimitDaily='" + clientLimitDaily + '\'' +
+                ", tIBWarningClientLimitDaily='" + tIBWarningClientLimitDaily + '\'' +
 
                 '}';
     }

@@ -20,26 +20,26 @@ public class TransactionFeesAgregated   {
 
     
     /**
- * Gets or sets the fees by count.
- */
+     * Gets or sets the fees by count.
+     */
     @JsonProperty("FeesByCount")
     private List<TransactionFeesForCount> feesByCount;
 
     /**
- * Gets or sets the total fee amount.
- */
+     * Gets or sets the total fee amount.
+     */
     @JsonProperty("TotalFeeAmount")
     private Double totalFeeAmount;
 
     /**
- * Gets or sets the total number of payments.
- */
+     * Gets or sets the total number of payments.
+     */
     @JsonProperty("TotalNumberOfPayments")
     private Integer totalNumberOfPayments;
 
     /**
- * Gets or sets the total number of fees.
- */
+     * Gets or sets the total number of fees.
+     */
     @JsonProperty("TotalNumberOfFees")
     private Integer totalNumberOfFees;
 
@@ -51,10 +51,9 @@ public class TransactionFeesAgregated   {
     
     public TransactionFeesAgregated(List<TransactionFeesForCount> feesByCount, Double totalFeeAmount, Integer totalNumberOfPayments, Integer totalNumberOfFees) {
         this.feesByCount = feesByCount;
-this.totalFeeAmount = totalFeeAmount;
-this.totalNumberOfPayments = totalNumberOfPayments;
-this.totalNumberOfFees = totalNumberOfFees;
-
+        this.totalFeeAmount = totalFeeAmount;
+        this.totalNumberOfPayments = totalNumberOfPayments;
+        this.totalNumberOfFees = totalNumberOfFees;
     }
     
     
@@ -112,10 +111,10 @@ this.totalNumberOfFees = totalNumberOfFees;
     @Override
     public String toString() {
         return "TransactionFeesAgregated{" +
-                 "feesByCount='" + feesByCount + '\'' +
- ", totalFeeAmount='" + totalFeeAmount + '\'' +
- ", totalNumberOfPayments='" + totalNumberOfPayments + '\'' +
- ", totalNumberOfFees='" + totalNumberOfFees + '\'' +
+                "feesByCount='" + feesByCount + '\'' +
+                ", totalFeeAmount='" + totalFeeAmount + '\'' +
+                ", totalNumberOfPayments='" + totalNumberOfPayments + '\'' +
+                ", totalNumberOfFees='" + totalNumberOfFees + '\'' +
 
                 '}';
     }

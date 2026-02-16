@@ -25,13 +25,11 @@ public class CreateBoardingClientResponse extends CustomAPIResponse {
 
     public CreateBoardingClientResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public CreateBoardingClientResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

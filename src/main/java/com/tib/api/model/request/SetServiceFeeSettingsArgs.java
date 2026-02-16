@@ -21,14 +21,14 @@ public class SetServiceFeeSettingsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
- */
+     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
- * Gets or sets the ServiceFeeSettings model that defines the fee configuration for a specific service contract.
- */
+     * Gets or sets the ServiceFeeSettings model that defines the fee configuration for a specific service contract.
+     */
     @JsonProperty("ServiceFeeSettings")
     private ServiceFeeSettings serviceFeeSettings;
 
@@ -40,16 +40,14 @@ public class SetServiceFeeSettingsArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public SetServiceFeeSettingsArgs(String serviceId, ServiceFeeSettings serviceFeeSettings) {
         this.serviceId = serviceId;
-this.serviceFeeSettings = serviceFeeSettings;
-
+        this.serviceFeeSettings = serviceFeeSettings;
     }
     
     
     public SetServiceFeeSettingsArgs(String sessionToken, String serviceId, ServiceFeeSettings serviceFeeSettings) {
         super(sessionToken);
         this.serviceId = serviceId;
-this.serviceFeeSettings = serviceFeeSettings;
-
+        this.serviceFeeSettings = serviceFeeSettings;
     }
 
     
@@ -89,8 +87,8 @@ this.serviceFeeSettings = serviceFeeSettings;
     @Override
     public String toString() {
         return "SetServiceFeeSettingsArgs{" +
-                 "serviceId='" + serviceId + '\'' +
- ", serviceFeeSettings='" + serviceFeeSettings + '\'' +
+                "serviceId='" + serviceId + '\'' +
+                ", serviceFeeSettings='" + serviceFeeSettings + '\'' +
 
                 '}';
     }

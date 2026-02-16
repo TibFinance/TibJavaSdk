@@ -25,13 +25,11 @@ public class CreateDirectDepositResponse extends CustomAPIResponse {
 
     public CreateDirectDepositResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);
-        
     }
 
     public CreateDirectDepositResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            
         }
     }
 

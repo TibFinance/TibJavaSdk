@@ -19,20 +19,20 @@ public class ProviderAddressEntity   {
 
     
     /**
- * Gets or sets the type of the URL.
- */
+     * Gets or sets the type of the URL.
+     */
     @JsonProperty("UrlType")
     private String urlType;
 
     /**
- * Gets or sets the URL.
- */
+     * Gets or sets the URL.
+     */
     @JsonProperty("Url")
     private String url;
 
     /**
- * Gets or sets the port.
- */
+     * Gets or sets the port.
+     */
     @JsonProperty("Port")
     private Integer port;
 
@@ -44,9 +44,8 @@ public class ProviderAddressEntity   {
     
     public ProviderAddressEntity(String urlType, String url, Integer port) {
         this.urlType = urlType;
-this.url = url;
-this.port = port;
-
+        this.url = url;
+        this.port = port;
     }
     
     
@@ -96,9 +95,9 @@ this.port = port;
     @Override
     public String toString() {
         return "ProviderAddressEntity{" +
-                 "urlType='" + urlType + '\'' +
- ", url='" + url + '\'' +
- ", port='" + port + '\'' +
+                "urlType='" + urlType + '\'' +
+                ", url='" + url + '\'' +
+                ", port='" + port + '\'' +
 
                 '}';
     }

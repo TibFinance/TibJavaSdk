@@ -47,26 +47,24 @@ public class GetBoardingApprovalResponse extends CustomAPIResponse {
     public GetBoardingApprovalResponse(Error[] errors, boolean hasError, String messages, String approvalStatus, String merchantName, String merchantEmail, String merchantId, String sandboxId, String processing, String payout) {
         super(errors, hasError, messages);
         this.approvalStatus = approvalStatus;
-this.merchantName = merchantName;
-this.merchantEmail = merchantEmail;
-this.merchantId = merchantId;
-this.sandboxId = sandboxId;
-this.processing = processing;
-this.payout = payout;
-
+        this.merchantName = merchantName;
+        this.merchantEmail = merchantEmail;
+        this.merchantId = merchantId;
+        this.sandboxId = sandboxId;
+        this.processing = processing;
+        this.payout = payout;
     }
 
     public GetBoardingApprovalResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.approvalStatus = apiResponse.getResponse().toString();
-this.merchantName = apiResponse.getResponse().toString();
-this.merchantEmail = apiResponse.getResponse().toString();
-this.merchantId = apiResponse.getResponse().toString();
-this.sandboxId = apiResponse.getResponse().toString();
-this.processing = apiResponse.getResponse().toString();
-this.payout = apiResponse.getResponse().toString();
-
+            this.merchantName = apiResponse.getResponse().toString();
+            this.merchantEmail = apiResponse.getResponse().toString();
+            this.merchantId = apiResponse.getResponse().toString();
+            this.sandboxId = apiResponse.getResponse().toString();
+            this.processing = apiResponse.getResponse().toString();
+            this.payout = apiResponse.getResponse().toString();
         }
     }
 
@@ -147,13 +145,13 @@ this.payout = apiResponse.getResponse().toString();
     @Override
     public String toString() {
         return "GetBoardingApprovalResponse{" +
-                 "approvalStatus='" + approvalStatus + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", merchantEmail='" + merchantEmail + '\'' +
- ", merchantId='" + merchantId + '\'' +
- ", sandboxId='" + sandboxId + '\'' +
- ", processing='" + processing + '\'' +
- ", payout='" + payout + '\'' +
+                "approvalStatus='" + approvalStatus + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", merchantEmail='" + merchantEmail + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", sandboxId='" + sandboxId + '\'' +
+                ", processing='" + processing + '\'' +
+                ", payout='" + payout + '\'' +
 
                 '}';
     }

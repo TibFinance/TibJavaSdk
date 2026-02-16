@@ -30,14 +30,12 @@ public class GetConvenientFeeSettingsByMerchantResponse extends CustomAPIRespons
     public GetConvenientFeeSettingsByMerchantResponse(Error[] errors, boolean hasError, String messages, List<ConvenientFeeSettings> convenientFeeSettings) {
         super(errors, hasError, messages);
         this.convenientFeeSettings = convenientFeeSettings;
-
     }
 
     public GetConvenientFeeSettingsByMerchantResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.convenientFeeSettings = (List<ConvenientFeeSettings>) apiResponse.getResponse();
-
         }
     }
 
@@ -70,7 +68,7 @@ public class GetConvenientFeeSettingsByMerchantResponse extends CustomAPIRespons
     @Override
     public String toString() {
         return "GetConvenientFeeSettingsByMerchantResponse{" +
-                 "convenientFeeSettings='" + convenientFeeSettings + '\'' +
+                "convenientFeeSettings='" + convenientFeeSettings + '\'' +
 
                 '}';
     }

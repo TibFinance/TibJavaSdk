@@ -21,14 +21,14 @@ public class OperationDateReportEntity   {
 
     
     /**
- * Gets or sets the report date.
- */
+     * Gets or sets the report date.
+     */
     @JsonProperty("ReportDate")
     private LocalDateTime reportDate;
 
     /**
- * Gets or sets the categories.
- */
+     * Gets or sets the categories.
+     */
     @JsonProperty("Categories")
     private Map<OperationCategoryReportType, OperationCategoryReportEntity> categories;
 
@@ -40,8 +40,7 @@ public class OperationDateReportEntity   {
     
     public OperationDateReportEntity(LocalDateTime reportDate, Map<OperationCategoryReportType, OperationCategoryReportEntity> categories) {
         this.reportDate = reportDate;
-this.categories = categories;
-
+        this.categories = categories;
     }
     
     
@@ -83,8 +82,8 @@ this.categories = categories;
     @Override
     public String toString() {
         return "OperationDateReportEntity{" +
-                 "reportDate='" + reportDate + '\'' +
- ", categories='" + categories + '\'' +
+                "reportDate='" + reportDate + '\'' +
+                ", categories='" + categories + '\'' +
 
                 '}';
     }

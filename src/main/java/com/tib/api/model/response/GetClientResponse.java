@@ -30,15 +30,13 @@ public class GetClientResponse extends CustomAPIResponse {
     public GetClientResponse(Error[] errors, boolean hasError, String messages, Client client) {
         super(errors, hasError, messages);
         this.client = client;
-
     }
 
     public GetClientResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-this.client = objectMapper.readValue(json, Client.class);
-
+            this.client = objectMapper.readValue(json, Client.class);
         }
     }
 
@@ -71,7 +69,7 @@ this.client = objectMapper.readValue(json, Client.class);
     @Override
     public String toString() {
         return "GetClientResponse{" +
-                 "client='" + client + '\'' +
+                "client='" + client + '\'' +
 
                 '}';
     }

@@ -19,8 +19,8 @@ public class PendingChangeAttribute   {
 
     
     /**
- * Gets or sets a value indicating whether [do not render on public pending change].
- */
+     * Gets or sets a value indicating whether [do not render on public pending change].
+     */
     @JsonProperty("DoNotRenderOnPublicPendingChange")
     private boolean doNotRenderOnPublicPendingChange;
 
@@ -32,7 +32,6 @@ public class PendingChangeAttribute   {
     
     public PendingChangeAttribute(boolean doNotRenderOnPublicPendingChange) {
         this.doNotRenderOnPublicPendingChange = doNotRenderOnPublicPendingChange;
-
     }
     
     
@@ -66,7 +65,7 @@ public class PendingChangeAttribute   {
     @Override
     public String toString() {
         return "PendingChangeAttribute{" +
-                 "doNotRenderOnPublicPendingChange='" + doNotRenderOnPublicPendingChange + '\'' +
+                "doNotRenderOnPublicPendingChange='" + doNotRenderOnPublicPendingChange + '\'' +
 
                 '}';
     }

@@ -20,8 +20,8 @@ public class GetBinInfoArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Bin")
     private String bin;
 
@@ -33,14 +33,12 @@ public class GetBinInfoArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public GetBinInfoArgs(String bin) {
         this.bin = bin;
-
     }
     
     
     public GetBinInfoArgs(String sessionToken, String bin) {
         super(sessionToken);
         this.bin = bin;
-
     }
 
     
@@ -72,7 +70,7 @@ public class GetBinInfoArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "GetBinInfoArgs{" +
-                 "bin='" + bin + '\'' +
+                "bin='" + bin + '\'' +
 
                 '}';
     }

@@ -19,8 +19,8 @@ public class GetSessionCookiesArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Key")
     private String key;
 
@@ -32,7 +32,6 @@ public class GetSessionCookiesArgs  implements IBaseCryptedServiceArgs  {
     
     public GetSessionCookiesArgs(String key) {
         this.key = key;
-
     }
     
     
@@ -66,7 +65,7 @@ public class GetSessionCookiesArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "GetSessionCookiesArgs{" +
-                 "key='" + key + '\'' +
+                "key='" + key + '\'' +
 
                 '}';
     }

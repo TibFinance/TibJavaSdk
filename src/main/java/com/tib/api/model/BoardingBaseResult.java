@@ -20,26 +20,26 @@ public class BoardingBaseResult   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("IsSuccess")
     private boolean isSuccess;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("HttpStatusCode")
     private Integer httpStatusCode;
 
     /**
- * Represents a textual message within the system, used for communication or logging purposes.
- */
+     * Represents a textual message within the system, used for communication or logging purposes.
+     */
     @JsonProperty("Message")
     private String message;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ErrorList")
     private List<BoardingBaseError> errorList;
 
@@ -51,10 +51,9 @@ public class BoardingBaseResult   {
     
     public BoardingBaseResult(boolean isSuccess, Integer httpStatusCode, String message, List<BoardingBaseError> errorList) {
         this.isSuccess = isSuccess;
-this.httpStatusCode = httpStatusCode;
-this.message = message;
-this.errorList = errorList;
-
+        this.httpStatusCode = httpStatusCode;
+        this.message = message;
+        this.errorList = errorList;
     }
     
     
@@ -112,10 +111,10 @@ this.errorList = errorList;
     @Override
     public String toString() {
         return "BoardingBaseResult{" +
-                 "isSuccess='" + isSuccess + '\'' +
- ", httpStatusCode='" + httpStatusCode + '\'' +
- ", message='" + message + '\'' +
- ", errorList='" + errorList + '\'' +
+                "isSuccess='" + isSuccess + '\'' +
+                ", httpStatusCode='" + httpStatusCode + '\'' +
+                ", message='" + message + '\'' +
+                ", errorList='" + errorList + '\'' +
 
                 '}';
     }

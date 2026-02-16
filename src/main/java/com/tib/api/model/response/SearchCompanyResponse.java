@@ -44,24 +44,22 @@ public class SearchCompanyResponse extends CustomAPIResponse {
     public SearchCompanyResponse(Error[] errors, boolean hasError, String messages, String neqOrNi, String companyName, String addressDisplay, String creationDate, boolean isQuebec, boolean hasDetails) {
         super(errors, hasError, messages);
         this.neqOrNi = neqOrNi;
-this.companyName = companyName;
-this.addressDisplay = addressDisplay;
-this.creationDate = creationDate;
-this.isQuebec = isQuebec;
-this.hasDetails = hasDetails;
-
+        this.companyName = companyName;
+        this.addressDisplay = addressDisplay;
+        this.creationDate = creationDate;
+        this.isQuebec = isQuebec;
+        this.hasDetails = hasDetails;
     }
 
     public SearchCompanyResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.neqOrNi = apiResponse.getResponse().toString();
-this.companyName = apiResponse.getResponse().toString();
-this.addressDisplay = apiResponse.getResponse().toString();
-this.creationDate = apiResponse.getResponse().toString();
-this.isQuebec = Boolean.parseBoolean(apiResponse.getResponse().toString());
-this.hasDetails = Boolean.parseBoolean(apiResponse.getResponse().toString());
-
+            this.companyName = apiResponse.getResponse().toString();
+            this.addressDisplay = apiResponse.getResponse().toString();
+            this.creationDate = apiResponse.getResponse().toString();
+            this.isQuebec = Boolean.parseBoolean(apiResponse.getResponse().toString());
+            this.hasDetails = Boolean.parseBoolean(apiResponse.getResponse().toString());
         }
     }
 
@@ -134,12 +132,12 @@ this.hasDetails = Boolean.parseBoolean(apiResponse.getResponse().toString());
     @Override
     public String toString() {
         return "SearchCompanyResponse{" +
-                 "neqOrNi='" + neqOrNi + '\'' +
- ", companyName='" + companyName + '\'' +
- ", addressDisplay='" + addressDisplay + '\'' +
- ", creationDate='" + creationDate + '\'' +
- ", isQuebec='" + isQuebec + '\'' +
- ", hasDetails='" + hasDetails + '\'' +
+                "neqOrNi='" + neqOrNi + '\'' +
+                ", companyName='" + companyName + '\'' +
+                ", addressDisplay='" + addressDisplay + '\'' +
+                ", creationDate='" + creationDate + '\'' +
+                ", isQuebec='" + isQuebec + '\'' +
+                ", hasDetails='" + hasDetails + '\'' +
 
                 '}';
     }

@@ -21,50 +21,50 @@ public class PaymentMethod   {
 
     
     /**
- * Acts as a unique identifier for a distinct payment method.
- */
+     * Acts as a unique identifier for a distinct payment method.
+     */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
     /**
- * Determines if the customer's payment method is set as the default for automatic transactions.
- */
+     * Determines if the customer's payment method is set as the default for automatic transactions.
+     */
     @JsonProperty("IsCustomerAutomaticPaymentMethod")
     private boolean isCustomerAutomaticPaymentMethod;
 
     /**
- * Identifies the type of payment method linked to a specific account.
- */
+     * Identifies the type of payment method linked to a specific account.
+     */
     @JsonProperty("PaymentMethodType")
     private PaymentMethodType paymentMethodType;
 
     /**
- * Provides a detailed description of the payment method for easy identification.
- */
+     * Provides a detailed description of the payment method for easy identification.
+     */
     @JsonProperty("PaymentMethodDescription")
     private String paymentMethodDescription;
 
     /**
- * Provides a secure representation of the account card number associated with a specific payment method.
- */
+     * Provides a secure representation of the account card number associated with a specific payment method.
+     */
     @JsonProperty("AccountPreview")
     private String accountPreview;
 
     /**
- * Handles the extraction or assignment of a particular entity's expiration date.
- */
+     * Handles the extraction or assignment of a particular entity's expiration date.
+     */
     @JsonProperty("ExpirationDate")
     private LocalDateTime expirationDate;
 
     /**
- * The 'Owner' property is designed to assign and identify the ownership of a specific resource or object within the system.
- */
+     * The 'Owner' property is designed to assign and identify the ownership of a specific resource or object within the system.
+     */
     @JsonProperty("Owner")
     private String owner;
 
     /**
- * Fetches a list of merchants who are preauthorized for a Preauthorized Payment Agreement (PPA) on a specified payment method.
- */
+     * Fetches a list of merchants who are preauthorized for a Preauthorized Payment Agreement (PPA) on a specified payment method.
+     */
     @JsonProperty("PreauthorizedMerchants")
     private List<MerchantIdName> preauthorizedMerchants;
 
@@ -76,14 +76,13 @@ public class PaymentMethod   {
     
     public PaymentMethod(String paymentMethodId, boolean isCustomerAutomaticPaymentMethod, PaymentMethodType paymentMethodType, String paymentMethodDescription, String accountPreview, LocalDateTime expirationDate, String owner, List<MerchantIdName> preauthorizedMerchants) {
         this.paymentMethodId = paymentMethodId;
-this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
-this.paymentMethodType = paymentMethodType;
-this.paymentMethodDescription = paymentMethodDescription;
-this.accountPreview = accountPreview;
-this.expirationDate = expirationDate;
-this.owner = owner;
-this.preauthorizedMerchants = preauthorizedMerchants;
-
+        this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
+        this.paymentMethodType = paymentMethodType;
+        this.paymentMethodDescription = paymentMethodDescription;
+        this.accountPreview = accountPreview;
+        this.expirationDate = expirationDate;
+        this.owner = owner;
+        this.preauthorizedMerchants = preauthorizedMerchants;
     }
     
     
@@ -173,14 +172,14 @@ this.preauthorizedMerchants = preauthorizedMerchants;
     @Override
     public String toString() {
         return "PaymentMethod{" +
-                 "paymentMethodId='" + paymentMethodId + '\'' +
- ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
- ", paymentMethodType='" + paymentMethodType + '\'' +
- ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
- ", accountPreview='" + accountPreview + '\'' +
- ", expirationDate='" + expirationDate + '\'' +
- ", owner='" + owner + '\'' +
- ", preauthorizedMerchants='" + preauthorizedMerchants + '\'' +
+                "paymentMethodId='" + paymentMethodId + '\'' +
+                ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
+                ", paymentMethodType='" + paymentMethodType + '\'' +
+                ", paymentMethodDescription='" + paymentMethodDescription + '\'' +
+                ", accountPreview='" + accountPreview + '\'' +
+                ", expirationDate='" + expirationDate + '\'' +
+                ", owner='" + owner + '\'' +
+                ", preauthorizedMerchants='" + preauthorizedMerchants + '\'' +
 
                 '}';
     }

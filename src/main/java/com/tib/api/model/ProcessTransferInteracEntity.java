@@ -25,20 +25,20 @@ public class ProcessTransferInteracEntity  extends ProcessTransferEntity  {
 
     
     /**
- * This model encapsulates the details required to manage Interac payment methods for customers. It is used to facilitate electronic funds transfers via the Interac network, a widely used payment system in Canada.
- */
+     * This model encapsulates the details required to manage Interac payment methods for customers. It is used to facilitate electronic funds transfers via the Interac network, a widely used payment system in Canada.
+     */
     @JsonProperty("InteracInformation")
     private Interac interacInformation;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("AnswerSalt")
     private String answerSalt;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("MerchantEmail")
     private String merchantEmail;
 
@@ -50,18 +50,16 @@ public class ProcessTransferInteracEntity  extends ProcessTransferEntity  {
     
     public ProcessTransferInteracEntity(Interac interacInformation, String answerSalt, String merchantEmail) {
         this.interacInformation = interacInformation;
-this.answerSalt = answerSalt;
-this.merchantEmail = merchantEmail;
-
+        this.answerSalt = answerSalt;
+        this.merchantEmail = merchantEmail;
     }
     
     
     public ProcessTransferInteracEntity(String transactionId, String transactionGroupId, Double transactionAmount, Currency currency, LocalDateTime dueDate, String transactionDescription, AcpOperationType acpOperationType, TransferDirection transferDirection, String favoriteProvider, boolean isTransactionRevert, String alreadyProcessedProviderId, String alreadyProcessedProviderAdditionalInfos, Language language, String providerTransactionId, String providerSubType, String merchantId, Provider providerType, String transferId, List<Object> relatedConvenientFeesWithTargetProviderId, Interac interacInformation, String answerSalt, String merchantEmail) {
         super(transactionId, transactionGroupId, transactionAmount, currency, dueDate, transactionDescription, acpOperationType, transferDirection, favoriteProvider, isTransactionRevert, alreadyProcessedProviderId, alreadyProcessedProviderAdditionalInfos, language, providerTransactionId, providerSubType, merchantId, providerType, transferId, relatedConvenientFeesWithTargetProviderId);
         this.interacInformation = interacInformation;
-this.answerSalt = answerSalt;
-this.merchantEmail = merchantEmail;
-
+        this.answerSalt = answerSalt;
+        this.merchantEmail = merchantEmail;
     }
 
     
@@ -109,9 +107,9 @@ this.merchantEmail = merchantEmail;
     @Override
     public String toString() {
         return "ProcessTransferInteracEntity{" +
-                 "interacInformation='" + interacInformation + '\'' +
- ", answerSalt='" + answerSalt + '\'' +
- ", merchantEmail='" + merchantEmail + '\'' +
+                "interacInformation='" + interacInformation + '\'' +
+                ", answerSalt='" + answerSalt + '\'' +
+                ", merchantEmail='" + merchantEmail + '\'' +
 
                 '}';
     }

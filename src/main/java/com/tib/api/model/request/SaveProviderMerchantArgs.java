@@ -20,14 +20,14 @@ public class SaveProviderMerchantArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ProviderMerchantId")
     private String providerMerchantId;
 
     /**
- * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
- */
+     * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
+     */
     @JsonProperty("BoardingInformationId")
     private String boardingInformationId;
 
@@ -39,16 +39,14 @@ public class SaveProviderMerchantArgs  extends BaseAuthenticatedCryptedArgs  {
     
     public SaveProviderMerchantArgs(String providerMerchantId, String boardingInformationId) {
         this.providerMerchantId = providerMerchantId;
-this.boardingInformationId = boardingInformationId;
-
+        this.boardingInformationId = boardingInformationId;
     }
     
     
     public SaveProviderMerchantArgs(String sessionToken, String providerMerchantId, String boardingInformationId) {
         super(sessionToken);
         this.providerMerchantId = providerMerchantId;
-this.boardingInformationId = boardingInformationId;
-
+        this.boardingInformationId = boardingInformationId;
     }
 
     
@@ -88,8 +86,8 @@ this.boardingInformationId = boardingInformationId;
     @Override
     public String toString() {
         return "SaveProviderMerchantArgs{" +
-                 "providerMerchantId='" + providerMerchantId + '\'' +
- ", boardingInformationId='" + boardingInformationId + '\'' +
+                "providerMerchantId='" + providerMerchantId + '\'' +
+                ", boardingInformationId='" + boardingInformationId + '\'' +
 
                 '}';
     }

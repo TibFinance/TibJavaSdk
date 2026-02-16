@@ -20,14 +20,14 @@ public class SetPaymentIdForSpecificPublicTokenArgs  extends BaseAuthenticatePub
 
     
     /**
- * Acts as a unique identifier for a distinct payment method.
- */
+     * Acts as a unique identifier for a distinct payment method.
+     */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
     /**
- * Indicates if the system must request the customer's consent prior to executing the payment.
- */
+     * Indicates if the system must request the customer's consent prior to executing the payment.
+     */
     @JsonProperty("AskForCustomerConsent")
     private boolean askForCustomerConsent;
 
@@ -39,16 +39,14 @@ public class SetPaymentIdForSpecificPublicTokenArgs  extends BaseAuthenticatePub
     
     public SetPaymentIdForSpecificPublicTokenArgs(String paymentMethodId, boolean askForCustomerConsent) {
         this.paymentMethodId = paymentMethodId;
-this.askForCustomerConsent = askForCustomerConsent;
-
+        this.askForCustomerConsent = askForCustomerConsent;
     }
     
     
     public SetPaymentIdForSpecificPublicTokenArgs(String publicTokenId, String paymentMethodId, boolean askForCustomerConsent) {
         super(publicTokenId);
         this.paymentMethodId = paymentMethodId;
-this.askForCustomerConsent = askForCustomerConsent;
-
+        this.askForCustomerConsent = askForCustomerConsent;
     }
 
     
@@ -88,8 +86,8 @@ this.askForCustomerConsent = askForCustomerConsent;
     @Override
     public String toString() {
         return "SetPaymentIdForSpecificPublicTokenArgs{" +
-                 "paymentMethodId='" + paymentMethodId + '\'' +
- ", askForCustomerConsent='" + askForCustomerConsent + '\'' +
+                "paymentMethodId='" + paymentMethodId + '\'' +
+                ", askForCustomerConsent='" + askForCustomerConsent + '\'' +
 
                 '}';
     }

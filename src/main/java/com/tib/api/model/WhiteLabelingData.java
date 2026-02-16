@@ -19,20 +19,20 @@ public class WhiteLabelingData   {
 
     
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("WhiteLabelingDataId")
     private String whiteLabelingDataId;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CssProperty")
     private String cssProperty;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("CssValue")
     private String cssValue;
 
@@ -44,9 +44,8 @@ public class WhiteLabelingData   {
     
     public WhiteLabelingData(String whiteLabelingDataId, String cssProperty, String cssValue) {
         this.whiteLabelingDataId = whiteLabelingDataId;
-this.cssProperty = cssProperty;
-this.cssValue = cssValue;
-
+        this.cssProperty = cssProperty;
+        this.cssValue = cssValue;
     }
     
     
@@ -96,9 +95,9 @@ this.cssValue = cssValue;
     @Override
     public String toString() {
         return "WhiteLabelingData{" +
-                 "whiteLabelingDataId='" + whiteLabelingDataId + '\'' +
- ", cssProperty='" + cssProperty + '\'' +
- ", cssValue='" + cssValue + '\'' +
+                "whiteLabelingDataId='" + whiteLabelingDataId + '\'' +
+                ", cssProperty='" + cssProperty + '\'' +
+                ", cssValue='" + cssValue + '\'' +
 
                 '}';
     }

@@ -20,14 +20,14 @@ public class GetFeesOverloadMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
 
     
     /**
- * Client information to modify
- */
+     * Client information to modify
+     */
     @JsonProperty("Id")
     private String id;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Source")
     private String source;
 
@@ -39,16 +39,14 @@ public class GetFeesOverloadMerchantArgs  extends BaseAdminOnlyCryptedArgs  {
     
     public GetFeesOverloadMerchantArgs(String id, String source) {
         this.id = id;
-this.source = source;
-
+        this.source = source;
     }
     
     
     public GetFeesOverloadMerchantArgs(String adminSessionToken, String id, String source) {
         super(adminSessionToken);
         this.id = id;
-this.source = source;
-
+        this.source = source;
     }
 
     
@@ -88,8 +86,8 @@ this.source = source;
     @Override
     public String toString() {
         return "GetFeesOverloadMerchantArgs{" +
-                 "id='" + id + '\'' +
- ", source='" + source + '\'' +
+                "id='" + id + '\'' +
+                ", source='" + source + '\'' +
 
                 '}';
     }

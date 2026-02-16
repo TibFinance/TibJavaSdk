@@ -19,68 +19,68 @@ public class ErrorReportData   {
 
     
     /**
- * Provides a detailed explanation of the function's purpose and usage within the API.
- */
+     * Provides a detailed explanation of the function's purpose and usage within the API.
+     */
     @JsonProperty("Description")
     private String description;
 
     /**
- * Represents the name associated with the merchant's account.
- */
+     * Represents the name associated with the merchant's account.
+     */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
- * Represents the merchant's unique name.
- */
+     * Represents the merchant's unique name.
+     */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ErrorDate")
     private String errorDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("ErrorDate2")
     private LocalDateTime errorDate2;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionDate2")
     private LocalDateTime transactionDate2;
 
     /**
- * The date and time when the payment was created.
- */
+     * The date and time when the payment was created.
+     */
     @JsonProperty("CreatedDate")
     private LocalDateTime createdDate;
 
     /**
- * Gets or sets the execution date and time of the transaction.
- */
+     * Gets or sets the execution date and time of the transaction.
+     */
     @JsonProperty("ExecutedDate")
     private Optional<LocalDateTime> executedDate;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("TransactionDate")
     private String transactionDate;
 
     /**
- * Retrieves or assigns the monetary amount involved in the transaction.
- */
+     * Retrieves or assigns the monetary amount involved in the transaction.
+     */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
- * 
- */
+     * 
+     */
     @JsonProperty("Context")
     private String context;
 
@@ -92,17 +92,16 @@ public class ErrorReportData   {
     
     public ErrorReportData(String description, String accountName, String merchantName, String errorDate, LocalDateTime errorDate2, LocalDateTime transactionDate2, LocalDateTime createdDate, Optional<LocalDateTime> executedDate, String transactionDate, Double amount, String context) {
         this.description = description;
-this.accountName = accountName;
-this.merchantName = merchantName;
-this.errorDate = errorDate;
-this.errorDate2 = errorDate2;
-this.transactionDate2 = transactionDate2;
-this.createdDate = createdDate;
-this.executedDate = executedDate;
-this.transactionDate = transactionDate;
-this.amount = amount;
-this.context = context;
-
+        this.accountName = accountName;
+        this.merchantName = merchantName;
+        this.errorDate = errorDate;
+        this.errorDate2 = errorDate2;
+        this.transactionDate2 = transactionDate2;
+        this.createdDate = createdDate;
+        this.executedDate = executedDate;
+        this.transactionDate = transactionDate;
+        this.amount = amount;
+        this.context = context;
     }
     
     
@@ -216,17 +215,17 @@ this.context = context;
     @Override
     public String toString() {
         return "ErrorReportData{" +
-                 "description='" + description + '\'' +
- ", accountName='" + accountName + '\'' +
- ", merchantName='" + merchantName + '\'' +
- ", errorDate='" + errorDate + '\'' +
- ", errorDate2='" + errorDate2 + '\'' +
- ", transactionDate2='" + transactionDate2 + '\'' +
- ", createdDate='" + createdDate + '\'' +
- ", executedDate='" + executedDate + '\'' +
- ", transactionDate='" + transactionDate + '\'' +
- ", amount='" + amount + '\'' +
- ", context='" + context + '\'' +
+                "description='" + description + '\'' +
+                ", accountName='" + accountName + '\'' +
+                ", merchantName='" + merchantName + '\'' +
+                ", errorDate='" + errorDate + '\'' +
+                ", errorDate2='" + errorDate2 + '\'' +
+                ", transactionDate2='" + transactionDate2 + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", executedDate='" + executedDate + '\'' +
+                ", transactionDate='" + transactionDate + '\'' +
+                ", amount='" + amount + '\'' +
+                ", context='" + context + '\'' +
 
                 '}';
     }

@@ -19,20 +19,20 @@ public class BoardingServiceMerchant   {
 
     
     /**
- * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
- */
+     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
- * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
- */
+     * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
+     */
     @JsonProperty("BoardingInformationId")
     private String boardingInformationId;
 
     /**
- * Represents the status of the merchant boarding process within the system. This status is crucial for tracking the progress and completion of merchant onboarding.
- */
+     * Represents the status of the merchant boarding process within the system. This status is crucial for tracking the progress and completion of merchant onboarding.
+     */
     @JsonProperty("BoardingStatus")
     private String boardingStatus;
 
@@ -44,9 +44,8 @@ public class BoardingServiceMerchant   {
     
     public BoardingServiceMerchant(String merchantId, String boardingInformationId, String boardingStatus) {
         this.merchantId = merchantId;
-this.boardingInformationId = boardingInformationId;
-this.boardingStatus = boardingStatus;
-
+        this.boardingInformationId = boardingInformationId;
+        this.boardingStatus = boardingStatus;
     }
     
     
@@ -96,9 +95,9 @@ this.boardingStatus = boardingStatus;
     @Override
     public String toString() {
         return "BoardingServiceMerchant{" +
-                 "merchantId='" + merchantId + '\'' +
- ", boardingInformationId='" + boardingInformationId + '\'' +
- ", boardingStatus='" + boardingStatus + '\'' +
+                "merchantId='" + merchantId + '\'' +
+                ", boardingInformationId='" + boardingInformationId + '\'' +
+                ", boardingStatus='" + boardingStatus + '\'' +
 
                 '}';
     }
