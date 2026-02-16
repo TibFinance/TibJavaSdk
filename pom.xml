@@ -5,7 +5,7 @@
 
     <groupId>finance.tib</groupId>
     <artifactId>tib-finance-sdk</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.2</version>
 
     <name>TIB Finance Java SDK</name>
     <description>Java SDK for the TIB Finance payment processing API</description>
