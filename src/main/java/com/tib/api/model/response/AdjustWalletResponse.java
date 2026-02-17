@@ -25,16 +25,26 @@ public class AdjustWalletResponse extends CustomAPIResponse {
     @JsonProperty("TransferId")
     private String transferId;
 
+    @JsonProperty("WasSuccessful")
+    private boolean wasSuccessful;
 
-    public AdjustWalletResponse(Error[] errors, boolean hasError, String messages, String transferId) {
+    @JsonProperty("RequiresSupplierBoarding")
+    private boolean requiresSupplierBoarding;
+
+
+    public AdjustWalletResponse(Error[] errors, boolean hasError, String messages, String transferId, boolean wasSuccessful, boolean requiresSupplierBoarding) {
         super(errors, hasError, messages);
         this.transferId = transferId;
+        this.wasSuccessful = wasSuccessful;
+        this.requiresSupplierBoarding = requiresSupplierBoarding;
     }
 
     public AdjustWalletResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
             this.transferId = apiResponse.getResponse().toString();
+            this.wasSuccessful = Boolean.parseBoolean(apiResponse.getResponse().toString());
+            this.requiresSupplierBoarding = Boolean.parseBoolean(apiResponse.getResponse().toString());
         }
     }
 
@@ -47,6 +57,22 @@ public class AdjustWalletResponse extends CustomAPIResponse {
         this.transferId = transferId;
     }
 
+    public boolean getWasSuccessful() {
+        return wasSuccessful;
+    }
+
+    public void setWasSuccessful(boolean wasSuccessful) {
+        this.wasSuccessful = wasSuccessful;
+    }
+
+    public boolean getRequiresSupplierBoarding() {
+        return requiresSupplierBoarding;
+    }
+
+    public void setRequiresSupplierBoarding(boolean requiresSupplierBoarding) {
+        this.requiresSupplierBoarding = requiresSupplierBoarding;
+    }
+
 
 
     
@@ -55,19 +81,21 @@ public class AdjustWalletResponse extends CustomAPIResponse {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AdjustWalletResponse that = (AdjustWalletResponse) o;
-        return Objects.equals(transferId, that.transferId) ;
+        return Objects.equals(transferId, that.transferId) && Objects.equals(wasSuccessful, that.wasSuccessful) && Objects.equals(requiresSupplierBoarding, that.requiresSupplierBoarding) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(transferId);
+        return Objects.hash(transferId, wasSuccessful, requiresSupplierBoarding);
     }
 
     @Override
     public String toString() {
         return "AdjustWalletResponse{" +
                 "transferId='" + transferId + '\'' +
+                ", wasSuccessful='" + wasSuccessful + '\'' +
+                ", requiresSupplierBoarding='" + requiresSupplierBoarding + '\'' +
 
                 '}';
     }

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum AutorizedPaymentMethodFlags {
 
-    NotSet(0), CreditCard(1), DirectAccount(2), CreditCardPPA(4), DirectAccountPPA(8), Interac(16);
+    NotSet(0), CreditCard(1), DirectAccount(2), CreditCardPPA(4), DirectAccountPPA(8), Interac(16), CreditCardVisa(32), CreditCardMastercard(64), CreditCardAmex(128);
 
     private int value;
 

@@ -32,22 +32,38 @@ public class SaveMerchantAccountInfoArgs  extends BaseAuthenticatedCryptedArgs  
     @JsonProperty("Account")
     private Account account;
 
+    /**
+     * The 6-digit TOTP code from the user's authenticator app. Set to null on first call. If response indicates CodeRequired, prompt user and retry with code.
+     */
+    @JsonProperty("TwoFactorCode")
+    private String twoFactorCode;
+
+    /**
+     * The bank account number provided by the user for security verification before 2FA setup. Required when TwoFactorStatus is SecurityVerificationRequired. Format: "BankNumber-Transit-AccountNumber" (e.g., "123-12345-123456789").
+     */
+    @JsonProperty("TwoFactorSecurityAnswer")
+    private String twoFactorSecurityAnswer;
+
 
     
     public SaveMerchantAccountInfoArgs() {
     }
 
     
-    public SaveMerchantAccountInfoArgs(String merchantId, Account account) {
+    public SaveMerchantAccountInfoArgs(String merchantId, Account account, String twoFactorCode, String twoFactorSecurityAnswer) {
         this.merchantId = merchantId;
         this.account = account;
+        this.twoFactorCode = twoFactorCode;
+        this.twoFactorSecurityAnswer = twoFactorSecurityAnswer;
     }
     
     
-    public SaveMerchantAccountInfoArgs(String sessionToken, String merchantId, Account account) {
+    public SaveMerchantAccountInfoArgs(String sessionToken, String merchantId, Account account, String twoFactorCode, String twoFactorSecurityAnswer) {
         super(sessionToken);
         this.merchantId = merchantId;
         this.account = account;
+        this.twoFactorCode = twoFactorCode;
+        this.twoFactorSecurityAnswer = twoFactorSecurityAnswer;
     }
 
     
@@ -67,6 +83,22 @@ public class SaveMerchantAccountInfoArgs  extends BaseAuthenticatedCryptedArgs  
         this.account = account;
     }
 
+    public String getTwoFactorCode() {
+        return twoFactorCode;
+    }
+
+    public void setTwoFactorCode(String twoFactorCode) {
+        this.twoFactorCode = twoFactorCode;
+    }
+
+    public String getTwoFactorSecurityAnswer() {
+        return twoFactorSecurityAnswer;
+    }
+
+    public void setTwoFactorSecurityAnswer(String twoFactorSecurityAnswer) {
+        this.twoFactorSecurityAnswer = twoFactorSecurityAnswer;
+    }
+
 
 
     
@@ -75,13 +107,13 @@ public class SaveMerchantAccountInfoArgs  extends BaseAuthenticatedCryptedArgs  
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SaveMerchantAccountInfoArgs that = (SaveMerchantAccountInfoArgs) o;
-        return Objects.equals(merchantId, that.merchantId) && Objects.equals(account, that.account) ;
+        return Objects.equals(merchantId, that.merchantId) && Objects.equals(account, that.account) && Objects.equals(twoFactorCode, that.twoFactorCode) && Objects.equals(twoFactorSecurityAnswer, that.twoFactorSecurityAnswer) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(merchantId, account);
+        return Objects.hash(merchantId, account, twoFactorCode, twoFactorSecurityAnswer);
     }
 
     @Override
@@ -89,6 +121,8 @@ public class SaveMerchantAccountInfoArgs  extends BaseAuthenticatedCryptedArgs  
         return "SaveMerchantAccountInfoArgs{" +
                 "merchantId='" + merchantId + '\'' +
                 ", account='" + account + '\'' +
+                ", twoFactorCode='" + twoFactorCode + '\'' +
+                ", twoFactorSecurityAnswer='" + twoFactorSecurityAnswer + '\'' +
 
                 '}';
     }

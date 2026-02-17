@@ -63,6 +63,12 @@ public class PaymentMethod   {
     private String owner;
 
     /**
+     * 
+     */
+    @JsonProperty("CcType")
+    private String ccType;
+
+    /**
      * Fetches a list of merchants who are preauthorized for a Preauthorized Payment Agreement (PPA) on a specified payment method.
      */
     @JsonProperty("PreauthorizedMerchants")
@@ -74,7 +80,7 @@ public class PaymentMethod   {
     }
 
     
-    public PaymentMethod(String paymentMethodId, boolean isCustomerAutomaticPaymentMethod, PaymentMethodType paymentMethodType, String paymentMethodDescription, String accountPreview, LocalDateTime expirationDate, String owner, List<MerchantIdName> preauthorizedMerchants) {
+    public PaymentMethod(String paymentMethodId, boolean isCustomerAutomaticPaymentMethod, PaymentMethodType paymentMethodType, String paymentMethodDescription, String accountPreview, LocalDateTime expirationDate, String owner, String ccType, List<MerchantIdName> preauthorizedMerchants) {
         this.paymentMethodId = paymentMethodId;
         this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
         this.paymentMethodType = paymentMethodType;
@@ -82,6 +88,7 @@ public class PaymentMethod   {
         this.accountPreview = accountPreview;
         this.expirationDate = expirationDate;
         this.owner = owner;
+        this.ccType = ccType;
         this.preauthorizedMerchants = preauthorizedMerchants;
     }
     
@@ -144,6 +151,14 @@ public class PaymentMethod   {
         this.owner = owner;
     }
 
+    public String getCcType() {
+        return ccType;
+    }
+
+    public void setCcType(String ccType) {
+        this.ccType = ccType;
+    }
+
     public List<MerchantIdName> getPreauthorizedMerchants() {
         return preauthorizedMerchants;
     }
@@ -160,13 +175,13 @@ public class PaymentMethod   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PaymentMethod that = (PaymentMethod) o;
-        return Objects.equals(paymentMethodId, that.paymentMethodId) && Objects.equals(isCustomerAutomaticPaymentMethod, that.isCustomerAutomaticPaymentMethod) && Objects.equals(paymentMethodType, that.paymentMethodType) && Objects.equals(paymentMethodDescription, that.paymentMethodDescription) && Objects.equals(accountPreview, that.accountPreview) && Objects.equals(expirationDate, that.expirationDate) && Objects.equals(owner, that.owner) && Objects.equals(preauthorizedMerchants, that.preauthorizedMerchants) ;
+        return Objects.equals(paymentMethodId, that.paymentMethodId) && Objects.equals(isCustomerAutomaticPaymentMethod, that.isCustomerAutomaticPaymentMethod) && Objects.equals(paymentMethodType, that.paymentMethodType) && Objects.equals(paymentMethodDescription, that.paymentMethodDescription) && Objects.equals(accountPreview, that.accountPreview) && Objects.equals(expirationDate, that.expirationDate) && Objects.equals(owner, that.owner) && Objects.equals(ccType, that.ccType) && Objects.equals(preauthorizedMerchants, that.preauthorizedMerchants) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(paymentMethodId, isCustomerAutomaticPaymentMethod, paymentMethodType, paymentMethodDescription, accountPreview, expirationDate, owner, preauthorizedMerchants);
+        return Objects.hash(paymentMethodId, isCustomerAutomaticPaymentMethod, paymentMethodType, paymentMethodDescription, accountPreview, expirationDate, owner, ccType, preauthorizedMerchants);
     }
 
     @Override
@@ -179,6 +194,7 @@ public class PaymentMethod   {
                 ", accountPreview='" + accountPreview + '\'' +
                 ", expirationDate='" + expirationDate + '\'' +
                 ", owner='" + owner + '\'' +
+                ", ccType='" + ccType + '\'' +
                 ", preauthorizedMerchants='" + preauthorizedMerchants + '\'' +
 
                 '}';

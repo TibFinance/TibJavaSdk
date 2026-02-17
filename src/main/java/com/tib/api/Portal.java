@@ -113,7 +113,7 @@ public class Portal {
      * Retrieves wallet information for a specific service.
      *
      * @param args the args
-     * @return  GetWalletInformationsByServiceResponse.
+     * @return  A GetWalletInformationsByServiceResponse containing the list of wallets with their details.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -245,7 +245,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("SaveMerchant", args);
-        return new SaveMerchantResponse(apiResponse);
+        return new SaveMerchantResponse(apiResponse, objectMapper);
     }
     /**
      * This function saves the basic information of a merchant. It is used to update or create the initial details associated with a merchant account within the TIB Finance API system.
@@ -268,7 +268,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("SaveMerchantBasicInfo", args);
-        return new SaveMerchantResponse(apiResponse);
+        return new SaveMerchantResponse(apiResponse, objectMapper);
     }
     /**
      * Stores the merchant's account details securely in the system.
@@ -291,7 +291,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("SaveMerchantAccountInfo", args);
-        return new SaveMerchantResponse(apiResponse);
+        return new SaveMerchantResponse(apiResponse, objectMapper);
     }
     /**
      * Removes a specified merchant from the system. This operation is irreversible and will permanently delete the merchant's data, including all associated accounts and transactions.
@@ -777,10 +777,10 @@ public class Portal {
         return new ListTransfersResponse(apiResponse);
     }
     /**
-     * Lists the transfers using an optimized fast query.
+     * Lists transfers using an optimized fast query.
      *
      * @param args the args
-     * @return  ListTransfersFastResponse.
+     * @return  A ListTransfersFastResponse containing the list of transfers with compact field names for optimized performance.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -800,10 +800,10 @@ public class Portal {
         return new ListTransfersFastResponse(apiResponse);
     }
     /**
-     * Lists the transfers for a specific bill using an optimized fast query.
+     * Lists the transfers of a bill.
      *
      * @param args the args
-     * @return  ListTransfersFastResponse.
+     * @return  
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1240,7 +1240,7 @@ public class Portal {
      * Creates a transfer to a supplier.
      *
      * @param args the args
-     * @return  CreateSupplierTransferResponse.
+     * @return  A CreateSupplierTransferResponse containing the result of the transfer creation, including any matching existing merchants.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1260,10 +1260,10 @@ public class Portal {
         return new CreateSupplierTransferResponse(apiResponse);
     }
     /**
-     * Retrieves the list of suppliers associated with a merchant.
+     * Retrieves the list of suppliers for a merchant.
      *
      * @param args the args
-     * @return  GetSuppliersResponse.
+     * @return  A GetSuppliersResponse containing the list of suppliers with their IDs and descriptions.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1283,10 +1283,10 @@ public class Portal {
         return new GetSuppliersResponse(apiResponse);
     }
     /**
-     * Creates a new supplier associated with a merchant.
+     * Creates a new supplier for a merchant.
      *
      * @param args the args
-     * @return  CreateSupplierResponse.
+     * @return  A CreateSupplierResponse containing the newly created supplier's ID, name, and any matching existing merchants.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1306,10 +1306,10 @@ public class Portal {
         return new CreateSupplierResponse(apiResponse);
     }
     /**
-     * Retrieves wallet operations and transaction history for a specified service within a date range.
+     * Retrieves wallet operations and transaction history for a merchant.
      *
      * @param args the args
-     * @return  GetWalletOperationsResponse.
+     * @return  A GetWalletOperationsResponse containing the list of daily operations, balance before operations, and delay buffer amount.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
