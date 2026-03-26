@@ -67,6 +67,12 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
     /**
      * 
      */
+    @JsonProperty("RecurringEndDate")
+    private LocalDateTime recurringEndDate;
+
+    /**
+     * 
+     */
     @JsonProperty("BillNumber")
     private String billNumber;
 
@@ -88,7 +94,7 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
     }
 
     
-    public CreateSupplierTransferArgs(String merchantId, Double amount, LocalDateTime transferDueDate, String targetMerchantId, Currency currency, Language language, TransferFrequency transferFrequency, String billNumber, String billDescription, String billTitle) {
+    public CreateSupplierTransferArgs(String merchantId, Double amount, LocalDateTime transferDueDate, String targetMerchantId, Currency currency, Language language, TransferFrequency transferFrequency, LocalDateTime recurringEndDate, String billNumber, String billDescription, String billTitle) {
         this.merchantId = merchantId;
         this.amount = amount;
         this.transferDueDate = transferDueDate;
@@ -96,13 +102,14 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
         this.currency = currency;
         this.language = language;
         this.transferFrequency = transferFrequency;
+        this.recurringEndDate = recurringEndDate;
         this.billNumber = billNumber;
         this.billDescription = billDescription;
         this.billTitle = billTitle;
     }
     
     
-    public CreateSupplierTransferArgs(String sessionToken, String merchantId, Double amount, LocalDateTime transferDueDate, String targetMerchantId, Currency currency, Language language, TransferFrequency transferFrequency, String billNumber, String billDescription, String billTitle) {
+    public CreateSupplierTransferArgs(String sessionToken, String merchantId, Double amount, LocalDateTime transferDueDate, String targetMerchantId, Currency currency, Language language, TransferFrequency transferFrequency, LocalDateTime recurringEndDate, String billNumber, String billDescription, String billTitle) {
         super(sessionToken);
         this.merchantId = merchantId;
         this.amount = amount;
@@ -111,6 +118,7 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
         this.currency = currency;
         this.language = language;
         this.transferFrequency = transferFrequency;
+        this.recurringEndDate = recurringEndDate;
         this.billNumber = billNumber;
         this.billDescription = billDescription;
         this.billTitle = billTitle;
@@ -173,6 +181,14 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
         this.transferFrequency = transferFrequency;
     }
 
+    public LocalDateTime getRecurringEndDate() {
+        return recurringEndDate;
+    }
+
+    public void setRecurringEndDate(LocalDateTime recurringEndDate) {
+        this.recurringEndDate = recurringEndDate;
+    }
+
     public String getBillNumber() {
         return billNumber;
     }
@@ -205,13 +221,13 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CreateSupplierTransferArgs that = (CreateSupplierTransferArgs) o;
-        return Objects.equals(merchantId, that.merchantId) && Objects.equals(amount, that.amount) && Objects.equals(transferDueDate, that.transferDueDate) && Objects.equals(targetMerchantId, that.targetMerchantId) && Objects.equals(currency, that.currency) && Objects.equals(language, that.language) && Objects.equals(transferFrequency, that.transferFrequency) && Objects.equals(billNumber, that.billNumber) && Objects.equals(billDescription, that.billDescription) && Objects.equals(billTitle, that.billTitle) ;
+        return Objects.equals(merchantId, that.merchantId) && Objects.equals(amount, that.amount) && Objects.equals(transferDueDate, that.transferDueDate) && Objects.equals(targetMerchantId, that.targetMerchantId) && Objects.equals(currency, that.currency) && Objects.equals(language, that.language) && Objects.equals(transferFrequency, that.transferFrequency) && Objects.equals(recurringEndDate, that.recurringEndDate) && Objects.equals(billNumber, that.billNumber) && Objects.equals(billDescription, that.billDescription) && Objects.equals(billTitle, that.billTitle) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(merchantId, amount, transferDueDate, targetMerchantId, currency, language, transferFrequency, billNumber, billDescription, billTitle);
+        return Objects.hash(merchantId, amount, transferDueDate, targetMerchantId, currency, language, transferFrequency, recurringEndDate, billNumber, billDescription, billTitle);
     }
 
     @Override
@@ -224,6 +240,7 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
                 ", currency='" + currency + '\'' +
                 ", language='" + language + '\'' +
                 ", transferFrequency='" + transferFrequency + '\'' +
+                ", recurringEndDate='" + recurringEndDate + '\'' +
                 ", billNumber='" + billNumber + '\'' +
                 ", billDescription='" + billDescription + '\'' +
                 ", billTitle='" + billTitle + '\'' +

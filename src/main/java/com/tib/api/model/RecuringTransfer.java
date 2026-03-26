@@ -110,13 +110,19 @@ public class RecuringTransfer   {
     @JsonProperty("TrasnferExternalSystemNumber")
     private String trasnferExternalSystemNumber;
 
+    /**
+     * 
+     */
+    @JsonProperty("EndDate")
+    private LocalDateTime endDate;
+
 
     
     public RecuringTransfer() {
     }
 
     
-    public RecuringTransfer(LocalDateTime nextRecuringDate, String recuringTransferId, TransferFrequency recuringMode, TransferType transferType, String relatedPaymentMethodId, LocalDateTime recuringRefDate, LocalDateTime createdDate, String relatedMerchantId, String relatedMerchantName, String customerName, String customerId, Double amount, String trasnferTitle, String trasnferDescription, String trasnferExternalSystemNumber) {
+    public RecuringTransfer(LocalDateTime nextRecuringDate, String recuringTransferId, TransferFrequency recuringMode, TransferType transferType, String relatedPaymentMethodId, LocalDateTime recuringRefDate, LocalDateTime createdDate, String relatedMerchantId, String relatedMerchantName, String customerName, String customerId, Double amount, String trasnferTitle, String trasnferDescription, String trasnferExternalSystemNumber, LocalDateTime endDate) {
         this.nextRecuringDate = nextRecuringDate;
         this.recuringTransferId = recuringTransferId;
         this.recuringMode = recuringMode;
@@ -132,6 +138,7 @@ public class RecuringTransfer   {
         this.trasnferTitle = trasnferTitle;
         this.trasnferDescription = trasnferDescription;
         this.trasnferExternalSystemNumber = trasnferExternalSystemNumber;
+        this.endDate = endDate;
     }
     
     
@@ -257,6 +264,14 @@ public class RecuringTransfer   {
         this.trasnferExternalSystemNumber = trasnferExternalSystemNumber;
     }
 
+    public LocalDateTime getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDateTime endDate) {
+        this.endDate = endDate;
+    }
+
 
 
     
@@ -265,13 +280,13 @@ public class RecuringTransfer   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         RecuringTransfer that = (RecuringTransfer) o;
-        return Objects.equals(nextRecuringDate, that.nextRecuringDate) && Objects.equals(recuringTransferId, that.recuringTransferId) && Objects.equals(recuringMode, that.recuringMode) && Objects.equals(transferType, that.transferType) && Objects.equals(relatedPaymentMethodId, that.relatedPaymentMethodId) && Objects.equals(recuringRefDate, that.recuringRefDate) && Objects.equals(createdDate, that.createdDate) && Objects.equals(relatedMerchantId, that.relatedMerchantId) && Objects.equals(relatedMerchantName, that.relatedMerchantName) && Objects.equals(customerName, that.customerName) && Objects.equals(customerId, that.customerId) && Objects.equals(amount, that.amount) && Objects.equals(trasnferTitle, that.trasnferTitle) && Objects.equals(trasnferDescription, that.trasnferDescription) && Objects.equals(trasnferExternalSystemNumber, that.trasnferExternalSystemNumber) ;
+        return Objects.equals(nextRecuringDate, that.nextRecuringDate) && Objects.equals(recuringTransferId, that.recuringTransferId) && Objects.equals(recuringMode, that.recuringMode) && Objects.equals(transferType, that.transferType) && Objects.equals(relatedPaymentMethodId, that.relatedPaymentMethodId) && Objects.equals(recuringRefDate, that.recuringRefDate) && Objects.equals(createdDate, that.createdDate) && Objects.equals(relatedMerchantId, that.relatedMerchantId) && Objects.equals(relatedMerchantName, that.relatedMerchantName) && Objects.equals(customerName, that.customerName) && Objects.equals(customerId, that.customerId) && Objects.equals(amount, that.amount) && Objects.equals(trasnferTitle, that.trasnferTitle) && Objects.equals(trasnferDescription, that.trasnferDescription) && Objects.equals(trasnferExternalSystemNumber, that.trasnferExternalSystemNumber) && Objects.equals(endDate, that.endDate) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(nextRecuringDate, recuringTransferId, recuringMode, transferType, relatedPaymentMethodId, recuringRefDate, createdDate, relatedMerchantId, relatedMerchantName, customerName, customerId, amount, trasnferTitle, trasnferDescription, trasnferExternalSystemNumber);
+        return Objects.hash(nextRecuringDate, recuringTransferId, recuringMode, transferType, relatedPaymentMethodId, recuringRefDate, createdDate, relatedMerchantId, relatedMerchantName, customerName, customerId, amount, trasnferTitle, trasnferDescription, trasnferExternalSystemNumber, endDate);
     }
 
     @Override
@@ -292,6 +307,7 @@ public class RecuringTransfer   {
                 ", trasnferTitle='" + trasnferTitle + '\'' +
                 ", trasnferDescription='" + trasnferDescription + '\'' +
                 ", trasnferExternalSystemNumber='" + trasnferExternalSystemNumber + '\'' +
+                ", endDate='" + endDate + '\'' +
 
                 '}';
     }

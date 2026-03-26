@@ -101,6 +101,12 @@ public class CreateFreeOperationArgs  extends BaseAuthenticatedCryptedArgs  {
     private TransferFrequency transferFrequency;
 
     /**
+     * 
+     */
+    @JsonProperty("RecurringEndDate")
+    private LocalDateTime recurringEndDate;
+
+    /**
      * Represents the unique identifier for a group within the TIB Finance API.
      */
     @JsonProperty("GroupId")
@@ -130,7 +136,7 @@ public class CreateFreeOperationArgs  extends BaseAuthenticatedCryptedArgs  {
     }
 
     
-    public CreateFreeOperationArgs(String merchantId, String billId, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Double amount, Language language, LocalDateTime transactionDueDate, String transferTitle, String transferDescription, String transferExternalSystemNumber, TransferFrequency transferFrequency, String groupId, boolean immediateTransfer, String statementDescription, boolean stopSameIdentifications) {
+    public CreateFreeOperationArgs(String merchantId, String billId, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Double amount, Language language, LocalDateTime transactionDueDate, String transferTitle, String transferDescription, String transferExternalSystemNumber, TransferFrequency transferFrequency, LocalDateTime recurringEndDate, String groupId, boolean immediateTransfer, String statementDescription, boolean stopSameIdentifications) {
         this.merchantId = merchantId;
         this.billId = billId;
         this.customerId = customerId;
@@ -144,6 +150,7 @@ public class CreateFreeOperationArgs  extends BaseAuthenticatedCryptedArgs  {
         this.transferDescription = transferDescription;
         this.transferExternalSystemNumber = transferExternalSystemNumber;
         this.transferFrequency = transferFrequency;
+        this.recurringEndDate = recurringEndDate;
         this.groupId = groupId;
         this.immediateTransfer = immediateTransfer;
         this.statementDescription = statementDescription;
@@ -151,7 +158,7 @@ public class CreateFreeOperationArgs  extends BaseAuthenticatedCryptedArgs  {
     }
     
     
-    public CreateFreeOperationArgs(String sessionToken, String merchantId, String billId, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Double amount, Language language, LocalDateTime transactionDueDate, String transferTitle, String transferDescription, String transferExternalSystemNumber, TransferFrequency transferFrequency, String groupId, boolean immediateTransfer, String statementDescription, boolean stopSameIdentifications) {
+    public CreateFreeOperationArgs(String sessionToken, String merchantId, String billId, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Double amount, Language language, LocalDateTime transactionDueDate, String transferTitle, String transferDescription, String transferExternalSystemNumber, TransferFrequency transferFrequency, LocalDateTime recurringEndDate, String groupId, boolean immediateTransfer, String statementDescription, boolean stopSameIdentifications) {
         super(sessionToken);
         this.merchantId = merchantId;
         this.billId = billId;
@@ -166,6 +173,7 @@ public class CreateFreeOperationArgs  extends BaseAuthenticatedCryptedArgs  {
         this.transferDescription = transferDescription;
         this.transferExternalSystemNumber = transferExternalSystemNumber;
         this.transferFrequency = transferFrequency;
+        this.recurringEndDate = recurringEndDate;
         this.groupId = groupId;
         this.immediateTransfer = immediateTransfer;
         this.statementDescription = statementDescription;
@@ -277,6 +285,14 @@ public class CreateFreeOperationArgs  extends BaseAuthenticatedCryptedArgs  {
         this.transferFrequency = transferFrequency;
     }
 
+    public LocalDateTime getRecurringEndDate() {
+        return recurringEndDate;
+    }
+
+    public void setRecurringEndDate(LocalDateTime recurringEndDate) {
+        this.recurringEndDate = recurringEndDate;
+    }
+
     public String getGroupId() {
         return groupId;
     }
@@ -317,13 +333,13 @@ public class CreateFreeOperationArgs  extends BaseAuthenticatedCryptedArgs  {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CreateFreeOperationArgs that = (CreateFreeOperationArgs) o;
-        return Objects.equals(merchantId, that.merchantId) && Objects.equals(billId, that.billId) && Objects.equals(customerId, that.customerId) && Objects.equals(paymentMethodId, that.paymentMethodId) && Objects.equals(transferType, that.transferType) && Objects.equals(referenceNumber, that.referenceNumber) && Objects.equals(amount, that.amount) && Objects.equals(language, that.language) && Objects.equals(transactionDueDate, that.transactionDueDate) && Objects.equals(transferTitle, that.transferTitle) && Objects.equals(transferDescription, that.transferDescription) && Objects.equals(transferExternalSystemNumber, that.transferExternalSystemNumber) && Objects.equals(transferFrequency, that.transferFrequency) && Objects.equals(groupId, that.groupId) && Objects.equals(immediateTransfer, that.immediateTransfer) && Objects.equals(statementDescription, that.statementDescription) && Objects.equals(stopSameIdentifications, that.stopSameIdentifications) ;
+        return Objects.equals(merchantId, that.merchantId) && Objects.equals(billId, that.billId) && Objects.equals(customerId, that.customerId) && Objects.equals(paymentMethodId, that.paymentMethodId) && Objects.equals(transferType, that.transferType) && Objects.equals(referenceNumber, that.referenceNumber) && Objects.equals(amount, that.amount) && Objects.equals(language, that.language) && Objects.equals(transactionDueDate, that.transactionDueDate) && Objects.equals(transferTitle, that.transferTitle) && Objects.equals(transferDescription, that.transferDescription) && Objects.equals(transferExternalSystemNumber, that.transferExternalSystemNumber) && Objects.equals(transferFrequency, that.transferFrequency) && Objects.equals(recurringEndDate, that.recurringEndDate) && Objects.equals(groupId, that.groupId) && Objects.equals(immediateTransfer, that.immediateTransfer) && Objects.equals(statementDescription, that.statementDescription) && Objects.equals(stopSameIdentifications, that.stopSameIdentifications) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(merchantId, billId, customerId, paymentMethodId, transferType, referenceNumber, amount, language, transactionDueDate, transferTitle, transferDescription, transferExternalSystemNumber, transferFrequency, groupId, immediateTransfer, statementDescription, stopSameIdentifications);
+        return Objects.hash(merchantId, billId, customerId, paymentMethodId, transferType, referenceNumber, amount, language, transactionDueDate, transferTitle, transferDescription, transferExternalSystemNumber, transferFrequency, recurringEndDate, groupId, immediateTransfer, statementDescription, stopSameIdentifications);
     }
 
     @Override
@@ -342,6 +358,7 @@ public class CreateFreeOperationArgs  extends BaseAuthenticatedCryptedArgs  {
                 ", transferDescription='" + transferDescription + '\'' +
                 ", transferExternalSystemNumber='" + transferExternalSystemNumber + '\'' +
                 ", transferFrequency='" + transferFrequency + '\'' +
+                ", recurringEndDate='" + recurringEndDate + '\'' +
                 ", groupId='" + groupId + '\'' +
                 ", immediateTransfer='" + immediateTransfer + '\'' +
                 ", statementDescription='" + statementDescription + '\'' +
