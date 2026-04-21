@@ -6,7 +6,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,7 +20,7 @@ public class RevertTransferArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Identifies the specific transfer operation that needs to be reverted.
+     * Unique identifier of the wallet adjustment transaction
      */
     @JsonProperty("TransferId")
     private String transferId;

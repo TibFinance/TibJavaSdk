@@ -10,7 +10,7 @@ import com.tib.api.model.enums.Provider;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -24,7 +24,7 @@ public class Merchant  extends MerchantBasicInfo  {
 
     
     /**
-     * Contains the necessary details for replacing a merchant's account information within the system.
+     * The target bank account for the direct payment.
      */
     @JsonProperty("Account")
     private Account account;

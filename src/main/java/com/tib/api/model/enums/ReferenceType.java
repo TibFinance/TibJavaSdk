@@ -17,4 +17,12 @@ public enum ReferenceType {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static ReferenceType fromValue(int value) {
+        for (ReferenceType v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

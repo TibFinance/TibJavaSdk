@@ -9,7 +9,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -23,22 +23,22 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Retrieves or assigns the monetary amount involved in the transaction.
+     * The monetary value of each recurring transfer.
      */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
-     * Gets or sets the date and time when the transfer must be completed.
+     * Scheduled date for the supplier transfer to be processed.
      */
     @JsonProperty("TransferDueDate")
-    private LocalDateTime transferDueDate;
+    private OffsetDateTime transferDueDate;
 
     /**
      * The merchant receiving the money. Will be null when creating a new supplier.
@@ -47,43 +47,43 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
     private String targetMerchantId;
 
     /**
-     * Retrieves or assigns the currency type used in transactions.
+     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
      */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
-     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     * Specifies the language used for the payment request and related communications
      */
     @JsonProperty("Language")
     private Language language;
 
     /**
-     * Defines the frequency at which transfers occur within the TIB Finance API.
+     * Specifies how often the payment should be executed.
      */
     @JsonProperty("TransferFrequency")
     private TransferFrequency transferFrequency;
 
     /**
-     * 
+     * End date for a recurring supplier transfer. Null means no end date.
      */
     @JsonProperty("RecurringEndDate")
-    private LocalDateTime recurringEndDate;
+    private OffsetDateTime recurringEndDate;
 
     /**
-     * 
+     * Bill number or invoice number associated with this supplier transfer.
      */
     @JsonProperty("BillNumber")
     private String billNumber;
 
     /**
-     * Provides a textual description of the bill associated with a payment.
+     * The textual description of the bill associated with the transfer.
      */
     @JsonProperty("BillDescription")
     private String billDescription;
 
     /**
-     * Represents the title of a bill associated with a payment.
+     * The title or description of the bill linked to the transfer.
      */
     @JsonProperty("BillTitle")
     private String billTitle;
@@ -94,7 +94,7 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
     }
 
     
-    public CreateSupplierTransferArgs(String merchantId, Double amount, LocalDateTime transferDueDate, String targetMerchantId, Currency currency, Language language, TransferFrequency transferFrequency, LocalDateTime recurringEndDate, String billNumber, String billDescription, String billTitle) {
+    public CreateSupplierTransferArgs(String merchantId, Double amount, OffsetDateTime transferDueDate, String targetMerchantId, Currency currency, Language language, TransferFrequency transferFrequency, OffsetDateTime recurringEndDate, String billNumber, String billDescription, String billTitle) {
         this.merchantId = merchantId;
         this.amount = amount;
         this.transferDueDate = transferDueDate;
@@ -109,7 +109,7 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
     }
     
     
-    public CreateSupplierTransferArgs(String sessionToken, String merchantId, Double amount, LocalDateTime transferDueDate, String targetMerchantId, Currency currency, Language language, TransferFrequency transferFrequency, LocalDateTime recurringEndDate, String billNumber, String billDescription, String billTitle) {
+    public CreateSupplierTransferArgs(String sessionToken, String merchantId, Double amount, OffsetDateTime transferDueDate, String targetMerchantId, Currency currency, Language language, TransferFrequency transferFrequency, OffsetDateTime recurringEndDate, String billNumber, String billDescription, String billTitle) {
         super(sessionToken);
         this.merchantId = merchantId;
         this.amount = amount;
@@ -141,11 +141,11 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
         this.amount = amount;
     }
 
-    public LocalDateTime getTransferDueDate() {
+    public OffsetDateTime getTransferDueDate() {
         return transferDueDate;
     }
 
-    public void setTransferDueDate(LocalDateTime transferDueDate) {
+    public void setTransferDueDate(OffsetDateTime transferDueDate) {
         this.transferDueDate = transferDueDate;
     }
 
@@ -181,11 +181,11 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
         this.transferFrequency = transferFrequency;
     }
 
-    public LocalDateTime getRecurringEndDate() {
+    public OffsetDateTime getRecurringEndDate() {
         return recurringEndDate;
     }
 
-    public void setRecurringEndDate(LocalDateTime recurringEndDate) {
+    public void setRecurringEndDate(OffsetDateTime recurringEndDate) {
         this.recurringEndDate = recurringEndDate;
     }
 

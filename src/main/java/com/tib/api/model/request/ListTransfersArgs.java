@@ -8,7 +8,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,55 +22,55 @@ public class ListTransfersArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Specifies the hierarchical level used when querying payments, indicating which data table the LevelFilterId applies to. A null value selects payments from all client levels.
+     * Specifies the granularity of payment filtering applied when listing transfers
      */
     @JsonProperty("PaymentFilterLevel")
     private PaymentFilterLevel paymentFilterLevel;
 
     /**
-     * Identifies the Service, Merchant, or Bill entity referenced by the PaymentFilterLevel.
+     * Identifier of the level filter to apply when listing transfers
      */
     @JsonProperty("LevelFilterId")
     private String levelFilterId;
 
     /**
-     * Indicates whether the request should consider only payments that are already marked as resolved.
+     * If true, the request returns only transfers that are marked as resolved.
      */
     @JsonProperty("MarkResolvedOnly")
     private boolean markResolvedOnly;
 
     /**
-     * Specifies the starting date for filtering payment due dates.
+     * The start date-time for the transfer search window.
      */
     @JsonProperty("FromDate")
-    private LocalDateTime fromDate;
+    private OffsetDateTime fromDate;
 
     /**
-     * Specifies the payment due date.
+     * Upper bound of the transfer creation date range for the query
      */
     @JsonProperty("ToDate")
-    private LocalDateTime toDate;
+    private OffsetDateTime toDate;
 
     /**
-     * Identifies the group of related transfer operations.
+     * Identifier of the transfer group to filter the fast transfer list
      */
     @JsonProperty("TransferGroupId")
     private String transferGroupId;
 
     /**
-     * Defines and manages the type of transfer operation within the system.
+     * Indicates the category of the recurring transfer (e.g., inbound, outbound, internal).
      */
     @JsonProperty("TransferType")
     private TransferTypeFlag transferType;
 
     /**
-     * External merchant group identifier used to filter transfer operations.
+     * Identifier of the external merchant group for which transfers are requested
      */
     @JsonProperty("ExternalMerchantGroupId")
     private String externalMerchantGroupId;
 
     /**
-     * Indicates whether the transfer list should be filtered to include only operations that have an error status.
+     * When true, ListTransfersFast returns only transfers that have errors.
      */
     @JsonProperty("OnlyWithErrors")
     private boolean onlyWithErrors;
@@ -81,7 +81,7 @@ public class ListTransfersArgs  extends BaseAuthenticatedCryptedArgs  {
     }
 
     
-    public ListTransfersArgs(PaymentFilterLevel paymentFilterLevel, String levelFilterId, boolean markResolvedOnly, LocalDateTime fromDate, LocalDateTime toDate, String transferGroupId, TransferTypeFlag transferType, String externalMerchantGroupId, boolean onlyWithErrors) {
+    public ListTransfersArgs(PaymentFilterLevel paymentFilterLevel, String levelFilterId, boolean markResolvedOnly, OffsetDateTime fromDate, OffsetDateTime toDate, String transferGroupId, TransferTypeFlag transferType, String externalMerchantGroupId, boolean onlyWithErrors) {
         this.paymentFilterLevel = paymentFilterLevel;
         this.levelFilterId = levelFilterId;
         this.markResolvedOnly = markResolvedOnly;
@@ -94,7 +94,7 @@ public class ListTransfersArgs  extends BaseAuthenticatedCryptedArgs  {
     }
     
     
-    public ListTransfersArgs(String sessionToken, PaymentFilterLevel paymentFilterLevel, String levelFilterId, boolean markResolvedOnly, LocalDateTime fromDate, LocalDateTime toDate, String transferGroupId, TransferTypeFlag transferType, String externalMerchantGroupId, boolean onlyWithErrors) {
+    public ListTransfersArgs(String sessionToken, PaymentFilterLevel paymentFilterLevel, String levelFilterId, boolean markResolvedOnly, OffsetDateTime fromDate, OffsetDateTime toDate, String transferGroupId, TransferTypeFlag transferType, String externalMerchantGroupId, boolean onlyWithErrors) {
         super(sessionToken);
         this.paymentFilterLevel = paymentFilterLevel;
         this.levelFilterId = levelFilterId;
@@ -132,19 +132,19 @@ public class ListTransfersArgs  extends BaseAuthenticatedCryptedArgs  {
         this.markResolvedOnly = markResolvedOnly;
     }
 
-    public LocalDateTime getFromDate() {
+    public OffsetDateTime getFromDate() {
         return fromDate;
     }
 
-    public void setFromDate(LocalDateTime fromDate) {
+    public void setFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
     }
 
-    public LocalDateTime getToDate() {
+    public OffsetDateTime getToDate() {
         return toDate;
     }
 
-    public void setToDate(LocalDateTime toDate) {
+    public void setToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
     }
 

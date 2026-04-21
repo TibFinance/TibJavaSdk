@@ -7,7 +7,7 @@ import com.tib.api.model.enums.ConvenientFeeMode;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,187 +21,205 @@ public class ServiceFeeSettings   {
 
     
     /**
-     * Gets or sets the credit card fee mode applied to transactions.
+     * Specifies the fee calculation mode used for credit‑card transactions.
      */
     @JsonProperty("CreditCardFeeMode")
     private FeeMode creditCardFeeMode;
 
     /**
-     * Gets or sets the percentage fee applied to credit‑card transactions. The value is expressed as a decimal (e.g., 0.025 for 2.5%).
+     * The percentage fee applied to credit‑card transactions for the service.
      */
     @JsonProperty("CreditCardPercentageFee")
     private Double creditCardPercentageFee;
 
     /**
-     * Gets or sets the fixed absolute fee applied to credit‑card transactions. The fee is added to the transaction amount before calculating percentage fees.
+     * The fixed monetary fee applied to a credit‑card transaction.
      */
     @JsonProperty("CreditCardAbsoluteFee")
     private Double creditCardAbsoluteFee;
 
     /**
-     * Gets or sets the mode used to calculate debit fees for a service.
+     * Specifies the fee calculation mode applied to debit transactions for the service.
      */
     @JsonProperty("DebitFeeMode")
     private FeeMode debitFeeMode;
 
     /**
-     * Gets or sets the fee applied to debit transactions, expressed as a decimal percentage of the transaction amount. The value must be between 0 and 0.1 (up to 10%).
+     * The percentage fee applied to debit transactions for the requested service.
      */
     @JsonProperty("DebitPercentageFee")
     private Double debitPercentageFee;
 
     /**
-     * Gets or sets the absolute fee applied to debit transactions. The fee must be within the permitted range.
+     * The fixed absolute fee applied to a debit transaction.
      */
     @JsonProperty("DebitAbsoluteFee")
     private Double debitAbsoluteFee;
 
     /**
-     * Gets or sets the fee mode applied to instant transfers.
+     * Indicates the fee calculation mode applied to an instant transfer.
      */
     @JsonProperty("InstantTransferFeeMode")
     private FeeMode instantTransferFeeMode;
 
     /**
-     * Gets or sets the percentage fee applied to instant transfers. The value is expressed as a decimal fraction (e.g., 0.05 for 5%). Must be within the range 0 to 0.1 inclusive.
+     * The percentage fee applied to an instant transfer, expressed as a decimal.
      */
     @JsonProperty("InstantTransferPercentageFee")
     private Double instantTransferPercentageFee;
 
     /**
-     * Gets or sets the absolute fee applied to an instant transfer.
+     * The fixed absolute fee applied to an instant transfer.
      */
     @JsonProperty("InstantTransferAbsoluteFee")
     private Double instantTransferAbsoluteFee;
 
     /**
-     * Gets or sets the convenient fee credit mode used to determine the credit‑fee calculation for a service.
+     * Specifies the fee‑crediting mode applied to the service request.
      */
     @JsonProperty("ConvenientFeeCreditMode")
     private ConvenientFeeMode convenientFeeCreditMode;
 
     /**
-     * Gets or sets the percentage fee applied to convenient credit transactions.
+     * The percentage fee charged on credit transactions for the Convenient Fee service.
      */
     @JsonProperty("ConvenientFeeCreditPercentageFee")
     private Double convenientFeeCreditPercentageFee;
 
     /**
-     * Gets or sets the absolute fee for credit convenient fee transactions.
+     * The absolute fee amount charged for a convenient credit service.
      */
     @JsonProperty("ConvenientFeeCreditAbsoluteFee")
     private Double convenientFeeCreditAbsoluteFee;
 
     /**
-     * Gets or sets the amount used to round up a convenient fee credit.
+     * The rounded‑up amount of the convenience fee credit applied to the transaction.
      */
     @JsonProperty("ConvenientFeeCreditRoundUpValue")
     private Double convenientFeeCreditRoundUpValue;
 
     /**
-     * Gets or sets the mode used to debit the convenient fee.
+     * Specifies the mode used to debit the convenient fee for the transaction.
      */
     @JsonProperty("ConvenientFeeDebitMode")
     private ConvenientFeeMode convenientFeeDebitMode;
 
     /**
-     * Gets or sets the percentage fee applied to convenient debit transactions.
+     * The percentage fee applied to debit transactions for the convenient fee service.
      */
     @JsonProperty("ConvenientFeeDebitPercentageFee")
     private Double convenientFeeDebitPercentageFee;
 
     /**
-     * Gets or sets the absolute fee applied to a convenient fee debit operation.
+     * The absolute amount of the convenient fee charged for a debit transaction.
      */
     @JsonProperty("ConvenientFeeDebitAbsoluteFee")
     private Double convenientFeeDebitAbsoluteFee;
 
     /**
-     * Gets or sets the monetary value used to round up a convenient fee debit.
+     * The amount (decimal) to which a convenient fee debit is rounded up.
      */
     @JsonProperty("ConvenientFeeDebitRoundUpValue")
     private Double convenientFeeDebitRoundUpValue;
 
     /**
-     * The round-up amount applied to debit fees, expressed as a decimal value.
+     * The amount (in the account currency) to which debit fees are rounded up.
      */
     @JsonProperty("DebitFeeRoundUpValue")
     private Double debitFeeRoundUpValue;
 
     /**
-     * Retrieves or assigns the rounding increment applied to credit‑card fees.
+     * The amount (in the transaction currency) to which credit‑card fees are rounded up.
      */
     @JsonProperty("CreditCardFeeRoundUpValue")
     private Double creditCardFeeRoundUpValue;
 
     /**
-     * Retrieves the round‑up value applied to the instant transfer fee.
+     * The rounded‑up fee amount applied to an instant transfer.
      */
     @JsonProperty("InstantTransferFeeRoundUpValue")
     private Double instantTransferFeeRoundUpValue;
 
     /**
-     * Gets the absolute fee amount that can be reverted for credit‑card transactions.
+     * The absolute fee amount charged for reverting a credit‑card transaction.
      */
     @JsonProperty("RevertCreditCardAbsoluteFees")
     private Double revertCreditCardAbsoluteFees;
 
     /**
-     * Retrieves the percentage fee that is applied when a credit‑card transaction is reverted.
+     * The percentage fee applied when a credit‑card transaction is reverted.
      */
     @JsonProperty("RevertCreditCardPercentageFees")
     private Double revertCreditCardPercentageFees;
 
     /**
-     * Gets or sets the absolute fee amount that is reverted from a debit operation.
+     * The absolute fee amount charged when a debit transaction is reverted.
      */
     @JsonProperty("RevertDebitAbsoluteFees")
     private Double revertDebitAbsoluteFees;
 
     /**
-     * Gets the percentage fee applied when a debit transaction is reverted.
+     * The percentage fee charged when a debit transaction is reverted.
      */
     @JsonProperty("RevertDebitPercentageFees")
     private Double revertDebitPercentageFees;
 
     /**
-     * Retrieves the absolute fee charged for Interac transactions.
+     * The absolute Interac transaction fee charged, expressed as a decimal amount.
      */
     @JsonProperty("InteracFeeAbsolute")
     private Double interacFeeAbsolute;
 
     /**
-     * Represents the fee percentage applied to Interac transactions.
+     * The percentage fee applied to Interac transactions.
      */
     @JsonProperty("InteracFeePercentage")
     private Double interacFeePercentage;
 
     /**
-     * Gets the absolute Interac fee collected for a transaction.
+     * The absolute Interac fee collected for the transaction, expressed as a decimal amount in CAD.
      */
     @JsonProperty("InteracFeeCollectAbsolute")
     private Double interacFeeCollectAbsolute;
 
     /**
-     * Specifies the percentage of the transaction amount that TIB Finance collects as a fee for Interac payments.
+     * The percentage of the Interac transaction fee that the platform collects.
      */
     @JsonProperty("InteracFeeCollectPercentage")
     private Double interacFeeCollectPercentage;
 
     /**
-     * Gets the fee amount charged for a debit transaction that fails due to non‑sufficient funds (NFS).
+     * The total amount of NFS debit fees applied to the transaction.
      */
     @JsonProperty("DebitNFSFees")
     private Double debitNFSFees;
 
     /**
-     * Gets the fee amount applied to an NFS file transaction.
+     * The total fee amount charged for NFS file services in the response.
      */
     @JsonProperty("NFSFileFees")
     private Double nFSFileFees;
 
     /**
-     * 
+     * Fee charged when a credit card charge attempt fails.
+     */
+    @JsonProperty("CreditCardFailedChargeFee")
+    private Double creditCardFailedChargeFee;
+
+    /**
+     * Fee charged when a transaction is returned due to an opposition (chargeback).
+     */
+    @JsonProperty("OppositionReturnFees")
+    private Double oppositionReturnFees;
+
+    /**
+     * Fee charged when an Interac transaction is returned.
+     */
+    @JsonProperty("InteracReturnFee")
+    private Double interacReturnFee;
+
+    /**
+     * Identifier of the data context used for the service response
      */
     @JsonProperty("DataContext")
     private Integer dataContext;
@@ -212,7 +230,7 @@ public class ServiceFeeSettings   {
     }
 
     
-    public ServiceFeeSettings(FeeMode creditCardFeeMode, Double creditCardPercentageFee, Double creditCardAbsoluteFee, FeeMode debitFeeMode, Double debitPercentageFee, Double debitAbsoluteFee, FeeMode instantTransferFeeMode, Double instantTransferPercentageFee, Double instantTransferAbsoluteFee, ConvenientFeeMode convenientFeeCreditMode, Double convenientFeeCreditPercentageFee, Double convenientFeeCreditAbsoluteFee, Double convenientFeeCreditRoundUpValue, ConvenientFeeMode convenientFeeDebitMode, Double convenientFeeDebitPercentageFee, Double convenientFeeDebitAbsoluteFee, Double convenientFeeDebitRoundUpValue, Double debitFeeRoundUpValue, Double creditCardFeeRoundUpValue, Double instantTransferFeeRoundUpValue, Double revertCreditCardAbsoluteFees, Double revertCreditCardPercentageFees, Double revertDebitAbsoluteFees, Double revertDebitPercentageFees, Double interacFeeAbsolute, Double interacFeePercentage, Double interacFeeCollectAbsolute, Double interacFeeCollectPercentage, Double debitNFSFees, Double nFSFileFees, Integer dataContext) {
+    public ServiceFeeSettings(FeeMode creditCardFeeMode, Double creditCardPercentageFee, Double creditCardAbsoluteFee, FeeMode debitFeeMode, Double debitPercentageFee, Double debitAbsoluteFee, FeeMode instantTransferFeeMode, Double instantTransferPercentageFee, Double instantTransferAbsoluteFee, ConvenientFeeMode convenientFeeCreditMode, Double convenientFeeCreditPercentageFee, Double convenientFeeCreditAbsoluteFee, Double convenientFeeCreditRoundUpValue, ConvenientFeeMode convenientFeeDebitMode, Double convenientFeeDebitPercentageFee, Double convenientFeeDebitAbsoluteFee, Double convenientFeeDebitRoundUpValue, Double debitFeeRoundUpValue, Double creditCardFeeRoundUpValue, Double instantTransferFeeRoundUpValue, Double revertCreditCardAbsoluteFees, Double revertCreditCardPercentageFees, Double revertDebitAbsoluteFees, Double revertDebitPercentageFees, Double interacFeeAbsolute, Double interacFeePercentage, Double interacFeeCollectAbsolute, Double interacFeeCollectPercentage, Double debitNFSFees, Double nFSFileFees, Double creditCardFailedChargeFee, Double oppositionReturnFees, Double interacReturnFee, Integer dataContext) {
         this.creditCardFeeMode = creditCardFeeMode;
         this.creditCardPercentageFee = creditCardPercentageFee;
         this.creditCardAbsoluteFee = creditCardAbsoluteFee;
@@ -243,6 +261,9 @@ public class ServiceFeeSettings   {
         this.interacFeeCollectPercentage = interacFeeCollectPercentage;
         this.debitNFSFees = debitNFSFees;
         this.nFSFileFees = nFSFileFees;
+        this.creditCardFailedChargeFee = creditCardFailedChargeFee;
+        this.oppositionReturnFees = oppositionReturnFees;
+        this.interacReturnFee = interacReturnFee;
         this.dataContext = dataContext;
     }
     
@@ -489,6 +510,30 @@ public class ServiceFeeSettings   {
         this.nFSFileFees = nFSFileFees;
     }
 
+    public Double getCreditCardFailedChargeFee() {
+        return creditCardFailedChargeFee;
+    }
+
+    public void setCreditCardFailedChargeFee(Double creditCardFailedChargeFee) {
+        this.creditCardFailedChargeFee = creditCardFailedChargeFee;
+    }
+
+    public Double getOppositionReturnFees() {
+        return oppositionReturnFees;
+    }
+
+    public void setOppositionReturnFees(Double oppositionReturnFees) {
+        this.oppositionReturnFees = oppositionReturnFees;
+    }
+
+    public Double getInteracReturnFee() {
+        return interacReturnFee;
+    }
+
+    public void setInteracReturnFee(Double interacReturnFee) {
+        this.interacReturnFee = interacReturnFee;
+    }
+
     public Integer getDataContext() {
         return dataContext;
     }
@@ -505,13 +550,13 @@ public class ServiceFeeSettings   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ServiceFeeSettings that = (ServiceFeeSettings) o;
-        return Objects.equals(creditCardFeeMode, that.creditCardFeeMode) && Objects.equals(creditCardPercentageFee, that.creditCardPercentageFee) && Objects.equals(creditCardAbsoluteFee, that.creditCardAbsoluteFee) && Objects.equals(debitFeeMode, that.debitFeeMode) && Objects.equals(debitPercentageFee, that.debitPercentageFee) && Objects.equals(debitAbsoluteFee, that.debitAbsoluteFee) && Objects.equals(instantTransferFeeMode, that.instantTransferFeeMode) && Objects.equals(instantTransferPercentageFee, that.instantTransferPercentageFee) && Objects.equals(instantTransferAbsoluteFee, that.instantTransferAbsoluteFee) && Objects.equals(convenientFeeCreditMode, that.convenientFeeCreditMode) && Objects.equals(convenientFeeCreditPercentageFee, that.convenientFeeCreditPercentageFee) && Objects.equals(convenientFeeCreditAbsoluteFee, that.convenientFeeCreditAbsoluteFee) && Objects.equals(convenientFeeCreditRoundUpValue, that.convenientFeeCreditRoundUpValue) && Objects.equals(convenientFeeDebitMode, that.convenientFeeDebitMode) && Objects.equals(convenientFeeDebitPercentageFee, that.convenientFeeDebitPercentageFee) && Objects.equals(convenientFeeDebitAbsoluteFee, that.convenientFeeDebitAbsoluteFee) && Objects.equals(convenientFeeDebitRoundUpValue, that.convenientFeeDebitRoundUpValue) && Objects.equals(debitFeeRoundUpValue, that.debitFeeRoundUpValue) && Objects.equals(creditCardFeeRoundUpValue, that.creditCardFeeRoundUpValue) && Objects.equals(instantTransferFeeRoundUpValue, that.instantTransferFeeRoundUpValue) && Objects.equals(revertCreditCardAbsoluteFees, that.revertCreditCardAbsoluteFees) && Objects.equals(revertCreditCardPercentageFees, that.revertCreditCardPercentageFees) && Objects.equals(revertDebitAbsoluteFees, that.revertDebitAbsoluteFees) && Objects.equals(revertDebitPercentageFees, that.revertDebitPercentageFees) && Objects.equals(interacFeeAbsolute, that.interacFeeAbsolute) && Objects.equals(interacFeePercentage, that.interacFeePercentage) && Objects.equals(interacFeeCollectAbsolute, that.interacFeeCollectAbsolute) && Objects.equals(interacFeeCollectPercentage, that.interacFeeCollectPercentage) && Objects.equals(debitNFSFees, that.debitNFSFees) && Objects.equals(nFSFileFees, that.nFSFileFees) && Objects.equals(dataContext, that.dataContext) ;
+        return Objects.equals(creditCardFeeMode, that.creditCardFeeMode) && Objects.equals(creditCardPercentageFee, that.creditCardPercentageFee) && Objects.equals(creditCardAbsoluteFee, that.creditCardAbsoluteFee) && Objects.equals(debitFeeMode, that.debitFeeMode) && Objects.equals(debitPercentageFee, that.debitPercentageFee) && Objects.equals(debitAbsoluteFee, that.debitAbsoluteFee) && Objects.equals(instantTransferFeeMode, that.instantTransferFeeMode) && Objects.equals(instantTransferPercentageFee, that.instantTransferPercentageFee) && Objects.equals(instantTransferAbsoluteFee, that.instantTransferAbsoluteFee) && Objects.equals(convenientFeeCreditMode, that.convenientFeeCreditMode) && Objects.equals(convenientFeeCreditPercentageFee, that.convenientFeeCreditPercentageFee) && Objects.equals(convenientFeeCreditAbsoluteFee, that.convenientFeeCreditAbsoluteFee) && Objects.equals(convenientFeeCreditRoundUpValue, that.convenientFeeCreditRoundUpValue) && Objects.equals(convenientFeeDebitMode, that.convenientFeeDebitMode) && Objects.equals(convenientFeeDebitPercentageFee, that.convenientFeeDebitPercentageFee) && Objects.equals(convenientFeeDebitAbsoluteFee, that.convenientFeeDebitAbsoluteFee) && Objects.equals(convenientFeeDebitRoundUpValue, that.convenientFeeDebitRoundUpValue) && Objects.equals(debitFeeRoundUpValue, that.debitFeeRoundUpValue) && Objects.equals(creditCardFeeRoundUpValue, that.creditCardFeeRoundUpValue) && Objects.equals(instantTransferFeeRoundUpValue, that.instantTransferFeeRoundUpValue) && Objects.equals(revertCreditCardAbsoluteFees, that.revertCreditCardAbsoluteFees) && Objects.equals(revertCreditCardPercentageFees, that.revertCreditCardPercentageFees) && Objects.equals(revertDebitAbsoluteFees, that.revertDebitAbsoluteFees) && Objects.equals(revertDebitPercentageFees, that.revertDebitPercentageFees) && Objects.equals(interacFeeAbsolute, that.interacFeeAbsolute) && Objects.equals(interacFeePercentage, that.interacFeePercentage) && Objects.equals(interacFeeCollectAbsolute, that.interacFeeCollectAbsolute) && Objects.equals(interacFeeCollectPercentage, that.interacFeeCollectPercentage) && Objects.equals(debitNFSFees, that.debitNFSFees) && Objects.equals(nFSFileFees, that.nFSFileFees) && Objects.equals(creditCardFailedChargeFee, that.creditCardFailedChargeFee) && Objects.equals(oppositionReturnFees, that.oppositionReturnFees) && Objects.equals(interacReturnFee, that.interacReturnFee) && Objects.equals(dataContext, that.dataContext) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(creditCardFeeMode, creditCardPercentageFee, creditCardAbsoluteFee, debitFeeMode, debitPercentageFee, debitAbsoluteFee, instantTransferFeeMode, instantTransferPercentageFee, instantTransferAbsoluteFee, convenientFeeCreditMode, convenientFeeCreditPercentageFee, convenientFeeCreditAbsoluteFee, convenientFeeCreditRoundUpValue, convenientFeeDebitMode, convenientFeeDebitPercentageFee, convenientFeeDebitAbsoluteFee, convenientFeeDebitRoundUpValue, debitFeeRoundUpValue, creditCardFeeRoundUpValue, instantTransferFeeRoundUpValue, revertCreditCardAbsoluteFees, revertCreditCardPercentageFees, revertDebitAbsoluteFees, revertDebitPercentageFees, interacFeeAbsolute, interacFeePercentage, interacFeeCollectAbsolute, interacFeeCollectPercentage, debitNFSFees, nFSFileFees, dataContext);
+        return Objects.hash(creditCardFeeMode, creditCardPercentageFee, creditCardAbsoluteFee, debitFeeMode, debitPercentageFee, debitAbsoluteFee, instantTransferFeeMode, instantTransferPercentageFee, instantTransferAbsoluteFee, convenientFeeCreditMode, convenientFeeCreditPercentageFee, convenientFeeCreditAbsoluteFee, convenientFeeCreditRoundUpValue, convenientFeeDebitMode, convenientFeeDebitPercentageFee, convenientFeeDebitAbsoluteFee, convenientFeeDebitRoundUpValue, debitFeeRoundUpValue, creditCardFeeRoundUpValue, instantTransferFeeRoundUpValue, revertCreditCardAbsoluteFees, revertCreditCardPercentageFees, revertDebitAbsoluteFees, revertDebitPercentageFees, interacFeeAbsolute, interacFeePercentage, interacFeeCollectAbsolute, interacFeeCollectPercentage, debitNFSFees, nFSFileFees, creditCardFailedChargeFee, oppositionReturnFees, interacReturnFee, dataContext);
     }
 
     @Override
@@ -547,6 +592,9 @@ public class ServiceFeeSettings   {
                 ", interacFeeCollectPercentage='" + interacFeeCollectPercentage + '\'' +
                 ", debitNFSFees='" + debitNFSFees + '\'' +
                 ", nFSFileFees='" + nFSFileFees + '\'' +
+                ", creditCardFailedChargeFee='" + creditCardFailedChargeFee + '\'' +
+                ", oppositionReturnFees='" + oppositionReturnFees + '\'' +
+                ", interacReturnFee='" + interacReturnFee + '\'' +
                 ", dataContext='" + dataContext + '\'' +
 
                 '}';

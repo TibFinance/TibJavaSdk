@@ -10,7 +10,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -39,6 +39,9 @@ public class CreateFreeOperationBatchResponseBase extends CustomAPIResponse {
     private RequestDataResponse requestDataResponse;
 
 
+    public CreateFreeOperationBatchResponseBase() {
+    }
+
     public CreateFreeOperationBatchResponseBase(Error[] errors, boolean hasError, String messages, Integer status, String paymentId, String referenceNumber, String message, RequestDataResponse requestDataResponse) {
         super(errors, hasError, messages);
         this.status = status;
@@ -51,8 +54,15 @@ public class CreateFreeOperationBatchResponseBase extends CustomAPIResponse {
     public CreateFreeOperationBatchResponseBase(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-            this.requestDataResponse = objectMapper.readValue(json, RequestDataResponse.class);
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                CreateFreeOperationBatchResponseBase __typed = objectMapper.readValue(__rawBody, CreateFreeOperationBatchResponseBase.class);
+                this.status = __typed.status;
+                this.paymentId = __typed.paymentId;
+                this.referenceNumber = __typed.referenceNumber;
+                this.message = __typed.message;
+                this.requestDataResponse = __typed.requestDataResponse;
+            }
         }
     }
 

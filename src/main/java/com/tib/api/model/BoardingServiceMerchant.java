@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,19 +19,19 @@ public class BoardingServiceMerchant   {
 
     
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
+     * Identifier of the boarding information linked to the merchant
      */
     @JsonProperty("BoardingInformationId")
     private String boardingInformationId;
 
     /**
-     * Represents the status of the merchant boarding process within the system. This status is crucial for tracking the progress and completion of merchant onboarding.
+     * Indicates the current onboarding state of the merchant identified by the external ID
      */
     @JsonProperty("BoardingStatus")
     private String boardingStatus;

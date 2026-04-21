@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,19 +19,19 @@ public class CreateSessionArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
-     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     * Unique identifier of the client initiating the session
      */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
-     * The 'Username' property functions as a unique identifier for each user, facilitating personalized user interactions within the system.
+     * The login identifier of the user initiating the session.
      */
     @JsonProperty("Username")
     private String username;
 
     /**
-     * The 'Password' property is a critical component in user authentication, safeguarding individualized user data.
+     * The account password used to authenticate the session request
      */
     @JsonProperty("Password")
     private String password;

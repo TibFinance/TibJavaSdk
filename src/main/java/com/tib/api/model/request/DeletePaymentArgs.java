@@ -6,7 +6,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,7 +20,7 @@ public class DeletePaymentArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Retrieves or assigns the unique identifier for a payment.
+     * Unique identifier of the newly created payment
      */
     @JsonProperty("PaymentId")
     private String paymentId;

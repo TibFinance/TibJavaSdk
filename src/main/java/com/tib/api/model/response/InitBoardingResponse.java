@@ -9,7 +9,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -25,6 +25,9 @@ public class InitBoardingResponse extends CustomAPIResponse {
     @JsonProperty("RedirectUrl")
     private String redirectUrl;
 
+
+    public InitBoardingResponse() {
+    }
 
     public InitBoardingResponse(Error[] errors, boolean hasError, String messages, String redirectUrl) {
         super(errors, hasError, messages);

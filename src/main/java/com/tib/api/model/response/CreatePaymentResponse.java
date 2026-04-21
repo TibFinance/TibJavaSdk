@@ -11,7 +11,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -37,6 +37,9 @@ public class CreatePaymentResponse extends CustomAPIResponse {
     private String paymentLink;
 
 
+    public CreatePaymentResponse() {
+    }
+
     public CreatePaymentResponse(Error[] errors, boolean hasError, String messages, String paymentId, PaymentFlow autoSelectPaymentFlowResult, PaymentFlowParsingResult paymentFlowParsingResult, String paymentLink) {
         super(errors, hasError, messages);
         this.paymentId = paymentId;
@@ -48,9 +51,14 @@ public class CreatePaymentResponse extends CustomAPIResponse {
     public CreatePaymentResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-            this.autoSelectPaymentFlowResult = objectMapper.readValue(json, PaymentFlow.class);
-            this.paymentFlowParsingResult = objectMapper.readValue(json, PaymentFlowParsingResult.class);
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                CreatePaymentResponse __typed = objectMapper.readValue(__rawBody, CreatePaymentResponse.class);
+                this.paymentId = __typed.paymentId;
+                this.autoSelectPaymentFlowResult = __typed.autoSelectPaymentFlowResult;
+                this.paymentFlowParsingResult = __typed.paymentFlowParsingResult;
+                this.paymentLink = __typed.paymentLink;
+            }
         }
     }
 

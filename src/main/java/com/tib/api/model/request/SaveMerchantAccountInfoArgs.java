@@ -7,7 +7,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,25 +21,25 @@ public class SaveMerchantAccountInfoArgs  extends BaseAuthenticatedCryptedArgs  
 
     
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Contains the necessary details for replacing a merchant's account information within the system.
+     * The target bank account for the direct payment.
      */
     @JsonProperty("Account")
     private Account account;
 
     /**
-     * The 6-digit TOTP code from the user's authenticator app. Set to null on first call. If response indicates CodeRequired, prompt user and retry with code.
+     * The one‑time two‑factor authentication code required to authorize the SaveMerchantAccountInfo request.
      */
     @JsonProperty("TwoFactorCode")
     private String twoFactorCode;
 
     /**
-     * The bank account number provided by the user for security verification before 2FA setup. Required when TwoFactorStatus is SecurityVerificationRequired. Format: "BankNumber-Transit-AccountNumber" (e.g., "123-12345-123456789").
+     * The answer to the merchant's configured two‑factor authentication security question.
      */
     @JsonProperty("TwoFactorSecurityAnswer")
     private String twoFactorSecurityAnswer;

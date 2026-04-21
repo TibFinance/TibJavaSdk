@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,49 +19,49 @@ public class BoardingFile   {
 
     
     /**
-     * 
+     * Unique identifier of the boarding information file linked to the merchant.
      */
     @JsonProperty("BoardingInfoFilesId")
     private String boardingInfoFilesId;
 
     /**
-     * 
+     * External case identifier assigned by the merchant's payment provider.
      */
     @JsonProperty("ProviderCaseId")
     private String providerCaseId;
 
     /**
-     * 
+     * Free‑form notes added by the underwriter for the merchant identified by the external ID
      */
     @JsonProperty("DocUnderWriterNotes")
     private String docUnderWriterNotes;
 
     /**
-     * 
+     * The type of document associated with the merchant record.
      */
     @JsonProperty("DocType")
     private String docType;
 
     /**
-     * 
+     * Indicates the document receipt status for the merchant.
      */
     @JsonProperty("DocsReceived")
     private String docsReceived;
 
     /**
-     * 
+     * The maximum number of merchant records returned in the response
      */
     @JsonProperty("DocLimit")
     private String docLimit;
 
     /**
-     * 
+     * A free‑form textual description of the merchant returned by the request
      */
     @JsonProperty("DocGenericDescription")
     private String docGenericDescription;
 
     /**
-     * 
+     * The current lifecycle status of the merchant record returned by GetMerchantsByExternalId.
      */
     @JsonProperty("DocStatus")
     private String docStatus;

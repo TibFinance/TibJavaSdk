@@ -10,7 +10,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -27,15 +27,22 @@ public class GetRecuringTransfersResponse<T> extends CustomAPIResponse {
     private List<RecuringTransfer> recuringTransfers;
 
 
+    public GetRecuringTransfersResponse() {
+    }
+
     public GetRecuringTransfersResponse(Error[] errors, boolean hasError, String messages, List<RecuringTransfer> recuringTransfers) {
         super(errors, hasError, messages);
         this.recuringTransfers = recuringTransfers;
     }
 
-    public GetRecuringTransfersResponse(APIResponse apiResponse) {
+    public GetRecuringTransfersResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.recuringTransfers = (List<RecuringTransfer>) apiResponse.getResponse();
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                GetRecuringTransfersResponse __typed = objectMapper.readValue(__rawBody, GetRecuringTransfersResponse.class);
+                this.recuringTransfers = __typed.recuringTransfers;
+            }
         }
     }
 

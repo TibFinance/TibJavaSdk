@@ -7,7 +7,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,13 +21,13 @@ public class CreateCustomerArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     * Identifier of the service for which recurring transfers are requested
      */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
-     * Provides access to detailed customer information necessary for transaction processing and account management.
+     * The customer data to be saved
      */
     @JsonProperty("Customer")
     private CustomerEntity customer;

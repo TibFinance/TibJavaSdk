@@ -8,7 +8,7 @@ import com.tib.api.model.ServiceSettings;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,25 +22,25 @@ public class ServiceWithMerchant  extends Service  {
 
     
     /**
-     * Retrieves or assigns the primary merchant associated with the service.
+     * The primary merchant linked to the requested service.
      */
     @JsonProperty("ServicePrimaryMerchant")
     private MerchantView servicePrimaryMerchant;
 
     /**
-     * Gets or sets the ServiceFeeSettings model that defines the fee configuration for a specific service contract.
+     * Configuration of fees applied to the service.
      */
     @JsonProperty("ServiceFeeSettings")
     private ServiceFeeSettings serviceFeeSettings;
 
     /**
-     * Gets or sets the configuration settings for a TIB Finance service.
+     * The ServiceSettingsModel object that defines the configuration of the requested service.
      */
     @JsonProperty("ServiceSettings")
     private ServiceSettings serviceSettings;
 
     /**
-     * Specifies the merchant name that is charged for fees when an override is applied.
+     * The merchant name linked to any overloaded fees applied to the transaction.
      */
     @JsonProperty("OverloadedFeesMerchantName")
     private String overloadedFeesMerchantName;

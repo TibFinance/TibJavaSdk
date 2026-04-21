@@ -11,7 +11,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -40,6 +40,9 @@ public class SaveMerchantResponse<T> extends CustomAPIResponse {
     private String twoFactorVerificationMerchantName;
 
 
+    public SaveMerchantResponse() {
+    }
+
     public SaveMerchantResponse(Error[] errors, boolean hasError, String messages, TwoFactorStatus twoFactorStatus, String twoFactorMessage, TwoFactorSetupData twoFactorSetupData, String twoFactorVerificationMerchantId, String twoFactorVerificationMerchantName) {
         super(errors, hasError, messages);
         this.twoFactorStatus = twoFactorStatus;
@@ -52,9 +55,15 @@ public class SaveMerchantResponse<T> extends CustomAPIResponse {
     public SaveMerchantResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-            this.twoFactorStatus = objectMapper.readValue(json, TwoFactorStatus.class);
-            this.twoFactorSetupData = objectMapper.readValue(json, TwoFactorSetupData.class);
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                SaveMerchantResponse __typed = objectMapper.readValue(__rawBody, SaveMerchantResponse.class);
+                this.twoFactorStatus = __typed.twoFactorStatus;
+                this.twoFactorMessage = __typed.twoFactorMessage;
+                this.twoFactorSetupData = __typed.twoFactorSetupData;
+                this.twoFactorVerificationMerchantId = __typed.twoFactorVerificationMerchantId;
+                this.twoFactorVerificationMerchantName = __typed.twoFactorVerificationMerchantName;
+            }
         }
     }
 

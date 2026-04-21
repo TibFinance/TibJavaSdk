@@ -8,7 +8,7 @@ import com.tib.api.model.enums.Currency;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,19 +22,19 @@ public class Service  extends ServiceEntity  {
 
     
     /**
-     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     * Identifier of the service for which recurring transfers are requested
      */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
-     * Retrieves or assigns the unique identifier for WhiteLabeling.
+     * Identifier of the white‑label partner linked to the merchant, if any.
      */
     @JsonProperty("WhiteLabelingId")
     private Optional<String> whiteLabelingId;
 
     /**
-     * Gets or sets a value indicating whether this service has a completed boarding (status 13 = approved).
+     * Indicates whether the service has finished its onboarding process.
      */
     @JsonProperty("HasCompletedBoarding")
     private boolean hasCompletedBoarding;

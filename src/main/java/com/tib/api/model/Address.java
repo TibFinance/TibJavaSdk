@@ -7,7 +7,7 @@ import com.tib.api.model.enums.CountryId;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,31 +21,31 @@ public class Address   {
 
     
     /**
-     * Represents the street address associated with a specific entity or location.
+     * The billing street address of the cardholder for the credit card payment method.
      */
     @JsonProperty("StreetAddress")
     private String streetAddress;
 
     /**
-     * Retrieves or assigns the city component of an address.
+     * The city component of the billing address for the credit card.
      */
     @JsonProperty("AddressCity")
     private String addressCity;
 
     /**
-     * Represents the unique identifier for a province or state within the system.
+     * Identifier of the province or state for the billing address.
      */
     @JsonProperty("ProvinceStateId")
     private ProvinceStateId provinceStateId;
 
     /**
-     * Gets or sets the identifier of the country using the CountryIdEnum enumeration. This identifier is required when specifying the country for client, service, or merchant operations.
+     * Identifier of the card‑issuing country for the payment method
      */
     @JsonProperty("CountryId")
     private CountryId countryId;
 
     /**
-     * Gets or sets the postal zip code for the address entity.
+     * The postal ZIP code of the cardholder’s billing address.
      */
     @JsonProperty("PostalZipCode")
     private String postalZipCode;

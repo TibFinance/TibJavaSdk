@@ -7,7 +7,7 @@ import com.tib.api.model.enums.Currency;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,85 +21,85 @@ public class Account   {
 
     
     /**
-     * Represents the name associated with the merchant's account.
+     * The display name of the account involved in the transfer.
      */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
-     * The 'Owner' property is designed to assign and identify the ownership of a specific resource or object within the system.
+     * Identifier of the entity that owns the payment method.
      */
     @JsonProperty("Owner")
     private String owner;
 
     /**
-     * 
+     * The payer's given name for the direct account payment.
      */
     @JsonProperty("FirstName")
     private String firstName;
 
     /**
-     * 
+     * The account holder’s last name for the direct account payment method.
      */
     @JsonProperty("LastName")
     private String lastName;
 
     /**
-     * Specifies the payment method type associated with the account.
+     * The type of payment method used for the transfer.
      */
     @JsonProperty("AccountType")
     private AccountType accountType;
 
     /**
-     * Identifies the bank associated with the account using its numeric identifier.
+     * The bank's identification number used for the direct account payment method.
      */
     @JsonProperty("BankNumber")
     private String bankNumber;
 
     /**
-     * Bank institution code identifying the financial institution for a transaction.
+     * The bank's institution number identifying the financial institution for the direct account payment.
      */
     @JsonProperty("InstitutionNumber")
     private String institutionNumber;
 
     /**
-     * Specifies the bank account number associated with the payment method.
+     * The bank account number used for the direct account payment.
      */
     @JsonProperty("AccountNumber")
     private String accountNumber;
 
     /**
-     * The routing number identifying the bank where the customer's account is held.
+     * The bank routing number identifying the financial institution for the direct account payment.
      */
     @JsonProperty("RoutingNumber")
     private String routingNumber;
 
     /**
-     * Some bank as check digit
+     * The check digit used to validate the account number in the direct account payment method.
      */
     @JsonProperty("CheckDigit")
     private String checkDigit;
 
     /**
-     * Retrieves or assigns the currency type used in transactions.
+     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
      */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
-     * Full account number
+     * The complete bank account number to be used for the direct payment method.
      */
     @JsonProperty("FullAccountNumber")
     private String fullAccountNumber;
 
     /**
-     * Gets the account number with check digit.
+     * The full bank account number including its check digit.
      */
     @JsonProperty("AccountNumberWithCheckDigit")
     private String accountNumberWithCheckDigit;
 
     /**
-     * Obfuscated string of the account
+     * A formatted string that previews the direct account payment method details before creation.
      */
     @JsonProperty("PreviewString")
     private String previewString;

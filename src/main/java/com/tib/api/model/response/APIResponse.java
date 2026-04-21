@@ -2,6 +2,7 @@
 package com.tib.api.model.response;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.Error;
 
@@ -84,6 +85,9 @@ public class APIResponse {
         @JsonProperty("NodeAnswered")
         private String nodeAnswered;
 
+        @JsonIgnore
+        private String rawBody;
+
         public String getCryptedSelf() {
             return cryptedSelf;
         }
@@ -138,6 +142,14 @@ public class APIResponse {
 
         public void setResponse(Object response) {
             this.response = response;
+        }
+
+        public String getRawBody() {
+            return rawBody;
+        }
+
+        public void setRawBody(String rawBody) {
+            this.rawBody = rawBody;
         }
 
         @Override

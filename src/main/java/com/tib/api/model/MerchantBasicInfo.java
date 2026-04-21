@@ -9,7 +9,7 @@ import com.tib.api.model.enums.Provider;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -23,67 +23,67 @@ public class MerchantBasicInfo   {
 
     
     /**
-     * Represents the merchant's unique name.
+     * The name of the merchant associated with the transfer.
      */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
-     * Represents the unique identifier for a merchant within an external system. This ID is crucial for integrating and synchronizing merchant data across different platforms.
+     * Identifier of the external system that owns the merchant ID
      */
     @JsonProperty("ExternalSystemId")
     private String externalSystemId;
 
     /**
-     * Represents the external identity associated with a merchant within an external system.
+     * Identifier of the external system group for the merchant lookup
      */
     @JsonProperty("ExternalSystemGroupId")
     private String externalSystemGroupId;
 
     /**
-     * Defines the base currency utilized for bill creation by the merchant.
+     * The currency in which the merchant conducts transactions.
      */
     @JsonProperty("MerchantCurrency")
     private Currency merchantCurrency;
 
     /**
-     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     * Specifies the language used for the payment request and related communications
      */
     @JsonProperty("Language")
     private Language language;
 
     /**
-     * Specifies the email address associated with the merchant.
+     * The merchant's primary contact email address.
      */
     @JsonProperty("Email")
     private String email;
 
     /**
-     * Specifies a list of email addresses, separated by semicolons, that will receive copies of emails sent to the merchant.
+     * Email address(es) that receive a copy of the merchant's communications
      */
     @JsonProperty("EmailCopyTo")
     private String emailCopyTo;
 
     /**
-     * The merchant's phone number used for contact and transaction notifications.
+     * The merchant's primary contact phone number.
      */
     @JsonProperty("PhoneNumber")
     private String phoneNumber;
 
     /**
-     * Contains a free‑text description of the merchant, which is stored in the TIB Finance system and displayed in merchant records.
+     * A textual description of the merchant’s business and services.
      */
     @JsonProperty("MerchantDescription")
     private String merchantDescription;
 
     /**
-     * Gets or sets the address associated with the entity.
+     * The merchant's physical address.
      */
     @JsonProperty("Address")
     private Address address;
 
     /**
-     * Gets or sets the favorite provider.
+     * The merchant's preferred payment provider.
      */
     @JsonProperty("FavoriteProvider")
     private Provider favoriteProvider;

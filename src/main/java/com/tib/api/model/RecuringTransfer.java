@@ -7,7 +7,7 @@ import com.tib.api.model.enums.TransferType;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,100 +21,100 @@ public class RecuringTransfer   {
 
     
     /**
-     * Indicates the next scheduled date for a recurring transfer operation associated with the client's account.
+     * The date and time when the next recurring transfer is scheduled to occur.
      */
     @JsonProperty("NextRecuringDate")
-    private LocalDateTime nextRecuringDate;
+    private OffsetDateTime nextRecuringDate;
 
     /**
-     * Identifies a specific recurring transfer operation associated with a client's account.
+     * Identifier of the recurring transfer to delete
      */
     @JsonProperty("RecuringTransferId")
     private String recuringTransferId;
 
     /**
-     * Defines the frequency of recurring transfer operations within the client's account. This enumeration is crucial for setting up and managing scheduled transfers.
+     * Specifies the frequency at which the transfer recurs.
      */
     @JsonProperty("RecuringMode")
     private TransferFrequency recuringMode;
 
     /**
-     * Defines and manages the type of transfer operation within the system.
+     * Indicates the category of the recurring transfer (e.g., inbound, outbound, internal).
      */
     @JsonProperty("TransferType")
     private TransferType transferType;
 
     /**
-     * Identifies the payment method associated with a specific transaction or operation.
+     * Identifier of the payment method linked to the recurring transfer.
      */
     @JsonProperty("RelatedPaymentMethodId")
     private String relatedPaymentMethodId;
 
     /**
-     * Gets or sets the reference date used for scheduling recurring transfers.
+     * The reference date from which the recurring transfer schedule is calculated.
      */
     @JsonProperty("RecuringRefDate")
-    private LocalDateTime recuringRefDate;
+    private OffsetDateTime recuringRefDate;
 
     /**
-     * The date and time when the payment was created.
+     * The date and time when the recurring transfer was initially created.
      */
     @JsonProperty("CreatedDate")
-    private LocalDateTime createdDate;
+    private OffsetDateTime createdDate;
 
     /**
-     * Retrieves the identifier of the merchant (bank account) to which the operation applies.
+     * Unique identifier of the merchant linked to the recurring transfer.
      */
     @JsonProperty("RelatedMerchantId")
     private String relatedMerchantId;
 
     /**
-     * Gets or sets the name of the merchant related to the current operation.
+     * The name of the merchant linked to the recurring transfer.
      */
     @JsonProperty("RelatedMerchantName")
     private String relatedMerchantName;
 
     /**
-     * This property represents the full name of the customer in the system.
+     * The full name of the customer who owns the recurring transfer.
      */
     @JsonProperty("CustomerName")
     private String customerName;
 
     /**
-     * Serves as a unique identifier for each customer within the system.
+     * Unique identifier of the customer owning the recurring transfers
      */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
-     * Retrieves or assigns the monetary amount involved in the transaction.
+     * The monetary value of each recurring transfer.
      */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
-     * Gets or sets the title of the transfer.
+     * The descriptive title of the recurring transfer.
      */
     @JsonProperty("TrasnferTitle")
     private String trasnferTitle;
 
     /**
-     * Provides a textual description of a transfer operation.
+     * A textual description of the recurring transfer.
      */
     @JsonProperty("TrasnferDescription")
     private String trasnferDescription;
 
     /**
-     * External system identifier for a transfer.
+     * Identifier assigned by the external system for the recurring transfer
      */
     @JsonProperty("TrasnferExternalSystemNumber")
     private String trasnferExternalSystemNumber;
 
     /**
-     * 
+     * The date on which the recurring transfer series terminates.
      */
     @JsonProperty("EndDate")
-    private LocalDateTime endDate;
+    private OffsetDateTime endDate;
 
 
     
@@ -122,7 +122,7 @@ public class RecuringTransfer   {
     }
 
     
-    public RecuringTransfer(LocalDateTime nextRecuringDate, String recuringTransferId, TransferFrequency recuringMode, TransferType transferType, String relatedPaymentMethodId, LocalDateTime recuringRefDate, LocalDateTime createdDate, String relatedMerchantId, String relatedMerchantName, String customerName, String customerId, Double amount, String trasnferTitle, String trasnferDescription, String trasnferExternalSystemNumber, LocalDateTime endDate) {
+    public RecuringTransfer(OffsetDateTime nextRecuringDate, String recuringTransferId, TransferFrequency recuringMode, TransferType transferType, String relatedPaymentMethodId, OffsetDateTime recuringRefDate, OffsetDateTime createdDate, String relatedMerchantId, String relatedMerchantName, String customerName, String customerId, Double amount, String trasnferTitle, String trasnferDescription, String trasnferExternalSystemNumber, OffsetDateTime endDate) {
         this.nextRecuringDate = nextRecuringDate;
         this.recuringTransferId = recuringTransferId;
         this.recuringMode = recuringMode;
@@ -144,11 +144,11 @@ public class RecuringTransfer   {
     
 
     
-    public LocalDateTime getNextRecuringDate() {
+    public OffsetDateTime getNextRecuringDate() {
         return nextRecuringDate;
     }
 
-    public void setNextRecuringDate(LocalDateTime nextRecuringDate) {
+    public void setNextRecuringDate(OffsetDateTime nextRecuringDate) {
         this.nextRecuringDate = nextRecuringDate;
     }
 
@@ -184,19 +184,19 @@ public class RecuringTransfer   {
         this.relatedPaymentMethodId = relatedPaymentMethodId;
     }
 
-    public LocalDateTime getRecuringRefDate() {
+    public OffsetDateTime getRecuringRefDate() {
         return recuringRefDate;
     }
 
-    public void setRecuringRefDate(LocalDateTime recuringRefDate) {
+    public void setRecuringRefDate(OffsetDateTime recuringRefDate) {
         this.recuringRefDate = recuringRefDate;
     }
 
-    public LocalDateTime getCreatedDate() {
+    public OffsetDateTime getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(LocalDateTime createdDate) {
+    public void setCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
     }
 
@@ -264,11 +264,11 @@ public class RecuringTransfer   {
         this.trasnferExternalSystemNumber = trasnferExternalSystemNumber;
     }
 
-    public LocalDateTime getEndDate() {
+    public OffsetDateTime getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDateTime endDate) {
+    public void setEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
     }
 

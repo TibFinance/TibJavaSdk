@@ -9,7 +9,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -29,17 +29,24 @@ public class CreateFreeOperationResponse extends CustomAPIResponse {
     private String clientId;
 
 
+    public CreateFreeOperationResponse() {
+    }
+
     public CreateFreeOperationResponse(Error[] errors, boolean hasError, String messages, String paymentId, String clientId) {
         super(errors, hasError, messages);
         this.paymentId = paymentId;
         this.clientId = clientId;
     }
 
-    public CreateFreeOperationResponse(APIResponse apiResponse) {
+    public CreateFreeOperationResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.paymentId = apiResponse.getResponse().toString();
-            this.clientId = apiResponse.getResponse().toString();
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                CreateFreeOperationResponse __typed = objectMapper.readValue(__rawBody, CreateFreeOperationResponse.class);
+                this.paymentId = __typed.paymentId;
+                this.clientId = __typed.clientId;
+            }
         }
     }
 

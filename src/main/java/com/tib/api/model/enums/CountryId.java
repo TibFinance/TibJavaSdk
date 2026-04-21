@@ -17,4 +17,12 @@ public enum CountryId {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static CountryId fromValue(int value) {
+        for (CountryId v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

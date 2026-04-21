@@ -6,7 +6,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,7 +20,7 @@ public class GetServiceBoardingStatusArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
-     * The BoardingServiceId uniquely identifies a boarding service within the system. It is essential for tracking and managing the onboarding process of merchants.
+     * Identifier of the boarding service whose status is being retrieved.
      */
     @JsonProperty("BoardingServiceId")
     private String boardingServiceId;

@@ -6,7 +6,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,13 +20,13 @@ public class SetDefaultPaymentMethodArgs  extends BaseAuthenticatedCryptedArgs  
 
     
     /**
-     * Serves as a unique identifier for each customer within the system.
+     * Unique identifier of the customer owning the recurring transfers
      */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
-     * Acts as a unique identifier for a distinct payment method.
+     * Identifier of the payment method to be set as the default for the account
      */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;

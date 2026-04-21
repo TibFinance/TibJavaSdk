@@ -17,6 +17,9 @@ public class CustomAPIResponse {
     @JsonProperty("Messages")
     private String messages;
 
+    public CustomAPIResponse() {
+    }
+
     public CustomAPIResponse(Error[] errors, boolean hasError, String messages) {
         this.errors = errors;
         this.hasError = hasError;

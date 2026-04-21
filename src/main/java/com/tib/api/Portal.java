@@ -41,10 +41,10 @@ public class Portal {
     }
 
     /**
-     * The CreateSession function is purposed to establish a fresh session, thereby ensuring a secure and distinct environment for user activities.
+     * Creates an authenticated session for a TIB Finance client.
      *
      * @param args the args
-     * @return  On successful execution, the function yields an instance of the CreateSessionResponse, encompassing details about the freshly instantiated session.
+     * @return  On success returns a JSON payload with SessionId (Guid) and Expiration (ISO‑8601 timestamp) indicating the session token and its validity period.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -64,10 +64,10 @@ public class Portal {
         return new CreateSessionResponse(apiResponse);
     }
     /**
-     * Retrieves the full list of services that are available to the authenticated client.
+     * Retrieves the list of service contracts associated with the authenticated merchant.
      *
      * @param args the args
-     * @return  A ListServicesResponse object that contains an array of Service objects and associated pagination information.
+     * @return  On success, returns a JSON array of service objects, each containing ServiceId (GUID) and optional descriptive fields (e.g., Name, Status). HTTP 200.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -84,13 +84,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("ListServices", args);
-        return new ListServicesResponse(apiResponse);
+        return new ListServicesResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves the details of a specified service within the TIB Finance API. This function is essential for accessing service-related information, which is crucial for managing contracts and determining applicable limits and fees.
+     * Retrieves the details of a specific Service (contract) for the authenticated client.
      *
      * @param args the args
-     * @return  An instance of GetServiceResponse containing the service details.
+     * @return  On success, returns a Service object containing ServiceId, MerchantId, Name, Limits, Fees, Currency, EffectiveDates, and CurrentStatus.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -110,10 +110,10 @@ public class Portal {
         return new GetServiceResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves wallet information for a specific service.
+     * Retrieves the wallet state for a specific service.
      *
      * @param args the args
-     * @return  A GetWalletInformationsByServiceResponse containing the list of wallets with their details.
+     * @return  On success, returns a JSON object containing effectiveBalance (decimal), withdrawableAmount (decimal), processingStatus (enum), and isNewWalletEnabled (boolean). Errors are returned with standard API error codes.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -130,13 +130,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("GetWalletInformationsByService", args);
-        return new GetWalletInformationsResponse(apiResponse);
+        return new GetWalletInformationsResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves a list of all merchants associated with the client's account. This function is essential for managing and accessing merchant-specific data within the API.
+     * Retrieves a list of merchant accounts accessible to the authenticated session.
      *
      * @param args the args
-     * @return  Returns a ListMerchantsResponse object containing details of each merchant.
+     * @return  On success, returns HTTP 200 with a JSON array of merchant objects, each containing MerchantId (GUID), Name, IsPrimary (bool), and Status fields.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -153,13 +153,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("ListMerchants", args);
-        return new ListMerchantsResponse(apiResponse);
+        return new ListMerchantsResponse(apiResponse, objectMapper);
     }
     /**
-     * Gets the boarding status for a service.
+     * Retrieves the boarding status of all merchants associated with a specific service.
      *
      * @param args the args
-     * @return  Returns a ListMerchantsResponse object containing details of merchants with completed boarding.
+     * @return  JSON array of objects, each containing MerchantId (Guid), BoardingStatus (enum: Boarded|Pending|Failed), and StatusTimestamp (ISO‑8601). HTTP 200 on success; error codes follow standard API error handling.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -176,13 +176,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("GetServiceBoardingStatus", args);
-        return new GetServiceBoardingStatusResponse(apiResponse);
+        return new GetServiceBoardingStatusResponse(apiResponse, objectMapper);
     }
     /**
-     * Initiates the creation of a new merchant account within the TIB Finance system. This function is essential for setting up a merchant's basic and account information, which is a prerequisite for conducting transactions.
+     * Creates a new merchant (bank account) for the client.
      *
      * @param args the args
-     * @return  Returns a CreateMerchantResponse object, which contains the status and details of the merchant creation process.
+     * @return  MerchantId (GUID) of the newly created merchant and a validationStatus flag indicating whether the merchant is active or pending validation.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -202,10 +202,10 @@ public class Portal {
         return new CreateMerchantResponse(apiResponse);
     }
     /**
-     * Retrieves detailed information about a specific merchant using the provided merchant ID. This function is essential for accessing the merchant's basic and account information necessary for transaction processing.
+     * Retrieves the details of a merchant by its GUID.
      *
      * @param args the args
-     * @return  A GetMerchantResponse object containing the merchant's details.
+     * @return  On success, returns a Merchant object with MerchantId, basic information (name, status, creation date) and a preview of account information (bank name, masked account number, currency, etc.).
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -225,10 +225,10 @@ public class Portal {
         return new GetMerchantResponse(apiResponse, objectMapper);
     }
     /**
-     * Persists a merchant entity to the TIB Finance system.
+     * Updates or creates a merchant record in TIB Finance.
      *
      * @param args the args
-     * @return  A SaveMerchantResponse indicating the result of the operation, including the newly generated merchant identifier.
+     * @return  On success, returns HTTP 200 with a JSON body containing the saved MerchantId and a timestamp of the update, or an error object on failure.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -248,10 +248,10 @@ public class Portal {
         return new SaveMerchantResponse(apiResponse, objectMapper);
     }
     /**
-     * This function saves the basic information of a merchant. It is used to update or create the initial details associated with a merchant account within the TIB Finance API system.
+     * Updates the basic profile data of an existing merchant.
      *
      * @param args the args
-     * @return  The function returns a SaveMerchantResponse object, which contains the status and details of the save operation.
+     * @return  HTTP 200 with a JSON body containing a success flag and the MerchantId; on failure returns the standard error object with error code and description.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -271,10 +271,10 @@ public class Portal {
         return new SaveMerchantResponse(apiResponse, objectMapper);
     }
     /**
-     * Stores the merchant's account details securely in the system.
+     * Saves or updates a merchant's bank account information.
      *
      * @param args the args
-     * @return  Returns a SaveMerchantResponse object indicating the success or failure of the operation.
+     * @return  HTTP 200 with JSON confirming the operation, e.g., { "merchantId": "<GUID>", "accountSaved": true }.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -294,10 +294,10 @@ public class Portal {
         return new SaveMerchantResponse(apiResponse, objectMapper);
     }
     /**
-     * Removes a specified merchant from the system. This operation is irreversible and will permanently delete the merchant's data, including all associated accounts and transactions.
+     * Deletes a merchant (bank account) identified by its GUID.
      *
      * @param args the args
-     * @return  An instance of DeleteMerchantResponse indicating the success or failure of the operation.
+     * @return  HTTP 200 with a JSON body containing { "success": true, "merchantId": "<MerchantId>" }. Errors return appropriate HTTP status codes and error payload.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -317,10 +317,10 @@ public class Portal {
         return new DeleteMerchantResponse(apiResponse);
     }
     /**
-     * Retrieves merchant information using an external identifier. This function is essential for accessing merchant details that are linked to a specific external ID, facilitating seamless integration with external systems.
+     * Retrieves TIB merchant records that match a given external system identifier.
      *
      * @param args the args
-     * @return  An instance of GetMerchantsByExternalIdResponse containing the merchant details associated with the provided external identifier.
+     * @return  On success, returns a JSON array of merchant objects, each containing at least the internal MerchantId (Guid) and basic merchant information. Errors are returned as standard API error objects.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -337,13 +337,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("GetMerchantsByExternalId", args);
-        return new GetMerchantsByExternalIdResponse(apiResponse);
+        return new GetMerchantsByExternalIdResponse(apiResponse, objectMapper);
     }
     /**
-     * Adjusts the balance of a wallet by adding or removing funds.
+     * Adjusts the merchant's wallet balance by the specified amount.
      *
      * @param args the args
-     * @return  Returns an AdjustWalletResponse object containing the transfer identifier and any error information.
+     * @return  On success returns an object containing AdjustWalletId (GUID), NewBalance (decimal) and Status ('Success' or error details).
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -360,13 +360,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("AdjustWallet", args);
-        return new AdjustWalletResponse(apiResponse);
+        return new AdjustWalletResponse(apiResponse, objectMapper);
     }
     /**
-     * Generates a comprehensive list of all customers based on specified criteria, providing a complete overview of the customer base.
+     * Retrieves a list of customer objects associated with the specified merchant.
      *
      * @param args the args
-     * @return  The function returns a 'ListCustomersResponse' object. This object contains a detailed list of customers, each with comprehensive information, providing a complete overview of the customer base.
+     * @return  On success, returns HTTP 200 with a JSON array of customer objects, each containing at minimum: CustomerId (GUID), Email (optional), CreatedDate (ISO‑8601), and Status (enum). Errors are returned with standard HTTP error codes and an error payload.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -383,13 +383,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("ListCustomers", args);
-        return new ListCustomersResponse(apiResponse);
+        return new ListCustomersResponse(apiResponse, objectMapper);
     }
     /**
-     * Creates a new customer entity within the system. This function initializes a customer object, which serves as a container for identifying the individual and associating payment methods.
+     * Creates a new Customer object in TIB Finance.
      *
      * @param args the args
-     * @return  Returns a CreateCustomerResponse object, confirming the successful creation of the customer.
+     * @return  On success, returns a JSON payload containing CustomerId (GUID) and a creation timestamp.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -406,13 +406,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateCustomer", args);
-        return new CreateCustomerResponse(apiResponse);
+        return new CreateCustomerResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves detailed information about a specific customer based on the provided customer identifier. This function is essential for accessing customer data necessary for transaction processing and account management.
+     * Retrieves details of a specific customer.
      *
      * @param args the args
-     * @return  An instance of GetCustomerResponse containing the customer's details.
+     * @return  On success, returns a Customer object containing Id, Email, Status, and an array of PaymentMethod summaries. HTTP 200 with JSON payload; errors returned with appropriate HTTP status codes.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -432,10 +432,10 @@ public class Portal {
         return new GetCustomerResponse(apiResponse, objectMapper);
     }
     /**
-     * Persists the customer data to the database, ensuring that all necessary customer information is stored for future transactions.
+     * Creates or updates a customer record in TIB Finance.
      *
      * @param args the args
-     * @return  An instance of SaveCustomerResponse, indicating the success or failure of the operation.
+     * @return  On success returns a JSON object containing CustomerId (Guid) and a success flag, e.g., { "CustomerId": "...", "Success": true }.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -455,10 +455,10 @@ public class Portal {
         return new SaveCustomerResponse(apiResponse);
     }
     /**
-     * Removes a customer from the system based on the provided customer ID. This operation is irreversible and ensures that all associated data with the customer is permanently deleted.
+     * Deletes a customer record from the TIB Finance system.
      *
      * @param args the args
-     * @return  A DeleteCustomerResponse object indicating the success or failure of the operation.
+     * @return  HTTP 204 No Content on success; if a body is returned, it contains a JSON object { "deletedCustomerId": "<Guid>", "status": "Success" }.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -478,10 +478,10 @@ public class Portal {
         return new DeleteCustomerResponse(apiResponse);
     }
     /**
-     * Retrieves customer information using an external identifier. This function is essential for accessing customer data linked to a specific external ID, which is useful for integration with external systems.
+     * Retrieves one or more TIB Finance customers matching a given external identifier.
      *
      * @param args the args
-     * @return  Returns a GetCustomersByExternalIdResponse object containing the customer details associated with the provided external identifier.
+     * @return  On success, returns a JSON array of customer objects, each containing at least the TIB CustomerId (Guid) and associated metadata. Errors are returned as standard API error objects.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -498,13 +498,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("GetCustomersByExternalId", args);
-        return new GetCustomersByExternalIdResponse(apiResponse);
+        return new GetCustomersByExternalIdResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves a list of available payment methods associated with a customer. This function is essential for accessing and managing the various financial accounts linked to a customer, such as credit cards, bank accounts, and Interac. It is particularly useful for applications that need to display or process customer payment options.
+     * Retrieves all payment methods associated with a specific customer under a given merchant.
      *
      * @param args the args
-     * @return  Returns a ListPaymentMethodsResponse object containing the details of each payment method associated with the customer.
+     * @return  On success, returns a JSON array of payment method objects, each containing Id (GUID), Type (enum: CreditCard|BankAccount|Interac), Status, and masked account details.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -521,13 +521,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("ListPaymentMethods", args);
-        return new ListPaymentMethodsResponse(apiResponse);
+        return new ListPaymentMethodsResponse(apiResponse, objectMapper);
     }
     /**
-     * Initializes a new credit card payment method for a customer. This function is essential for enabling transactions using a customer's credit card within the TIB Finance API. It securely stores the credit card details and associates them with the customer's account.
+     * Creates a new credit‑card payment method for a specified customer.
      *
      * @param args the args
-     * @return  CreateCreditCardPaymentMethodResponse, which confirms the successful creation of the credit card payment method.
+     * @return  HTTP 201 with JSON containing PaymentMethodId (GUID) and masked card info (last4, expiryMonth, expiryYear).
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -547,10 +547,10 @@ public class Portal {
         return new CreateCreditCardPaymentMethodResponse(apiResponse);
     }
     /**
-     * Initializes a new direct account payment method for a customer. This function facilitates the creation of a payment method linked directly to a customer's bank account, allowing for seamless transactions.
+     * Creates a bank‑account payment method linked directly to a customer.
      *
      * @param args the args
-     * @return  Returns a CreateDirectAccountPaymentMethodResponse object containing the status and details of the newly created payment method.
+     * @return  On success returns a JSON payload with paymentMethodId (Guid) and status="Created"; on failure returns standard error object with code and message.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -570,10 +570,10 @@ public class Portal {
         return new CreateDirectAccountPaymentMethodResponse(apiResponse);
     }
     /**
-     * This function initializes and creates a new Interac payment method for a customer. It allows the merchant to facilitate transactions using the Interac network, which is a popular method for electronic funds transfers in Canada.
+     * Creates an Interac payment method for a specified customer.
      *
      * @param args the args
-     * @return  The function returns a CreateInteracPaymentMethodResponse object, which contains details about the newly created Interac payment method, including its unique identifier and status.
+     * @return  On success returns a JSON object containing PaymentMethodId (Guid) and a status field indicating creation success.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -593,10 +593,10 @@ public class Portal {
         return new CreateInteracPaymentMethodResponse(apiResponse);
     }
     /**
-     * Retrieves the details of a specific payment method associated with a customer. This function is essential for accessing payment method information, which can include credit cards, bank accounts, or Interac details.
+     * Retrieves the details of a specific payment method.
      *
      * @param args the args
-     * @return  Returns a GetPaymentMethodResponse object containing the details of the requested payment method.
+     * @return  On success, returns a PaymentMethod object with fields such as id, type, masked account information, status, createdDate, and lastModifiedDate.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -616,10 +616,10 @@ public class Portal {
         return new GetPaymentMethodResponse(apiResponse, objectMapper);
     }
     /**
-     * Removes a specified payment method from the system. This function is typically used to delete a customer's payment method that is no longer needed or valid.
+     * Deletes a specific payment method from a customer profile.
      *
      * @param args the args
-     * @return  Returns a DeletePaymentMethodResponse object indicating the success or failure of the operation.
+     * @return  HTTP 204 No Content on successful deletion; error payload with standard TIB Finance error codes on failure.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -639,10 +639,10 @@ public class Portal {
         return new DeletePaymentMethodResponse(apiResponse);
     }
     /**
-     * Sets the default payment method for a customer. This function assigns a specified payment method as the primary option for transactions, ensuring that it is used by default unless another method is specified.
+     * Sets the default payment method for a specified customer.
      *
      * @param args the args
-     * @return  Returns a SetDefaultPaymentMethodResponse object indicating the success or failure of the operation.
+     * @return  HTTP 200 with JSON { "success": true, "customerId": "<GUID>", "defaultPaymentMethodId": "<GUID>" }. Errors are returned with appropriate HTTP status codes and error payloads.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -662,10 +662,10 @@ public class Portal {
         return new SetDefaultPaymentMethodResponse(apiResponse);
     }
     /**
-     * Retrieves a list of all bills associated with the client's account. This function is essential for managing and reviewing billing information within the system.
+     * Retrieves a collection of bills created within a specified time range.
      *
      * @param args the args
-     * @return  Returns a ListBillsResponse object containing the details of all bills.
+     * @return  On success, returns a JSON array of bill objects, each containing at least BillId (GUID), CreationDate, Amount, Currency, Status, and optional metadata.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -682,13 +682,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("ListBills", args);
-        return new ListBillsResponse(apiResponse);
+        return new ListBillsResponse(apiResponse, objectMapper);
     }
     /**
-     * Initiates the creation of a bill within the system. This function generates a unique Bill ID, which can be used for subsequent operations related to the bill.
+     * Creates a new bill record in TIB Finance.
      *
      * @param args the args
-     * @return  Returns a CreateBillResponse object containing the newly created Bill ID and any relevant status information.
+     * @return  On success, returns a JSON object with billId (Guid) and creationTimestamp (ISO‑8601).
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -708,10 +708,10 @@ public class Portal {
         return new CreateBillResponse(apiResponse);
     }
     /**
-     * Retrieves a bill based on the provided criteria. This function is essential for accessing detailed billing information within the API, facilitating further operations such as payment processing or bill management.
+     * Retrieves details of a specific bill.
      *
      * @param args the args
-     * @return  Returns a GetBillResponse object containing detailed information about the requested bill, including its status, amount, and associated customer details.
+     * @return  On success, returns a Bill object containing bill metadata (id, amount, currency, status, creation date, due date) and an array of associated payment IDs.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -731,10 +731,10 @@ public class Portal {
         return new GetBillResponse(apiResponse, objectMapper);
     }
     /**
-     * Removes a specified bill from the system. This operation is typically used when a bill is no longer needed or was created in error. Ensure that the bill ID is valid and corresponds to an existing bill before attempting to delete.
+     * Deletes a previously created bill.
      *
      * @param args the args
-     * @return  A DeleteBillResponse object indicating the success or failure of the deletion operation.
+     * @return  HTTP 204 No Content on success (empty response body). Errors are returned with standard HTTP error codes and a JSON error payload.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -754,10 +754,10 @@ public class Portal {
         return new DeleteBillResponse(apiResponse);
     }
     /**
-     * Retrieves a list of all transfer operations available within the system. This function provides details about each transfer, including status and associated metadata.
+     * Retrieves a paginated list of transfer records matching the supplied filters.
      *
      * @param args the args
-     * @return  An instance of ListTransfersResponse containing the details of all transfers.
+     * @return  On success, returns a JSON object containing an array of transfer objects (each with TransferId, Status, Type, Amount, Dates, and related identifiers) and pagination metadata (TotalCount, PageSize, PageNumber).
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -774,13 +774,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("ListTransfers", args);
-        return new ListTransfersResponse(apiResponse);
+        return new ListTransfersResponse(apiResponse, objectMapper);
     }
     /**
-     * Lists transfers using an optimized fast query.
+     * Retrieves a filtered, summarized list of transfer records for a specified service.
      *
      * @param args the args
-     * @return  A ListTransfersFastResponse containing the list of transfers with compact field names for optimized performance.
+     * @return  HTTP 200 with a JSON payload containing an array of transfer summary objects (e.g., TransferId, Date, Type, Amount, Status, Resolved, ErrorCode) plus optional pagination info.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -797,13 +797,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("ListTransfersFast", args);
-        return new ListTransfersFastResponse(apiResponse);
+        return new ListTransfersFastResponse(apiResponse, objectMapper);
     }
     /**
-     * Lists the transfers of a bill.
+     * Retrieves all transfer records associated with a specific bill.
      *
      * @param args the args
-     * @return  
+     * @return  On success, a JSON array of transfer objects, each containing TransferId, OperationId, Direction, Target, Status (numeric enum), BankResult (if applicable), Description, and timestamps.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -820,13 +820,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("ListTransfersForBillFast", args);
-        return new ListTransfersFastResponse(apiResponse);
+        return new ListTransfersFastResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves a list of recurring transfer operations associated with the client's account. This function is essential for clients who need to manage or review their scheduled transfers.
+     * Retrieves all active recurring transfers for a specified service.
      *
      * @param args the args
-     * @return  Returns a list of recurring transfer objects, each containing details such as transfer ID, amount, schedule, and status.
+     * @return  A JSON array of transfer objects, each containing TransferId (GUID), Status, NextRecurrenceDate (ISO‑8601), Amount, Currency, MerchantId (GUID), and optional metadata such as Description and LastRunResult.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -843,13 +843,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("GetRecuringTransfers", args);
-        return new GetRecuringTransfersResponse(apiResponse);
+        return new GetRecuringTransfersResponse(apiResponse, objectMapper);
     }
     /**
-     * Deletes a recurring transfer from the system.
+     * Deletes a recurring transfer and cancels all its future scheduled executions.
      *
      * @param args the args
-     * @return  Returns a confirmation of successful deletion or an error message if the operation fails.
+     * @return  HTTP 200 with JSON { "deleted": true, "transferId": "<RecuringTransferId>" } on success; error payload otherwise.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -869,10 +869,10 @@ public class Portal {
         return new DeleteRecuringTransferResponse(apiResponse);
     }
     /**
-     * Initiates a new payment transaction within the system. This function processes the payment details provided and returns a response indicating the success or failure of the operation.
+     * Creates a payment associated with a specific bill.
      *
      * @param args the args
-     * @return  Returns a CreatePaymentResponse object that contains the status and details of the payment transaction.
+     * @return  Success returns a JSON object containing PaymentId (Guid), Status (e.g., 'Created'), and optional fields like ProcessedAt and TransactionDetails.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -892,10 +892,10 @@ public class Portal {
         return new CreatePaymentResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves the details of a specific payment using the provided payment identifier.
+     * Gets the payment.
      *
      * @param args the args
-     * @return  An instance of GetPaymentResponse containing the payment details.
+     * @return  GetPaymentResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -915,10 +915,10 @@ public class Portal {
         return new GetPaymentResponse(apiResponse, objectMapper);
     }
     /**
-     * Removes a specified payment from the system. This function is essential for managing and rectifying payment records, ensuring that erroneous or obsolete payments are efficiently deleted.
+     * Deletes the payment.
      *
      * @param args the args
-     * @return  An instance of DeletePaymentResponse, indicating the success or failure of the operation.
+     * @return  DeletePaymentResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -938,10 +938,10 @@ public class Portal {
         return new DeletePaymentResponse(apiResponse);
     }
     /**
-     * Initiates a direct Interac transaction, enabling the transfer of funds using a recipient's email or mobile phone number. This method facilitates seamless money transfers without requiring detailed customer account information.
+     * Creates the direct Interac transaction
      *
      * @param args the args
-     * @return  A CreateDirectInteracTransactionResponse object containing the status and details of the transaction.
+     * @return  CreateDirectInteracTransactionResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -961,10 +961,10 @@ public class Portal {
         return new CreateDirectInteracTransactionResponse(apiResponse);
     }
     /**
-     * Initiates a transaction using raw data input. This function processes the raw transaction details to create a valid transaction entry within the system.
+     * Creates the transaction from raw.
      *
      * @param args the args
-     * @return  Returns a CreateTransactionFromRawResponse object, which contains the status and details of the transaction creation process.
+     * @return  CreateTransactionFromRawResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -984,10 +984,10 @@ public class Portal {
         return new CreateTransactionFromRawResponse(apiResponse);
     }
     /**
-     * Retrieves a list of operations that have been executed within the system. This function provides detailed information about each operation, allowing users to track and analyze completed transactions.
+     * Lists the executed operations.
      *
      * @param args the args
-     * @return  Returns a ListExecutedOperationsResponse object containing details of the executed operations.
+     * @return  ListExecutedOperationsResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1004,13 +1004,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("ListExecutedOperations", args);
-        return new ListExecutedOperationsResponse(apiResponse);
+        return new ListExecutedOperationsResponse(apiResponse, objectMapper);
     }
     /**
-     * Triggers the payment processing workflow for a specific payment, overriding the default automatic selection mechanism.
+     * Forces the payment process.
      *
      * @param args the args
-     * @return  ForcePaymentProcessResponse that indicates the outcome of the forced operation and provides any error information.
+     * @return  ForcePaymentProcessResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1030,10 +1030,10 @@ public class Portal {
         return new ForcePaymentProcessResponse(apiResponse);
     }
     /**
-     * Retrieves the public token necessary for initiating a drop-in session. This token is used to authenticate and authorize the session within the API framework.
+     * Gets the drop in public token.
      *
      * @param args the args
-     * @return  An instance of GetDropInPublicTokenResponse, containing the public token and any associated metadata.
+     * @return  GetDropInPublicTokenResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1053,10 +1053,10 @@ public class Portal {
         return new GetDropInPublicTokenResponse(apiResponse);
     }
     /**
-     * Initiates a free operation within the TIB Finance API, allowing for transactions not directly linked to a specific bill. This function is typically used to either collect payments from a customer's payment method or deposit funds into it, with the exception of credit card deposits.
+     * Creates the free operation.
      *
      * @param args the args
-     * @return  An instance of CreateFreeOperationResponse, which contains the result of the operation and any relevant transaction details.
+     * @return  CreateFreeOperationResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1073,13 +1073,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateFreeOperation", args);
-        return new CreateFreeOperationResponse(apiResponse);
+        return new CreateFreeOperationResponse(apiResponse, objectMapper);
     }
     /**
-     * Initiates a batch of free operations, allowing for transactions not tied to a specific bill. This function is essential for handling payments or deposits directly linked to customer payment methods.
+     * Creates a batch of free operations (deposits or collections) in a single call. Validates that client onboarding (KYC) is completed before allowing free deposit operations.
      *
      * @param args the args
-     * @return  Returns a confirmation of the batch creation, including details of each operation within the batch.
+     * @return  A CreateFreeOperationBatchResponse containing the results for each operation in the batch.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1096,13 +1096,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateFreeOperationBatch", args);
-        return new CreateFreeOperationBatchResponse(apiResponse);
+        return new CreateFreeOperationBatchResponse(apiResponse, objectMapper);
     }
     /**
-     * Reverts a previously executed transfer operation, restoring the original state of the involved accounts.
+     * Reverts (cancels or reverses) a transfer. For pending gateway payments, deletes the transfer and its public token. For processed payments, creates reversal operations for each non-fee operation. Rejects transfers over $5,000 or wallet-type transfers.
      *
      * @param args the args
-     * @return  Returns a status indicating the success or failure of the revert operation.
+     * @return  A RevertTransferResponse indicating whether the transfer was deleted or reversed.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1122,10 +1122,10 @@ public class Portal {
         return new RevertTransferResponse(apiResponse);
     }
     /**
-     * Modifies the security question and answer for an Interac payment method associated with a customer account.
+     * Updates the security question and answer on an existing Interac payment method. Creates a replacement payment method with the new credentials and deletes the old one. The answer is encrypted via the external data vault, and both question and answer are obfuscated in logs.
      *
      * @param args the args
-     * @return  Returns a confirmation of the update operation, indicating success or failure.
+     * @return  A ChangeInteracPaymentMethodQuestionAndAnswerResponse containing the new payment method ID.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1145,10 +1145,10 @@ public class Portal {
         return new ChangeInteracPaymentMethodQuestionAndAnswerResponse(apiResponse);
     }
     /**
-     * Initializes the boarding process for a new client within the TIB Finance API.
+     * Initializes the merchant onboarding (boarding) process for a service. Generates a public access token and returns a redirect URL to either the direct login page (if a service-level login exists) or the boarding sign-up wizard.
      *
      * @param args the args
-     * @return  Returns a confirmation of successful initialization or an error message if the process fails.
+     * @return  An InitBoardingResponse containing the redirect URL for the boarding wizard.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1168,10 +1168,10 @@ public class Portal {
         return new InitBoardingResponse(apiResponse);
     }
     /**
-     * Creates a new sub-client within the TIB Finance system.
+     * Creates a new sub-client (child service) under the authenticated client's account. The sub-client is represented as a service entity with its own name, language, and currency.
      *
      * @param args the args
-     * @return  Returns a unique identifier for the newly created sub-client, formatted as a GUID.
+     * @return  A CreateSubClientResponse containing the newly created service ID.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1191,10 +1191,10 @@ public class Portal {
         return new CreateSubClientResponse(apiResponse);
     }
     /**
-     * Resends the payment notification email to the specified recipient.
+     * Resends the payment notification email to the customer associated with a specific payment.
      *
      * @param args the args
-     * @return  Returns a status indicating whether the email was successfully resent.
+     * @return  A ResendPaymentEmailResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1214,10 +1214,10 @@ public class Portal {
         return new ResendPaymentEmailResponse(apiResponse);
     }
     /**
-     * Initiates a retry process for a merchant's failed transfer operation.
+     * Relaunches (retries) a previously failed transfer for a merchant. Resets the failed payment in the database for reprocessing and sends an internal notification email with the transfer details.
      *
      * @param args the args
-     * @return  Returns a status indicating the success or failure of the retry operation.
+     * @return  A RelaunchMerchantFailedTransferResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1237,10 +1237,10 @@ public class Portal {
         return new RelaunchMerchantFailedTransferResponse(apiResponse);
     }
     /**
-     * Creates a transfer to a supplier.
+     * Creates a payment transfer from the calling merchant to a supplier. Validates both merchants, runs business rules on the sending merchant's limits, creates the transfer as a free collection, and optionally creates a bill. Notifies the supplier unless client approval is required.
      *
      * @param args the args
-     * @return  A CreateSupplierTransferResponse containing the result of the transfer creation, including any matching existing merchants.
+     * @return  A CreateSupplierTransferResponse containing the created transfer identifier.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1257,13 +1257,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateSupplierTransfer", args);
-        return new CreateSupplierTransferResponse(apiResponse);
+        return new CreateSupplierTransferResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves the list of suppliers for a merchant.
+     * Retrieves the list of suppliers associated with a merchant, returning each supplier's name and identifier.
      *
      * @param args the args
-     * @return  A GetSuppliersResponse containing the list of suppliers with their IDs and descriptions.
+     * @return  A GetSuppliersResponse containing the list of suppliers.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1280,13 +1280,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("GetSuppliers", args);
-        return new GetSuppliersResponse(apiResponse);
+        return new GetSuppliersResponse(apiResponse, objectMapper);
     }
     /**
-     * Creates a new supplier for a merchant.
+     * Creates or registers a supplier for a merchant. If a supplier with the given email already exists, reuses that supplier; otherwise provisions a new client, service, merchant, and login. Links the supplier to the calling merchant and creates a reciprocal customer record in the supplier's service.
      *
      * @param args the args
-     * @return  A CreateSupplierResponse containing the newly created supplier's ID, name, and any matching existing merchants.
+     * @return  A CreateSupplierResponse containing the supplier's merchant ID.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1303,13 +1303,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateSupplier", args);
-        return new CreateSupplierResponse(apiResponse);
+        return new CreateSupplierResponse(apiResponse, objectMapper);
     }
     /**
-     * 
+     * Lists suppliers linked to the specified merchant, including detailed information such as supplier name, email address, and creation date. For a lightweight name-and-ID-only list, use GetSuppliers instead.
      *
      * @param args the args
-     * @return  
+     * @return  A ListSuppliersResponse containing the list of supplier details.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1326,13 +1326,13 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("ListSuppliers", args);
-        return new ListSuppliersResponse(apiResponse);
+        return new ListSuppliersResponse(apiResponse, objectMapper);
     }
     /**
-     * 
+     * Updates the display name (alias) that the payer uses to identify a supplier. The alias is a payer-side label and does not affect the supplier's own merchant name.
      *
      * @param args the args
-     * @return  
+     * @return  An UpdateSupplierAliasResponse confirming the update.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1352,10 +1352,10 @@ public class Portal {
         return new UpdateSupplierAliasResponse(apiResponse);
     }
     /**
-     * 
+     * Soft-deletes a supplier link for the specified merchant. The supplier's merchant account is not affected â€” only the payer-to-supplier association is removed.
      *
      * @param args the args
-     * @return  
+     * @return  A DeleteSupplierResponse confirming the deletion.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1375,10 +1375,79 @@ public class Portal {
         return new DeleteSupplierResponse(apiResponse);
     }
     /**
-     * Retrieves wallet operations and transaction history for a merchant.
+     * Lists supplier transfers initiated by the calling merchant (identified via FeeMerchantId). Returns transfers where the caller is the fee-payer, with optional datestatus filters.
      *
      * @param args the args
-     * @return  A GetWalletOperationsResponse containing the list of daily operations, balance before operations, and delay buffer amount.
+     * @return  A ListSupplierTransfersResponse containing the list of supplier transfers.
+     * @throws NoSuchAlgorithmException           the no such algorithm exception
+     * @throws InvalidKeyException                the invalid key exception
+     * @throws IOException                        the io exception
+     * @throws InvalidAlgorithmParameterException the invalid algorithm parameter
+     *                                            exception
+     * @throws NoSuchPaddingException             the no such padding exception
+     * @throws BadPaddingException                the bad padding exception
+     * @throws IllegalBlockSizeException          the illegal block size exception
+     * @throws InvalidKeySpecException            the invalid key spec exception
+     * @throws SAXException                       the sax exception
+     */
+    public ListSupplierTransfersResponse listSupplierTransfers(ListSupplierTransfersArgs args)
+            throws IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException,
+                NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
+                IllegalBlockSizeException {
+        APIResponse apiResponse = client.call("ListSupplierTransfers", args);
+        return new ListSupplierTransfersResponse(apiResponse, objectMapper);
+    }
+    /**
+     * Retrieves a single supplier transfer by ID. Accessible to both the fee-payer and the supplier. Returns the transfer details along with the counterparty name and the caller's role.
+     *
+     * @param args the args
+     * @return  A GetSupplierTransferResponse containing the transfer and counterparty info.
+     * @throws NoSuchAlgorithmException           the no such algorithm exception
+     * @throws InvalidKeyException                the invalid key exception
+     * @throws IOException                        the io exception
+     * @throws InvalidAlgorithmParameterException the invalid algorithm parameter
+     *                                            exception
+     * @throws NoSuchPaddingException             the no such padding exception
+     * @throws BadPaddingException                the bad padding exception
+     * @throws IllegalBlockSizeException          the illegal block size exception
+     * @throws InvalidKeySpecException            the invalid key spec exception
+     * @throws SAXException                       the sax exception
+     */
+    public GetSupplierTransferResponse getSupplierTransfer(GetSupplierTransferArgs args)
+            throws IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException,
+                NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
+                IllegalBlockSizeException {
+        APIResponse apiResponse = client.call("GetSupplierTransfer", args);
+        return new GetSupplierTransferResponse(apiResponse, objectMapper);
+    }
+    /**
+     * Lists recurring supplier transfers initiated by the calling merchant. Returns recurring transfer configurations where the caller is the fee-payer.
+     *
+     * @param args the args
+     * @return  A ListSupplierRecurringTransfersResponse containing the recurring transfers.
+     * @throws NoSuchAlgorithmException           the no such algorithm exception
+     * @throws InvalidKeyException                the invalid key exception
+     * @throws IOException                        the io exception
+     * @throws InvalidAlgorithmParameterException the invalid algorithm parameter
+     *                                            exception
+     * @throws NoSuchPaddingException             the no such padding exception
+     * @throws BadPaddingException                the bad padding exception
+     * @throws IllegalBlockSizeException          the illegal block size exception
+     * @throws InvalidKeySpecException            the invalid key spec exception
+     * @throws SAXException                       the sax exception
+     */
+    public ListSupplierRecurringTransfersResponse listSupplierRecurringTransfers(ListSupplierRecurringTransfersArgs args)
+            throws IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException,
+                NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
+                IllegalBlockSizeException {
+        APIResponse apiResponse = client.call("ListSupplierRecurringTransfers", args);
+        return new ListSupplierRecurringTransfersResponse(apiResponse, objectMapper);
+    }
+    /**
+     * Retrieves wallet operation history for a service within a specified date range. Returns the list of daily operations, the wallet balance as of the start date, and the configured delay buffer amount.
+     *
+     * @param args the args
+     * @return  A GetWalletOperationsResponse containing the operations, balance before operations, and delay buffer amount.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1395,7 +1464,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("GetWalletOperations", args);
-        return new GetWalletOperationsResponse(apiResponse);
+        return new GetWalletOperationsResponse(apiResponse, objectMapper);
     }
 
 }

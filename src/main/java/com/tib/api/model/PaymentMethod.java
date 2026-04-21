@@ -7,7 +7,7 @@ import com.tib.api.model.MerchantIdName;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,55 +21,55 @@ public class PaymentMethod   {
 
     
     /**
-     * Acts as a unique identifier for a distinct payment method.
+     * Identifier of the payment method to be set as the default for the account
      */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
     /**
-     * Determines if the customer's payment method is set as the default for automatic transactions.
+     * Indicates whether this payment method is configured as the customer's automatic payment method.
      */
     @JsonProperty("IsCustomerAutomaticPaymentMethod")
     private boolean isCustomerAutomaticPaymentMethod;
 
     /**
-     * Identifies the type of payment method linked to a specific account.
+     * The payment method type employed for the transfer.
      */
     @JsonProperty("PaymentMethodType")
     private PaymentMethodType paymentMethodType;
 
     /**
-     * Provides a detailed description of the payment method for easy identification.
+     * Descriptive name of the payment method used for the transfer.
      */
     @JsonProperty("PaymentMethodDescription")
     private String paymentMethodDescription;
 
     /**
-     * Provides a secure representation of the account card number associated with a specific payment method.
+     * A masked representation of the account linked to the payment method.
      */
     @JsonProperty("AccountPreview")
     private String accountPreview;
 
     /**
-     * Handles the extraction or assignment of a particular entity's expiration date.
+     * The date and time when the payment method expires.
      */
     @JsonProperty("ExpirationDate")
-    private LocalDateTime expirationDate;
+    private OffsetDateTime expirationDate;
 
     /**
-     * The 'Owner' property is designed to assign and identify the ownership of a specific resource or object within the system.
+     * Identifier of the entity that owns the payment method.
      */
     @JsonProperty("Owner")
     private String owner;
 
     /**
-     * 
+     * The type of credit card used for the payment (e.g., Visa, MasterCard).
      */
     @JsonProperty("CcType")
     private String ccType;
 
     /**
-     * Fetches a list of merchants who are preauthorized for a Preauthorized Payment Agreement (PPA) on a specified payment method.
+     * List of merchants (ID and name) that are pre‑authorized to use this payment method.
      */
     @JsonProperty("PreauthorizedMerchants")
     private List<MerchantIdName> preauthorizedMerchants;
@@ -80,7 +80,7 @@ public class PaymentMethod   {
     }
 
     
-    public PaymentMethod(String paymentMethodId, boolean isCustomerAutomaticPaymentMethod, PaymentMethodType paymentMethodType, String paymentMethodDescription, String accountPreview, LocalDateTime expirationDate, String owner, String ccType, List<MerchantIdName> preauthorizedMerchants) {
+    public PaymentMethod(String paymentMethodId, boolean isCustomerAutomaticPaymentMethod, PaymentMethodType paymentMethodType, String paymentMethodDescription, String accountPreview, OffsetDateTime expirationDate, String owner, String ccType, List<MerchantIdName> preauthorizedMerchants) {
         this.paymentMethodId = paymentMethodId;
         this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
         this.paymentMethodType = paymentMethodType;
@@ -135,11 +135,11 @@ public class PaymentMethod   {
         this.accountPreview = accountPreview;
     }
 
-    public LocalDateTime getExpirationDate() {
+    public OffsetDateTime getExpirationDate() {
         return expirationDate;
     }
 
-    public void setExpirationDate(LocalDateTime expirationDate) {
+    public void setExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
     }
 

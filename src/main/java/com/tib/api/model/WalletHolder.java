@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,43 +19,43 @@ public class WalletHolder   {
 
     
     /**
-     * 
+     * Unique identifier of the entity that owns the wallet
      */
     @JsonProperty("WalletHolderId")
     private String walletHolderId;
 
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Represents the merchant's unique name.
+     * The name of the merchant associated with the transfer.
      */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
-     * 
+     * The total amount of funds available in the wallet for the requested service.
      */
     @JsonProperty("Balance")
     private Double balance;
 
     /**
-     * 
+     * Indicates whether the wallet information request is still being processed
      */
     @JsonProperty("IsProcessing")
     private Optional<Boolean> isProcessing;
 
     /**
-     * 
+     * Unique identifier of the wallet returned by the service
      */
     @JsonProperty("WalletId")
     private String walletId;
 
     /**
-     * 
+     * The total amount of funds deposited into the wallet for the specified service.
      */
     @JsonProperty("DepositAmount")
     private Double depositAmount;

@@ -10,7 +10,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -33,6 +33,9 @@ public class GetWalletOperationsResponse extends CustomAPIResponse {
     private Double delayBufferAmount;
 
 
+    public GetWalletOperationsResponse() {
+    }
+
     public GetWalletOperationsResponse(Error[] errors, boolean hasError, String messages, List<WalletOperation> dailyOperations, Double balanceBeforeOperations, Double delayBufferAmount) {
         super(errors, hasError, messages);
         this.dailyOperations = dailyOperations;
@@ -40,12 +43,16 @@ public class GetWalletOperationsResponse extends CustomAPIResponse {
         this.delayBufferAmount = delayBufferAmount;
     }
 
-    public GetWalletOperationsResponse(APIResponse apiResponse) {
+    public GetWalletOperationsResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.dailyOperations = (List<WalletOperation>) apiResponse.getResponse();
-            this.balanceBeforeOperations = Double.parseDouble(apiResponse.getResponse().toString());
-            this.delayBufferAmount = Double.parseDouble(apiResponse.getResponse().toString());
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                GetWalletOperationsResponse __typed = objectMapper.readValue(__rawBody, GetWalletOperationsResponse.class);
+                this.dailyOperations = __typed.dailyOperations;
+                this.balanceBeforeOperations = __typed.balanceBeforeOperations;
+                this.delayBufferAmount = __typed.delayBufferAmount;
+            }
         }
     }
 

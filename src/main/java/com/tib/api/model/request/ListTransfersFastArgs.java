@@ -7,7 +7,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,55 +21,55 @@ public class ListTransfersFastArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Specifies the starting date for filtering payment due dates.
+     * The start date-time for the transfer search window.
      */
     @JsonProperty("FromDate")
-    private LocalDateTime fromDate;
+    private OffsetDateTime fromDate;
 
     /**
-     * Specifies the payment due date.
+     * Upper bound of the transfer creation date range for the query
      */
     @JsonProperty("ToDate")
-    private LocalDateTime toDate;
+    private OffsetDateTime toDate;
 
     /**
-     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     * Identifier of the service for which recurring transfers are requested
      */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Identifies the group of related transfer operations.
+     * Identifier of the transfer group to filter the fast transfer list
      */
     @JsonProperty("TransferGroupId")
     private String transferGroupId;
 
     /**
-     * Defines and manages the type of transfer operation within the system.
+     * Indicates the category of the recurring transfer (e.g., inbound, outbound, internal).
      */
     @JsonProperty("TransferType")
     private TransferType transferType;
 
     /**
-     * Indicates whether the request should consider only payments that are already marked as resolved.
+     * If true, the request returns only transfers that are marked as resolved.
      */
     @JsonProperty("MarkResolvedOnly")
     private boolean markResolvedOnly;
 
     /**
-     * External merchant group identifier used to filter transfer operations.
+     * Identifier of the external merchant group for which transfers are requested
      */
     @JsonProperty("ExternalMerchantGroupId")
     private String externalMerchantGroupId;
 
     /**
-     * Indicates whether the transfer list should be filtered to include only operations that have an error status.
+     * When true, ListTransfersFast returns only transfers that have errors.
      */
     @JsonProperty("OnlyWithErrors")
     private boolean onlyWithErrors;
@@ -80,7 +80,7 @@ public class ListTransfersFastArgs  extends BaseAuthenticatedCryptedArgs  {
     }
 
     
-    public ListTransfersFastArgs(LocalDateTime fromDate, LocalDateTime toDate, String serviceId, String merchantId, String transferGroupId, TransferType transferType, boolean markResolvedOnly, String externalMerchantGroupId, boolean onlyWithErrors) {
+    public ListTransfersFastArgs(OffsetDateTime fromDate, OffsetDateTime toDate, String serviceId, String merchantId, String transferGroupId, TransferType transferType, boolean markResolvedOnly, String externalMerchantGroupId, boolean onlyWithErrors) {
         this.fromDate = fromDate;
         this.toDate = toDate;
         this.serviceId = serviceId;
@@ -93,7 +93,7 @@ public class ListTransfersFastArgs  extends BaseAuthenticatedCryptedArgs  {
     }
     
     
-    public ListTransfersFastArgs(String sessionToken, LocalDateTime fromDate, LocalDateTime toDate, String serviceId, String merchantId, String transferGroupId, TransferType transferType, boolean markResolvedOnly, String externalMerchantGroupId, boolean onlyWithErrors) {
+    public ListTransfersFastArgs(String sessionToken, OffsetDateTime fromDate, OffsetDateTime toDate, String serviceId, String merchantId, String transferGroupId, TransferType transferType, boolean markResolvedOnly, String externalMerchantGroupId, boolean onlyWithErrors) {
         super(sessionToken);
         this.fromDate = fromDate;
         this.toDate = toDate;
@@ -107,19 +107,19 @@ public class ListTransfersFastArgs  extends BaseAuthenticatedCryptedArgs  {
     }
 
     
-    public LocalDateTime getFromDate() {
+    public OffsetDateTime getFromDate() {
         return fromDate;
     }
 
-    public void setFromDate(LocalDateTime fromDate) {
+    public void setFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
     }
 
-    public LocalDateTime getToDate() {
+    public OffsetDateTime getToDate() {
         return toDate;
     }
 
-    public void setToDate(LocalDateTime toDate) {
+    public void setToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
     }
 

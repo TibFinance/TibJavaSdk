@@ -10,7 +10,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -33,6 +33,9 @@ public class CreateSupplierResponse extends CustomAPIResponse {
     private List<MerchantView> matchingExistingMerchants;
 
 
+    public CreateSupplierResponse() {
+    }
+
     public CreateSupplierResponse(Error[] errors, boolean hasError, String messages, String supplierId, String supplierName, List<MerchantView> matchingExistingMerchants) {
         super(errors, hasError, messages);
         this.supplierId = supplierId;
@@ -40,12 +43,16 @@ public class CreateSupplierResponse extends CustomAPIResponse {
         this.matchingExistingMerchants = matchingExistingMerchants;
     }
 
-    public CreateSupplierResponse(APIResponse apiResponse) {
+    public CreateSupplierResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.supplierId = apiResponse.getResponse().toString();
-            this.supplierName = apiResponse.getResponse().toString();
-            this.matchingExistingMerchants = (List<MerchantView>) apiResponse.getResponse();
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                CreateSupplierResponse __typed = objectMapper.readValue(__rawBody, CreateSupplierResponse.class);
+                this.supplierId = __typed.supplierId;
+                this.supplierName = __typed.supplierName;
+                this.matchingExistingMerchants = __typed.matchingExistingMerchants;
+            }
         }
     }
 

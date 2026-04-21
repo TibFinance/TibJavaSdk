@@ -6,7 +6,7 @@ import com.tib.api.model.PaymentOperationEntity;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,7 +20,7 @@ public class Payment  extends PaymentBaseWithHierarchy  {
 
     
     /**
-     * Gets or sets the collection of payment operations associated with the current entity.
+     * A collection of payment operations included in the ListTransfers response
      */
     @JsonProperty("Operations")
     private List<PaymentOperationEntity> operations;
@@ -36,8 +36,8 @@ public class Payment  extends PaymentBaseWithHierarchy  {
     }
     
     
-    public Payment(String serviceId, String serviceName, String merchantId, String merchantExternalSystemId, String merchantExternalSystemGroupId, String merchantName, boolean isOverlodedMerchant, List<PaymentOperationEntity> operations) {
-        super(serviceId, serviceName, merchantId, merchantExternalSystemId, merchantExternalSystemGroupId, merchantName, isOverlodedMerchant);
+    public Payment(String serviceId, String serviceName, String merchantId, String merchantExternalSystemId, String merchantExternalSystemGroupId, String merchantName, boolean isOverlodedMerchant, String feeMerchantId, boolean isPayerView, List<PaymentOperationEntity> operations) {
+        super(serviceId, serviceName, merchantId, merchantExternalSystemId, merchantExternalSystemGroupId, merchantName, isOverlodedMerchant, feeMerchantId, isPayerView);
         this.operations = operations;
     }
 

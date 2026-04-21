@@ -17,4 +17,12 @@ public enum TransferFrequency {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static TransferFrequency fromValue(int value) {
+        for (TransferFrequency v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

@@ -6,7 +6,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,13 +20,13 @@ public class GetCustomersByExternalIdArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
-     * Retrieves or assigns the identifier used for external customer identification. This property is crucial for linking customer data with external systems.
+     * The external identifier of the customer to retrieve.
      */
     @JsonProperty("ExternalCustomerId")
     private String externalCustomerId;
 
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

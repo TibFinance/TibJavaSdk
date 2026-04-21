@@ -6,7 +6,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,13 +20,13 @@ public class GetMerchantsByExternalIdArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
-     * Represents the unique identifier for a merchant within an external system. This ID is crucial for integrating and synchronizing merchant data across different platforms.
+     * Identifier of the external system that owns the merchant ID
      */
     @JsonProperty("ExternalSystemId")
     private String externalSystemId;
 
     /**
-     * Represents the external identity associated with a merchant within an external system.
+     * Identifier of the external system group for the merchant lookup
      */
     @JsonProperty("ExternalSystemGroupId")
     private String externalSystemGroupId;

@@ -11,7 +11,7 @@ import com.tib.api.model.BoardingFile;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -25,139 +25,139 @@ public class MerchantView   {
 
     
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Represents the merchant's unique name.
+     * The name of the merchant associated with the transfer.
      */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
-     * Represents the name associated with the merchant's account.
+     * The display name of the account involved in the transfer.
      */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
-     * Provides a secure representation of the account card number associated with a specific payment method.
+     * A masked representation of the account linked to the payment method.
      */
     @JsonProperty("AccountPreview")
     private String accountPreview;
 
     /**
-     * Represents the unique identifier for a merchant within an external system. This ID is crucial for integrating and synchronizing merchant data across different platforms.
+     * Identifier of the external system that owns the merchant ID
      */
     @JsonProperty("ExternalSystemId")
     private String externalSystemId;
 
     /**
-     * Represents the external identity associated with a merchant within an external system.
+     * Identifier of the external system group for the merchant lookup
      */
     @JsonProperty("ExternalSystemGroupId")
     private String externalSystemGroupId;
 
     /**
-     * Defines the base currency utilized for bill creation by the merchant.
+     * The currency in which the merchant conducts transactions.
      */
     @JsonProperty("MerchantCurrency")
     private Currency merchantCurrency;
 
     /**
-     * Specifies the default language used by the merchant within the TIB Finance API. This setting is crucial for ensuring that all communications and operations are conducted in the preferred language of the merchant.
+     * The language used for the merchant's displayed information
      */
     @JsonProperty("MerchantLanguage")
     private Language merchantLanguage;
 
     /**
-     * Specifies the email address associated with the merchant.
+     * The merchant's primary contact email address.
      */
     @JsonProperty("Email")
     private String email;
 
     /**
-     * Determines if the merchant is authorized to perform billing operations.
+     * Indicates whether the caller is authorized to access the requested merchant data
      */
     @JsonProperty("IsAuthorized")
     private boolean isAuthorized;
 
     /**
-     * Specifies a list of email addresses, separated by semicolons, that will receive copies of emails sent to the merchant.
+     * Email address(es) that receive a copy of the merchant's communications
      */
     @JsonProperty("EmailCopyTo")
     private String emailCopyTo;
 
     /**
-     * Represents the phone number associated with the merchant.
+     * The merchant's primary contact phone number.
      */
     @JsonProperty("MerchantPhoneNumber")
     private String merchantPhoneNumber;
 
     /**
-     * Represents the street address associated with a specific entity or location.
+     * The billing street address of the cardholder for the credit card payment method.
      */
     @JsonProperty("StreetAddress")
     private String streetAddress;
 
     /**
-     * Retrieves or assigns the city component of an address.
+     * The city component of the billing address for the credit card.
      */
     @JsonProperty("AddressCity")
     private String addressCity;
 
     /**
-     * Represents the unique identifier for a province or state within the system.
+     * Identifier of the province or state for the billing address.
      */
     @JsonProperty("ProvinceStateId")
     private ProvinceStateId provinceStateId;
 
     /**
-     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     * Identifier of the service for which recurring transfers are requested
      */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
-     * Gets or sets the identifier of the country using the CountryIdEnum enumeration. This identifier is required when specifying the country for client, service, or merchant operations.
+     * Identifier of the card‑issuing country for the payment method
      */
     @JsonProperty("CountryId")
     private CountryId countryId;
 
     /**
-     * Gets or sets the postal zip code for the address entity.
+     * The postal ZIP code of the cardholder’s billing address.
      */
     @JsonProperty("PostalZipCode")
     private String postalZipCode;
 
     /**
-     * Gets or sets the account provider for the merchant or client account.
+     * Identifies the external payment provider associated with the merchant.
      */
     @JsonProperty("AccountProvider")
     private Provider accountProvider;
 
     /**
-     * Retrieves or assigns the unique identifier for WhiteLabeling.
+     * Identifier of the white‑label partner linked to the merchant, if any.
      */
     @JsonProperty("WhiteLabelingId")
     private Optional<String> whiteLabelingId;
 
     /**
-     * Represents the status of the merchant boarding process within the system. This status is crucial for tracking the progress and completion of merchant onboarding.
+     * Indicates the current onboarding state of the merchant identified by the external ID
      */
     @JsonProperty("BoardingStatus")
     private String boardingStatus;
 
     /**
-     * Represents the unique identifier for the boarding information of a merchant. This ID is crucial for tracking and referencing the boarding status within the system.
+     * Identifier of the boarding information linked to the merchant
      */
     @JsonProperty("BoardingInformationId")
     private String boardingInformationId;
 
     /**
-     * 
+     * A list of boarding file records linked to the merchant identified by the external ID.
      */
     @JsonProperty("BoardingFiles")
     private List<BoardingFile> boardingFiles;

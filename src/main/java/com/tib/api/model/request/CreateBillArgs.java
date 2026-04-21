@@ -7,7 +7,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,13 +21,13 @@ public class CreateBillArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Represents the data required to create a new bill in the TIB Finance system.
+     * The bill details to be created by the CreateBill method.
      */
     @JsonProperty("BillData")
     private BillEntity billData;
 
     /**
-     * Determines whether the function should return an error if the merchant has not been authorized. This boolean property ensures that unauthorized merchants are not processed further.
+     * Indicates whether bill creation should abort if the merchant has never been authorized.
      */
     @JsonProperty("BreakIfMerchantNeverBeenAuthorized")
     private boolean breakIfMerchantNeverBeenAuthorized;

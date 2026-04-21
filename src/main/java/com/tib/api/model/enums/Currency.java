@@ -17,4 +17,12 @@ public enum Currency {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static Currency fromValue(int value) {
+        for (Currency v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

@@ -8,7 +8,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,49 +22,49 @@ public class ListExecutedOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Specifies the starting date for filtering payment due dates.
+     * The start date-time for the transfer search window.
      */
     @JsonProperty("FromDate")
-    private LocalDateTime fromDate;
+    private OffsetDateTime fromDate;
 
     /**
-     * Specifies the payment due date.
+     * Upper bound of the transfer creation date range for the query
      */
     @JsonProperty("ToDate")
-    private LocalDateTime toDate;
+    private OffsetDateTime toDate;
 
     /**
-     * Defines and manages the type of transfer operation within the system.
+     * Indicates the category of the recurring transfer (e.g., inbound, outbound, internal).
      */
     @JsonProperty("TransferType")
     private TransferTypeFlag transferType;
 
     /**
-     * Identifies the group of related transfer operations.
+     * Identifier of the transfer group to filter the fast transfer list
      */
     @JsonProperty("TransferGroupId")
     private String transferGroupId;
 
     /**
-     * Indicates whether the transfer list should be filtered to include only operations that have an error status.
+     * When true, ListTransfersFast returns only transfers that have errors.
      */
     @JsonProperty("OnlyWithErrors")
     private boolean onlyWithErrors;
 
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Enumerates the supported date classifications used throughout the API.
+     * Which date field to use for the date range filter (CreatedDate or LastModifiedDate).
      */
     @JsonProperty("DateType")
     private DateType dateType;
 
     /**
-     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     * Identifier of the service for which recurring transfers are requested
      */
     @JsonProperty("ServiceId")
     private String serviceId;
@@ -75,7 +75,7 @@ public class ListExecutedOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
     }
 
     
-    public ListExecutedOperationsArgs(LocalDateTime fromDate, LocalDateTime toDate, TransferTypeFlag transferType, String transferGroupId, boolean onlyWithErrors, String merchantId, DateType dateType, String serviceId) {
+    public ListExecutedOperationsArgs(OffsetDateTime fromDate, OffsetDateTime toDate, TransferTypeFlag transferType, String transferGroupId, boolean onlyWithErrors, String merchantId, DateType dateType, String serviceId) {
         this.fromDate = fromDate;
         this.toDate = toDate;
         this.transferType = transferType;
@@ -87,7 +87,7 @@ public class ListExecutedOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
     }
     
     
-    public ListExecutedOperationsArgs(String sessionToken, LocalDateTime fromDate, LocalDateTime toDate, TransferTypeFlag transferType, String transferGroupId, boolean onlyWithErrors, String merchantId, DateType dateType, String serviceId) {
+    public ListExecutedOperationsArgs(String sessionToken, OffsetDateTime fromDate, OffsetDateTime toDate, TransferTypeFlag transferType, String transferGroupId, boolean onlyWithErrors, String merchantId, DateType dateType, String serviceId) {
         super(sessionToken);
         this.fromDate = fromDate;
         this.toDate = toDate;
@@ -100,19 +100,19 @@ public class ListExecutedOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
     }
 
     
-    public LocalDateTime getFromDate() {
+    public OffsetDateTime getFromDate() {
         return fromDate;
     }
 
-    public void setFromDate(LocalDateTime fromDate) {
+    public void setFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
     }
 
-    public LocalDateTime getToDate() {
+    public OffsetDateTime getToDate() {
         return toDate;
     }
 
-    public void setToDate(LocalDateTime toDate) {
+    public void setToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
     }
 

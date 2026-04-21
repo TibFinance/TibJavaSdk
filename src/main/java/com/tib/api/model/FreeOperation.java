@@ -8,7 +8,7 @@ import com.tib.api.model.enums.TransferFrequency;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,103 +22,103 @@ public class FreeOperation   {
 
     
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Retrieves or assigns the unique identifier for a bill.
+     * Unique identifier of the bill to be paid
      */
     @JsonProperty("BillId")
     private String billId;
 
     /**
-     * Serves as a unique identifier for each customer within the system.
+     * Unique identifier of the customer owning the recurring transfers
      */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
-     * Acts as a unique identifier for a distinct payment method.
+     * Identifier of the payment method to be set as the default for the account
      */
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
     /**
-     * Defines and manages the type of transfer operation within the system.
+     * Indicates the category of the recurring transfer (e.g., inbound, outbound, internal).
      */
     @JsonProperty("TransferType")
     private TransferType transferType;
 
     /**
-     * Retrieves or assigns the reference number associated with a transaction or operation.
+     * Merchant-defined reference number for tracking this operation.
      */
     @JsonProperty("ReferenceNumber")
     private String referenceNumber;
 
     /**
-     * Retrieves or assigns the monetary amount involved in the transaction.
+     * The monetary value of each recurring transfer.
      */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
-     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     * Specifies the language used for the payment request and related communications
      */
     @JsonProperty("Language")
     private Language language;
 
     /**
-     * Retrieves or assigns the due date for a transaction.
+     * The scheduled date and time when the listed transfer is due to be executed.
      */
     @JsonProperty("TransactionDueDate")
-    private LocalDateTime transactionDueDate;
+    private OffsetDateTime transactionDueDate;
 
     /**
-     * Specifies the title or description of a transfer within the TIB Finance API.
+     * Title or label for this transfer.
      */
     @JsonProperty("TransferTitle")
     private String transferTitle;
 
     /**
-     * Provides a textual representation of the transaction, detailing any errors encountered during processing.
+     * Detailed description of this transfer.
      */
     @JsonProperty("TransferDescription")
     private String transferDescription;
 
     /**
-     * Represents the unique identifier for a transfer within an external system, facilitating tracking and integration.
+     * External system tracking number for this transfer.
      */
     @JsonProperty("TransferExternalSystemNumber")
     private String transferExternalSystemNumber;
 
     /**
-     * Defines the frequency at which transfers occur within the TIB Finance API.
+     * Specifies how often the payment should be executed.
      */
     @JsonProperty("TransferFrequency")
     private TransferFrequency transferFrequency;
 
     /**
-     * 
+     * End date for recurring transfers. Null means no end date.
      */
     @JsonProperty("RecurringEndDate")
-    private LocalDateTime recurringEndDate;
+    private OffsetDateTime recurringEndDate;
 
     /**
-     * Represents a brief description used in statements to identify or clarify the transaction.
+     * The text that will appear on the payer’s bank statement for this payment.
      */
     @JsonProperty("StatementDescription")
     private String statementDescription;
 
     /**
-     * The ClientId property serves as a distinct identifier for each client, playing a crucial role in the authentication process.
+     * Unique identifier of the client initiating the session
      */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
-     * Indicates whether the transfer should be executed immediately within the TIB Finance API.
+     * Indicates whether the payment should be executed as an immediate transfer.
      */
     @JsonProperty("ImmediateTransfer")
     private boolean immediateTransfer;
@@ -129,7 +129,7 @@ public class FreeOperation   {
     }
 
     
-    public FreeOperation(String merchantId, String billId, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Double amount, Language language, LocalDateTime transactionDueDate, String transferTitle, String transferDescription, String transferExternalSystemNumber, TransferFrequency transferFrequency, LocalDateTime recurringEndDate, String statementDescription, String clientId, boolean immediateTransfer) {
+    public FreeOperation(String merchantId, String billId, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Double amount, Language language, OffsetDateTime transactionDueDate, String transferTitle, String transferDescription, String transferExternalSystemNumber, TransferFrequency transferFrequency, OffsetDateTime recurringEndDate, String statementDescription, String clientId, boolean immediateTransfer) {
         this.merchantId = merchantId;
         this.billId = billId;
         this.customerId = customerId;
@@ -216,11 +216,11 @@ public class FreeOperation   {
         this.language = language;
     }
 
-    public LocalDateTime getTransactionDueDate() {
+    public OffsetDateTime getTransactionDueDate() {
         return transactionDueDate;
     }
 
-    public void setTransactionDueDate(LocalDateTime transactionDueDate) {
+    public void setTransactionDueDate(OffsetDateTime transactionDueDate) {
         this.transactionDueDate = transactionDueDate;
     }
 
@@ -256,11 +256,11 @@ public class FreeOperation   {
         this.transferFrequency = transferFrequency;
     }
 
-    public LocalDateTime getRecurringEndDate() {
+    public OffsetDateTime getRecurringEndDate() {
         return recurringEndDate;
     }
 
-    public void setRecurringEndDate(LocalDateTime recurringEndDate) {
+    public void setRecurringEndDate(OffsetDateTime recurringEndDate) {
         this.recurringEndDate = recurringEndDate;
     }
 

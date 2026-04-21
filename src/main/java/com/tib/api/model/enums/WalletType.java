@@ -17,4 +17,12 @@ public enum WalletType {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static WalletType fromValue(int value) {
+        for (WalletType v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

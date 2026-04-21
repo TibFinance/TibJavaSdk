@@ -10,7 +10,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -27,15 +27,22 @@ public class GetWalletInformationsResponse extends CustomAPIResponse {
     private List<Wallet> wallets;
 
 
+    public GetWalletInformationsResponse() {
+    }
+
     public GetWalletInformationsResponse(Error[] errors, boolean hasError, String messages, List<Wallet> wallets) {
         super(errors, hasError, messages);
         this.wallets = wallets;
     }
 
-    public GetWalletInformationsResponse(APIResponse apiResponse) {
+    public GetWalletInformationsResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.wallets = (List<Wallet>) apiResponse.getResponse();
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                GetWalletInformationsResponse __typed = objectMapper.readValue(__rawBody, GetWalletInformationsResponse.class);
+                this.wallets = __typed.wallets;
+            }
         }
     }
 

@@ -10,7 +10,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -27,15 +27,22 @@ public class GetMerchantsByExternalIdResponse extends CustomAPIResponse {
     private List<MerchantView> merchants;
 
 
+    public GetMerchantsByExternalIdResponse() {
+    }
+
     public GetMerchantsByExternalIdResponse(Error[] errors, boolean hasError, String messages, List<MerchantView> merchants) {
         super(errors, hasError, messages);
         this.merchants = merchants;
     }
 
-    public GetMerchantsByExternalIdResponse(APIResponse apiResponse) {
+    public GetMerchantsByExternalIdResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.merchants = (List<MerchantView>) apiResponse.getResponse();
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                GetMerchantsByExternalIdResponse __typed = objectMapper.readValue(__rawBody, GetMerchantsByExternalIdResponse.class);
+                this.merchants = __typed.merchants;
+            }
         }
     }
 

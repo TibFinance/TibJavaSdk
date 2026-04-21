@@ -6,7 +6,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,28 +20,28 @@ public class ListBillsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     * Identifier of the service for which recurring transfers are requested
      */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Specifies the starting date and time for filtering data.
+     * The start of the date‑time range for which bills are returned.
      */
     @JsonProperty("FromDateTime")
-    private LocalDateTime fromDateTime;
+    private OffsetDateTime fromDateTime;
 
     /**
-     * Converts a specified date filter to a DateTime object.
+     * Upper bound of the billing period for which bills are retrieved.
      */
     @JsonProperty("ToDateTime")
-    private LocalDateTime toDateTime;
+    private OffsetDateTime toDateTime;
 
 
     
@@ -49,7 +49,7 @@ public class ListBillsArgs  extends BaseAuthenticatedCryptedArgs  {
     }
 
     
-    public ListBillsArgs(String serviceId, String merchantId, LocalDateTime fromDateTime, LocalDateTime toDateTime) {
+    public ListBillsArgs(String serviceId, String merchantId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime) {
         this.serviceId = serviceId;
         this.merchantId = merchantId;
         this.fromDateTime = fromDateTime;
@@ -57,7 +57,7 @@ public class ListBillsArgs  extends BaseAuthenticatedCryptedArgs  {
     }
     
     
-    public ListBillsArgs(String sessionToken, String serviceId, String merchantId, LocalDateTime fromDateTime, LocalDateTime toDateTime) {
+    public ListBillsArgs(String sessionToken, String serviceId, String merchantId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime) {
         super(sessionToken);
         this.serviceId = serviceId;
         this.merchantId = merchantId;
@@ -82,19 +82,19 @@ public class ListBillsArgs  extends BaseAuthenticatedCryptedArgs  {
         this.merchantId = merchantId;
     }
 
-    public LocalDateTime getFromDateTime() {
+    public OffsetDateTime getFromDateTime() {
         return fromDateTime;
     }
 
-    public void setFromDateTime(LocalDateTime fromDateTime) {
+    public void setFromDateTime(OffsetDateTime fromDateTime) {
         this.fromDateTime = fromDateTime;
     }
 
-    public LocalDateTime getToDateTime() {
+    public OffsetDateTime getToDateTime() {
         return toDateTime;
     }
 
-    public void setToDateTime(LocalDateTime toDateTime) {
+    public void setToDateTime(OffsetDateTime toDateTime) {
         this.toDateTime = toDateTime;
     }
 

@@ -17,4 +17,12 @@ public enum PaymentMethodType {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static PaymentMethodType fromValue(int value) {
+        for (PaymentMethodType v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

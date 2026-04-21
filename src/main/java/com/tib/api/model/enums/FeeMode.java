@@ -17,4 +17,12 @@ public enum FeeMode {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static FeeMode fromValue(int value) {
+        for (FeeMode v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

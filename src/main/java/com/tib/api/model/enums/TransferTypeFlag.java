@@ -17,4 +17,12 @@ public enum TransferTypeFlag {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static TransferTypeFlag fromValue(int value) {
+        for (TransferTypeFlag v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

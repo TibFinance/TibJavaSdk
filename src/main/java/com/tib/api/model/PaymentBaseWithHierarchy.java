@@ -8,7 +8,7 @@ import com.tib.api.model.enums.PaymentMethodType;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,46 +22,58 @@ public class PaymentBaseWithHierarchy  extends PaymentBase  {
 
     
     /**
-     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     * Identifier of the service for which recurring transfers are requested
      */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
-     * Retrieves or assigns the service's name.
+     * The name of the service that processed the transfer
      */
     @JsonProperty("ServiceName")
     private String serviceName;
 
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Identifier of the merchant in an external system
+     * The external system identifier assigned to the merchant.
      */
     @JsonProperty("MerchantExternalSystemId")
     private String merchantExternalSystemId;
 
     /**
-     * Identifier of the merchant's external system group.
+     * Identifier of the merchant's external system group associated with the transfer
      */
     @JsonProperty("MerchantExternalSystemGroupId")
     private String merchantExternalSystemGroupId;
 
     /**
-     * Represents the merchant's unique name.
+     * The name of the merchant associated with the transfer.
      */
     @JsonProperty("MerchantName")
     private String merchantName;
 
     /**
-     * Gets a value indicating whether the merchant is overloaded.
+     * Indicates whether the merchant has exceeded its transfer capacity limits.
      */
     @JsonProperty("IsOverlodedMerchant")
     private boolean isOverlodedMerchant;
+
+    /**
+     * Identifier of the merchant responsible for fee billing on this payment.
+     */
+    @JsonProperty("FeeMerchantId")
+    private String feeMerchantId;
+
+    /**
+     * Whether the response data is formatted from the payer's perspective.
+     */
+    @JsonProperty("IsPayerView")
+    private boolean isPayerView;
 
 
     
@@ -69,7 +81,7 @@ public class PaymentBaseWithHierarchy  extends PaymentBase  {
     }
 
     
-    public PaymentBaseWithHierarchy(String serviceId, String serviceName, String merchantId, String merchantExternalSystemId, String merchantExternalSystemGroupId, String merchantName, boolean isOverlodedMerchant) {
+    public PaymentBaseWithHierarchy(String serviceId, String serviceName, String merchantId, String merchantExternalSystemId, String merchantExternalSystemGroupId, String merchantName, boolean isOverlodedMerchant, String feeMerchantId, boolean isPayerView) {
         this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.merchantId = merchantId;
@@ -77,10 +89,12 @@ public class PaymentBaseWithHierarchy  extends PaymentBase  {
         this.merchantExternalSystemGroupId = merchantExternalSystemGroupId;
         this.merchantName = merchantName;
         this.isOverlodedMerchant = isOverlodedMerchant;
+        this.feeMerchantId = feeMerchantId;
+        this.isPayerView = isPayerView;
     }
     
     
-    public PaymentBaseWithHierarchy(String billId, String billExternalSystemNumber1, String billExternalSystemNumber2, String billExternalSystemNumber3, String billTitle, String relatedCustomerId, String relatedCustomerExternalId, String billDescription, String paymentId, boolean isAutomaticPayment, PaymentEntity paymentInfo, boolean isMarkResolved, ProcessStatus currentStatus, Double convenientFeeCreditCard, Double convenientFeeDirectAccount, LocalDateTime createdDate, String paymentMethodDescription, String accountInformationPreview, PaymentMethodType paymentMethodType, String serviceId, String serviceName, String merchantId, String merchantExternalSystemId, String merchantExternalSystemGroupId, String merchantName, boolean isOverlodedMerchant) {
+    public PaymentBaseWithHierarchy(String billId, String billExternalSystemNumber1, String billExternalSystemNumber2, String billExternalSystemNumber3, String billTitle, String relatedCustomerId, String relatedCustomerExternalId, String billDescription, String paymentId, boolean isAutomaticPayment, PaymentEntity paymentInfo, boolean isMarkResolved, ProcessStatus currentStatus, Double convenientFeeCreditCard, Double convenientFeeDirectAccount, OffsetDateTime createdDate, String paymentMethodDescription, String accountInformationPreview, PaymentMethodType paymentMethodType, String serviceId, String serviceName, String merchantId, String merchantExternalSystemId, String merchantExternalSystemGroupId, String merchantName, boolean isOverlodedMerchant, String feeMerchantId, boolean isPayerView) {
         super(billId, billExternalSystemNumber1, billExternalSystemNumber2, billExternalSystemNumber3, billTitle, relatedCustomerId, relatedCustomerExternalId, billDescription, paymentId, isAutomaticPayment, paymentInfo, isMarkResolved, currentStatus, convenientFeeCreditCard, convenientFeeDirectAccount, createdDate, paymentMethodDescription, accountInformationPreview, paymentMethodType);
         this.serviceId = serviceId;
         this.serviceName = serviceName;
@@ -89,6 +103,8 @@ public class PaymentBaseWithHierarchy  extends PaymentBase  {
         this.merchantExternalSystemGroupId = merchantExternalSystemGroupId;
         this.merchantName = merchantName;
         this.isOverlodedMerchant = isOverlodedMerchant;
+        this.feeMerchantId = feeMerchantId;
+        this.isPayerView = isPayerView;
     }
 
     
@@ -148,6 +164,22 @@ public class PaymentBaseWithHierarchy  extends PaymentBase  {
         this.isOverlodedMerchant = isOverlodedMerchant;
     }
 
+    public String getFeeMerchantId() {
+        return feeMerchantId;
+    }
+
+    public void setFeeMerchantId(String feeMerchantId) {
+        this.feeMerchantId = feeMerchantId;
+    }
+
+    public boolean getIsPayerView() {
+        return isPayerView;
+    }
+
+    public void setIsPayerView(boolean isPayerView) {
+        this.isPayerView = isPayerView;
+    }
+
 
 
     
@@ -156,13 +188,13 @@ public class PaymentBaseWithHierarchy  extends PaymentBase  {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PaymentBaseWithHierarchy that = (PaymentBaseWithHierarchy) o;
-        return Objects.equals(serviceId, that.serviceId) && Objects.equals(serviceName, that.serviceName) && Objects.equals(merchantId, that.merchantId) && Objects.equals(merchantExternalSystemId, that.merchantExternalSystemId) && Objects.equals(merchantExternalSystemGroupId, that.merchantExternalSystemGroupId) && Objects.equals(merchantName, that.merchantName) && Objects.equals(isOverlodedMerchant, that.isOverlodedMerchant) ;
+        return Objects.equals(serviceId, that.serviceId) && Objects.equals(serviceName, that.serviceName) && Objects.equals(merchantId, that.merchantId) && Objects.equals(merchantExternalSystemId, that.merchantExternalSystemId) && Objects.equals(merchantExternalSystemGroupId, that.merchantExternalSystemGroupId) && Objects.equals(merchantName, that.merchantName) && Objects.equals(isOverlodedMerchant, that.isOverlodedMerchant) && Objects.equals(feeMerchantId, that.feeMerchantId) && Objects.equals(isPayerView, that.isPayerView) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(serviceId, serviceName, merchantId, merchantExternalSystemId, merchantExternalSystemGroupId, merchantName, isOverlodedMerchant);
+        return Objects.hash(serviceId, serviceName, merchantId, merchantExternalSystemId, merchantExternalSystemGroupId, merchantName, isOverlodedMerchant, feeMerchantId, isPayerView);
     }
 
     @Override
@@ -175,6 +207,8 @@ public class PaymentBaseWithHierarchy  extends PaymentBase  {
                 ", merchantExternalSystemGroupId='" + merchantExternalSystemGroupId + '\'' +
                 ", merchantName='" + merchantName + '\'' +
                 ", isOverlodedMerchant='" + isOverlodedMerchant + '\'' +
+                ", feeMerchantId='" + feeMerchantId + '\'' +
+                ", isPayerView='" + isPayerView + '\'' +
 
                 '}';
     }

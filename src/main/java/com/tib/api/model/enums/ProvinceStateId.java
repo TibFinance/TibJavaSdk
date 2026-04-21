@@ -17,4 +17,12 @@ public enum ProvinceStateId {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static ProvinceStateId fromValue(int value) {
+        for (ProvinceStateId v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

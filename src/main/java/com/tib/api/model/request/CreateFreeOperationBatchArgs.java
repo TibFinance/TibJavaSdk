@@ -7,7 +7,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,19 +21,19 @@ public class CreateFreeOperationBatchArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
-     * Facilitates the initiation of a batch of free operations, enabling transactions that are not associated with a specific bill. This is crucial for managing payments or deposits directly linked to customer payment methods.
+     * List of free operations to create as a batch.
      */
     @JsonProperty("FreeOperationBatchList")
     private List<FreeOperation> freeOperationBatchList;
 
     /**
-     * Represents the unique identifier for a group within the TIB Finance API.
+     * Identifier of the payment group to which the payment belongs
      */
     @JsonProperty("GroupId")
     private String groupId;
 
     /**
-     * Determines whether to halt operations with identical identifications.
+     * Whether to reject duplicate operations with the same identification details within the group.
      */
     @JsonProperty("StopSameIdentifications")
     private boolean stopSameIdentifications;

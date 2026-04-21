@@ -84,7 +84,9 @@ public class APIClient extends AbstractAPIClient {
         }
         byte[] decryptedArr = cipher.doFinal(decodedArr);
         String decryptedText = new String(decryptedArr);
-        return objectMapper.readValue(decryptedText, APIResponse.class);
+        APIResponse apiResponse = objectMapper.readValue(decryptedText, APIResponse.class);
+        apiResponse.setRawBody(decryptedText);
+        return apiResponse;
 
     }
 

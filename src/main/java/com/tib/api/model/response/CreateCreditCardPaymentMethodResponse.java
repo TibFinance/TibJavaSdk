@@ -9,7 +9,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -25,6 +25,9 @@ public class CreateCreditCardPaymentMethodResponse extends CustomAPIResponse {
     @JsonProperty("PaymentMethodId")
     private String paymentMethodId;
 
+
+    public CreateCreditCardPaymentMethodResponse() {
+    }
 
     public CreateCreditCardPaymentMethodResponse(Error[] errors, boolean hasError, String messages, String paymentMethodId) {
         super(errors, hasError, messages);

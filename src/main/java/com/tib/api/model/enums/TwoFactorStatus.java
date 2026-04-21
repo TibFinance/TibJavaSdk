@@ -17,4 +17,12 @@ public enum TwoFactorStatus {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static TwoFactorStatus fromValue(int value) {
+        for (TwoFactorStatus v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

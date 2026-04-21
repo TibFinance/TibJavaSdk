@@ -8,7 +8,7 @@ import com.tib.api.model.WalletHolder;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,85 +22,85 @@ public class Wallet   {
 
     
     /**
-     * 
+     * Unique identifier of the wallet returned by the service
      */
     @JsonProperty("WalletId")
     private String walletId;
 
     /**
-     * 
+     * Indicates the category of reference used to identify the wallet in the response
      */
     @JsonProperty("ReferenceType")
     private ReferenceType referenceType;
 
     /**
-     * Gets or sets the reference identifier used to uniquely identify a transaction, operation, or entity within the TIB Finance system.
+     * Unique identifier of the wallet information record returned by the service
      */
     @JsonProperty("ReferenceId")
     private String referenceId;
 
     /**
-     * 
+     * The total amount of funds available in the wallet for the requested service.
      */
     @JsonProperty("Balance")
     private Double balance;
 
     /**
-     * 
+     * The total amount currently available for withdrawal from the wallet for the requested service.
      */
     @JsonProperty("WithdrawableAmount")
     private Double withdrawableAmount;
 
     /**
-     * 
+     * The recurrence pattern that defines when the wallet will be automatically refilled.
      */
     @JsonProperty("WalletRefillSchedule")
     private String walletRefillSchedule;
 
     /**
-     * 
+     * Indicates whether the wallet information request is still being processed
      */
     @JsonProperty("IsProcessing")
     private boolean isProcessing;
 
     /**
-     * Gets or sets the wallet type identifier used by the TIB Finance API to select the appropriate wallet configuration.
+     * Specifies the category of the wallet returned in the response
      */
     @JsonProperty("WalletType")
     private WalletType walletType;
 
     /**
-     * 
+     * A collection of wallet holder records associated with the requested service.
      */
     @JsonProperty("WalletHolders")
     private List<WalletHolder> walletHolders;
 
     /**
-     * 
+     * The name of the reference type that categorizes the wallet (e.g., "Customer", "Merchant").
      */
     @JsonProperty("ReferenceTypeName")
     private String referenceTypeName;
 
     /**
-     * 
+     * The display name of the wallet’s type returned by the service.
      */
     @JsonProperty("WalletTypeName")
     private String walletTypeName;
 
     /**
-     * 
+     * The display name of the wallet combination type associated with the wallet.
      */
     @JsonProperty("WalletCombinationTypeName")
     private String walletCombinationTypeName;
 
     /**
-     * 
+     * A textual description of the wallet associated with the service
      */
     @JsonProperty("WalletDescription")
     private String walletDescription;
 
     /**
-     * 
+     * Indicates whether the wallet feature is currently active for the requested service.
      */
     @JsonProperty("WalletFeatureIsActive")
     private boolean walletFeatureIsActive;

@@ -10,7 +10,7 @@ import com.tib.api.model.TransactionCommon;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -24,61 +24,61 @@ public class PaymentOperationEntity   {
 
     
     /**
-     * Retrieves or assigns the monetary amount involved in the transaction.
+     * The monetary value of each recurring transfer.
      */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
-     * Retrieves or assigns the currency type used in transactions.
+     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
      */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
-     * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
+     * Specifies the destination entity of the transfer returned by ListTransfers
      */
     @JsonProperty("OperationTarget")
     private OperationTarget operationTarget;
 
     /**
-     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     * Indicates whether the listed transfer is inbound to or outbound from the queried account
      */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
-     * Specifies the category of a financial operation.
+     * Specifies the category of the transfer operation returned by the API
      */
     @JsonProperty("OperationKind")
     private OperationKind operationKind;
 
     /**
-     * The date and time when the payment was created.
+     * The date and time when the recurring transfer was initially created.
      */
     @JsonProperty("CreatedDate")
-    private LocalDateTime createdDate;
+    private OffsetDateTime createdDate;
 
     /**
-     * Gets or sets the execution date and time of the transaction.
+     * The timestamp when the transfer was executed.
      */
     @JsonProperty("ExecutedDate")
-    private LocalDateTime executedDate;
+    private OffsetDateTime executedDate;
 
     /**
-     * Gets or sets the collection of transaction details associated with the operation.
+     * A list of transfer records returned by the ListTransfers call.
      */
     @JsonProperty("Transactions")
     private List<TransactionCommon> transactions;
 
     /**
-     * Retrieves the numeric status code of an operation.
+     * Indicates the result of the ListTransfers request
      */
     @JsonProperty("OperationStatus")
     private Integer operationStatus;
 
     /**
-     * Gets or sets the merchant name that overrides the default merchant name.
+     * The merchant name associated with an overload transfer.
      */
     @JsonProperty("OverloadMerchantName")
     private String overloadMerchantName;
@@ -89,7 +89,7 @@ public class PaymentOperationEntity   {
     }
 
     
-    public PaymentOperationEntity(Double amount, Currency currency, OperationTarget operationTarget, TransferDirection operationDirection, OperationKind operationKind, LocalDateTime createdDate, LocalDateTime executedDate, List<TransactionCommon> transactions, Integer operationStatus, String overloadMerchantName) {
+    public PaymentOperationEntity(Double amount, Currency currency, OperationTarget operationTarget, TransferDirection operationDirection, OperationKind operationKind, OffsetDateTime createdDate, OffsetDateTime executedDate, List<TransactionCommon> transactions, Integer operationStatus, String overloadMerchantName) {
         this.amount = amount;
         this.currency = currency;
         this.operationTarget = operationTarget;
@@ -145,19 +145,19 @@ public class PaymentOperationEntity   {
         this.operationKind = operationKind;
     }
 
-    public LocalDateTime getCreatedDate() {
+    public OffsetDateTime getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(LocalDateTime createdDate) {
+    public void setCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
     }
 
-    public LocalDateTime getExecutedDate() {
+    public OffsetDateTime getExecutedDate() {
         return executedDate;
     }
 
-    public void setExecutedDate(LocalDateTime executedDate) {
+    public void setExecutedDate(OffsetDateTime executedDate) {
         this.executedDate = executedDate;
     }
 

@@ -8,7 +8,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,73 +22,73 @@ public class CreatePaymentArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Retrieves or assigns the unique identifier for a bill.
+     * Unique identifier of the bill to be paid
      */
     @JsonProperty("BillId")
     private String billId;
 
     /**
-     * Automatically assigns the customer linked to a payment from the customer associated with the specified bill. The method takes no action if the bill has no customer or if the payment already has a customer assigned.
+     * Indicates whether the payment’s customer should be automatically taken from the associated bill.
      */
     @JsonProperty("SetPaymentCustomerFromBill")
     private boolean setPaymentCustomerFromBill;
 
     /**
-     * Handles the acquisition and assignment of a customer's email address.
+     * The email address of the customer initiating the payment.
      */
     @JsonProperty("CustomerEmail")
     private String customerEmail;
 
     /**
-     * Contains metadata for a payment operation.
+     * PaymentInfo provides the full set of data required to create a new payment.
      */
     @JsonProperty("PaymentInfo")
     private PaymentEntity paymentInfo;
 
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Gets or sets the external reference identifier used to correlate this entity with an external system.
+     * A client‑provided unique identifier for the payment request
      */
     @JsonProperty("ExternalReferenceId")
     private String externalReferenceId;
 
     /**
-     * Indicates whether the system aborts a payment when the amount exceeds the remaining bill balance.
+     * Indicates whether the payment should be split when its amount exceeds the remaining bill balance.
      */
     @JsonProperty("SafetyToBreakIfOverRemainingBillAmount")
     private boolean safetyToBreakIfOverRemainingBillAmount;
 
     /**
-     * 
+     * Flags indicating which payment methods are authorized for the created payment
      */
     @JsonProperty("AutorizedPaymentMethod")
     private AutorizedPaymentMethodFlags autorizedPaymentMethod;
 
     /**
-     * Indicates if the system must request the customer's consent prior to executing the payment.
+     * Indicates whether the platform must request the customer's consent before processing the payment.
      */
     @JsonProperty("AskForCustomerConsent")
     private boolean askForCustomerConsent;
 
     /**
-     * Specifies whether the payment creation request should omit sending the confirmation email.
+     * Controls whether a payment confirmation email is sent
      */
     @JsonProperty("DoNotSendEmail")
     private boolean doNotSendEmail;
 
     /**
-     * Indicates whether the transfer should be executed immediately within the TIB Finance API.
+     * Indicates whether the payment should be executed as an immediate transfer.
      */
     @JsonProperty("ImmediateTransfer")
     private boolean immediateTransfer;
 
     /**
-     * Represents a brief description used in statements to identify or clarify the transaction.
+     * The text that will appear on the payer’s bank statement for this payment.
      */
     @JsonProperty("StatementDescription")
     private String statementDescription;

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,189 +19,195 @@ public class TransferBaseInformationEntity   {
 
     
     /**
-     * TransferId
+     * Unique identifier of the transfer record
      */
-    @JsonProperty("I")
+    @JsonProperty("i")
     private String i;
 
     /**
-     * CreatedDate
+     * The timestamp when the transfer was created.
      */
-    @JsonProperty("Cdt")
-    private LocalDateTime cdt;
+    @JsonProperty("cdt")
+    private OffsetDateTime cdt;
 
     /**
-     * Title
+     * The timestamp of the transfer
      */
-    @JsonProperty("T")
+    @JsonProperty("t")
     private String t;
 
     /**
-     * payment method type.
+     * Unique integer identifier for the payment
      */
-    @JsonProperty("Pmt")
+    @JsonProperty("pmt")
     private Integer pmt;
 
     /**
-     * Description
+     * Transfer description
      */
-    @JsonProperty("D")
+    @JsonProperty("d")
     private String d;
 
     /**
-     * Merchant Name
+     * A human‑readable message or note associated with the transfer
      */
-    @JsonProperty("M")
+    @JsonProperty("m")
     private String m;
 
     /**
-     * Transfer Due Date.
+     * The date and time when the transfer was created.
      */
-    @JsonProperty("Td")
-    private LocalDateTime td;
+    @JsonProperty("td")
+    private OffsetDateTime td;
 
     /**
-     * Amount
+     * The monetary amount of the transfer
      */
-    @JsonProperty("A")
+    @JsonProperty("a")
     private Double a;
 
     /**
-     * Status
+     * Total number of transfer entries returned
      */
-    @JsonProperty("S")
+    @JsonProperty("s")
     private Integer s;
 
     /**
-     * 
+     * Timestamp of the transfer record
      */
-    @JsonProperty("Ts")
+    @JsonProperty("ts")
     private Integer ts;
 
     /**
-     * 
+     * Identifier of the clearing/payment system used for the transfer
      */
-    @JsonProperty("Cps")
+    @JsonProperty("cps")
     private String cps;
 
     /**
-     * Bank error Code
+     * Total number of transfers returned by the request
      */
-    @JsonProperty("C")
+    @JsonProperty("c")
     private Integer c;
 
     /**
-     * customer Name
+     * The name of the counterparty involved in the transfer
      */
-    @JsonProperty("Cn")
+    @JsonProperty("cn")
     private String cn;
 
     /**
-     * customer email
+     * The unique identifier of the cash entry (CEM) associated with the transfer
      */
-    @JsonProperty("Cem")
+    @JsonProperty("cem")
     private String cem;
 
     /**
-     * customer's id
+     * Globally unique identifier of the transfer record
      */
-    @JsonProperty("Cid")
+    @JsonProperty("cid")
     private String cid;
 
     /**
-     * transaction description
+     * Unique identifier of the transfer returned by ListTransfersForBillFast
      */
-    @JsonProperty("Trd")
+    @JsonProperty("trd")
     private String trd;
 
     /**
-     * 
+     * Identifier of the managing entity for the transfer
      */
-    @JsonProperty("Man")
+    @JsonProperty("man")
     private String man;
 
     /**
-     * 
+     * String identifier of the transfer mapping returned by ListTransfersForBillFast
      */
-    @JsonProperty("Map")
+    @JsonProperty("map")
     private String map;
 
     /**
-     * 
+     * The end date and time of the transfer period returned by ListTransfersForBillFast.
      */
-    @JsonProperty("Ed")
-    private LocalDateTime ed;
+    @JsonProperty("ed")
+    private OffsetDateTime ed;
 
     /**
-     * 
+     * The timestamp indicating when the transfer was completed
      */
-    @JsonProperty("Ed2")
-    private LocalDateTime ed2;
+    @JsonProperty("ed2")
+    private OffsetDateTime ed2;
 
     /**
-     * 
+     * Indicates whether any transfer in the list has an error
      */
-    @JsonProperty("He")
+    @JsonProperty("he")
     private boolean he;
 
     /**
-     * 
+     * Indicates if the transfer record is marked as deleted
      */
-    @JsonProperty("Del")
+    @JsonProperty("del")
     private boolean del;
 
     /**
-     * 
+     * The total monetary amount collected for the transfer operation.
      */
     @JsonProperty("CollectOperationAmount")
     private Double collectOperationAmount;
 
     /**
-     * 
+     * The monetary amount of the deposit operation associated with the BillFast transfer.
      */
     @JsonProperty("DepositOperationAmount")
     private Double depositOperationAmount;
 
     /**
-     * 
+     * The fee amount applied to the transfer under the Convenient Fees scheme.
      */
     @JsonProperty("ConvenientFeesOperationAmount")
     private Double convenientFeesOperationAmount;
 
     /**
-     * 
+     * The total fee amount applied to the transfer operation.
      */
     @JsonProperty("FeesOperationAmount")
     private Double feesOperationAmount;
 
     /**
-     * 
+     * Indicates the transfer direction relative to the biller
      */
     @JsonProperty("Direction")
     private Integer direction;
 
     /**
-     * 
+     * Indicates whether the listed transfer has been refunded.
      */
     @JsonProperty("Refunded")
     private boolean refunded;
 
     /**
-     * 
+     * The monetary amount transferred for the BillFast transaction.
      */
     @JsonProperty("TransferAmount")
     private Double transferAmount;
 
     /**
-     * 
+     * Indicates whether the listed transfer is a supplier transfer.
      */
     @JsonProperty("IsSupplierTransfer")
     private boolean isSupplierTransfer;
 
     /**
-     * External Reference Number (ern)
+     * The payer's custom alias for the supplier (from MerchantSuppliers.SupplierName). Only populated for supplier transfer list endpoints.
      */
-    @JsonProperty("Ern")
+    @JsonProperty("SupplierAlias")
+    private String supplierAlias;
+
+    /**
+     * The unique external reference number assigned to the transfer
+     */
+    @JsonProperty("ern")
     private String ern;
 
 
@@ -210,7 +216,7 @@ public class TransferBaseInformationEntity   {
     }
 
     
-    public TransferBaseInformationEntity(String i, LocalDateTime cdt, String t, Integer pmt, String d, String m, LocalDateTime td, Double a, Integer s, Integer ts, String cps, Integer c, String cn, String cem, String cid, String trd, String man, String map, LocalDateTime ed, LocalDateTime ed2, boolean he, boolean del, Double collectOperationAmount, Double depositOperationAmount, Double convenientFeesOperationAmount, Double feesOperationAmount, Integer direction, boolean refunded, Double transferAmount, boolean isSupplierTransfer, String ern) {
+    public TransferBaseInformationEntity(String i, OffsetDateTime cdt, String t, Integer pmt, String d, String m, OffsetDateTime td, Double a, Integer s, Integer ts, String cps, Integer c, String cn, String cem, String cid, String trd, String man, String map, OffsetDateTime ed, OffsetDateTime ed2, boolean he, boolean del, Double collectOperationAmount, Double depositOperationAmount, Double convenientFeesOperationAmount, Double feesOperationAmount, Integer direction, boolean refunded, Double transferAmount, boolean isSupplierTransfer, String supplierAlias, String ern) {
         this.i = i;
         this.cdt = cdt;
         this.t = t;
@@ -241,6 +247,7 @@ public class TransferBaseInformationEntity   {
         this.refunded = refunded;
         this.transferAmount = transferAmount;
         this.isSupplierTransfer = isSupplierTransfer;
+        this.supplierAlias = supplierAlias;
         this.ern = ern;
     }
     
@@ -255,11 +262,11 @@ public class TransferBaseInformationEntity   {
         this.i = i;
     }
 
-    public LocalDateTime getCdt() {
+    public OffsetDateTime getCdt() {
         return cdt;
     }
 
-    public void setCdt(LocalDateTime cdt) {
+    public void setCdt(OffsetDateTime cdt) {
         this.cdt = cdt;
     }
 
@@ -295,11 +302,11 @@ public class TransferBaseInformationEntity   {
         this.m = m;
     }
 
-    public LocalDateTime getTd() {
+    public OffsetDateTime getTd() {
         return td;
     }
 
-    public void setTd(LocalDateTime td) {
+    public void setTd(OffsetDateTime td) {
         this.td = td;
     }
 
@@ -391,19 +398,19 @@ public class TransferBaseInformationEntity   {
         this.map = map;
     }
 
-    public LocalDateTime getEd() {
+    public OffsetDateTime getEd() {
         return ed;
     }
 
-    public void setEd(LocalDateTime ed) {
+    public void setEd(OffsetDateTime ed) {
         this.ed = ed;
     }
 
-    public LocalDateTime getEd2() {
+    public OffsetDateTime getEd2() {
         return ed2;
     }
 
-    public void setEd2(LocalDateTime ed2) {
+    public void setEd2(OffsetDateTime ed2) {
         this.ed2 = ed2;
     }
 
@@ -487,6 +494,14 @@ public class TransferBaseInformationEntity   {
         this.isSupplierTransfer = isSupplierTransfer;
     }
 
+    public String getSupplierAlias() {
+        return supplierAlias;
+    }
+
+    public void setSupplierAlias(String supplierAlias) {
+        this.supplierAlias = supplierAlias;
+    }
+
     public String getErn() {
         return ern;
     }
@@ -503,13 +518,13 @@ public class TransferBaseInformationEntity   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TransferBaseInformationEntity that = (TransferBaseInformationEntity) o;
-        return Objects.equals(i, that.i) && Objects.equals(cdt, that.cdt) && Objects.equals(t, that.t) && Objects.equals(pmt, that.pmt) && Objects.equals(d, that.d) && Objects.equals(m, that.m) && Objects.equals(td, that.td) && Objects.equals(a, that.a) && Objects.equals(s, that.s) && Objects.equals(ts, that.ts) && Objects.equals(cps, that.cps) && Objects.equals(c, that.c) && Objects.equals(cn, that.cn) && Objects.equals(cem, that.cem) && Objects.equals(cid, that.cid) && Objects.equals(trd, that.trd) && Objects.equals(man, that.man) && Objects.equals(map, that.map) && Objects.equals(ed, that.ed) && Objects.equals(ed2, that.ed2) && Objects.equals(he, that.he) && Objects.equals(del, that.del) && Objects.equals(collectOperationAmount, that.collectOperationAmount) && Objects.equals(depositOperationAmount, that.depositOperationAmount) && Objects.equals(convenientFeesOperationAmount, that.convenientFeesOperationAmount) && Objects.equals(feesOperationAmount, that.feesOperationAmount) && Objects.equals(direction, that.direction) && Objects.equals(refunded, that.refunded) && Objects.equals(transferAmount, that.transferAmount) && Objects.equals(isSupplierTransfer, that.isSupplierTransfer) && Objects.equals(ern, that.ern) ;
+        return Objects.equals(i, that.i) && Objects.equals(cdt, that.cdt) && Objects.equals(t, that.t) && Objects.equals(pmt, that.pmt) && Objects.equals(d, that.d) && Objects.equals(m, that.m) && Objects.equals(td, that.td) && Objects.equals(a, that.a) && Objects.equals(s, that.s) && Objects.equals(ts, that.ts) && Objects.equals(cps, that.cps) && Objects.equals(c, that.c) && Objects.equals(cn, that.cn) && Objects.equals(cem, that.cem) && Objects.equals(cid, that.cid) && Objects.equals(trd, that.trd) && Objects.equals(man, that.man) && Objects.equals(map, that.map) && Objects.equals(ed, that.ed) && Objects.equals(ed2, that.ed2) && Objects.equals(he, that.he) && Objects.equals(del, that.del) && Objects.equals(collectOperationAmount, that.collectOperationAmount) && Objects.equals(depositOperationAmount, that.depositOperationAmount) && Objects.equals(convenientFeesOperationAmount, that.convenientFeesOperationAmount) && Objects.equals(feesOperationAmount, that.feesOperationAmount) && Objects.equals(direction, that.direction) && Objects.equals(refunded, that.refunded) && Objects.equals(transferAmount, that.transferAmount) && Objects.equals(isSupplierTransfer, that.isSupplierTransfer) && Objects.equals(supplierAlias, that.supplierAlias) && Objects.equals(ern, that.ern) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(i, cdt, t, pmt, d, m, td, a, s, ts, cps, c, cn, cem, cid, trd, man, map, ed, ed2, he, del, collectOperationAmount, depositOperationAmount, convenientFeesOperationAmount, feesOperationAmount, direction, refunded, transferAmount, isSupplierTransfer, ern);
+        return Objects.hash(i, cdt, t, pmt, d, m, td, a, s, ts, cps, c, cn, cem, cid, trd, man, map, ed, ed2, he, del, collectOperationAmount, depositOperationAmount, convenientFeesOperationAmount, feesOperationAmount, direction, refunded, transferAmount, isSupplierTransfer, supplierAlias, ern);
     }
 
     @Override
@@ -545,6 +560,7 @@ public class TransferBaseInformationEntity   {
                 ", refunded='" + refunded + '\'' +
                 ", transferAmount='" + transferAmount + '\'' +
                 ", isSupplierTransfer='" + isSupplierTransfer + '\'' +
+                ", supplierAlias='" + supplierAlias + '\'' +
                 ", ern='" + ern + '\'' +
 
                 '}';

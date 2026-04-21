@@ -9,7 +9,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -32,6 +32,9 @@ public class AdjustWalletResponse extends CustomAPIResponse {
     private boolean requiresSupplierBoarding;
 
 
+    public AdjustWalletResponse() {
+    }
+
     public AdjustWalletResponse(Error[] errors, boolean hasError, String messages, String transferId, boolean wasSuccessful, boolean requiresSupplierBoarding) {
         super(errors, hasError, messages);
         this.transferId = transferId;
@@ -39,12 +42,16 @@ public class AdjustWalletResponse extends CustomAPIResponse {
         this.requiresSupplierBoarding = requiresSupplierBoarding;
     }
 
-    public AdjustWalletResponse(APIResponse apiResponse) {
+    public AdjustWalletResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.transferId = apiResponse.getResponse().toString();
-            this.wasSuccessful = Boolean.parseBoolean(apiResponse.getResponse().toString());
-            this.requiresSupplierBoarding = Boolean.parseBoolean(apiResponse.getResponse().toString());
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                AdjustWalletResponse __typed = objectMapper.readValue(__rawBody, AdjustWalletResponse.class);
+                this.transferId = __typed.transferId;
+                this.wasSuccessful = __typed.wasSuccessful;
+                this.requiresSupplierBoarding = __typed.requiresSupplierBoarding;
+            }
         }
     }
 

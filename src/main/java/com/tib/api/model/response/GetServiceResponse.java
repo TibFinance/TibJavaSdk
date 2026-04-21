@@ -10,7 +10,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -26,6 +26,9 @@ public class GetServiceResponse extends CustomAPIResponse {
     @JsonProperty("Service")
     private ServiceWithMerchant service;
 
+
+    public GetServiceResponse() {
+    }
 
     public GetServiceResponse(Error[] errors, boolean hasError, String messages, ServiceWithMerchant service) {
         super(errors, hasError, messages);

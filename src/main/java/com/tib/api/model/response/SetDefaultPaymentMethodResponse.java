@@ -9,7 +9,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,6 +22,9 @@ import java.util.Optional;
 public class SetDefaultPaymentMethodResponse extends CustomAPIResponse {
 
     
+
+    public SetDefaultPaymentMethodResponse() {
+    }
 
     public SetDefaultPaymentMethodResponse(Error[] errors, boolean hasError, String messages) {
         super(errors, hasError, messages);

@@ -17,4 +17,12 @@ public enum WalletAdjustment {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static WalletAdjustment fromValue(int value) {
+        for (WalletAdjustment v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

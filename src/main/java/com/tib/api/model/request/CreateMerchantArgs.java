@@ -7,7 +7,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,13 +21,13 @@ public class CreateMerchantArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     * Identifier of the service for which recurring transfers are requested
      */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
-     * This property holds the basic information necessary for creating or updating a merchant's account within the TIB Finance API system.
+     * Basic merchant details required for creating or updating a merchant record
      */
     @JsonProperty("MerchantInfo")
     private Merchant merchantInfo;

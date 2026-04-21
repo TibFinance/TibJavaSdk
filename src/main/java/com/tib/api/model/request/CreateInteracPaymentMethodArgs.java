@@ -8,7 +8,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,31 +22,31 @@ public class CreateInteracPaymentMethodArgs  extends BaseAuthenticatedCryptedArg
 
     
     /**
-     * Serves as a unique identifier for each customer within the system.
+     * Unique identifier of the customer owning the recurring transfers
      */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
-     * Determines if the customer's payment method is set as the default for automatic transactions.
+     * Indicates whether this payment method is configured as the customer's automatic payment method.
      */
     @JsonProperty("IsCustomerAutomaticPaymentMethod")
     private boolean isCustomerAutomaticPaymentMethod;
 
     /**
-     * This model encapsulates the details required to manage Interac payment methods for customers. It is used to facilitate electronic funds transfers via the Interac network, a widely used payment system in Canada.
+     * Details of the Interac e‑transfer payment method to be created.
      */
     @JsonProperty("InteracInformation")
     private Interac interacInformation;
 
     /**
-     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     * Specifies the language used for the payment request and related communications
      */
     @JsonProperty("Language")
     private Language language;
 
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

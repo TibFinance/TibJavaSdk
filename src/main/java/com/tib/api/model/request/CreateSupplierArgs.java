@@ -8,7 +8,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,49 +22,49 @@ public class CreateSupplierArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * 
+     * Display name for the supplier (max 150 characters).
      */
     @JsonProperty("SupplierName")
     private String supplierName;
 
     /**
-     * 
+     * Email address of the supplier. Used for deduplication and login creation (max 250 characters).
      */
     @JsonProperty("SupplierEmail")
     private String supplierEmail;
 
     /**
-     * Retrieves or assigns the currency type used in transactions.
+     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
      */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
-     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     * Specifies the language used for the payment request and related communications
      */
     @JsonProperty("Language")
     private Language language;
 
     /**
-     * Specifies the bank account number associated with the payment method.
+     * The bank account number used for the direct account payment.
      */
     @JsonProperty("AccountNumber")
     private String accountNumber;
 
     /**
-     * Identifies the bank associated with the account using its numeric identifier.
+     * The bank's identification number used for the direct account payment method.
      */
     @JsonProperty("BankNumber")
     private String bankNumber;
 
     /**
-     * Bank institution code identifying the financial institution for a transaction.
+     * The bank's institution number identifying the financial institution for the direct account payment.
      */
     @JsonProperty("InstitutionNumber")
     private String institutionNumber;

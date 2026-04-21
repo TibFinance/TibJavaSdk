@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,37 +19,37 @@ public class Interac   {
 
     
     /**
-     * Provides a detailed explanation of the function's purpose and usage within the API.
+     * Human‑readable description of the transfer
      */
     @JsonProperty("Description")
     private String description;
 
     /**
-     * The 'Owner' property is designed to assign and identify the ownership of a specific resource or object within the system.
+     * Identifier of the entity that owns the payment method.
      */
     @JsonProperty("Owner")
     private String owner;
 
     /**
-     * TargetEmailAddress specifies the email address to which the Interac request is sent. It identifies the recipient for initiating an Interac transaction.
+     * The email address of the payer to which the Interac payment request will be sent.
      */
     @JsonProperty("TargetEmailAddress")
     private String targetEmailAddress;
 
     /**
-     * Specifies the mobile phone number to which the Interac request is sent.
+     * The mobile phone number of the payer to which the Interac payment will be sent
      */
     @JsonProperty("TargetMobilePhoneNumber")
     private String targetMobilePhoneNumber;
 
     /**
-     * The question displayed to the Interac recipient to request acceptance of a deposit.
+     * The security question presented to the payer for an Interac e‑Transfer payment.
      */
     @JsonProperty("InteracQuestion")
     private String interacQuestion;
 
     /**
-     * InteracAnswer is the response string that the target must provide to accept an Interac deposit.
+     * The answer to the security question required for creating an Interac payment method.
      */
     @JsonProperty("InteracAnswer")
     private String interacAnswer;

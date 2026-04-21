@@ -7,7 +7,7 @@ import com.tib.api.model.enums.Language;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,67 +21,67 @@ public class BillEntity   {
 
     
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Represents the title of a bill associated with a payment.
+     * The title or description of the bill linked to the transfer.
      */
     @JsonProperty("BillTitle")
     private String billTitle;
 
     /**
-     * Provides a textual description of the bill associated with a payment.
+     * The textual description of the bill associated with the transfer.
      */
     @JsonProperty("BillDescription")
     private String billDescription;
 
     /**
-     * Specifies the monetary amount of a bill to be created.
+     * The total monetary amount due for the requested bill.
      */
     @JsonProperty("BillAmount")
     private Double billAmount;
 
     /**
-     * Represents the first external system bill reference associated with the TIB bill.
+     * The bill identifier assigned by the first external system linked to this transaction.
      */
     @JsonProperty("ExternalSystemBillNumber1")
     private String externalSystemBillNumber1;
 
     /**
-     * Reference number provided by an external system for the bill (field 2).
+     * Secondary bill identifier assigned by an external system
      */
     @JsonProperty("ExternalSystemBillNumber2")
     private String externalSystemBillNumber2;
 
     /**
-     * Identifies the bill number provided by an external system. This field allows TIB to map its internal bill to the originating system's reference.
+     * The bill number assigned by the third external system.
      */
     @JsonProperty("ExternalSystemBillNumber3")
     private String externalSystemBillNumber3;
 
     /**
-     * Specifies the currency of the bill. If null, the merchant’s default currency is applied.
+     * The currency in which the bill amount is denominated.
      */
     @JsonProperty("BillCurrency")
     private Currency billCurrency;
 
     /**
-     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     * Specifies the language used for the payment request and related communications
      */
     @JsonProperty("Language")
     private Language language;
 
     /**
-     * Identifies the customer linked to this payment, when a customer relationship exists.
+     * Identifier of the customer associated with the payment
      */
     @JsonProperty("RelatedCustomerId")
     private String relatedCustomerId;
 
     /**
-     * Indicates whether the bill should apply the convenience fee according to the client’s service configuration. The fee calculation follows the configuration set by an administrator.
+     * Indicates whether the convenient fee rule is applied to the retrieved bill.
      */
     @JsonProperty("UseConvenientFeeRule")
     private boolean useConvenientFeeRule;

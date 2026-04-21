@@ -11,7 +11,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -46,10 +46,13 @@ public class RequestDataResponse<T> extends CustomAPIResponse {
     private Language language;
 
     @JsonProperty("TransactionDueDate")
-    private LocalDateTime transactionDueDate;
+    private OffsetDateTime transactionDueDate;
 
 
-    public RequestDataResponse(Error[] errors, boolean hasError, String messages, String merchantId, Double amount, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Language language, LocalDateTime transactionDueDate) {
+    public RequestDataResponse() {
+    }
+
+    public RequestDataResponse(Error[] errors, boolean hasError, String messages, String merchantId, Double amount, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Language language, OffsetDateTime transactionDueDate) {
         super(errors, hasError, messages);
         this.merchantId = merchantId;
         this.amount = amount;
@@ -64,9 +67,18 @@ public class RequestDataResponse<T> extends CustomAPIResponse {
     public RequestDataResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-            this.transferType = objectMapper.readValue(json, TransferType.class);
-            this.language = objectMapper.readValue(json, Language.class);
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                RequestDataResponse __typed = objectMapper.readValue(__rawBody, RequestDataResponse.class);
+                this.merchantId = __typed.merchantId;
+                this.amount = __typed.amount;
+                this.customerId = __typed.customerId;
+                this.paymentMethodId = __typed.paymentMethodId;
+                this.transferType = __typed.transferType;
+                this.referenceNumber = __typed.referenceNumber;
+                this.language = __typed.language;
+                this.transactionDueDate = __typed.transactionDueDate;
+            }
         }
     }
 
@@ -127,11 +139,11 @@ public class RequestDataResponse<T> extends CustomAPIResponse {
         this.language = language;
     }
 
-    public LocalDateTime getTransactionDueDate() {
+    public OffsetDateTime getTransactionDueDate() {
         return transactionDueDate;
     }
 
-    public void setTransactionDueDate(LocalDateTime transactionDueDate) {
+    public void setTransactionDueDate(OffsetDateTime transactionDueDate) {
         this.transactionDueDate = transactionDueDate;
     }
 

@@ -17,4 +17,12 @@ public enum TransferType {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static TransferType fromValue(int value) {
+        for (TransferType v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

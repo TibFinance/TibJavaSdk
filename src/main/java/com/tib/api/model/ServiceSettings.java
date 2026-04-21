@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,217 +19,217 @@ public class ServiceSettings   {
 
     
     /**
-     * Retrieves or assigns the monetary collection limit associated with a service contract. This limit defines the maximum amount that can be collected in a single operation and is expressed in the merchant's currency.
+     * Maximum monetary amount that can be collected for the service request.
      */
     @JsonProperty("CollectionLimit")
     private Double collectionLimit;
 
     /**
-     * Gets or sets the daily collection limit applied to the service contract.
+     * The maximum total amount that can be collected for the service each day.
      */
     @JsonProperty("CollectionLimitDaily")
     private Double collectionLimitDaily;
 
     /**
-     * Gets or sets the deposit limit for the service contract, expressed as a decimal amount.
+     * Maximum deposit amount allowed for the requested service.
      */
     @JsonProperty("DepositLimit")
     private Double depositLimit;
 
     /**
-     * Gets or sets the maximum amount that can be deposited in a single day for the client’s service contract.
+     * The maximum total amount a user may deposit in a single day.
      */
     @JsonProperty("DepositLimitDaily")
     private Double depositLimitDaily;
 
     /**
-     * Gets or sets the delay buffer amount used to define the monetary buffer applied to transaction timing delays.
+     * The amount of buffer reserved to cover service execution delays.
      */
     @JsonProperty("DelayBufferAmount")
     private Double delayBufferAmount;
 
     /**
-     * Gets or sets the remaining monetary amount for the current transaction or operation, expressed as a decimal value.
+     * The remaining monetary amount available for the requested service.
      */
     @JsonProperty("RemainingAmount")
     private Double remainingAmount;
 
     /**
-     * Gets or sets the current wallet balance for the client.
+     * Current available balance of the wallet in the account's base currency.
      */
     @JsonProperty("WalletBalance")
     private Double walletBalance;
 
     /**
-     * Indicates whether the wallet feature is enabled for the client.
+     * Indicates whether the wallet feature is enabled for the requested service.
      */
     @JsonProperty("IsWalletFeatureActive")
     private boolean isWalletFeatureActive;
 
     /**
-     * Gets or sets the wallet type identifier used by the TIB Finance API to select the appropriate wallet configuration.
+     * Specifies the category of the wallet returned in the response
      */
     @JsonProperty("WalletType")
     private Integer walletType;
 
     /**
-     * Gets or sets the NSF (Non‑Sufficient Funds) buffer amount applied to transactions.
+     * The reserved cash buffer amount used to cover potential non‑sufficient‑funds (NSF) exposures.
      */
     @JsonProperty("NsfBuffer")
     private Double nsfBuffer;
 
     /**
-     * Retrieves or assigns the maximum amount that can be collected from a single bank account in one calendar day.
+     * Maximum total amount that can be collected from a single bank account in one day.
      */
     @JsonProperty("CollectionLimitPerBankAccountDaily")
     private Double collectionLimitPerBankAccountDaily;
 
     /**
-     * Gets or sets the maximum collection amount allowed for a specific bank account during a given delay interval.
+     * Maximum monetary amount that can be collected from a single bank account during a delay period.
      */
     @JsonProperty("CollectionLimitPerBankAccountPerDelays")
     private Double collectionLimitPerBankAccountPerDelays;
 
     /**
-     * Gets or sets the maximum number of hours that a collection operation may be delayed for a specific bank account.
+     * Maximum number of hours to delay further collection attempts after reaching the per‑bank‑account collection limit.
      */
     @JsonProperty("CollectionLimitPerBankAccountHoursDelays")
     private Integer collectionLimitPerBankAccountHoursDelays;
 
     /**
-     * Gets or sets the warning collection limit for a client. This limit defines the monetary threshold at which the system raises a warning for client collection activities.
+     * Maximum monetary threshold for aggregating client warnings in the service response.
      */
     @JsonProperty("ClientWarningCollectionLimit")
     private Double clientWarningCollectionLimit;
 
     /**
-     * Gets or sets the maximum number of collection transactions that can be processed per bank account each day.
+     * Maximum number of collection transactions allowed per bank account each day.
      */
     @JsonProperty("NumberOfCollectionPerBankAccountDaily")
     private Integer numberOfCollectionPerBankAccountDaily;
 
     /**
-     * Gets or sets the maximum number of collection attempts allowed for a specific bank within a single delay interval.
+     * The total count of collection attempts scheduled for each bank within a given delay interval.
      */
     @JsonProperty("NumberOfCollectionPerBankPerDelays")
     private Integer numberOfCollectionPerBankPerDelays;
 
     /**
-     * Gets or sets the maximum total amount that can be deposited to a single bank account per day.
+     * Maximum total amount that can be deposited to a single bank account in one day.
      */
     @JsonProperty("DepositLimitPerBankAccountDaily")
     private Double depositLimitPerBankAccountDaily;
 
     /**
-     * Gets or sets the maximum deposit amount allowed for a single bank account within a defined delay interval.
+     * Maximum total deposit amount allowed for a single bank account within the configured delay interval.
      */
     @JsonProperty("DepositLimitPerBankAccountPerDelays")
     private Double depositLimitPerBankAccountPerDelays;
 
     /**
-     * Gets or sets the number of hour delays applied to the deposit limit for a specific bank account.
+     * The number of hours a user must wait before making another deposit to the same bank account.
      */
     @JsonProperty("DepositLimitPerBankAccountHoursDelays")
     private Integer depositLimitPerBankAccountHoursDelays;
 
     /**
-     * Retrieves or updates the warning deposit limit configured for a client.
+     * The deposit amount threshold that triggers a client warning.
      */
     @JsonProperty("ClientWarningDepositLimit")
     private Double clientWarningDepositLimit;
 
     /**
-     * Gets or sets the maximum number of deposit transactions that can be performed per bank account each day.
+     * The total count of deposit transactions made on a bank account during the current day.
      */
     @JsonProperty("NumberOfDepositPerBankAccountDaily")
     private Integer numberOfDepositPerBankAccountDaily;
 
     /**
-     * Gets or sets the maximum number of deposit attempts allowed for a specific bank during a defined delay interval.
+     * The total count of deposit transactions for each bank within the specified delay intervals.
      */
     @JsonProperty("NumberOfDepositPerBankPerDelays")
     private Integer numberOfDepositPerBankPerDelays;
 
     /**
-     * Retrieves or updates the warning collection limit applied to TIB operations. This limit defines the threshold at which a warning is triggered for collection activities.
+     * The monetary threshold that caps the total amount of warnings returned in the response.
      */
     @JsonProperty("TIBWarningCollectionLimit")
     private Double tIBWarningCollectionLimit;
 
     /**
-     * Gets or sets the daily warning collection limit for a bank account.
+     * The maximum daily amount that can be collected as a warning for a single bank account.
      */
     @JsonProperty("TIBWarningCollectionLimitPerBankAccountDaily")
     private Double tIBWarningCollectionLimitPerBankAccountDaily;
 
     /**
-     * Gets or sets the warning collection limit applied to a bank account for each delay interval.
+     * Maximum warning‑collection amount allowed for a single bank account within each delay interval.
      */
     @JsonProperty("TIBWarningCollectionLimitPerBankAccountPerDelays")
     private Double tIBWarningCollectionLimitPerBankAccountPerDelays;
 
     /**
-     * Gets or sets the daily collection warning limit for a bank account.
+     * The daily count of collection attempts per bank account that triggers a warning.
      */
     @JsonProperty("TIBWarningNumberOfCollectionPerBankAccountDaily")
     private Integer tIBWarningNumberOfCollectionPerBankAccountDaily;
 
     /**
-     * Gets or sets the warning threshold that defines the maximum number of collection attempts allowed for a single bank within a delay interval.
+     * The count of collections per bank that have exceeded the allowed delay threshold, triggering a warning.
      */
     @JsonProperty("TIBWarningNumberOfCollectionPerBankPerDelays")
     private Integer tIBWarningNumberOfCollectionPerBankPerDelays;
 
     /**
-     * Gets or sets the daily warning collection limit for TIB services.
+     * The maximum daily amount allowed for warning collections.
      */
     @JsonProperty("TIBWarningCollectionLimitDaily")
     private Double tIBWarningCollectionLimitDaily;
 
     /**
-     * Gets or sets the warning deposit limit for the TIB service. The limit defines the maximum deposit amount that triggers a warning in the system.
+     * The deposit amount at which a warning is issued to the user.
      */
     @JsonProperty("TIBWarningDepositLimit")
     private Double tIBWarningDepositLimit;
 
     /**
-     * Gets or sets the daily warning deposit limit applied to each bank account.
+     * Maximum daily deposit amount per bank account that triggers a warning.
      */
     @JsonProperty("TIBWarningDepositLimitPerBankAccountDaily")
     private Double tIBWarningDepositLimitPerBankAccountDaily;
 
     /**
-     * Gets or sets the warning deposit limit applied to each bank account for a specific delay interval.
+     * Maximum deposit amount per bank account that triggers a warning when a deposit is delayed.
      */
     @JsonProperty("TIBWarningDepositLimitPerBankAccountPerDelays")
     private Double tIBWarningDepositLimitPerBankAccountPerDelays;
 
     /**
-     * Gets or sets the daily warning threshold for the number of deposits allowed on a single bank account.
+     * The daily count of deposit warnings issued for a specific bank account.
      */
     @JsonProperty("TIBWarningNumberOfDepositPerBankAccountDaily")
     private Integer tIBWarningNumberOfDepositPerBankAccountDaily;
 
     /**
-     * Gets or sets the warning threshold that defines how many deposits a bank may process within the configured delay period.
+     * The count of deposits for a specific bank that have exceeded the allowed delay, triggering a warning.
      */
     @JsonProperty("TIBWarningNumberOfDepositPerBankPerDelays")
     private Integer tIBWarningNumberOfDepositPerBankPerDelays;
 
     /**
-     * Gets or sets the daily warning limit for deposits in the TIB Finance system. This limit triggers warning notifications when a deposit exceeds the configured daily threshold.
+     * The daily deposit amount at which a warning is issued for the account.
      */
     @JsonProperty("TIBWarningDepositLimitDaily")
     private Double tIBWarningDepositLimitDaily;
 
     /**
-     * Gets or sets the number of days the system waits before depositing funds into the merchant's bank account.
+     * Number of days the platform waits before depositing funds into the merchant's account
      */
     @JsonProperty("MerchantAccountDepositDelay")
     private Integer merchantAccountDepositDelay;
 
     /**
-     * 
+     * Identifier of the data context used for the service response
      */
     @JsonProperty("DataContext")
     private Integer dataContext;

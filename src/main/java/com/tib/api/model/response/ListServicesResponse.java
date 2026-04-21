@@ -10,7 +10,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -30,17 +30,24 @@ public class ListServicesResponse extends CustomAPIResponse {
     private boolean skipClientApprobation;
 
 
+    public ListServicesResponse() {
+    }
+
     public ListServicesResponse(Error[] errors, boolean hasError, String messages, List<Service> services, boolean skipClientApprobation) {
         super(errors, hasError, messages);
         this.services = services;
         this.skipClientApprobation = skipClientApprobation;
     }
 
-    public ListServicesResponse(APIResponse apiResponse) {
+    public ListServicesResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.services = (List<Service>) apiResponse.getResponse();
-            this.skipClientApprobation = Boolean.parseBoolean(apiResponse.getResponse().toString());
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                ListServicesResponse __typed = objectMapper.readValue(__rawBody, ListServicesResponse.class);
+                this.services = __typed.services;
+                this.skipClientApprobation = __typed.skipClientApprobation;
+            }
         }
     }
 

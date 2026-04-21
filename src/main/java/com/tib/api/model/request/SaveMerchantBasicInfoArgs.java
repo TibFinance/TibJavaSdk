@@ -7,7 +7,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -21,13 +21,13 @@ public class SaveMerchantBasicInfoArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * This property holds the basic information necessary for creating or updating a merchant's account within the TIB Finance API system.
+     * Basic merchant details required for creating or updating a merchant record
      */
     @JsonProperty("MerchantInfo")
     private MerchantBasicInfo merchantInfo;

@@ -6,7 +6,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,22 +20,22 @@ public class GetWalletOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Generates a unique identifier for a specific service to facilitate the creation of a customer list.
+     * Identifier of the service for which recurring transfers are requested
      */
     @JsonProperty("ServiceId")
     private String serviceId;
 
     /**
-     * 
+     * Start date of the wallet operations date range filter.
      */
     @JsonProperty("From")
-    private LocalDateTime from;
+    private OffsetDateTime from;
 
     /**
-     * 
+     * End date of the wallet operations date range filter.
      */
     @JsonProperty("To")
-    private LocalDateTime to;
+    private OffsetDateTime to;
 
 
     
@@ -43,14 +43,14 @@ public class GetWalletOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
     }
 
     
-    public GetWalletOperationsArgs(String serviceId, LocalDateTime from, LocalDateTime to) {
+    public GetWalletOperationsArgs(String serviceId, OffsetDateTime from, OffsetDateTime to) {
         this.serviceId = serviceId;
         this.from = from;
         this.to = to;
     }
     
     
-    public GetWalletOperationsArgs(String sessionToken, String serviceId, LocalDateTime from, LocalDateTime to) {
+    public GetWalletOperationsArgs(String sessionToken, String serviceId, OffsetDateTime from, OffsetDateTime to) {
         super(sessionToken);
         this.serviceId = serviceId;
         this.from = from;
@@ -66,19 +66,19 @@ public class GetWalletOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
         this.serviceId = serviceId;
     }
 
-    public LocalDateTime getFrom() {
+    public OffsetDateTime getFrom() {
         return from;
     }
 
-    public void setFrom(LocalDateTime from) {
+    public void setFrom(OffsetDateTime from) {
         this.from = from;
     }
 
-    public LocalDateTime getTo() {
+    public OffsetDateTime getTo() {
         return to;
     }
 
-    public void setTo(LocalDateTime to) {
+    public void setTo(OffsetDateTime to) {
         this.to = to;
     }
 

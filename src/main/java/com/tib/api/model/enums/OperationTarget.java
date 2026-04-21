@@ -17,4 +17,12 @@ public enum OperationTarget {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static OperationTarget fromValue(int value) {
+        for (OperationTarget v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

@@ -9,7 +9,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -23,82 +23,82 @@ public class GetDropInPublicTokenArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Serves as a unique identifier for each customer within the system.
+     * Unique identifier of the customer owning the recurring transfers
      */
     @JsonProperty("CustomerId")
     private String customerId;
 
     /**
-     * Retrieves or assigns the unique identifier for a bill.
+     * Unique identifier of the bill to be paid
      */
     @JsonProperty("BillId")
     private String billId;
 
     /**
-     * Retrieves or assigns the monetary amount involved in the transaction.
+     * The monetary value of each recurring transfer.
      */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
-     * Defines and manages the type of transfer operation within the system.
+     * Indicates the category of the recurring transfer (e.g., inbound, outbound, internal).
      */
     @JsonProperty("TransferType")
     private TransferType transferType;
 
     /**
-     * Specifies the payment method flags that are authorized for the Drop‑In session.
+     * Restrict which payment methods are available in the Drop-In interface.
      */
     @JsonProperty("DropInAuthorizedPaymentMethod")
     private AutorizedPaymentMethodFlags dropInAuthorizedPaymentMethod;
 
     /**
-     * Gets or sets the external reference number used to link this entity with an external system or business process.
+     * External system reference number to associate with the Drop-In payment.
      */
     @JsonProperty("ExternalReferenceNumber")
     private String externalReferenceNumber;
 
     /**
-     * Specifies whether the API request should include the customer's existing payment methods in the response.
+     * Whether to display the customer's previously saved payment methods in the Drop-In.
      */
     @JsonProperty("ShowCustomerExistingPaymentMethods")
     private boolean showCustomerExistingPaymentMethods;
 
     /**
-     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     * Specifies the language used for the payment request and related communications
      */
     @JsonProperty("Language")
     private Language language;
 
     /**
-     * Specifies the lifetime of the public token in days.
+     * Number of days before the Drop-In token expires.
      */
     @JsonProperty("ExpirationDays")
     private Integer expirationDays;
 
     /**
-     * Gets or sets the title that identifies the object in a human‑readable way.
+     * Title displayed on the Drop-In payment form.
      */
     @JsonProperty("Title")
     private String title;
 
     /**
-     * Provides a detailed explanation of the function's purpose and usage within the API.
+     * Human‑readable description of the transfer
      */
     @JsonProperty("Description")
     private String description;
 
     /**
-     * Gets or sets the due date for a payment.
+     * Scheduled due date for the payment created via Drop-In.
      */
     @JsonProperty("PaymentDueDate")
-    private LocalDateTime paymentDueDate;
+    private OffsetDateTime paymentDueDate;
 
 
     
@@ -106,7 +106,7 @@ public class GetDropInPublicTokenArgs  extends BaseAuthenticatedCryptedArgs  {
     }
 
     
-    public GetDropInPublicTokenArgs(String merchantId, String customerId, String billId, Double amount, TransferType transferType, AutorizedPaymentMethodFlags dropInAuthorizedPaymentMethod, String externalReferenceNumber, boolean showCustomerExistingPaymentMethods, Language language, Integer expirationDays, String title, String description, LocalDateTime paymentDueDate) {
+    public GetDropInPublicTokenArgs(String merchantId, String customerId, String billId, Double amount, TransferType transferType, AutorizedPaymentMethodFlags dropInAuthorizedPaymentMethod, String externalReferenceNumber, boolean showCustomerExistingPaymentMethods, Language language, Integer expirationDays, String title, String description, OffsetDateTime paymentDueDate) {
         this.merchantId = merchantId;
         this.customerId = customerId;
         this.billId = billId;
@@ -123,7 +123,7 @@ public class GetDropInPublicTokenArgs  extends BaseAuthenticatedCryptedArgs  {
     }
     
     
-    public GetDropInPublicTokenArgs(String sessionToken, String merchantId, String customerId, String billId, Double amount, TransferType transferType, AutorizedPaymentMethodFlags dropInAuthorizedPaymentMethod, String externalReferenceNumber, boolean showCustomerExistingPaymentMethods, Language language, Integer expirationDays, String title, String description, LocalDateTime paymentDueDate) {
+    public GetDropInPublicTokenArgs(String sessionToken, String merchantId, String customerId, String billId, Double amount, TransferType transferType, AutorizedPaymentMethodFlags dropInAuthorizedPaymentMethod, String externalReferenceNumber, boolean showCustomerExistingPaymentMethods, Language language, Integer expirationDays, String title, String description, OffsetDateTime paymentDueDate) {
         super(sessionToken);
         this.merchantId = merchantId;
         this.customerId = customerId;
@@ -237,11 +237,11 @@ public class GetDropInPublicTokenArgs  extends BaseAuthenticatedCryptedArgs  {
         this.description = description;
     }
 
-    public LocalDateTime getPaymentDueDate() {
+    public OffsetDateTime getPaymentDueDate() {
         return paymentDueDate;
     }
 
-    public void setPaymentDueDate(LocalDateTime paymentDueDate) {
+    public void setPaymentDueDate(OffsetDateTime paymentDueDate) {
         this.paymentDueDate = paymentDueDate;
     }
 

@@ -17,4 +17,12 @@ public enum TransferDirection {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static TransferDirection fromValue(int value) {
+        for (TransferDirection v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

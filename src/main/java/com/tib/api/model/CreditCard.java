@@ -6,7 +6,7 @@ import com.tib.api.model.Address;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,61 +20,61 @@ public class CreditCard   {
 
     
     /**
-     * Provides a description to identify the credit card within the TIB Finance API. This description helps in distinguishing between multiple credit card payment methods associated with a customer.
+     * A textual description of the credit card to be used for the payment method.
      */
     @JsonProperty("CreditCardDescription")
     private String creditCardDescription;
 
     /**
-     * Represents the primary account number (PAN) of the credit card.
+     * The numeric Primary Account Number (PAN) of the credit card.
      */
     @JsonProperty("Pan")
     private Long pan;
 
     /**
-     * Represents the card verification code (CVD) used for validating credit card transactions.
+     * Card Verification Data (CVD) code for the credit card
      */
     @JsonProperty("CVD")
     private String cVD;
 
     /**
-     * Specifies the expiration month of the credit card.
+     * The two‑digit month (1‑12) in which the credit card expires.
      */
     @JsonProperty("ExpirationMonth")
     private Integer expirationMonth;
 
     /**
-     * Specifies the expiration year of the credit card. This is a crucial component for validating the card's validity period within the TIB Finance API.
+     * The four‑digit year when the credit card expires.
      */
     @JsonProperty("ExpirationYear")
     private Integer expirationYear;
 
     /**
-     * Specifies the name of the card owner.
+     * Name of the cardholder as printed on the credit card
      */
     @JsonProperty("CardOwner")
     private String cardOwner;
 
     /**
-     * Retrieves or assigns the registered address associated with a credit card. This property is crucial for verifying the billing address linked to the credit card, ensuring secure and accurate transaction processing.
+     * The billing address associated with the credit card being added.
      */
     @JsonProperty("CreditCardRegisteredAddress")
     private Address creditCardRegisteredAddress;
 
     /**
-     * Handles the extraction or assignment of a particular entity's expiration date.
+     * The date and time when the payment method expires.
      */
     @JsonProperty("ExpirationDate")
-    private LocalDateTime expirationDate;
+    private OffsetDateTime expirationDate;
 
     /**
-     * A well formated string of the credit card number
+     * The credit card number string provided in a standardized format for payment method creation.
      */
     @JsonProperty("FormatedCreditCardString")
     private String formatedCreditCardString;
 
     /**
-     * An obfuscated string of the card number
+     * A formatted string that previews the direct account payment method details before creation.
      */
     @JsonProperty("PreviewString")
     private String previewString;
@@ -85,7 +85,7 @@ public class CreditCard   {
     }
 
     
-    public CreditCard(String creditCardDescription, Long pan, String cVD, Integer expirationMonth, Integer expirationYear, String cardOwner, Address creditCardRegisteredAddress, LocalDateTime expirationDate, String formatedCreditCardString, String previewString) {
+    public CreditCard(String creditCardDescription, Long pan, String cVD, Integer expirationMonth, Integer expirationYear, String cardOwner, Address creditCardRegisteredAddress, OffsetDateTime expirationDate, String formatedCreditCardString, String previewString) {
         this.creditCardDescription = creditCardDescription;
         this.pan = pan;
         this.cVD = cVD;
@@ -157,11 +157,11 @@ public class CreditCard   {
         this.creditCardRegisteredAddress = creditCardRegisteredAddress;
     }
 
-    public LocalDateTime getExpirationDate() {
+    public OffsetDateTime getExpirationDate() {
         return expirationDate;
     }
 
-    public void setExpirationDate(LocalDateTime expirationDate) {
+    public void setExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
     }
 

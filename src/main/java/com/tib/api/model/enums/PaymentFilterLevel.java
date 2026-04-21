@@ -17,4 +17,12 @@ public enum PaymentFilterLevel {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static PaymentFilterLevel fromValue(int value) {
+        for (PaymentFilterLevel v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

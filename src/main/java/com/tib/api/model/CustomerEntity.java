@@ -8,7 +8,7 @@ import com.tib.api.model.ContactInfo;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,43 +22,43 @@ public class CustomerEntity   {
 
     
     /**
-     * This property represents the full name of the customer in the system.
+     * The full name of the customer who owns the recurring transfer.
      */
     @JsonProperty("CustomerName")
     private String customerName;
 
     /**
-     * Serves as a unique identifier for customers within an external system, enabling efficient data mapping and integration across various platforms.
+     * The external identifier assigned to the customer by the client’s system.
      */
     @JsonProperty("CustomerExternalId")
     private String customerExternalId;
 
     /**
-     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     * Specifies the language used for the payment request and related communications
      */
     @JsonProperty("Language")
     private Language language;
 
     /**
-     * Retrieves or assigns a detailed description for a specific customer.
+     * A textual description of the customer identified by the external ID
      */
     @JsonProperty("CustomerDescription")
     private String customerDescription;
 
     /**
-     * Handles the acquisition and assignment of a customer's email address.
+     * The email address of the customer initiating the payment.
      */
     @JsonProperty("CustomerEmail")
     private String customerEmail;
 
     /**
-     * This function is engineered to retrieve or allocate the array of accessible payment methods for transactional operations.
+     * A collection of payment methods available to the requester.
      */
     @JsonProperty("PaymentMethods")
     private List<PaymentMethod> paymentMethods;
 
     /**
-     * Manages the extraction or assignment of specific user or entity contact information.
+     * The customer's contact information
      */
     @JsonProperty("ContactInfo")
     private ContactInfo contactInfo;

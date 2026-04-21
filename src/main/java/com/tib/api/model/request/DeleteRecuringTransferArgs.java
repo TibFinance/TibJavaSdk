@@ -6,7 +6,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,7 +20,7 @@ public class DeleteRecuringTransferArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * Identifies a specific recurring transfer operation associated with a client's account.
+     * Identifier of the recurring transfer to delete
      */
     @JsonProperty("RecuringTransferId")
     private String recuringTransferId;

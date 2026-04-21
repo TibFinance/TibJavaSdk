@@ -17,4 +17,12 @@ public enum ProcessStatus {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static ProcessStatus fromValue(int value) {
+        for (ProcessStatus v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

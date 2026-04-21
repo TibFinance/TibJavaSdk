@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,7 +19,7 @@ public class BaseAuthenticatedCryptedArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
-     * Handles the acquisition or assignment of a unique session token, acting as a distinct identifier for the user's session.
+     * Identifier for the authenticated user session
      */
     @JsonProperty("SessionToken")
     private String sessionToken;

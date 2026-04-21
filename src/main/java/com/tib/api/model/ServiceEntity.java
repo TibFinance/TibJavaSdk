@@ -8,7 +8,7 @@ import com.tib.api.model.enums.Currency;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,25 +22,25 @@ public class ServiceEntity   {
 
     
     /**
-     * Retrieves or assigns the service's name.
+     * The name of the service that processed the transfer
      */
     @JsonProperty("ServiceName")
     private String serviceName;
 
     /**
-     * Retrieves or assigns the default language preference for a customer.
+     * The default language assigned to the customer for all platform communications.
      */
     @JsonProperty("DefaultCustomerLanguage")
     private Language defaultCustomerLanguage;
 
     /**
-     * Gets or sets the type of the provider.
+     * Identifies the category of the service provider for the requested service
      */
     @JsonProperty("ProviderType")
     private Provider providerType;
 
     /**
-     * Retrieves or assigns the currency type used in transactions.
+     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
      */
     @JsonProperty("Currency")
     private Currency currency;

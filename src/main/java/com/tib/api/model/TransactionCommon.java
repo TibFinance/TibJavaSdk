@@ -11,7 +11,7 @@ import com.tib.api.model.enums.PaymentMethodType;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -25,82 +25,82 @@ public class TransactionCommon   {
 
     
     /**
-     * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
+     * Specifies the destination entity of the transfer returned by ListTransfers
      */
     @JsonProperty("OperationTarget")
     private OperationTarget operationTarget;
 
     /**
-     * Specifies the operation category used throughout the API.
+     * The kind of operation the transfer represents
      */
     @JsonProperty("OperationType")
     private OperationType operationType;
 
     /**
-     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     * Indicates whether the listed transfer is inbound to or outbound from the queried account
      */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
-     * Represents the current state of a transaction within the system.
+     * Indicates the current status of the transfer operation.
      */
     @JsonProperty("Status")
     private OperationStatus status;
 
     /**
-     * Provides a detailed explanation of the function's purpose and usage within the API.
+     * Human‑readable description of the transfer
      */
     @JsonProperty("Description")
     private String description;
 
     /**
-     * Gets or sets the result of a banking operation as defined by the BankingOperationResultEnum.
+     * Indicates the outcome of the banking operation for each listed transfer
      */
     @JsonProperty("BankingOperationResult")
     private BankingOperationResult bankingOperationResult;
 
     /**
-     * Gets or sets the textual description of the bank associated with the transaction.
+     * The name of the bank associated with the transfer.
      */
     @JsonProperty("BankDescription")
     private String bankDescription;
 
     /**
-     * Represents the name associated with the merchant's account.
+     * The display name of the account involved in the transfer.
      */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
-     * Gets or sets the preview text for a merchant account.
+     * A short preview of the account involved in the transfer.
      */
     @JsonProperty("AccoutPreview")
     private String accoutPreview;
 
     /**
-     * Specifies the payment method type associated with the account.
+     * The type of payment method used for the transfer.
      */
     @JsonProperty("AccountType")
     private PaymentMethodType accountType;
 
     /**
-     * Gets or sets the description associated with a transaction.
+     * A free‑form text describing the purpose or details of the transfer.
      */
     @JsonProperty("TransactionDescription")
     private String transactionDescription;
 
     /**
-     * Retrieves or assigns the due date for a transaction.
+     * The scheduled date and time when the listed transfer is due to be executed.
      */
     @JsonProperty("TransactionDueDate")
-    private LocalDateTime transactionDueDate;
+    private OffsetDateTime transactionDueDate;
 
     /**
-     * Gets or sets the timestamp indicating when the entity was last modified.
+     * The date and time when the transfer record was last modified.
      */
     @JsonProperty("LastModifiedDate")
-    private LocalDateTime lastModifiedDate;
+    private OffsetDateTime lastModifiedDate;
 
 
     
@@ -108,7 +108,7 @@ public class TransactionCommon   {
     }
 
     
-    public TransactionCommon(OperationTarget operationTarget, OperationType operationType, TransferDirection operationDirection, OperationStatus status, String description, BankingOperationResult bankingOperationResult, String bankDescription, String accountName, String accoutPreview, PaymentMethodType accountType, String transactionDescription, LocalDateTime transactionDueDate, LocalDateTime lastModifiedDate) {
+    public TransactionCommon(OperationTarget operationTarget, OperationType operationType, TransferDirection operationDirection, OperationStatus status, String description, BankingOperationResult bankingOperationResult, String bankDescription, String accountName, String accoutPreview, PaymentMethodType accountType, String transactionDescription, OffsetDateTime transactionDueDate, OffsetDateTime lastModifiedDate) {
         this.operationTarget = operationTarget;
         this.operationType = operationType;
         this.operationDirection = operationDirection;
@@ -215,19 +215,19 @@ public class TransactionCommon   {
         this.transactionDescription = transactionDescription;
     }
 
-    public LocalDateTime getTransactionDueDate() {
+    public OffsetDateTime getTransactionDueDate() {
         return transactionDueDate;
     }
 
-    public void setTransactionDueDate(LocalDateTime transactionDueDate) {
+    public void setTransactionDueDate(OffsetDateTime transactionDueDate) {
         this.transactionDueDate = transactionDueDate;
     }
 
-    public LocalDateTime getLastModifiedDate() {
+    public OffsetDateTime getLastModifiedDate() {
         return lastModifiedDate;
     }
 
-    public void setLastModifiedDate(LocalDateTime lastModifiedDate) {
+    public void setLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
     }
 

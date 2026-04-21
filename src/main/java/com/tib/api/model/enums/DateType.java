@@ -17,4 +17,12 @@ public enum DateType {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static DateType fromValue(int value) {
+        for (DateType v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

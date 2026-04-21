@@ -1,0 +1,77 @@
+
+package com.tib.api.model.request;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
+
+
+import java.time.Instant;
+import java.time.OffsetDateTime;
+import java.util.Date;
+import java.util.Objects;
+import java.util.UUID;
+import java.util.List;
+import java.util.Arrays;
+import java.util.Map;
+import java.util.Optional;
+
+
+public class ListSupplierRecurringTransfersArgs  extends BaseAuthenticatedCryptedArgs  {
+
+    
+    /**
+     * The unique identifier of the merchant initiating the payment request.
+     */
+    @JsonProperty("MerchantId")
+    private String merchantId;
+
+
+    
+    public ListSupplierRecurringTransfersArgs() {
+    }
+
+    
+    public ListSupplierRecurringTransfersArgs(String merchantId) {
+        this.merchantId = merchantId;
+    }
+    
+    
+    public ListSupplierRecurringTransfersArgs(String sessionToken, String merchantId) {
+        super(sessionToken);
+        this.merchantId = merchantId;
+    }
+
+    
+    public String getMerchantId() {
+        return merchantId;
+    }
+
+    public void setMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+    }
+
+
+
+    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ListSupplierRecurringTransfersArgs that = (ListSupplierRecurringTransfersArgs) o;
+        return Objects.equals(merchantId, that.merchantId) ;
+    }
+
+    
+    @Override
+    public int hashCode() {
+        return Objects.hash(merchantId);
+    }
+
+    @Override
+    public String toString() {
+        return "ListSupplierRecurringTransfersArgs{" +
+                "merchantId='" + merchantId + '\'' +
+
+                '}';
+    }
+}

@@ -17,4 +17,12 @@ public enum Provider {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static Provider fromValue(int value) {
+        for (Provider v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

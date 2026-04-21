@@ -10,7 +10,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -27,15 +27,22 @@ public class CreateFreeOperationBatchResponse extends CustomAPIResponse {
     private List<CreateFreeOperationBatchResponseBase> createFreeOperationBatchResponses;
 
 
+    public CreateFreeOperationBatchResponse() {
+    }
+
     public CreateFreeOperationBatchResponse(Error[] errors, boolean hasError, String messages, List<CreateFreeOperationBatchResponseBase> createFreeOperationBatchResponses) {
         super(errors, hasError, messages);
         this.createFreeOperationBatchResponses = createFreeOperationBatchResponses;
     }
 
-    public CreateFreeOperationBatchResponse(APIResponse apiResponse) {
+    public CreateFreeOperationBatchResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.createFreeOperationBatchResponses = (List<CreateFreeOperationBatchResponseBase>) apiResponse.getResponse();
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                CreateFreeOperationBatchResponse __typed = objectMapper.readValue(__rawBody, CreateFreeOperationBatchResponse.class);
+                this.createFreeOperationBatchResponses = __typed.createFreeOperationBatchResponses;
+            }
         }
     }
 

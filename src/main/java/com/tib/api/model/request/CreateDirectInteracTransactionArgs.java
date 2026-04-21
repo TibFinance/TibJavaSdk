@@ -10,7 +10,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -24,55 +24,55 @@ public class CreateDirectInteracTransactionArgs  extends BaseAuthenticatedCrypte
 
     
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * This model encapsulates the details required to manage Interac payment methods for customers. It is used to facilitate electronic funds transfers via the Interac network, a widely used payment system in Canada.
+     * Details of the Interac e‑transfer payment method to be created.
      */
     @JsonProperty("InteracInformation")
     private Interac interacInformation;
 
     /**
-     * Indicates the direction of an Interac transaction.
+     * This property determine if you desire to deposit money to someone account of if you request someone to pay the merchant using Interac.
      */
     @JsonProperty("TransferDirection")
     private TransferDirection transferDirection;
 
     /**
-     * Specifies the due date for the payment. If the value is null, the system treats the due date as the current date and time.
+     * The date by which the created payment must be settled.
      */
     @JsonProperty("DueDate")
-    private LocalDateTime dueDate;
+    private OffsetDateTime dueDate;
 
     /**
-     * Retrieves or assigns the monetary amount involved in the transaction.
+     * The monetary value of each recurring transfer.
      */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
-     * Represents a brief description used in statements to identify or clarify the transaction.
+     * The text that will appear on the payer’s bank statement for this payment.
      */
     @JsonProperty("StatementDescription")
     private String statementDescription;
 
     /**
-     * Retrieves or assigns the currency type used in transactions.
+     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
      */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
-     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     * Specifies the language used for the payment request and related communications
      */
     @JsonProperty("Language")
     private Language language;
 
     /**
-     * Retrieves or assigns the reference number associated with a transaction or operation.
+     * Use this property to match transaction in other system.
      */
     @JsonProperty("ReferenceNumber")
     private String referenceNumber;
@@ -83,7 +83,7 @@ public class CreateDirectInteracTransactionArgs  extends BaseAuthenticatedCrypte
     }
 
     
-    public CreateDirectInteracTransactionArgs(String merchantId, Interac interacInformation, TransferDirection transferDirection, LocalDateTime dueDate, Double amount, String statementDescription, Currency currency, Language language, String referenceNumber) {
+    public CreateDirectInteracTransactionArgs(String merchantId, Interac interacInformation, TransferDirection transferDirection, OffsetDateTime dueDate, Double amount, String statementDescription, Currency currency, Language language, String referenceNumber) {
         this.merchantId = merchantId;
         this.interacInformation = interacInformation;
         this.transferDirection = transferDirection;
@@ -96,7 +96,7 @@ public class CreateDirectInteracTransactionArgs  extends BaseAuthenticatedCrypte
     }
     
     
-    public CreateDirectInteracTransactionArgs(String sessionToken, String merchantId, Interac interacInformation, TransferDirection transferDirection, LocalDateTime dueDate, Double amount, String statementDescription, Currency currency, Language language, String referenceNumber) {
+    public CreateDirectInteracTransactionArgs(String sessionToken, String merchantId, Interac interacInformation, TransferDirection transferDirection, OffsetDateTime dueDate, Double amount, String statementDescription, Currency currency, Language language, String referenceNumber) {
         super(sessionToken);
         this.merchantId = merchantId;
         this.interacInformation = interacInformation;
@@ -134,11 +134,11 @@ public class CreateDirectInteracTransactionArgs  extends BaseAuthenticatedCrypte
         this.transferDirection = transferDirection;
     }
 
-    public LocalDateTime getDueDate() {
+    public OffsetDateTime getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(LocalDateTime dueDate) {
+    public void setDueDate(OffsetDateTime dueDate) {
         this.dueDate = dueDate;
     }
 

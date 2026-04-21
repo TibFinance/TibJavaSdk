@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,34 +19,34 @@ public class SupplierView   {
 
     
     /**
-     * 
+     * Unique identifier of the merchant-supplier link.
      */
     @JsonProperty("MerchantSupplierId")
     private String merchantSupplierId;
 
     /**
-     * 
+     * Unique identifier of the supplier's merchant account.
      */
     @JsonProperty("SupplierId")
     private String supplierId;
 
     /**
-     * 
+     * Display name of the supplier.
      */
     @JsonProperty("SupplierName")
     private String supplierName;
 
     /**
-     * 
+     * Email address of the supplier.
      */
     @JsonProperty("SupplierEmail")
     private String supplierEmail;
 
     /**
-     * 
+     * Date and time the supplier link was created.
      */
     @JsonProperty("Created")
-    private LocalDateTime created;
+    private OffsetDateTime created;
 
 
     
@@ -54,7 +54,7 @@ public class SupplierView   {
     }
 
     
-    public SupplierView(String merchantSupplierId, String supplierId, String supplierName, String supplierEmail, LocalDateTime created) {
+    public SupplierView(String merchantSupplierId, String supplierId, String supplierName, String supplierEmail, OffsetDateTime created) {
         this.merchantSupplierId = merchantSupplierId;
         this.supplierId = supplierId;
         this.supplierName = supplierName;
@@ -97,11 +97,11 @@ public class SupplierView   {
         this.supplierEmail = supplierEmail;
     }
 
-    public LocalDateTime getCreated() {
+    public OffsetDateTime getCreated() {
         return created;
     }
 
-    public void setCreated(LocalDateTime created) {
+    public void setCreated(OffsetDateTime created) {
         this.created = created;
     }
 

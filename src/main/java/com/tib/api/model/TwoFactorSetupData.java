@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,31 +19,31 @@ public class TwoFactorSetupData   {
 
     
     /**
-     * Base64-encoded PNG image of the QR code for scanning with authenticator apps.
+     * Base64‑encoded image of the merchant's QR code.
      */
     @JsonProperty("QrCodeBase64")
     private String qrCodeBase64;
 
     /**
-     * The secret key in Base32 format for manual entry into authenticator apps. Display this if the user cannot scan the QR code.
+     * A unique identifier returned when the merchant account was created via manual entry.
      */
     @JsonProperty("ManualEntryKey")
     private String manualEntryKey;
 
     /**
-     * Full otpauth: URI for the TOTP entry. Can be used by API clients to generate their own QR code. Format: otpauth:totpTIB Portal:username?secret=BASE32SECRET&issuer=TIB Portal
+     * URI to which the merchant must redirect the user to complete OTP authentication
      */
     @JsonProperty("OtpAuthUri")
     private String otpAuthUri;
 
     /**
-     * The issuer name shown in the authenticator app (e.g., "TIB Portal").
+     * The name or code of the financial institution that issued the merchant’s account.
      */
     @JsonProperty("Issuer")
     private String issuer;
 
     /**
-     * Represents the name associated with the merchant's account.
+     * The display name of the account involved in the transfer.
      */
     @JsonProperty("AccountName")
     private String accountName;

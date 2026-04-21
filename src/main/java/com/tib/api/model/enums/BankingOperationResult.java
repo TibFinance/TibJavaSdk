@@ -17,4 +17,12 @@ public enum BankingOperationResult {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static BankingOperationResult fromValue(int value) {
+        for (BankingOperationResult v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

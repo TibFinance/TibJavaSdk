@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,49 +19,49 @@ public class ContactInfo   {
 
     
     /**
-     * Specifies the email address associated with the merchant.
+     * The merchant's primary contact email address.
      */
     @JsonProperty("Email")
     private String email;
 
     /**
-     * 
+     * Contact phone number.
      */
     @JsonProperty("Phone")
     private String phone;
 
     /**
-     * Gets or sets the address associated with the entity.
+     * The merchant's physical address.
      */
     @JsonProperty("Address")
     private String address;
 
     /**
-     * 
+     * City name.
      */
     @JsonProperty("City")
     private String city;
 
     /**
-     * 
+     * Province or state.
      */
     @JsonProperty("Province")
     private Integer province;
 
     /**
-     * 
+     * Country name.
      */
     @JsonProperty("Country")
     private Integer country;
 
     /**
-     * 
+     * Postal code of the cardholder's billing address
      */
     @JsonProperty("ZipCode")
     private String zipCode;
 
     /**
-     * Defines the default language for a customer. If not explicitly specified during customer creation, the language setting of the primary merchant is used as the default.
+     * Specifies the language used for the payment request and related communications
      */
     @JsonProperty("Language")
     private Integer language;

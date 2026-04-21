@@ -9,7 +9,7 @@ import com.tib.api.model.enums.ProcessStatus;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -23,85 +23,85 @@ public class FreeCollectionWithHierarchy   {
 
     
     /**
-     * Gets or sets the unique identifier of a free‑collection operation. This GUID is assigned by TIB Finance when a free operation is created and is required to reference the operation in subsequent API calls.
+     * Unique identifier of this free collection.
      */
     @JsonProperty("FreeCollectionId")
     private String freeCollectionId;
 
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
 
     /**
-     * Retrieves or assigns the currency type used in transactions.
+     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
      */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
-     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     * Indicates whether the listed transfer is inbound to or outbound from the queried account
      */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
-     * Specifies the category of a financial operation.
+     * Specifies the category of the transfer operation returned by the API
      */
     @JsonProperty("OperationKind")
     private OperationKind operationKind;
 
     /**
-     * Retrieves or assigns the monetary amount involved in the transaction.
+     * The monetary value of each recurring transfer.
      */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
-     * Gets or sets the monetary amount associated with an operation.
+     * Dollar amount of the combined operation.
      */
     @JsonProperty("OperationAmount")
     private Double operationAmount;
 
     /**
-     * Current processing state of a transaction or operation.
+     * The current processing status of the transfer.
      */
     @JsonProperty("CurrentStatus")
     private ProcessStatus currentStatus;
 
     /**
-     * The date and time when the payment was created.
+     * The date and time when the recurring transfer was initially created.
      */
     @JsonProperty("CreatedDate")
-    private LocalDateTime createdDate;
+    private OffsetDateTime createdDate;
 
     /**
-     * Represents the name associated with the merchant's account.
+     * The display name of the account involved in the transfer.
      */
     @JsonProperty("AccountName")
     private String accountName;
 
     /**
-     * Gets or sets the reference identifier used to uniquely identify a transaction, operation, or entity within the TIB Finance system.
+     * Unique identifier of the wallet information record returned by the service
      */
     @JsonProperty("ReferenceId")
     private String referenceId;
 
     /**
-     * Gets or sets the execution date and time of the transaction.
+     * The timestamp when the transfer was executed.
      */
     @JsonProperty("ExecutedDate")
-    private LocalDateTime executedDate;
+    private OffsetDateTime executedDate;
 
     /**
-     * Gets or sets the date and time when the transfer must be completed.
+     * Scheduled execution date for the collection.
      */
     @JsonProperty("TransferDueDate")
-    private LocalDateTime transferDueDate;
+    private OffsetDateTime transferDueDate;
 
     /**
-     * Identifies the type of payment method linked to a specific account.
+     * The payment method type employed for the transfer.
      */
     @JsonProperty("PaymentMethodType")
     private Integer paymentMethodType;
@@ -112,7 +112,7 @@ public class FreeCollectionWithHierarchy   {
     }
 
     
-    public FreeCollectionWithHierarchy(String freeCollectionId, String merchantId, Currency currency, TransferDirection operationDirection, OperationKind operationKind, Double amount, Double operationAmount, ProcessStatus currentStatus, LocalDateTime createdDate, String accountName, String referenceId, LocalDateTime executedDate, LocalDateTime transferDueDate, Integer paymentMethodType) {
+    public FreeCollectionWithHierarchy(String freeCollectionId, String merchantId, Currency currency, TransferDirection operationDirection, OperationKind operationKind, Double amount, Double operationAmount, ProcessStatus currentStatus, OffsetDateTime createdDate, String accountName, String referenceId, OffsetDateTime executedDate, OffsetDateTime transferDueDate, Integer paymentMethodType) {
         this.freeCollectionId = freeCollectionId;
         this.merchantId = merchantId;
         this.currency = currency;
@@ -196,11 +196,11 @@ public class FreeCollectionWithHierarchy   {
         this.currentStatus = currentStatus;
     }
 
-    public LocalDateTime getCreatedDate() {
+    public OffsetDateTime getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(LocalDateTime createdDate) {
+    public void setCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
     }
 
@@ -220,19 +220,19 @@ public class FreeCollectionWithHierarchy   {
         this.referenceId = referenceId;
     }
 
-    public LocalDateTime getExecutedDate() {
+    public OffsetDateTime getExecutedDate() {
         return executedDate;
     }
 
-    public void setExecutedDate(LocalDateTime executedDate) {
+    public void setExecutedDate(OffsetDateTime executedDate) {
         this.executedDate = executedDate;
     }
 
-    public LocalDateTime getTransferDueDate() {
+    public OffsetDateTime getTransferDueDate() {
         return transferDueDate;
     }
 
-    public void setTransferDueDate(LocalDateTime transferDueDate) {
+    public void setTransferDueDate(OffsetDateTime transferDueDate) {
         this.transferDueDate = transferDueDate;
     }
 

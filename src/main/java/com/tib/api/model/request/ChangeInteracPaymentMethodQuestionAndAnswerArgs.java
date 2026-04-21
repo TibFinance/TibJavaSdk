@@ -6,7 +6,7 @@ import com.tib.api.model.request.BaseAuthenticatedCryptedArgs;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,25 +20,25 @@ public class ChangeInteracPaymentMethodQuestionAndAnswerArgs  extends BaseAuthen
 
     
     /**
-     * Represents the unique identifier for an Interac payment method associated with a customer account.
+     * Identity of the Interac Payment Method
      */
     @JsonProperty("InteracPaymentMethodId")
     private String interacPaymentMethodId;
 
     /**
-     * The question displayed to the Interac recipient to request acceptance of a deposit.
+     * The security question presented to the payer for an Interac e‑Transfer payment.
      */
     @JsonProperty("InteracQuestion")
     private String interacQuestion;
 
     /**
-     * InteracAnswer is the response string that the target must provide to accept an Interac deposit.
+     * The answer to the security question required for creating an Interac payment method.
      */
     @JsonProperty("InteracAnswer")
     private String interacAnswer;
 
     /**
-     * The MerchantId property retrieves or assigns a unique Guid identifier for a specific merchant.
+     * The unique identifier of the merchant initiating the payment request.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

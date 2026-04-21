@@ -10,7 +10,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -30,17 +30,24 @@ public class GetServiceBoardingStatusResponse extends CustomAPIResponse {
     private List<BoardingServiceMerchant> boardingServiceMerchants;
 
 
+    public GetServiceBoardingStatusResponse() {
+    }
+
     public GetServiceBoardingStatusResponse(Error[] errors, boolean hasError, String messages, String serviceId, List<BoardingServiceMerchant> boardingServiceMerchants) {
         super(errors, hasError, messages);
         this.serviceId = serviceId;
         this.boardingServiceMerchants = boardingServiceMerchants;
     }
 
-    public GetServiceBoardingStatusResponse(APIResponse apiResponse) {
+    public GetServiceBoardingStatusResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.serviceId = apiResponse.getResponse().toString();
-            this.boardingServiceMerchants = (List<BoardingServiceMerchant>) apiResponse.getResponse();
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                GetServiceBoardingStatusResponse __typed = objectMapper.readValue(__rawBody, GetServiceBoardingStatusResponse.class);
+                this.serviceId = __typed.serviceId;
+                this.boardingServiceMerchants = __typed.boardingServiceMerchants;
+            }
         }
     }
 

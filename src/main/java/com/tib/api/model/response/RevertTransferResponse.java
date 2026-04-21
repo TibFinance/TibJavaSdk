@@ -9,7 +9,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -25,6 +25,9 @@ public class RevertTransferResponse extends CustomAPIResponse {
     @JsonProperty("HasBeenDeleted")
     private boolean hasBeenDeleted;
 
+
+    public RevertTransferResponse() {
+    }
 
     public RevertTransferResponse(Error[] errors, boolean hasError, String messages, boolean hasBeenDeleted) {
         super(errors, hasError, messages);

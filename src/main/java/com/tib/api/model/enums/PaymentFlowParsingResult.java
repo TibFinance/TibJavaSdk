@@ -17,4 +17,12 @@ public enum PaymentFlowParsingResult {
     public int getValue() {
         return value;
     }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static PaymentFlowParsingResult fromValue(int value) {
+        for (PaymentFlowParsingResult v : values()) {
+            if (v.value == value) return v;
+        }
+        return null;
+    }
 }

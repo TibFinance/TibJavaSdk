@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,25 +19,25 @@ public class WalletOperation   {
 
     
     /**
-     * 
+     * Date and time of the wallet operation.
      */
     @JsonProperty("Date")
-    private LocalDateTime date;
+    private OffsetDateTime date;
 
     /**
-     * Retrieves or assigns the monetary amount involved in the transaction.
+     * The monetary value of each recurring transfer.
      */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
-     * 
+     * Whether this operation was a withdrawal from the wallet.
      */
     @JsonProperty("IsWithdrawn")
     private boolean isWithdrawn;
 
     /**
-     * Provides a detailed explanation of the function's purpose and usage within the API.
+     * Human‑readable description of the transfer
      */
     @JsonProperty("Description")
     private String description;
@@ -48,7 +48,7 @@ public class WalletOperation   {
     }
 
     
-    public WalletOperation(LocalDateTime date, Double amount, boolean isWithdrawn, String description) {
+    public WalletOperation(OffsetDateTime date, Double amount, boolean isWithdrawn, String description) {
         this.date = date;
         this.amount = amount;
         this.isWithdrawn = isWithdrawn;
@@ -58,11 +58,11 @@ public class WalletOperation   {
     
 
     
-    public LocalDateTime getDate() {
+    public OffsetDateTime getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(OffsetDateTime date) {
         this.date = date;
     }
 

@@ -10,7 +10,7 @@ import com.tib.api.model.response.CustomAPIResponse;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -27,15 +27,22 @@ public class ListCustomersResponse extends CustomAPIResponse {
     private List<Customer> customers;
 
 
+    public ListCustomersResponse() {
+    }
+
     public ListCustomersResponse(Error[] errors, boolean hasError, String messages, List<Customer> customers) {
         super(errors, hasError, messages);
         this.customers = customers;
     }
 
-    public ListCustomersResponse(APIResponse apiResponse) {
+    public ListCustomersResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.customers = (List<Customer>) apiResponse.getResponse();
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                ListCustomersResponse __typed = objectMapper.readValue(__rawBody, ListCustomersResponse.class);
+                this.customers = __typed.customers;
+            }
         }
     }
 

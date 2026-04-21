@@ -8,7 +8,7 @@ import com.tib.api.model.enums.PaymentMethodType;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -22,115 +22,115 @@ public class PaymentBase   {
 
     
     /**
-     * Retrieves or assigns the unique identifier for a bill.
+     * Unique identifier of the bill to be paid
      */
     @JsonProperty("BillId")
     private String billId;
 
     /**
-     * Identifier utilized by an external system for bill tracking.
+     * External system's primary bill identifier returned for the transfer
      */
     @JsonProperty("BillExternalSystemNumber1")
     private String billExternalSystemNumber1;
 
     /**
-     * Represents the identifier used by an external system for billing purposes.
+     * Secondary external system identifier associated with the bill.
      */
     @JsonProperty("BillExternalSystemNumber2")
     private String billExternalSystemNumber2;
 
     /**
-     * Identifier utilized by an external system for bill tracking.
+     * The third external system identifier associated with the bill.
      */
     @JsonProperty("BillExternalSystemNumber3")
     private String billExternalSystemNumber3;
 
     /**
-     * Represents the title of a bill associated with a payment.
+     * The title or description of the bill linked to the transfer.
      */
     @JsonProperty("BillTitle")
     private String billTitle;
 
     /**
-     * Identifies the customer linked to this payment, when a customer relationship exists.
+     * Identifier of the customer associated with the payment
      */
     @JsonProperty("RelatedCustomerId")
     private String relatedCustomerId;
 
     /**
-     * Identifies the external customer associated with the payment, when applicable.
+     * External identifier of the customer on the opposite side of the transfer.
      */
     @JsonProperty("RelatedCustomerExternalId")
     private String relatedCustomerExternalId;
 
     /**
-     * Provides a textual description of the bill associated with a payment.
+     * The textual description of the bill associated with the transfer.
      */
     @JsonProperty("BillDescription")
     private String billDescription;
 
     /**
-     * Retrieves or assigns the unique identifier for a payment.
+     * Unique identifier of the newly created payment
      */
     @JsonProperty("PaymentId")
     private String paymentId;
 
     /**
-     * Indicates whether the payment is processed automatically without user intervention.
+     * Indicates whether the listed transfer was created automatically (e.g., scheduled or recurring).
      */
     @JsonProperty("IsAutomaticPayment")
     private boolean isAutomaticPayment;
 
     /**
-     * Contains metadata for a payment operation.
+     * PaymentInfo provides the full set of data required to create a new payment.
      */
     @JsonProperty("PaymentInfo")
     private PaymentEntity paymentInfo;
 
     /**
-     * Flag used to indicate that the payment is resolved in the third‑party system. It is employed solely for filtering payment lists.
+     * Indicates whether the listed transfer has been marked as resolved.
      */
     @JsonProperty("IsMarkResolved")
     private boolean isMarkResolved;
 
     /**
-     * Current processing state of a transaction or operation.
+     * The current processing status of the transfer.
      */
     @JsonProperty("CurrentStatus")
     private ProcessStatus currentStatus;
 
     /**
-     * Gets or sets the fee applied to credit‑card transactions when the convenient fee option is used.
+     * The fee amount applied to a credit‑card transfer when the convenient fee option is used.
      */
     @JsonProperty("ConvenientFeeCreditCard")
     private Double convenientFeeCreditCard;
 
     /**
-     * Gets or sets the fee amount that is directly applied to the merchant's account for convenience services.
+     * The convenience fee charged for a direct account transfer.
      */
     @JsonProperty("ConvenientFeeDirectAccount")
     private Double convenientFeeDirectAccount;
 
     /**
-     * The date and time when the payment was created.
+     * The date and time when the recurring transfer was initially created.
      */
     @JsonProperty("CreatedDate")
-    private LocalDateTime createdDate;
+    private OffsetDateTime createdDate;
 
     /**
-     * Provides a detailed description of the payment method for easy identification.
+     * Descriptive name of the payment method used for the transfer.
      */
     @JsonProperty("PaymentMethodDescription")
     private String paymentMethodDescription;
 
     /**
-     * Provides a read‑only preview of the merchant’s bank account information.
+     * A short preview of the account involved in the transfer.
      */
     @JsonProperty("AccountInformationPreview")
     private String accountInformationPreview;
 
     /**
-     * Identifies the type of payment method linked to a specific account.
+     * The payment method type employed for the transfer.
      */
     @JsonProperty("PaymentMethodType")
     private PaymentMethodType paymentMethodType;
@@ -141,7 +141,7 @@ public class PaymentBase   {
     }
 
     
-    public PaymentBase(String billId, String billExternalSystemNumber1, String billExternalSystemNumber2, String billExternalSystemNumber3, String billTitle, String relatedCustomerId, String relatedCustomerExternalId, String billDescription, String paymentId, boolean isAutomaticPayment, PaymentEntity paymentInfo, boolean isMarkResolved, ProcessStatus currentStatus, Double convenientFeeCreditCard, Double convenientFeeDirectAccount, LocalDateTime createdDate, String paymentMethodDescription, String accountInformationPreview, PaymentMethodType paymentMethodType) {
+    public PaymentBase(String billId, String billExternalSystemNumber1, String billExternalSystemNumber2, String billExternalSystemNumber3, String billTitle, String relatedCustomerId, String relatedCustomerExternalId, String billDescription, String paymentId, boolean isAutomaticPayment, PaymentEntity paymentInfo, boolean isMarkResolved, ProcessStatus currentStatus, Double convenientFeeCreditCard, Double convenientFeeDirectAccount, OffsetDateTime createdDate, String paymentMethodDescription, String accountInformationPreview, PaymentMethodType paymentMethodType) {
         this.billId = billId;
         this.billExternalSystemNumber1 = billExternalSystemNumber1;
         this.billExternalSystemNumber2 = billExternalSystemNumber2;
@@ -286,11 +286,11 @@ public class PaymentBase   {
         this.convenientFeeDirectAccount = convenientFeeDirectAccount;
     }
 
-    public LocalDateTime getCreatedDate() {
+    public OffsetDateTime getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(LocalDateTime createdDate) {
+    public void setCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
     }
 

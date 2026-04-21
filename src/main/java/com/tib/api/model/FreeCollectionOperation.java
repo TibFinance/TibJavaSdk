@@ -10,7 +10,7 @@ import com.tib.api.model.FreeCollectionWithHierarchy;
 
 
 import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -24,49 +24,49 @@ public class FreeCollectionOperation   {
 
     
     /**
-     * Gets or sets the operation type reference identifier that categorizes an operation.
+     * Reference identifier for the operation type.
      */
     @JsonProperty("OperationTypeRef")
     private String operationTypeRef;
 
     /**
-     * Retrieves or assigns the monetary amount involved in the transaction.
+     * The monetary value of each recurring transfer.
      */
     @JsonProperty("Amount")
     private Double amount;
 
     /**
-     * Retrieves or assigns the currency type used in transactions.
+     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
      */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
-     * Specifies the target of an operation, indicating whether the operation pertains to the merchant or the customer.
+     * Specifies the destination entity of the transfer returned by ListTransfers
      */
     @JsonProperty("OperationTarget")
     private OperationTarget operationTarget;
 
     /**
-     * Specifies the direction of the operation, indicating whether funds are being collected or deposited.
+     * Indicates whether the listed transfer is inbound to or outbound from the queried account
      */
     @JsonProperty("OperationDirection")
     private TransferDirection operationDirection;
 
     /**
-     * Gets or sets the unique identifier of the target system used to reference the client’s contract within TIB Finance.
+     * Identifier of the entity in the target financial system.
      */
     @JsonProperty("TargetSystemId")
     private String targetSystemId;
 
     /**
-     * Gets or sets the collection of transaction details associated with the operation.
+     * A list of transfer records returned by the ListTransfers call.
      */
     @JsonProperty("Transactions")
     private List<TransactionCommon> transactions;
 
     /**
-     * Retrieves the collection of free‑operation records, each represented as a FreeCollectionWithHierarchyModel, ordered by their hierarchical relationship.
+     * Child collection operations in the hierarchy.
      */
     @JsonProperty("FreeCollectionList")
     private List<FreeCollectionWithHierarchy> freeCollectionList;
