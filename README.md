@@ -18,9 +18,11 @@ Then add to your `pom.xml`:
 <dependency>
     <groupId>finance.tib</groupId>
     <artifactId>tib-finance-sdk</artifactId>
-    <version>2.0.3</version>
+    <version>2.0.4</version>
 </dependency>
 ```
+
+Alternatively, download the prebuilt jar from the latest [GitHub release](https://github.com/TibFinance/TibJavaSdk/releases).
 
 ## Quick Start
 
@@ -31,19 +33,29 @@ import com.tib.api.model.response.CreateSessionResponse;
 
 TibInvoker.init("https://sandboxportal.tib.finance");
 
-CreateSessionArgs args = new CreateSessionArgs();
-args.setClientId("your_client_id");
-args.setUsername("your_username");
-args.setPassword("your_password");
-CreateSessionResponse response = TibInvoker.portal.createSession(args);
-System.out.println(response.getSessionId());
+CreateSessionArgs sessionArgs = new CreateSessionArgs();
+sessionArgs.setClientId("your_client_id");
+sessionArgs.setUsername("your_username");
+sessionArgs.setPassword("your_password");
+
+// Portal methods declare checked exceptions (crypto/IO), so wrap the call
+try {
+    CreateSessionResponse response = TibInvoker.portal.createSession(sessionArgs);
+    if (response.isHasError()) {
+        System.out.println("Session failed: " + response.getMessages());
+    } else {
+        System.out.println(response.getSessionId());
+    }
+} catch (Exception e) {
+    System.err.println("Request failed: " + e.getMessage());
+}
 ```
 
 ## Documentation
 
 For the complete API reference and guides, visit [doc.tib.finance](https://doc.tib.finance).
 
-This SDK provides access to **56 API methods** for payment processing, merchant management, and financial operations.
+This SDK provides access to **62 API methods** for payment processing, merchant management, and financial operations.
 
 ## Other TIB Finance SDKs
 

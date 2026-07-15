@@ -24,12 +24,14 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.math.BigInteger;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.security.interfaces.RSAKey;
 import java.security.*;
@@ -48,7 +50,18 @@ public class APIClient extends AbstractAPIClient {
 
     public APIClient(ObjectMapper objectMapper, String baseURL) {
         this.objectMapper = objectMapper;
-        this.baseUrl = baseURL;
+        this.baseUrl = normalizeBaseUrl(baseURL);
+    }
+
+    private static String normalizeBaseUrl(String baseURL) {
+        String normalized = baseURL;
+        while (normalized.endsWith("/")) {
+            normalized = normalized.substring(0, normalized.length() - 1);
+        }
+        if (!normalized.toLowerCase().endsWith("/data")) {
+            normalized = normalized + "/Data";
+        }
+        return normalized;
     }
 
     @Override
@@ -83,7 +96,7 @@ public class APIClient extends AbstractAPIClient {
             throw new IOException("Failed to decode server response - invalid Base64: " + e.getMessage(), e);
         }
         byte[] decryptedArr = cipher.doFinal(decodedArr);
-        String decryptedText = new String(decryptedArr);
+        String decryptedText = new String(decryptedArr, StandardCharsets.UTF_8);
         APIResponse apiResponse = objectMapper.readValue(decryptedText, APIResponse.class);
         apiResponse.setRawBody(decryptedText);
         return apiResponse;
@@ -162,6 +175,11 @@ public class APIClient extends AbstractAPIClient {
         String response = makeHttpCall(baseUrl + PUBLIC_KEY_REQUEST_URL, HttpMethod.POST, "", 200);
         TibPublicKeyModel tibPublicKeyModel = null;
         tibPublicKeyModel = objectMapper.readValue(response, TibPublicKeyModel.class);
+        if (tibPublicKeyModel == null || tibPublicKeyModel.getPublicKeyXmlString() == null
+                || tibPublicKeyModel.getPublicKeyXmlString().isEmpty()) {
+            String snippet = (response != null && response.length() > 200) ? response.substring(0, 200) : response;
+            throw new IOException("GetPublicKey returned an unexpected response (check the API base URL): " + snippet);
+        }
         return tibPublicKeyModel;
     }
 
@@ -169,18 +187,33 @@ public class APIClient extends AbstractAPIClient {
         URL url = new URL(httpURL);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         try {
+            conn.setConnectTimeout(30000);
+            conn.setReadTimeout(120000);
             conn.setDoOutput(true);
             conn.setRequestMethod(httpMethod.toString());
             conn.setRequestProperty("Content-Type", "application/json");
 
             try (OutputStream os = conn.getOutputStream()) {
-                os.write(input.getBytes());
+                os.write(input.getBytes(StandardCharsets.UTF_8));
                 os.flush();
             }
 
-            if (conn.getResponseCode() != httpStatus) {
-                throw new RuntimeException("Failed : HTTP error code : "
-                        + conn.getResponseCode());
+            int responseCode = conn.getResponseCode();
+            if (responseCode != httpStatus) {
+                StringBuilder errorBody = new StringBuilder();
+                InputStream errorStream = conn.getErrorStream();
+                if (errorStream != null) {
+                    try (BufferedReader br = new BufferedReader(new InputStreamReader(
+                            errorStream, StandardCharsets.UTF_8))) {
+                        String errorLine;
+                        while ((errorLine = br.readLine()) != null) {
+                            errorBody.append(errorLine);
+                        }
+                    }
+                }
+                String bodySnippet = errorBody.length() > 300 ? errorBody.substring(0, 300) : errorBody.toString();
+                throw new IOException("TIB Finance API returned HTTP " + responseCode + " for " + httpURL
+                        + ": " + bodySnippet);
             }
 
             StringBuilder responseString = new StringBuilder();
