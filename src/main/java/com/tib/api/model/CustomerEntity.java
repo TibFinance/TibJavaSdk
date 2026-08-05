@@ -22,7 +22,7 @@ public class CustomerEntity   {
 
     
     /**
-     * The full name of the customer who owns the recurring transfer.
+     * The name of the customer
      */
     @JsonProperty("CustomerName")
     private String customerName;

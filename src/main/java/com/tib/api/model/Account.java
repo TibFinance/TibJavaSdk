@@ -27,7 +27,7 @@ public class Account   {
     private String accountName;
 
     /**
-     * Identifier of the entity that owns the payment method.
+     * The full name of the account holder, as registered with the financial institution.
      */
     @JsonProperty("Owner")
     private String owner;
@@ -45,19 +45,25 @@ public class Account   {
     private String lastName;
 
     /**
-     * The type of payment method used for the transfer.
+     * BlueSnap ECP (ACH) account type chosen client-side. Optional, max 40 characters, with no server-side whitelist; TIB's own interfaces send CONSUMER_CHECKING (the default), CONSUMER_SAVINGS, CORPORATE_CHECKING or CORPORATE_SAVINGS. Any value starting with CORPORATE (case-insensitive) makes the server derive the provider-required company name for Corporate eCheck from the account Owner. Not sent to the provider directly.
+     */
+    @JsonProperty("EcpAccountType")
+    private String ecpAccountType;
+
+    /**
+     * The type of bank account (e.g., personal checking, corporate savings).
      */
     @JsonProperty("AccountType")
     private AccountType accountType;
 
     /**
-     * The bank's identification number used for the direct account payment method.
+     * The bank/institution code (Canadian routing) identifying the financial institution where the account is held — normally 3 digits, though accounts imported from CPA-format routing strings carry it zero-padded to 4 (0III). This is the bank itself, not the branch — the branch transit number is carried by InstitutionNumber.
      */
     @JsonProperty("BankNumber")
     private String bankNumber;
 
     /**
-     * The bank's institution number identifying the financial institution for the direct account payment.
+     * The 5-digit branch/transit number (Canadian routing) where the account is held. Despite the property name, this is the branch transit number, not the institution code — the institution is carried by BankNumber.
      */
     @JsonProperty("InstitutionNumber")
     private String institutionNumber;
@@ -69,7 +75,7 @@ public class Account   {
     private String accountNumber;
 
     /**
-     * The bank routing number identifying the financial institution for the direct account payment.
+     * The combined routing number (bank number + institution number), used to identify the specific branch.
      */
     @JsonProperty("RoutingNumber")
     private String routingNumber;
@@ -81,19 +87,19 @@ public class Account   {
     private String checkDigit;
 
     /**
-     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
+     * The currency denomination of the account (e.g., CAD, USD).
      */
     @JsonProperty("Currency")
     private Currency currency;
 
     /**
-     * The complete bank account number to be used for the direct payment method.
+     * The complete account number string composed of bank number, institution number, account number, and optional check digit, separated by dashes.
      */
     @JsonProperty("FullAccountNumber")
     private String fullAccountNumber;
 
     /**
-     * The full bank account number including its check digit.
+     * The account number appended with the check digit (if present), separated by a dash.
      */
     @JsonProperty("AccountNumberWithCheckDigit")
     private String accountNumberWithCheckDigit;
@@ -110,11 +116,12 @@ public class Account   {
     }
 
     
-    public Account(String accountName, String owner, String firstName, String lastName, AccountType accountType, String bankNumber, String institutionNumber, String accountNumber, String routingNumber, String checkDigit, Currency currency, String fullAccountNumber, String accountNumberWithCheckDigit, String previewString) {
+    public Account(String accountName, String owner, String firstName, String lastName, String ecpAccountType, AccountType accountType, String bankNumber, String institutionNumber, String accountNumber, String routingNumber, String checkDigit, Currency currency, String fullAccountNumber, String accountNumberWithCheckDigit, String previewString) {
         this.accountName = accountName;
         this.owner = owner;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.ecpAccountType = ecpAccountType;
         this.accountType = accountType;
         this.bankNumber = bankNumber;
         this.institutionNumber = institutionNumber;
@@ -160,6 +167,14 @@ public class Account   {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getEcpAccountType() {
+        return ecpAccountType;
+    }
+
+    public void setEcpAccountType(String ecpAccountType) {
+        this.ecpAccountType = ecpAccountType;
     }
 
     public AccountType getAccountType() {
@@ -250,13 +265,13 @@ public class Account   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Account that = (Account) o;
-        return Objects.equals(accountName, that.accountName) && Objects.equals(owner, that.owner) && Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName) && Objects.equals(accountType, that.accountType) && Objects.equals(bankNumber, that.bankNumber) && Objects.equals(institutionNumber, that.institutionNumber) && Objects.equals(accountNumber, that.accountNumber) && Objects.equals(routingNumber, that.routingNumber) && Objects.equals(checkDigit, that.checkDigit) && Objects.equals(currency, that.currency) && Objects.equals(fullAccountNumber, that.fullAccountNumber) && Objects.equals(accountNumberWithCheckDigit, that.accountNumberWithCheckDigit) && Objects.equals(previewString, that.previewString) ;
+        return Objects.equals(accountName, that.accountName) && Objects.equals(owner, that.owner) && Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName) && Objects.equals(ecpAccountType, that.ecpAccountType) && Objects.equals(accountType, that.accountType) && Objects.equals(bankNumber, that.bankNumber) && Objects.equals(institutionNumber, that.institutionNumber) && Objects.equals(accountNumber, that.accountNumber) && Objects.equals(routingNumber, that.routingNumber) && Objects.equals(checkDigit, that.checkDigit) && Objects.equals(currency, that.currency) && Objects.equals(fullAccountNumber, that.fullAccountNumber) && Objects.equals(accountNumberWithCheckDigit, that.accountNumberWithCheckDigit) && Objects.equals(previewString, that.previewString) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(accountName, owner, firstName, lastName, accountType, bankNumber, institutionNumber, accountNumber, routingNumber, checkDigit, currency, fullAccountNumber, accountNumberWithCheckDigit, previewString);
+        return Objects.hash(accountName, owner, firstName, lastName, ecpAccountType, accountType, bankNumber, institutionNumber, accountNumber, routingNumber, checkDigit, currency, fullAccountNumber, accountNumberWithCheckDigit, previewString);
     }
 
     @Override
@@ -266,6 +281,7 @@ public class Account   {
                 ", owner='" + owner + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", ecpAccountType='" + ecpAccountType + '\'' +
                 ", accountType='" + accountType + '\'' +
                 ", bankNumber='" + bankNumber + '\'' +
                 ", institutionNumber='" + institutionNumber + '\'' +

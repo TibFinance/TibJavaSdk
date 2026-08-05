@@ -75,7 +75,7 @@ public class RecuringTransfer   {
     private String relatedMerchantName;
 
     /**
-     * The full name of the customer who owns the recurring transfer.
+     * Name of the customer for this recurring transfer (empty if the customer record was deleted). For supplier transfers the paying merchant is represented as a customer of the supplier, so this carries the paying merchant's name as snapshotted when that customer record was created — later merchant renames do not propagate here.
      */
     @JsonProperty("CustomerName")
     private String customerName;
@@ -116,13 +116,31 @@ public class RecuringTransfer   {
     @JsonProperty("EndDate")
     private OffsetDateTime endDate;
 
+    /**
+     * Indicates whether the listed transfer is a supplier transfer.
+     */
+    @JsonProperty("IsSupplierTransfer")
+    private boolean isSupplierTransfer;
+
+    /**
+     * Display name of the merchant that pays for the supplier transfer. Populated only by GetRecuringTransfers, and only when the recurring transfer is a supplier transfer whose fee-paying merchant still resolves. Always null on ListSupplierRecurringTransfers and ListSupplierRecurringTransfersByService — on those listings the paying merchant surfaces as CustomerName instead.
+     */
+    @JsonProperty("PayerMerchantName")
+    private String payerMerchantName;
+
+    /**
+     * True when the caller is on the paying side of this transfer. ListSupplierRecurringTransfers and ListSupplierRecurringTransfersByService always return true — their rows list transfers from the paying side by construction. GetRecuringTransfers computes it: false when the caller is the supplier-side recipient of a transfer paid by another merchant. Rows where this is false are informational — the server rejects attempts to update or delete them.
+     */
+    @JsonProperty("IsCurrentUserPayer")
+    private boolean isCurrentUserPayer;
+
 
     
     public RecuringTransfer() {
     }
 
     
-    public RecuringTransfer(OffsetDateTime nextRecuringDate, String recuringTransferId, TransferFrequency recuringMode, TransferType transferType, String relatedPaymentMethodId, OffsetDateTime recuringRefDate, OffsetDateTime createdDate, String relatedMerchantId, String relatedMerchantName, String customerName, String customerId, Double amount, String trasnferTitle, String trasnferDescription, String trasnferExternalSystemNumber, OffsetDateTime endDate) {
+    public RecuringTransfer(OffsetDateTime nextRecuringDate, String recuringTransferId, TransferFrequency recuringMode, TransferType transferType, String relatedPaymentMethodId, OffsetDateTime recuringRefDate, OffsetDateTime createdDate, String relatedMerchantId, String relatedMerchantName, String customerName, String customerId, Double amount, String trasnferTitle, String trasnferDescription, String trasnferExternalSystemNumber, OffsetDateTime endDate, boolean isSupplierTransfer, String payerMerchantName, boolean isCurrentUserPayer) {
         this.nextRecuringDate = nextRecuringDate;
         this.recuringTransferId = recuringTransferId;
         this.recuringMode = recuringMode;
@@ -139,6 +157,9 @@ public class RecuringTransfer   {
         this.trasnferDescription = trasnferDescription;
         this.trasnferExternalSystemNumber = trasnferExternalSystemNumber;
         this.endDate = endDate;
+        this.isSupplierTransfer = isSupplierTransfer;
+        this.payerMerchantName = payerMerchantName;
+        this.isCurrentUserPayer = isCurrentUserPayer;
     }
     
     
@@ -272,6 +293,30 @@ public class RecuringTransfer   {
         this.endDate = endDate;
     }
 
+    public boolean getIsSupplierTransfer() {
+        return isSupplierTransfer;
+    }
+
+    public void setIsSupplierTransfer(boolean isSupplierTransfer) {
+        this.isSupplierTransfer = isSupplierTransfer;
+    }
+
+    public String getPayerMerchantName() {
+        return payerMerchantName;
+    }
+
+    public void setPayerMerchantName(String payerMerchantName) {
+        this.payerMerchantName = payerMerchantName;
+    }
+
+    public boolean getIsCurrentUserPayer() {
+        return isCurrentUserPayer;
+    }
+
+    public void setIsCurrentUserPayer(boolean isCurrentUserPayer) {
+        this.isCurrentUserPayer = isCurrentUserPayer;
+    }
+
 
 
     
@@ -280,13 +325,13 @@ public class RecuringTransfer   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         RecuringTransfer that = (RecuringTransfer) o;
-        return Objects.equals(nextRecuringDate, that.nextRecuringDate) && Objects.equals(recuringTransferId, that.recuringTransferId) && Objects.equals(recuringMode, that.recuringMode) && Objects.equals(transferType, that.transferType) && Objects.equals(relatedPaymentMethodId, that.relatedPaymentMethodId) && Objects.equals(recuringRefDate, that.recuringRefDate) && Objects.equals(createdDate, that.createdDate) && Objects.equals(relatedMerchantId, that.relatedMerchantId) && Objects.equals(relatedMerchantName, that.relatedMerchantName) && Objects.equals(customerName, that.customerName) && Objects.equals(customerId, that.customerId) && Objects.equals(amount, that.amount) && Objects.equals(trasnferTitle, that.trasnferTitle) && Objects.equals(trasnferDescription, that.trasnferDescription) && Objects.equals(trasnferExternalSystemNumber, that.trasnferExternalSystemNumber) && Objects.equals(endDate, that.endDate) ;
+        return Objects.equals(nextRecuringDate, that.nextRecuringDate) && Objects.equals(recuringTransferId, that.recuringTransferId) && Objects.equals(recuringMode, that.recuringMode) && Objects.equals(transferType, that.transferType) && Objects.equals(relatedPaymentMethodId, that.relatedPaymentMethodId) && Objects.equals(recuringRefDate, that.recuringRefDate) && Objects.equals(createdDate, that.createdDate) && Objects.equals(relatedMerchantId, that.relatedMerchantId) && Objects.equals(relatedMerchantName, that.relatedMerchantName) && Objects.equals(customerName, that.customerName) && Objects.equals(customerId, that.customerId) && Objects.equals(amount, that.amount) && Objects.equals(trasnferTitle, that.trasnferTitle) && Objects.equals(trasnferDescription, that.trasnferDescription) && Objects.equals(trasnferExternalSystemNumber, that.trasnferExternalSystemNumber) && Objects.equals(endDate, that.endDate) && Objects.equals(isSupplierTransfer, that.isSupplierTransfer) && Objects.equals(payerMerchantName, that.payerMerchantName) && Objects.equals(isCurrentUserPayer, that.isCurrentUserPayer) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(nextRecuringDate, recuringTransferId, recuringMode, transferType, relatedPaymentMethodId, recuringRefDate, createdDate, relatedMerchantId, relatedMerchantName, customerName, customerId, amount, trasnferTitle, trasnferDescription, trasnferExternalSystemNumber, endDate);
+        return Objects.hash(nextRecuringDate, recuringTransferId, recuringMode, transferType, relatedPaymentMethodId, recuringRefDate, createdDate, relatedMerchantId, relatedMerchantName, customerName, customerId, amount, trasnferTitle, trasnferDescription, trasnferExternalSystemNumber, endDate, isSupplierTransfer, payerMerchantName, isCurrentUserPayer);
     }
 
     @Override
@@ -308,6 +353,9 @@ public class RecuringTransfer   {
                 ", trasnferDescription='" + trasnferDescription + '\'' +
                 ", trasnferExternalSystemNumber='" + trasnferExternalSystemNumber + '\'' +
                 ", endDate='" + endDate + '\'' +
+                ", isSupplierTransfer='" + isSupplierTransfer + '\'' +
+                ", payerMerchantName='" + payerMerchantName + '\'' +
+                ", isCurrentUserPayer='" + isCurrentUserPayer + '\'' +
 
                 '}';
     }

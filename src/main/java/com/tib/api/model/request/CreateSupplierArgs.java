@@ -40,7 +40,7 @@ public class CreateSupplierArgs  extends BaseAuthenticatedCryptedArgs  {
     private String supplierEmail;
 
     /**
-     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
+     * Currency for the supplier's account (1 = CAD, 2 = USD).
      */
     @JsonProperty("Currency")
     private Currency currency;
@@ -58,13 +58,13 @@ public class CreateSupplierArgs  extends BaseAuthenticatedCryptedArgs  {
     private String accountNumber;
 
     /**
-     * The bank's identification number used for the direct account payment method.
+     * Supplier's bank/institution code (Canadian routing) — the 3-digit code identifying the financial institution where the account is held. This is the bank itself, not the branch — the branch transit number is carried by InstitutionNumber.
      */
     @JsonProperty("BankNumber")
     private String bankNumber;
 
     /**
-     * The bank's institution number identifying the financial institution for the direct account payment.
+     * Supplier's 5-digit branch/transit number (Canadian routing). Despite the property name, this is the branch transit number, not the institution code — the institution is carried by BankNumber.
      */
     @JsonProperty("InstitutionNumber")
     private String institutionNumber;

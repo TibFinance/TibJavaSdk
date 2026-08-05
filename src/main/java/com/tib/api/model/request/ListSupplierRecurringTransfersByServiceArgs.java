@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
-public class InitBoardingArgs  extends BaseAuthenticatedCryptedArgs  {
+public class ListSupplierRecurringTransfersByServiceArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
@@ -27,16 +27,16 @@ public class InitBoardingArgs  extends BaseAuthenticatedCryptedArgs  {
 
 
     
-    public InitBoardingArgs() {
+    public ListSupplierRecurringTransfersByServiceArgs() {
     }
 
     
-    public InitBoardingArgs(String serviceId) {
+    public ListSupplierRecurringTransfersByServiceArgs(String serviceId) {
         this.serviceId = serviceId;
     }
     
     
-    public InitBoardingArgs(String sessionToken, String serviceId) {
+    public ListSupplierRecurringTransfersByServiceArgs(String sessionToken, String serviceId) {
         super(sessionToken);
         this.serviceId = serviceId;
     }
@@ -57,7 +57,7 @@ public class InitBoardingArgs  extends BaseAuthenticatedCryptedArgs  {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        InitBoardingArgs that = (InitBoardingArgs) o;
+        ListSupplierRecurringTransfersByServiceArgs that = (ListSupplierRecurringTransfersByServiceArgs) o;
         return Objects.equals(serviceId, that.serviceId) ;
     }
 
@@ -69,7 +69,7 @@ public class InitBoardingArgs  extends BaseAuthenticatedCryptedArgs  {
 
     @Override
     public String toString() {
-        return "InitBoardingArgs{" +
+        return "ListSupplierRecurringTransfersByServiceArgs{" +
                 "serviceId='" + serviceId + '\'' +
 
                 '}';

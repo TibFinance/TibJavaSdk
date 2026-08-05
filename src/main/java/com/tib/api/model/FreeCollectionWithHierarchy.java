@@ -35,7 +35,7 @@ public class FreeCollectionWithHierarchy   {
     private String merchantId;
 
     /**
-     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
+     * Currency of the collection (CAD or USD).
      */
     @JsonProperty("Currency")
     private Currency currency;

@@ -29,14 +29,18 @@ public class ListServicesResponse extends CustomAPIResponse {
     @JsonProperty("SkipClientApprobation")
     private boolean skipClientApprobation;
 
+    @JsonProperty("IsClientBoardingExempt")
+    private boolean isClientBoardingExempt;
+
 
     public ListServicesResponse() {
     }
 
-    public ListServicesResponse(Error[] errors, boolean hasError, String messages, List<Service> services, boolean skipClientApprobation) {
+    public ListServicesResponse(Error[] errors, boolean hasError, String messages, List<Service> services, boolean skipClientApprobation, boolean isClientBoardingExempt) {
         super(errors, hasError, messages);
         this.services = services;
         this.skipClientApprobation = skipClientApprobation;
+        this.isClientBoardingExempt = isClientBoardingExempt;
     }
 
     public ListServicesResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
@@ -47,6 +51,7 @@ public class ListServicesResponse extends CustomAPIResponse {
                 ListServicesResponse __typed = objectMapper.readValue(__rawBody, ListServicesResponse.class);
                 this.services = __typed.services;
                 this.skipClientApprobation = __typed.skipClientApprobation;
+                this.isClientBoardingExempt = __typed.isClientBoardingExempt;
             }
         }
     }
@@ -68,6 +73,14 @@ public class ListServicesResponse extends CustomAPIResponse {
         this.skipClientApprobation = skipClientApprobation;
     }
 
+    public boolean getIsClientBoardingExempt() {
+        return isClientBoardingExempt;
+    }
+
+    public void setIsClientBoardingExempt(boolean isClientBoardingExempt) {
+        this.isClientBoardingExempt = isClientBoardingExempt;
+    }
+
 
 
     
@@ -76,13 +89,13 @@ public class ListServicesResponse extends CustomAPIResponse {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ListServicesResponse that = (ListServicesResponse) o;
-        return Objects.equals(services, that.services) && Objects.equals(skipClientApprobation, that.skipClientApprobation) ;
+        return Objects.equals(services, that.services) && Objects.equals(skipClientApprobation, that.skipClientApprobation) && Objects.equals(isClientBoardingExempt, that.isClientBoardingExempt) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(services, skipClientApprobation);
+        return Objects.hash(services, skipClientApprobation, isClientBoardingExempt);
     }
 
     @Override
@@ -90,6 +103,7 @@ public class ListServicesResponse extends CustomAPIResponse {
         return "ListServicesResponse{" +
                 "services='" + services + '\'' +
                 ", skipClientApprobation='" + skipClientApprobation + '\'' +
+                ", isClientBoardingExempt='" + isClientBoardingExempt + '\'' +
 
                 '}';
     }

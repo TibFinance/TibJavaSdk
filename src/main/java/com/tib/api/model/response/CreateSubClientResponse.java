@@ -25,19 +25,28 @@ public class CreateSubClientResponse extends CustomAPIResponse {
     @JsonProperty("ServiceId")
     private String serviceId;
 
+    @JsonProperty("BoardingRedirectUrl")
+    private String boardingRedirectUrl;
+
 
     public CreateSubClientResponse() {
     }
 
-    public CreateSubClientResponse(Error[] errors, boolean hasError, String messages, String serviceId) {
+    public CreateSubClientResponse(Error[] errors, boolean hasError, String messages, String serviceId, String boardingRedirectUrl) {
         super(errors, hasError, messages);
         this.serviceId = serviceId;
+        this.boardingRedirectUrl = boardingRedirectUrl;
     }
 
-    public CreateSubClientResponse(APIResponse apiResponse) {
+    public CreateSubClientResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.serviceId = apiResponse.getResponse().toString();
+            String __rawBody = apiResponse.getRawBody();
+            if (__rawBody != null && !__rawBody.isEmpty()) {
+                CreateSubClientResponse __typed = objectMapper.readValue(__rawBody, CreateSubClientResponse.class);
+                this.serviceId = __typed.serviceId;
+                this.boardingRedirectUrl = __typed.boardingRedirectUrl;
+            }
         }
     }
 
@@ -50,6 +59,14 @@ public class CreateSubClientResponse extends CustomAPIResponse {
         this.serviceId = serviceId;
     }
 
+    public String getBoardingRedirectUrl() {
+        return boardingRedirectUrl;
+    }
+
+    public void setBoardingRedirectUrl(String boardingRedirectUrl) {
+        this.boardingRedirectUrl = boardingRedirectUrl;
+    }
+
 
 
     
@@ -58,19 +75,20 @@ public class CreateSubClientResponse extends CustomAPIResponse {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CreateSubClientResponse that = (CreateSubClientResponse) o;
-        return Objects.equals(serviceId, that.serviceId) ;
+        return Objects.equals(serviceId, that.serviceId) && Objects.equals(boardingRedirectUrl, that.boardingRedirectUrl) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(serviceId);
+        return Objects.hash(serviceId, boardingRedirectUrl);
     }
 
     @Override
     public String toString() {
         return "CreateSubClientResponse{" +
                 "serviceId='" + serviceId + '\'' +
+                ", boardingRedirectUrl='" + boardingRedirectUrl + '\'' +
 
                 '}';
     }

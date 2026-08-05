@@ -234,13 +234,37 @@ public class ServiceSettings   {
     @JsonProperty("DataContext")
     private Integer dataContext;
 
+    /**
+     * Allowlist (AutorizedPaymentMethodFlags bitmask) of the payment method(s) permitted to COLLECT on this account. 0 = NotSet = unrestricted (grandfather default).
+     */
+    @JsonProperty("CollectAllowedPaymentMethods")
+    private Integer collectAllowedPaymentMethods;
+
+    /**
+     * Allowlist (AutorizedPaymentMethodFlags bitmask) of the payment method(s) permitted to DEPOSIT (FreeDeposit) on this account. 0 = NotSet = unrestricted (grandfather default).
+     */
+    @JsonProperty("DepositAllowedPaymentMethods")
+    private Integer depositAllowedPaymentMethods;
+
+    /**
+     * When true, deny ALL FreeDeposit-type transfers for this entity regardless of payment method.
+     */
+    @JsonProperty("DenyFreeDeposits")
+    private boolean denyFreeDeposits;
+
+    /**
+     * When true, deny ALL supplier payments (CreateSupplierTransfer) where this entity is the payer.
+     */
+    @JsonProperty("DenySupplierPayments")
+    private boolean denySupplierPayments;
+
 
     
     public ServiceSettings() {
     }
 
     
-    public ServiceSettings(Double collectionLimit, Double collectionLimitDaily, Double depositLimit, Double depositLimitDaily, Double delayBufferAmount, Double remainingAmount, Double walletBalance, boolean isWalletFeatureActive, Integer walletType, Double nsfBuffer, Double collectionLimitPerBankAccountDaily, Double collectionLimitPerBankAccountPerDelays, Integer collectionLimitPerBankAccountHoursDelays, Double clientWarningCollectionLimit, Integer numberOfCollectionPerBankAccountDaily, Integer numberOfCollectionPerBankPerDelays, Double depositLimitPerBankAccountDaily, Double depositLimitPerBankAccountPerDelays, Integer depositLimitPerBankAccountHoursDelays, Double clientWarningDepositLimit, Integer numberOfDepositPerBankAccountDaily, Integer numberOfDepositPerBankPerDelays, Double tIBWarningCollectionLimit, Double tIBWarningCollectionLimitPerBankAccountDaily, Double tIBWarningCollectionLimitPerBankAccountPerDelays, Integer tIBWarningNumberOfCollectionPerBankAccountDaily, Integer tIBWarningNumberOfCollectionPerBankPerDelays, Double tIBWarningCollectionLimitDaily, Double tIBWarningDepositLimit, Double tIBWarningDepositLimitPerBankAccountDaily, Double tIBWarningDepositLimitPerBankAccountPerDelays, Integer tIBWarningNumberOfDepositPerBankAccountDaily, Integer tIBWarningNumberOfDepositPerBankPerDelays, Double tIBWarningDepositLimitDaily, Integer merchantAccountDepositDelay, Integer dataContext) {
+    public ServiceSettings(Double collectionLimit, Double collectionLimitDaily, Double depositLimit, Double depositLimitDaily, Double delayBufferAmount, Double remainingAmount, Double walletBalance, boolean isWalletFeatureActive, Integer walletType, Double nsfBuffer, Double collectionLimitPerBankAccountDaily, Double collectionLimitPerBankAccountPerDelays, Integer collectionLimitPerBankAccountHoursDelays, Double clientWarningCollectionLimit, Integer numberOfCollectionPerBankAccountDaily, Integer numberOfCollectionPerBankPerDelays, Double depositLimitPerBankAccountDaily, Double depositLimitPerBankAccountPerDelays, Integer depositLimitPerBankAccountHoursDelays, Double clientWarningDepositLimit, Integer numberOfDepositPerBankAccountDaily, Integer numberOfDepositPerBankPerDelays, Double tIBWarningCollectionLimit, Double tIBWarningCollectionLimitPerBankAccountDaily, Double tIBWarningCollectionLimitPerBankAccountPerDelays, Integer tIBWarningNumberOfCollectionPerBankAccountDaily, Integer tIBWarningNumberOfCollectionPerBankPerDelays, Double tIBWarningCollectionLimitDaily, Double tIBWarningDepositLimit, Double tIBWarningDepositLimitPerBankAccountDaily, Double tIBWarningDepositLimitPerBankAccountPerDelays, Integer tIBWarningNumberOfDepositPerBankAccountDaily, Integer tIBWarningNumberOfDepositPerBankPerDelays, Double tIBWarningDepositLimitDaily, Integer merchantAccountDepositDelay, Integer dataContext, Integer collectAllowedPaymentMethods, Integer depositAllowedPaymentMethods, boolean denyFreeDeposits, boolean denySupplierPayments) {
         this.collectionLimit = collectionLimit;
         this.collectionLimitDaily = collectionLimitDaily;
         this.depositLimit = depositLimit;
@@ -277,6 +301,10 @@ public class ServiceSettings   {
         this.tIBWarningDepositLimitDaily = tIBWarningDepositLimitDaily;
         this.merchantAccountDepositDelay = merchantAccountDepositDelay;
         this.dataContext = dataContext;
+        this.collectAllowedPaymentMethods = collectAllowedPaymentMethods;
+        this.depositAllowedPaymentMethods = depositAllowedPaymentMethods;
+        this.denyFreeDeposits = denyFreeDeposits;
+        this.denySupplierPayments = denySupplierPayments;
     }
     
     
@@ -570,6 +598,38 @@ public class ServiceSettings   {
         this.dataContext = dataContext;
     }
 
+    public Integer getCollectAllowedPaymentMethods() {
+        return collectAllowedPaymentMethods;
+    }
+
+    public void setCollectAllowedPaymentMethods(Integer collectAllowedPaymentMethods) {
+        this.collectAllowedPaymentMethods = collectAllowedPaymentMethods;
+    }
+
+    public Integer getDepositAllowedPaymentMethods() {
+        return depositAllowedPaymentMethods;
+    }
+
+    public void setDepositAllowedPaymentMethods(Integer depositAllowedPaymentMethods) {
+        this.depositAllowedPaymentMethods = depositAllowedPaymentMethods;
+    }
+
+    public boolean getDenyFreeDeposits() {
+        return denyFreeDeposits;
+    }
+
+    public void setDenyFreeDeposits(boolean denyFreeDeposits) {
+        this.denyFreeDeposits = denyFreeDeposits;
+    }
+
+    public boolean getDenySupplierPayments() {
+        return denySupplierPayments;
+    }
+
+    public void setDenySupplierPayments(boolean denySupplierPayments) {
+        this.denySupplierPayments = denySupplierPayments;
+    }
+
 
 
     
@@ -578,13 +638,13 @@ public class ServiceSettings   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ServiceSettings that = (ServiceSettings) o;
-        return Objects.equals(collectionLimit, that.collectionLimit) && Objects.equals(collectionLimitDaily, that.collectionLimitDaily) && Objects.equals(depositLimit, that.depositLimit) && Objects.equals(depositLimitDaily, that.depositLimitDaily) && Objects.equals(delayBufferAmount, that.delayBufferAmount) && Objects.equals(remainingAmount, that.remainingAmount) && Objects.equals(walletBalance, that.walletBalance) && Objects.equals(isWalletFeatureActive, that.isWalletFeatureActive) && Objects.equals(walletType, that.walletType) && Objects.equals(nsfBuffer, that.nsfBuffer) && Objects.equals(collectionLimitPerBankAccountDaily, that.collectionLimitPerBankAccountDaily) && Objects.equals(collectionLimitPerBankAccountPerDelays, that.collectionLimitPerBankAccountPerDelays) && Objects.equals(collectionLimitPerBankAccountHoursDelays, that.collectionLimitPerBankAccountHoursDelays) && Objects.equals(clientWarningCollectionLimit, that.clientWarningCollectionLimit) && Objects.equals(numberOfCollectionPerBankAccountDaily, that.numberOfCollectionPerBankAccountDaily) && Objects.equals(numberOfCollectionPerBankPerDelays, that.numberOfCollectionPerBankPerDelays) && Objects.equals(depositLimitPerBankAccountDaily, that.depositLimitPerBankAccountDaily) && Objects.equals(depositLimitPerBankAccountPerDelays, that.depositLimitPerBankAccountPerDelays) && Objects.equals(depositLimitPerBankAccountHoursDelays, that.depositLimitPerBankAccountHoursDelays) && Objects.equals(clientWarningDepositLimit, that.clientWarningDepositLimit) && Objects.equals(numberOfDepositPerBankAccountDaily, that.numberOfDepositPerBankAccountDaily) && Objects.equals(numberOfDepositPerBankPerDelays, that.numberOfDepositPerBankPerDelays) && Objects.equals(tIBWarningCollectionLimit, that.tIBWarningCollectionLimit) && Objects.equals(tIBWarningCollectionLimitPerBankAccountDaily, that.tIBWarningCollectionLimitPerBankAccountDaily) && Objects.equals(tIBWarningCollectionLimitPerBankAccountPerDelays, that.tIBWarningCollectionLimitPerBankAccountPerDelays) && Objects.equals(tIBWarningNumberOfCollectionPerBankAccountDaily, that.tIBWarningNumberOfCollectionPerBankAccountDaily) && Objects.equals(tIBWarningNumberOfCollectionPerBankPerDelays, that.tIBWarningNumberOfCollectionPerBankPerDelays) && Objects.equals(tIBWarningCollectionLimitDaily, that.tIBWarningCollectionLimitDaily) && Objects.equals(tIBWarningDepositLimit, that.tIBWarningDepositLimit) && Objects.equals(tIBWarningDepositLimitPerBankAccountDaily, that.tIBWarningDepositLimitPerBankAccountDaily) && Objects.equals(tIBWarningDepositLimitPerBankAccountPerDelays, that.tIBWarningDepositLimitPerBankAccountPerDelays) && Objects.equals(tIBWarningNumberOfDepositPerBankAccountDaily, that.tIBWarningNumberOfDepositPerBankAccountDaily) && Objects.equals(tIBWarningNumberOfDepositPerBankPerDelays, that.tIBWarningNumberOfDepositPerBankPerDelays) && Objects.equals(tIBWarningDepositLimitDaily, that.tIBWarningDepositLimitDaily) && Objects.equals(merchantAccountDepositDelay, that.merchantAccountDepositDelay) && Objects.equals(dataContext, that.dataContext) ;
+        return Objects.equals(collectionLimit, that.collectionLimit) && Objects.equals(collectionLimitDaily, that.collectionLimitDaily) && Objects.equals(depositLimit, that.depositLimit) && Objects.equals(depositLimitDaily, that.depositLimitDaily) && Objects.equals(delayBufferAmount, that.delayBufferAmount) && Objects.equals(remainingAmount, that.remainingAmount) && Objects.equals(walletBalance, that.walletBalance) && Objects.equals(isWalletFeatureActive, that.isWalletFeatureActive) && Objects.equals(walletType, that.walletType) && Objects.equals(nsfBuffer, that.nsfBuffer) && Objects.equals(collectionLimitPerBankAccountDaily, that.collectionLimitPerBankAccountDaily) && Objects.equals(collectionLimitPerBankAccountPerDelays, that.collectionLimitPerBankAccountPerDelays) && Objects.equals(collectionLimitPerBankAccountHoursDelays, that.collectionLimitPerBankAccountHoursDelays) && Objects.equals(clientWarningCollectionLimit, that.clientWarningCollectionLimit) && Objects.equals(numberOfCollectionPerBankAccountDaily, that.numberOfCollectionPerBankAccountDaily) && Objects.equals(numberOfCollectionPerBankPerDelays, that.numberOfCollectionPerBankPerDelays) && Objects.equals(depositLimitPerBankAccountDaily, that.depositLimitPerBankAccountDaily) && Objects.equals(depositLimitPerBankAccountPerDelays, that.depositLimitPerBankAccountPerDelays) && Objects.equals(depositLimitPerBankAccountHoursDelays, that.depositLimitPerBankAccountHoursDelays) && Objects.equals(clientWarningDepositLimit, that.clientWarningDepositLimit) && Objects.equals(numberOfDepositPerBankAccountDaily, that.numberOfDepositPerBankAccountDaily) && Objects.equals(numberOfDepositPerBankPerDelays, that.numberOfDepositPerBankPerDelays) && Objects.equals(tIBWarningCollectionLimit, that.tIBWarningCollectionLimit) && Objects.equals(tIBWarningCollectionLimitPerBankAccountDaily, that.tIBWarningCollectionLimitPerBankAccountDaily) && Objects.equals(tIBWarningCollectionLimitPerBankAccountPerDelays, that.tIBWarningCollectionLimitPerBankAccountPerDelays) && Objects.equals(tIBWarningNumberOfCollectionPerBankAccountDaily, that.tIBWarningNumberOfCollectionPerBankAccountDaily) && Objects.equals(tIBWarningNumberOfCollectionPerBankPerDelays, that.tIBWarningNumberOfCollectionPerBankPerDelays) && Objects.equals(tIBWarningCollectionLimitDaily, that.tIBWarningCollectionLimitDaily) && Objects.equals(tIBWarningDepositLimit, that.tIBWarningDepositLimit) && Objects.equals(tIBWarningDepositLimitPerBankAccountDaily, that.tIBWarningDepositLimitPerBankAccountDaily) && Objects.equals(tIBWarningDepositLimitPerBankAccountPerDelays, that.tIBWarningDepositLimitPerBankAccountPerDelays) && Objects.equals(tIBWarningNumberOfDepositPerBankAccountDaily, that.tIBWarningNumberOfDepositPerBankAccountDaily) && Objects.equals(tIBWarningNumberOfDepositPerBankPerDelays, that.tIBWarningNumberOfDepositPerBankPerDelays) && Objects.equals(tIBWarningDepositLimitDaily, that.tIBWarningDepositLimitDaily) && Objects.equals(merchantAccountDepositDelay, that.merchantAccountDepositDelay) && Objects.equals(dataContext, that.dataContext) && Objects.equals(collectAllowedPaymentMethods, that.collectAllowedPaymentMethods) && Objects.equals(depositAllowedPaymentMethods, that.depositAllowedPaymentMethods) && Objects.equals(denyFreeDeposits, that.denyFreeDeposits) && Objects.equals(denySupplierPayments, that.denySupplierPayments) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(collectionLimit, collectionLimitDaily, depositLimit, depositLimitDaily, delayBufferAmount, remainingAmount, walletBalance, isWalletFeatureActive, walletType, nsfBuffer, collectionLimitPerBankAccountDaily, collectionLimitPerBankAccountPerDelays, collectionLimitPerBankAccountHoursDelays, clientWarningCollectionLimit, numberOfCollectionPerBankAccountDaily, numberOfCollectionPerBankPerDelays, depositLimitPerBankAccountDaily, depositLimitPerBankAccountPerDelays, depositLimitPerBankAccountHoursDelays, clientWarningDepositLimit, numberOfDepositPerBankAccountDaily, numberOfDepositPerBankPerDelays, tIBWarningCollectionLimit, tIBWarningCollectionLimitPerBankAccountDaily, tIBWarningCollectionLimitPerBankAccountPerDelays, tIBWarningNumberOfCollectionPerBankAccountDaily, tIBWarningNumberOfCollectionPerBankPerDelays, tIBWarningCollectionLimitDaily, tIBWarningDepositLimit, tIBWarningDepositLimitPerBankAccountDaily, tIBWarningDepositLimitPerBankAccountPerDelays, tIBWarningNumberOfDepositPerBankAccountDaily, tIBWarningNumberOfDepositPerBankPerDelays, tIBWarningDepositLimitDaily, merchantAccountDepositDelay, dataContext);
+        return Objects.hash(collectionLimit, collectionLimitDaily, depositLimit, depositLimitDaily, delayBufferAmount, remainingAmount, walletBalance, isWalletFeatureActive, walletType, nsfBuffer, collectionLimitPerBankAccountDaily, collectionLimitPerBankAccountPerDelays, collectionLimitPerBankAccountHoursDelays, clientWarningCollectionLimit, numberOfCollectionPerBankAccountDaily, numberOfCollectionPerBankPerDelays, depositLimitPerBankAccountDaily, depositLimitPerBankAccountPerDelays, depositLimitPerBankAccountHoursDelays, clientWarningDepositLimit, numberOfDepositPerBankAccountDaily, numberOfDepositPerBankPerDelays, tIBWarningCollectionLimit, tIBWarningCollectionLimitPerBankAccountDaily, tIBWarningCollectionLimitPerBankAccountPerDelays, tIBWarningNumberOfCollectionPerBankAccountDaily, tIBWarningNumberOfCollectionPerBankPerDelays, tIBWarningCollectionLimitDaily, tIBWarningDepositLimit, tIBWarningDepositLimitPerBankAccountDaily, tIBWarningDepositLimitPerBankAccountPerDelays, tIBWarningNumberOfDepositPerBankAccountDaily, tIBWarningNumberOfDepositPerBankPerDelays, tIBWarningDepositLimitDaily, merchantAccountDepositDelay, dataContext, collectAllowedPaymentMethods, depositAllowedPaymentMethods, denyFreeDeposits, denySupplierPayments);
     }
 
     @Override
@@ -626,6 +686,10 @@ public class ServiceSettings   {
                 ", tIBWarningDepositLimitDaily='" + tIBWarningDepositLimitDaily + '\'' +
                 ", merchantAccountDepositDelay='" + merchantAccountDepositDelay + '\'' +
                 ", dataContext='" + dataContext + '\'' +
+                ", collectAllowedPaymentMethods='" + collectAllowedPaymentMethods + '\'' +
+                ", depositAllowedPaymentMethods='" + depositAllowedPaymentMethods + '\'' +
+                ", denyFreeDeposits='" + denyFreeDeposits + '\'' +
+                ", denySupplierPayments='" + denySupplierPayments + '\'' +
 
                 '}';
     }

@@ -64,7 +64,8 @@ public class APIResponse {
                     "HasBeenDeleted", "BoardingInformationId", "SearchResult", 
                     "NeqOrNi", "AddressDisplay", "CreationDate", 
                     "IsQuebec", "HasDetails", "SubmitDocumentResultEntity", 
-                    "Count", "ContractEditionRequest"})
+                    "Count", "ContractEditionRequest", "NewMerchantId",
+                    "ContactInfo"})
         private Object response;
 
         @JsonProperty("CryptedSelf")

@@ -47,7 +47,7 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
     private String targetMerchantId;
 
     /**
-     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
+     * Currency for the transfer (CAD or USD).
      */
     @JsonProperty("Currency")
     private Currency currency;

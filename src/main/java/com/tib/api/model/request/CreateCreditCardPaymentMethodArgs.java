@@ -23,7 +23,7 @@ public class CreateCreditCardPaymentMethodArgs  extends BaseAuthenticatedCrypted
 
     
     /**
-     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
+     * Currency for the credit card payment method (CAD or USD).
      */
     @JsonProperty("Currency")
     private Currency currency;

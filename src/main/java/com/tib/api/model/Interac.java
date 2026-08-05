@@ -25,7 +25,7 @@ public class Interac   {
     private String description;
 
     /**
-     * Identifier of the entity that owns the payment method.
+     * The name of the person having the account
      */
     @JsonProperty("Owner")
     private String owner;

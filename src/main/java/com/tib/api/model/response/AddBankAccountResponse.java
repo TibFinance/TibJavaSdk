@@ -19,35 +19,35 @@ import java.util.Map;
 import java.util.Optional;
 
 
-public class InitBoardingResponse extends CustomAPIResponse {
+public class AddBankAccountResponse extends CustomAPIResponse {
 
     
-    @JsonProperty("RedirectUrl")
-    private String redirectUrl;
+    @JsonProperty("NewMerchantId")
+    private String newMerchantId;
 
 
-    public InitBoardingResponse() {
+    public AddBankAccountResponse() {
     }
 
-    public InitBoardingResponse(Error[] errors, boolean hasError, String messages, String redirectUrl) {
+    public AddBankAccountResponse(Error[] errors, boolean hasError, String messages, String newMerchantId) {
         super(errors, hasError, messages);
-        this.redirectUrl = redirectUrl;
+        this.newMerchantId = newMerchantId;
     }
 
-    public InitBoardingResponse(APIResponse apiResponse) {
+    public AddBankAccountResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            this.redirectUrl = apiResponse.getResponse().toString();
+            this.newMerchantId = apiResponse.getResponse().toString();
         }
     }
 
     
-    public String getRedirectUrl() {
-        return redirectUrl;
+    public String getNewMerchantId() {
+        return newMerchantId;
     }
 
-    public void setRedirectUrl(String redirectUrl) {
-        this.redirectUrl = redirectUrl;
+    public void setNewMerchantId(String newMerchantId) {
+        this.newMerchantId = newMerchantId;
     }
 
 
@@ -57,20 +57,20 @@ public class InitBoardingResponse extends CustomAPIResponse {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        InitBoardingResponse that = (InitBoardingResponse) o;
-        return Objects.equals(redirectUrl, that.redirectUrl) ;
+        AddBankAccountResponse that = (AddBankAccountResponse) o;
+        return Objects.equals(newMerchantId, that.newMerchantId) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(redirectUrl);
+        return Objects.hash(newMerchantId);
     }
 
     @Override
     public String toString() {
-        return "InitBoardingResponse{" +
-                "redirectUrl='" + redirectUrl + '\'' +
+        return "AddBankAccountResponse{" +
+                "newMerchantId='" + newMerchantId + '\'' +
 
                 '}';
     }

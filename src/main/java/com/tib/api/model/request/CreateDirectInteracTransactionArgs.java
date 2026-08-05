@@ -60,7 +60,7 @@ public class CreateDirectInteracTransactionArgs  extends BaseAuthenticatedCrypte
     private String statementDescription;
 
     /**
-     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
+     * Null mean default from origin merchant
      */
     @JsonProperty("Currency")
     private Currency currency;

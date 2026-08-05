@@ -40,7 +40,7 @@ public class ServiceEntity   {
     private Provider providerType;
 
     /**
-     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
+     * Base currency for the service.
      */
     @JsonProperty("Currency")
     private Currency currency;

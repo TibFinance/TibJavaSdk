@@ -34,7 +34,7 @@ public class CreateSubClientArgs  extends BaseAuthenticatedCryptedArgs  {
     private Language language;
 
     /**
-     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
+     * Default currency for the sub-client (CAD or USD). Omitting the field defaults to CAD; an explicit NotSet/other value is rejected.
      */
     @JsonProperty("Currency")
     private Currency currency;

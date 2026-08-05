@@ -79,7 +79,7 @@ public class TransactionCommon   {
     private String accoutPreview;
 
     /**
-     * The type of payment method used for the transfer.
+     * Type of account (chequing, savings, etc.).
      */
     @JsonProperty("AccountType")
     private PaymentMethodType accountType;

@@ -31,22 +31,30 @@ public class CreateTransactionFromRawArgs  extends BaseAuthenticatedCryptedArgs 
     @JsonProperty("MerchantId")
     private String merchantId;
 
+    /**
+     * When true, deposit lines from the file are sent through the ARN instant-deposit rail instead of standard EFT. The upload is refused if the file contains any collection lines, any recurring lines, or if the merchant currency is not CAD. Optional; absent or false keeps standard EFT behavior.
+     */
+    @JsonProperty("IsImmediate")
+    private boolean isImmediate;
+
 
     
     public CreateTransactionFromRawArgs() {
     }
 
     
-    public CreateTransactionFromRawArgs(String rawAcpFileContent, String merchantId) {
+    public CreateTransactionFromRawArgs(String rawAcpFileContent, String merchantId, boolean isImmediate) {
         this.rawAcpFileContent = rawAcpFileContent;
         this.merchantId = merchantId;
+        this.isImmediate = isImmediate;
     }
     
     
-    public CreateTransactionFromRawArgs(String sessionToken, String rawAcpFileContent, String merchantId) {
+    public CreateTransactionFromRawArgs(String sessionToken, String rawAcpFileContent, String merchantId, boolean isImmediate) {
         super(sessionToken);
         this.rawAcpFileContent = rawAcpFileContent;
         this.merchantId = merchantId;
+        this.isImmediate = isImmediate;
     }
 
     
@@ -66,6 +74,14 @@ public class CreateTransactionFromRawArgs  extends BaseAuthenticatedCryptedArgs 
         this.merchantId = merchantId;
     }
 
+    public boolean getIsImmediate() {
+        return isImmediate;
+    }
+
+    public void setIsImmediate(boolean isImmediate) {
+        this.isImmediate = isImmediate;
+    }
+
 
 
     
@@ -74,13 +90,13 @@ public class CreateTransactionFromRawArgs  extends BaseAuthenticatedCryptedArgs 
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CreateTransactionFromRawArgs that = (CreateTransactionFromRawArgs) o;
-        return Objects.equals(rawAcpFileContent, that.rawAcpFileContent) && Objects.equals(merchantId, that.merchantId) ;
+        return Objects.equals(rawAcpFileContent, that.rawAcpFileContent) && Objects.equals(merchantId, that.merchantId) && Objects.equals(isImmediate, that.isImmediate) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(rawAcpFileContent, merchantId);
+        return Objects.hash(rawAcpFileContent, merchantId, isImmediate);
     }
 
     @Override
@@ -88,6 +104,7 @@ public class CreateTransactionFromRawArgs  extends BaseAuthenticatedCryptedArgs 
         return "CreateTransactionFromRawArgs{" +
                 "rawAcpFileContent='" + rawAcpFileContent + '\'' +
                 ", merchantId='" + merchantId + '\'' +
+                ", isImmediate='" + isImmediate + '\'' +
 
                 '}';
     }

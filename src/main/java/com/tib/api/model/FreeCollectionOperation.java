@@ -36,7 +36,7 @@ public class FreeCollectionOperation   {
     private Double amount;
 
     /**
-     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
+     * Currency of the operation (CAD or USD).
      */
     @JsonProperty("Currency")
     private Currency currency;

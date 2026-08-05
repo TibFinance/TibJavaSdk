@@ -7,6 +7,7 @@ import com.tib.api.model.enums.OperationTarget;
 import com.tib.api.model.enums.TransferDirection;
 import com.tib.api.model.enums.OperationKind;
 import com.tib.api.model.TransactionCommon;
+import com.tib.api.model.enums.TibOperationStatus;
 
 
 import java.time.Instant;
@@ -30,7 +31,7 @@ public class PaymentOperationEntity   {
     private Double amount;
 
     /**
-     * The ISO 4217 three‑letter code of the currency in which the transfer was executed.
+     * Currency of the operation (CAD or USD).
      */
     @JsonProperty("Currency")
     private Currency currency;
@@ -72,10 +73,10 @@ public class PaymentOperationEntity   {
     private List<TransactionCommon> transactions;
 
     /**
-     * Indicates the result of the ListTransfers request
+     * Numeric status code indicating the current state of this operation — the integer value of the TibOperationStatus enum. Note that 0 is NotSet, not success; a successful operation reads 5 (Success).
      */
     @JsonProperty("OperationStatus")
-    private Integer operationStatus;
+    private TibOperationStatus operationStatus;
 
     /**
      * The merchant name associated with an overload transfer.
@@ -89,7 +90,7 @@ public class PaymentOperationEntity   {
     }
 
     
-    public PaymentOperationEntity(Double amount, Currency currency, OperationTarget operationTarget, TransferDirection operationDirection, OperationKind operationKind, OffsetDateTime createdDate, OffsetDateTime executedDate, List<TransactionCommon> transactions, Integer operationStatus, String overloadMerchantName) {
+    public PaymentOperationEntity(Double amount, Currency currency, OperationTarget operationTarget, TransferDirection operationDirection, OperationKind operationKind, OffsetDateTime createdDate, OffsetDateTime executedDate, List<TransactionCommon> transactions, TibOperationStatus operationStatus, String overloadMerchantName) {
         this.amount = amount;
         this.currency = currency;
         this.operationTarget = operationTarget;
@@ -169,11 +170,11 @@ public class PaymentOperationEntity   {
         this.transactions = transactions;
     }
 
-    public Integer getOperationStatus() {
+    public TibOperationStatus getOperationStatus() {
         return operationStatus;
     }
 
-    public void setOperationStatus(Integer operationStatus) {
+    public void setOperationStatus(TibOperationStatus operationStatus) {
         this.operationStatus = operationStatus;
     }
 

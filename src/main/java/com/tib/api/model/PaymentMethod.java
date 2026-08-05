@@ -57,7 +57,7 @@ public class PaymentMethod   {
     private OffsetDateTime expirationDate;
 
     /**
-     * Identifier of the entity that owns the payment method.
+     * Name of the payment method owner as it appears on the account.
      */
     @JsonProperty("Owner")
     private String owner;
