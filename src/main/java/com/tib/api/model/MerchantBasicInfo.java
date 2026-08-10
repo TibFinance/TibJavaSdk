@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.enums.Currency;
 import com.tib.api.model.enums.Language;
 import com.tib.api.model.Address;
-import com.tib.api.model.enums.Provider;
 
 
 import java.time.Instant;
@@ -82,19 +81,13 @@ public class MerchantBasicInfo   {
     @JsonProperty("Address")
     private Address address;
 
-    /**
-     * The merchant's preferred payment provider.
-     */
-    @JsonProperty("FavoriteProvider")
-    private Provider favoriteProvider;
-
 
     
     public MerchantBasicInfo() {
     }
 
     
-    public MerchantBasicInfo(String merchantName, String externalSystemId, String externalSystemGroupId, Currency merchantCurrency, Language language, String email, String emailCopyTo, String phoneNumber, String merchantDescription, Address address, Provider favoriteProvider) {
+    public MerchantBasicInfo(String merchantName, String externalSystemId, String externalSystemGroupId, Currency merchantCurrency, Language language, String email, String emailCopyTo, String phoneNumber, String merchantDescription, Address address) {
         this.merchantName = merchantName;
         this.externalSystemId = externalSystemId;
         this.externalSystemGroupId = externalSystemGroupId;
@@ -105,7 +98,6 @@ public class MerchantBasicInfo   {
         this.phoneNumber = phoneNumber;
         this.merchantDescription = merchantDescription;
         this.address = address;
-        this.favoriteProvider = favoriteProvider;
     }
     
     
@@ -191,14 +183,6 @@ public class MerchantBasicInfo   {
         this.address = address;
     }
 
-    public Provider getFavoriteProvider() {
-        return favoriteProvider;
-    }
-
-    public void setFavoriteProvider(Provider favoriteProvider) {
-        this.favoriteProvider = favoriteProvider;
-    }
-
 
 
     
@@ -207,13 +191,13 @@ public class MerchantBasicInfo   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MerchantBasicInfo that = (MerchantBasicInfo) o;
-        return Objects.equals(merchantName, that.merchantName) && Objects.equals(externalSystemId, that.externalSystemId) && Objects.equals(externalSystemGroupId, that.externalSystemGroupId) && Objects.equals(merchantCurrency, that.merchantCurrency) && Objects.equals(language, that.language) && Objects.equals(email, that.email) && Objects.equals(emailCopyTo, that.emailCopyTo) && Objects.equals(phoneNumber, that.phoneNumber) && Objects.equals(merchantDescription, that.merchantDescription) && Objects.equals(address, that.address) && Objects.equals(favoriteProvider, that.favoriteProvider) ;
+        return Objects.equals(merchantName, that.merchantName) && Objects.equals(externalSystemId, that.externalSystemId) && Objects.equals(externalSystemGroupId, that.externalSystemGroupId) && Objects.equals(merchantCurrency, that.merchantCurrency) && Objects.equals(language, that.language) && Objects.equals(email, that.email) && Objects.equals(emailCopyTo, that.emailCopyTo) && Objects.equals(phoneNumber, that.phoneNumber) && Objects.equals(merchantDescription, that.merchantDescription) && Objects.equals(address, that.address) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(merchantName, externalSystemId, externalSystemGroupId, merchantCurrency, language, email, emailCopyTo, phoneNumber, merchantDescription, address, favoriteProvider);
+        return Objects.hash(merchantName, externalSystemId, externalSystemGroupId, merchantCurrency, language, email, emailCopyTo, phoneNumber, merchantDescription, address);
     }
 
     @Override
@@ -229,7 +213,6 @@ public class MerchantBasicInfo   {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", merchantDescription='" + merchantDescription + '\'' +
                 ", address='" + address + '\'' +
-                ", favoriteProvider='" + favoriteProvider + '\'' +
 
                 '}';
     }

@@ -823,10 +823,10 @@ public class Portal {
         return new ListTransfersResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves a filtered, summarized list of transfer records for a specified service.
+     * Retrieves a filtered, summarized list of transfers for a service using an optimized query. Supports filtering by transfer type, date range, merchant, transfer group, error status, and resolved status.
      *
      * @param args the args
-     * @return  HTTP 200 with a JSON payload containing an array of transfer summary objects (e.g., TransferId, Date, Type, Amount, Status, Resolved, ErrorCode) plus optional pagination info.
+     * @return  A ListTransfersFastResponse containing the summarized transfer list.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -846,10 +846,10 @@ public class Portal {
         return new ListTransfersFastResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves all transfer records associated with a specific bill.
+     * Lists the transfers of a bill.
      *
      * @param args the args
-     * @return  On success, a JSON array of transfer objects, each containing TransferId, OperationId, Direction, Target, Status (numeric enum), BankResult (if applicable), Description, and timestamps.
+     * @return  
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -1119,7 +1119,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateFreeOperation", args);
-        return new CreateFreeOperationResponse(apiResponse, objectMapper);
+        return new CreateFreeOperationResponse(apiResponse);
     }
     /**
      * Creates a batch of free operations (deposits or collections) in a single call. Validates that client onboarding (KYC) is completed before allowing free deposit operations.
@@ -1280,7 +1280,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateSupplierTransfer", args);
-        return new CreateSupplierTransferResponse(apiResponse, objectMapper);
+        return new CreateSupplierTransferResponse(apiResponse);
     }
     /**
      * Retrieves the list of suppliers associated with a merchant, returning each supplier's name and identifier.

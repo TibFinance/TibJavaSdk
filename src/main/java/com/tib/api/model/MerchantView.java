@@ -133,28 +133,16 @@ public class MerchantView   {
     private String postalZipCode;
 
     /**
-     * Identifies the external payment provider associated with the merchant.
+     * Payment provider for the merchant's account.
      */
     @JsonProperty("AccountProvider")
     private Provider accountProvider;
-
-    /**
-     * Identifier of the white‑label partner linked to the merchant, if any.
-     */
-    @JsonProperty("WhiteLabelingId")
-    private Optional<String> whiteLabelingId;
 
     /**
      * Indicates the current onboarding state of the merchant identified by the external ID
      */
     @JsonProperty("BoardingStatus")
     private String boardingStatus;
-
-    /**
-     * Identifier of the boarding information linked to the merchant
-     */
-    @JsonProperty("BoardingInformationId")
-    private String boardingInformationId;
 
     /**
      * A list of boarding file records linked to the merchant identified by the external ID.
@@ -168,7 +156,7 @@ public class MerchantView   {
     }
 
     
-    public MerchantView(String merchantId, String merchantName, String accountName, String accountPreview, String externalSystemId, String externalSystemGroupId, Currency merchantCurrency, Language merchantLanguage, String email, boolean isAuthorized, String emailCopyTo, String merchantPhoneNumber, String streetAddress, String addressCity, ProvinceStateId provinceStateId, String serviceId, CountryId countryId, String postalZipCode, Provider accountProvider, Optional<String> whiteLabelingId, String boardingStatus, String boardingInformationId, List<BoardingFile> boardingFiles) {
+    public MerchantView(String merchantId, String merchantName, String accountName, String accountPreview, String externalSystemId, String externalSystemGroupId, Currency merchantCurrency, Language merchantLanguage, String email, boolean isAuthorized, String emailCopyTo, String merchantPhoneNumber, String streetAddress, String addressCity, ProvinceStateId provinceStateId, String serviceId, CountryId countryId, String postalZipCode, Provider accountProvider, String boardingStatus, List<BoardingFile> boardingFiles) {
         this.merchantId = merchantId;
         this.merchantName = merchantName;
         this.accountName = accountName;
@@ -188,9 +176,7 @@ public class MerchantView   {
         this.countryId = countryId;
         this.postalZipCode = postalZipCode;
         this.accountProvider = accountProvider;
-        this.whiteLabelingId = whiteLabelingId;
         this.boardingStatus = boardingStatus;
-        this.boardingInformationId = boardingInformationId;
         this.boardingFiles = boardingFiles;
     }
     
@@ -349,28 +335,12 @@ public class MerchantView   {
         this.accountProvider = accountProvider;
     }
 
-    public Optional<String> getWhiteLabelingId() {
-        return whiteLabelingId;
-    }
-
-    public void setWhiteLabelingId(Optional<String> whiteLabelingId) {
-        this.whiteLabelingId = whiteLabelingId;
-    }
-
     public String getBoardingStatus() {
         return boardingStatus;
     }
 
     public void setBoardingStatus(String boardingStatus) {
         this.boardingStatus = boardingStatus;
-    }
-
-    public String getBoardingInformationId() {
-        return boardingInformationId;
-    }
-
-    public void setBoardingInformationId(String boardingInformationId) {
-        this.boardingInformationId = boardingInformationId;
     }
 
     public List<BoardingFile> getBoardingFiles() {
@@ -389,13 +359,13 @@ public class MerchantView   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MerchantView that = (MerchantView) o;
-        return Objects.equals(merchantId, that.merchantId) && Objects.equals(merchantName, that.merchantName) && Objects.equals(accountName, that.accountName) && Objects.equals(accountPreview, that.accountPreview) && Objects.equals(externalSystemId, that.externalSystemId) && Objects.equals(externalSystemGroupId, that.externalSystemGroupId) && Objects.equals(merchantCurrency, that.merchantCurrency) && Objects.equals(merchantLanguage, that.merchantLanguage) && Objects.equals(email, that.email) && Objects.equals(isAuthorized, that.isAuthorized) && Objects.equals(emailCopyTo, that.emailCopyTo) && Objects.equals(merchantPhoneNumber, that.merchantPhoneNumber) && Objects.equals(streetAddress, that.streetAddress) && Objects.equals(addressCity, that.addressCity) && Objects.equals(provinceStateId, that.provinceStateId) && Objects.equals(serviceId, that.serviceId) && Objects.equals(countryId, that.countryId) && Objects.equals(postalZipCode, that.postalZipCode) && Objects.equals(accountProvider, that.accountProvider) && Objects.equals(whiteLabelingId, that.whiteLabelingId) && Objects.equals(boardingStatus, that.boardingStatus) && Objects.equals(boardingInformationId, that.boardingInformationId) && Objects.equals(boardingFiles, that.boardingFiles) ;
+        return Objects.equals(merchantId, that.merchantId) && Objects.equals(merchantName, that.merchantName) && Objects.equals(accountName, that.accountName) && Objects.equals(accountPreview, that.accountPreview) && Objects.equals(externalSystemId, that.externalSystemId) && Objects.equals(externalSystemGroupId, that.externalSystemGroupId) && Objects.equals(merchantCurrency, that.merchantCurrency) && Objects.equals(merchantLanguage, that.merchantLanguage) && Objects.equals(email, that.email) && Objects.equals(isAuthorized, that.isAuthorized) && Objects.equals(emailCopyTo, that.emailCopyTo) && Objects.equals(merchantPhoneNumber, that.merchantPhoneNumber) && Objects.equals(streetAddress, that.streetAddress) && Objects.equals(addressCity, that.addressCity) && Objects.equals(provinceStateId, that.provinceStateId) && Objects.equals(serviceId, that.serviceId) && Objects.equals(countryId, that.countryId) && Objects.equals(postalZipCode, that.postalZipCode) && Objects.equals(accountProvider, that.accountProvider) && Objects.equals(boardingStatus, that.boardingStatus) && Objects.equals(boardingFiles, that.boardingFiles) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(merchantId, merchantName, accountName, accountPreview, externalSystemId, externalSystemGroupId, merchantCurrency, merchantLanguage, email, isAuthorized, emailCopyTo, merchantPhoneNumber, streetAddress, addressCity, provinceStateId, serviceId, countryId, postalZipCode, accountProvider, whiteLabelingId, boardingStatus, boardingInformationId, boardingFiles);
+        return Objects.hash(merchantId, merchantName, accountName, accountPreview, externalSystemId, externalSystemGroupId, merchantCurrency, merchantLanguage, email, isAuthorized, emailCopyTo, merchantPhoneNumber, streetAddress, addressCity, provinceStateId, serviceId, countryId, postalZipCode, accountProvider, boardingStatus, boardingFiles);
     }
 
     @Override
@@ -420,9 +390,7 @@ public class MerchantView   {
                 ", countryId='" + countryId + '\'' +
                 ", postalZipCode='" + postalZipCode + '\'' +
                 ", accountProvider='" + accountProvider + '\'' +
-                ", whiteLabelingId='" + whiteLabelingId + '\'' +
                 ", boardingStatus='" + boardingStatus + '\'' +
-                ", boardingInformationId='" + boardingInformationId + '\'' +
                 ", boardingFiles='" + boardingFiles + '\'' +
 
                 '}';

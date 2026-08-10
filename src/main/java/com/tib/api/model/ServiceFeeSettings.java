@@ -218,19 +218,13 @@ public class ServiceFeeSettings   {
     @JsonProperty("InteracReturnFee")
     private Double interacReturnFee;
 
-    /**
-     * Identifier of the data context used for the service response
-     */
-    @JsonProperty("DataContext")
-    private Integer dataContext;
-
 
     
     public ServiceFeeSettings() {
     }
 
     
-    public ServiceFeeSettings(FeeMode creditCardFeeMode, Double creditCardPercentageFee, Double creditCardAbsoluteFee, FeeMode debitFeeMode, Double debitPercentageFee, Double debitAbsoluteFee, FeeMode instantTransferFeeMode, Double instantTransferPercentageFee, Double instantTransferAbsoluteFee, ConvenientFeeMode convenientFeeCreditMode, Double convenientFeeCreditPercentageFee, Double convenientFeeCreditAbsoluteFee, Double convenientFeeCreditRoundUpValue, ConvenientFeeMode convenientFeeDebitMode, Double convenientFeeDebitPercentageFee, Double convenientFeeDebitAbsoluteFee, Double convenientFeeDebitRoundUpValue, Double debitFeeRoundUpValue, Double creditCardFeeRoundUpValue, Double instantTransferFeeRoundUpValue, Double revertCreditCardAbsoluteFees, Double revertCreditCardPercentageFees, Double revertDebitAbsoluteFees, Double revertDebitPercentageFees, Double interacFeeAbsolute, Double interacFeePercentage, Double interacFeeCollectAbsolute, Double interacFeeCollectPercentage, Double debitNFSFees, Double nFSFileFees, Double creditCardFailedChargeFee, Double oppositionReturnFees, Double interacReturnFee, Integer dataContext) {
+    public ServiceFeeSettings(FeeMode creditCardFeeMode, Double creditCardPercentageFee, Double creditCardAbsoluteFee, FeeMode debitFeeMode, Double debitPercentageFee, Double debitAbsoluteFee, FeeMode instantTransferFeeMode, Double instantTransferPercentageFee, Double instantTransferAbsoluteFee, ConvenientFeeMode convenientFeeCreditMode, Double convenientFeeCreditPercentageFee, Double convenientFeeCreditAbsoluteFee, Double convenientFeeCreditRoundUpValue, ConvenientFeeMode convenientFeeDebitMode, Double convenientFeeDebitPercentageFee, Double convenientFeeDebitAbsoluteFee, Double convenientFeeDebitRoundUpValue, Double debitFeeRoundUpValue, Double creditCardFeeRoundUpValue, Double instantTransferFeeRoundUpValue, Double revertCreditCardAbsoluteFees, Double revertCreditCardPercentageFees, Double revertDebitAbsoluteFees, Double revertDebitPercentageFees, Double interacFeeAbsolute, Double interacFeePercentage, Double interacFeeCollectAbsolute, Double interacFeeCollectPercentage, Double debitNFSFees, Double nFSFileFees, Double creditCardFailedChargeFee, Double oppositionReturnFees, Double interacReturnFee) {
         this.creditCardFeeMode = creditCardFeeMode;
         this.creditCardPercentageFee = creditCardPercentageFee;
         this.creditCardAbsoluteFee = creditCardAbsoluteFee;
@@ -264,7 +258,6 @@ public class ServiceFeeSettings   {
         this.creditCardFailedChargeFee = creditCardFailedChargeFee;
         this.oppositionReturnFees = oppositionReturnFees;
         this.interacReturnFee = interacReturnFee;
-        this.dataContext = dataContext;
     }
     
     
@@ -534,14 +527,6 @@ public class ServiceFeeSettings   {
         this.interacReturnFee = interacReturnFee;
     }
 
-    public Integer getDataContext() {
-        return dataContext;
-    }
-
-    public void setDataContext(Integer dataContext) {
-        this.dataContext = dataContext;
-    }
-
 
 
     
@@ -550,13 +535,13 @@ public class ServiceFeeSettings   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ServiceFeeSettings that = (ServiceFeeSettings) o;
-        return Objects.equals(creditCardFeeMode, that.creditCardFeeMode) && Objects.equals(creditCardPercentageFee, that.creditCardPercentageFee) && Objects.equals(creditCardAbsoluteFee, that.creditCardAbsoluteFee) && Objects.equals(debitFeeMode, that.debitFeeMode) && Objects.equals(debitPercentageFee, that.debitPercentageFee) && Objects.equals(debitAbsoluteFee, that.debitAbsoluteFee) && Objects.equals(instantTransferFeeMode, that.instantTransferFeeMode) && Objects.equals(instantTransferPercentageFee, that.instantTransferPercentageFee) && Objects.equals(instantTransferAbsoluteFee, that.instantTransferAbsoluteFee) && Objects.equals(convenientFeeCreditMode, that.convenientFeeCreditMode) && Objects.equals(convenientFeeCreditPercentageFee, that.convenientFeeCreditPercentageFee) && Objects.equals(convenientFeeCreditAbsoluteFee, that.convenientFeeCreditAbsoluteFee) && Objects.equals(convenientFeeCreditRoundUpValue, that.convenientFeeCreditRoundUpValue) && Objects.equals(convenientFeeDebitMode, that.convenientFeeDebitMode) && Objects.equals(convenientFeeDebitPercentageFee, that.convenientFeeDebitPercentageFee) && Objects.equals(convenientFeeDebitAbsoluteFee, that.convenientFeeDebitAbsoluteFee) && Objects.equals(convenientFeeDebitRoundUpValue, that.convenientFeeDebitRoundUpValue) && Objects.equals(debitFeeRoundUpValue, that.debitFeeRoundUpValue) && Objects.equals(creditCardFeeRoundUpValue, that.creditCardFeeRoundUpValue) && Objects.equals(instantTransferFeeRoundUpValue, that.instantTransferFeeRoundUpValue) && Objects.equals(revertCreditCardAbsoluteFees, that.revertCreditCardAbsoluteFees) && Objects.equals(revertCreditCardPercentageFees, that.revertCreditCardPercentageFees) && Objects.equals(revertDebitAbsoluteFees, that.revertDebitAbsoluteFees) && Objects.equals(revertDebitPercentageFees, that.revertDebitPercentageFees) && Objects.equals(interacFeeAbsolute, that.interacFeeAbsolute) && Objects.equals(interacFeePercentage, that.interacFeePercentage) && Objects.equals(interacFeeCollectAbsolute, that.interacFeeCollectAbsolute) && Objects.equals(interacFeeCollectPercentage, that.interacFeeCollectPercentage) && Objects.equals(debitNFSFees, that.debitNFSFees) && Objects.equals(nFSFileFees, that.nFSFileFees) && Objects.equals(creditCardFailedChargeFee, that.creditCardFailedChargeFee) && Objects.equals(oppositionReturnFees, that.oppositionReturnFees) && Objects.equals(interacReturnFee, that.interacReturnFee) && Objects.equals(dataContext, that.dataContext) ;
+        return Objects.equals(creditCardFeeMode, that.creditCardFeeMode) && Objects.equals(creditCardPercentageFee, that.creditCardPercentageFee) && Objects.equals(creditCardAbsoluteFee, that.creditCardAbsoluteFee) && Objects.equals(debitFeeMode, that.debitFeeMode) && Objects.equals(debitPercentageFee, that.debitPercentageFee) && Objects.equals(debitAbsoluteFee, that.debitAbsoluteFee) && Objects.equals(instantTransferFeeMode, that.instantTransferFeeMode) && Objects.equals(instantTransferPercentageFee, that.instantTransferPercentageFee) && Objects.equals(instantTransferAbsoluteFee, that.instantTransferAbsoluteFee) && Objects.equals(convenientFeeCreditMode, that.convenientFeeCreditMode) && Objects.equals(convenientFeeCreditPercentageFee, that.convenientFeeCreditPercentageFee) && Objects.equals(convenientFeeCreditAbsoluteFee, that.convenientFeeCreditAbsoluteFee) && Objects.equals(convenientFeeCreditRoundUpValue, that.convenientFeeCreditRoundUpValue) && Objects.equals(convenientFeeDebitMode, that.convenientFeeDebitMode) && Objects.equals(convenientFeeDebitPercentageFee, that.convenientFeeDebitPercentageFee) && Objects.equals(convenientFeeDebitAbsoluteFee, that.convenientFeeDebitAbsoluteFee) && Objects.equals(convenientFeeDebitRoundUpValue, that.convenientFeeDebitRoundUpValue) && Objects.equals(debitFeeRoundUpValue, that.debitFeeRoundUpValue) && Objects.equals(creditCardFeeRoundUpValue, that.creditCardFeeRoundUpValue) && Objects.equals(instantTransferFeeRoundUpValue, that.instantTransferFeeRoundUpValue) && Objects.equals(revertCreditCardAbsoluteFees, that.revertCreditCardAbsoluteFees) && Objects.equals(revertCreditCardPercentageFees, that.revertCreditCardPercentageFees) && Objects.equals(revertDebitAbsoluteFees, that.revertDebitAbsoluteFees) && Objects.equals(revertDebitPercentageFees, that.revertDebitPercentageFees) && Objects.equals(interacFeeAbsolute, that.interacFeeAbsolute) && Objects.equals(interacFeePercentage, that.interacFeePercentage) && Objects.equals(interacFeeCollectAbsolute, that.interacFeeCollectAbsolute) && Objects.equals(interacFeeCollectPercentage, that.interacFeeCollectPercentage) && Objects.equals(debitNFSFees, that.debitNFSFees) && Objects.equals(nFSFileFees, that.nFSFileFees) && Objects.equals(creditCardFailedChargeFee, that.creditCardFailedChargeFee) && Objects.equals(oppositionReturnFees, that.oppositionReturnFees) && Objects.equals(interacReturnFee, that.interacReturnFee) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(creditCardFeeMode, creditCardPercentageFee, creditCardAbsoluteFee, debitFeeMode, debitPercentageFee, debitAbsoluteFee, instantTransferFeeMode, instantTransferPercentageFee, instantTransferAbsoluteFee, convenientFeeCreditMode, convenientFeeCreditPercentageFee, convenientFeeCreditAbsoluteFee, convenientFeeCreditRoundUpValue, convenientFeeDebitMode, convenientFeeDebitPercentageFee, convenientFeeDebitAbsoluteFee, convenientFeeDebitRoundUpValue, debitFeeRoundUpValue, creditCardFeeRoundUpValue, instantTransferFeeRoundUpValue, revertCreditCardAbsoluteFees, revertCreditCardPercentageFees, revertDebitAbsoluteFees, revertDebitPercentageFees, interacFeeAbsolute, interacFeePercentage, interacFeeCollectAbsolute, interacFeeCollectPercentage, debitNFSFees, nFSFileFees, creditCardFailedChargeFee, oppositionReturnFees, interacReturnFee, dataContext);
+        return Objects.hash(creditCardFeeMode, creditCardPercentageFee, creditCardAbsoluteFee, debitFeeMode, debitPercentageFee, debitAbsoluteFee, instantTransferFeeMode, instantTransferPercentageFee, instantTransferAbsoluteFee, convenientFeeCreditMode, convenientFeeCreditPercentageFee, convenientFeeCreditAbsoluteFee, convenientFeeCreditRoundUpValue, convenientFeeDebitMode, convenientFeeDebitPercentageFee, convenientFeeDebitAbsoluteFee, convenientFeeDebitRoundUpValue, debitFeeRoundUpValue, creditCardFeeRoundUpValue, instantTransferFeeRoundUpValue, revertCreditCardAbsoluteFees, revertCreditCardPercentageFees, revertDebitAbsoluteFees, revertDebitPercentageFees, interacFeeAbsolute, interacFeePercentage, interacFeeCollectAbsolute, interacFeeCollectPercentage, debitNFSFees, nFSFileFees, creditCardFailedChargeFee, oppositionReturnFees, interacReturnFee);
     }
 
     @Override
@@ -595,7 +580,6 @@ public class ServiceFeeSettings   {
                 ", creditCardFailedChargeFee='" + creditCardFailedChargeFee + '\'' +
                 ", oppositionReturnFees='" + oppositionReturnFees + '\'' +
                 ", interacReturnFee='" + interacReturnFee + '\'' +
-                ", dataContext='" + dataContext + '\'' +
 
                 '}';
     }

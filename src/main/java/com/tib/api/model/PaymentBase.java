@@ -88,7 +88,7 @@ public class PaymentBase   {
     private PaymentEntity paymentInfo;
 
     /**
-     * Indicates whether the listed transfer has been marked as resolved.
+     * Merchant-controlled reconciliation flag. Mark a payment as reconciled in your own system, then filter listings with MarkResolvedOnly. Has no effect on payment processing.
      */
     @JsonProperty("IsMarkResolved")
     private boolean isMarkResolved;
@@ -100,13 +100,13 @@ public class PaymentBase   {
     private ProcessStatus currentStatus;
 
     /**
-     * The fee amount applied to a credit‑card transfer when the convenient fee option is used.
+     * Convenience fee amount charged for credit card payments.
      */
     @JsonProperty("ConvenientFeeCreditCard")
     private Double convenientFeeCreditCard;
 
     /**
-     * The convenience fee charged for a direct account transfer.
+     * Convenience fee amount charged for direct account (EFT) payments.
      */
     @JsonProperty("ConvenientFeeDirectAccount")
     private Double convenientFeeDirectAccount;

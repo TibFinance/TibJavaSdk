@@ -55,7 +55,7 @@ public class ContactInfo   {
     private Integer country;
 
     /**
-     * Postal code of the cardholder's billing address
+     * Postal or ZIP code.
      */
     @JsonProperty("ZipCode")
     private String zipCode;

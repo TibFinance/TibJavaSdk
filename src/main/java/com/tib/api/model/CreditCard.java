@@ -61,31 +61,13 @@ public class CreditCard   {
     @JsonProperty("CreditCardRegisteredAddress")
     private Address creditCardRegisteredAddress;
 
-    /**
-     * The date and time when the payment method expires.
-     */
-    @JsonProperty("ExpirationDate")
-    private OffsetDateTime expirationDate;
-
-    /**
-     * The credit card number string provided in a standardized format for payment method creation.
-     */
-    @JsonProperty("FormatedCreditCardString")
-    private String formatedCreditCardString;
-
-    /**
-     * A formatted string that previews the direct account payment method details before creation.
-     */
-    @JsonProperty("PreviewString")
-    private String previewString;
-
 
     
     public CreditCard() {
     }
 
     
-    public CreditCard(String creditCardDescription, Long pan, String cVD, Integer expirationMonth, Integer expirationYear, String cardOwner, Address creditCardRegisteredAddress, OffsetDateTime expirationDate, String formatedCreditCardString, String previewString) {
+    public CreditCard(String creditCardDescription, Long pan, String cVD, Integer expirationMonth, Integer expirationYear, String cardOwner, Address creditCardRegisteredAddress) {
         this.creditCardDescription = creditCardDescription;
         this.pan = pan;
         this.cVD = cVD;
@@ -93,9 +75,6 @@ public class CreditCard   {
         this.expirationYear = expirationYear;
         this.cardOwner = cardOwner;
         this.creditCardRegisteredAddress = creditCardRegisteredAddress;
-        this.expirationDate = expirationDate;
-        this.formatedCreditCardString = formatedCreditCardString;
-        this.previewString = previewString;
     }
     
     
@@ -157,30 +136,6 @@ public class CreditCard   {
         this.creditCardRegisteredAddress = creditCardRegisteredAddress;
     }
 
-    public OffsetDateTime getExpirationDate() {
-        return expirationDate;
-    }
-
-    public void setExpirationDate(OffsetDateTime expirationDate) {
-        this.expirationDate = expirationDate;
-    }
-
-    public String getFormatedCreditCardString() {
-        return formatedCreditCardString;
-    }
-
-    public void setFormatedCreditCardString(String formatedCreditCardString) {
-        this.formatedCreditCardString = formatedCreditCardString;
-    }
-
-    public String getPreviewString() {
-        return previewString;
-    }
-
-    public void setPreviewString(String previewString) {
-        this.previewString = previewString;
-    }
-
 
 
     
@@ -189,13 +144,13 @@ public class CreditCard   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CreditCard that = (CreditCard) o;
-        return Objects.equals(creditCardDescription, that.creditCardDescription) && Objects.equals(pan, that.pan) && Objects.equals(cVD, that.cVD) && Objects.equals(expirationMonth, that.expirationMonth) && Objects.equals(expirationYear, that.expirationYear) && Objects.equals(cardOwner, that.cardOwner) && Objects.equals(creditCardRegisteredAddress, that.creditCardRegisteredAddress) && Objects.equals(expirationDate, that.expirationDate) && Objects.equals(formatedCreditCardString, that.formatedCreditCardString) && Objects.equals(previewString, that.previewString) ;
+        return Objects.equals(creditCardDescription, that.creditCardDescription) && Objects.equals(pan, that.pan) && Objects.equals(cVD, that.cVD) && Objects.equals(expirationMonth, that.expirationMonth) && Objects.equals(expirationYear, that.expirationYear) && Objects.equals(cardOwner, that.cardOwner) && Objects.equals(creditCardRegisteredAddress, that.creditCardRegisteredAddress) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(creditCardDescription, pan, cVD, expirationMonth, expirationYear, cardOwner, creditCardRegisteredAddress, expirationDate, formatedCreditCardString, previewString);
+        return Objects.hash(creditCardDescription, pan, cVD, expirationMonth, expirationYear, cardOwner, creditCardRegisteredAddress);
     }
 
     @Override
@@ -208,9 +163,6 @@ public class CreditCard   {
                 ", expirationYear='" + expirationYear + '\'' +
                 ", cardOwner='" + cardOwner + '\'' +
                 ", creditCardRegisteredAddress='" + creditCardRegisteredAddress + '\'' +
-                ", expirationDate='" + expirationDate + '\'' +
-                ", formatedCreditCardString='" + formatedCreditCardString + '\'' +
-                ", previewString='" + previewString + '\'' +
 
                 '}';
     }

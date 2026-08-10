@@ -117,7 +117,7 @@ public class RecuringTransfer   {
     private OffsetDateTime endDate;
 
     /**
-     * Indicates whether the listed transfer is a supplier transfer.
+     * True when this recurring schedule is a supplier transfer (the supplier receives funds and a separate paying merchant is billed).
      */
     @JsonProperty("IsSupplierTransfer")
     private boolean isSupplierTransfer;

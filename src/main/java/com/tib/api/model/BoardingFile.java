@@ -19,24 +19,6 @@ public class BoardingFile   {
 
     
     /**
-     * Unique identifier of the boarding information file linked to the merchant.
-     */
-    @JsonProperty("BoardingInfoFilesId")
-    private String boardingInfoFilesId;
-
-    /**
-     * External case identifier assigned by the merchant's payment provider.
-     */
-    @JsonProperty("ProviderCaseId")
-    private String providerCaseId;
-
-    /**
-     * Free‑form notes added by the underwriter for the merchant identified by the external ID
-     */
-    @JsonProperty("DocUnderWriterNotes")
-    private String docUnderWriterNotes;
-
-    /**
      * The type of document associated with the merchant record.
      */
     @JsonProperty("DocType")
@@ -72,10 +54,7 @@ public class BoardingFile   {
     }
 
     
-    public BoardingFile(String boardingInfoFilesId, String providerCaseId, String docUnderWriterNotes, String docType, String docsReceived, String docLimit, String docGenericDescription, String docStatus) {
-        this.boardingInfoFilesId = boardingInfoFilesId;
-        this.providerCaseId = providerCaseId;
-        this.docUnderWriterNotes = docUnderWriterNotes;
+    public BoardingFile(String docType, String docsReceived, String docLimit, String docGenericDescription, String docStatus) {
         this.docType = docType;
         this.docsReceived = docsReceived;
         this.docLimit = docLimit;
@@ -86,30 +65,6 @@ public class BoardingFile   {
     
 
     
-    public String getBoardingInfoFilesId() {
-        return boardingInfoFilesId;
-    }
-
-    public void setBoardingInfoFilesId(String boardingInfoFilesId) {
-        this.boardingInfoFilesId = boardingInfoFilesId;
-    }
-
-    public String getProviderCaseId() {
-        return providerCaseId;
-    }
-
-    public void setProviderCaseId(String providerCaseId) {
-        this.providerCaseId = providerCaseId;
-    }
-
-    public String getDocUnderWriterNotes() {
-        return docUnderWriterNotes;
-    }
-
-    public void setDocUnderWriterNotes(String docUnderWriterNotes) {
-        this.docUnderWriterNotes = docUnderWriterNotes;
-    }
-
     public String getDocType() {
         return docType;
     }
@@ -158,22 +113,19 @@ public class BoardingFile   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BoardingFile that = (BoardingFile) o;
-        return Objects.equals(boardingInfoFilesId, that.boardingInfoFilesId) && Objects.equals(providerCaseId, that.providerCaseId) && Objects.equals(docUnderWriterNotes, that.docUnderWriterNotes) && Objects.equals(docType, that.docType) && Objects.equals(docsReceived, that.docsReceived) && Objects.equals(docLimit, that.docLimit) && Objects.equals(docGenericDescription, that.docGenericDescription) && Objects.equals(docStatus, that.docStatus) ;
+        return Objects.equals(docType, that.docType) && Objects.equals(docsReceived, that.docsReceived) && Objects.equals(docLimit, that.docLimit) && Objects.equals(docGenericDescription, that.docGenericDescription) && Objects.equals(docStatus, that.docStatus) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(boardingInfoFilesId, providerCaseId, docUnderWriterNotes, docType, docsReceived, docLimit, docGenericDescription, docStatus);
+        return Objects.hash(docType, docsReceived, docLimit, docGenericDescription, docStatus);
     }
 
     @Override
     public String toString() {
         return "BoardingFile{" +
-                "boardingInfoFilesId='" + boardingInfoFilesId + '\'' +
-                ", providerCaseId='" + providerCaseId + '\'' +
-                ", docUnderWriterNotes='" + docUnderWriterNotes + '\'' +
-                ", docType='" + docType + '\'' +
+                "docType='" + docType + '\'' +
                 ", docsReceived='" + docsReceived + '\'' +
                 ", docLimit='" + docLimit + '\'' +
                 ", docGenericDescription='" + docGenericDescription + '\'' +

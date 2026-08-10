@@ -27,13 +27,13 @@ public class Bill  extends BillEntity  {
     private String billId;
 
     /**
-     * The fee amount applied to a credit‑card transfer when the convenient fee option is used.
+     * Calculated convenience fee if paid by credit card. Always zero if UseConvenientFeeRule is false. This amount cannot be set. It is calculated by the system
      */
     @JsonProperty("ConvenientFeeCreditCard")
     private Double convenientFeeCreditCard;
 
     /**
-     * The convenience fee charged for a direct account transfer.
+     * Calculated convenience fee if paid by direct account transfer. Always zero if UseConvenientFeeRule is false. This amount cannot be set. It is calculated by the system
      */
     @JsonProperty("ConvenientFeeDirectAccount")
     private Double convenientFeeDirectAccount;

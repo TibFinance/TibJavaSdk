@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.tib.api.model.Error;
 import com.tib.api.model.WalletOperation;
+import com.tib.api.model.WalletOperationDetail;
 import com.tib.api.model.response.CustomAPIResponse;
 
 
@@ -32,15 +33,19 @@ public class GetWalletOperationsResponse extends CustomAPIResponse {
     @JsonProperty("DelayBufferAmount")
     private Double delayBufferAmount;
 
+    @JsonProperty("OperationDetails")
+    private List<WalletOperationDetail> operationDetails;
+
 
     public GetWalletOperationsResponse() {
     }
 
-    public GetWalletOperationsResponse(Error[] errors, boolean hasError, String messages, List<WalletOperation> dailyOperations, Double balanceBeforeOperations, Double delayBufferAmount) {
+    public GetWalletOperationsResponse(Error[] errors, boolean hasError, String messages, List<WalletOperation> dailyOperations, Double balanceBeforeOperations, Double delayBufferAmount, List<WalletOperationDetail> operationDetails) {
         super(errors, hasError, messages);
         this.dailyOperations = dailyOperations;
         this.balanceBeforeOperations = balanceBeforeOperations;
         this.delayBufferAmount = delayBufferAmount;
+        this.operationDetails = operationDetails;
     }
 
     public GetWalletOperationsResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
@@ -52,6 +57,7 @@ public class GetWalletOperationsResponse extends CustomAPIResponse {
                 this.dailyOperations = __typed.dailyOperations;
                 this.balanceBeforeOperations = __typed.balanceBeforeOperations;
                 this.delayBufferAmount = __typed.delayBufferAmount;
+                this.operationDetails = __typed.operationDetails;
             }
         }
     }
@@ -81,6 +87,14 @@ public class GetWalletOperationsResponse extends CustomAPIResponse {
         this.delayBufferAmount = delayBufferAmount;
     }
 
+    public List<WalletOperationDetail> getOperationDetails() {
+        return operationDetails;
+    }
+
+    public void setOperationDetails(List<WalletOperationDetail> operationDetails) {
+        this.operationDetails = operationDetails;
+    }
+
 
 
     
@@ -89,13 +103,13 @@ public class GetWalletOperationsResponse extends CustomAPIResponse {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GetWalletOperationsResponse that = (GetWalletOperationsResponse) o;
-        return Objects.equals(dailyOperations, that.dailyOperations) && Objects.equals(balanceBeforeOperations, that.balanceBeforeOperations) && Objects.equals(delayBufferAmount, that.delayBufferAmount) ;
+        return Objects.equals(dailyOperations, that.dailyOperations) && Objects.equals(balanceBeforeOperations, that.balanceBeforeOperations) && Objects.equals(delayBufferAmount, that.delayBufferAmount) && Objects.equals(operationDetails, that.operationDetails) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(dailyOperations, balanceBeforeOperations, delayBufferAmount);
+        return Objects.hash(dailyOperations, balanceBeforeOperations, delayBufferAmount, operationDetails);
     }
 
     @Override
@@ -104,6 +118,7 @@ public class GetWalletOperationsResponse extends CustomAPIResponse {
                 "dailyOperations='" + dailyOperations + '\'' +
                 ", balanceBeforeOperations='" + balanceBeforeOperations + '\'' +
                 ", delayBufferAmount='" + delayBufferAmount + '\'' +
+                ", operationDetails='" + operationDetails + '\'' +
 
                 '}';
     }

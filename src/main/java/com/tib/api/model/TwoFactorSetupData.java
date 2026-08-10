@@ -37,7 +37,7 @@ public class TwoFactorSetupData   {
     private String otpAuthUri;
 
     /**
-     * The name or code of the financial institution that issued the merchant’s account.
+     * The issuer name shown in the authenticator app. Currently always "TIB Portal". Matches the issuer embedded in OtpAuthUri; use this when presenting the manual-entry option.
      */
     @JsonProperty("Issuer")
     private String issuer;

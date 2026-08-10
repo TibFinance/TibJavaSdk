@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.tib.api.model.Error;
-import com.tib.api.model.MerchantView;
 import com.tib.api.model.response.CustomAPIResponse;
 
 
@@ -29,18 +28,14 @@ public class CreateSupplierResponse extends CustomAPIResponse {
     @JsonProperty("SupplierName")
     private String supplierName;
 
-    @JsonProperty("MatchingExistingMerchants")
-    private List<MerchantView> matchingExistingMerchants;
-
 
     public CreateSupplierResponse() {
     }
 
-    public CreateSupplierResponse(Error[] errors, boolean hasError, String messages, String supplierId, String supplierName, List<MerchantView> matchingExistingMerchants) {
+    public CreateSupplierResponse(Error[] errors, boolean hasError, String messages, String supplierId, String supplierName) {
         super(errors, hasError, messages);
         this.supplierId = supplierId;
         this.supplierName = supplierName;
-        this.matchingExistingMerchants = matchingExistingMerchants;
     }
 
     public CreateSupplierResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
@@ -51,7 +46,6 @@ public class CreateSupplierResponse extends CustomAPIResponse {
                 CreateSupplierResponse __typed = objectMapper.readValue(__rawBody, CreateSupplierResponse.class);
                 this.supplierId = __typed.supplierId;
                 this.supplierName = __typed.supplierName;
-                this.matchingExistingMerchants = __typed.matchingExistingMerchants;
             }
         }
     }
@@ -73,14 +67,6 @@ public class CreateSupplierResponse extends CustomAPIResponse {
         this.supplierName = supplierName;
     }
 
-    public List<MerchantView> getMatchingExistingMerchants() {
-        return matchingExistingMerchants;
-    }
-
-    public void setMatchingExistingMerchants(List<MerchantView> matchingExistingMerchants) {
-        this.matchingExistingMerchants = matchingExistingMerchants;
-    }
-
 
 
     
@@ -89,13 +75,13 @@ public class CreateSupplierResponse extends CustomAPIResponse {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CreateSupplierResponse that = (CreateSupplierResponse) o;
-        return Objects.equals(supplierId, that.supplierId) && Objects.equals(supplierName, that.supplierName) && Objects.equals(matchingExistingMerchants, that.matchingExistingMerchants) ;
+        return Objects.equals(supplierId, that.supplierId) && Objects.equals(supplierName, that.supplierName) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(supplierId, supplierName, matchingExistingMerchants);
+        return Objects.hash(supplierId, supplierName);
     }
 
     @Override
@@ -103,7 +89,6 @@ public class CreateSupplierResponse extends CustomAPIResponse {
         return "CreateSupplierResponse{" +
                 "supplierId='" + supplierId + '\'' +
                 ", supplierName='" + supplierName + '\'' +
-                ", matchingExistingMerchants='" + matchingExistingMerchants + '\'' +
 
                 '}';
     }

@@ -47,13 +47,7 @@ public class CreateCreditCardPaymentMethodArgs  extends BaseAuthenticatedCrypted
     private CreditCard creditCard;
 
     /**
-     * Name of the cardholder as printed on the credit card
-     */
-    @JsonProperty("CardOwner")
-    private String cardOwner;
-
-    /**
-     * Postal code of the cardholder's billing address
+     * Billing postal or ZIP code for AVS verification, for callers that collect only a postal code rather than a full billing address. Used only when CreditCard.CreditCardRegisteredAddress is not supplied — if a full registered address is provided, it takes precedence and this value is ignored.
      */
     @JsonProperty("ZipCode")
     private String zipCode;
@@ -70,24 +64,22 @@ public class CreateCreditCardPaymentMethodArgs  extends BaseAuthenticatedCrypted
     }
 
     
-    public CreateCreditCardPaymentMethodArgs(Currency currency, String customerId, boolean isCustomerAutomaticPaymentMethod, CreditCard creditCard, String cardOwner, String zipCode, Language language) {
+    public CreateCreditCardPaymentMethodArgs(Currency currency, String customerId, boolean isCustomerAutomaticPaymentMethod, CreditCard creditCard, String zipCode, Language language) {
         this.currency = currency;
         this.customerId = customerId;
         this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
         this.creditCard = creditCard;
-        this.cardOwner = cardOwner;
         this.zipCode = zipCode;
         this.language = language;
     }
     
     
-    public CreateCreditCardPaymentMethodArgs(String sessionToken, Currency currency, String customerId, boolean isCustomerAutomaticPaymentMethod, CreditCard creditCard, String cardOwner, String zipCode, Language language) {
+    public CreateCreditCardPaymentMethodArgs(String sessionToken, Currency currency, String customerId, boolean isCustomerAutomaticPaymentMethod, CreditCard creditCard, String zipCode, Language language) {
         super(sessionToken);
         this.currency = currency;
         this.customerId = customerId;
         this.isCustomerAutomaticPaymentMethod = isCustomerAutomaticPaymentMethod;
         this.creditCard = creditCard;
-        this.cardOwner = cardOwner;
         this.zipCode = zipCode;
         this.language = language;
     }
@@ -125,14 +117,6 @@ public class CreateCreditCardPaymentMethodArgs  extends BaseAuthenticatedCrypted
         this.creditCard = creditCard;
     }
 
-    public String getCardOwner() {
-        return cardOwner;
-    }
-
-    public void setCardOwner(String cardOwner) {
-        this.cardOwner = cardOwner;
-    }
-
     public String getZipCode() {
         return zipCode;
     }
@@ -157,13 +141,13 @@ public class CreateCreditCardPaymentMethodArgs  extends BaseAuthenticatedCrypted
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CreateCreditCardPaymentMethodArgs that = (CreateCreditCardPaymentMethodArgs) o;
-        return Objects.equals(currency, that.currency) && Objects.equals(customerId, that.customerId) && Objects.equals(isCustomerAutomaticPaymentMethod, that.isCustomerAutomaticPaymentMethod) && Objects.equals(creditCard, that.creditCard) && Objects.equals(cardOwner, that.cardOwner) && Objects.equals(zipCode, that.zipCode) && Objects.equals(language, that.language) ;
+        return Objects.equals(currency, that.currency) && Objects.equals(customerId, that.customerId) && Objects.equals(isCustomerAutomaticPaymentMethod, that.isCustomerAutomaticPaymentMethod) && Objects.equals(creditCard, that.creditCard) && Objects.equals(zipCode, that.zipCode) && Objects.equals(language, that.language) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(currency, customerId, isCustomerAutomaticPaymentMethod, creditCard, cardOwner, zipCode, language);
+        return Objects.hash(currency, customerId, isCustomerAutomaticPaymentMethod, creditCard, zipCode, language);
     }
 
     @Override
@@ -173,7 +157,6 @@ public class CreateCreditCardPaymentMethodArgs  extends BaseAuthenticatedCrypted
                 ", customerId='" + customerId + '\'' +
                 ", isCustomerAutomaticPaymentMethod='" + isCustomerAutomaticPaymentMethod + '\'' +
                 ", creditCard='" + creditCard + '\'' +
-                ", cardOwner='" + cardOwner + '\'' +
                 ", zipCode='" + zipCode + '\'' +
                 ", language='" + language + '\'' +
 

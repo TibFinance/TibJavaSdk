@@ -21,13 +21,13 @@ public class ListTransfersFastArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The start date-time for the transfer search window.
+     * The start of the date‑time range to filter transfers.
      */
     @JsonProperty("FromDate")
     private OffsetDateTime fromDate;
 
     /**
-     * Upper bound of the transfer creation date range for the query
+     * The exclusive upper bound of the transfer creation date range to retrieve.
      */
     @JsonProperty("ToDate")
     private OffsetDateTime toDate;
@@ -45,7 +45,7 @@ public class ListTransfersFastArgs  extends BaseAuthenticatedCryptedArgs  {
     private String merchantId;
 
     /**
-     * Identifier of the transfer group to filter the fast transfer list
+     * Identifier of the transfer group to filter the listed transfers
      */
     @JsonProperty("TransferGroupId")
     private String transferGroupId;
@@ -57,19 +57,19 @@ public class ListTransfersFastArgs  extends BaseAuthenticatedCryptedArgs  {
     private TransferType transferType;
 
     /**
-     * If true, the request returns only transfers that are marked as resolved.
+     * Indicates whether to return only transfers that have been resolved
      */
     @JsonProperty("MarkResolvedOnly")
     private boolean markResolvedOnly;
 
     /**
-     * Identifier of the external merchant group for which transfers are requested
+     * Identifier of the external merchant group for which transfers are being listed
      */
     @JsonProperty("ExternalMerchantGroupId")
     private String externalMerchantGroupId;
 
     /**
-     * When true, ListTransfersFast returns only transfers that have errors.
+     * When true, the request returns only transfers that have errors.
      */
     @JsonProperty("OnlyWithErrors")
     private boolean onlyWithErrors;

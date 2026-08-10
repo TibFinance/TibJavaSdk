@@ -59,7 +59,7 @@ public class PaymentEntity   {
     private Double paymentAmount;
 
     /**
-     * Identifier of a specific customer payment method to force for this payment
+     * Identifier of the customer payment method to charge when using the force-payment-method flow (see PaymentFlowEnum value KnownCustomerAutoPaymentForcePaymentMethod). The payment is processed automatically against this method, without a hosted payment page. Must reference a payment method belonging to the payment's customer; validated and persisted on create.
      */
     @JsonProperty("ForcedCustomerPaymentMethodId")
     private String forcedCustomerPaymentMethodId;
@@ -89,7 +89,7 @@ public class PaymentEntity   {
     private boolean askForCustomerConsent;
 
     /**
-     * Specifies whether the new payment should be created as a deleted (soft‑deleted) record.
+     * True when this payment has been cancelled (soft-deleted). Always false on list endpoints, which exclude deleted rows; only GetPayment can return true. Ignored on create — the server always writes false.
      */
     @JsonProperty("IsDeleted")
     private boolean isDeleted;

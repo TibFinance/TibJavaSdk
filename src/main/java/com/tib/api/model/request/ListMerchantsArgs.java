@@ -32,7 +32,7 @@ public class ListMerchantsArgs  extends BaseAuthenticatedCryptedArgs  {
     private String merchantId;
 
     /**
-     * Specifies whether the response should include merchants linked to the requesting client.
+     * Whether to include the client's own primary merchant for the service in the results. Results are always scoped to the authenticated client; this flag does not widen visibility across clients.
      */
     @JsonProperty("IncludeClientMerchants")
     private boolean includeClientMerchants;

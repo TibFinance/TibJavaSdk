@@ -64,7 +64,7 @@ public class Wallet   {
     private boolean isProcessing;
 
     /**
-     * Specifies the category of the wallet returned in the response
+     * Wallet withdrawal mode (scheduled, manual, or automatic).
      */
     @JsonProperty("WalletType")
     private WalletType walletType;

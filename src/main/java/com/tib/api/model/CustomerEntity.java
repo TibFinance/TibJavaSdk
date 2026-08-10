@@ -52,7 +52,7 @@ public class CustomerEntity   {
     private String customerEmail;
 
     /**
-     * A collection of payment methods available to the requester.
+     * Payment methods registered for this customer. Populated on read; ignored when supplied on create or save — use CreateDirectAccountPaymentMethod, CreateCreditCardPaymentMethod or CreateInteracPaymentMethod to register one.
      */
     @JsonProperty("PaymentMethods")
     private List<PaymentMethod> paymentMethods;

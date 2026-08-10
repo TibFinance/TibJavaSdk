@@ -40,7 +40,7 @@ public class ServiceWithMerchant  extends Service  {
     private ServiceSettings serviceSettings;
 
     /**
-     * The merchant name linked to any overloaded fees applied to the transaction.
+     * Display name of the merchant that absorbs this service's transaction fees, when fee billing has been redirected to a specific merchant. Empty when fees are billed normally. Read-only.
      */
     @JsonProperty("OverloadedFeesMerchantName")
     private String overloadedFeesMerchantName;
@@ -59,8 +59,8 @@ public class ServiceWithMerchant  extends Service  {
     }
     
     
-    public ServiceWithMerchant(String serviceId, Optional<String> whiteLabelingId, boolean hasCompletedBoarding, MerchantView servicePrimaryMerchant, ServiceFeeSettings serviceFeeSettings, ServiceSettings serviceSettings, String overloadedFeesMerchantName) {
-        super(serviceId, whiteLabelingId, hasCompletedBoarding);
+    public ServiceWithMerchant(String serviceId, boolean hasCompletedBoarding, MerchantView servicePrimaryMerchant, ServiceFeeSettings serviceFeeSettings, ServiceSettings serviceSettings, String overloadedFeesMerchantName) {
+        super(serviceId, hasCompletedBoarding);
         this.servicePrimaryMerchant = servicePrimaryMerchant;
         this.serviceFeeSettings = serviceFeeSettings;
         this.serviceSettings = serviceSettings;

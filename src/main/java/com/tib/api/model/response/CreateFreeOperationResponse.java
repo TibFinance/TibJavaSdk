@@ -25,28 +25,19 @@ public class CreateFreeOperationResponse extends CustomAPIResponse {
     @JsonProperty("PaymentId")
     private String paymentId;
 
-    @JsonProperty("ClientId")
-    private String clientId;
-
 
     public CreateFreeOperationResponse() {
     }
 
-    public CreateFreeOperationResponse(Error[] errors, boolean hasError, String messages, String paymentId, String clientId) {
+    public CreateFreeOperationResponse(Error[] errors, boolean hasError, String messages, String paymentId) {
         super(errors, hasError, messages);
         this.paymentId = paymentId;
-        this.clientId = clientId;
     }
 
-    public CreateFreeOperationResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+    public CreateFreeOperationResponse(APIResponse apiResponse) {
         super(apiResponse);
         if (!apiResponse.isHasError()) {
-            String __rawBody = apiResponse.getRawBody();
-            if (__rawBody != null && !__rawBody.isEmpty()) {
-                CreateFreeOperationResponse __typed = objectMapper.readValue(__rawBody, CreateFreeOperationResponse.class);
-                this.paymentId = __typed.paymentId;
-                this.clientId = __typed.clientId;
-            }
+            this.paymentId = apiResponse.getResponse().toString();
         }
     }
 
@@ -59,14 +50,6 @@ public class CreateFreeOperationResponse extends CustomAPIResponse {
         this.paymentId = paymentId;
     }
 
-    public String getClientId() {
-        return clientId;
-    }
-
-    public void setClientId(String clientId) {
-        this.clientId = clientId;
-    }
-
 
 
     
@@ -75,20 +58,19 @@ public class CreateFreeOperationResponse extends CustomAPIResponse {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CreateFreeOperationResponse that = (CreateFreeOperationResponse) o;
-        return Objects.equals(paymentId, that.paymentId) && Objects.equals(clientId, that.clientId) ;
+        return Objects.equals(paymentId, that.paymentId) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(paymentId, clientId);
+        return Objects.hash(paymentId);
     }
 
     @Override
     public String toString() {
         return "CreateFreeOperationResponse{" +
                 "paymentId='" + paymentId + '\'' +
-                ", clientId='" + clientId + '\'' +
 
                 '}';
     }

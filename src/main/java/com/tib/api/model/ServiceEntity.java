@@ -34,7 +34,7 @@ public class ServiceEntity   {
     private Language defaultCustomerLanguage;
 
     /**
-     * Identifies the category of the service provider for the requested service
+     * Payment provider type for this service.
      */
     @JsonProperty("ProviderType")
     private Provider providerType;

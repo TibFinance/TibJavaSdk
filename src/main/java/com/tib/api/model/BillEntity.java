@@ -81,7 +81,7 @@ public class BillEntity   {
     private String relatedCustomerId;
 
     /**
-     * Indicates whether the convenient fee rule is applied to the retrieved bill.
+     * Whether convenience fees apply to this bill. Honored on create: when false, no convenience fee is charged when this bill is paid. The convenience fee amounts come from the service's fee configuration; this flag is the per-bill opt-in.
      */
     @JsonProperty("UseConvenientFeeRule")
     private boolean useConvenientFeeRule;

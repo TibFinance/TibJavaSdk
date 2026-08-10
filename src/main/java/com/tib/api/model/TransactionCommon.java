@@ -79,7 +79,7 @@ public class TransactionCommon   {
     private String accoutPreview;
 
     /**
-     * Type of account (chequing, savings, etc.).
+     * The payment method type used for this transaction: credit card, direct bank account, or Interac.
      */
     @JsonProperty("AccountType")
     private PaymentMethodType accountType;

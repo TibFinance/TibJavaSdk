@@ -112,12 +112,6 @@ public class FreeOperation   {
     private String statementDescription;
 
     /**
-     * Unique identifier of the client initiating the session
-     */
-    @JsonProperty("ClientId")
-    private String clientId;
-
-    /**
      * Indicates whether the payment should be executed as an immediate transfer.
      */
     @JsonProperty("ImmediateTransfer")
@@ -129,7 +123,7 @@ public class FreeOperation   {
     }
 
     
-    public FreeOperation(String merchantId, String billId, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Double amount, Language language, OffsetDateTime transactionDueDate, String transferTitle, String transferDescription, String transferExternalSystemNumber, TransferFrequency transferFrequency, OffsetDateTime recurringEndDate, String statementDescription, String clientId, boolean immediateTransfer) {
+    public FreeOperation(String merchantId, String billId, String customerId, String paymentMethodId, TransferType transferType, String referenceNumber, Double amount, Language language, OffsetDateTime transactionDueDate, String transferTitle, String transferDescription, String transferExternalSystemNumber, TransferFrequency transferFrequency, OffsetDateTime recurringEndDate, String statementDescription, boolean immediateTransfer) {
         this.merchantId = merchantId;
         this.billId = billId;
         this.customerId = customerId;
@@ -145,7 +139,6 @@ public class FreeOperation   {
         this.transferFrequency = transferFrequency;
         this.recurringEndDate = recurringEndDate;
         this.statementDescription = statementDescription;
-        this.clientId = clientId;
         this.immediateTransfer = immediateTransfer;
     }
     
@@ -272,14 +265,6 @@ public class FreeOperation   {
         this.statementDescription = statementDescription;
     }
 
-    public String getClientId() {
-        return clientId;
-    }
-
-    public void setClientId(String clientId) {
-        this.clientId = clientId;
-    }
-
     public boolean getImmediateTransfer() {
         return immediateTransfer;
     }
@@ -296,13 +281,13 @@ public class FreeOperation   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         FreeOperation that = (FreeOperation) o;
-        return Objects.equals(merchantId, that.merchantId) && Objects.equals(billId, that.billId) && Objects.equals(customerId, that.customerId) && Objects.equals(paymentMethodId, that.paymentMethodId) && Objects.equals(transferType, that.transferType) && Objects.equals(referenceNumber, that.referenceNumber) && Objects.equals(amount, that.amount) && Objects.equals(language, that.language) && Objects.equals(transactionDueDate, that.transactionDueDate) && Objects.equals(transferTitle, that.transferTitle) && Objects.equals(transferDescription, that.transferDescription) && Objects.equals(transferExternalSystemNumber, that.transferExternalSystemNumber) && Objects.equals(transferFrequency, that.transferFrequency) && Objects.equals(recurringEndDate, that.recurringEndDate) && Objects.equals(statementDescription, that.statementDescription) && Objects.equals(clientId, that.clientId) && Objects.equals(immediateTransfer, that.immediateTransfer) ;
+        return Objects.equals(merchantId, that.merchantId) && Objects.equals(billId, that.billId) && Objects.equals(customerId, that.customerId) && Objects.equals(paymentMethodId, that.paymentMethodId) && Objects.equals(transferType, that.transferType) && Objects.equals(referenceNumber, that.referenceNumber) && Objects.equals(amount, that.amount) && Objects.equals(language, that.language) && Objects.equals(transactionDueDate, that.transactionDueDate) && Objects.equals(transferTitle, that.transferTitle) && Objects.equals(transferDescription, that.transferDescription) && Objects.equals(transferExternalSystemNumber, that.transferExternalSystemNumber) && Objects.equals(transferFrequency, that.transferFrequency) && Objects.equals(recurringEndDate, that.recurringEndDate) && Objects.equals(statementDescription, that.statementDescription) && Objects.equals(immediateTransfer, that.immediateTransfer) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(merchantId, billId, customerId, paymentMethodId, transferType, referenceNumber, amount, language, transactionDueDate, transferTitle, transferDescription, transferExternalSystemNumber, transferFrequency, recurringEndDate, statementDescription, clientId, immediateTransfer);
+        return Objects.hash(merchantId, billId, customerId, paymentMethodId, transferType, referenceNumber, amount, language, transactionDueDate, transferTitle, transferDescription, transferExternalSystemNumber, transferFrequency, recurringEndDate, statementDescription, immediateTransfer);
     }
 
     @Override
@@ -323,7 +308,6 @@ public class FreeOperation   {
                 ", transferFrequency='" + transferFrequency + '\'' +
                 ", recurringEndDate='" + recurringEndDate + '\'' +
                 ", statementDescription='" + statementDescription + '\'' +
-                ", clientId='" + clientId + '\'' +
                 ", immediateTransfer='" + immediateTransfer + '\'' +
 
                 '}';

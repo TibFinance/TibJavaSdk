@@ -79,7 +79,7 @@ public class PaymentOperationEntity   {
     private TibOperationStatus operationStatus;
 
     /**
-     * The merchant name associated with an overload transfer.
+     * Display name of the merchant billed for this operation's fees when fee billing has been redirected. Empty when fees are billed normally, and on list endpoints, which do not compute it.
      */
     @JsonProperty("OverloadMerchantName")
     private String overloadMerchantName;

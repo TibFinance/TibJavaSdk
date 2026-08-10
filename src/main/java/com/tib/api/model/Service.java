@@ -28,12 +28,6 @@ public class Service  extends ServiceEntity  {
     private String serviceId;
 
     /**
-     * Identifier of the white‑label partner linked to the merchant, if any.
-     */
-    @JsonProperty("WhiteLabelingId")
-    private Optional<String> whiteLabelingId;
-
-    /**
      * Indicates whether the service has finished its onboarding process.
      */
     @JsonProperty("HasCompletedBoarding")
@@ -45,17 +39,15 @@ public class Service  extends ServiceEntity  {
     }
 
     
-    public Service(String serviceId, Optional<String> whiteLabelingId, boolean hasCompletedBoarding) {
+    public Service(String serviceId, boolean hasCompletedBoarding) {
         this.serviceId = serviceId;
-        this.whiteLabelingId = whiteLabelingId;
         this.hasCompletedBoarding = hasCompletedBoarding;
     }
     
     
-    public Service(String serviceName, Language defaultCustomerLanguage, Provider providerType, Currency currency, String serviceId, Optional<String> whiteLabelingId, boolean hasCompletedBoarding) {
+    public Service(String serviceName, Language defaultCustomerLanguage, Provider providerType, Currency currency, String serviceId, boolean hasCompletedBoarding) {
         super(serviceName, defaultCustomerLanguage, providerType, currency);
         this.serviceId = serviceId;
-        this.whiteLabelingId = whiteLabelingId;
         this.hasCompletedBoarding = hasCompletedBoarding;
     }
 
@@ -66,14 +58,6 @@ public class Service  extends ServiceEntity  {
 
     public void setServiceId(String serviceId) {
         this.serviceId = serviceId;
-    }
-
-    public Optional<String> getWhiteLabelingId() {
-        return whiteLabelingId;
-    }
-
-    public void setWhiteLabelingId(Optional<String> whiteLabelingId) {
-        this.whiteLabelingId = whiteLabelingId;
     }
 
     public boolean getHasCompletedBoarding() {
@@ -92,20 +76,19 @@ public class Service  extends ServiceEntity  {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Service that = (Service) o;
-        return Objects.equals(serviceId, that.serviceId) && Objects.equals(whiteLabelingId, that.whiteLabelingId) && Objects.equals(hasCompletedBoarding, that.hasCompletedBoarding) ;
+        return Objects.equals(serviceId, that.serviceId) && Objects.equals(hasCompletedBoarding, that.hasCompletedBoarding) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(serviceId, whiteLabelingId, hasCompletedBoarding);
+        return Objects.hash(serviceId, hasCompletedBoarding);
     }
 
     @Override
     public String toString() {
         return "Service{" +
                 "serviceId='" + serviceId + '\'' +
-                ", whiteLabelingId='" + whiteLabelingId + '\'' +
                 ", hasCompletedBoarding='" + hasCompletedBoarding + '\'' +
 
                 '}';
