@@ -42,7 +42,7 @@ public class CreateDirectInteracTransactionArgs  extends BaseAuthenticatedCrypte
     private TransferDirection transferDirection;
 
     /**
-     * The date by which the created payment must be settled.
+     * The due date of the direct Interac transaction, UTC. Null means now.
      */
     @JsonProperty("DueDate")
     private OffsetDateTime dueDate;

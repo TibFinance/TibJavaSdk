@@ -57,7 +57,7 @@ public class RecuringTransfer   {
     private OffsetDateTime recuringRefDate;
 
     /**
-     * The date and time when the recurring transfer was initially created.
+     * Date and time this recurring transfer was created.
      */
     @JsonProperty("CreatedDate")
     private OffsetDateTime createdDate;

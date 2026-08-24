@@ -25,7 +25,7 @@ public class TransferBaseInformationEntity   {
     private String i;
 
     /**
-     * Creation date. Only populated on ListSupplierTransfers.
+     * Creation date (UTC). Only populated on ListSupplierTransfers.
      */
     @JsonProperty("cdt")
     private OffsetDateTime cdt;
@@ -55,7 +55,7 @@ public class TransferBaseInformationEntity   {
     private String m;
 
     /**
-     * Transfer due date.
+     * Transfer due date (UTC).
      */
     @JsonProperty("td")
     private OffsetDateTime td;
@@ -127,7 +127,7 @@ public class TransferBaseInformationEntity   {
     private String map;
 
     /**
-     * Execution date. Not populated on ListTransfersForBillFast.
+     * Execution date (UTC). Not populated on ListTransfersForBillFast.
      */
     @JsonProperty("ed")
     private OffsetDateTime ed;

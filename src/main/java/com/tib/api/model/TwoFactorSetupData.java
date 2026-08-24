@@ -19,19 +19,19 @@ public class TwoFactorSetupData   {
 
     
     /**
-     * Base64‑encoded image of the merchant's QR code.
+     * Base64-encoded PNG image of the QR code for scanning with authenticator apps.
      */
     @JsonProperty("QrCodeBase64")
     private String qrCodeBase64;
 
     /**
-     * A unique identifier returned when the merchant account was created via manual entry.
+     * The secret key in Base32 format for manual entry into authenticator apps. Display this if the user cannot scan the QR code.
      */
     @JsonProperty("ManualEntryKey")
     private String manualEntryKey;
 
     /**
-     * URI to which the merchant must redirect the user to complete OTP authentication
+     * Full otpauth:// URI for the TOTP entry. Can be used by API clients to generate their own QR code. Format: otpauth://totp/{Issuer}:{AccountName} with query parameters secret (the Base32 key) and issuer.
      */
     @JsonProperty("OtpAuthUri")
     private String otpAuthUri;

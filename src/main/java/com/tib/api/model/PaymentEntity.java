@@ -41,7 +41,7 @@ public class PaymentEntity   {
     private String relatedCustomerId;
 
     /**
-     * The date by which the created payment must be settled.
+     * The due date of the payment, UTC. Null means now.
      */
     @JsonProperty("DueDate")
     private OffsetDateTime dueDate;

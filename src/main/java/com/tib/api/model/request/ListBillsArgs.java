@@ -32,13 +32,13 @@ public class ListBillsArgs  extends BaseAuthenticatedCryptedArgs  {
     private String merchantId;
 
     /**
-     * The start of the date‑time range for which bills are returned.
+     * Start of the bill creation-date range filter, UTC (inclusive). Send an ISO-8601 value with a trailing Z.
      */
     @JsonProperty("FromDateTime")
     private OffsetDateTime fromDateTime;
 
     /**
-     * Upper bound of the billing period for which bills are retrieved.
+     * End of the bill creation-date range filter, UTC (inclusive). Send an ISO-8601 value with a trailing Z.
      */
     @JsonProperty("ToDateTime")
     private OffsetDateTime toDateTime;

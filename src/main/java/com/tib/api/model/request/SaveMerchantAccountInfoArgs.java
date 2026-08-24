@@ -33,13 +33,13 @@ public class SaveMerchantAccountInfoArgs  extends BaseAuthenticatedCryptedArgs  
     private Account account;
 
     /**
-     * The one‑time two‑factor authentication code required to authorize the SaveMerchantAccountInfo request.
+     * The 6-digit TOTP code from the user's authenticator app. Set to null on first call. If response indicates CodeRequired, prompt user and retry with code.
      */
     @JsonProperty("TwoFactorCode")
     private String twoFactorCode;
 
     /**
-     * The answer to the merchant's configured two‑factor authentication security question.
+     * The bank account number provided by the user for security verification before 2FA setup. Required when TwoFactorStatus is SecurityVerificationRequired. Format: "BankNumber-Transit-AccountNumber" (e.g., "123-12345-123456789").
      */
     @JsonProperty("TwoFactorSecurityAnswer")
     private String twoFactorSecurityAnswer;

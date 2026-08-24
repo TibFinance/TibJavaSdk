@@ -55,13 +55,13 @@ public class PaymentOperationEntity   {
     private OperationKind operationKind;
 
     /**
-     * The date and time when the recurring transfer was initially created.
+     * Date and time this operation was created (UTC).
      */
     @JsonProperty("CreatedDate")
     private OffsetDateTime createdDate;
 
     /**
-     * The timestamp when the transfer was executed.
+     * Date and time this operation was executed by the bank (UTC).
      */
     @JsonProperty("ExecutedDate")
     private OffsetDateTime executedDate;

@@ -39,7 +39,7 @@ public class Bill  extends BillEntity  {
     private Double convenientFeeDirectAccount;
 
     /**
-     * The date and time when the recurring transfer was initially created.
+     * The creation date of the bill
      */
     @JsonProperty("CreatedDate")
     private OffsetDateTime createdDate;

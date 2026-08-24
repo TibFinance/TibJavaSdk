@@ -294,7 +294,7 @@ public class Portal {
         return new SaveMerchantResponse(apiResponse, objectMapper);
     }
     /**
-     * Saves the merchant account information. This operation is protected by two-factor authentication.
+     * Saves the merchant account information. This operation is protected by two-factor authentication. On first use the response carries two-factor setup instructions (TwoFactorStatus and TwoFactorSetupData); see the Two-factor authentication guide.
      *
      * @param args the args
      * @return  A SaveMerchantResponse containing the two-factor authentication status of the operation.
@@ -363,7 +363,7 @@ public class Portal {
         return new GetMerchantsByExternalIdResponse(apiResponse, objectMapper);
     }
     /**
-     * Adjusts a merchant's wallet balance. IncreaseWallet collects the amount from the merchant (by EFT, or by Interac when requested) and credits the wallet; DecreaseWallet withdraws it from the wallet balance, subject to the risk-adjusted withdrawable balance. Requires the wallet feature to be enabled for the service.
+     * Adjusts a merchant's wallet balance. IncreaseWallet collects the amount from the merchant (by EFT, or by Interac when requested) and credits the wallet; DecreaseWallet withdraws it from the wallet balance, subject to the risk-adjusted withdrawable balance. Requires the wallet feature to be enabled for the service. This operation supports idempotency via the IdempotencyKey field.
      *
      * @param args the args
      * @return  An AdjustWalletResponse containing the identifier of the transfer created for the adjustment and WasSuccessful set to true; when a withdrawal is refused because the client's boarding is incomplete, no transfer is created and the response carries RequiresSupplierBoarding set to true with WasSuccessful false instead.
@@ -915,10 +915,10 @@ public class Portal {
         return new DeleteRecuringTransferResponse(apiResponse);
     }
     /**
-     * Creates a payment associated with a specific bill.
+     * Creates the payment. This operation supports idempotency via the IdempotencyKey field.
      *
      * @param args the args
-     * @return  Success returns a JSON object containing PaymentId (Guid), Status (e.g., 'Created'), and optional fields like ProcessedAt and TransactionDetails.
+     * @return  CreatePaymentResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -984,7 +984,7 @@ public class Portal {
         return new DeletePaymentResponse(apiResponse);
     }
     /**
-     * Creates the direct Interac transaction
+     * Creates the direct Interac transaction. This operation supports idempotency via the IdempotencyKey field.
      *
      * @param args the args
      * @return  CreateDirectInteracTransactionResponse.
@@ -1007,7 +1007,7 @@ public class Portal {
         return new CreateDirectInteracTransactionResponse(apiResponse);
     }
     /**
-     * Creates the transaction from raw.
+     * Creates the transaction from raw. This operation supports idempotency via the IdempotencyKey field.
      *
      * @param args the args
      * @return  CreateTransactionFromRawResponse.
@@ -1053,7 +1053,7 @@ public class Portal {
         return new ListExecutedOperationsResponse(apiResponse, objectMapper);
     }
     /**
-     * Forces immediate processing of a transfer that would otherwise wait for the next scheduled run. For supplier transfers, only the paying merchant (fee-payer) can force-process; the recipient supplier cannot force-execute a transfer they did not create.
+     * Forces immediate processing of a transfer that would otherwise wait for the next scheduled run. For supplier transfers, only the paying merchant (fee-payer) can force-process; the recipient supplier cannot force-execute a transfer they did not create. This operation supports idempotency via the IdempotencyKey field.
      *
      * @param args the args
      * @return  A ForcePaymentProcessResponse describing the outcome of the forced run.
@@ -1099,7 +1099,7 @@ public class Portal {
         return new GetDropInPublicTokenResponse(apiResponse);
     }
     /**
-     * Creates the free operation.
+     * Creates the free operation. This operation supports idempotency via the IdempotencyKey field.
      *
      * @param args the args
      * @return  CreateFreeOperationResponse.
@@ -1122,7 +1122,7 @@ public class Portal {
         return new CreateFreeOperationResponse(apiResponse);
     }
     /**
-     * Creates a batch of free operations (deposits or collections) in a single call. Validates that client onboarding (KYC) is completed before allowing free deposit operations.
+     * Creates a batch of free operations (deposits or collections) in a single call. Validates that client onboarding (KYC) is completed before allowing free deposit operations. This operation supports idempotency via the IdempotencyKey field.
      *
      * @param args the args
      * @return  A CreateFreeOperationBatchResponse containing the results for each operation in the batch.
@@ -1145,7 +1145,7 @@ public class Portal {
         return new CreateFreeOperationBatchResponse(apiResponse, objectMapper);
     }
     /**
-     * Reverts (cancels or reverses) a transfer. For pending gateway payments, deletes the transfer and its public token. For processed payments, creates reversal operations for each non-fee operation. Rejects transfers over $5,000 or wallet-type transfers. For supplier transfers, only the paying merchant (fee-payer) can revert; the recipient supplier cannot revert a transfer they did not create.
+     * Reverts (cancels or reverses) a transfer. For pending gateway payments, deletes the transfer and its public token. For processed payments, creates reversal operations for each non-fee operation. Rejects transfers over $5,000 or wallet-type transfers. For supplier transfers, only the paying merchant (fee-payer) can revert; the recipient supplier cannot revert a transfer they did not create. This operation supports idempotency via the IdempotencyKey field.
      *
      * @param args the args
      * @return  A RevertTransferResponse indicating whether the transfer was deleted or reversed.
@@ -1237,7 +1237,7 @@ public class Portal {
         return new ResendPaymentEmailResponse(apiResponse);
     }
     /**
-     * Relaunches (retries) a previously failed transfer for a merchant. Resets the failed payment in the database for reprocessing and sends an internal notification email with the transfer details.
+     * Relaunches (retries) a previously failed transfer for a merchant. Resets the failed payment in the database for reprocessing and sends an internal notification email with the transfer details. This operation supports idempotency via the IdempotencyKey field.
      *
      * @param args the args
      * @return  A RelaunchMerchantFailedTransferResponse.
@@ -1260,7 +1260,7 @@ public class Portal {
         return new RelaunchMerchantFailedTransferResponse(apiResponse);
     }
     /**
-     * Creates a payment transfer from the calling merchant to a supplier. Validates both merchants, runs business rules on the sending merchant's limits, creates the transfer as a free collection, and optionally creates a bill. Notifies the supplier unless client approval is required.
+     * Creates a payment transfer from the calling merchant to a supplier. Validates both merchants, runs business rules on the sending merchant's limits, creates the transfer as a free collection, and optionally creates a bill. Notifies the supplier unless client approval is required. This operation supports idempotency via the IdempotencyKey field.
      *
      * @param args the args
      * @return  A CreateSupplierTransferResponse containing the created transfer identifier.
@@ -1511,6 +1511,29 @@ public class Portal {
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("GetWalletOperations", args);
         return new GetWalletOperationsResponse(apiResponse, objectMapper);
+    }
+    /**
+     * Verifies the 2FA setup after user scans QR code and enters the code. Enables 2FA for the user once verification succeeds.
+     *
+     * @param args the args
+     * @return  Verify2FASetupResponse indicating success or failure.
+     * @throws NoSuchAlgorithmException           the no such algorithm exception
+     * @throws InvalidKeyException                the invalid key exception
+     * @throws IOException                        the io exception
+     * @throws InvalidAlgorithmParameterException the invalid algorithm parameter
+     *                                            exception
+     * @throws NoSuchPaddingException             the no such padding exception
+     * @throws BadPaddingException                the bad padding exception
+     * @throws IllegalBlockSizeException          the illegal block size exception
+     * @throws InvalidKeySpecException            the invalid key spec exception
+     * @throws SAXException                       the sax exception
+     */
+    public Verify2FASetupResponse verify2FASetup(Verify2FASetupArgs args)
+            throws IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException,
+                NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
+                IllegalBlockSizeException {
+        APIResponse apiResponse = client.call("Verify2FASetup", args);
+        return new Verify2FASetupResponse(apiResponse, objectMapper);
     }
 
 }

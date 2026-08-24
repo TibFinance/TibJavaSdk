@@ -71,7 +71,7 @@ public class FreeCollectionWithHierarchy   {
     private ProcessStatus currentStatus;
 
     /**
-     * The date and time when the recurring transfer was initially created.
+     * Date and time the collection was created.
      */
     @JsonProperty("CreatedDate")
     private OffsetDateTime createdDate;
@@ -89,7 +89,7 @@ public class FreeCollectionWithHierarchy   {
     private String referenceId;
 
     /**
-     * The timestamp when the transfer was executed.
+     * Date and time the collection was executed by the bank.
      */
     @JsonProperty("ExecutedDate")
     private OffsetDateTime executedDate;

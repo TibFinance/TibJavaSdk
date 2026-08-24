@@ -22,13 +22,13 @@ public class ListExecutedOperationsArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The start of the date‑time range to filter transfers.
+     * Start of the date range filter, UTC (inclusive). Applies to the transaction's creation date by default, or its last-modified date when DateType selects it. Send an ISO-8601 value with a trailing Z.
      */
     @JsonProperty("FromDate")
     private OffsetDateTime fromDate;
 
     /**
-     * The exclusive upper bound of the transfer creation date range to retrieve.
+     * End of the date range filter, UTC (inclusive). Applies to the transaction's creation date by default, or its last-modified date when DateType selects it. Send an ISO-8601 value with a trailing Z.
      */
     @JsonProperty("ToDate")
     private OffsetDateTime toDate;

@@ -85,6 +85,12 @@ public class MerchantView   {
     private boolean isAuthorized;
 
     /**
+     * Is this merchant currently suspended
+     */
+    @JsonProperty("IsSuspended")
+    private boolean isSuspended;
+
+    /**
      * Email address(es) that receive a copy of the merchant's communications
      */
     @JsonProperty("EmailCopyTo")
@@ -156,7 +162,7 @@ public class MerchantView   {
     }
 
     
-    public MerchantView(String merchantId, String merchantName, String accountName, String accountPreview, String externalSystemId, String externalSystemGroupId, Currency merchantCurrency, Language merchantLanguage, String email, boolean isAuthorized, String emailCopyTo, String merchantPhoneNumber, String streetAddress, String addressCity, ProvinceStateId provinceStateId, String serviceId, CountryId countryId, String postalZipCode, Provider accountProvider, String boardingStatus, List<BoardingFile> boardingFiles) {
+    public MerchantView(String merchantId, String merchantName, String accountName, String accountPreview, String externalSystemId, String externalSystemGroupId, Currency merchantCurrency, Language merchantLanguage, String email, boolean isAuthorized, boolean isSuspended, String emailCopyTo, String merchantPhoneNumber, String streetAddress, String addressCity, ProvinceStateId provinceStateId, String serviceId, CountryId countryId, String postalZipCode, Provider accountProvider, String boardingStatus, List<BoardingFile> boardingFiles) {
         this.merchantId = merchantId;
         this.merchantName = merchantName;
         this.accountName = accountName;
@@ -167,6 +173,7 @@ public class MerchantView   {
         this.merchantLanguage = merchantLanguage;
         this.email = email;
         this.isAuthorized = isAuthorized;
+        this.isSuspended = isSuspended;
         this.emailCopyTo = emailCopyTo;
         this.merchantPhoneNumber = merchantPhoneNumber;
         this.streetAddress = streetAddress;
@@ -261,6 +268,14 @@ public class MerchantView   {
 
     public void setIsAuthorized(boolean isAuthorized) {
         this.isAuthorized = isAuthorized;
+    }
+
+    public boolean getIsSuspended() {
+        return isSuspended;
+    }
+
+    public void setIsSuspended(boolean isSuspended) {
+        this.isSuspended = isSuspended;
     }
 
     public String getEmailCopyTo() {
@@ -359,13 +374,13 @@ public class MerchantView   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MerchantView that = (MerchantView) o;
-        return Objects.equals(merchantId, that.merchantId) && Objects.equals(merchantName, that.merchantName) && Objects.equals(accountName, that.accountName) && Objects.equals(accountPreview, that.accountPreview) && Objects.equals(externalSystemId, that.externalSystemId) && Objects.equals(externalSystemGroupId, that.externalSystemGroupId) && Objects.equals(merchantCurrency, that.merchantCurrency) && Objects.equals(merchantLanguage, that.merchantLanguage) && Objects.equals(email, that.email) && Objects.equals(isAuthorized, that.isAuthorized) && Objects.equals(emailCopyTo, that.emailCopyTo) && Objects.equals(merchantPhoneNumber, that.merchantPhoneNumber) && Objects.equals(streetAddress, that.streetAddress) && Objects.equals(addressCity, that.addressCity) && Objects.equals(provinceStateId, that.provinceStateId) && Objects.equals(serviceId, that.serviceId) && Objects.equals(countryId, that.countryId) && Objects.equals(postalZipCode, that.postalZipCode) && Objects.equals(accountProvider, that.accountProvider) && Objects.equals(boardingStatus, that.boardingStatus) && Objects.equals(boardingFiles, that.boardingFiles) ;
+        return Objects.equals(merchantId, that.merchantId) && Objects.equals(merchantName, that.merchantName) && Objects.equals(accountName, that.accountName) && Objects.equals(accountPreview, that.accountPreview) && Objects.equals(externalSystemId, that.externalSystemId) && Objects.equals(externalSystemGroupId, that.externalSystemGroupId) && Objects.equals(merchantCurrency, that.merchantCurrency) && Objects.equals(merchantLanguage, that.merchantLanguage) && Objects.equals(email, that.email) && Objects.equals(isAuthorized, that.isAuthorized) && Objects.equals(isSuspended, that.isSuspended) && Objects.equals(emailCopyTo, that.emailCopyTo) && Objects.equals(merchantPhoneNumber, that.merchantPhoneNumber) && Objects.equals(streetAddress, that.streetAddress) && Objects.equals(addressCity, that.addressCity) && Objects.equals(provinceStateId, that.provinceStateId) && Objects.equals(serviceId, that.serviceId) && Objects.equals(countryId, that.countryId) && Objects.equals(postalZipCode, that.postalZipCode) && Objects.equals(accountProvider, that.accountProvider) && Objects.equals(boardingStatus, that.boardingStatus) && Objects.equals(boardingFiles, that.boardingFiles) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(merchantId, merchantName, accountName, accountPreview, externalSystemId, externalSystemGroupId, merchantCurrency, merchantLanguage, email, isAuthorized, emailCopyTo, merchantPhoneNumber, streetAddress, addressCity, provinceStateId, serviceId, countryId, postalZipCode, accountProvider, boardingStatus, boardingFiles);
+        return Objects.hash(merchantId, merchantName, accountName, accountPreview, externalSystemId, externalSystemGroupId, merchantCurrency, merchantLanguage, email, isAuthorized, isSuspended, emailCopyTo, merchantPhoneNumber, streetAddress, addressCity, provinceStateId, serviceId, countryId, postalZipCode, accountProvider, boardingStatus, boardingFiles);
     }
 
     @Override
@@ -381,6 +396,7 @@ public class MerchantView   {
                 ", merchantLanguage='" + merchantLanguage + '\'' +
                 ", email='" + email + '\'' +
                 ", isAuthorized='" + isAuthorized + '\'' +
+                ", isSuspended='" + isSuspended + '\'' +
                 ", emailCopyTo='" + emailCopyTo + '\'' +
                 ", merchantPhoneNumber='" + merchantPhoneNumber + '\'' +
                 ", streetAddress='" + streetAddress + '\'' +

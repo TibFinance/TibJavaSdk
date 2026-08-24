@@ -21,13 +21,13 @@ public class ListTransfersFastArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The start of the date‑time range to filter transfers.
+     * First calendar day of the payment-due-date range (inclusive). Only the date part is used; days are Eastern Time calendar days. Required.
      */
     @JsonProperty("FromDate")
     private OffsetDateTime fromDate;
 
     /**
-     * The exclusive upper bound of the transfer creation date range to retrieve.
+     * Last calendar day of the payment-due-date range (inclusive). Only the date part is used; days are Eastern Time calendar days. Required.
      */
     @JsonProperty("ToDate")
     private OffsetDateTime toDate;

@@ -40,13 +40,13 @@ public class ListTransfersArgs  extends BaseAuthenticatedCryptedArgs  {
     private boolean markResolvedOnly;
 
     /**
-     * The start of the date‑time range to filter transfers.
+     * Start of the payment-due-date range filter, UTC (inclusive). Send an ISO-8601 value with a trailing Z.
      */
     @JsonProperty("FromDate")
     private OffsetDateTime fromDate;
 
     /**
-     * The exclusive upper bound of the transfer creation date range to retrieve.
+     * End of the payment-due-date range filter, UTC (inclusive). Send an ISO-8601 value with a trailing Z.
      */
     @JsonProperty("ToDate")
     private OffsetDateTime toDate;

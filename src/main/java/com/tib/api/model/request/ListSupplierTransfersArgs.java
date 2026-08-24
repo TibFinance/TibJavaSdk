@@ -26,13 +26,13 @@ public class ListSupplierTransfersArgs  extends BaseAuthenticatedCryptedArgs  {
     private String merchantId;
 
     /**
-     * The start of the date‑time range to filter transfers.
+     * Start of the date range filter, UTC (inclusive). Defaults to 3 months ago if not specified.
      */
     @JsonProperty("FromDate")
     private OffsetDateTime fromDate;
 
     /**
-     * The exclusive upper bound of the transfer creation date range to retrieve.
+     * End of the date range filter, UTC (exclusive). Defaults to now if not specified.
      */
     @JsonProperty("ToDate")
     private OffsetDateTime toDate;

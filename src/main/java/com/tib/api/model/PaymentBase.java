@@ -112,7 +112,7 @@ public class PaymentBase   {
     private Double convenientFeeDirectAccount;
 
     /**
-     * The date and time when the recurring transfer was initially created.
+     * Creation date of the payment (UTC).
      */
     @JsonProperty("CreatedDate")
     private OffsetDateTime createdDate;
