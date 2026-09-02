@@ -67,12 +67,6 @@ public class ServiceSettings   {
     private boolean isWalletFeatureActive;
 
     /**
-     * Wallet withdrawal mode, as the numeric value of WalletTypeEnum: 1 = Schedule (withdrawals run on a set schedule), 2 = Manual (withdrawals require an explicit request), 3 = Automatic (withdrawals run automatically when the threshold is reached).
-     */
-    @JsonProperty("WalletType")
-    private Integer walletType;
-
-    /**
      * The reserved cash buffer amount used to cover potential non‑sufficient‑funds (NSF) exposures.
      */
     @JsonProperty("NsfBuffer")
@@ -103,18 +97,6 @@ public class ServiceSettings   {
     private Double clientWarningCollectionLimit;
 
     /**
-     * Maximum number of collection transactions allowed per bank account each day.
-     */
-    @JsonProperty("NumberOfCollectionPerBankAccountDaily")
-    private Integer numberOfCollectionPerBankAccountDaily;
-
-    /**
-     * The total count of collection attempts scheduled for each bank within a given delay interval.
-     */
-    @JsonProperty("NumberOfCollectionPerBankPerDelays")
-    private Integer numberOfCollectionPerBankPerDelays;
-
-    /**
      * Maximum total amount that can be deposited to a single bank account in one day.
      */
     @JsonProperty("DepositLimitPerBankAccountDaily")
@@ -137,18 +119,6 @@ public class ServiceSettings   {
      */
     @JsonProperty("ClientWarningDepositLimit")
     private Double clientWarningDepositLimit;
-
-    /**
-     * The total count of deposit transactions made on a bank account during the current day.
-     */
-    @JsonProperty("NumberOfDepositPerBankAccountDaily")
-    private Integer numberOfDepositPerBankAccountDaily;
-
-    /**
-     * The total count of deposit transactions for each bank within the specified delay intervals.
-     */
-    @JsonProperty("NumberOfDepositPerBankPerDelays")
-    private Integer numberOfDepositPerBankPerDelays;
 
     /**
      * Number of days the platform waits before depositing funds into the merchant's account
@@ -186,7 +156,7 @@ public class ServiceSettings   {
     }
 
     
-    public ServiceSettings(Double collectionLimit, Double collectionLimitDaily, Double depositLimit, Double depositLimitDaily, Double delayBufferAmount, Double remainingAmount, Double walletBalance, boolean isWalletFeatureActive, Integer walletType, Double nsfBuffer, Double collectionLimitPerBankAccountDaily, Double collectionLimitPerBankAccountPerDelays, Integer collectionLimitPerBankAccountHoursDelays, Double clientWarningCollectionLimit, Integer numberOfCollectionPerBankAccountDaily, Integer numberOfCollectionPerBankPerDelays, Double depositLimitPerBankAccountDaily, Double depositLimitPerBankAccountPerDelays, Integer depositLimitPerBankAccountHoursDelays, Double clientWarningDepositLimit, Integer numberOfDepositPerBankAccountDaily, Integer numberOfDepositPerBankPerDelays, Integer merchantAccountDepositDelay, Integer collectAllowedPaymentMethods, Integer depositAllowedPaymentMethods, boolean denyFreeDeposits, boolean denySupplierPayments) {
+    public ServiceSettings(Double collectionLimit, Double collectionLimitDaily, Double depositLimit, Double depositLimitDaily, Double delayBufferAmount, Double remainingAmount, Double walletBalance, boolean isWalletFeatureActive, Double nsfBuffer, Double collectionLimitPerBankAccountDaily, Double collectionLimitPerBankAccountPerDelays, Integer collectionLimitPerBankAccountHoursDelays, Double clientWarningCollectionLimit, Double depositLimitPerBankAccountDaily, Double depositLimitPerBankAccountPerDelays, Integer depositLimitPerBankAccountHoursDelays, Double clientWarningDepositLimit, Integer merchantAccountDepositDelay, Integer collectAllowedPaymentMethods, Integer depositAllowedPaymentMethods, boolean denyFreeDeposits, boolean denySupplierPayments) {
         this.collectionLimit = collectionLimit;
         this.collectionLimitDaily = collectionLimitDaily;
         this.depositLimit = depositLimit;
@@ -195,20 +165,15 @@ public class ServiceSettings   {
         this.remainingAmount = remainingAmount;
         this.walletBalance = walletBalance;
         this.isWalletFeatureActive = isWalletFeatureActive;
-        this.walletType = walletType;
         this.nsfBuffer = nsfBuffer;
         this.collectionLimitPerBankAccountDaily = collectionLimitPerBankAccountDaily;
         this.collectionLimitPerBankAccountPerDelays = collectionLimitPerBankAccountPerDelays;
         this.collectionLimitPerBankAccountHoursDelays = collectionLimitPerBankAccountHoursDelays;
         this.clientWarningCollectionLimit = clientWarningCollectionLimit;
-        this.numberOfCollectionPerBankAccountDaily = numberOfCollectionPerBankAccountDaily;
-        this.numberOfCollectionPerBankPerDelays = numberOfCollectionPerBankPerDelays;
         this.depositLimitPerBankAccountDaily = depositLimitPerBankAccountDaily;
         this.depositLimitPerBankAccountPerDelays = depositLimitPerBankAccountPerDelays;
         this.depositLimitPerBankAccountHoursDelays = depositLimitPerBankAccountHoursDelays;
         this.clientWarningDepositLimit = clientWarningDepositLimit;
-        this.numberOfDepositPerBankAccountDaily = numberOfDepositPerBankAccountDaily;
-        this.numberOfDepositPerBankPerDelays = numberOfDepositPerBankPerDelays;
         this.merchantAccountDepositDelay = merchantAccountDepositDelay;
         this.collectAllowedPaymentMethods = collectAllowedPaymentMethods;
         this.depositAllowedPaymentMethods = depositAllowedPaymentMethods;
@@ -283,14 +248,6 @@ public class ServiceSettings   {
         this.isWalletFeatureActive = isWalletFeatureActive;
     }
 
-    public Integer getWalletType() {
-        return walletType;
-    }
-
-    public void setWalletType(Integer walletType) {
-        this.walletType = walletType;
-    }
-
     public Double getNsfBuffer() {
         return nsfBuffer;
     }
@@ -331,22 +288,6 @@ public class ServiceSettings   {
         this.clientWarningCollectionLimit = clientWarningCollectionLimit;
     }
 
-    public Integer getNumberOfCollectionPerBankAccountDaily() {
-        return numberOfCollectionPerBankAccountDaily;
-    }
-
-    public void setNumberOfCollectionPerBankAccountDaily(Integer numberOfCollectionPerBankAccountDaily) {
-        this.numberOfCollectionPerBankAccountDaily = numberOfCollectionPerBankAccountDaily;
-    }
-
-    public Integer getNumberOfCollectionPerBankPerDelays() {
-        return numberOfCollectionPerBankPerDelays;
-    }
-
-    public void setNumberOfCollectionPerBankPerDelays(Integer numberOfCollectionPerBankPerDelays) {
-        this.numberOfCollectionPerBankPerDelays = numberOfCollectionPerBankPerDelays;
-    }
-
     public Double getDepositLimitPerBankAccountDaily() {
         return depositLimitPerBankAccountDaily;
     }
@@ -377,22 +318,6 @@ public class ServiceSettings   {
 
     public void setClientWarningDepositLimit(Double clientWarningDepositLimit) {
         this.clientWarningDepositLimit = clientWarningDepositLimit;
-    }
-
-    public Integer getNumberOfDepositPerBankAccountDaily() {
-        return numberOfDepositPerBankAccountDaily;
-    }
-
-    public void setNumberOfDepositPerBankAccountDaily(Integer numberOfDepositPerBankAccountDaily) {
-        this.numberOfDepositPerBankAccountDaily = numberOfDepositPerBankAccountDaily;
-    }
-
-    public Integer getNumberOfDepositPerBankPerDelays() {
-        return numberOfDepositPerBankPerDelays;
-    }
-
-    public void setNumberOfDepositPerBankPerDelays(Integer numberOfDepositPerBankPerDelays) {
-        this.numberOfDepositPerBankPerDelays = numberOfDepositPerBankPerDelays;
     }
 
     public Integer getMerchantAccountDepositDelay() {
@@ -443,13 +368,13 @@ public class ServiceSettings   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ServiceSettings that = (ServiceSettings) o;
-        return Objects.equals(collectionLimit, that.collectionLimit) && Objects.equals(collectionLimitDaily, that.collectionLimitDaily) && Objects.equals(depositLimit, that.depositLimit) && Objects.equals(depositLimitDaily, that.depositLimitDaily) && Objects.equals(delayBufferAmount, that.delayBufferAmount) && Objects.equals(remainingAmount, that.remainingAmount) && Objects.equals(walletBalance, that.walletBalance) && Objects.equals(isWalletFeatureActive, that.isWalletFeatureActive) && Objects.equals(walletType, that.walletType) && Objects.equals(nsfBuffer, that.nsfBuffer) && Objects.equals(collectionLimitPerBankAccountDaily, that.collectionLimitPerBankAccountDaily) && Objects.equals(collectionLimitPerBankAccountPerDelays, that.collectionLimitPerBankAccountPerDelays) && Objects.equals(collectionLimitPerBankAccountHoursDelays, that.collectionLimitPerBankAccountHoursDelays) && Objects.equals(clientWarningCollectionLimit, that.clientWarningCollectionLimit) && Objects.equals(numberOfCollectionPerBankAccountDaily, that.numberOfCollectionPerBankAccountDaily) && Objects.equals(numberOfCollectionPerBankPerDelays, that.numberOfCollectionPerBankPerDelays) && Objects.equals(depositLimitPerBankAccountDaily, that.depositLimitPerBankAccountDaily) && Objects.equals(depositLimitPerBankAccountPerDelays, that.depositLimitPerBankAccountPerDelays) && Objects.equals(depositLimitPerBankAccountHoursDelays, that.depositLimitPerBankAccountHoursDelays) && Objects.equals(clientWarningDepositLimit, that.clientWarningDepositLimit) && Objects.equals(numberOfDepositPerBankAccountDaily, that.numberOfDepositPerBankAccountDaily) && Objects.equals(numberOfDepositPerBankPerDelays, that.numberOfDepositPerBankPerDelays) && Objects.equals(merchantAccountDepositDelay, that.merchantAccountDepositDelay) && Objects.equals(collectAllowedPaymentMethods, that.collectAllowedPaymentMethods) && Objects.equals(depositAllowedPaymentMethods, that.depositAllowedPaymentMethods) && Objects.equals(denyFreeDeposits, that.denyFreeDeposits) && Objects.equals(denySupplierPayments, that.denySupplierPayments) ;
+        return Objects.equals(collectionLimit, that.collectionLimit) && Objects.equals(collectionLimitDaily, that.collectionLimitDaily) && Objects.equals(depositLimit, that.depositLimit) && Objects.equals(depositLimitDaily, that.depositLimitDaily) && Objects.equals(delayBufferAmount, that.delayBufferAmount) && Objects.equals(remainingAmount, that.remainingAmount) && Objects.equals(walletBalance, that.walletBalance) && Objects.equals(isWalletFeatureActive, that.isWalletFeatureActive) && Objects.equals(nsfBuffer, that.nsfBuffer) && Objects.equals(collectionLimitPerBankAccountDaily, that.collectionLimitPerBankAccountDaily) && Objects.equals(collectionLimitPerBankAccountPerDelays, that.collectionLimitPerBankAccountPerDelays) && Objects.equals(collectionLimitPerBankAccountHoursDelays, that.collectionLimitPerBankAccountHoursDelays) && Objects.equals(clientWarningCollectionLimit, that.clientWarningCollectionLimit) && Objects.equals(depositLimitPerBankAccountDaily, that.depositLimitPerBankAccountDaily) && Objects.equals(depositLimitPerBankAccountPerDelays, that.depositLimitPerBankAccountPerDelays) && Objects.equals(depositLimitPerBankAccountHoursDelays, that.depositLimitPerBankAccountHoursDelays) && Objects.equals(clientWarningDepositLimit, that.clientWarningDepositLimit) && Objects.equals(merchantAccountDepositDelay, that.merchantAccountDepositDelay) && Objects.equals(collectAllowedPaymentMethods, that.collectAllowedPaymentMethods) && Objects.equals(depositAllowedPaymentMethods, that.depositAllowedPaymentMethods) && Objects.equals(denyFreeDeposits, that.denyFreeDeposits) && Objects.equals(denySupplierPayments, that.denySupplierPayments) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(collectionLimit, collectionLimitDaily, depositLimit, depositLimitDaily, delayBufferAmount, remainingAmount, walletBalance, isWalletFeatureActive, walletType, nsfBuffer, collectionLimitPerBankAccountDaily, collectionLimitPerBankAccountPerDelays, collectionLimitPerBankAccountHoursDelays, clientWarningCollectionLimit, numberOfCollectionPerBankAccountDaily, numberOfCollectionPerBankPerDelays, depositLimitPerBankAccountDaily, depositLimitPerBankAccountPerDelays, depositLimitPerBankAccountHoursDelays, clientWarningDepositLimit, numberOfDepositPerBankAccountDaily, numberOfDepositPerBankPerDelays, merchantAccountDepositDelay, collectAllowedPaymentMethods, depositAllowedPaymentMethods, denyFreeDeposits, denySupplierPayments);
+        return Objects.hash(collectionLimit, collectionLimitDaily, depositLimit, depositLimitDaily, delayBufferAmount, remainingAmount, walletBalance, isWalletFeatureActive, nsfBuffer, collectionLimitPerBankAccountDaily, collectionLimitPerBankAccountPerDelays, collectionLimitPerBankAccountHoursDelays, clientWarningCollectionLimit, depositLimitPerBankAccountDaily, depositLimitPerBankAccountPerDelays, depositLimitPerBankAccountHoursDelays, clientWarningDepositLimit, merchantAccountDepositDelay, collectAllowedPaymentMethods, depositAllowedPaymentMethods, denyFreeDeposits, denySupplierPayments);
     }
 
     @Override
@@ -463,20 +388,15 @@ public class ServiceSettings   {
                 ", remainingAmount='" + remainingAmount + '\'' +
                 ", walletBalance='" + walletBalance + '\'' +
                 ", isWalletFeatureActive='" + isWalletFeatureActive + '\'' +
-                ", walletType='" + walletType + '\'' +
                 ", nsfBuffer='" + nsfBuffer + '\'' +
                 ", collectionLimitPerBankAccountDaily='" + collectionLimitPerBankAccountDaily + '\'' +
                 ", collectionLimitPerBankAccountPerDelays='" + collectionLimitPerBankAccountPerDelays + '\'' +
                 ", collectionLimitPerBankAccountHoursDelays='" + collectionLimitPerBankAccountHoursDelays + '\'' +
                 ", clientWarningCollectionLimit='" + clientWarningCollectionLimit + '\'' +
-                ", numberOfCollectionPerBankAccountDaily='" + numberOfCollectionPerBankAccountDaily + '\'' +
-                ", numberOfCollectionPerBankPerDelays='" + numberOfCollectionPerBankPerDelays + '\'' +
                 ", depositLimitPerBankAccountDaily='" + depositLimitPerBankAccountDaily + '\'' +
                 ", depositLimitPerBankAccountPerDelays='" + depositLimitPerBankAccountPerDelays + '\'' +
                 ", depositLimitPerBankAccountHoursDelays='" + depositLimitPerBankAccountHoursDelays + '\'' +
                 ", clientWarningDepositLimit='" + clientWarningDepositLimit + '\'' +
-                ", numberOfDepositPerBankAccountDaily='" + numberOfDepositPerBankAccountDaily + '\'' +
-                ", numberOfDepositPerBankPerDelays='" + numberOfDepositPerBankPerDelays + '\'' +
                 ", merchantAccountDepositDelay='" + merchantAccountDepositDelay + '\'' +
                 ", collectAllowedPaymentMethods='" + collectAllowedPaymentMethods + '\'' +
                 ", depositAllowedPaymentMethods='" + depositAllowedPaymentMethods + '\'' +
