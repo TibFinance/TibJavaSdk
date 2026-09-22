@@ -97,7 +97,7 @@ public class MerchantView   {
     private String emailCopyTo;
 
     /**
-     * The merchant's primary contact phone number.
+     * Merchant phone
      */
     @JsonProperty("MerchantPhoneNumber")
     private String merchantPhoneNumber;

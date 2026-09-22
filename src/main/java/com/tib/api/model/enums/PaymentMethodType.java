@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum PaymentMethodType {
 
-    Unknown(-1), NotSet(0), CreditCard(1), DirectAccount(2), Interac(3);
+    Unknown(-1), NotSet(0), CreditCard(1), DirectAccount(2), Interac(3), Wallet(4);
 
     private int value;
 

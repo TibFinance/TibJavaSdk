@@ -29,14 +29,18 @@ public class GetMerchantResponse extends CustomAPIResponse {
     @JsonProperty("DenySupplierPayments")
     private boolean denySupplierPayments;
 
+    @JsonProperty("CollectAllowedPaymentMethods")
+    private Integer collectAllowedPaymentMethods;
+
 
     public GetMerchantResponse() {
     }
 
-    public GetMerchantResponse(Error[] errors, boolean hasError, String messages, MerchantView merchant, boolean denySupplierPayments) {
+    public GetMerchantResponse(Error[] errors, boolean hasError, String messages, MerchantView merchant, boolean denySupplierPayments, Integer collectAllowedPaymentMethods) {
         super(errors, hasError, messages);
         this.merchant = merchant;
         this.denySupplierPayments = denySupplierPayments;
+        this.collectAllowedPaymentMethods = collectAllowedPaymentMethods;
     }
 
     public GetMerchantResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
@@ -47,6 +51,7 @@ public class GetMerchantResponse extends CustomAPIResponse {
                 GetMerchantResponse __typed = objectMapper.readValue(__rawBody, GetMerchantResponse.class);
                 this.merchant = __typed.merchant;
                 this.denySupplierPayments = __typed.denySupplierPayments;
+                this.collectAllowedPaymentMethods = __typed.collectAllowedPaymentMethods;
             }
         }
     }
@@ -68,6 +73,14 @@ public class GetMerchantResponse extends CustomAPIResponse {
         this.denySupplierPayments = denySupplierPayments;
     }
 
+    public Integer getCollectAllowedPaymentMethods() {
+        return collectAllowedPaymentMethods;
+    }
+
+    public void setCollectAllowedPaymentMethods(Integer collectAllowedPaymentMethods) {
+        this.collectAllowedPaymentMethods = collectAllowedPaymentMethods;
+    }
+
 
 
     
@@ -76,13 +89,13 @@ public class GetMerchantResponse extends CustomAPIResponse {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GetMerchantResponse that = (GetMerchantResponse) o;
-        return Objects.equals(merchant, that.merchant) && Objects.equals(denySupplierPayments, that.denySupplierPayments) ;
+        return Objects.equals(merchant, that.merchant) && Objects.equals(denySupplierPayments, that.denySupplierPayments) && Objects.equals(collectAllowedPaymentMethods, that.collectAllowedPaymentMethods) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(merchant, denySupplierPayments);
+        return Objects.hash(merchant, denySupplierPayments, collectAllowedPaymentMethods);
     }
 
     @Override
@@ -90,6 +103,7 @@ public class GetMerchantResponse extends CustomAPIResponse {
         return "GetMerchantResponse{" +
                 "merchant='" + merchant + '\'' +
                 ", denySupplierPayments='" + denySupplierPayments + '\'' +
+                ", collectAllowedPaymentMethods='" + collectAllowedPaymentMethods + '\'' +
 
                 '}';
     }

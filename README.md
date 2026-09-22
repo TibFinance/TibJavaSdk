@@ -18,7 +18,7 @@ Then add to your `pom.xml`:
 <dependency>
     <groupId>finance.tib</groupId>
     <artifactId>tib-finance-sdk</artifactId>
-    <version>2.4.0</version>
+    <version>2.5.0</version>
 </dependency>
 ```
 

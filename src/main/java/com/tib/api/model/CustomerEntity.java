@@ -58,7 +58,7 @@ public class CustomerEntity   {
     private List<PaymentMethod> paymentMethods;
 
     /**
-     * The customer's contact information
+     * Contact information of the customer to be created
      */
     @JsonProperty("ContactInfo")
     private ContactInfo contactInfo;

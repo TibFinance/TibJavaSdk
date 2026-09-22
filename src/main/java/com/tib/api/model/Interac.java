@@ -37,7 +37,7 @@ public class Interac   {
     private String targetEmailAddress;
 
     /**
-     * The mobile phone number of the payer to which the Interac payment will be sent
+     * The mobile phone number that receives the Interac request. Any formatting of a 10-digit North American number is accepted (spaces, dashes, dots, parentheses, an optional +1 or 1 prefix); the platform keeps the 10 digits.
      */
     @JsonProperty("TargetMobilePhoneNumber")
     private String targetMobilePhoneNumber;

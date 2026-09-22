@@ -27,7 +27,7 @@ public class SaveCustomerContactInfoArgs  extends BaseAuthenticatedCryptedArgs  
     private String customerId;
 
     /**
-     * The customer's contact information
+     * Contact information of the customer to be created
      */
     @JsonProperty("ContactInfo")
     private ContactInfo contactInfo;

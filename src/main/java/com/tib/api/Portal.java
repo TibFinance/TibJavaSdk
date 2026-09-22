@@ -41,10 +41,10 @@ public class Portal {
     }
 
     /**
-     * Creates an authenticated session for a TIB Finance client.
+     * Creates the session.
      *
      * @param args the args
-     * @return  On success returns a JSON payload with SessionId (Guid) and Expiration (ISO‑8601 timestamp) indicating the session token and its validity period.
+     * @return  CreateSessionResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -64,10 +64,10 @@ public class Portal {
         return new CreateSessionResponse(apiResponse);
     }
     /**
-     * Retrieves the list of service contracts associated with the authenticated merchant.
+     * Lists the services.
      *
      * @param args the args
-     * @return  On success, returns a JSON array of service objects, each containing ServiceId (GUID) and optional descriptive fields (e.g., Name, Status). HTTP 200.
+     * @return  ListServicesResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -87,10 +87,10 @@ public class Portal {
         return new ListServicesResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves the details of a specific Service (contract) for the authenticated client.
+     * Gets the service.
      *
      * @param args the args
-     * @return  On success, returns a Service object containing ServiceId, MerchantId, Name, Limits, Fees, Currency, EffectiveDates, and CurrentStatus.
+     * @return  GetServiceResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -110,10 +110,10 @@ public class Portal {
         return new GetServiceResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves the wallet state for a specific service.
+     * Retrieves wallet information for a service, including the effective balance (wallet balance plus available delay buffer minus pending collections), the risk-adjusted withdrawable amount, processing status, and whether the new wallet feature is active.
      *
      * @param args the args
-     * @return  On success, returns a JSON object containing effectiveBalance (decimal), withdrawableAmount (decimal), processingStatus (enum), and isNewWalletEnabled (boolean). Errors are returned with standard API error codes.
+     * @return  A GetWalletInformationsResponse containing the wallet model with balance, withdrawable amount, and status.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -133,10 +133,10 @@ public class Portal {
         return new GetWalletInformationsResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves a list of merchant accounts accessible to the authenticated session.
+     * Lists the merchants.
      *
      * @param args the args
-     * @return  On success, returns HTTP 200 with a JSON array of merchant objects, each containing MerchantId (GUID), Name, IsPrimary (bool), and Status fields.
+     * @return  ListMerchantsResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -156,10 +156,10 @@ public class Portal {
         return new ListMerchantsResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves the boarding status of all merchants associated with a specific service.
+     * Retrieves the payment provider boarding (onboarding) status for all merchants within a service. Returns each merchant's boarding progress with their current status.
      *
      * @param args the args
-     * @return  JSON array of objects, each containing MerchantId (Guid), BoardingStatus (enum: Boarded|Pending|Failed), and StatusTimestamp (ISO‑8601). HTTP 200 on success; error codes follow standard API error handling.
+     * @return  A GetServiceBoardingStatusResponse containing the boarding status of each merchant in the service.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -225,10 +225,10 @@ public class Portal {
         return new AddBankAccountResponse(apiResponse);
     }
     /**
-     * Retrieves the details of a merchant by its GUID.
+     * Gets the merchant.
      *
      * @param args the args
-     * @return  On success, returns a Merchant object with MerchantId, basic information (name, status, creation date) and a preview of account information (bank name, masked account number, currency, etc.).
+     * @return  GetMerchantResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -271,10 +271,10 @@ public class Portal {
         return new SaveMerchantResponse(apiResponse, objectMapper);
     }
     /**
-     * Updates the basic profile data of an existing merchant.
+     * Saves the merchant basic information.
      *
      * @param args the args
-     * @return  HTTP 200 with a JSON body containing a success flag and the MerchantId; on failure returns the standard error object with error code and description.
+     * @return  SaveMerchantResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -317,10 +317,10 @@ public class Portal {
         return new SaveMerchantResponse(apiResponse, objectMapper);
     }
     /**
-     * Deletes a merchant (bank account) identified by its GUID.
+     * Deletes the merchant.
      *
      * @param args the args
-     * @return  HTTP 200 with a JSON body containing { "success": true, "merchantId": "<MerchantId>" }. Errors return appropriate HTTP status codes and error payload.
+     * @return  DeleteMerchantResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -340,10 +340,10 @@ public class Portal {
         return new DeleteMerchantResponse(apiResponse);
     }
     /**
-     * Retrieves TIB merchant records that match a given external system identifier.
+     * Gets the merchants by external identifier.
      *
      * @param args the args
-     * @return  On success, returns a JSON array of merchant objects, each containing at least the internal MerchantId (Guid) and basic merchant information. Errors are returned as standard API error objects.
+     * @return  GetMerchantsByExternalIdResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -386,10 +386,10 @@ public class Portal {
         return new AdjustWalletResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves a list of customer objects associated with the specified merchant.
+     * Lists the customers.
      *
      * @param args the args
-     * @return  On success, returns HTTP 200 with a JSON array of customer objects, each containing at minimum: CustomerId (GUID), Email (optional), CreatedDate (ISO‑8601), and Status (enum). Errors are returned with standard HTTP error codes and an error payload.
+     * @return  ListCustomersResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -409,10 +409,10 @@ public class Portal {
         return new ListCustomersResponse(apiResponse, objectMapper);
     }
     /**
-     * Creates a new Customer object in TIB Finance.
+     * Creates the customer.
      *
      * @param args the args
-     * @return  On success, returns a JSON payload containing CustomerId (GUID) and a creation timestamp.
+     * @return  CreateCustomerResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -432,10 +432,10 @@ public class Portal {
         return new CreateCustomerResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves details of a specific customer.
+     * Gets the customer.
      *
      * @param args the args
-     * @return  On success, returns a Customer object containing Id, Email, Status, and an array of PaymentMethod summaries. HTTP 200 with JSON payload; errors returned with appropriate HTTP status codes.
+     * @return  GetCustomerResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -455,10 +455,10 @@ public class Portal {
         return new GetCustomerResponse(apiResponse, objectMapper);
     }
     /**
-     * Creates or updates a customer record in TIB Finance.
+     * Saves the customer.
      *
      * @param args the args
-     * @return  On success returns a JSON object containing CustomerId (Guid) and a success flag, e.g., { "CustomerId": "...", "Success": true }.
+     * @return  SaveCustomerResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -501,10 +501,10 @@ public class Portal {
         return new SaveCustomerContactInfoResponse(apiResponse, objectMapper);
     }
     /**
-     * Deletes a customer record from the TIB Finance system.
+     * Deletes the customer.
      *
      * @param args the args
-     * @return  HTTP 204 No Content on success; if a body is returned, it contains a JSON object { "deletedCustomerId": "<Guid>", "status": "Success" }.
+     * @return  DeleteCustomerResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -524,10 +524,10 @@ public class Portal {
         return new DeleteCustomerResponse(apiResponse);
     }
     /**
-     * Retrieves one or more TIB Finance customers matching a given external identifier.
+     * Gets the customers by external identifier.
      *
      * @param args the args
-     * @return  On success, returns a JSON array of customer objects, each containing at least the TIB CustomerId (Guid) and associated metadata. Errors are returned as standard API error objects.
+     * @return  GetCustomersByExternalIdResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -547,10 +547,10 @@ public class Portal {
         return new GetCustomersByExternalIdResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves all payment methods associated with a specific customer under a given merchant.
+     * Lists the payment methods.
      *
      * @param args the args
-     * @return  On success, returns a JSON array of payment method objects, each containing Id (GUID), Type (enum: CreditCard|BankAccount|Interac), Status, and masked account details.
+     * @return  ListPaymentMethodsResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -570,10 +570,10 @@ public class Portal {
         return new ListPaymentMethodsResponse(apiResponse, objectMapper);
     }
     /**
-     * Creates a new credit‑card payment method for a specified customer.
+     * Creates the credit card payment method.
      *
      * @param args the args
-     * @return  HTTP 201 with JSON containing PaymentMethodId (GUID) and masked card info (last4, expiryMonth, expiryYear).
+     * @return  CreateCreditCardPaymentMethodResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -616,10 +616,10 @@ public class Portal {
         return new CreateDirectAccountPaymentMethodResponse(apiResponse);
     }
     /**
-     * Creates an Interac payment method for a specified customer.
+     * Creates the Interac payment method.
      *
      * @param args the args
-     * @return  On success returns a JSON object containing PaymentMethodId (Guid) and a status field indicating creation success.
+     * @return  CreateInteracPaymentMethodResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -639,10 +639,10 @@ public class Portal {
         return new CreateInteracPaymentMethodResponse(apiResponse);
     }
     /**
-     * Retrieves the details of a specific payment method.
+     * Gets the payment method.
      *
      * @param args the args
-     * @return  On success, returns a PaymentMethod object with fields such as id, type, masked account information, status, createdDate, and lastModifiedDate.
+     * @return  GetPaymentMethodResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -662,10 +662,10 @@ public class Portal {
         return new GetPaymentMethodResponse(apiResponse, objectMapper);
     }
     /**
-     * Deletes a specific payment method from a customer profile.
+     * Deletes the payment method.
      *
      * @param args the args
-     * @return  HTTP 204 No Content on successful deletion; error payload with standard TIB Finance error codes on failure.
+     * @return  DeletePaymentMethodResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -685,10 +685,10 @@ public class Portal {
         return new DeletePaymentMethodResponse(apiResponse);
     }
     /**
-     * Sets the default payment method for a specified customer.
+     * Sets the default payment method.
      *
      * @param args the args
-     * @return  HTTP 200 with JSON { "success": true, "customerId": "<GUID>", "defaultPaymentMethodId": "<GUID>" }. Errors are returned with appropriate HTTP status codes and error payloads.
+     * @return  SetDefaultPaymentMethodResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -708,10 +708,10 @@ public class Portal {
         return new SetDefaultPaymentMethodResponse(apiResponse);
     }
     /**
-     * Retrieves a collection of bills created within a specified time range.
+     * Lists the bills.
      *
      * @param args the args
-     * @return  On success, returns a JSON array of bill objects, each containing at least BillId (GUID), CreationDate, Amount, Currency, Status, and optional metadata.
+     * @return  ListBillsResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -731,10 +731,10 @@ public class Portal {
         return new ListBillsResponse(apiResponse, objectMapper);
     }
     /**
-     * Creates a new bill record in TIB Finance.
+     * Creates the bill.
      *
      * @param args the args
-     * @return  On success, returns a JSON object with billId (Guid) and creationTimestamp (ISO‑8601).
+     * @return  CreateBillResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -754,10 +754,10 @@ public class Portal {
         return new CreateBillResponse(apiResponse);
     }
     /**
-     * Retrieves details of a specific bill.
+     * Gets the bill.
      *
      * @param args the args
-     * @return  On success, returns a Bill object containing bill metadata (id, amount, currency, status, creation date, due date) and an array of associated payment IDs.
+     * @return  GetBillResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -777,10 +777,10 @@ public class Portal {
         return new GetBillResponse(apiResponse, objectMapper);
     }
     /**
-     * Deletes a previously created bill.
+     * Deletes the bill.
      *
      * @param args the args
-     * @return  HTTP 204 No Content on success (empty response body). Errors are returned with standard HTTP error codes and a JSON error payload.
+     * @return  DeleteBillResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -800,10 +800,10 @@ public class Portal {
         return new DeleteBillResponse(apiResponse);
     }
     /**
-     * Retrieves a paginated list of transfer records matching the supplied filters.
+     * Lists the transfers.
      *
      * @param args the args
-     * @return  On success, returns a JSON object containing an array of transfer objects (each with TransferId, Status, Type, Amount, Dates, and related identifiers) and pagination metadata (TotalCount, PageSize, PageNumber).
+     * @return  ListTransfersResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -869,10 +869,10 @@ public class Portal {
         return new ListTransfersFastResponse(apiResponse, objectMapper);
     }
     /**
-     * Retrieves all active recurring transfers for a specified service.
+     * Retrieves all active recurring transfers for a given service, including their next scheduled recurrence date and associated merchant information.
      *
      * @param args the args
-     * @return  A JSON array of transfer objects, each containing TransferId (GUID), Status, NextRecurrenceDate (ISO‑8601), Amount, Currency, MerchantId (GUID), and optional metadata such as Description and LastRunResult.
+     * @return  A GetRecuringTransfersResponse containing the list of recurring transfers.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -892,10 +892,10 @@ public class Portal {
         return new GetRecuringTransfersResponse(apiResponse, objectMapper);
     }
     /**
-     * Deletes a recurring transfer and cancels all its future scheduled executions.
+     * Deletes a recurring transfer by its identifier, stopping all future scheduled occurrences.
      *
      * @param args the args
-     * @return  HTTP 200 with JSON { "deleted": true, "transferId": "<RecuringTransferId>" } on success; error payload otherwise.
+     * @return  A DeleteRecuringTransferResponse.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception

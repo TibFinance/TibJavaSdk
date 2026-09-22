@@ -64,7 +64,7 @@ public class MerchantBasicInfo   {
     private String emailCopyTo;
 
     /**
-     * The merchant's primary contact phone number.
+     * The merchant's contact phone number.
      */
     @JsonProperty("PhoneNumber")
     private String phoneNumber;
