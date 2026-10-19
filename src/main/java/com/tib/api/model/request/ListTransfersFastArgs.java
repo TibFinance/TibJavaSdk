@@ -39,7 +39,7 @@ public class ListTransfersFastArgs  extends BaseAuthenticatedCryptedArgs  {
     private String serviceId;
 
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant ID to scope this operation to. Automatically set for merchant-level logins.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

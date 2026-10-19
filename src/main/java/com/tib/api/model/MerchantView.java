@@ -6,7 +6,6 @@ import com.tib.api.model.enums.Currency;
 import com.tib.api.model.enums.Language;
 import com.tib.api.model.enums.ProvinceStateId;
 import com.tib.api.model.enums.CountryId;
-import com.tib.api.model.enums.Provider;
 import com.tib.api.model.BoardingFile;
 
 
@@ -25,7 +24,7 @@ public class MerchantView   {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * The merchant identity
      */
     @JsonProperty("MerchantId")
     private String merchantId;
@@ -73,7 +72,7 @@ public class MerchantView   {
     private Language merchantLanguage;
 
     /**
-     * The merchant's primary contact email address.
+     * Merchant Email
      */
     @JsonProperty("Email")
     private String email;
@@ -139,12 +138,6 @@ public class MerchantView   {
     private String postalZipCode;
 
     /**
-     * Payment provider for the merchant's account.
-     */
-    @JsonProperty("AccountProvider")
-    private Provider accountProvider;
-
-    /**
      * Indicates the current onboarding state of the merchant identified by the external ID
      */
     @JsonProperty("BoardingStatus")
@@ -162,7 +155,7 @@ public class MerchantView   {
     }
 
     
-    public MerchantView(String merchantId, String merchantName, String accountName, String accountPreview, String externalSystemId, String externalSystemGroupId, Currency merchantCurrency, Language merchantLanguage, String email, boolean isAuthorized, boolean isSuspended, String emailCopyTo, String merchantPhoneNumber, String streetAddress, String addressCity, ProvinceStateId provinceStateId, String serviceId, CountryId countryId, String postalZipCode, Provider accountProvider, String boardingStatus, List<BoardingFile> boardingFiles) {
+    public MerchantView(String merchantId, String merchantName, String accountName, String accountPreview, String externalSystemId, String externalSystemGroupId, Currency merchantCurrency, Language merchantLanguage, String email, boolean isAuthorized, boolean isSuspended, String emailCopyTo, String merchantPhoneNumber, String streetAddress, String addressCity, ProvinceStateId provinceStateId, String serviceId, CountryId countryId, String postalZipCode, String boardingStatus, List<BoardingFile> boardingFiles) {
         this.merchantId = merchantId;
         this.merchantName = merchantName;
         this.accountName = accountName;
@@ -182,7 +175,6 @@ public class MerchantView   {
         this.serviceId = serviceId;
         this.countryId = countryId;
         this.postalZipCode = postalZipCode;
-        this.accountProvider = accountProvider;
         this.boardingStatus = boardingStatus;
         this.boardingFiles = boardingFiles;
     }
@@ -342,14 +334,6 @@ public class MerchantView   {
         this.postalZipCode = postalZipCode;
     }
 
-    public Provider getAccountProvider() {
-        return accountProvider;
-    }
-
-    public void setAccountProvider(Provider accountProvider) {
-        this.accountProvider = accountProvider;
-    }
-
     public String getBoardingStatus() {
         return boardingStatus;
     }
@@ -374,13 +358,13 @@ public class MerchantView   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MerchantView that = (MerchantView) o;
-        return Objects.equals(merchantId, that.merchantId) && Objects.equals(merchantName, that.merchantName) && Objects.equals(accountName, that.accountName) && Objects.equals(accountPreview, that.accountPreview) && Objects.equals(externalSystemId, that.externalSystemId) && Objects.equals(externalSystemGroupId, that.externalSystemGroupId) && Objects.equals(merchantCurrency, that.merchantCurrency) && Objects.equals(merchantLanguage, that.merchantLanguage) && Objects.equals(email, that.email) && Objects.equals(isAuthorized, that.isAuthorized) && Objects.equals(isSuspended, that.isSuspended) && Objects.equals(emailCopyTo, that.emailCopyTo) && Objects.equals(merchantPhoneNumber, that.merchantPhoneNumber) && Objects.equals(streetAddress, that.streetAddress) && Objects.equals(addressCity, that.addressCity) && Objects.equals(provinceStateId, that.provinceStateId) && Objects.equals(serviceId, that.serviceId) && Objects.equals(countryId, that.countryId) && Objects.equals(postalZipCode, that.postalZipCode) && Objects.equals(accountProvider, that.accountProvider) && Objects.equals(boardingStatus, that.boardingStatus) && Objects.equals(boardingFiles, that.boardingFiles) ;
+        return Objects.equals(merchantId, that.merchantId) && Objects.equals(merchantName, that.merchantName) && Objects.equals(accountName, that.accountName) && Objects.equals(accountPreview, that.accountPreview) && Objects.equals(externalSystemId, that.externalSystemId) && Objects.equals(externalSystemGroupId, that.externalSystemGroupId) && Objects.equals(merchantCurrency, that.merchantCurrency) && Objects.equals(merchantLanguage, that.merchantLanguage) && Objects.equals(email, that.email) && Objects.equals(isAuthorized, that.isAuthorized) && Objects.equals(isSuspended, that.isSuspended) && Objects.equals(emailCopyTo, that.emailCopyTo) && Objects.equals(merchantPhoneNumber, that.merchantPhoneNumber) && Objects.equals(streetAddress, that.streetAddress) && Objects.equals(addressCity, that.addressCity) && Objects.equals(provinceStateId, that.provinceStateId) && Objects.equals(serviceId, that.serviceId) && Objects.equals(countryId, that.countryId) && Objects.equals(postalZipCode, that.postalZipCode) && Objects.equals(boardingStatus, that.boardingStatus) && Objects.equals(boardingFiles, that.boardingFiles) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(merchantId, merchantName, accountName, accountPreview, externalSystemId, externalSystemGroupId, merchantCurrency, merchantLanguage, email, isAuthorized, isSuspended, emailCopyTo, merchantPhoneNumber, streetAddress, addressCity, provinceStateId, serviceId, countryId, postalZipCode, accountProvider, boardingStatus, boardingFiles);
+        return Objects.hash(merchantId, merchantName, accountName, accountPreview, externalSystemId, externalSystemGroupId, merchantCurrency, merchantLanguage, email, isAuthorized, isSuspended, emailCopyTo, merchantPhoneNumber, streetAddress, addressCity, provinceStateId, serviceId, countryId, postalZipCode, boardingStatus, boardingFiles);
     }
 
     @Override
@@ -405,7 +389,6 @@ public class MerchantView   {
                 ", serviceId='" + serviceId + '\'' +
                 ", countryId='" + countryId + '\'' +
                 ", postalZipCode='" + postalZipCode + '\'' +
-                ", accountProvider='" + accountProvider + '\'' +
                 ", boardingStatus='" + boardingStatus + '\'' +
                 ", boardingFiles='" + boardingFiles + '\'' +
 

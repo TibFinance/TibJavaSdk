@@ -5,7 +5,7 @@
 
     <groupId>finance.tib</groupId>
     <artifactId>tib-finance-sdk</artifactId>
-    <version>2.5.0</version>
+    <version>3.0.0</version>
 
     <name>TIB Finance Java SDK</name>
     <description>Java SDK for the TIB Finance payment processing API</description>
@@ -37,6 +37,8 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <!-- One version for every jackson-* artifact: raise them together. -->
+        <jackson.version>2.18.12</jackson.version>
     </properties>
 
     <dependencies>
@@ -49,34 +51,27 @@
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
-            <version>2.12.3</version>
+            <version>${jackson.version}</version>
         </dependency>
         <!-- Jackson Databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.12.3</version>
+            <version>${jackson.version}</version>
         </dependency>
 
         <!-- Jackson Annotations -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.12.3</version>
+            <version>${jackson.version}</version>
         </dependency>
 
         <!-- Jackson Core -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.12.3</version>
-        </dependency>
-
-        <!-- Apache Santuario XML Security -->
-        <dependency>
-            <groupId>org.apache.santuario</groupId>
-            <artifactId>xmlsec</artifactId>
-            <version>2.3.0</version>
+            <version>${jackson.version}</version>
         </dependency>
     </dependencies>
 

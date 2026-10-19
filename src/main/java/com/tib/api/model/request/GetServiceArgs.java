@@ -26,7 +26,7 @@ public class GetServiceArgs  extends BaseAuthenticatedCryptedArgs  {
     private String serviceId;
 
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Not used by GetService.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

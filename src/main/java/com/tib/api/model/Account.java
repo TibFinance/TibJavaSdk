@@ -175,7 +175,7 @@ public class Account   {
                 ", owner='" + owner + '\'' +
                 ", bankNumber='" + bankNumber + '\'' +
                 ", institutionNumber='" + institutionNumber + '\'' +
-                ", accountNumber='" + accountNumber + '\'' +
+                ", accountNumber='" + (accountNumber == null ? null : "***") + '\'' +
                 ", routingNumber='" + routingNumber + '\'' +
                 ", checkDigit='" + checkDigit + '\'' +
                 ", currency='" + currency + '\'' +

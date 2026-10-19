@@ -19,7 +19,7 @@ public class Interac   {
 
     
     /**
-     * Human‑readable description of the transfer
+     * This information will be displayed to the user
      */
     @JsonProperty("Description")
     private String description;
@@ -31,13 +31,13 @@ public class Interac   {
     private String owner;
 
     /**
-     * The email address of the payer to which the Interac payment request will be sent.
+     * The address where to send the Interac request
      */
     @JsonProperty("TargetEmailAddress")
     private String targetEmailAddress;
 
     /**
-     * The mobile phone number that receives the Interac request. Any formatting of a 10-digit North American number is accepted (spaces, dashes, dots, parentheses, an optional +1 or 1 prefix); the platform keeps the 10 digits.
+     * The mobile phone number that receives the Interac request. Any formatting of a 10-digit North American number is accepted (spaces, dashes, dots, parentheses, an optional +1 or 1 prefix); the platform keeps the 10 digits. The field is optional; a value that contains no digits is stored as empty.
      */
     @JsonProperty("TargetMobilePhoneNumber")
     private String targetMobilePhoneNumber;
@@ -145,7 +145,7 @@ public class Interac   {
                 ", targetEmailAddress='" + targetEmailAddress + '\'' +
                 ", targetMobilePhoneNumber='" + targetMobilePhoneNumber + '\'' +
                 ", interacQuestion='" + interacQuestion + '\'' +
-                ", interacAnswer='" + interacAnswer + '\'' +
+                ", interacAnswer='" + (interacAnswer == null ? null : "***") + '\'' +
 
                 '}';
     }

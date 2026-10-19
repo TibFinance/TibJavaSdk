@@ -18,7 +18,7 @@ Then add to your `pom.xml`:
 <dependency>
     <groupId>finance.tib</groupId>
     <artifactId>tib-finance-sdk</artifactId>
-    <version>2.5.0</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 
@@ -51,11 +51,53 @@ try {
 }
 ```
 
+## Two-step sign-in (merchant- or service-level users)
+
+The Quick Start signs in with `TibInvoker.portal.createSession`, which opens a client-level session. A user whose access is limited to a merchant or a service signs in with two calls instead:
+
+1. Call `TibInvoker.portal.getLoginAccessList` with the client ID, username and password. Each entry in `LoginRelations` is one access the user can open: `InternalReferenceType` gives its level (2 client, 4 merchant, 16 service) and `InternalReferenceId` the ID of that client, merchant or service. `Description` is a label for display only.
+2. Call `TibInvoker.portal.login` with the same client ID, username and password, and the `LoginsUserRelationsId` of the chosen entry.
+
+Send the returned `SessionId` as `SessionToken` on the following calls, as with `TibInvoker.portal.createSession`. Failed sign-in attempts count toward a temporary lockout, so do not retry in a loop.
+
+```java
+import com.tib.api.TibInvoker;
+import com.tib.api.model.LoginRelationsEntity;
+import com.tib.api.model.request.GetLoginAccessListArgs;
+import com.tib.api.model.request.ListServicesArgs;
+import com.tib.api.model.request.LoginArgs;
+import com.tib.api.model.response.GetLoginAccessListResponse;
+import com.tib.api.model.response.LoginResponse;
+
+try {
+    GetLoginAccessListResponse accesses = TibInvoker.portal.getLoginAccessList(
+            new GetLoginAccessListArgs("your_client_id", "your_username", "your_password"));
+    if (accesses.isHasError()) {
+        System.out.println("Sign-in failed: " + accesses.getMessages());
+    } else {
+        // Each entry is one access: pick the one to open
+        // (getInternalReferenceType(): 2 client, 4 merchant, 16 service).
+        LoginRelationsEntity access = accesses.getLoginRelations().get(0);
+        LoginResponse response = TibInvoker.portal.login(new LoginArgs(
+                "your_client_id", "your_username", "your_password", access.getLoginsUserRelationsId()));
+        if (response.isHasError()) {
+            System.out.println("Sign-in failed: " + response.getMessages());
+        } else {
+            ListServicesArgs servicesArgs = new ListServicesArgs();
+            servicesArgs.setSessionToken(response.getSessionId());
+            TibInvoker.portal.listServices(servicesArgs);
+        }
+    }
+} catch (Exception e) {
+    System.err.println("Request failed: " + e.getMessage());
+}
+```
+
 ## Documentation
 
 For the complete API reference and guides, visit [doc.tib.finance](https://doc.tib.finance).
 
-This SDK provides access to **65 API methods** for payment processing, merchant management, and financial operations.
+This SDK provides access to **67 API methods** for payment processing, merchant management, and financial operations.
 
 ## Other TIB Finance SDKs
 

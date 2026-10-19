@@ -38,7 +38,7 @@ public class ChangeInteracPaymentMethodQuestionAndAnswerArgs  extends BaseAuthen
     private String interacAnswer;
 
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant ID to scope this operation to. Automatically set for merchant-level logins.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
@@ -120,7 +120,7 @@ public class ChangeInteracPaymentMethodQuestionAndAnswerArgs  extends BaseAuthen
         return "ChangeInteracPaymentMethodQuestionAndAnswerArgs{" +
                 "interacPaymentMethodId='" + interacPaymentMethodId + '\'' +
                 ", interacQuestion='" + interacQuestion + '\'' +
-                ", interacAnswer='" + interacAnswer + '\'' +
+                ", interacAnswer='" + (interacAnswer == null ? null : "***") + '\'' +
                 ", merchantId='" + merchantId + '\'' +
 
                 '}';

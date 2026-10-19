@@ -20,7 +20,7 @@ public class ListTransfersForBillFastArgs  extends BaseAuthenticatedCryptedArgs 
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant identifier that owns the bill.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

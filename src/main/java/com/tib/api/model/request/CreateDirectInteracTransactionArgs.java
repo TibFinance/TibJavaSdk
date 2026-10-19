@@ -24,7 +24,7 @@ public class CreateDirectInteracTransactionArgs  extends BaseAuthenticatedCrypte
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * The merchant identifier.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

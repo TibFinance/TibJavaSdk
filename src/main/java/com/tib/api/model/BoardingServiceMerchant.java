@@ -19,7 +19,7 @@ public class BoardingServiceMerchant   {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Unique identifier of the merchant.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

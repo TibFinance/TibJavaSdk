@@ -3,7 +3,6 @@ package com.tib.api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.enums.Language;
-import com.tib.api.model.enums.Provider;
 import com.tib.api.model.enums.Currency;
 
 
@@ -45,8 +44,8 @@ public class Service  extends ServiceEntity  {
     }
     
     
-    public Service(String serviceName, Language defaultCustomerLanguage, Provider providerType, Currency currency, String serviceId, boolean hasCompletedBoarding) {
-        super(serviceName, defaultCustomerLanguage, providerType, currency);
+    public Service(String serviceName, Language defaultCustomerLanguage, Currency currency, String serviceId, boolean hasCompletedBoarding) {
+        super(serviceName, defaultCustomerLanguage, currency);
         this.serviceId = serviceId;
         this.hasCompletedBoarding = hasCompletedBoarding;
     }

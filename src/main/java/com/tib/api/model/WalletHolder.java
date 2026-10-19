@@ -25,7 +25,7 @@ public class WalletHolder   {
     private String walletHolderId;
 
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant that holds funds in the wallet.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

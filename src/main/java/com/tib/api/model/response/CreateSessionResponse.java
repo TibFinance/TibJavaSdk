@@ -70,7 +70,7 @@ public class CreateSessionResponse extends CustomAPIResponse {
     @Override
     public String toString() {
         return "CreateSessionResponse{" +
-                "sessionId='" + sessionId + '\'' +
+                "sessionId='" + (sessionId == null ? null : "***") + '\'' +
 
                 '}';
     }

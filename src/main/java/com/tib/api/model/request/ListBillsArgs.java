@@ -26,7 +26,7 @@ public class ListBillsArgs  extends BaseAuthenticatedCryptedArgs  {
     private String serviceId;
 
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * The merchant ID Filter. If null, the bills from all merchant are returned
      */
     @JsonProperty("MerchantId")
     private String merchantId;

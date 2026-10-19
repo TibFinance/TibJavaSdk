@@ -77,7 +77,7 @@ public class PaymentEntity   {
     private String externalReferenceIdentification;
 
     /**
-     * Flags indicating which payment methods are authorized for the created payment
+     * Restrict which payment methods the customer can use for this payment.
      */
     @JsonProperty("AutorizedPaymentMethod")
     private AutorizedPaymentMethodFlags autorizedPaymentMethod;

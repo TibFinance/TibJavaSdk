@@ -46,7 +46,7 @@ public class CustomerEntity   {
     private String customerDescription;
 
     /**
-     * The email address of the customer initiating the payment.
+     * Email address of the customer.
      */
     @JsonProperty("CustomerEmail")
     private String customerEmail;

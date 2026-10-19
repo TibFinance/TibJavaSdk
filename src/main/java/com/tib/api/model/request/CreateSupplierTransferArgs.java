@@ -23,7 +23,7 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * The account that's sending the money
      */
     @JsonProperty("MerchantId")
     private String merchantId;

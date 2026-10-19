@@ -3,7 +3,6 @@ package com.tib.api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.enums.Language;
-import com.tib.api.model.enums.Provider;
 import com.tib.api.model.enums.Currency;
 
 
@@ -34,12 +33,6 @@ public class ServiceEntity   {
     private Language defaultCustomerLanguage;
 
     /**
-     * Payment provider type for this service.
-     */
-    @JsonProperty("ProviderType")
-    private Provider providerType;
-
-    /**
      * Base currency for the service.
      */
     @JsonProperty("Currency")
@@ -51,10 +44,9 @@ public class ServiceEntity   {
     }
 
     
-    public ServiceEntity(String serviceName, Language defaultCustomerLanguage, Provider providerType, Currency currency) {
+    public ServiceEntity(String serviceName, Language defaultCustomerLanguage, Currency currency) {
         this.serviceName = serviceName;
         this.defaultCustomerLanguage = defaultCustomerLanguage;
-        this.providerType = providerType;
         this.currency = currency;
     }
     
@@ -77,14 +69,6 @@ public class ServiceEntity   {
         this.defaultCustomerLanguage = defaultCustomerLanguage;
     }
 
-    public Provider getProviderType() {
-        return providerType;
-    }
-
-    public void setProviderType(Provider providerType) {
-        this.providerType = providerType;
-    }
-
     public Currency getCurrency() {
         return currency;
     }
@@ -101,13 +85,13 @@ public class ServiceEntity   {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ServiceEntity that = (ServiceEntity) o;
-        return Objects.equals(serviceName, that.serviceName) && Objects.equals(defaultCustomerLanguage, that.defaultCustomerLanguage) && Objects.equals(providerType, that.providerType) && Objects.equals(currency, that.currency) ;
+        return Objects.equals(serviceName, that.serviceName) && Objects.equals(defaultCustomerLanguage, that.defaultCustomerLanguage) && Objects.equals(currency, that.currency) ;
     }
 
     
     @Override
     public int hashCode() {
-        return Objects.hash(serviceName, defaultCustomerLanguage, providerType, currency);
+        return Objects.hash(serviceName, defaultCustomerLanguage, currency);
     }
 
     @Override
@@ -115,7 +99,6 @@ public class ServiceEntity   {
         return "ServiceEntity{" +
                 "serviceName='" + serviceName + '\'' +
                 ", defaultCustomerLanguage='" + defaultCustomerLanguage + '\'' +
-                ", providerType='" + providerType + '\'' +
                 ", currency='" + currency + '\'' +
 
                 '}';

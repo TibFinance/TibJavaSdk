@@ -79,7 +79,7 @@ public class BaseAuthenticatedCryptedArgs  implements IBaseCryptedServiceArgs  {
     @Override
     public String toString() {
         return "BaseAuthenticatedCryptedArgs{" +
-                "sessionToken='" + sessionToken + '\'' +
+                "sessionToken='" + (sessionToken == null ? null : "***") + '\'' +
                 ", idempotencyKey='" + idempotencyKey + '\'' +
 
                 '}';

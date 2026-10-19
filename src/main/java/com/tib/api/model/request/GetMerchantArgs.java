@@ -20,7 +20,7 @@ public class GetMerchantArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant identity to extract
      */
     @JsonProperty("MerchantId")
     private String merchantId;

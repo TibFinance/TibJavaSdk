@@ -49,7 +49,7 @@ public class TransactionCommon   {
     private OperationStatus status;
 
     /**
-     * Human‑readable description of the transfer
+     * Description of the transaction.
      */
     @JsonProperty("Description")
     private String description;

@@ -22,7 +22,7 @@ public class FreeOperation   {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant identifier to scope this batch item to.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

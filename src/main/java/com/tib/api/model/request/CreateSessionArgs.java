@@ -19,19 +19,19 @@ public class CreateSessionArgs  implements IBaseCryptedServiceArgs  {
 
     
     /**
-     * Unique identifier of the client initiating the session
+     * The client ID the user signs in with.
      */
     @JsonProperty("ClientId")
     private String clientId;
 
     /**
-     * The login identifier of the user initiating the session.
+     * The user's username. It is not case-sensitive.
      */
     @JsonProperty("Username")
     private String username;
 
     /**
-     * The account password used to authenticate the session request
+     * The user's password.
      */
     @JsonProperty("Password")
     private String password;
@@ -97,7 +97,7 @@ public class CreateSessionArgs  implements IBaseCryptedServiceArgs  {
         return "CreateSessionArgs{" +
                 "clientId='" + clientId + '\'' +
                 ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + (password == null ? null : "***") + '\'' +
 
                 '}';
     }

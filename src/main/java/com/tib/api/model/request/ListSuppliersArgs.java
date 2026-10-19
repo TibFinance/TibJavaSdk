@@ -20,7 +20,7 @@ public class ListSuppliersArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * The merchant ID to list suppliers for.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

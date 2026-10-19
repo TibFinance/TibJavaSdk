@@ -70,7 +70,7 @@ public class Verify2FASetupArgs  extends BaseAuthenticatedCryptedArgs  {
     @Override
     public String toString() {
         return "Verify2FASetupArgs{" +
-                "twoFactorCode='" + twoFactorCode + '\'' +
+                "twoFactorCode='" + (twoFactorCode == null ? null : "***") + '\'' +
 
                 '}';
     }

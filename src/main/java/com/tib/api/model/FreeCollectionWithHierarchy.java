@@ -29,7 +29,7 @@ public class FreeCollectionWithHierarchy   {
     private String freeCollectionId;
 
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant that owns this collection.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

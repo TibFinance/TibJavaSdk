@@ -19,7 +19,7 @@ public class ContactInfo   {
 
     
     /**
-     * The merchant's primary contact email address.
+     * Contact email address.
      */
     @JsonProperty("Email")
     private String email;

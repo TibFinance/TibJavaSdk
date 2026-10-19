@@ -26,7 +26,7 @@ public class CreateTransactionFromRawArgs  extends BaseAuthenticatedCryptedArgs 
     private String rawAcpFileContent;
 
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant ID to scope this operation to. Automatically set for merchant-level logins.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
@@ -102,7 +102,7 @@ public class CreateTransactionFromRawArgs  extends BaseAuthenticatedCryptedArgs 
     @Override
     public String toString() {
         return "CreateTransactionFromRawArgs{" +
-                "rawAcpFileContent='" + rawAcpFileContent + '\'' +
+                "rawAcpFileContent='" + (rawAcpFileContent == null ? null : "***") + '\'' +
                 ", merchantId='" + merchantId + '\'' +
                 ", isImmediate='" + isImmediate + '\'' +
 

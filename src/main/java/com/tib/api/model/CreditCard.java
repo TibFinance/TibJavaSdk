@@ -157,8 +157,8 @@ public class CreditCard   {
     public String toString() {
         return "CreditCard{" +
                 "creditCardDescription='" + creditCardDescription + '\'' +
-                ", pan='" + pan + '\'' +
-                ", cVD='" + cVD + '\'' +
+                ", pan='" + (pan == null ? null : "***") + '\'' +
+                ", cVD='" + (cVD == null ? null : "***") + '\'' +
                 ", expirationMonth='" + expirationMonth + '\'' +
                 ", expirationYear='" + expirationYear + '\'' +
                 ", cardOwner='" + cardOwner + '\'' +

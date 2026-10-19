@@ -125,9 +125,9 @@ public class TwoFactorSetupData   {
     @Override
     public String toString() {
         return "TwoFactorSetupData{" +
-                "qrCodeBase64='" + qrCodeBase64 + '\'' +
-                ", manualEntryKey='" + manualEntryKey + '\'' +
-                ", otpAuthUri='" + otpAuthUri + '\'' +
+                "qrCodeBase64='" + (qrCodeBase64 == null ? null : "***") + '\'' +
+                ", manualEntryKey='" + (manualEntryKey == null ? null : "***") + '\'' +
+                ", otpAuthUri='" + (otpAuthUri == null ? null : "***") + '\'' +
                 ", issuer='" + issuer + '\'' +
                 ", accountName='" + accountName + '\'' +
 

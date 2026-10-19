@@ -179,7 +179,7 @@ public class APIResponse {
         @Override
         public String toString() {
             return "APIResponse{" +
-                    "response=" + response +
+                    "response=" + (response == null ? null : "***") +
                     ", cryptedSelf='" + cryptedSelf + '\'' +
                     ", iv='" + iv + '\'' +
                     ", errors=" + Arrays.toString(errors) +

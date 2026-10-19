@@ -34,7 +34,7 @@ public class CreatePaymentArgs  extends BaseAuthenticatedCryptedArgs  {
     private boolean setPaymentCustomerFromBill;
 
     /**
-     * The email address of the customer initiating the payment.
+     * Email address to send the payment notification to.
      */
     @JsonProperty("CustomerEmail")
     private String customerEmail;
@@ -46,7 +46,7 @@ public class CreatePaymentArgs  extends BaseAuthenticatedCryptedArgs  {
     private PaymentEntity paymentInfo;
 
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant ID to scope this operation to. Automatically set for merchant-level logins.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
@@ -64,7 +64,7 @@ public class CreatePaymentArgs  extends BaseAuthenticatedCryptedArgs  {
     private boolean safetyToBreakIfOverRemainingBillAmount;
 
     /**
-     * Flags indicating which payment methods are authorized for the created payment
+     * Restrict which payment methods the customer can use for this payment.
      */
     @JsonProperty("AutorizedPaymentMethod")
     private AutorizedPaymentMethodFlags autorizedPaymentMethod;

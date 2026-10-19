@@ -20,7 +20,7 @@ public class ListSupplierTransfersArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * The payer's merchant ID. Transfers where this merchant is the fee-payer will be returned.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

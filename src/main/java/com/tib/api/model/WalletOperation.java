@@ -37,7 +37,7 @@ public class WalletOperation   {
     private boolean isWithdrawn;
 
     /**
-     * Human‑readable description of the transfer
+     * Description of the wallet operation.
      */
     @JsonProperty("Description")
     private String description;

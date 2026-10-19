@@ -22,7 +22,7 @@ public class CreateSupplierArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * The payer's merchant ID registering the supplier.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
@@ -189,7 +189,7 @@ public class CreateSupplierArgs  extends BaseAuthenticatedCryptedArgs  {
                 ", supplierEmail='" + supplierEmail + '\'' +
                 ", currency='" + currency + '\'' +
                 ", language='" + language + '\'' +
-                ", accountNumber='" + accountNumber + '\'' +
+                ", accountNumber='" + (accountNumber == null ? null : "***") + '\'' +
                 ", bankNumber='" + bankNumber + '\'' +
                 ", institutionNumber='" + institutionNumber + '\'' +
 

@@ -33,7 +33,7 @@ public class AddBankAccountArgs  extends BaseAuthenticatedCryptedArgs  {
     private String name;
 
     /**
-     * The merchant's primary contact email address.
+     * Contact email for the new merchant. User-typed.
      */
     @JsonProperty("Email")
     private String email;
@@ -173,7 +173,7 @@ public class AddBankAccountArgs  extends BaseAuthenticatedCryptedArgs  {
                 ", language='" + language + '\'' +
                 ", bankNumber='" + bankNumber + '\'' +
                 ", institutionNumber='" + institutionNumber + '\'' +
-                ", accountNumber='" + accountNumber + '\'' +
+                ", accountNumber='" + (accountNumber == null ? null : "***") + '\'' +
 
                 '}';
     }

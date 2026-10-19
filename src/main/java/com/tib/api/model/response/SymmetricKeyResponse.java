@@ -61,7 +61,7 @@ public class SymmetricKeyResponse {
     @Override
     public String toString() {
         return "SymmetricKeyResponse{" +
-                "symmetricKey=" + Arrays.toString(symmetricKey) +
+                "symmetricKey=" + (symmetricKey == null ? null : "***") +
                 ", keyToken='" + keyToken + '\'' +
                 ", callNode='" + callNode + '\'' +
                 '}';

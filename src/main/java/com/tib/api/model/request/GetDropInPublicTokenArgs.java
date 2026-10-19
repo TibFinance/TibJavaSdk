@@ -23,7 +23,7 @@ public class GetDropInPublicTokenArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant ID to scope this operation to. Automatically set for merchant-level logins.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
@@ -89,7 +89,7 @@ public class GetDropInPublicTokenArgs  extends BaseAuthenticatedCryptedArgs  {
     private String title;
 
     /**
-     * Human‑readable description of the transfer
+     * Description displayed on the Drop-In payment form.
      */
     @JsonProperty("Description")
     private String description;

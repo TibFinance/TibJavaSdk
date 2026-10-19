@@ -41,10 +41,10 @@ public class Portal {
     }
 
     /**
-     * Creates the session.
+     * Opens a client-level session for a user who has client-level access to the given ClientId. Send the returned SessionId as SessionToken on the following calls. For a merchant-level or service-level access, use GetLoginAccessList, then Login.
      *
      * @param args the args
-     * @return  CreateSessionResponse.
+     * @return  A CreateSessionResponse containing the SessionId.
      * @throws NoSuchAlgorithmException           the no such algorithm exception
      * @throws InvalidKeyException                the invalid key exception
      * @throws IOException                        the io exception
@@ -62,6 +62,52 @@ public class Portal {
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateSession", args);
         return new CreateSessionResponse(apiResponse);
+    }
+    /**
+     * Lists the accesses of a user. Each entry is one access that Login can open a session on (usually a client, a merchant or a service) and gives the LoginsUserRelationsId to pass to Login.
+     *
+     * @param args the args
+     * @return  A GetLoginAccessListResponse listing the user's accesses.
+     * @throws NoSuchAlgorithmException           the no such algorithm exception
+     * @throws InvalidKeyException                the invalid key exception
+     * @throws IOException                        the io exception
+     * @throws InvalidAlgorithmParameterException the invalid algorithm parameter
+     *                                            exception
+     * @throws NoSuchPaddingException             the no such padding exception
+     * @throws BadPaddingException                the bad padding exception
+     * @throws IllegalBlockSizeException          the illegal block size exception
+     * @throws InvalidKeySpecException            the invalid key spec exception
+     * @throws SAXException                       the sax exception
+     */
+    public GetLoginAccessListResponse getLoginAccessList(GetLoginAccessListArgs args)
+            throws IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException,
+                NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
+                IllegalBlockSizeException {
+        APIResponse apiResponse = client.call("GetLoginAccessList", args);
+        return new GetLoginAccessListResponse(apiResponse, objectMapper);
+    }
+    /**
+     * Opens a session on one access of a user, usually a client, a merchant or a service. Call GetLoginAccessList first and pass the LoginsUserRelationsId of the access to open. Send the returned SessionId as SessionToken on the following calls. On a merchant-level session, each MerchantId described as automatically set for merchant-level logins takes the session's merchant, whatever value is sent.
+     *
+     * @param args the args
+     * @return  A LoginResponse containing the SessionId.
+     * @throws NoSuchAlgorithmException           the no such algorithm exception
+     * @throws InvalidKeyException                the invalid key exception
+     * @throws IOException                        the io exception
+     * @throws InvalidAlgorithmParameterException the invalid algorithm parameter
+     *                                            exception
+     * @throws NoSuchPaddingException             the no such padding exception
+     * @throws BadPaddingException                the bad padding exception
+     * @throws IllegalBlockSizeException          the illegal block size exception
+     * @throws InvalidKeySpecException            the invalid key spec exception
+     * @throws SAXException                       the sax exception
+     */
+    public LoginResponse login(LoginArgs args)
+            throws IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException,
+                NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
+                IllegalBlockSizeException {
+        APIResponse apiResponse = client.call("Login", args);
+        return new LoginResponse(apiResponse);
     }
     /**
      * Lists the services.

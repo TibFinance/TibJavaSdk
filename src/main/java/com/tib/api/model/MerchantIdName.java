@@ -19,7 +19,7 @@ public class MerchantIdName   {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * The merchant id
      */
     @JsonProperty("MerchantId")
     private String merchantId;

@@ -20,7 +20,7 @@ public class GetSuppliersArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant identifier to retrieve suppliers for.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

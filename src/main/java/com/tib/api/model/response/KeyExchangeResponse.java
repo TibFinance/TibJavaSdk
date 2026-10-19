@@ -46,7 +46,7 @@ public class KeyExchangeResponse {
     public String toString() {
         return "KeyExchangeResponse{" +
                 "fullSymetricKeyToken='" + fullSymetricKeyToken + '\'' +
-                ", symetricHostHalfKey='" + symetricHostHalfKey + '\'' +
+                ", symetricHostHalfKey='" + (symetricHostHalfKey == null ? null : "***") + '\'' +
                 '}';
     }
 }

@@ -21,7 +21,7 @@ public class SaveMerchantAccountInfoArgs  extends BaseAuthenticatedCryptedArgs  
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant identitity to modify
      */
     @JsonProperty("MerchantId")
     private String merchantId;
@@ -121,8 +121,8 @@ public class SaveMerchantAccountInfoArgs  extends BaseAuthenticatedCryptedArgs  
         return "SaveMerchantAccountInfoArgs{" +
                 "merchantId='" + merchantId + '\'' +
                 ", account='" + account + '\'' +
-                ", twoFactorCode='" + twoFactorCode + '\'' +
-                ", twoFactorSecurityAnswer='" + twoFactorSecurityAnswer + '\'' +
+                ", twoFactorCode='" + (twoFactorCode == null ? null : "***") + '\'' +
+                ", twoFactorSecurityAnswer='" + (twoFactorSecurityAnswer == null ? null : "***") + '\'' +
 
                 '}';
     }

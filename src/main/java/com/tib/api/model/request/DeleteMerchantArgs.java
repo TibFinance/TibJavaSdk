@@ -20,7 +20,7 @@ public class DeleteMerchantArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant identity to be remove. Cannot be the primary merchant.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

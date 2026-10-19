@@ -20,7 +20,7 @@ public class ListSupplierRecurringTransfersArgs  extends BaseAuthenticatedCrypte
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * The payer's merchant ID. Recurring transfers where this merchant is the fee-payer will be returned.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

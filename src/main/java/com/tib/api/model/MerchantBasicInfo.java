@@ -52,7 +52,7 @@ public class MerchantBasicInfo   {
     private Language language;
 
     /**
-     * The merchant's primary contact email address.
+     * The primary email address used for system notifications and communications with the merchant.
      */
     @JsonProperty("Email")
     private String email;

@@ -27,7 +27,7 @@ public class AdjustWalletArgs  extends BaseAuthenticatedCryptedArgs  {
     private String serviceId;
 
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant whose wallet balance to adjust.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

@@ -21,7 +21,7 @@ public class SaveMerchantBasicInfoArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The unique identifier of the merchant initiating the payment request.
+     * Merchant identitity to modify
      */
     @JsonProperty("MerchantId")
     private String merchantId;
