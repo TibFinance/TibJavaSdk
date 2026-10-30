@@ -1,13 +1,19 @@
 
 package com.tib.api.model.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.tib.api.model.Error;
 import com.tib.api.model.response.CustomAPIResponse;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.tib.api.client.FlexibleOffsetDateTimeDeserializer;
 
 
+import java.io.UncheckedIOException;
 import java.time.Instant;
 import java.time.OffsetDateTime;
 import java.util.Date;
@@ -19,6 +25,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ChangeInteracPaymentMethodQuestionAndAnswerResponse extends CustomAPIResponse {
 
     
@@ -34,10 +41,41 @@ public class ChangeInteracPaymentMethodQuestionAndAnswerResponse extends CustomA
         this.paymentMethodId = paymentMethodId;
     }
 
+    public ChangeInteracPaymentMethodQuestionAndAnswerResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+        super(apiResponse);
+        readPayload(apiResponse, objectMapper);
+    }
+
+    /**
+     * @deprecated Since 3.1.0. Use {@link #ChangeInteracPaymentMethodQuestionAndAnswerResponse(APIResponse, ObjectMapper)}, as Portal does.
+     * This form reads the answer with an ObjectMapper configured like the one TibInvoker.init builds.
+     * It reads {@link APIResponse#getRawBody()} only: a value set with setResponse() does not reach this class.
+     */
+    @Deprecated
     public ChangeInteracPaymentMethodQuestionAndAnswerResponse(APIResponse apiResponse) {
         super(apiResponse);
-        if (!apiResponse.isHasError()) {
-            this.paymentMethodId = apiResponse.getResponse().toString();
+        try {
+            readPayload(apiResponse, new ObjectMapper()
+                    .registerModule(new JavaTimeModule())
+                    .registerModule(new SimpleModule().addDeserializer(OffsetDateTime.class, new FlexibleOffsetDateTimeDeserializer()))
+                    .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false));
+        } catch (JsonProcessingException e) {
+            throw new UncheckedIOException(e);
+        }
+    }
+
+    private void readPayload(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+        String __rawBody = apiResponse.getRawBody();
+        if (__rawBody == null || __rawBody.isEmpty()) {
+            return;
+        }
+        try {
+            ChangeInteracPaymentMethodQuestionAndAnswerResponse __typed = objectMapper.readValue(__rawBody, ChangeInteracPaymentMethodQuestionAndAnswerResponse.class);
+            this.paymentMethodId = __typed.paymentMethodId;
+        } catch (JsonProcessingException | RuntimeException e) {
+            if (!apiResponse.isHasError()) {
+                throw e;
+            }
         }
     }
 

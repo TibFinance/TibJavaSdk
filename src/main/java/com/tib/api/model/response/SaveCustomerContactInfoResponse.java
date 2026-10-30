@@ -1,6 +1,7 @@
 
 package com.tib.api.model.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -20,6 +21,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class SaveCustomerContactInfoResponse extends CustomAPIResponse {
 
     
@@ -37,9 +39,21 @@ public class SaveCustomerContactInfoResponse extends CustomAPIResponse {
 
     public SaveCustomerContactInfoResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
-        if (!apiResponse.isHasError()) {
-            String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-            this.contactInfo = objectMapper.readValue(json, ContactInfo.class);
+        readPayload(apiResponse, objectMapper);
+    }
+
+    private void readPayload(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+        String __rawBody = apiResponse.getRawBody();
+        if (__rawBody == null || __rawBody.isEmpty()) {
+            return;
+        }
+        try {
+            SaveCustomerContactInfoResponse __typed = objectMapper.readValue(__rawBody, SaveCustomerContactInfoResponse.class);
+            this.contactInfo = __typed.contactInfo;
+        } catch (JsonProcessingException | RuntimeException e) {
+            if (!apiResponse.isHasError()) {
+                throw e;
+            }
         }
     }
 

@@ -1,6 +1,7 @@
 
 package com.tib.api.model.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -20,6 +21,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class GetServiceBoardingStatusResponse extends CustomAPIResponse {
 
     
@@ -41,12 +43,21 @@ public class GetServiceBoardingStatusResponse extends CustomAPIResponse {
 
     public GetServiceBoardingStatusResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
-        if (!apiResponse.isHasError()) {
-            String __rawBody = apiResponse.getRawBody();
-            if (__rawBody != null && !__rawBody.isEmpty()) {
-                GetServiceBoardingStatusResponse __typed = objectMapper.readValue(__rawBody, GetServiceBoardingStatusResponse.class);
-                this.serviceId = __typed.serviceId;
-                this.boardingServiceMerchants = __typed.boardingServiceMerchants;
+        readPayload(apiResponse, objectMapper);
+    }
+
+    private void readPayload(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+        String __rawBody = apiResponse.getRawBody();
+        if (__rawBody == null || __rawBody.isEmpty()) {
+            return;
+        }
+        try {
+            GetServiceBoardingStatusResponse __typed = objectMapper.readValue(__rawBody, GetServiceBoardingStatusResponse.class);
+            this.serviceId = __typed.serviceId;
+            this.boardingServiceMerchants = __typed.boardingServiceMerchants;
+        } catch (JsonProcessingException | RuntimeException e) {
+            if (!apiResponse.isHasError()) {
+                throw e;
             }
         }
     }

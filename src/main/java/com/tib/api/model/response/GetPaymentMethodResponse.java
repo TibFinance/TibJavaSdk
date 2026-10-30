@@ -1,6 +1,7 @@
 
 package com.tib.api.model.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -20,6 +21,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class GetPaymentMethodResponse extends CustomAPIResponse {
 
     
@@ -37,9 +39,21 @@ public class GetPaymentMethodResponse extends CustomAPIResponse {
 
     public GetPaymentMethodResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
-        if (!apiResponse.isHasError()) {
-            String json = objectMapper.writeValueAsString(apiResponse.getResponse());
-            this.paymentMethod = objectMapper.readValue(json, PaymentMethod.class);
+        readPayload(apiResponse, objectMapper);
+    }
+
+    private void readPayload(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+        String __rawBody = apiResponse.getRawBody();
+        if (__rawBody == null || __rawBody.isEmpty()) {
+            return;
+        }
+        try {
+            GetPaymentMethodResponse __typed = objectMapper.readValue(__rawBody, GetPaymentMethodResponse.class);
+            this.paymentMethod = __typed.paymentMethod;
+        } catch (JsonProcessingException | RuntimeException e) {
+            if (!apiResponse.isHasError()) {
+                throw e;
+            }
         }
     }
 

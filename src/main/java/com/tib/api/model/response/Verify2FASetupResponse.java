@@ -1,6 +1,7 @@
 
 package com.tib.api.model.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -19,6 +20,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Verify2FASetupResponse extends CustomAPIResponse {
 
     
@@ -44,13 +46,22 @@ public class Verify2FASetupResponse extends CustomAPIResponse {
 
     public Verify2FASetupResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
-        if (!apiResponse.isHasError()) {
-            String __rawBody = apiResponse.getRawBody();
-            if (__rawBody != null && !__rawBody.isEmpty()) {
-                Verify2FASetupResponse __typed = objectMapper.readValue(__rawBody, Verify2FASetupResponse.class);
-                this.success = __typed.success;
-                this.message = __typed.message;
-                this.errorMessage = __typed.errorMessage;
+        readPayload(apiResponse, objectMapper);
+    }
+
+    private void readPayload(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+        String __rawBody = apiResponse.getRawBody();
+        if (__rawBody == null || __rawBody.isEmpty()) {
+            return;
+        }
+        try {
+            Verify2FASetupResponse __typed = objectMapper.readValue(__rawBody, Verify2FASetupResponse.class);
+            this.success = __typed.success;
+            this.message = __typed.message;
+            this.errorMessage = __typed.errorMessage;
+        } catch (JsonProcessingException | RuntimeException e) {
+            if (!apiResponse.isHasError()) {
+                throw e;
             }
         }
     }

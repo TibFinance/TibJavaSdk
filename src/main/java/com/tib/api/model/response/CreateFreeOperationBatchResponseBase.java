@@ -1,6 +1,7 @@
 
 package com.tib.api.model.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -20,6 +21,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CreateFreeOperationBatchResponseBase extends CustomAPIResponse {
 
     
@@ -53,15 +55,24 @@ public class CreateFreeOperationBatchResponseBase extends CustomAPIResponse {
 
     public CreateFreeOperationBatchResponseBase(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
-        if (!apiResponse.isHasError()) {
-            String __rawBody = apiResponse.getRawBody();
-            if (__rawBody != null && !__rawBody.isEmpty()) {
-                CreateFreeOperationBatchResponseBase __typed = objectMapper.readValue(__rawBody, CreateFreeOperationBatchResponseBase.class);
-                this.status = __typed.status;
-                this.paymentId = __typed.paymentId;
-                this.referenceNumber = __typed.referenceNumber;
-                this.message = __typed.message;
-                this.requestDataResponse = __typed.requestDataResponse;
+        readPayload(apiResponse, objectMapper);
+    }
+
+    private void readPayload(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+        String __rawBody = apiResponse.getRawBody();
+        if (__rawBody == null || __rawBody.isEmpty()) {
+            return;
+        }
+        try {
+            CreateFreeOperationBatchResponseBase __typed = objectMapper.readValue(__rawBody, CreateFreeOperationBatchResponseBase.class);
+            this.status = __typed.status;
+            this.paymentId = __typed.paymentId;
+            this.referenceNumber = __typed.referenceNumber;
+            this.message = __typed.message;
+            this.requestDataResponse = __typed.requestDataResponse;
+        } catch (JsonProcessingException | RuntimeException e) {
+            if (!apiResponse.isHasError()) {
+                throw e;
             }
         }
     }

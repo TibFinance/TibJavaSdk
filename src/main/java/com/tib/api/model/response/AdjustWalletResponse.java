@@ -1,6 +1,7 @@
 
 package com.tib.api.model.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -19,6 +20,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class AdjustWalletResponse extends CustomAPIResponse {
 
     
@@ -44,13 +46,22 @@ public class AdjustWalletResponse extends CustomAPIResponse {
 
     public AdjustWalletResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
-        if (!apiResponse.isHasError()) {
-            String __rawBody = apiResponse.getRawBody();
-            if (__rawBody != null && !__rawBody.isEmpty()) {
-                AdjustWalletResponse __typed = objectMapper.readValue(__rawBody, AdjustWalletResponse.class);
-                this.transferId = __typed.transferId;
-                this.wasSuccessful = __typed.wasSuccessful;
-                this.requiresSupplierBoarding = __typed.requiresSupplierBoarding;
+        readPayload(apiResponse, objectMapper);
+    }
+
+    private void readPayload(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+        String __rawBody = apiResponse.getRawBody();
+        if (__rawBody == null || __rawBody.isEmpty()) {
+            return;
+        }
+        try {
+            AdjustWalletResponse __typed = objectMapper.readValue(__rawBody, AdjustWalletResponse.class);
+            this.transferId = __typed.transferId;
+            this.wasSuccessful = __typed.wasSuccessful;
+            this.requiresSupplierBoarding = __typed.requiresSupplierBoarding;
+        } catch (JsonProcessingException | RuntimeException e) {
+            if (!apiResponse.isHasError()) {
+                throw e;
             }
         }
     }

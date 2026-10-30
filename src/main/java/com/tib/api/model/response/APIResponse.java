@@ -1,7 +1,7 @@
 
 package com.tib.api.model.response;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tib.api.model.Error;
@@ -11,62 +11,13 @@ import java.util.Objects;
 
 public class APIResponse {
 
-        @JsonAlias({"DasPaymentId", "DasProviderId", "TransferId", 
-                    "SessionId", "RecordIsModify", "Key", 
-                    "BoardingInfo", "BoardingResultEntity", "PaymentMethodId", 
-                    "OperationId", "OperationStatus", "TransactionId", 
-                    "TransactionStatus", "IsRevertable", "Reason", 
-                    "IsValid", "BillId", "RedirectUrl", 
-                    "Token", "ClientLoginId", "ClientId", 
-                    "CustomerId", "CreateFreeOperationBatchResponses", "Status", 
-                    "PaymentId", "ReferenceNumber", "Message", 
-                    "RequestDataResponse", "MerchantId", "AutoSelectPaymentFlowResult", 
-                    "PaymentFlowParsingResult", "PaymentLink", "CreatedServiceId", 
-                    "ServiceId", "TransactionsGroupId", "IsClientExisting", 
-                    "Operation", "ErrorReportDataList", "RelatedClientId", 
-                    "ClientName", "TableName", "RelatedDescription", 
-                    "BillAmount", "ProviderAccountOperationList", "BillsInfo", 
-                    "Bill", "ApprovalStatus", "MerchantName", 
-                    "MerchantEmail", "SandboxId", "Processing", 
-                    "Payout", "GetBoardingMerchantCredentialResultEntity", "GetBoardingStatusResultEntity", 
-                    "Currency", "MerchantLanguage", "AuthorizationStatus", 
-                    "CreatedDate", "PhoneNumber", "MerchantDescription", 
-                    "AccountName", "AccountInformation", "BoardingStatus", 
-                    "JsonObject", "ValidationToken", "WhiteLabeling", 
-                    "Client", "ClientSettings", "ServiceSettings", 
-                    "ServiceFeeSettings", "Users", "ConsolidationInternalReportList", 
-                    "ContractEdditionRequests", "Customer", "Customers", 
-                    "OperationIds", "OperationList", "PublicTokenId", 
-                    "DropIn", "TransactionFeesAgregated", "Question", 
-                    "Owner", "Email", "Description", 
-                    "Mobile", "LoginRelations", "Merchant", 
-                    "Merchants", "DateLineReport", "Transfers", 
-                    "PaymentMethodRequestData", "PaymentMethod", "Payment", 
-                    "Countries", "Provinces", "ServiceName", 
-                    "RoutingType", "RecuringTransfersCount", "RecuringTransfers", 
-                    "BoardingServiceMerchants", "Service", "LoginTypeId", 
-                    "Username", "Language", "IsReadOnly", 
-                    "InternalReferenceId", "AggregatedCategoryExtractions", "MonthlyTransactionStats", 
-                    "DailyCashbackStats", "Transactions", "TransfersCreations", 
-                    "Transfer", "Wallets", "IsValidPaymentId", 
-                    "Bills", "Clients", "CanadaDasPayments", 
-                    "QuebecDasPayments", "CanadaDasProvider", "QuebecDasProvider", 
-                    "PaymentMethods", "Payments", "Services", 
-                    "whiteLabelings", "Step", "CompanyName", 
-                    "CompanyAddress", "AdminFirstName", "AdminLastName", 
-                    "AdminAddress", "CompanyType", "DidOwnersAlreadyBeenSubjectOfResiliationOfPaymentService", 
-                    "DidOwnersAlreadyAskedForBankrupcy", "HaveYouBeenSubjectOfVisaRiskProgram", "DrivingLicenceNumber", 
-                    "CompanyTypes", "CompanyInfos", "EditionRequests", 
-                    "LoggOffSuccess", "NoOfPendingBoarding", "NoOfActiveBoarding", 
-                    "TransmissionResults", "CompressedTransmissionResults", "DataId", 
-                    "Amount", "TransferType", "TransactionDueDate", 
-                    "DataCryptedBase64", "CaseStatus", "RetrieveDocumentResultEntity", 
-                    "HasBeenDeleted", "BoardingInformationId", "SearchResult", 
-                    "NeqOrNi", "AddressDisplay", "CreationDate", 
-                    "IsQuebec", "HasDetails", "SubmitDocumentResultEntity", 
-                    "Count", "ContractEditionRequest", "NewMerchantId",
-                    "ContactInfo"})
+        // The value of the first top-level key of the answer that is not one of the envelope fields below
+        // (setPayloadValue). The typed response classes read their payload from rawBody, each field by its own name.
+        @JsonIgnore
         private Object response;
+
+        // True once setPayloadValue has kept a value, which can be null.
+        private boolean payloadValueKept;
 
         @JsonProperty("CryptedSelf")
         private String cryptedSelf;
@@ -137,12 +88,34 @@ public class APIResponse {
             this.nodeAnswered = nodeAnswered;
         }
 
+        /**
+         * Returns the value of the first top-level key of the answer that is not an envelope field, null included.
+         *
+         * @return that value
+         * @deprecated Since 3.1.0. Read the typed response that Portal returns: when an answer carries more than one
+         * such key, only the first one is kept here.
+         */
+        @Deprecated
         public Object getResponse() {
             return response;
         }
 
+        /**
+         * @param response the value
+         * @deprecated Since 3.1.0, with {@link #getResponse()}. The typed response classes read
+         * {@link #getRawBody()} only, so a value set here does not reach them.
+         */
+        @Deprecated
         public void setResponse(Object response) {
             this.response = response;
+        }
+
+        @JsonAnySetter
+        private void setPayloadValue(String name, Object value) {
+            if (!payloadValueKept) {
+                payloadValueKept = true;
+                this.response = value;
+            }
         }
 
         public String getRawBody() {

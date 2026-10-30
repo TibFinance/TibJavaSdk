@@ -1,6 +1,7 @@
 
 package com.tib.api.model.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -21,6 +22,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class SaveMerchantResponse<T> extends CustomAPIResponse {
 
     
@@ -54,15 +56,24 @@ public class SaveMerchantResponse<T> extends CustomAPIResponse {
 
     public SaveMerchantResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
-        if (!apiResponse.isHasError()) {
-            String __rawBody = apiResponse.getRawBody();
-            if (__rawBody != null && !__rawBody.isEmpty()) {
-                SaveMerchantResponse __typed = objectMapper.readValue(__rawBody, SaveMerchantResponse.class);
-                this.twoFactorStatus = __typed.twoFactorStatus;
-                this.twoFactorMessage = __typed.twoFactorMessage;
-                this.twoFactorSetupData = __typed.twoFactorSetupData;
-                this.twoFactorVerificationMerchantId = __typed.twoFactorVerificationMerchantId;
-                this.twoFactorVerificationMerchantName = __typed.twoFactorVerificationMerchantName;
+        readPayload(apiResponse, objectMapper);
+    }
+
+    private void readPayload(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+        String __rawBody = apiResponse.getRawBody();
+        if (__rawBody == null || __rawBody.isEmpty()) {
+            return;
+        }
+        try {
+            SaveMerchantResponse __typed = objectMapper.readValue(__rawBody, SaveMerchantResponse.class);
+            this.twoFactorStatus = __typed.twoFactorStatus;
+            this.twoFactorMessage = __typed.twoFactorMessage;
+            this.twoFactorSetupData = __typed.twoFactorSetupData;
+            this.twoFactorVerificationMerchantId = __typed.twoFactorVerificationMerchantId;
+            this.twoFactorVerificationMerchantName = __typed.twoFactorVerificationMerchantName;
+        } catch (JsonProcessingException | RuntimeException e) {
+            if (!apiResponse.isHasError()) {
+                throw e;
             }
         }
     }

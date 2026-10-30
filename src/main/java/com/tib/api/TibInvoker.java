@@ -2,6 +2,7 @@ package com.tib.api;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.tib.api.client.FlexibleOffsetDateTimeDeserializer;
@@ -28,6 +29,7 @@ public class TibInvoker {
         portal = new Portal(new ObjectMapper()
                 .registerModule(new JavaTimeModule())
                 .registerModule(flexibleDateModule)
+                .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false),
                 url);
     }

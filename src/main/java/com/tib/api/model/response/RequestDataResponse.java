@@ -1,6 +1,7 @@
 
 package com.tib.api.model.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -21,6 +22,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RequestDataResponse<T> extends CustomAPIResponse {
 
     
@@ -66,18 +68,27 @@ public class RequestDataResponse<T> extends CustomAPIResponse {
 
     public RequestDataResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
-        if (!apiResponse.isHasError()) {
-            String __rawBody = apiResponse.getRawBody();
-            if (__rawBody != null && !__rawBody.isEmpty()) {
-                RequestDataResponse __typed = objectMapper.readValue(__rawBody, RequestDataResponse.class);
-                this.merchantId = __typed.merchantId;
-                this.amount = __typed.amount;
-                this.customerId = __typed.customerId;
-                this.paymentMethodId = __typed.paymentMethodId;
-                this.transferType = __typed.transferType;
-                this.referenceNumber = __typed.referenceNumber;
-                this.language = __typed.language;
-                this.transactionDueDate = __typed.transactionDueDate;
+        readPayload(apiResponse, objectMapper);
+    }
+
+    private void readPayload(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+        String __rawBody = apiResponse.getRawBody();
+        if (__rawBody == null || __rawBody.isEmpty()) {
+            return;
+        }
+        try {
+            RequestDataResponse __typed = objectMapper.readValue(__rawBody, RequestDataResponse.class);
+            this.merchantId = __typed.merchantId;
+            this.amount = __typed.amount;
+            this.customerId = __typed.customerId;
+            this.paymentMethodId = __typed.paymentMethodId;
+            this.transferType = __typed.transferType;
+            this.referenceNumber = __typed.referenceNumber;
+            this.language = __typed.language;
+            this.transactionDueDate = __typed.transactionDueDate;
+        } catch (JsonProcessingException | RuntimeException e) {
+            if (!apiResponse.isHasError()) {
+                throw e;
             }
         }
     }

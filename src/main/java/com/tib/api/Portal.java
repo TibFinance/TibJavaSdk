@@ -61,7 +61,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateSession", args);
-        return new CreateSessionResponse(apiResponse);
+        return new CreateSessionResponse(apiResponse, objectMapper);
     }
     /**
      * Lists the accesses of a user. Each entry is one access that Login can open a session on (usually a client, a merchant or a service) and gives the LoginsUserRelationsId to pass to Login.
@@ -107,7 +107,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("Login", args);
-        return new LoginResponse(apiResponse);
+        return new LoginResponse(apiResponse, objectMapper);
     }
     /**
      * Lists the services.
@@ -245,7 +245,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateMerchant", args);
-        return new CreateMerchantResponse(apiResponse);
+        return new CreateMerchantResponse(apiResponse, objectMapper);
     }
     /**
      * Adds a new bank account (i.e., new merchant in TIB's data model) to an existing fully-boarded service. Authorizes the new merchant on insert. One-shot semantic: no pending state, no approval workflow, no confirmation email. Owner and Currency are inherited from an active sibling merchant on the same service. This is a parallel path to CreateMerchant (which serves boarding's first-merchant insert).
@@ -268,7 +268,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("AddBankAccount", args);
-        return new AddBankAccountResponse(apiResponse);
+        return new AddBankAccountResponse(apiResponse, objectMapper);
     }
     /**
      * Gets the merchant.
@@ -636,7 +636,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateCreditCardPaymentMethod", args);
-        return new CreateCreditCardPaymentMethodResponse(apiResponse);
+        return new CreateCreditCardPaymentMethodResponse(apiResponse, objectMapper);
     }
     /**
      * Creates the direct account payment method.
@@ -659,7 +659,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateDirectAccountPaymentMethod", args);
-        return new CreateDirectAccountPaymentMethodResponse(apiResponse);
+        return new CreateDirectAccountPaymentMethodResponse(apiResponse, objectMapper);
     }
     /**
      * Creates the Interac payment method.
@@ -682,7 +682,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateInteracPaymentMethod", args);
-        return new CreateInteracPaymentMethodResponse(apiResponse);
+        return new CreateInteracPaymentMethodResponse(apiResponse, objectMapper);
     }
     /**
      * Gets the payment method.
@@ -797,7 +797,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateBill", args);
-        return new CreateBillResponse(apiResponse);
+        return new CreateBillResponse(apiResponse, objectMapper);
     }
     /**
      * Gets the bill.
@@ -1050,7 +1050,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateDirectInteracTransaction", args);
-        return new CreateDirectInteracTransactionResponse(apiResponse);
+        return new CreateDirectInteracTransactionResponse(apiResponse, objectMapper);
     }
     /**
      * Creates the transaction from raw. This operation supports idempotency via the IdempotencyKey field.
@@ -1073,7 +1073,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateTransactionFromRaw", args);
-        return new CreateTransactionFromRawResponse(apiResponse);
+        return new CreateTransactionFromRawResponse(apiResponse, objectMapper);
     }
     /**
      * Lists the executed operations.
@@ -1142,7 +1142,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("GetDropInPublicToken", args);
-        return new GetDropInPublicTokenResponse(apiResponse);
+        return new GetDropInPublicTokenResponse(apiResponse, objectMapper);
     }
     /**
      * Creates the free operation. This operation supports idempotency via the IdempotencyKey field.
@@ -1165,7 +1165,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateFreeOperation", args);
-        return new CreateFreeOperationResponse(apiResponse);
+        return new CreateFreeOperationResponse(apiResponse, objectMapper);
     }
     /**
      * Creates a batch of free operations (deposits or collections) in a single call. Validates that client onboarding (KYC) is completed before allowing free deposit operations. This operation supports idempotency via the IdempotencyKey field.
@@ -1211,7 +1211,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("RevertTransfer", args);
-        return new RevertTransferResponse(apiResponse);
+        return new RevertTransferResponse(apiResponse, objectMapper);
     }
     /**
      * Updates the security question and answer on an existing Interac payment method. Creates a replacement payment method with the new credentials and deletes the old one. The answer is encrypted via the external data vault, and both question and answer are obfuscated in logs.
@@ -1234,7 +1234,7 @@ public class Portal {
                 NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("ChangeInteracPaymentMethodQuestionAndAnswer", args);
-        return new ChangeInteracPaymentMethodQuestionAndAnswerResponse(apiResponse);
+        return new ChangeInteracPaymentMethodQuestionAndAnswerResponse(apiResponse, objectMapper);
     }
     /**
      * Creates a new sub-client (child service) under the authenticated client's account. The sub-client is represented as a service entity with its own name, language, and currency.

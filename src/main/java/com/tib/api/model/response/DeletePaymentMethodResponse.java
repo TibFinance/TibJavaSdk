@@ -1,6 +1,7 @@
 
 package com.tib.api.model.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -19,6 +20,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class DeletePaymentMethodResponse extends CustomAPIResponse {
 
     
@@ -32,8 +34,6 @@ public class DeletePaymentMethodResponse extends CustomAPIResponse {
 
     public DeletePaymentMethodResponse(APIResponse apiResponse) {
         super(apiResponse);
-        if (!apiResponse.isHasError()) {
-        }
     }
 
     

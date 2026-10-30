@@ -1,6 +1,7 @@
 
 package com.tib.api.model.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -20,6 +21,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ListServicesResponse extends CustomAPIResponse {
 
     
@@ -45,13 +47,22 @@ public class ListServicesResponse extends CustomAPIResponse {
 
     public ListServicesResponse(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
         super(apiResponse);
-        if (!apiResponse.isHasError()) {
-            String __rawBody = apiResponse.getRawBody();
-            if (__rawBody != null && !__rawBody.isEmpty()) {
-                ListServicesResponse __typed = objectMapper.readValue(__rawBody, ListServicesResponse.class);
-                this.services = __typed.services;
-                this.skipClientApprobation = __typed.skipClientApprobation;
-                this.isClientBoardingExempt = __typed.isClientBoardingExempt;
+        readPayload(apiResponse, objectMapper);
+    }
+
+    private void readPayload(APIResponse apiResponse, ObjectMapper objectMapper) throws JsonProcessingException {
+        String __rawBody = apiResponse.getRawBody();
+        if (__rawBody == null || __rawBody.isEmpty()) {
+            return;
+        }
+        try {
+            ListServicesResponse __typed = objectMapper.readValue(__rawBody, ListServicesResponse.class);
+            this.services = __typed.services;
+            this.skipClientApprobation = __typed.skipClientApprobation;
+            this.isClientBoardingExempt = __typed.isClientBoardingExempt;
+        } catch (JsonProcessingException | RuntimeException e) {
+            if (!apiResponse.isHasError()) {
+                throw e;
             }
         }
     }
