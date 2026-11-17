@@ -23,7 +23,7 @@ public class CreateSupplierTransferArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The account that's sending the money
+     * The paying merchant: the merchant that sends the money. A merchant-level login can only name its own merchant.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

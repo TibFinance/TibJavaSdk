@@ -19,7 +19,7 @@ public class MerchantIdName   {
 
     
     /**
-     * The merchant id
+     * The merchant identifier.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

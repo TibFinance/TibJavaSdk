@@ -18,7 +18,7 @@ Then add to your `pom.xml`:
 <dependency>
     <groupId>finance.tib</groupId>
     <artifactId>tib-finance-sdk</artifactId>
-    <version>3.1.0</version>
+    <version>3.2.0</version>
 </dependency>
 ```
 
@@ -97,7 +97,7 @@ try {
 
 For the complete API reference and guides, visit [doc.tib.finance](https://doc.tib.finance).
 
-This SDK provides access to **67 API methods** for payment processing, merchant management, and financial operations.
+This SDK provides access to **70 API methods** for payment processing, merchant management, and financial operations.
 
 ## Other TIB Finance SDKs
 

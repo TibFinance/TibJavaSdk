@@ -478,6 +478,29 @@ public class Portal {
         return new CreateCustomerResponse(apiResponse, objectMapper);
     }
     /**
+     * Creates a new customer in a service. Every call creates a new customer and never returns an existing one, even when the same CustomerName or CustomerExternalId is already in use: a repeated CustomerExternalId is allowed. To reuse a customer, look it up first, for example with GetCustomersByExternalId and a MerchantId of the service, and create one only when none is found. CustomerName, Language, ContactInfo.Email and ContactInfo.Phone are required: a missing or malformed value refuses the call (2003), its message names the fields to correct, and nothing is created. This operation requires the IdempotencyKey field: for at least 24 hours, a repeated call with the same key and the same request returns the first response and creates no second customer. After a 2003 about a customer value, send the corrected call with a new key. After a 2003 about the key, the first call with that key may have created the customer: look it up first. After a 2007 or a 2016, send the same request again with the same key. The service must be one your session can act for; read-only logins cannot call it.
+     *
+     * @param args the args
+     * @return  A CreateCustomerV2Response containing the CustomerId of the new customer.
+     * @throws NoSuchAlgorithmException           the no such algorithm exception
+     * @throws InvalidKeyException                the invalid key exception
+     * @throws IOException                        the io exception
+     * @throws InvalidAlgorithmParameterException the invalid algorithm parameter
+     *                                            exception
+     * @throws NoSuchPaddingException             the no such padding exception
+     * @throws BadPaddingException                the bad padding exception
+     * @throws IllegalBlockSizeException          the illegal block size exception
+     * @throws InvalidKeySpecException            the invalid key spec exception
+     * @throws SAXException                       the sax exception
+     */
+    public CreateCustomerV2Response createCustomerV2(CreateCustomerV2Args args)
+            throws IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException,
+                NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
+                IllegalBlockSizeException {
+        APIResponse apiResponse = client.call("CreateCustomerV2", args);
+        return new CreateCustomerV2Response(apiResponse, objectMapper);
+    }
+    /**
      * Gets the customer.
      *
      * @param args the args
@@ -1053,7 +1076,7 @@ public class Portal {
         return new CreateDirectInteracTransactionResponse(apiResponse, objectMapper);
     }
     /**
-     * Creates the transaction from raw. This operation supports idempotency via the IdempotencyKey field.
+     * Uploads a payment file, as text. Once the file is accepted, each transaction in the file becomes one bank-account payment. This operation supports idempotency via the IdempotencyKey field.
      *
      * @param args the args
      * @return  CreateTransactionFromRawResponse.
@@ -1189,6 +1212,52 @@ public class Portal {
                 IllegalBlockSizeException {
         APIResponse apiResponse = client.call("CreateFreeOperationBatch", args);
         return new CreateFreeOperationBatchResponse(apiResponse, objectMapper);
+    }
+    /**
+     * Submits up to 5,000 collections and deposits for one merchant in a single call. Each item carries its customer and either a bank account or an Interac recipient; every item is checked when the call is made and gets its own result. Accepted items are processed in the background, in request order; read their outcome with GetTransferBatchResult and the reply's BatchId. A merchant session acts for its own merchant; a client or service session names the merchant in MerchantId. If the login that sent a request is deleted, or can no longer create payments for the merchant, before its items are processed, the request stops (2110): let a login's requests finish before you delete it or change its access. Set ValidateOnly to check the items without creating anything. This operation requires the IdempotencyKey field: for at least 24 hours, a repeated call with the same key and the same request returns the first response; after that, reusing the key of an Accepted or Processed call is refused with 2101, or with 2108 when the merchant already has 5 requests waiting or being processed.
+     *
+     * @param args the args
+     * @return  A CreateTransferBatchResponse containing the outcome of the call, its BatchId, its totals and one result per item.
+     * @throws NoSuchAlgorithmException           the no such algorithm exception
+     * @throws InvalidKeyException                the invalid key exception
+     * @throws IOException                        the io exception
+     * @throws InvalidAlgorithmParameterException the invalid algorithm parameter
+     *                                            exception
+     * @throws NoSuchPaddingException             the no such padding exception
+     * @throws BadPaddingException                the bad padding exception
+     * @throws IllegalBlockSizeException          the illegal block size exception
+     * @throws InvalidKeySpecException            the invalid key spec exception
+     * @throws SAXException                       the sax exception
+     */
+    public CreateTransferBatchResponse createTransferBatch(CreateTransferBatchArgs args)
+            throws IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException,
+                NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
+                IllegalBlockSizeException {
+        APIResponse apiResponse = client.call("CreateTransferBatch", args);
+        return new CreateTransferBatchResponse(apiResponse, objectMapper);
+    }
+    /**
+     * Reads a request made with CreateTransferBatch: where it stands, its totals, and the outcome of its items, in pages of up to 1,000 items: send FromIndex 0, then each page's NextIndex, which is the previous FromIndex plus the number of items returned (1,000, 2,000 and so on with the default MaxItems), until NextIndex is empty. Poll it every 30 seconds with the reply's BatchId until Status is Completed, Stopped or Failed. While Status is HeldForApproval, poll about every 15 minutes instead; there is nothing to send again. Error 2112 is final: stop polling that BatchId. After any other error, read its message: sign in again if the session has expired (the BatchId stays readable), correct the call on 2003, and otherwise poll again later. The client that sent a request can always read it: a client session reads all of its client's requests, a service session those of the merchants of its services, and a merchant session those of its own merchant. Read-only logins may call it.
+     *
+     * @param args the args
+     * @return  A GetTransferBatchResultResponse containing the request's status, its totals and the page of item results.
+     * @throws NoSuchAlgorithmException           the no such algorithm exception
+     * @throws InvalidKeyException                the invalid key exception
+     * @throws IOException                        the io exception
+     * @throws InvalidAlgorithmParameterException the invalid algorithm parameter
+     *                                            exception
+     * @throws NoSuchPaddingException             the no such padding exception
+     * @throws BadPaddingException                the bad padding exception
+     * @throws IllegalBlockSizeException          the illegal block size exception
+     * @throws InvalidKeySpecException            the invalid key spec exception
+     * @throws SAXException                       the sax exception
+     */
+    public GetTransferBatchResultResponse getTransferBatchResult(GetTransferBatchResultArgs args)
+            throws IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException,
+                NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
+                IllegalBlockSizeException {
+        APIResponse apiResponse = client.call("GetTransferBatchResult", args);
+        return new GetTransferBatchResultResponse(apiResponse, objectMapper);
     }
     /**
      * Reverts (cancels or reverses) a transfer. For pending gateway payments, deletes the transfer and its public token. For processed payments, creates reversal operations for each non-fee operation. Rejects transfers over $5,000 or wallet-type transfers. For supplier transfers, only the paying merchant (fee-payer) can revert; the recipient supplier cannot revert a transfer they did not create. This operation supports idempotency via the IdempotencyKey field.

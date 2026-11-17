@@ -43,13 +43,13 @@ public class ContactInfo   {
     private String city;
 
     /**
-     * Province or state.
+     * Province or state, as an integer id: a ProvinceStateIdEnum value, such as 10 for Quebec or 8 for Ontario.
      */
     @JsonProperty("Province")
     private Integer province;
 
     /**
-     * Country name.
+     * Country, as an integer id: a CountryIdEnum value, 1 for Canada or 2 for the United States.
      */
     @JsonProperty("Country")
     private Integer country;

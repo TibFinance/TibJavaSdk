@@ -21,7 +21,7 @@ public class BillEntity   {
 
     
     /**
-     * Merchant ID that Own the bill
+     * The merchant that owns the bill.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

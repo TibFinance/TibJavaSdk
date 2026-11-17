@@ -50,7 +50,7 @@ public class Account   {
     private String accountNumber;
 
     /**
-     * Convenience alias for the Canadian routing pair. On read, returns BankNumber concatenated with InstitutionNumber. On write, accepts exactly 9 digits — a 4-digit zero-padded institution code followed by a 5-digit branch transit — and splits them into BankNumber and InstitutionNumber; a value of any other length is ignored silently. Supply either this field or BankNumber + InstitutionNumber.
+     * Convenience alias for the Canadian routing pair. On read, returns BankNumber concatenated with InstitutionNumber. On write, accepts exactly 9 digits — a 4-digit zero-padded institution code followed by a 5-digit branch transit — and splits them into BankNumber and InstitutionNumber; a null or a value of any other length is ignored silently. Supply either this field or BankNumber + InstitutionNumber.
      */
     @JsonProperty("RoutingNumber")
     private String routingNumber;

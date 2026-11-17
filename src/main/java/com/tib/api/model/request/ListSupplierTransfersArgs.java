@@ -20,7 +20,7 @@ public class ListSupplierTransfersArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The payer's merchant ID. Transfers where this merchant is the fee-payer will be returned.
+     * The paying merchant: the transfers where this merchant is the fee-payer are returned. Required, except for a merchant-level login. For a merchant-level login, always that login's own merchant.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

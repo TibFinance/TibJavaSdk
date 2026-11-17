@@ -20,7 +20,7 @@ public class UpdateSupplierAliasArgs  extends BaseAuthenticatedCryptedArgs  {
 
     
     /**
-     * The payer's merchant ID that owns the supplier link.
+     * The paying merchant that owns the supplier link. Required, except for a merchant-level login. For a merchant-level login, always that login's own merchant.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

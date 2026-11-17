@@ -27,7 +27,7 @@ public class CreateBillArgs  extends BaseAuthenticatedCryptedArgs  {
     private BillEntity billData;
 
     /**
-     * Indicates whether bill creation should abort if the merchant has never been authorized.
+     * When true, the call is refused before anything is created if the merchant is not authorized or has no bank account: it answers ErrorCode 500 with "Merchant is not authorized or has no valid banking informations." False by default. For a merchant that is not authorized, a client or service session is refused with "Unauthorized" whatever this value.
      */
     @JsonProperty("BreakIfMerchantNeverBeenAuthorized")
     private boolean breakIfMerchantNeverBeenAuthorized;

@@ -34,7 +34,7 @@ public class PaymentBaseWithHierarchy  extends PaymentBase  {
     private String serviceName;
 
     /**
-     * Merchant id containing the payment
+     * The merchant the payment belongs to.
      */
     @JsonProperty("MerchantId")
     private String merchantId;

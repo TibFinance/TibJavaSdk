@@ -21,7 +21,7 @@ public class SaveMerchantAccountInfoArgs  extends BaseAuthenticatedCryptedArgs  
 
     
     /**
-     * Merchant identitity to modify
+     * The merchant to modify. A merchant-level login can only modify its own merchant.
      */
     @JsonProperty("MerchantId")
     private String merchantId;
