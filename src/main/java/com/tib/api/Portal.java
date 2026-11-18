@@ -1650,5 +1650,28 @@ public class Portal {
         APIResponse apiResponse = client.call("Verify2FASetup", args);
         return new Verify2FASetupResponse(apiResponse, objectMapper);
     }
+    /**
+     * Lists the transfers of your services that are waiting to be approved or declined in the portal, the newest first. The list is not paged. A payment to a supplier is listed for the paying merchant and for the supplier; only the paying merchant can approve or decline it.
+     *
+     * @param args the args
+     * @return  GetPendingTransferApprovalsResponse.
+     * @throws NoSuchAlgorithmException           the no such algorithm exception
+     * @throws InvalidKeyException                the invalid key exception
+     * @throws IOException                        the io exception
+     * @throws InvalidAlgorithmParameterException the invalid algorithm parameter
+     *                                            exception
+     * @throws NoSuchPaddingException             the no such padding exception
+     * @throws BadPaddingException                the bad padding exception
+     * @throws IllegalBlockSizeException          the illegal block size exception
+     * @throws InvalidKeySpecException            the invalid key spec exception
+     * @throws SAXException                       the sax exception
+     */
+    public GetPendingTransferApprovalsResponse getPendingTransferApprovals(GetPendingTransferApprovalsArgs args)
+            throws IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException,
+                NoSuchPaddingException, BadPaddingException, SAXException, InvalidKeySpecException,
+                IllegalBlockSizeException {
+        APIResponse apiResponse = client.call("GetPendingTransferApprovals", args);
+        return new GetPendingTransferApprovalsResponse(apiResponse, objectMapper);
+    }
 
 }
